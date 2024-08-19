@@ -3,8 +3,9 @@
   "alwaysUpdateLinks": true,
   "spellcheck": true,
   "useMarkdownLinks": true,
-  "livePreview": false,
+  "livePreview": true,
   "showLineNumber": true,
   "readableLineLength": false,
-  "foldHeading": false
+  "foldHeading": false,
+  "defaultViewMode": "source"
 }
