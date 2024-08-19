@@ -1,0 +1,152 @@
+{
+  "main": {
+    "id": "a8bdec08430f5003",
+    "type": "split",
+    "children": [
+      {
+        "id": "db14d3c6acb35c4f",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "CNET/CNET 23 Jan, 2023.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f17603b11c61b8a4",
+    "type": "split",
+    "children": [
+      {
+        "id": "ab28d56047ca9454",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c6bb1a0b5ef1e3e9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "b34ba22847b01e70",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b2f11572292d5414",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 175.5
+  },
+  "right": {
+    "id": "1010b0dc0ef48981",
+    "type": "split",
+    "children": [
+      {
+        "id": "de5d8a49a29f0a50",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "35ed1c2a8db68c5e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "CNET/CNET 23 Jan, 2023.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e017a132152f9a8c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "CNET/CNET 23 Jan, 2023.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e823b774f87bf7a0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "2e6629e59a70e7f5",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "CNET/CNET 23 Jan, 2023.md"
+              }
+            }
+          },
+          {
+            "id": "0ce6913a706f0f18",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "active": "db14d3c6acb35c4f",
+  "lastOpenFiles": [
+    "COC/COC 24 Jan, 2023.md",
+    "CNET/CNET 23 Jan, 2023.md",
+    "Discrete/Discrete Maths 2 Sept, 2022.md",
+    "Data Struct/Data Struct 2 Sept, 2022.md",
+    "COAL/COAL 1 Sept, 2022.md",
+    "Stats/Chapter 2/Other Types of Graphs.md",
+    "Stats/Chapter 2/Histograms, Frequency Polygons & Ogives.md",
+    "Stats/Chapter 2/Oragnizing Data.md",
+    "CySec/CySec 1 Sep, 2022.md",
+    "Discrete/Discrete Maths 31 Aug, 2022.md"
+  ]
+}
