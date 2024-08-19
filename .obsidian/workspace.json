@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blockchain/Note Track.md",
+                "file": "SSD/Note Track.md",
                 "mode": "preview",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blockchain/Note Track.md",
+                "file": "SSD/Note Track.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blockchain/Note Track.md",
+                "file": "SSD/Note Track.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blockchain/Note Track.md"
+                "file": "SSD/Note Track.md"
               }
             }
           },
@@ -172,15 +172,18 @@
   },
   "active": "3d4f681c539e5056",
   "lastOpenFiles": [
-    "PDC/Note Track.md",
+    "IA/Sessional 1 Prep/Sessional 1 Prep Notes.md",
+    "README.md",
+    "IA/Sessional 1 Prep",
+    "IA/Note Track.md",
     "Blockchain/Note Track.md",
+    "PDC/Note Track.md",
     "SSD/Note Track.md",
     "SSD/Class Notes/32 - SSD 4th December, 2024.md",
     "SSD/Class Notes",
     "SSD/Class Notes/19th August, 2024.md",
     "Class Notes/19th August%2C 2024.md",
     "Class Notes",
-    "README.md",
     "Blockchain/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "Blockchain/Sessional 1 Prep",
     "Blockchain/Sessional 2 Prep/Sessional 2 Prep Notes.md",
@@ -195,7 +198,6 @@
     "IA/Finals Prep",
     "IA",
     "SSD/Finals Prep/Finals Prep Notes.md",
-    "SSD/Finals Prep",
     "SSD/Sessional 2 Prep/Sessional 2 Prep Notes.md",
     "PDC/Finals Prep/Finals Prep Notes.md",
     "PDC/Sessional 2 Prep/Sessional 2 Prep Notes.md",
@@ -212,8 +214,6 @@
     "InfoSec/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "Ethical Hacking/Finals Prep/Finals Prep Notes.md",
     "VARE/Finals Prep/Finals Prep Notes.md",
-    "VARE/Sessional 2 Prep/Sessional 2 Prep Notes.md",
-    "VARE/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "InfoSec/Info_sec/Info sec/Info sec P9.png",
     "InfoSec/Info_sec/Info sec/Info sec P8.png",
     "InfoSec/Info_sec/Info sec/Info sec P7.png",

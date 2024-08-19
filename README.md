@@ -39,6 +39,6 @@
 
 | Exam                                                                   | Status |
 | ---------------------------------------------------------------------- | ------ |
-| [Sessional 1](IA/Sessional%202%20Prep/Sessional%201%20Prep%20Notes.md) |        |
+| [Sessional 1](IA/Sessional%201%20Prep/Sessional%201%20Prep%20Notes.md) |        |
 | [Sessional 2](IA/Sessional%202%20Prep/Sessional%202%20Prep%20Notes.md) |        |
 | [Finals ](IA/Finals%20Prep/Finals%20Prep%20Notes.md)                   |        |
