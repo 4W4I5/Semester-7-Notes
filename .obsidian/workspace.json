@@ -15,7 +15,7 @@
               "state": {
                 "file": "README.md",
                 "mode": "source",
-                "source": false
+                "source": true
               }
             }
           }
@@ -172,8 +172,15 @@
   },
   "active": "3d4f681c539e5056",
   "lastOpenFiles": [
-    "IA/Sessional 2 Prep/Sessional 1 Prep Notes.md",
+    "Blockchain/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "README.md",
+    "Blockchain/Sessional 1 Prep",
+    "Blockchain/Sessional 2 Prep/Sessional 2 Prep Notes.md",
+    "Blockchain/Sessional 2 Prep",
+    "Blockchain/Finals Prep/Finals Prep Notes.md",
+    "Blockchain/Finals Prep",
+    "Blockchain",
+    "IA/Sessional 2 Prep/Sessional 1 Prep Notes.md",
     "IA/Sessional 2 Prep/Sessional 2 Prep Notes.md",
     "IA/Sessional 2 Prep",
     "IA/Finals Prep/Finals Prep Notes.md",
@@ -186,12 +193,8 @@
     "PDC/Finals Prep/Finals Prep Notes.md",
     "PDC/Finals Prep",
     "PDC/Sessional 2 Prep/Sessional 2 Prep Notes.md",
-    "PDC/Sessional 2 Prep",
     "PDC/Sessional 1 Prep/Sessional 1 Prep Notes.md",
-    "PDC/Sessional 1 Prep",
-    "PDC",
     "SSD/Sessional 1 Prep/Sessional 1 Prep Notes.md",
-    "SSD/Sessional 1 Prep",
     "InfoSec/Finals Prep/Finals Prep Notes.md",
     "InfoSec/Finals Prep/Images/Pasted image 20240604013816.png",
     "ke.md",
@@ -211,9 +214,6 @@
     "Forensics/Sessional 2 Prep/Sessional 2 Prep Notes.md",
     "Forensics/3_Forensics_1st_Feb, 2024.md",
     "AI/Sessional 1 Prep/Sessional 1 Prep Notes.md",
-    "Ethical Hacking/Sessional 2 Prep/Sessional 2 Prep Notes.md",
-    "Ethical Hacking/Sessional 1 Prep/Sessional 1 Prep Notes.md",
-    "InfoSec/2_InfoSec_30th_Jan, 2024.md",
     "InfoSec/Info_sec/Info sec/Info sec P9.png",
     "InfoSec/Info_sec/Info sec/Info sec P8.png",
     "InfoSec/Info_sec/Info sec/Info sec P7.png",

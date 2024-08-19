@@ -1,7 +1,7 @@
 # Notes Status
 
 > [!NOTE]
-> Only sessional and finals prep material will be avBlockchainlable and linked here.
+> Only sessional and finals prep material will be available and linked here.
 > While i may not make classwise notes anymore, you are more than welcome to fork the repo and push your own notes here. I'll link them as soon as possible.
 > Check the respective folders for class notes if i made any they will be available there
 
