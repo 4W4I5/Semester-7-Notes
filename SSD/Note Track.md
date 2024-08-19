@@ -1,5 +1,3 @@
-Here's the completed table with the dates linked similarly to the first entry:
-
 | Lecture Num | Date                                                                              | Content     | Status      |
 | ----------- | --------------------------------------------------------------------------------- | ----------- | ----------- |
 | 1           | [19th August, 2024](SSD/Class%20Notes/1%20-%20SSD%2019th%20August,%202024)        |             |             |
@@ -30,7 +28,7 @@ Here's the completed table with the dates linked similarly to the first entry:
 | 25          | [11th November, 2024](SSD/Class%20Notes/25%20-%20SSD%2011th%20November,%202024)   |             |             |
 | 26          | [13th November, 2024](SSD/Class%20Notes/26%20-%20SSD%2013th%20November,%202024)   |             |             |
 | 27          | [18th November, 2024](SSD/Class%20Notes/27%20-%20SSD%2018th%20November,%202024)   |             |             |
-| 28          | [20th November, 2024](SSD/Class%20Notes/28%20-%20SSD%2020th%20November,%202024)   |             |             |
+| 28          | [20th November, 2024](SSD/Class%20Notes/28%20-%20SSD%2020th%20November,%202024)   |             |             | 
 | 29          | [25th November, 2024](SSD/Class%20Notes/29%20-%20SSD%2025th%20November,%202024)   |             |             |
 | 30          | [27th November, 2024](SSD/Class%20Notes/30%20-%20SSD%2027th%20November,%202024)   |             |             |
 | 31          | [2nd December, 2024](SSD/Class%20Notes/31%20-%20SSD%202nd%20December,%202024)     |             |             |

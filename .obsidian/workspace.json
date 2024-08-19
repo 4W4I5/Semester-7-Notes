@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SSD/Note Track.md",
+                "file": "PDC/Note Track.md",
                 "mode": "preview",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SSD/Note Track.md",
+                "file": "PDC/Note Track.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SSD/Note Track.md",
+                "file": "PDC/Note Track.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SSD/Note Track.md"
+                "file": "PDC/Note Track.md"
               }
             }
           },
@@ -172,8 +172,9 @@
   },
   "active": "3d4f681c539e5056",
   "lastOpenFiles": [
-    "SSD/Class Notes/32 - SSD 4th December, 2024.md",
     "SSD/Note Track.md",
+    "PDC/Note Track.md",
+    "SSD/Class Notes/32 - SSD 4th December, 2024.md",
     "SSD/Class Notes",
     "SSD/Class Notes/19th August, 2024.md",
     "Class Notes/19th August%2C 2024.md",
@@ -213,7 +214,6 @@
     "VARE/Sessional 2 Prep/Sessional 2 Prep Notes.md",
     "VARE/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "AI/Finals Prep/Finals Prep Notes.md",
-    "Forensics/Finals Prep/Finals Prep Notes.md",
     "InfoSec/Info_sec/Info sec/Info sec P9.png",
     "InfoSec/Info_sec/Info sec/Info sec P8.png",
     "InfoSec/Info_sec/Info sec/Info sec P7.png",
