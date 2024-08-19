@@ -1,8 +1,9 @@
 # Notes Status
 
 > [!NOTE]
-> Classwise notes are no longer being made. Only sessional and finals prep material will be available.
+> Only sessional and finals prep material will be avBlockchainlable and linked here.
 > While i may not make classwise notes anymore, you are more than welcome to fork the repo and push your own notes here. I'll link them as soon as possible.
+> Check the respective folders for class notes if i made any they will be avBlockchainlable there
 
 | Symbols            | Meaning          |
 | ------------------ | ---------------- |
@@ -12,40 +13,32 @@
 
 # Secure Software Design (SSD)
 
-| Exam                                                                     | Status             |
-| ------------------------------------------------------------------------ | ------------------ |
-| [Sessional 1](VARE/Sessional%201%20Prep/Sessional%201%20Prep%20Notes.md) |  |
-| [Sessional 2](VARE/Sessional%202%20Prep/Sessional%202%20Prep%20Notes.md) |  |
-| [Finals](VARE/Finals%20Prep/Finals%20Prep%20Notes.md)                    |  |
+| Exam                                                                    | Status |
+| ----------------------------------------------------------------------- | ------ |
+| [Sessional 1](SSD/Sessional%201%20Prep/Sessional%201%20Prep%20Notes.md) |        |
+| [Sessional 2](SSD/Sessional%202%20Prep/Sessional%202%20Prep%20Notes.md) |        |
+| [Finals](SSD/Finals%20Prep/Finals%20Prep%20Notes.md)                    |        |
 
-# Digital Forensics
+# Parallel Distributed Computing (PDC)
 
-| Exam                                                                          | Status             |
-| ----------------------------------------------------------------------------- | ------------------ |
-| [Sessional 1](Forensics/Sessional%201%20Prep/Sessional%201%20Prep%20Notes.md) |  |
-| [Sessional 2](Forensics/Sessional%202%20Prep/Sessional%202%20Prep%20Notes.md) |  |
-| [Finals](Forensics/Finals%20Prep/Finals%20Prep%20Notes.md)                    |  |
+| Exam                                                                    | Status |
+| ----------------------------------------------------------------------- | ------ |
+| [Sessional 1](PDC/Sessional%201%20Prep/Sessional%201%20Prep%20Notes.md) |        |
+| [Sessional 2](PDC/Sessional%202%20Prep/Sessional%202%20Prep%20Notes.md) |        |
+| [Finals](PDC/Finals%20Prep/Finals%20Prep%20Notes.md)                    |        |
 
-# AI
+# Blockchain
 
-| Exam                                                                   | Status             |
-| ---------------------------------------------------------------------- | ------------------ |
-| [Sessional 1](AI/Sessional%201%20Prep/Sessional%201%20Prep%20Notes.md) |  |
-| [Sessional 2](AI/Sessional%202%20Prep/Sessional%202%20Prep%20Notes.md) |                 |
-| [Finals](AI/Finals%20Prep/Finals%20Prep%20Notes.md)                    |  |
+| Exam                                                                           | Status |
+| ------------------------------------------------------------------------------ | ------ |
+| [Sessional 1](Blockchain/Sessional%201%20Prep/Sessional%201%20Prep%20Notes.md) |        |
+| [Sessional 2](Blockchain/Sessional%202%20Prep/Sessional%202%20Prep%20Notes.md) |        |
+| [Finals](Blockchain/Finals%20Prep/Finals%20Prep%20Notes.md)                    |        |
 
-# Information Security
+# Information Assurance
 
-| Exam                                                                                                                      | Status             |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| [Sessional 1 \| Dawood's Notes](https://github.com/4W4I5/Semester-6-Notes/blob/main/InfoSec/Info_sec/Info%20sec%20P1.pdf) |  |
-| [Sessional 2](InfoSec/Sessional%202%20Prep/Sessional%202%20Prep%20Notes.md)                                               |                 |
-| [Finals \| Theory Only](InfoSec/Finals%20Prep/Finals%20Prep%20Notes.md)                                                    |           |
-
-# Ethical Hacking
-
-| Exam                                                                                  | Status             |
-| ------------------------------------------------------------------------------------- | ------------------ |
-| [Sessional 1](Ethical%20Hacking/Sessional%201%20Prep/Sessional%201%20Prep%20Notes.md) |  |
-| [Sessional 2](Ethical%20Hacking/Sessional%202%20Prep/Sessional%202%20Prep%20Notes.md) |  |
-| [Finals](Ethical%20Hacking/Finals%20Prep/Finals%20Prep%20Notes.md)                    |  |
+| Exam                                                                   | Status |
+| ---------------------------------------------------------------------- | ------ |
+| [Sessional 1](IA/Sessional%202%20Prep/Sessional%201%20Prep%20Notes.md) |        |
+| [Sessional 2](IA/Sessional%202%20Prep/Sessional%202%20Prep%20Notes.md) |        |
+| [Finals ](IA/Finals%20Prep/Finals%20Prep%20Notes.md)                   |        |

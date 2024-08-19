@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a76c9fc867a697b3",
+        "id": "288a842bbf1373c4",
         "type": "tabs",
         "children": [
           {
-            "id": "8d32371d5a5b5b44",
+            "id": "3d4f681c539e5056",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 397.5,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "bbf2447a7eb59639",
@@ -171,8 +170,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "8d32371d5a5b5b44",
+  "active": "3d4f681c539e5056",
   "lastOpenFiles": [
+    "PDC/Sessional 2 Prep/Sessional 2 Prep Notes.md",
+    "README.md",
+    "PDC/Sessional 2 Prep",
+    "PDC/Sessional 1 Prep/Sessional 1 Prep Notes.md",
+    "PDC/Sessional 1 Prep",
+    "PDC",
+    "SSD/Sessional 1 Prep/Sessional 1 Prep Notes.md",
+    "SSD/Sessional 1 Prep",
+    "SSD",
     "InfoSec/Finals Prep/Finals Prep Notes.md",
     "InfoSec/Finals Prep/Images/Pasted image 20240604013816.png",
     "ke.md",
@@ -182,7 +190,6 @@
     "InfoSec/Finals Prep/Images/Pasted image 20240603230810.png",
     "InfoSec/Finals Prep/Images",
     "InfoSec/Finals Prep/Images/Pasted image 20240603230643.png",
-    "README.md",
     "InfoSec/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "InfoSec/Finals Prep",
     "Ethical Hacking/Finals Prep/Finals Prep Notes.md",
@@ -197,13 +204,8 @@
     "Forensics/Sessional 2 Prep/Sessional 2 Prep Notes.md",
     "Forensics/3_Forensics_1st_Feb, 2024.md",
     "Forensics/Finals Prep",
-    "Forensics/Untitled",
     "AI/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "Ethical Hacking/Sessional 2 Prep/Sessional 2 Prep Notes.md",
-    "AI/Finals Prep",
-    "Ethical Hacking/Sessional 2 Prep",
-    "Forensics/Sessional 2 Prep",
-    "VARE/Sessional 2 Prep",
     "Ethical Hacking/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "InfoSec/2_InfoSec_30th_Jan, 2024.md",
     "InfoSec/3_InfoSec_1st_Feb, 2024.md",
@@ -212,8 +214,6 @@
     "Ethical Hacking/1_Ethical Hacking_31st_Jan, 2024.md",
     "AI/1_AI_25th_Jan, 2024.md",
     "AI/2_AI_30th_Jan, 2024.md",
-    "Ethical Hacking/0_1_Ethical Hacking_24_Jan, 2024.md",
-    "Ethical Hacking/4_Ethical Hacking_12th_Feb, 2024.md",
     "InfoSec/Info_sec/Info sec/Info sec P9.png",
     "InfoSec/Info_sec/Info sec/Info sec P8.png",
     "InfoSec/Info_sec/Info sec/Info sec P7.png",
