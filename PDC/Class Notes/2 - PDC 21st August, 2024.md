@@ -16,6 +16,16 @@
 	- Software based
 
 ### Parallelization
-- Provides
+- **Provides**
 	- Large problems in same/less time
 	- Faster process time for fixed size problems
+- **Scale**
+	- CMP -> Chip Multi-processor, multiple cores on a single chip
+	- Cluster -> Few computers connected together
+	- Grid -> Cluster on the internet
+	- Cloud -> Also a cluster?
+
+## Why PDC
+- **Technology Push**
+	- 
+- **Application Pull**
