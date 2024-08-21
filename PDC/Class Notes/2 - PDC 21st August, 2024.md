@@ -15,3 +15,7 @@
 - **Message Passing (MPI)**
 	- Software based
 
+### Parallelization
+- Provides
+	- Large problems in same/less time
+	- Faster process time for fixed size problems
