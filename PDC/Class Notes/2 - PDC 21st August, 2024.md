@@ -27,5 +27,7 @@
 
 ## Why PDC
 - **Technology Push**
-	- 
+	- Hardware limitations reached
+	- Moore's Law
 - **Application Pull**
+	- Processing demand increases
