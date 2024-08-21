@@ -29,5 +29,7 @@
 - **Technology Push**
 	- Hardware limitations reached
 	- Moore's Law
+		- Implicit Parallelism -> Execution Pipelines, Multiple-Functional Units
+		- Explicit Parallelism -> VLIW, More Execution Units, MPI.
 - **Application Pull**
 	- Processing demand increases
