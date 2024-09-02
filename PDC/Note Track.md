@@ -1,10 +1,10 @@
 | Lecture Num | Date                                                                              | Content      | Status                             |
 | ----------- | --------------------------------------------------------------------------------- | ------------ | ---------------------------------- |
 | 1           | [19th August, 2024](PDC/Class%20Notes/1%20-%20PDC%2019th%20August,%202024)        | Introductory | Skipped                            |
-| 2           | [21st August, 2024](PDC/Class%20Notes/2%20-%20PDC%2021st%20August,%202024)        | Introductory | Incomplete, use slides to complete | 
+| 2           | [21st August, 2024](PDC/Class%20Notes/2%20-%20PDC%2021st%20August,%202024)        | Introductory | Incomplete, use slides to complete |
 | 3           | [26th August, 2024](PDC/Class%20Notes/3%20-%20PDC%2026th%20August,%202024)        |              |                                    |
 | 4           | [28th August, 2024](PDC/Class%20Notes/4%20-%20PDC%2028th%20August,%202024)        |              |                                    |
-| 5           | [2nd September, 2024](PDC/Class%20Notes/5%20-%20PDC%202nd%20September,%202024)    |              |                                    |
+| 5           | [2nd September, 2024](PDC/Class%20Notes/5%20-%20PDC%202nd%20September,%202024)    |              | Beowulf Cluster                    | 
 | 6           | [4th September, 2024](PDC/Class%20Notes/6%20-%20PDC%204th%20September,%202024)    |              |                                    |
 | 7           | [9th September, 2024](PDC/Class%20Notes/7%20-%20PDC%209th%20September,%202024)    |              |                                    |
 | 8           | [11th September, 2024](PDC/Class%20Notes/8%20-%20PDC%2011th%20September,%202024)  |              |                                    |
