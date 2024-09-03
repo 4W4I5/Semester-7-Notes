@@ -14,3 +14,7 @@
 		- provides traversal efficiency
 			- to check a certain block, use merkle proof
 				- get one transaction, use hash of siblings to generate merkle root and compare w stored value
+		- verifies membership in O(logn)
+
+Lecture 3.3 PK Cyptography
+Lecture 3.4 PK Identity
