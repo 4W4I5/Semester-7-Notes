@@ -1,8 +1,10 @@
 - Hash Pointers and Data Structures
 	- hash pointer
-		- pointer to where data is stored + cryptographic hash of that data
+		- pointer to where previous block is stored + cryptographic hash of that block
 			- chain is structured in a way that a block that is not the genesis block will keep a tamper-sensitive record of all previous blocks in the chains and a pointer to the last directly accessible node
 		- allows easy retrieval and then verification
 		- NOTE:: Keep in mind the 3 properties of hash when solving hash problems later on
 	- merkle tree
-		-
+		- binary tree formed by hash pointers
+		- chain nodes are leaf nodes
+		- root of tree aka as merkle root, i.e. hash of the whole chain/tree
