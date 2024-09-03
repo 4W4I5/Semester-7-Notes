@@ -5,6 +5,7 @@
 		- allows easy retrieval and then verification
 		- NOTE:: Keep in mind the 3 properties of hash when solving hash problems later on
 	- merkle tree
-		- binary tree formed by hash pointers
+		- binary tree formed by hash pointers, stores hash of the chain not the actual data
 		- chain nodes are leaf nodes
 		- root of tree aka as merkle root, i.e. hash of the whole chain/tree
+		- first transaction like a binary tree, is at the bottom leftmost
