@@ -1,1 +1,5 @@
-Hash Pointers and Data Structures
+- Hash Pointers and Data Structures
+	- hash pointer
+		- pointer to where data is stored + cryptographic hash of that data
+		- allows easy retrieval and then verification
+	-
