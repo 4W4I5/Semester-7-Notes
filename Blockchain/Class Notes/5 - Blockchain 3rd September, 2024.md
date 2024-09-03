@@ -3,4 +3,5 @@
 		- pointer to where data is stored + cryptographic hash of that data
 		- allows easy retrieval and then verification
 		- NOTE:: Keep in mind the 3 properties of hash when solving hash problems later on
-	-
+	- merkle tree
+		- 
