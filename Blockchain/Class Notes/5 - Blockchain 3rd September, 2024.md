@@ -18,3 +18,7 @@
 
 Lecture 3.3 PK Cyptography
 Lecture 3.4 PK Identity
+- public key used to gen a private key which is one-way hashed to gen a bitcoin address aka identity
+
+- goofycoin aka shahab coin
+	- 
