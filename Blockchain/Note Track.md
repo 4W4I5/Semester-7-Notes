@@ -2,8 +2,8 @@
 | ----------- | ----------------------------------------------------------------------------------------------- | ----------- | ------------ |
 | 1           | [20th August, 2024](Blockchain/Class%20Notes/1%20-%20Blockchain%2020th%20August,%202024)        |             | Absent       |
 | 2           | [22nd August, 2024](Blockchain/Class%20Notes/2%20-%20Blockchain%2022nd%20August,%202024)        |             | Absent       |
-| 3           | [27th August, 2024](Blockchain/Class%20Notes/3%20-%20Blockchain%2027th%20August,%202024)        |             | Not complete | 
-| 4           | [29th August, 2024](Blockchain/Class%20Notes/4%20-%20Blockchain%2029th%20August,%202024)        |             |              |
+| 3           | [27th August, 2024](Blockchain/Class%20Notes/3%20-%20Blockchain%2027th%20August,%202024)        |             | Not complete |
+| 4           | [29th August, 2024](Blockchain/Class%20Notes/4%20-%20Blockchain%2029th%20August,%202024)        |             | Not complete |
 | 5           | [3rd September, 2024](Blockchain/Class%20Notes/5%20-%20Blockchain%203rd%20September,%202024)    |             |              |
 | 6           | [5th September, 2024](Blockchain/Class%20Notes/6%20-%20Blockchain%205th%20September,%202024)    |             |              |
 | 7           | [10th September, 2024](Blockchain/Class%20Notes/7%20-%20Blockchain%2010th%20September,%202024)  |             |              |
