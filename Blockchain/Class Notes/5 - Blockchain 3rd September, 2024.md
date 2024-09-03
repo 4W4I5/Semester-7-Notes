@@ -12,4 +12,5 @@
 		- root of tree aka as merkle root, i.e. hash of the whole chain/tree. represents integrity of entire set of data, value needs to be stored securely/obtained via a trustworthy mechanism
 		- first transaction like a binary tree, is at the bottom leftmost
 		- provides traversal efficiency
-			- to check a certain block, 
+			- to check a certain block, use merkle proof
+				- get one transaction, use hash of siblings to generate merkle root and compare w stored value
