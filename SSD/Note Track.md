@@ -3,9 +3,9 @@
 | 1           | [19th August, 2024](SSD/Class%20Notes/1%20-%20SSD%2019th%20August,%202024)        | Introductory        | Skipped       |
 | 2           | [21st August, 2024](SSD/Class%20Notes/2%20-%20SSD%2021st%20August,%202024)        | STRIDE              | Skipped (GPT) |
 | 3           | [26th August, 2024](SSD/Class%20Notes/3%20-%20SSD%2026th%20August,%202024)        |                     | Absent (GPT)  |
-| 4           | [28th August, 2024](SSD/Class%20Notes/4%20-%20SSD%2028th%20August,%202024)        |                     | Absent (GPT)  | 
+| 4           | [28th August, 2024](SSD/Class%20Notes/4%20-%20SSD%2028th%20August,%202024)        |                     | Absent (GPT)  |
 | 5           | [2nd September, 2024](SSD/Class%20Notes/5%20-%20SSD%202nd%20September,%202024)    | Industry Case study |               |
-| 6           | [4th September, 2024](SSD/Class%20Notes/6%20-%20SSD%204th%20September,%202024)    |                     |               |
+| 6           | [4th September, 2024](SSD/Class%20Notes/6%20-%20SSD%204th%20September,%202024)    | Continued prev      | Skipped              |
 | 7           | [9th September, 2024](SSD/Class%20Notes/7%20-%20SSD%209th%20September,%202024)    |                     |               |
 | 8           | [11th September, 2024](SSD/Class%20Notes/8%20-%20SSD%2011th%20September,%202024)  |                     |               |
 | 9           | [16th September, 2024](SSD/Class%20Notes/9%20-%20SSD%2016th%20September,%202024)  |                     |               |
