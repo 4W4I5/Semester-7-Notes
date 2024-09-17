@@ -56,7 +56,9 @@
 - A computer can be both the **subject** (used as a tool to attack another system) and the **object** (the target of the attack) of an attack.
 
 ## Critical Characteristics of Information
+
 The value of information comes from the following key characteristics:
+
 1. **Availability**: Information should be available to authorized users when needed and in the required format.
 2. **Accuracy**: Data should be free from errors and reflect what the user expects.
 3. **Authenticity**: Information should be genuine and original, not fabricated.
@@ -66,6 +68,7 @@ The value of information comes from the following key characteristics:
 7. **Possession**: The state of having control or ownership of information.
 
 ## The Security Systems Development Life Cycle (SecSDLC)
+
 The **SecSDLC** is a structured methodology for implementing information security, adapted from the traditional Systems Development Life Cycle (SDLC).
 
 ### Phases of SecSDLC:
@@ -158,8 +161,11 @@ The **SecSDLC** is a structured methodology for implementing information securit
 20. Who should lead a security team? Should the approach to security be more managerial or technical?
 
 ### Case Exercises
+
 The next day at SLS found everyone in technical support busy restoring computer systems to their former state and installing new virus and worm control software. Amy found herself learning how to install desktop computer operating systems and applications as SLS made a heroic effort to recover from the attack of the previous day.
+
 Questions:
+
 1. Do you think this event was caused by an insider or outsider? Why do you think this?
 2. Other than installing virus and worm control software, what can SLS do to prepare for the next incident?
 3. Do you think this attack was the result of a virus or a worm? Why do you think this?
@@ -170,7 +176,9 @@ Questions:
 - Attacks on information systems are **frequent** and require constant attention.
 
 ## Business Needs for Security
+
 Information security supports four vital functions for organizations:
+
 1. **Protects the ability to function**:
     - Both **general management** and **IT management** are responsible for ensuring the organization can operate securely.
     - Information security is both a **management** and **people** issue, not just technical.
@@ -254,7 +262,9 @@ Information security supports four vital functions for organizations:
 
 ## Secure Software Development
 ### Software Vulnerabilities
+
 Many security issues arise from flaws in software. Common problems include:
+
 - **Buffer overruns**
 - **Command injection**
 - **Cross-site scripting**
@@ -264,7 +274,9 @@ Many security issues arise from flaws in software. Common problems include:
 - **Failure to protect network traffic or store data securely**
 
 ### Secure Development Practices
+
 To address security issues, organizations have adopted secure software development methodologies:
+
 - **Software Assurance (SA)**: A set of principles aimed at ensuring software is **secure and reliable**.
 - **SA Common Body of Knowledge (CBK)**: A national effort led by the U.S. Department of Defense and Homeland Security to promote secure software development.
 
@@ -299,8 +311,11 @@ To address security issues, organizations have adopted secure software developme
 20. What is a buffer overflow, and how is it used against a Web server?
 
 ### Case Study
+
 Soon after the board of directors meeting, Charlie was promoted to Chief Information Security Officer, a new position that reports to the CIO, Gladys Williams, and that was created to provide leadership for SLS’s efforts to improve its security profile.
+
 Questions:
+
 1. How do Fred, Gladys, and Charlie perceive the scope and scale of the new information security effort?
 2. How will Fred measure success when he evaluates Gladys’ performance for this project? How will he evalute Charlie’s performance?
 3. Which of the threats discussed in this chapter should receive Charlie’s attention early in his planning process?
@@ -331,10 +346,46 @@ Questions:
 20. What can be done to deter someone from committing a crime?
 
 ### Case Study
+
 Iris called the company security hotline. The hotline was an anonymous way to report any suspicious activity or abuse of company policy, although Iris chose to identify herself. The next morning, she was called to a meeting with an investigator from corporate security, which led to more meetings with others in corporate security, and then finally a meeting with the director of human resources and Gladys Williams, the CIO of SLS.
+
 Questions:
+
 1. Why was Iris justified in determining who the owner of the CD was?
-2. Should Iris have approached Henry directly, or was the hotline the most effective way to take action? Why do you think so? 
+2. Should Iris have approached Henry directly, or was the hotline the most effective way to take action? Why do you think so?
 3. Should Iris have placed the CD back at the coffee station and forgotten the whole thing? Explain why that action would have been ethical or unethical.
 
 # Chapter 4: Risk Management
+
+
+## Review Questions
+1. What is risk management? Why is the identification of risks, by listing assets and their vulnerabilities, so important to the risk management process?
+2. According to Sun Tzu, what two key understandings must you achieve to be successful in battle?
+3. Who is responsible for risk management in an organization? Which community of interest usually takes the lead in information security risk management?
+4. In risk management strategies, why must periodic review be a part of the process?
+5. Why do networking components need more examination from an information security perspective than from a systems development perspective?
+6. What value does an automated asset inventory system have for the risk identification process?
+7. What information attribute is often of great value for local networks that use static addressing?
+8. Which is more important to the systems components classification scheme: that the asset identification list be comprehensive or mutually exclusive?
+9. What’s the difference between an asset’s ability to generate revenue and its ability to generate profit?
+10. What are vulnerabilities? How do you identify them?
+11. What is competitive disadvantage? Why has it emerged as a factor?
+12. What are the strategies for controlling risk as described in this chapter?
+13. Describe the “defend” strategy. List and describe the three common methods.
+14. Describe the “transfer” strategy. Describe how outsourcing can be used for this purpose.
+15. Describe the “mitigate” strategy. What three planning approaches are discussed in the text as opportunities to mitigate risk?
+16. How is an incident response plan different from a disaster recovery plan?
+17. What is risk appetite? Explain why risk appetite varies from organization to organization.
+18. What is a cost benefit analysis?
+19. What is the definition of single loss expectancy? What is annual loss expectancy?
+20. What is residual risk?
+
+### Case Study
+
+As Charlie wrapped up the meeting, he ticked off a few key reminders for everyone involved in the asset identification project. “Okay, everyone, before we finish, please remember that you should try to make your asset lists complete, but be sure to focus your attention on the more valuable assets first. Also, remember that we evaluate our assets based on business impact to profitability first, and then economic cost of replacement. Make sure you check with me about any questions that come up. We will schedule our next meeting in two weeks, so please have your draft inventories ready.”
+
+Questions:
+
+1. Did Charlie effectively organize the work before the meeting? Why or why not? Make a list of the important issues you think should be covered by the work plan. For each issue, provide a short explanation.
+2. Will the company get useful information from the team it has assembled? Why or why not?
+3. Why might some attendees resist the goals of the meeting? Does it seem that each person invited was briefed on the importance of the event and the issues behind it?
