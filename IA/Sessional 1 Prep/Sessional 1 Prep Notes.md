@@ -37,7 +37,12 @@
 	    - No **user identification** or **authorization**.
 	    - Phone numbers for ARPANET were publicly shared, allowing unauthorized access.
 	- The development of the **MULTICS** system (Multiplexed Information and Computing Service) focused on **security** from the start, introducing **multiple security levels** and **passwords**.
+		- A mainframe, time-sharing OS built by General Electric
+		- Also spawned UNIX who wanted text processing
 	- In the **late 1970s**, **Rand Report R-609** was the first paper to define **computer security**, shifting the focus from just **physical security** to include the **safety of data** and **access controls**.
+		- It defined the safety of data
+		- Limiting random & unauthorized access to that data
+		- Involved personnel from multiple levels of the organization
 - ### 1990s to Present
 	- As **networks of computers** became common, so did the **need to secure interconnected systems**.
 	- The **Internet**, a global network, expanded, but **security was a low priority** in its early deployments.
