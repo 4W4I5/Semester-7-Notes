@@ -140,31 +140,35 @@ A computer can be both the **subject** (used as a tool to attack another system)
 ## The Security Systems Development Life Cycle (SecSDLC)
 
 ### Phases of SecSDLC:
+Same phases as SDLC but not required to follow SDLC process to the tee
 1. **Investigation**:
     - Identifies the problem the system is being developed to solve.
     - Specifies project objectives, scope, and constraints.
     - **Feasibility analysis**:
 	    - Assesses whether the project is economically, technically, and behaviorally feasible based on prelim cost-benefit analysis
-2. **Analysis**:
+	- **Security Aspect:**
+		- Begins with **Enterprise Information Security Policy (EISP)**
+		- Organizational Feasibility Analysis is performed
+1. **Analysis**:
     - Involves assessing the;
 	    - organization
 	    - current systems
 	    - capabilities to support current systems
     - Analysts document findings and update feasibility analyses.
-3. **Logical Design**:
+2. **Logical Design**:
     - Based on the analysis, select applications and technologies that will meet business needs.
     - Data structures are chosen to support the system,
     - Followed by another feasibility analysis at the end
-4. **Physical Design**:
+3. **Physical Design**:
     - Specific technologies are selected to support the logical design.
     - Components are evaluated based on a **make-or-buy** decision (whether to develop in-house or purchase).
     - Final design is presented to end-users for approval.
-5. **Implementation**:
+4. **Implementation**:
     - Software is created or purchased, components are tested, and users are trained.
     - **Feasibility analysis** is conducted, and the system is reviewed by users.
-6. **Maintenance and Change**:
+5. **Maintenance and Change**:
     - This phase is the **longest and most expensive**. It involves ongoing support and modification of the system.
-    - **Threats evolve**, and the system must constantly adapt to new risks.
+    - **Threats evolve**, and the system must constantly adapt to new risks or when a the current system can no longer support the org's mission a new project is implemented
 
 ## Security Professionals and the Organization
 - ### Key Roles:
