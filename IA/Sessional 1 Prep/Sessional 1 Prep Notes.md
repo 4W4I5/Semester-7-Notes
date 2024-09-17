@@ -44,12 +44,8 @@
 	- The interconnected nature of systems today means that the **security of each computer** is dependent on the **security of every connected system**.
 
 ## Key Information Security Concepts
-**blud missed out so much**
+A computer can be both the **subject** (used as a tool to attack another system) and the **object** (the target of the attack) of an attack.
 
-### Computers as Subjects or Objects of Attack
-- A computer can be both the **subject** (used as a tool to attack another system) and the **object** (the target of the attack) of an attack.
-
-## Critical Characteristics of Information
 | **Critical Characteristics of Information** | **Detail**                                                                                       |
 | ------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | **Access**                                  | The ability to use or manipulate a system or data.                                               |
@@ -57,8 +53,13 @@
 | **Attack**                                  | An attempt to damage or compromise information systems, either intentionally or unintentionally. |
 | **Control/Safeguard**                       | Mechanisms, policies, or procedures that counter threats and vulnerabilities.                    |
 | **Exploit**                                 | Taking advantage of a weakness or vulnerability.                                                 |
+| **Exposure**                                |                                                                                                  |
+| **Loss**                                    |                                                                                                  |
+| **Protection Profile/Security Posture**     |                                                                                                  |
+| **Subjects & Objects**                      |                                                                                                  |
 | **Risk**                                    | The probability of loss or damage.                                                               |
 | **Threat**                                  | Any potential danger to an asset (e.g., hackers, malware).                                       |
+| **Threat Agent**                            |                                                                                                  |
 | **Vulnerability**                           | Weaknesses in a system that can be exploited.                                                    |
 
 
