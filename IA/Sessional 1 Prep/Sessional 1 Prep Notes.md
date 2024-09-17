@@ -16,6 +16,13 @@
 	- Management of InfoSec
 	- Network Security
 	- Computer & Data Security
+- Components of an InfoSec System
+	- Software
+	- Hardware
+	- Data
+	- People
+	- Procedures/Policy
+	- Networks
 
 ### Key Concepts:
 
@@ -138,20 +145,20 @@ A computer can be both the **subject** (used as a tool to attack another system)
     - Specifies project objectives, scope, and constraints.
     - **Feasibility analysis**:
 	    - Assesses whether the project is economically, technically, and behaviorally feasible.
-1. **Analysis**:
+2. **Analysis**:
     - Involves assessing the organization, current systems, and their capabilities.
     - Analysts document findings and update feasibility analyses.
-2. **Logical Design**:
+3. **Logical Design**:
     - Based on the analysis, select applications and technologies that will meet business needs.
     - Data structures are chosen to support the system, followed by another feasibility analysis.
-3. **Physical Design**:
+4. **Physical Design**:
     - Specific technologies are selected to support the logical design.
     - Components are evaluated based on a **make-or-buy** decision (whether to develop in-house or purchase).
     - Final design is presented to end-users for approval.
-4. **Implementation**:
+5. **Implementation**:
     - Software is created or purchased, components are tested, and users are trained.
     - **Feasibility analysis** is conducted, and the system is reviewed by users.
-5. **Maintenance and Change**:
+6. **Maintenance and Change**:
     - This phase is the **longest and most expensive**. It involves ongoing support and modification of the system.
     - **Threats evolve**, and the system must constantly adapt to new risks.
 
@@ -169,11 +176,14 @@ A computer can be both the **subject** (used as a tool to attack another system)
 	- **End Users**: Individuals who interact with the system and provide feedback on security measures.
 
 ## Data Responsibilities
-- **Data Owner**: Responsible for the security and use of a particular set of information. They define data classification levels.
-- **Data Custodian**: Manages data storage, maintenance, and backup procedures.
-- **Data Users**: Individuals who work with information as part of their daily responsibilities.
+- **Data Owner**:
+	- Responsible for the security and use of a particular set of information. They define data classification levels.
+- **Data Custodian**:
+	- Manages data storage, maintenance, and backup procedures.
+- **Data Users**:
+	- Individuals who work with information as part of their daily responsibilities.
 
-## Approaches to Security Implementation
+## Approaches to Security Implementation (Balance b/w Security & Acess)
 - ### Bottom-Up Approach:
 	- **Grassroots** effort, typically initiated by **systems administrators**.
 	- **Advantage**: Technical expertise of the individuals implementing the security.
