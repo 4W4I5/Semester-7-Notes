@@ -12,13 +12,16 @@
 - To protect this data, organizations need policies, awareness programs, training, education, and technology.
 
 ### Key Concepts:
-- **Security**: The state of being free from danger. Security involves multiple layers, including:
-    - **Physical security**: Protecting physical assets from unauthorized access.
-    - **Personal security**: Protecting individuals and groups.
-    - **Operations security**: Securing the processes and activities of an organization.
-    - **Communications security**: Protecting communications media and content.
-    - **Network security**: Securing the components and connections in networks.
-    - **Information security**: Ensuring data is safe from unauthorized access, modification, or destruction.
+| **Key Concept**             | **Detail**                                                                    |
+| --------------------------- | ----------------------------------------------------------------------------- |
+| **Security**                | The state of being free from danger. Involves multiple layers:                |
+| **Physical security**       | Protecting physical assets from unauthorized access.                          |
+| **Personal security**       | Protecting individuals and groups.                                            |
+| **Operations security**     | Securing the processes and activities of an organization.                     |
+| **Communications security** | Protecting communications media and content.                                  |
+| **Network security**        | Securing the components and connections in networks.                          |
+| **Information security**    | Ensuring data is safe from unauthorized access, modification, or destruction. | 
+
 
 ## History of Information Security
 - ### Early Years
