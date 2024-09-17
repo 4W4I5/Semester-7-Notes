@@ -47,40 +47,41 @@
 - A computer can be both the **subject** (used as a tool to attack another system) and the **object** (the target of the attack) of an attack.
 
 ## Critical Characteristics of Information
+| **Critical Characteristics of Information** | **Detail**                                                                                       |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| **Access**                                  | The ability to use or manipulate a system or data.                                               |
+| **Asset**                                   | Resources being protected, like hardware, software, data, or information.                        |
+| **Attack**                                  | An attempt to damage or compromise information systems, either intentionally or unintentionally. |
+| **Control/Safeguard**                       | Mechanisms, policies, or procedures that counter threats and vulnerabilities.                    |
+| **Exploit**                                 | Taking advantage of a weakness or vulnerability.                                                 |
+| **Risk**                                    | The probability of loss or damage.                                                               |
+| **Threat**                                  | Any potential danger to an asset (e.g., hackers, malware).                                       |
+| **Vulnerability**                           | Weaknesses in a system that can be exploited.                                                    |
 
-The value of information comes from the following key characteristics:
 
-1. **Availability**: Information should be available to authorized users when needed and in the required format.
-2. **Accuracy**: Data should be free from errors and reflect what the user expects.
-3. **Authenticity**: Information should be genuine and original, not fabricated.
-4. **Confidentiality**: Ensures that information is accessible only to those authorized to view it.
-5. **Integrity**: Information should be complete and uncorrupted.
-6. **Utility**: Information should serve its intended purpose.
-7. **Possession**: The state of having control or ownership of information.
 
 ## The Security Systems Development Life Cycle (SecSDLC)
-
-The **SecSDLC** is a structured methodology for implementing information security, adapted from the traditional Systems Development Life Cycle (SDLC).
 
 ### Phases of SecSDLC:
 1. **Investigation**:
     - Identifies the problem the system is being developed to solve.
     - Specifies project objectives, scope, and constraints.
-    - **Feasibility analysis**: Assesses whether the project is economically, technically, and behaviorally feasible.
-2. **Analysis**:
+    - **Feasibility analysis**:
+	    - Assesses whether the project is economically, technically, and behaviorally feasible.
+1. **Analysis**:
     - Involves assessing the organization, current systems, and their capabilities.
     - Analysts document findings and update feasibility analyses.
-3. **Logical Design**:
+2. **Logical Design**:
     - Based on the analysis, select applications and technologies that will meet business needs.
     - Data structures are chosen to support the system, followed by another feasibility analysis.
-4. **Physical Design**:
+3. **Physical Design**:
     - Specific technologies are selected to support the logical design.
     - Components are evaluated based on a **make-or-buy** decision (whether to develop in-house or purchase).
     - Final design is presented to end-users for approval.
-5. **Implementation**:
+4. **Implementation**:
     - Software is created or purchased, components are tested, and users are trained.
     - **Feasibility analysis** is conducted, and the system is reviewed by users.
-6. **Maintenance and Change**:
+5. **Maintenance and Change**:
     - This phase is the **longest and most expensive**. It involves ongoing support and modification of the system.
     - **Threats evolve**, and the system must constantly adapt to new risks.
 
