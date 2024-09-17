@@ -144,13 +144,17 @@ A computer can be both the **subject** (used as a tool to attack another system)
     - Identifies the problem the system is being developed to solve.
     - Specifies project objectives, scope, and constraints.
     - **Feasibility analysis**:
-	    - Assesses whether the project is economically, technically, and behaviorally feasible.
+	    - Assesses whether the project is economically, technically, and behaviorally feasible based on prelim cost-benefit analysis
 2. **Analysis**:
-    - Involves assessing the organization, current systems, and their capabilities.
+    - Involves assessing the;
+	    - organization
+	    - current systems
+	    - capabilities to support current systems
     - Analysts document findings and update feasibility analyses.
 3. **Logical Design**:
     - Based on the analysis, select applications and technologies that will meet business needs.
-    - Data structures are chosen to support the system, followed by another feasibility analysis.
+    - Data structures are chosen to support the system,
+    - Followed by another feasibility analysis at the end
 4. **Physical Design**:
     - Specific technologies are selected to support the logical design.
     - Components are evaluated based on a **make-or-buy** decision (whether to develop in-house or purchase).
