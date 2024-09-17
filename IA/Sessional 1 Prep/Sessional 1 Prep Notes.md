@@ -154,10 +154,11 @@ The SecSDLC mirrors the SDLC but adds a security focus in each phase.
 
 ## Security Professionals and the Organization
 - ### Key Roles:
-	- **Chief Information Officer (CIO)**: 
+	- **Chief Information Officer (CIO)**:
 		- The senior technology officer responsible for advising on strategic planning related to information management.
-	- **Chief Information Security Officer (CISO)**: 
+	- **Chief Information Security Officer (CISO)**:
 		- Oversees the assessment, management, and implementation of information security within the organization.
+		- Usually directly reports to CIO
 - ### Information Security Project Team:
 	- **Champion**: A senior executive who supports the project financially and administratively.
 	- **Team Leader**: A project manager who understands both project management and technical security requirements.
