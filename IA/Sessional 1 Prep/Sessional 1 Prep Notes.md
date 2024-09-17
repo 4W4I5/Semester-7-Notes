@@ -135,6 +135,35 @@ The **SecSDLC** is a structured methodology for implementing information securit
 - End-users are often the **weakest link** in security.
 - **Security administrators** can reduce risks by understanding behavioral factors and implementing **user-friendly controls**.
 
+## Review Questions
+1. What is the difference between a threat agent and a threat?
+2. What is the difference between vulnerability and exposure?
+3. How is infrastructure protection (assuring the security of utility services) related to information security?
+4. What type of security was dominant in the early years of computing?
+5. What are the three components of the C.I.A. triangle? What are they used for?
+6. If the C.I.A. triangle is incomplete, why is it so commonly used in security?
+7. Describe the critical characteristics of information. How are they used in the study of computer security?
+8. Identify the six components of an information system. Which are most directly affected by the study of computer security? Which are most commonly associated with its study?
+9. What system is the father of almost all modern multiuser systems?
+10. Which paper is the foundation of all subsequent studies of computer security?
+11. Why is the top-down approach to information security superior to the bottom-up approach?
+12. Why is a methodology important in the implementation of information security? How does a methodology improve the process?
+13. Which members of an organization are involved in the security system development life cycle? Who leads the process?
+14. How can the practice of information security be described as both an art and a science? How does security as a social science influence its practice?
+15. Who is ultimately responsible for the security of information in the organization?
+16. What is the relationship between the MULTICS project and the early development of computer security?
+17. How has computer security evolved into modern information security?
+18. What was important about Rand Report R-609?
+19. Who decides how and when data in an organization will be used or controlled? Who is responsible for seeing that these wishes are carried out?
+20. Who should lead a security team? Should the approach to security be more managerial or technical?
+
+### Case Exercises
+The next day at SLS found everyone in technical support busy restoring computer systems to their former state and installing new virus and worm control software. Amy found herself learning how to install desktop computer operating systems and applications as SLS made a heroic effort to recover from the attack of the previous day.
+Questions:
+1. Do you think this event was caused by an insider or outsider? Why do you think this?
+2. Other than installing virus and worm control software, what can SLS do to prepare for the next incident?
+3. Do you think this attack was the result of a virus or a worm? Why do you think this?
+
 # Chapter 2: The need for Security
 - The **primary mission of information security** is to ensure systems and their content remain unchanged despite threats.
 - In the absence of threats, efforts could be directed at improving systems' ease of use and overall efficiency.
@@ -247,5 +276,65 @@ To address security issues, organizations have adopted secure software developme
 - Use **minimum privileges** required for tasks.
 - Make security mechanisms **easy to use**, ensuring users apply them correctly and routinely.
 
+## Review Questions
+1. Why is information security a management problem? What can management do that technology cannot?
+2. Why is data the most important asset an organization possesses? What other assets in the organization require protection?
+3. Which management groups are responsible for implementing information security to protect the organization’s ability to function?
+4. Has the implementation of networking technology created more or less risk for businesses that use information technology? Why?
+5. What is information extortion? Describe how such an attack can cause losses, using an example not found in the text.
+6. Why do employees constitute one of the greatest threats to information security?
+7. What measures can individuals take to protect against shoulder surfing?
+8. How has the perception of the hacker changed over recent years? What is the profile of a hacker today?
+9. What is the difference between a skilled hacker and an unskilled hacker (other than skill levels)? How does the protection against each differ?
+10. What are the various types of malware? How do worms differ from viruses? Do Trojan horses carry viruses or worms?
+11. Why does polymorphism cause greater concern than traditional malware? How does it affect detection?
+12. What is the most common form of violation of intellectual property? How does an organization protect against it? What agencies fight it?
+13. What are the various types of force majeure? Which type might be of greatest concern to an organization in Las Vegas? Oklahoma City? Miami? Los Angeles?
+14. How does technological obsolescence constitute a threat to information security? How can an organization protect against it?
+15. Does the intellectual property owned by an organization usually have value? If so, how can attackers threaten that value?
+16. What are the types of password attacks? What can a systems administrator do to protect against them?
+17. What is the difference between a denial-of-service attack and a distributed denial-of-service attack? Which is more dangerous? Why?
+18. For a sniffer attack to succeed, what must the attacker do? How can an attacker gain access to a network to use the sniffer system?
+19. What methods does a social engineering hacker use to gain information about a user’s login id and password? How would this method differ if it were targeted towards an administrator’s assistant versus a data-entry clerk?
+20. What is a buffer overflow, and how is it used against a Web server?
+
+### Case Study
+Soon after the board of directors meeting, Charlie was promoted to Chief Information Security Officer, a new position that reports to the CIO, Gladys Williams, and that was created to provide leadership for SLS’s efforts to improve its security profile.
+Questions:
+1. How do Fred, Gladys, and Charlie perceive the scope and scale of the new information security effort?
+2. How will Fred measure success when he evaluates Gladys’ performance for this project? How will he evalute Charlie’s performance?
+3. Which of the threats discussed in this chapter should receive Charlie’s attention early in his planning process?
+
 # Chapter 3: Legal, Ethical & Professional Issues InfoSec
+
+
+## Review Questions
+1. What is the difference between law and ethics?
+2. What is civil law, and what does it accomplish?
+3. What are the primary examples of public law?
+4. Which law amended the Computer Fraud and Abuse Act of 1986, and what did it change?
+5. Which law was specifically created to deal with encryption policy in the United States?
+6. What is privacy in an information security context?
+7. What is another name for the Kennedy-Kassebaum Act (1996), and why is it important to organizations that are not in the health care industry?
+8. If you work for a financial service organization such as a bank or credit union, which 1999 law affects your use of customer data? What other affects does it have?
+9. What is the primary purpose of the USA PATRIOT Act?
+10. Which 1997 law provides guidance on the use of encryption?
+11. What is intellectual property (IP)? Is it afforded the same protection in every country of the world? What laws currently protect it in the United States and Europe?
+12. How does the Sarbanes-Oxley Act of 2002 affect information security managers?
+13. What is due care? Why should an organization make sure to exercise due care in its usual course of operations?
+14. How is due diligence different from due care? Why are both important?
+15. What is a policy? How is it different from a law?
+16. What are the three general categories of unethical and illegal behavior?
+17. What is the best method for preventing an illegal or unethical activity?
+18. Of the information security organizations listed that have codes of ethics, which has been established for the longest time? When was it founded?
+19. Of the organizations listed that have codes of ethics, which is focused on auditing and control?
+20. What can be done to deter someone from committing a crime?
+
+### Case Study
+Iris called the company security hotline. The hotline was an anonymous way to report any suspicious activity or abuse of company policy, although Iris chose to identify herself. The next morning, she was called to a meeting with an investigator from corporate security, which led to more meetings with others in corporate security, and then finally a meeting with the director of human resources and Gladys Williams, the CIO of SLS.
+Questions:
+1. Why was Iris justified in determining who the owner of the CD was?
+2. Should Iris have approached Henry directly, or was the hotline the most effective way to take action? Why do you think so? 
+3. Should Iris have placed the CD back at the coffee station and forgotten the whole thing? Explain why that action would have been ethical or unethical.
+
 # Chapter 4: Risk Management
