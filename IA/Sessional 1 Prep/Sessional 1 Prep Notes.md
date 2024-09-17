@@ -57,8 +57,8 @@ Organizational Security is built on multiple layers of security;
 
 
 ### Key Information Security Concepts
-A computer can be both the **subject** (used as a tool to attack another system) and the **object** (the target of the attack) of an attack.
 
+A computer can be both the **subject** (used as a tool to attack another system) and the **object** (the target of the attack) of an attack.
 
 | **Key Information Security Concepts** | **Definition**                                                                                                                                                                       |
 | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -81,15 +81,17 @@ A computer can be both the **subject** (used as a tool to attack another system)
 
 ### Critical Characteristics of Information
 
-| **Characteristics** | **Details**                                                                  |
-| ------------------- | ---------------------------------------------------------------------------- |
-| **Availability**    | Ensuring that information and resources are accessible when needed.          |
-| **Accuracy**        | The correctness and precision of information.                                |
-| **Authenticity**    | Verification that information is genuine and from a legitimate source.       |
-| **Confidentiality** | Ensuring that information is only accessible to those authorized to view it. |
-| **Integrity**       | Ensuring that information is protected from unauthorized modification.       |
-| **Utility**         | The usefulness or applicability of information for its intended purpose.     |
-| **Possession**      | The ownership or control of information.                                     |
+| **Critical Characteristic** | **Summary**                                                                                                                                                                                                |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Availability**            | Ensures authorized users can access information when and where needed, in the correct format. A breach can result in downtime or inability to access critical information.                                 |
+| **Accuracy**                | Information must be free from errors and meet user expectations; modifications compromise accuracy. Breaches can lead to misinformation and potentially flawed decisions.                                  |
+| **Authenticity**            | Information should be genuine and original, not altered or fabricated. A breach can cause loss of trust and legitimacy, leading to misinformation.                                                         |
+| **Confidentiality**         | Prevents unauthorized access or exposure to information. Breaches can lead to unauthorized access, data leaks, and privacy violations.                                                                     |
+| **Integrity**               | Information must remain whole and uncorrupted; corruption or damage threatens integrity. Breaches can lead to data corruption, loss of trust, and operational disruptions.                                 |
+| **Utility**                 | Information must be valuable and useful for its intended purpose, and in a meaningful format. Breaches can render information useless, impairing decision-making and functionality.                        |
+| **Possession**              | Ownership or control of information, regardless of format; breaches in confidentiality imply loss of possession. Breaches can result in unauthorized control or theft of information, affecting ownership. |
+
+## CNSS Model
 
 ## The Security Systems Development Life Cycle (SecSDLC)
 
