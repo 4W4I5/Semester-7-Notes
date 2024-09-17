@@ -139,41 +139,25 @@ A computer can be both the **subject** (used as a tool to attack another system)
 	    - **Availability:** The healthcare application is built to handle simultaneous access by multiple users without performance issues, ensuring data is accessible when needed.
 ## The Security Systems Development Life Cycle (SecSDLC)
 
+
 ### Phases of SecSDLC:
-Same phases as SDLC but not required to follow SDLC process to the tee
-1. **Investigation**:
-    - Identifies the problem the system is being developed to solve.
-    - Specifies project objectives, scope, and constraints.
-    - **Feasibility analysis**:
-	    - Assesses whether the project is economically, technically, and behaviorally feasible based on prelim cost-benefit analysis
-	- **Security Aspect:**
-		- Begins with **Enterprise Information Security Policy (EISP)**
-		- Organizational Feasibility Analysis is performed
-1. **Analysis**:
-    - Involves assessing the;
-	    - organization
-	    - current systems
-	    - capabilities to support current systems
-    - Analysts document findings and update feasibility analyses.
-2. **Logical Design**:
-    - Based on the analysis, select applications and technologies that will meet business needs.
-    - Data structures are chosen to support the system,
-    - Followed by another feasibility analysis at the end
-3. **Physical Design**:
-    - Specific technologies are selected to support the logical design.
-    - Components are evaluated based on a **make-or-buy** decision (whether to develop in-house or purchase).
-    - Final design is presented to end-users for approval.
-4. **Implementation**:
-    - Software is created or purchased, components are tested, and users are trained.
-    - **Feasibility analysis** is conducted, and the system is reviewed by users.
-5. **Maintenance and Change**:
-    - This phase is the **longest and most expensive**. It involves ongoing support and modification of the system.
-    - **Threats evolve**, and the system must constantly adapt to new risks or when a the current system can no longer support the org's mission a new project is implemented
+The SecSDLC mirrors the SDLC but adds a security focus in each phase.
+
+| **SDLC Phase**                | **Description**                                                                                                                                                                                                                | **SecSDLC Security Aspect**                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **1. Investigation**          | - Identifies the problem the system is being developed to solve.  <br> - Specifies project objectives, scope, and constraints.  <br> - **Feasibility analysis** assesses economic, technical, and behavioral feasibility. <br> | - Begins with **Enterprise Information Security Policy (EISP)** outlining security needs.<br> - **Organizational feasibility** is performed to assess resources and commitment to security.<br> - Scope includes defining security goals and policies.<br> - Security problems and constraints are highlighted for further analysis.                                                                                                                         |
+| **2. Analysis**               | - Assess organization, current systems, and capabilities to support the new system.<br> - Analysts document findings and update feasibility analyses.<br>                                                                      | - **Risk management** starts by identifying potential security threats and vulnerabilities.<br> - Existing **security policies and controls** are reviewed.<br> - **Legal issues** related to security compliance are analyzed.<br> - Threat assessments and evaluations of current controls are documented.<br>                                                                                                                                             |
+| **3. Logical Design**         | - Select applications and technologies to meet business needs.<br> - Define data structures and perform a feasibility analysis.<br>                                                                                            | - **Security blueprints** are developed based on the threat analysis and policies.<br> - Plan for **incident response** and disaster recovery is created.<br> - **Security policy integration** ensures proper security mechanisms are selected.<br> - **Feasibility analysis** ensures that security requirements can be met in-house or outsourced.<br>                                                                                                    |
+| **4. Physical Design**        | - Choose specific technologies and evaluate components (make-or-buy decisions).<br> - Final design is presented for user approval.<br>                                                                                         | - Evaluate **security technologies** that support the logical security design.<br> - Update **security blueprints** to align with any new physical design needs.<br> - Establish **physical security measures** (e.g., firewalls, access control systems).<br> - **Feasibility study** determines if the organization is prepared to implement the proposed security measures.<br> - All stakeholders approve the security design before implementation.<br> |
+| **5. Implementation**         | - Software is created, purchased, and tested. Users are trained.<br> - Feasibility analysis is conducted, and the system is reviewed.<br>                                                                                      | - Security solutions are **acquired, developed, tested**, and re-tested.<br> - **Personnel training** on security protocols and incident handling.<br> - Implemented security features undergo **continuous monitoring and testing** for vulnerabilities.<br> - **Final security approval** is obtained from upper management before the system goes live.<br>                                                                                               |
+| **6. Maintenance and Change** | - Ongoing support and modification of the system.<br> - As new threats emerge, the system must adapt to evolving risks.<br>                                                                                                    | - Continuously monitor and update the system’s **security profile**.<br> - Perform regular **vulnerability assessments** and **patch management**.<br> - Adapt security measures in response to new and evolving threats.<br> - Ensure proper **disaster recovery** and **incident response** processes are in place for potential security breaches.<br> - Implement **security audits** to validate and ensure the effectiveness of existing controls.<br> |
 
 ## Security Professionals and the Organization
 - ### Key Roles:
-	- **Chief Information Officer (CIO)**: The senior technology officer responsible for advising on strategic planning related to information management.
-	- **Chief Information Security Officer (CISO)**: Oversees the assessment, management, and implementation of information security within the organization.
+	- **Chief Information Officer (CIO)**: 
+		- The senior technology officer responsible for advising on strategic planning related to information management.
+	- **Chief Information Security Officer (CISO)**: 
+		- Oversees the assessment, management, and implementation of information security within the organization.
 - ### Information Security Project Team:
 	- **Champion**: A senior executive who supports the project financially and administratively.
 	- **Team Leader**: A project manager who understands both project management and technical security requirements.
