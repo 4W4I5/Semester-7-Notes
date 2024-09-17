@@ -6,12 +6,12 @@
 | 4              | Risk Management                                 | :warning: |
 
 # Chapter 1: Introduction to InfoSec
-## What is Information Security?
+### What is Information Security?
 - Defined by Jim Anderson in 2002 as "a well-informed sense of assurance that information risks and controls are in balance."
 - This involves **protecting information** and its critical elements, including the systems that use, store, and transmit it.
 - To protect this data, organizations need policies, awareness programs, training, education, and technology.
 
-### Key Concepts:
+#### Key Concepts:
 | **Key Concept**             | **Detail**                                                                    |
 | --------------------------- | ----------------------------------------------------------------------------- |
 | **Security**                | The state of being free from danger. Involves multiple layers:                |
@@ -23,30 +23,30 @@
 | **Information security**    | Ensuring data is safe from unauthorized access, modification, or destruction. |
 
 
-## History of Information Security
-- ### Early Years
+### History of Information Security
+- #### Early Years
 	- **World War II**: The need for security arose with the first mainframes, used for military and intelligence purposes.
 		- Early controls were mostly **physical**, such as **badges**, **keys**, and **facial recognition**.
     - **Information security** at the time involved rudimentary methods, like document classification, with little focus on system security.
-- ### 1960s
+- #### 1960s
 	- The **Advanced Research Project Agency (ARPA)** initiated research to develop a **redundant, networked communications system**.
 		- This was the origin of **ARPANET**, the precursor to the Internet.
 	- **Larry Roberts**, who developed ARPANET, is known as the **founder of the Internet**.
-- ### 1970s & 1980s
+- #### 1970s & 1980s
 	- As ARPANET grew, so did **security issues**, especially with dial-up access:
 	    - No **user identification** or **authorization**.
 	    - Phone numbers for ARPANET were publicly shared, allowing unauthorized access.
 	- The development of the **MULTICS** system (Multiplexed Information and Computing Service) focused on **security** from the start, introducing **multiple security levels** and **passwords**.
 	- In the **late 1970s**, **Rand Report R-609** was the first paper to define **computer security**, shifting the focus from just **physical security** to include the **safety of data** and **access controls**.
-- ### 1990s to Present
+- #### 1990s to Present
 	- As **networks of computers** became common, so did the **need to secure interconnected systems**.
 	- The **Internet**, a global network, expanded, but **security was a low priority** in its early deployments.
 	- The interconnected nature of systems today means that the **security of each computer** is dependent on the **security of every connected system**.
 
-## Key Information Security Concepts
+### Key Information Security Concepts
 A computer can be both the **subject** (used as a tool to attack another system) and the **object** (the target of the attack) of an attack.
 
-### Critical Characteristics of Information
+#### Critical Characteristics of Information
 | **Characteristics**                     | **Details**                                                                                                                         |
 | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | **Access**                              | The ability to use or manipulate a system or data.                                                                                  |
@@ -63,7 +63,7 @@ A computer can be both the **subject** (used as a tool to attack another system)
 | **Threat Agent**                        | The individual or entity that carries out a threat (e.g., attacker, hacker).                                                        |
 | **Vulnerability**                       | Weaknesses in a system that can be exploited.                                                                                       |
 
-### Critical Characteristics of Information
+#### Critical Characteristics of Information
 | **Characteristics** | **Details**                                                                  |
 | ------------------- | ---------------------------------------------------------------------------- |
 | **Availability**    | Ensuring that information and resources are accessible when needed.          |
@@ -75,9 +75,9 @@ A computer can be both the **subject** (used as a tool to attack another system)
 | **Possession**      | The ownership or control of information.                                     |
 
 
-## The Security Systems Development Life Cycle (SecSDLC)
+### The Security Systems Development Life Cycle (SecSDLC)
 
-### Phases of SecSDLC:
+#### Phases of SecSDLC:
 1. **Investigation**:
     - Identifies the problem the system is being developed to solve.
     - Specifies project objectives, scope, and constraints.
@@ -100,11 +100,11 @@ A computer can be both the **subject** (used as a tool to attack another system)
     - This phase is the **longest and most expensive**. It involves ongoing support and modification of the system.
     - **Threats evolve**, and the system must constantly adapt to new risks.
 
-## Security Professionals and the Organization
-- ### Key Roles:
+### Security Professionals and the Organization
+- #### Key Roles:
 	- **Chief Information Officer (CIO)**: The senior technology officer responsible for advising on strategic planning related to information management.
 	- **Chief Information Security Officer (CISO)**: Oversees the assessment, management, and implementation of information security within the organization.
-- ### Information Security Project Team:
+- #### Information Security Project Team:
 	- **Champion**: A senior executive who supports the project financially and administratively.
 	- **Team Leader**: A project manager who understands both project management and technical security requirements.
 	- **Security Policy Developers**: Experts in developing organizational security policies.
@@ -113,35 +113,35 @@ A computer can be both the **subject** (used as a tool to attack another system)
 	- **Systems Administrators**: Manage and maintain systems that house critical information.
 	- **End Users**: Individuals who interact with the system and provide feedback on security measures.
 
-## Data Responsibilities
+### Data Responsibilities
 - **Data Owner**: Responsible for the security and use of a particular set of information. They define data classification levels.
 - **Data Custodian**: Manages data storage, maintenance, and backup procedures.
 - **Data Users**: Individuals who work with information as part of their daily responsibilities.
 
-## Approaches to Security Implementation
-- ### Bottom-Up Approach:
+### Approaches to Security Implementation
+- #### Bottom-Up Approach:
 	- **Grassroots** effort, typically initiated by **systems administrators**.
 	- **Advantage**: Technical expertise of the individuals implementing the security.
 	- **Disadvantage**: Often lacks organizational support and staying power, making it less successful.
-- ### Top-Down Approach:
+- #### Top-Down Approach:
 	- **Initiated by upper management**, with clear goals, policies, and accountability.
 	- Supported by **dedicated resources** and a formal development strategy like the SecSDLC.
 	- This approach has **higher success rates** due to **management backing**.
 
-## Security as an Art, Science, and Social Science
-- ### Security as an Art:
+### Security as an Art, Science, and Social Science
+- #### Security as an Art:
 	- **No hard and fast rules** for implementing security across systems.
 	- Security relies on individual expertise and interpretation, especially in complex environments.
-- ### Security as a Science:
+- #### Security as a Science:
 	- Technology operates based on well-defined principles and interactions.
 	- Nearly all **system failures** and **security vulnerabilities** can be traced to specific causes within hardware or software.
 	- Given enough time, most faults could be **resolved by developers**.
-- ### Security as a Social Science:
+- #### Security as a Social Science:
 	- Focuses on **human behavior** and how people interact with systems.
 	- End-users are often the **weakest link** in security.
 	- **Security administrators** can reduce risks by understanding behavioral factors and implementing **user-friendly controls**.
 
-## Review Questions
+### Review Questions
 1. What is the difference between a threat agent and a threat?
 2. What is the difference between vulnerability and exposure?
 3. How is infrastructure protection (assuring the security of utility services) related to information security?
@@ -163,7 +163,7 @@ A computer can be both the **subject** (used as a tool to attack another system)
 19. Who decides how and when data in an organization will be used or controlled? Who is responsible for seeing that these wishes are carried out?
 20. Who should lead a security team? Should the approach to security be more managerial or technical?
 
-### Case Exercises
+#### Case Exercises
 
 The next day at SLS found everyone in technical support busy restoring computer systems to their former state and installing new virus and worm control software. Amy found herself learning how to install desktop computer operating systems and applications as SLS made a heroic effort to recover from the attack of the previous day.
 
