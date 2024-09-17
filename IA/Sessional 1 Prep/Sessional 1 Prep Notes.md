@@ -6,12 +6,13 @@
 | 4              | Risk Management                                 | :warning: |
 
 # Chapter 1: Introduction to InfoSec
-### What is Information Security?
+## What is Information Security?
 - Defined by Jim Anderson in 2002 as "a well-informed sense of assurance that information risks and controls are in balance."
 - This involves **protecting information** and its critical elements, including the systems that use, store, and transmit it.
 - To protect this data, organizations need policies, awareness programs, training, education, and technology.
 
-#### Key Concepts:
+### Key Concepts:
+
 | **Key Concept**             | **Detail**                                                                    |
 | --------------------------- | ----------------------------------------------------------------------------- |
 | **Security**                | The state of being free from danger. Involves multiple layers:                |
@@ -21,7 +22,6 @@
 | **Communications security** | Protecting communications media and content.                                  |
 | **Network security**        | Securing the components and connections in networks.                          |
 | **Information security**    | Ensuring data is safe from unauthorized access, modification, or destruction. |
-
 
 ### History of Information Security
 - #### Early Years
@@ -44,9 +44,11 @@
 	- The interconnected nature of systems today means that the **security of each computer** is dependent on the **security of every connected system**.
 
 ### Key Information Security Concepts
+
 A computer can be both the **subject** (used as a tool to attack another system) and the **object** (the target of the attack) of an attack.
 
 #### Critical Characteristics of Information
+
 | **Characteristics**                     | **Details**                                                                                                                         |
 | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | **Access**                              | The ability to use or manipulate a system or data.                                                                                  |
@@ -64,6 +66,7 @@ A computer can be both the **subject** (used as a tool to attack another system)
 | **Vulnerability**                       | Weaknesses in a system that can be exploited.                                                                                       |
 
 #### Critical Characteristics of Information
+
 | **Characteristics** | **Details**                                                                  |
 | ------------------- | ---------------------------------------------------------------------------- |
 | **Availability**    | Ensuring that information and resources are accessible when needed.          |
@@ -73,7 +76,6 @@ A computer can be both the **subject** (used as a tool to attack another system)
 | **Integrity**       | Ensuring that information is protected from unauthorized modification.       |
 | **Utility**         | The usefulness or applicability of information for its intended purpose.     |
 | **Possession**      | The ownership or control of information.                                     |
-
 
 ### The Security Systems Development Life Cycle (SecSDLC)
 
@@ -141,6 +143,8 @@ A computer can be both the **subject** (used as a tool to attack another system)
 	- End-users are often the **weakest link** in security.
 	- **Security administrators** can reduce risks by understanding behavioral factors and implementing **user-friendly controls**.
 
+
+
 ### Review Questions
 1. What is the difference between a threat agent and a threat?
 2. What is the difference between vulnerability and exposure?
@@ -163,6 +167,8 @@ A computer can be both the **subject** (used as a tool to attack another system)
 19. Who decides how and when data in an organization will be used or controlled? Who is responsible for seeing that these wishes are carried out?
 20. Who should lead a security team? Should the approach to security be more managerial or technical?
 
+
+
 #### Case Exercises
 
 The next day at SLS found everyone in technical support busy restoring computer systems to their former state and installing new virus and worm control software. Amy found herself learning how to install desktop computer operating systems and applications as SLS made a heroic effort to recover from the attack of the previous day.
@@ -175,6 +181,9 @@ Questions:
 
 
 ---
+
+
+
 
 
 # Chapter 2: The need for Security
@@ -295,6 +304,8 @@ To address security issues, organizations have adopted secure software developme
 - Use **minimum privileges** required for tasks.
 - Make security mechanisms **easy to use**, ensuring users apply them correctly and routinely.
 
+
+
 ## Review Questions
 1. Why is information security a management problem? What can management do that technology cannot?
 2. Why is data the most important asset an organization possesses? What other assets in the organization require protection?
@@ -317,6 +328,8 @@ To address security issues, organizations have adopted secure software developme
 19. What methods does a social engineering hacker use to gain information about a user’s login id and password? How would this method differ if it were targeted towards an administrator’s assistant versus a data-entry clerk?
 20. What is a buffer overflow, and how is it used against a Web server?
 
+
+
 ### Case Study
 
 Soon after the board of directors meeting, Charlie was promoted to Chief Information Security Officer, a new position that reports to the CIO, Gladys Williams, and that was created to provide leadership for SLS’s efforts to improve its security profile.
@@ -329,6 +342,10 @@ Questions:
 
 
 ---
+
+
+
+
 
 
 # Chapter 3: Legal, Ethical & Professional Issues InfoSec
