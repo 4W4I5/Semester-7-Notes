@@ -2,7 +2,7 @@
 | -------------- | ----------------------------------------------- | --------- |
 | 1              | Introduction to InfoSec                         | :warning: |
 | 2              | The need for Security                           | :warning: |
-| 3              | Legal, Ethical & Professional Issues in InfoSec | :warning: |
+| 3              | Legal, Ethical & Professional Issues in InfoSec | :x:       |
 | 4              | Risk Management                                 | :warning: |
 
 # Chapter 1: Introduction to InfoSec
@@ -101,18 +101,17 @@ A computer can be both the **subject** (used as a tool to attack another system)
     - **Threats evolve**, and the system must constantly adapt to new risks.
 
 ## Security Professionals and the Organization
-### Key Roles:
-- **Chief Information Officer (CIO)**: The senior technology officer responsible for advising on strategic planning related to information management.
-- **Chief Information Security Officer (CISO)**: Oversees the assessment, management, and implementation of information security within the organization.
-
-### Information Security Project Team:
-- **Champion**: A senior executive who supports the project financially and administratively.
-- **Team Leader**: A project manager who understands both project management and technical security requirements.
-- **Security Policy Developers**: Experts in developing organizational security policies.
-- **Risk Assessment Specialists**: Understand financial risk and security methods.
-- **Security Professionals**: Specialists with deep knowledge in various areas of information security.
-- **Systems Administrators**: Manage and maintain systems that house critical information.
-- **End Users**: Individuals who interact with the system and provide feedback on security measures.
+- ### Key Roles:
+	- **Chief Information Officer (CIO)**: The senior technology officer responsible for advising on strategic planning related to information management.
+	- **Chief Information Security Officer (CISO)**: Oversees the assessment, management, and implementation of information security within the organization.
+- ### Information Security Project Team:
+	- **Champion**: A senior executive who supports the project financially and administratively.
+	- **Team Leader**: A project manager who understands both project management and technical security requirements.
+	- **Security Policy Developers**: Experts in developing organizational security policies.
+	- **Risk Assessment Specialists**: Understand financial risk and security methods.
+	- **Security Professionals**: Specialists with deep knowledge in various areas of information security.
+	- **Systems Administrators**: Manage and maintain systems that house critical information.
+	- **End Users**: Individuals who interact with the system and provide feedback on security measures.
 
 ## Data Responsibilities
 - **Data Owner**: Responsible for the security and use of a particular set of information. They define data classification levels.
@@ -120,30 +119,27 @@ A computer can be both the **subject** (used as a tool to attack another system)
 - **Data Users**: Individuals who work with information as part of their daily responsibilities.
 
 ## Approaches to Security Implementation
-### Bottom-Up Approach:
-- **Grassroots** effort, typically initiated by **systems administrators**.
-- **Advantage**: Technical expertise of the individuals implementing the security.
-- **Disadvantage**: Often lacks organizational support and staying power, making it less successful.
-
-### Top-Down Approach:
-- **Initiated by upper management**, with clear goals, policies, and accountability.
-- Supported by **dedicated resources** and a formal development strategy like the SecSDLC.
-- This approach has **higher success rates** due to **management backing**.
+- ### Bottom-Up Approach:
+	- **Grassroots** effort, typically initiated by **systems administrators**.
+	- **Advantage**: Technical expertise of the individuals implementing the security.
+	- **Disadvantage**: Often lacks organizational support and staying power, making it less successful.
+- ### Top-Down Approach:
+	- **Initiated by upper management**, with clear goals, policies, and accountability.
+	- Supported by **dedicated resources** and a formal development strategy like the SecSDLC.
+	- This approach has **higher success rates** due to **management backing**.
 
 ## Security as an Art, Science, and Social Science
-### Security as an Art:
-- **No hard and fast rules** for implementing security across systems.
-- Security relies on individual expertise and interpretation, especially in complex environments.
-
-### Security as a Science:
-- Technology operates based on well-defined principles and interactions.
-- Nearly all **system failures** and **security vulnerabilities** can be traced to specific causes within hardware or software.
-- Given enough time, most faults could be **resolved by developers**.
-
-### Security as a Social Science:
-- Focuses on **human behavior** and how people interact with systems.
-- End-users are often the **weakest link** in security.
-- **Security administrators** can reduce risks by understanding behavioral factors and implementing **user-friendly controls**.
+- ### Security as an Art:
+	- **No hard and fast rules** for implementing security across systems.
+	- Security relies on individual expertise and interpretation, especially in complex environments.
+- ### Security as a Science:
+	- Technology operates based on well-defined principles and interactions.
+	- Nearly all **system failures** and **security vulnerabilities** can be traced to specific causes within hardware or software.
+	- Given enough time, most faults could be **resolved by developers**.
+- ### Security as a Social Science:
+	- Focuses on **human behavior** and how people interact with systems.
+	- End-users are often the **weakest link** in security.
+	- **Security administrators** can reduce risks by understanding behavioral factors and implementing **user-friendly controls**.
 
 ## Review Questions
 1. What is the difference between a threat agent and a threat?
@@ -176,6 +172,10 @@ Questions:
 1. Do you think this event was caused by an insider or outsider? Why do you think this?
 2. Other than installing virus and worm control software, what can SLS do to prepare for the next incident?
 3. Do you think this attack was the result of a virus or a worm? Why do you think this?
+
+
+---
+
 
 # Chapter 2: The need for Security
 - The **primary mission of information security** is to ensure systems and their content remain unchanged despite threats.
@@ -327,6 +327,10 @@ Questions:
 2. How will Fred measure success when he evaluates Gladys’ performance for this project? How will he evalute Charlie’s performance?
 3. Which of the threats discussed in this chapter should receive Charlie’s attention early in his planning process?
 
+
+---
+
+
 # Chapter 3: Legal, Ethical & Professional Issues InfoSec
 
 
@@ -361,6 +365,10 @@ Questions:
 1. Why was Iris justified in determining who the owner of the CD was?
 2. Should Iris have approached Henry directly, or was the hotline the most effective way to take action? Why do you think so?
 3. Should Iris have placed the CD back at the coffee station and forgotten the whole thing? Explain why that action would have been ethical or unethical.
+
+
+---
+
 
 # Chapter 4: Risk Management
 
