@@ -92,7 +92,7 @@ A computer can be both the **subject** (used as a tool to attack another system)
 | **Possession**              | Ownership or control of information, regardless of format; breaches in confidentiality imply loss of possession. Breaches can result in unauthorized control or theft of information, affecting ownership. |
 
 ## CNSS Model
-
+![](/IA/Pasted%20image%2020240917195504.png)
 ## The Security Systems Development Life Cycle (SecSDLC)
 
 ### Phases of SecSDLC:
