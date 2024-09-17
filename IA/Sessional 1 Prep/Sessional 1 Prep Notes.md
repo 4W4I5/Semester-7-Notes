@@ -92,7 +92,44 @@ A computer can be both the **subject** (used as a tool to attack another system)
 | **Possession**              | Ownership or control of information, regardless of format; breaches in confidentiality imply loss of possession. Breaches can result in unauthorized control or theft of information, affecting ownership. |
 
 ## CNSS Model
+
 ![](/IA/Pasted%20image%2020240917195504.png)
+
+| **Aspect**          | **Storage (Stored Information)**                                                              | **Transmission (In Transit Information)**                                                     | **Processing (In Use Information)**                                                                 |
+| ------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| **Confidentiality** | Protect stored data from unauthorized access or breaches.                                     | Secure data during transmission to prevent interception and unauthorized access.              | Ensure that data is not exposed to unauthorized individuals during processing or use.               |
+| **Integrity**       | Maintain the accuracy and completeness of stored data, preventing unauthorized modifications. | Verify that data is not altered or tampered with during transmission.                         | Ensure that data remains accurate and uncorrupted while being processed or accessed.                |
+| **Availability**    | Ensure that stored data is accessible to authorized users when needed.                        | Guarantee that data can be transmitted reliably and is available for retrieval when needed.   | Ensure that data is accessible and usable by authorized applications and users during processing.   |
+| **Policy**          | Develop and enforce policies for data storage and access controls.                            | Create policies for secure data transmission methods and encryption standards.                | Implement policies that govern secure handling and processing of data.                              |
+| **Education**       | Train users on proper data storage practices and awareness of access controls.                | Educate users about secure communication practices and the importance of data encryption.     | Provide training on safe data handling procedures and the importance of protecting data during use. |
+| **Technology**      | Use encryption and access control systems to protect stored data.                             | Implement secure communication protocols and encryption methods to safeguard data in transit. | Utilize secure processing environments and monitoring tools to protect data during use.             |
+
+- ### Scenario 1: Financial Institution
+	- **Stored Information:**
+	    - **Confidentiality:** Customer account details stored in a database are encrypted to prevent unauthorized access.
+	    - **Integrity:** The database system uses checksums and validation rules to ensure data accuracy and prevent corruption.
+	    - **Availability:** Backup systems and redundancy ensure that customer data is always accessible even if a server fails.
+	- **In Transit Information:**
+	    - **Confidentiality:** Data transmitted between a customer’s browser and the bank’s server is encrypted using TLS/SSL to prevent interception.
+	    - **Integrity:** Digital signatures are used to ensure that the transmitted data is not altered during transfer.
+	    - **Availability:** The bank’s network infrastructure is designed to handle high traffic volumes to ensure data is transmitted without delays.
+	- **In Use Information:**
+	    - **Confidentiality:** Access controls and user authentication prevent unauthorized users from accessing sensitive financial data while it’s being processed.
+	    - **Integrity:** Real-time validation checks are performed to ensure that data remains correct while being used for transactions.
+	    - **Availability:** The banking application is designed to handle user requests efficiently, minimizing downtime and ensuring that data is available during transactions.
+- ### Scenario 2: Healthcare System
+	- **Stored Information:**
+	    - **Confidentiality:** Patient health records are stored in encrypted electronic health record (EHR) systems to safeguard patient privacy.
+	    - **Integrity:** Regular audits and validation checks are performed to ensure that health records are accurate and not tampered with.
+	    - **Availability:** Health records are backed up in multiple locations to ensure they are accessible in case of hardware failure or disaster.
+	- **In Transit Information:**
+	    - **Confidentiality:** Patient data sent between healthcare providers and insurance companies is encrypted to protect sensitive information.
+	    - **Integrity:** Data integrity checks are performed to ensure that the information received is exactly as it was sent.
+	    - **Availability:** Network systems are designed to ensure that patient data can be transmitted reliably even during peak times or network congestion.
+	- **In Use Information:**
+	    - **Confidentiality:** Access controls and session management ensure that only authorized medical staff can view or update patient records while they are being used.
+	    - **Integrity:** The system logs all changes to patient records to track and review any modifications for accuracy and consistency.
+	    - **Availability:** The healthcare application is built to handle simultaneous access by multiple users without performance issues, ensuring data is accessible when needed.
 ## The Security Systems Development Life Cycle (SecSDLC)
 
 ### Phases of SecSDLC:
