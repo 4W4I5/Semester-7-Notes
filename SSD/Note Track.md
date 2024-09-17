@@ -4,13 +4,13 @@
 | 2           | [21st August, 2024](SSD/Class%20Notes/2%20-%20SSD%2021st%20August,%202024)        | STRIDE              | Skipped (GPT) |
 | 3           | [26th August, 2024](SSD/Class%20Notes/3%20-%20SSD%2026th%20August,%202024)        |                     | Absent (GPT)  |
 | 4           | [28th August, 2024](SSD/Class%20Notes/4%20-%20SSD%2028th%20August,%202024)        |                     | Absent (GPT)  |
-| 5           | [2nd September, 2024](SSD/Class%20Notes/5%20-%20SSD%202nd%20September,%202024)    | Industry Case study |               |
-| 6           | [4th September, 2024](SSD/Class%20Notes/6%20-%20SSD%204th%20September,%202024)    | Continued prev      | Skipped              |
-| 7           | [9th September, 2024](SSD/Class%20Notes/7%20-%20SSD%209th%20September,%202024)    |                     |               |
-| 8           | [11th September, 2024](SSD/Class%20Notes/8%20-%20SSD%2011th%20September,%202024)  |                     |               |
-| 9           | [16th September, 2024](SSD/Class%20Notes/9%20-%20SSD%2016th%20September,%202024)  |                     |               |
-| 10          | [18th September, 2024](SSD/Class%20Notes/10%20-%20SSD%2018th%20September,%202024) |                     |               |
-| 11          | [23rd September, 2024](SSD/Class%20Notes/11%20-%20SSD%2023rd%20September,%202024) | Sessional 1         | Sessional 1   |
+| 5           | [2nd September, 2024](SSD/Class%20Notes/5%20-%20SSD%202nd%20September,%202024)    | Industry Case study | Skipped       |
+| 6           | [4th September, 2024](SSD/Class%20Notes/6%20-%20SSD%204th%20September,%202024)    | Continued prev      | Skipped       |
+| 7           | [9th September, 2024](SSD/Class%20Notes/7%20-%20SSD%209th%20September,%202024)    |                     | Skipped       |
+| 8           | [11th September, 2024](SSD/Class%20Notes/8%20-%20SSD%2011th%20September,%202024)  |                     | Skipped       |
+| 9           | [16th September, 2024](SSD/Class%20Notes/9%20-%20SSD%2016th%20September,%202024)  |                     | Skipped       |
+| 10          | 18th September, 2024                                                              |                     | No Class      |
+| X           | X                                                                                 | Sessional 1         | Sessional 1   |
 | 12          | [25th September, 2024](SSD/Class%20Notes/12%20-%20SSD%2025th%20September,%202024) |                     |               |
 | 13          | [30th September, 2024](SSD/Class%20Notes/13%20-%20SSD%2030th%20September,%202024) |                     |               |
 | 14          | [2nd October, 2024](SSD/Class%20Notes/14%20-%20SSD%202nd%20October,%202024)       |                     |               |

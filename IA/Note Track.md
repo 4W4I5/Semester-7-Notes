@@ -3,12 +3,12 @@
 | 1           | [20th August, 2024](IA/Class%20Notes/1%20-%20IA%2020th%20August,%202024)        |             | Absent           |
 | 2           | [22nd August, 2024](IA/Class%20Notes/2%20-%20IA%2022nd%20August,%202024)        |             | Absent           |
 | 3           | [27th August, 2024](IA/Class%20Notes/3%20-%20IA%2027th%20August,%202024)        |             | Absent           |
-| 4           | [29th August, 2024](IA/Class%20Notes/4%20-%20IA%2029th%20August,%202024)        |             | Session w uubrix | 
-| 5           | [3rd September, 2024](IA/Class%20Notes/5%20-%20IA%203rd%20September,%202024)    |             |                  |
-| 6           | [5th September, 2024](IA/Class%20Notes/6%20-%20IA%205th%20September,%202024)    |             |                  |
-| 7           | [10th September, 2024](IA/Class%20Notes/7%20-%20IA%2010th%20September,%202024)  |             |                  |
-| 8           | [12th September, 2024](IA/Class%20Notes/8%20-%20IA%2012th%20September,%202024)  |             |                  |
-| 9           | [17th September, 2024](IA/Class%20Notes/9%20-%20IA%2017th%20September,%202024)  |             |                  |
+| 4           | 29th August, 2024                                                               |             | Session w uubrix |
+| 5           | [3rd September, 2024](IA/Class%20Notes/5%20-%20IA%203rd%20September,%202024)    |             | Skipped          |
+| 6           | [5th September, 2024](IA/Class%20Notes/6%20-%20IA%205th%20September,%202024)    |             | Skipped          |
+| 7           | [10th September, 2024](IA/Class%20Notes/7%20-%20IA%2010th%20September,%202024)  |             | Skipped          |
+| 8           | [12th September, 2024](IA/Class%20Notes/8%20-%20IA%2012th%20September,%202024)  |             | Skipped          |
+| 9           | [17th September, 2024](IA/Class%20Notes/9%20-%20IA%2017th%20September,%202024)  |             | Eid-Milad Off    |
 | 10          | [19th September, 2024](IA/Class%20Notes/10%20-%20IA%2019th%20September,%202024) |             |                  |
 | 11          | [24th September, 2024](IA/Class%20Notes/11%20-%20IA%2024th%20September,%202024) | Sessional 1 | Sessional 1      |
 | 12          | [26th September, 2024](IA/Class%20Notes/12%20-%20IA%2026th%20September,%202024) |             |                  |
