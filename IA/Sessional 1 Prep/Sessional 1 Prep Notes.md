@@ -160,13 +160,20 @@ The SecSDLC mirrors the SDLC but adds a security focus in each phase.
 		- Oversees the assessment, management, and implementation of information security within the organization.
 		- Usually directly reports to CIO
 - ### Information Security Project Team:
-	- **Champion**: A senior executive who supports the project financially and administratively.
-	- **Team Leader**: A project manager who understands both project management and technical security requirements.
-	- **Security Policy Developers**: Experts in developing organizational security policies.
-	- **Risk Assessment Specialists**: Understand financial risk and security methods.
-	- **Security Professionals**: Specialists with deep knowledge in various areas of information security.
-	- **Systems Administrators**: Manage and maintain systems that house critical information.
-	- **End Users**: Individuals who interact with the system and provide feedback on security measures.
+	- **Champion**:
+		- A senior executive who supports the project financially and administratively.
+	- **Team Leader**:
+		- A project manager who understands both project management and technical security requirements.
+	- **Security Policy Developers**:
+		- Experts in developing organizational security policies.
+	- **Risk Assessment Specialists**:
+		- Understand financial risk and security methods.
+	- **Security Professionals**:
+		- Specialists with deep knowledge in various areas of information security.
+	- **Systems Administrators**:
+		- Manage and maintain systems that house critical information.
+	- **End Users**:
+		- Individuals who interact with the system and provide feedback on security measures.
 
 ## Data Responsibilities
 - **Data Owner**:
