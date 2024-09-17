@@ -176,7 +176,7 @@ The SecSDLC mirrors the SDLC but adds a security focus in each phase.
 - **Data Users**:
 	- Individuals who work with information as part of their daily responsibilities.
 
-## Approaches to Security Implementation (Balance b/w Security & Acess)
+## Approaches to Security Implementation (Balance b/w Security & Access)
 - ### Bottom-Up Approach:
 	- **Grassroots** effort, typically initiated by **systems administrators**.
 	- **Advantage**: Technical expertise of the individuals implementing the security.
