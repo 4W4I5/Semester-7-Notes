@@ -62,6 +62,16 @@ A computer can be both the **subject** (used as a tool to attack another system)
 | **Threat Agent**                            |                                                                                                  |
 | **Vulnerability**                           | Weaknesses in a system that can be exploited.                                                    |
 
+## Critical Characteristics of Information
+| **Characteristics** | **Details** |
+| ------------------- | ----------- |
+| **Availability**    |             |
+| **Accuracy**        |             |
+| **Authenticity**    |             |
+| **Confidentiality** |             | 
+| **Integrity**       |             |
+| **Utility**         |             |
+| **Possession**      |             |
 
 
 ## The Security Systems Development Life Cycle (SecSDLC)
