@@ -8,20 +8,27 @@
 # Chapter 1: Introduction to InfoSec
 ## What is Information Security?
 - Defined by Jim Anderson in 2002 as "a well-informed sense of assurance that information risks and controls are in balance."
-- This involves **protecting information** and its critical elements, including the systems that use, store, and transmit it.
-- To protect this data, organizations need policies, awareness programs, training, education, and technology.
+	- This involves **protecting information** and its critical elements, including the systems that use, store, and transmit it.
+	- To protect this data, organizations need policies, awareness programs, training, education, and technology.
+- CIA triangle
+	- Was based on Confidentiality, Integrity & Availability but now focuses on **Critical Characteristics of Information**
+- Note that InfoSec is a field that covers the following; All of which lead to a policy being formed
+	- Management of InfoSec
+	- Network Security
+	- Computer & Data Security
 
 ### Key Concepts:
+
+Organizational Security is built on multiple layers of security;
+
 | **Key Concept**             | **Detail**                                                                    |
 | --------------------------- | ----------------------------------------------------------------------------- |
-| **Security**                | The state of being free from danger. Involves multiple layers:                |
 | **Physical security**       | Protecting physical assets from unauthorized access.                          |
 | **Personal security**       | Protecting individuals and groups.                                            |
 | **Operations security**     | Securing the processes and activities of an organization.                     |
 | **Communications security** | Protecting communications media and content.                                  |
 | **Network security**        | Securing the components and connections in networks.                          |
 | **Information security**    | Ensuring data is safe from unauthorized access, modification, or destruction. |
-
 
 ## History of Information Security
 - ### Early Years
@@ -48,27 +55,32 @@
 	- The **Internet**, a global network, expanded, but **security was a low priority** in its early deployments.
 	- The interconnected nature of systems today means that the **security of each computer** is dependent on the **security of every connected system**.
 
-## Key Information Security Concepts
+
+### Key Information Security Concepts
 A computer can be both the **subject** (used as a tool to attack another system) and the **object** (the target of the attack) of an attack.
 
-### Critical Characteristics of Information
-| **Characteristics**                     | **Details**                                                                                                                         |
-| --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| **Access**                              | The ability to use or manipulate a system or data.                                                                                  |
-| **Asset**                               | Resources being protected, like hardware, software, data, or information.                                                           |
-| **Attack**                              | An attempt to damage or compromise information systems, either intentionally or unintentionally.                                    |
-| **Control/Safeguard**                   | Mechanisms, policies, or procedures that counter threats and vulnerabilities.                                                       |
-| **Exploit**                             | Taking advantage of a weakness or vulnerability.                                                                                    |
-| **Exposure**                            | The state of being exposed to potential loss or damage.                                                                             |
-| **Loss**                                | The loss of information or assets due to an attack, accident, or other incidents.                                                   |
-| **Protection Profile/Security Posture** | The overall security stance and set of measures to protect assets and mitigate risks.                                               |
-| **Subjects & Objects**                  | Subjects are entities that perform actions (e.g., users, processes), and objects are the targets of actions (e.g., files, systems). |
-| **Risk**                                | The probability of loss or damage.                                                                                                  |
-| **Threat**                              | Any potential danger to an asset (e.g., hackers, malware).                                                                          |
-| **Threat Agent**                        | The individual or entity that carries out a threat (e.g., attacker, hacker).                                                        |
-| **Vulnerability**                       | Weaknesses in a system that can be exploited.                                                                                       |
+
+| **Key Information Security Concepts** | **Definition**                                                                                                                                                                       |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Access**                                  | A subject or object’s ability to use, manipulate, modify, or affect another subject or object.                                                                                       |
+| **Asset**                                   | The organizational resource that is being protected.                                                                                                                                 |
+| **Attack**                                  | An act that is an intentional or unintentional attempt to cause damage or compromise to the information and/or the systems that support it.                                          |
+| **Control, Safeguard, or Countermeasure**   | Security mechanisms, policies, or procedures that can successfully counter attacks, reduce risk, resolve vulnerabilities, and otherwise improve the security within an organization. |
+| **Exploit**                                 | To take advantage of weaknesses or vulnerability in a system.                                                                                                                        |
+| **Exposure**                                | A single instance of being open to damage.                                                                                                                                           |
+| **Hack**                                    | Good: To use computers or systems for enjoyment; Bad: To illegally gain access to a computer or system.                                                                              |
+| **Object**                                  | A passive entity in the information system that receives or contains information.                                                                                                    |
+| **Risk**                                    | The probability that something can happen.                                                                                                                                           |
+| **Security Blueprint**                      | The plan for the implementation of new security measures in the organization.                                                                                                        |
+| **Security Model**                          | A collection of specific security rules that represents the implementation of a security policy.                                                                                     |
+| **Security Posture or Security Profile**    | A general label for the combination of all policies, procedures, technologies, and programs that make up the total security effort currently in place.                               |
+| **Subject**                                 | An active entity that interacts with an information system and causes information to move through the system for a specific end purpose.                                             |
+| **Threats**                                 | A category of objects, persons, or other entities that represents a potential danger to an asset.                                                                                    |
+| **Threat Agent**                            | A specific instance or component of a more general threat.                                                                                                                           |
+| **Vulnerability**                           | Weaknesses or faults in a system or protection mechanism that expose information to attack or damage.                                                                                |
 
 ### Critical Characteristics of Information
+
 | **Characteristics** | **Details**                                                                  |
 | ------------------- | ---------------------------------------------------------------------------- |
 | **Availability**    | Ensuring that information and resources are accessible when needed.          |
@@ -78,7 +90,6 @@ A computer can be both the **subject** (used as a tool to attack another system)
 | **Integrity**       | Ensuring that information is protected from unauthorized modification.       |
 | **Utility**         | The usefulness or applicability of information for its intended purpose.     |
 | **Possession**      | The ownership or control of information.                                     |
-
 
 ## The Security Systems Development Life Cycle (SecSDLC)
 
