@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IA/Sessional 1 Prep/Sessional 1 Prep Notes.md",
-                "mode": "preview",
+                "file": "README.md",
+                "mode": "source",
                 "source": true
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IA/Sessional 1 Prep/Sessional 1 Prep Notes.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IA/Sessional 1 Prep/Sessional 1 Prep Notes.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IA/Sessional 1 Prep/Sessional 1 Prep Notes.md"
+                "file": "README.md"
               }
             }
           },
@@ -172,8 +172,8 @@
   },
   "active": "3d4f681c539e5056",
   "lastOpenFiles": [
-    "IA/Note Track.md",
     "IA/Sessional 1 Prep/Sessional 1 Prep Notes.md",
+    "IA/Note Track.md",
     "README.md",
     "IA/Sessional 1 Prep",
     "SSD/Sessional 1 Prep/Sessional 1 Prep Notes.md",
