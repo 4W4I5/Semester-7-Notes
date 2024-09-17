@@ -21,37 +21,27 @@
     - **Information security**: Ensuring data is safe from unauthorized access, modification, or destruction.
 
 ## History of Information Security
-### Early Years
-- **World War II**: The need for security arose with the first mainframes, used for military and intelligence purposes.
-    - Early controls were mostly **physical**, such as **badges**, **keys**, and **facial recognition**.
+- ### Early Years
+	- **World War II**: The need for security arose with the first mainframes, used for military and intelligence purposes.
+		- Early controls were mostly **physical**, such as **badges**, **keys**, and **facial recognition**.
     - **Information security** at the time involved rudimentary methods, like document classification, with little focus on system security.
-
-### 1960s
-- The **Advanced Research Project Agency (ARPA)** initiated research to develop a **redundant, networked communications system**.
-- This was the origin of **ARPANET**, the precursor to the Internet.
-- **Larry Roberts**, who developed ARPANET, is known as the **founder of the Internet**.
-
-### 1970s & 1980s
-- As ARPANET grew, so did **security issues**, especially with dial-up access:
-    - No **user identification** or **authorization**.
-    - Phone numbers for ARPANET were publicly shared, allowing unauthorized access.
-- The development of the **MULTICS** system (Multiplexed Information and Computing Service) focused on **security** from the start, introducing **multiple security levels** and **passwords**.
-- In the **late 1970s**, **Rand Report R-609** was the first paper to define **computer security**, shifting the focus from just **physical security** to include the **safety of data** and **access controls**.
-
-### 1990s to Present
-- As **networks of computers** became common, so did the **need to secure interconnected systems**.
-- The **Internet**, a global network, expanded, but **security was a low priority** in its early deployments.
-- The interconnected nature of systems today means that the **security of each computer** is dependent on the **security of every connected system**.
+- ### 1960s
+	- The **Advanced Research Project Agency (ARPA)** initiated research to develop a **redundant, networked communications system**.
+		- This was the origin of **ARPANET**, the precursor to the Internet.
+	- **Larry Roberts**, who developed ARPANET, is known as the **founder of the Internet**.
+- ### 1970s & 1980s
+	- As ARPANET grew, so did **security issues**, especially with dial-up access:
+	    - No **user identification** or **authorization**.
+	    - Phone numbers for ARPANET were publicly shared, allowing unauthorized access.
+	- The development of the **MULTICS** system (Multiplexed Information and Computing Service) focused on **security** from the start, introducing **multiple security levels** and **passwords**.
+	- In the **late 1970s**, **Rand Report R-609** was the first paper to define **computer security**, shifting the focus from just **physical security** to include the **safety of data** and **access controls**.
+- ### 1990s to Present
+	- As **networks of computers** became common, so did the **need to secure interconnected systems**.
+	- The **Internet**, a global network, expanded, but **security was a low priority** in its early deployments.
+	- The interconnected nature of systems today means that the **security of each computer** is dependent on the **security of every connected system**.
 
 ## Key Information Security Concepts
-- **Access**: The ability to use or manipulate a system or data.
-- **Asset**: Resources being protected, like hardware, software, data, or information.
-- **Attack**: An attempt to damage or compromise information systems, either intentionally or unintentionally.
-- **Control/Safeguard**: Mechanisms, policies, or procedures that counter threats and vulnerabilities.
-- **Exploit**: Taking advantage of a weakness or vulnerability.
-- **Risk**: The probability of loss or damage.
-- **Threat**: Any potential danger to an asset (e.g., hackers, malware).
-- **Vulnerability**: Weaknesses in a system that can be exploited.
+
 
 ### Computers as Subjects or Objects of Attack
 - A computer can be both the **subject** (used as a tool to attack another system) and the **object** (the target of the attack) of an attack.
