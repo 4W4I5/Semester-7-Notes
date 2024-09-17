@@ -20,7 +20,7 @@
 | **Operations security**     | Securing the processes and activities of an organization.                     |
 | **Communications security** | Protecting communications media and content.                                  |
 | **Network security**        | Securing the components and connections in networks.                          |
-| **Information security**    | Ensuring data is safe from unauthorized access, modification, or destruction. | 
+| **Information security**    | Ensuring data is safe from unauthorized access, modification, or destruction. |
 
 
 ## History of Information Security
@@ -44,7 +44,7 @@
 	- The interconnected nature of systems today means that the **security of each computer** is dependent on the **security of every connected system**.
 
 ## Key Information Security Concepts
-
+**blud missed out so much**
 
 ### Computers as Subjects or Objects of Attack
 - A computer can be both the **subject** (used as a tool to attack another system) and the **object** (the target of the attack) of an attack.
