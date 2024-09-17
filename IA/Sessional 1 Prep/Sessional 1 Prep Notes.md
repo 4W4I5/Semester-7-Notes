@@ -27,7 +27,8 @@
     - **Information security** at the time involved rudimentary methods, like document classification, with little focus on system security.
 
 ### 1960s
-- The **Advanced Research Project Agency (ARPA)** initiated research to develop a **redundant, networked communications system**. This was the origin of **ARPANET**, the precursor to the Internet.
+- The **Advanced Research Project Agency (ARPA)** initiated research to develop a **redundant, networked communications system**.
+- This was the origin of **ARPANET**, the precursor to the Internet.
 - **Larry Roberts**, who developed ARPANET, is known as the **founder of the Internet**.
 
 ### 1970s & 1980s
