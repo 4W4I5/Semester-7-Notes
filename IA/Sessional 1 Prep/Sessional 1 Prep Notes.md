@@ -1,6 +1,6 @@
 | Chapter Number | Chapter Name                                    | Status             |
 | -------------- | ----------------------------------------------- | ------------------ |
-| 1              | Introduction to InfoSec                         | :white_check_mark: | 
+| 1              | Introduction to InfoSec                         | :white_check_mark: |
 | 2              | The need for Security                           | :warning:          |
 | 3              | Legal, Ethical & Professional Issues in InfoSec | :x:                |
 | 4              | Risk Management                                 | :warning:          |
@@ -63,11 +63,11 @@ Organizational Security is built on multiple layers of security;
 	- The interconnected nature of systems today means that the **security of each computer** is dependent on the **security of every connected system**.
 
 
-### Key Information Security Concepts
+### Key InfoSec Concepts
 
 A computer can be both the **subject** (used as a tool to attack another system) and the **object** (the target of the attack) of an attack.
 
-| **Key Information Security Concepts** | **Definition**                                                                                                                                                                       |
+| **Key InfoSec Concepts** | **Definition**                                                                                                                                                                       |
 | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Access**                                  | A subject or object’s ability to use, manipulate, modify, or affect another subject or object.                                                                                       |
 | **Asset**                                   | The organizational resource that is being protected.                                                                                                                                 |
