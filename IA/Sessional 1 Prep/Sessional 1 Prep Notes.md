@@ -289,6 +289,9 @@ Information security serves four vital functions for organizations:
 
 ## Types of Attacks
 
+- Acts or actions that exploits vulnerability (i.e., an identified weakness) in controlled system
+- Accomplished by threat agent that damages or steals organization’s information
+
 | **Threat Type**                | **Description**                                                                                                                                                               |
 | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **1. Malicious Code**          | Includes **viruses**, **worms**, **Trojan horses**, and **active Web scripts** designed to steal or destroy information.                                                      |
