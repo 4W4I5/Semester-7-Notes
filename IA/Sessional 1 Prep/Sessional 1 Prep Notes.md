@@ -271,7 +271,7 @@ Information security serves four vital functions for organizations:
 - A **threat** is any potential event or action that could harm an organization’s information systems, such as a hacker attempting to access sensitive data or a natural disaster disrupting operations.
 - Organizations must develop security policies and implement controls to mitigate these threats. Management plays a key role in recognizing and addressing potential risks.
 
-### Common Threats:
+### Types of Threats:
 
 | **Threat Type**                             | **Description**                                                                                                                                                                                                                                                                                                                                                                |
 | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -304,9 +304,9 @@ Information security serves four vital functions for organizations:
 
 ## Secure Software Development
 
-### Software Vulnerabilities
+### Types of Software Vulnerabilities
 
-| **Types of Vulnerabilities**                                      | **Description**                                                                                                          |
+| **Types of Software Vulnerabilities**                                      | **Description**                                                                                                          |
 | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | **1. Malicious Code**                                             | Includes **viruses**, **worms**, **Trojan horses**, and **active Web scripts** designed to steal or destroy information. |
 | **2. Hoaxes**                                                     | **Virus hoaxes** can cause widespread panic and lead to unnecessary actions that disrupt business operations.            |
@@ -331,7 +331,8 @@ Information security serves four vital functions for organizations:
 - **Software Assurance (SA)** focuses on ensuring software is designed to be **secure** and **reliable**.
 - Key design principles include: keeping the system simple, using minimum privileges, requiring proper authentication, and ensuring access controls are robust and clear.
 - The **Software Assurance Common Body of Knowledge (CBK)** provides a framework for secure software development, guiding developers in creating applications resistant to threats.
--
+
+
 ---
 
 ## Review Questions
