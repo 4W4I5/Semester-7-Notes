@@ -1,7 +1,7 @@
 | Chapter Number | Chapter Name                                    | Status             |
 | -------------- | ----------------------------------------------- | ------------------ |
 | 1              | Introduction to InfoSec                         | :white_check_mark: |
-| 2              | The need for Security                           | :warning:          |
+| 2              | The need for Security                           | :white_check_mark: | 
 | 3              | Legal, Ethical & Professional Issues in InfoSec | :x:                |
 | 4              | Risk Management                                 | :warning:          |
 
