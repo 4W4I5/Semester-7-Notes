@@ -14,7 +14,8 @@
 ---
 
 # Chapter 4: How bitcoin achieves decentralization
-### Centralization vs. Decentralization
+## Centralization vs. Decentralization
+
 | **Aspect**          | **Centralized Systems**                                                      | **Decentralized Systems**                                                                |
 | ------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | **Control**         | Single entity or a small group controls most of the system.                  | Power and decision-making are distributed across many nodes.                             |
@@ -23,8 +24,7 @@
 | **Scalability**     | Easier to scale quickly due to central control.                              | More complex to scale due to decentralized nature.                                       |
 | **Fault Tolerance** | Vulnerable to failure if the central authority is compromised.               | More resilient; failure of one node doesn’t collapse the system.                         |
 
-
-#### Distributed Consensus
+### Distributed Consensus
 - **What is Distributed Consensus?**:
     - A distributed consensus protocol ensures that all non-faulty (honest) nodes in a network agree on the same value, even in the presence of malicious or faulty nodes.
     - This protocol requires two properties:
@@ -34,18 +34,18 @@
     - **Imperfect Networks**: In a peer-to-peer system like Bitcoin, not all nodes are connected, and some may not receive the same transaction data at the same time. Latency, node crashes, and malicious nodes contribute to difficulties in ensuring all nodes agree on a common state.
     - **Byzantine Generals Problem**: This is a metaphor for a situation in distributed systems where some participants might act maliciously. The problem shows that consensus is impossible if more than 1/3 of nodes are faulty or malicious.
 
-#### Byzantine Fault Tolerance (BFT)
+### Byzantine Fault Tolerance (BFT)
 - **Byzantine Faults**: Nodes in a distributed system may fail arbitrarily, sending conflicting information to other nodes. A Byzantine fault-tolerant system is one that can still reach consensus even when some nodes are acting maliciously.
     - **Example - Byzantine Generals Problem**: The analogy involves generals trying to agree on a plan of attack or retreat. If 1/3 or more generals are traitors, reaching consensus becomes impossible. This demonstrates why Bitcoin’s consensus protocol must account for dishonest nodes.
 
-#### Consensus Without Identity: The Blockchain
+### Consensus Without Identity: The Blockchain
 - **Why Identity Matters**: In systems with identifiable nodes, it would be easier to track malicious behavior. For example, if nodes had identities, it could be possible to designate specific roles (like the node with the lowest ID takes a step) and remove malicious actors.
 - **Bitcoin’s Lack of Identity**: Bitcoin's pseudonymous system makes identity tracking impossible by design, making it vulnerable to Sybil attacks, where a malicious actor could generate many fake identities to manipulate the network.
 - **Implicit Consensus**:
     - **Random Node Selection**: In each round, Bitcoin selects a random node to propose the next block. If other nodes accept the block by building on it, consensus is implicitly achieved.
     - **Block Containment**: Each block contains the hash of the previous block, making the chain grow sequentially and ensuring nodes signal their acceptance by building on top of the accepted block.
 
-#### Proof of Work (PoW)
+### Proof of Work (PoW)
 - **Incentives for Honest Behavior**:
     - Miners are rewarded with newly created bitcoins (block rewards) and transaction fees when they add valid blocks to the blockchain. Invalid blocks do not get accepted, and the miner loses both the block reward and the energy invested in solving the hash puzzle.
     - **Cost of Attack**: Gaining control of 51% of the network’s hash power is economically prohibitive, thus discouraging large-scale attacks.
@@ -57,28 +57,43 @@
     - Initially, miners were rewarded with 50 BTC per block, but this reward halves roughly every four years. By 2040, no new bitcoins will be created, and miners will rely solely on transaction fees.
     - **Finite Supply**: The total supply of bitcoins is capped at 21 million. This scarcity is built into the protocol to ensure long-term value retention.
 
-#### Double-Spending Attack
-- **What is Double Spending?**: A double-spending attack occurs when a malicious user (e.g., Alice) spends the same bitcoins twice by manipulating the network. Alice could send a payment to Bob, but before the transaction is confirmed, she creates a conflicting transaction that sends the same coins to herself.
-- **Defense Mechanisms**:
-    - Honest nodes always extend the longest valid blockchain. If a double-spend is detected, the chain containing the fraudulent transaction is rejected.
-    - **Visual Example**: The slides show an example of Alice attempting a double-spend, where two conflicting transactions (paying Bob and paying herself) are broadcasted. The network rejects the shorter chain containing the double-spend.
-- **Confirmations**: A common heuristic is to wait for six confirmations (blocks) before considering a transaction final. Each confirmation exponentially reduces the probability of a successful double-spend.
+### Double-Spending Attack
+- **Definition**
+    - Occurs when a user tries to spend the same bitcoin twice.
+    - Example: Alice sends bitcoin to Bob and simultaneously creates another transaction to send the same bitcoin to herself.
+- **Defense Mechanisms**
+    - **Longest Chain Rule**: Honest nodes extend the longest valid blockchain, rejecting chains with double-spend attempts.
+    - **Conflict Resolution**: If conflicting transactions occur (Alice → Bob, Alice → herself), the longest chain wins, and the other transaction gets discarded.
+- **Confirmations**
+    - Six confirmations reduce the chance of reversing a transaction to near zero.
+    - Each confirmation block increases security, making it exponentially harder to launch a double-spend attack.
 
+### Mining Economics
+- **Profitability**
+    - Miners earn rewards through block creation and transaction fees.
+    - Profit depends on the cost of electricity, hardware, and mining difficulty.
+- **Mining Farms**
+    - Large-scale operations benefit from cheap electricity and optimal climates.
+    - Professional miners can outcompete small-scale miners by leveraging economies of scale.
+- **Malware Mining**
+    - Some attackers use malware to hijack systems for mining.
+    - Victims unknowingly provide resources (electricity and hardware) while the attacker profits from mined cryptocurrencies.
 
-#### Mining Economics
-- **Profitability**: Mining is profitable if the reward (block reward + transaction fees) exceeds the cost of hardware and electricity. As the block reward diminishes, miners will increasingly rely on transaction fees.
-- **Mining Farms**: The slides depict professional mining centers, which operate in locations with cheap electricity and favorable climates. These centers dominate the Bitcoin mining landscape due to their economies of scale.
-- **Malware Miners**: Some malicious actors use malware to mine cryptocurrencies using someone else’s resources (e.g., their electricity and CPU).
+### Longest Chain Rule
+- **Definition**
+    - The longest chain with the most accumulated proof-of-work is the valid blockchain.
+    - Nodes follow this chain, ensuring consistency across the network.
+- **Orphan Blocks**
+    - Two miners may create blocks simultaneously, resulting in a temporary fork.
+    - The shorter chain gets orphaned as nodes adopt the longer chain, ensuring consensus.
 
-
-#### Longest Chain Rule
-- **What is the Longest Chain Rule?**: The longest chain in the Bitcoin network is the chain with the most computational work behind it. Nodes adopt this chain as the valid blockchain, ensuring consistency across the network.
-- **Orphan Blocks**: Sometimes, two miners solve the hash puzzle at the same time, resulting in two valid blocks. This creates a temporary fork in the chain, but eventually, one chain becomes longer, and the other becomes an orphan block.
-    - **Visual Example**: The images illustrate how two miners could mine blocks simultaneously, leading to two competing chains. Eventually, the network resolves this by adopting the longest chain, leaving the other block orphaned.
-
-#### Transaction Process
-- **Broadcasting Transactions**: When a Bitcoin transaction is created, it is broadcast to the network. Nodes validate the transaction by checking whether the user has enough funds and whether the transaction is properly signed.
-- **Mempool**: Verified transactions are added to a waiting area called the mempool. When a miner successfully solves a block, they include transactions from the mempool in the block.
-
-    - **Miner Reward**: The miner who successfully mines a block is rewarded with both the block reward and the transaction fees. The order in which transactions are included in the block is determined by the miner, who may prioritize transactions with higher fees.
-    - **Visual Representation**: The images show how miners add transactions from the mempool to a new block and broadcast it to the network.
+### Transaction Process
+- **Broadcasting Transactions**
+    - Transactions are broadcast to all nodes in the network.
+    - Nodes validate transactions by checking balances and verifying digital signatures.
+- **Mempool**
+    - Unconfirmed transactions wait in the mempool until included in a block.
+    - Miners pick transactions from the mempool based on the fees attached.
+- **Miner Reward**
+    - Miners receive newly minted bitcoins (block reward) and transaction fees.
+    - Miners prioritize high-fee transactions to maximize rewards for each block they solve.
