@@ -86,17 +86,17 @@ A computer can be both the **subject** (used as a tool to attack another system)
 | **Threat Agent**                            | A specific instance or component of a more general threat.                                                                                                                           |
 | **Vulnerability**                           | Weaknesses or faults in a system or protection mechanism that expose information to attack or damage.                                                                                |
 
-### Critical Characteristics of Information
+### Critical Characteristics of Information (The new CIA)
 
 | **Critical Characteristic** | **Summary**                                                                                                                                                                                                |
 | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Availability**            | Ensures authorized users can access information when and where needed, in the correct format. A breach can result in downtime or inability to access critical information.                                 |
-| **Accuracy**                | Information must be free from errors and meet user expectations; modifications compromise accuracy. Breaches can lead to misinformation and potentially flawed decisions.                                  |
-| **Authenticity**            | Information should be genuine and original, not altered or fabricated. A breach can cause loss of trust and legitimacy, leading to misinformation.                                                         |
-| **Confidentiality**         | Prevents unauthorized access or exposure to information. Breaches can lead to unauthorized access, data leaks, and privacy violations.                                                                     |
-| **Integrity**               | Information must remain whole and uncorrupted; corruption or damage threatens integrity. Breaches can lead to data corruption, loss of trust, and operational disruptions.                                 |
-| **Utility**                 | Information must be valuable and useful for its intended purpose, and in a meaningful format. Breaches can render information useless, impairing decision-making and functionality.                        |
-| **Possession**              | Ownership or control of information, regardless of format; breaches in confidentiality imply loss of possession. Breaches can result in unauthorized control or theft of information, affecting ownership. |
+| **Availability**            | Ensures authorized users can access information when and where needed, in the correct format.<br> - A breach can result in downtime or inability to access critical information.                                 |
+| **Accuracy**                | Information must be free from errors and meet user expectations; modifications compromise accuracy.<br> - Breaches can lead to misinformation and potentially flawed decisions.                                  |
+| **Authenticity**            | Information should be genuine and original, not altered or fabricated.<br> - A breach can cause loss of trust and legitimacy, leading to misinformation.                                                         |
+| **Confidentiality**         | Prevents unauthorized access or exposure to information.<br> - Breaches can lead to unauthorized access, data leaks, and privacy violations.                                                                     |
+| **Integrity**               | Information must remain whole and uncorrupted; corruption or damage threatens integrity.<br> - Breaches can lead to data corruption, loss of trust, and operational disruptions.                                 |
+| **Utility**                 | Information must be valuable and useful for its intended purpose, and in a meaningful format.<br> - Breaches can render information useless, impairing decision-making and functionality.                        |
+| **Possession**              | Ownership or control of information, regardless of format; breaches in confidentiality imply loss of possession.<br> - Breaches can result in unauthorized control or theft of information, affecting ownership. |
 
 ## CNSS Model
 
