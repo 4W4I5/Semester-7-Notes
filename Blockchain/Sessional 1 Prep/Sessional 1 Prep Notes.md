@@ -15,14 +15,17 @@
 
 # Chapter 4: How bitcoin achieves decentralization
 ### Centralization vs. Decentralization
-- **Decentralization Spectrum**: Decentralization is not absolute.
-    - **Email Example**: While email was initially decentralized, most users rely on centralized services like Gmail for convenience and security.
-    - **Web Example**: Although the core protocols of the web (HTTP, DNS) allow for decentralized communication, control over content and traffic has become concentrated in a few centralized entities.
-- **Bitcoin and Decentralization**:
-    - Bitcoin's protocol remains decentralized, but centralized entities like exchanges and wallet providers exist.
+| **Aspect**          | **Centralized Systems**                                                      | **Decentralized Systems**                                                                |
+| ------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| **Control**         | Single entity or a small group controls most of the system.                  | Power and decision-making are distributed across many nodes.                             |
+| **Examples**        | Webmail services like Gmail, centralized exchanges.                          | Bitcoin protocol, decentralized web protocols like HTTP, DNS.                            |
+| **Security**        | Centralized authority ensures security but can be a single point of failure. | Security is distributed, making it harder for a single failure to compromise the system. |
+| **Scalability**     | Easier to scale quickly due to central control.                              | More complex to scale due to decentralized nature.                                       |
+| **Fault Tolerance** | Vulnerable to failure if the central authority is compromised.               | More resilient; failure of one node doesn’t collapse the system.                         |
+
 
 ### Distributed Consensus
-- **Properties of Distributed Consensus**: Ensures that all honest nodes agree on a value, and that the value proposed comes from a valid node.
+- Ensures that all honest nodes agree on a value, and that the value proposed comes from a valid node.
 - **Challenges**:
     - Imperfect networks (e.g., latency, faulty nodes) make achieving consensus difficult.
     - Nodes may not all agree on the order of events due to network faults or different versions of the transaction pool.
@@ -34,9 +37,7 @@
 
 ### Consensus without Identity: The Blockchain
 - **Why Identity Matters**: In systems with identifiable nodes, malicious behavior could be traced, simplifying consensus. However, Bitcoin avoids identity due to privacy goals and the risk of Sybil attacks (where a malicious user controls multiple fake nodes).
-
 - **Implicit Consensus**:
-
     - Bitcoin does not use a leader-based consensus but relies on random node selection to propose new blocks.
     - A block is accepted if other nodes build on it; otherwise, it's implicitly rejected if ignored in favor of earlier blocks.
 
