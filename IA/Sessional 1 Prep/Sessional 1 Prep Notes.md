@@ -1,9 +1,9 @@
-| Chapter Number | Chapter Name                                    | Status    |
-| -------------- | ----------------------------------------------- | --------- |
-| 1              | Introduction to InfoSec                         | :warning: |
-| 2              | The need for Security                           | :warning: |
-| 3              | Legal, Ethical & Professional Issues in InfoSec | :x:       |
-| 4              | Risk Management                                 | :warning: |
+| Chapter Number | Chapter Name                                    | Status             |
+| -------------- | ----------------------------------------------- | ------------------ |
+| 1              | Introduction to InfoSec                         | :white_check_mark: | 
+| 2              | The need for Security                           | :warning:          |
+| 3              | Legal, Ethical & Professional Issues in InfoSec | :x:                |
+| 4              | Risk Management                                 | :warning:          |
 
 # Chapter 1: Introduction to InfoSec
 ## What is Information Security?
