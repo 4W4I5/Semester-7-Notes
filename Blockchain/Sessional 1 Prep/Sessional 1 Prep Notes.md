@@ -59,13 +59,17 @@
     - If, however, the next few nodes continue to build on the block containing Alice's payment to Bob, it becomes more likely that this transaction will be part of the long-term consensus chain, giving Bob confidence that the payment is valid.
 ## Incentives for Distributed Consensus
 ### Proof of Work (PoW)
+- **Properties of PoW**
+	- 1: Somewhat Difficult to compute i.e. Block Rewards
+	- 2: Parameterizable Cost i.e. avg time b/w blocks dictates the probability that the next block is won by the owner
+	- 3: Trivial to verify i.e. easy to calculate the block hash as nonce is provided as well which is part of Transaction fees
 - **Incentives for Honest Behavior**:
     - Miners are rewarded with **newly created bitcoins (block rewards)** and transaction fees when they add valid blocks to the blockchain. Invalid blocks are rejected by the network, causing the miner to lose both the block reward and the energy invested in solving the hash puzzle.
     - **Cost of Attack**: Gaining control of 51% of the network’s hash power is economically prohibitive due to the immense cost of energy and hardware. This discourages large-scale attacks.
 - **Hash Puzzles and Mining**:
     - **Hash Puzzle**: Miners must find a **nonce** such that the hash of the block (combining the previous block's hash, transactions, and the nonce) is smaller than a predefined target value. The goal is to make the hash start with a specific number of leading zeros.
+	    - Such a goal is needed to make the hash difficult to compute **(Property 1 of PoW)**
     - **Mining Process**: Miners repeatedly try different nonce values until they find one that produces a valid hash. The successful miner broadcasts the block to the network, and other miners validate the block by checking its hash.
-    - **Visual Example**: The slides visually depict the mining process, showing how blocks of transactions are connected sequentially via hash pointers.
 - **Mining Reward**:
     - Initially, miners were rewarded with **50 BTC** per block, and this amount halves approximately every four years. By 2040, the block reward will cease, and miners will rely solely on **transaction fees**.
     - **Finite Supply**: Bitcoin's total supply is capped at **21 million** coins, which helps ensure long-term value retention as scarcity increases over time.
