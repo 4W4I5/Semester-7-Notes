@@ -338,6 +338,90 @@ To address security issues, organizations have adopted secure software developme
 # missed shit
 
 
+## Learning Objectives
+
+Upon completion of this chapter, you should be able to:
+- Understand the business need for information security.
+- Explain why a successful information security program is the responsibility of both an organization’s general management and IT management.
+- Identify the threats posed to information security and differentiate threats to the information within systems from attacks against the information within systems.
+- Describe common issues in software development and how secure software development programs can mitigate vulnerabilities&#8203;:contentReference[oaicite:0]{index=0}.
+
+## Forces of Nature
+
+Forces of nature are among the most dangerous threats to information security. These include events such as **fire**, **flood**, **earthquake**, **hurricanes**, **lightning**, and **tsunamis**, which can disrupt not only the storage, transmission, and use of information but also affect individuals' lives&#8203;:contentReference[oaicite:1]{index=1}.
+
+Organizations must implement controls to limit damage and prepare **contingency plans** for continued operations during and after such events. These disasters, also known as **force majeure** or **acts of God**, often occur unexpectedly with little warning&#8203;:contentReference[oaicite:2]{index=2}.
+
+## Statistics on Threats
+
+According to the 2009 CSI/FBI Computer Crime and Security Survey:
+- 64% of organizations reported **malware infections**.
+- 14% indicated **system penetration** by an outsider&#8203;:contentReference[oaicite:3]{index=3}.
+
+These figures highlight the ongoing and increasing frequency of security incidents, which require constant vigilance and improvements in organizational defenses.
+
+## Espionage or Trespass
+
+Espionage and trespass include unauthorized access to protected information. The distinction between **legal competitive intelligence** and **illegal industrial espionage** is important.
+
+- **Competitive intelligence** is legal and uses publicly available data.
+- **Industrial espionage** involves illegal means to gather sensitive information&#8203;:contentReference[oaicite:4]{index=4}.
+
+Common techniques include **shoulder surfing**—where an attacker visually observes private information—and **hacking** to bypass security controls&#8203;:contentReference[oaicite:5]{index=5}.
+
+### Types of Hackers
+
+- **Expert hackers**: Skilled individuals who develop their own attack tools and share them with others.
+- **Unskilled hackers (Script Kiddies)**: Novices who use tools created by experts to exploit systems without fully understanding them&#8203;:contentReference[oaicite:6]{index=6}.
+
+Other terms include:
+- **Cracker**: A person who removes software protection to enable unauthorized duplication.
+- **Phreaker**: Someone who hacks into telephone systems to make free calls&#8203;:contentReference[oaicite:7]{index=7}.
+
+## Human Error or Failure
+
+**Human error** represents one of the greatest threats to an organization’s data. Employees may unintentionally expose information or cause harm due to:
+- **Inexperience**,
+- **Improper training**, or
+- **Incorrect assumptions**.
+
+Common mistakes include:
+- Accidental deletion or modification of data.
+- Storing data in unprotected areas.
+- Failure to apply security protocols&#8203;:contentReference[oaicite:8]{index=8}&#8203;:contentReference[oaicite:9]{index=9}.
+
+### Preventive Measures
+
+Many threats related to human error can be minimized through training and the implementation of controls, such as requiring dual confirmation for critical actions&#8203;:contentReference[oaicite:10]{index=10}.
+
+## Secure Software Development Problems
+
+Several common software development problems can introduce security risks, including:
+- **Buffer overruns**: Allowing more data to be written to a buffer than it can hold, which can lead to crashes or code execution.
+- **Command injection**: Malicious commands inserted into input fields, leading to unauthorized execution.
+- **SQL injection**: Inserting malicious SQL queries into input fields to manipulate a database&#8203;:contentReference[oaicite:11]{index=11}&#8203;:contentReference[oaicite:12]{index=12}.
+
+Additional security problems include:
+- **Cross-site scripting (XSS)**: Injecting malicious scripts into web applications to target users.
+- **Race conditions**: Exploiting the timing of system processes to cause unexpected behavior.
+- **Failure to handle errors properly**: Exposing sensitive information in error messages&#8203;:contentReference[oaicite:13]{index=13}.
+
+## Software Assurance and Secure Development Principles
+
+Organizations have adopted **Software Assurance (SA)**, a methodology that ensures software is secure and reliable throughout its lifecycle. The **SA Common Body of Knowledge (CBK)**, supported by the U.S. Department of Defense and Homeland Security, offers guidelines for secure software development&#8203;:contentReference[oaicite:14]{index=14}.
+
+### Key Security Design Principles
+
+1. **Simplicity**: Keep designs simple and small.
+2. **Access by permission**: Check permissions for access rather than exclusions.
+3. **Authorization checks**: Ensure every access to an object is authorized.
+4. **Authentication**: Use keys or passwords for authentication.
+5. **Minimum privilege**: Only grant the minimum necessary permissions for tasks&#8203;:contentReference[oaicite:15]{index=15}.
+
+These principles help in creating secure software systems that are resilient to a variety of attacks and vulnerabilities.
+
+
+
 ---
 
 ## Review Questions
