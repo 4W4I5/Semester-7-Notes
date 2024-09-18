@@ -284,30 +284,19 @@ Information security supports four vital functions for organizations:
 | **10. Technological Obsolescence**          | Outdated systems and technologies lead to **security vulnerabilities** and reliability issues. Organizations must update systems regularly to prevent obsolescence.                                                                                                                                                                                                                                                                                                 |
 
 ## Types of Attacks
-1. **Malicious Code**:
-    - Includes **viruses**, **worms**, **Trojan horses**, and **active Web scripts** designed to steal or destroy information.
-2. **Hoaxes**:
-    - **Virus hoaxes** waste time and resources by causing panic over non-existent threats.
-3. **Backdoors**:
-    - Attackers exploit backdoors or previously unknown vulnerabilities to access systems.
-4. **Password Cracking**:
-    - Techniques include:
-        - **Brute force**: Trying all possible combinations.
-        - **Dictionary attacks**: Guessing passwords based on common words.
-5. **Denial-of-Service (DoS)**:
-    - **DoS attacks** overwhelm systems with requests, causing them to crash.
-    - **Distributed Denial-of-Service (DDoS)** attacks use multiple sources to flood the target system.
-6. **Spoofing**:
-    - Attackers masquerade as a trusted source by spoofing **IP addresses**.
-7. **Man-in-the-Middle**:
-    - Attackers intercept and modify communications between two parties.
-8. **Sniffers**:
-    - **Sniffers** capture network traffic and can be used for legitimate monitoring or malicious activity.
-9. **Phishing & Pharming**:
-    - **Phishing**: Trick users into providing sensitive information by posing as a legitimate entity.
-    - **Pharming**: Redirect legitimate traffic to fraudulent websites to steal information.
-10. **Social Engineering**:
-    - Attackers manipulate individuals into revealing sensitive information, often exploiting the **human factor** in security.
+| **Threat Type**                | **Description**                                                                                                                                                                                  |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **1. Malicious Code**          | Includes **viruses**, **worms**, **Trojan horses**, and **active Web scripts** designed to steal or destroy information.                                                                         |
+| **2. Hoaxes**                  | **Virus hoaxes** waste time and resources by causing panic over non-existent threats.                                                                                                            |
+| **3. Backdoors**               | Attackers exploit backdoors or previously unknown vulnerabilities to access systems.                                                                                                             |
+| **4. Password Cracking**       | - **Brute force**: Trying all possible combinations. <br> - **Dictionary attacks**: Guessing passwords based on common words.                                           |
+| **5. Denial-of-Service (DoS)** | **DoS attacks** overwhelm systems with requests, causing them to crash. <br> **Distributed Denial-of-Service (DDoS)** attacks use multiple sources to flood the target system.                   |
+| **6. Spoofing**                | Attackers masquerade as a trusted source by spoofing **IP addresses**.                                                                                                                           |
+| **7. Man-in-the-Middle**       | Attackers intercept and modify communications between two parties.                                                                                                                               |
+| **8. Sniffers**                | **Sniffers** capture network traffic and can be used for legitimate monitoring or malicious activity.                                                                                            |
+| **9. Phishing & Pharming**     | - **Phishing**: Trick users into providing sensitive information by posing as a legitimate entity. <br> - **Pharming**: Redirect legitimate traffic to fraudulent websites to steal information. |
+| **10. Social Engineering**     | Attackers manipulate individuals into revealing sensitive information, often exploiting the **human factor** in security.                                                                        |
+
 
 ## Secure Software Development
 ### Software Vulnerabilities
