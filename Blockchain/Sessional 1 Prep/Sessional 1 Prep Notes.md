@@ -57,56 +57,42 @@
     - Bob, the merchant, hears about Alice's payment transaction over the network before it is included in a block. If Bob is too eager and allows Alice to download the software immediately, without waiting for block confirmations (a **zero-confirmation transaction**), Alice could quickly broadcast a conflicting transaction (a double-spend), and an honest node might include the new transaction in the next block.
     - A cautious merchant would wait for multiple block confirmations before releasing the software. If Alice successfully launches a double-spend attack, Bob will see that the block containing her payment has been orphaned, and he should abandon the transaction.
     - If, however, the next few nodes continue to build on the block containing Alice's payment to Bob, it becomes more likely that this transaction will be part of the long-term consensus chain, giving Bob confidence that the payment is valid.
-
+## Incentives for Distributed Consensus
 ### Proof of Work (PoW)
 - **Incentives for Honest Behavior**:
-    - Miners are rewarded with newly created bitcoins (block rewards) and transaction fees when they add valid blocks to the blockchain. Invalid blocks do not get accepted, and the miner loses both the block reward and the energy invested in solving the hash puzzle.
-    - **Cost of Attack**: Gaining control of 51% of the network’s hash power is economically prohibitive, thus discouraging large-scale attacks.
+    - Miners are rewarded with **newly created bitcoins (block rewards)** and transaction fees when they add valid blocks to the blockchain. Invalid blocks are rejected by the network, causing the miner to lose both the block reward and the energy invested in solving the hash puzzle.
+    - **Cost of Attack**: Gaining control of 51% of the network’s hash power is economically prohibitive due to the immense cost of energy and hardware. This discourages large-scale attacks.
 - **Hash Puzzles and Mining**:
-    - **Hash Puzzle**: To add a new block, miners must find a nonce such that the hash of the block (previous block hash + transactions + nonce) is smaller than a target value.
-    - **Mining Process**: Miners compete by repeatedly trying different nonce values until they find a valid hash. Once a valid hash is found, the miner broadcasts the block to the network, and other miners validate it.
-    - **Visual Example**: The slides depict the mining process visually, showing blocks of transactions being added one after the other in a linear fashion, representing the blockchain. Each block is connected to the next via hash pointers.
+    - **Hash Puzzle**: Miners must find a **nonce** such that the hash of the block (combining the previous block's hash, transactions, and the nonce) is smaller than a predefined target value. The goal is to make the hash start with a specific number of leading zeros.
+    - **Mining Process**: Miners repeatedly try different nonce values until they find one that produces a valid hash. The successful miner broadcasts the block to the network, and other miners validate the block by checking its hash.
+    - **Visual Example**: The slides visually depict the mining process, showing how blocks of transactions are connected sequentially via hash pointers.
 - **Mining Reward**:
-    - Initially, miners were rewarded with 50 BTC per block, but this reward halves roughly every four years. By 2040, no new bitcoins will be created, and miners will rely solely on transaction fees.
-    - **Finite Supply**: The total supply of bitcoins is capped at 21 million. This scarcity is built into the protocol to ensure long-term value retention.
+    - Initially, miners were rewarded with **50 BTC** per block, and this amount halves approximately every four years. By 2040, the block reward will cease, and miners will rely solely on **transaction fees**.
+    - **Finite Supply**: Bitcoin's total supply is capped at **21 million** coins, which helps ensure long-term value retention as scarcity increases over time.
 
 ### Double-Spending Attack
-- **Definition**
-    - Occurs when a user tries to spend the same bitcoin twice.
-    - Example: Alice sends bitcoin to Bob and simultaneously creates another transaction to send the same bitcoin to herself.
-- **Defense Mechanisms**
-    - **Longest Chain Rule**: Honest nodes extend the longest valid blockchain, rejecting chains with double-spend attempts.
-    - **Conflict Resolution**: If conflicting transactions occur (Alice → Bob, Alice → herself), the longest chain wins, and the other transaction gets discarded.
-- **Confirmations**
-    - Six confirmations reduce the chance of reversing a transaction to near zero.
-    - Each confirmation block increases security, making it exponentially harder to launch a double-spend attack.
+- **Definition**: A double-spend attack occurs when a user tries to spend the same bitcoin more than once by broadcasting two conflicting transactions.
+    - **Example**: Alice sends bitcoin to Bob for a service, and simultaneously broadcasts another transaction to spend the same bitcoin to another address she controls.
+- **Defense Mechanisms**:
+    - **Longest Chain Rule**: Honest nodes follow the longest valid blockchain, ensuring that only one of the conflicting transactions (Alice → Bob or Alice → herself) gets confirmed.
+    - **Confirmations**: The risk of a successful double-spend attack diminishes with each confirmation. Typically, after **six confirmations**, the transaction is considered highly secure.
 
 ### Mining Economics
-- **Profitability**
-    - Miners earn rewards through block creation and transaction fees.
-    - Profit depends on the cost of electricity, hardware, and mining difficulty.
-- **Mining Farms**
-    - Large-scale operations benefit from cheap electricity and optimal climates.
-    - Professional miners can outcompete small-scale miners by leveraging economies of scale.
-- **Malware Mining**
-    - Some attackers use malware to hijack systems for mining.
-    - Victims unknowingly provide resources (electricity and hardware) while the attacker profits from mined cryptocurrencies.
+- **Profitability**:
+    - Miners earn rewards from block creation and transaction fees. Profitability is influenced by the **cost of electricity, mining hardware**, and **mining difficulty**.
+- **Mining Farms**:
+    - Large-scale operations, often located in areas with **cheap electricity and cool climates**, have an economic advantage due to economies of scale.
+- **Malware Mining**:
+    - Some attackers use malware to hijack computers, using the victim's resources (electricity and hardware) to mine cryptocurrencies for their own gain.
 
 ### Longest Chain Rule
-- **Definition**
-    - The longest chain with the most accumulated proof-of-work is the valid blockchain.
-    - Nodes follow this chain, ensuring consistency across the network.
-- **Orphan Blocks**
-    - Two miners may create blocks simultaneously, resulting in a temporary fork.
-    - The shorter chain gets orphaned as nodes adopt the longer chain, ensuring consensus.
+- **Definition**: The longest chain with the most accumulated proof-of-work is the valid blockchain. Nodes always follow this chain to ensure consistency.
+- **Orphan Blocks**: Occasionally, two miners may produce blocks simultaneously, creating a temporary fork. The shorter chain eventually gets orphaned, and only the longest chain remains.
 
 ### Transaction Process
-- **Broadcasting Transactions**
-    - Transactions are broadcast to all nodes in the network.
-    - Nodes validate transactions by checking balances and verifying digital signatures.
-- **Mempool**
-    - Unconfirmed transactions wait in the mempool until included in a block.
-    - Miners pick transactions from the mempool based on the fees attached.
-- **Miner Reward**
-    - Miners receive newly minted bitcoins (block reward) and transaction fees.
-    - Miners prioritize high-fee transactions to maximize rewards for each block they solve.
+- **Broadcasting Transactions**:
+    - Transactions are broadcast to all nodes. Each node validates them by checking the balance of the sender and verifying signatures.
+- **Mempool**:
+    - Unconfirmed transactions wait in the **mempool** until miners include them in a block. Miners typically prioritize transactions based on the attached fees.
+- **Miner Reward**:
+    - Miners receive the block reward and transaction fees. They tend to prioritize transactions with higher fees to maximize their earnings.
