@@ -300,18 +300,29 @@ Information security supports four vital functions for organizations:
 
 ## Secure Software Development
 ### Software Vulnerabilities
-- **Buffer overruns**
-- **Command injection**
-- **Cross-site scripting**
-- **SQL injection**
-- **Race conditions**
-- **Failure to handle errors properly**
-- **Failure to protect network traffic or store data securely**
+| **Threat Type**                          | **Description**                                                                                                                                                                                                                                           |
+|------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **1. Malicious Code**                    | Includes **viruses**, **worms**, **Trojan horses**, and **active Web scripts** designed to steal or destroy information. <br> *Example:* A Trojan horse disguised as a legitimate email attachment installs a keylogger to capture user credentials.         |
+| **2. Hoaxes**                            | **Virus hoaxes** waste time and resources by causing panic over non-existent threats. <br> *Example:* Users receive a fake virus alert urging them to delete important system files, disrupting business operations.                                        |
+| **3. Backdoors**                         | Attackers exploit backdoors or previously unknown vulnerabilities to access systems. <br> *Example:* Attackers use a backdoor in outdated software to gain unauthorized access to sensitive data.                                                          |
+| **4. Password Cracking**                 | Techniques include: <br> - **Brute force**: Trying all possible combinations. <br> - **Dictionary attacks**: Guessing passwords based on common words. <br> *Example:* An attacker uses a dictionary attack with common passwords like "password123."         |
+| **5. Denial-of-Service (DoS)**           | **DoS attacks** overwhelm systems with requests, causing them to crash. <br> **Distributed Denial-of-Service (DDoS)** attacks use multiple sources to flood the target system. <br> *Example:* A DDoS attack makes a website unavailable to users.          |
+| **6. Spoofing**                          | Attackers masquerade as a trusted source by spoofing **IP addresses**. <br> *Example:* An attacker spoofs a trusted IP address to bypass firewall rules and access internal systems.                                                                       |
+| **7. Man-in-the-Middle**                 | Attackers intercept and modify communications between two parties. <br> *Example:* A hacker intercepts sensitive financial data between a user and their bank during an unencrypted session.                                                               |
+| **8. Sniffers**                          | **Sniffers** capture network traffic and can be used for legitimate monitoring or malicious activity. <br> *Example:* An attacker uses a sniffer to capture unencrypted login credentials over a public Wi-Fi network.                                     |
+| **9. Phishing & Pharming**               | - **Phishing**: Trick users into providing sensitive information by posing as a legitimate entity. <br> - **Pharming**: Redirect legitimate traffic to fraudulent websites to steal information. <br> *Example:* A phishing email from a fake bank.        |
+| **10. Social Engineering**               | Attackers manipulate individuals into revealing sensitive information, often exploiting the **human factor** in security. <br> *Example:* A scammer posing as an IT technician convinces an employee to reveal their password over the phone.               |
+| **11. Buffer Overruns**                  | Occurs when a program writes more data to a buffer than it can hold, leading to crashes or execution of malicious code. <br> *Example:* An attacker exploits a buffer overflow vulnerability to inject and run malicious code on a web server.              |
+| **12. Command Injection**                | Involves inserting unauthorized commands into a program's input, leading to the execution of those commands. <br> *Example:* A web form allows attackers to input shell commands, which are executed by the server, leading to data theft.                 |
+| **13. Cross-Site Scripting (XSS)**       | An attack where malicious scripts are injected into websites to target unsuspecting users. <br> *Example:* An attacker injects a script into a comment section of a website, causing users' browsers to execute the malicious code.                        |
+| **14. SQL Injection**                    | A type of attack where malicious SQL statements are inserted into an entry field for execution against a database. <br> *Example:* An attacker inputs a crafted SQL query into a login form, gaining access to a website's database and user credentials.  |
+| **15. Race Conditions**                  | Occur when two processes access shared resources simultaneously, leading to unexpected behavior. <br> *Example:* An attacker exploits a race condition in a payment system to trigger multiple unauthorized transactions before the balance is updated.   |
+| **16. Failure to Handle Errors Properly**| Systems that fail to handle errors properly may leak sensitive information or behave unpredictably. <br> *Example:* A website displays detailed error messages that reveal the structure of the database, aiding attackers in planning SQL injection attacks.|
+| **17. Failure to Protect Network Traffic or Store Data Securely** | When sensitive data is transmitted or stored without proper encryption, leading to unauthorized access. <br> *Example:* Sensitive customer data is transmitted in plaintext over an unencrypted channel, allowing attackers to intercept and steal information. |
+
 
 ### Secure Development Practices
-
 To address security issues, organizations have adopted secure software development methodologies:
-
 - **Software Assurance (SA)**: A set of principles aimed at ensuring software is **secure and reliable**.
 - **SA Common Body of Knowledge (CBK)**: A national effort led by the U.S. Department of Defense and Homeland Security to promote secure software development.
 
