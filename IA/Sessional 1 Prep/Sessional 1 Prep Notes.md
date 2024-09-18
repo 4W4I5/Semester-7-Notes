@@ -250,7 +250,6 @@ Questions:
 
 ## Business Needs for Security
 Information security serves four vital functions for organizations:
-
 1. **Protects the ability to function**:
     - Both **general management** and **IT management** play a critical role in ensuring the security of an organization’s systems. A security breach can have devastating consequences, from operational disruptions to financial loss.
     - Information security is a **management and people issue** as much as it is a technical one. Organizations must foster a culture of security awareness, ensuring employees understand the risks and their role in mitigating them.
@@ -264,14 +263,10 @@ Information security serves four vital functions for organizations:
     - The infrastructure supporting technology operations must be robust, scalable, and secure. This includes servers, networks, databases, and software platforms.
     - As the organization grows, security solutions must evolve, requiring **upgrades** to outdated systems to prevent emerging threats.
 
-## Threats to Information Security
-
-### Threat Overview
-
-- A **threat** is any potential event or action that could harm an organization’s information systems, such as a hacker attempting to access sensitive data or a natural disaster disrupting operations.
-- Organizations must develop security policies and implement controls to mitigate these threats. Management plays a key role in recognizing and addressing potential risks.
 
 ### Types of Threats:
+- A **threat** is any potential event or action that could harm an organization’s information systems, such as a hacker attempting to access sensitive data or a natural disaster disrupting operations.
+- Organizations must develop security policies and implement controls to mitigate these threats. Management plays a key role in recognizing and addressing potential risks.
 
 | **Threat Type**                             | **Description**                                                                                                                                                                                                                                                                                                                                                                |
 | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -288,7 +283,6 @@ Information security serves four vital functions for organizations:
 | **11. Forces of Nature**                    | Natural disasters such as **fire**, **flood**, **earthquake**, and **tornado** pose serious threats. These events can disrupt operations, damage infrastructure, and cause loss of data. Organizations must implement controls to limit damage and have contingency plans for continuous operations. 【4†source】                                                              |
 
 ## Types of Attacks
-
 - Acts or actions that exploits vulnerability (i.e., an identified weakness) in controlled system
 - Accomplished by threat agent that damages or steals organization’s information
 
