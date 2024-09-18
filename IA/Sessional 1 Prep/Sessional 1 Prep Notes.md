@@ -334,6 +334,12 @@ To address security issues, organizations have adopted secure software developme
 - Use **minimum privileges** required for tasks.
 - Make security mechanisms **easy to use**, ensuring users apply them correctly and routinely.
 
+---
+# missed shit
+
+
+---
+
 ## Review Questions
 1. Why is information security a management problem? What can management do that technology cannot?
 2. Why is data the most important asset an organization possesses? What other assets in the organization require protection?
