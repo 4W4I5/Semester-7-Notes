@@ -41,9 +41,15 @@
 ### Consensus Without Identity: The Blockchain
 - **Why Identity Matters**: In systems with identifiable nodes, it would be easier to track malicious behavior. For example, if nodes had identities, it could be possible to designate specific roles (like the node with the lowest ID takes a step) and remove malicious actors.
 - **Bitcoin’s Lack of Identity**: Bitcoin's pseudonymous system makes identity tracking impossible by design, making it vulnerable to Sybil attacks, where a malicious actor could generate many fake identities to manipulate the network.
-- **Implicit Consensus**:
+- **Implicit Consensus (Bitcoin's Approach to consensus)**:
     - **Random Node Selection**: In each round, Bitcoin selects a random node to propose the next block. If other nodes accept the block by building on it, consensus is implicitly achieved.
     - **Block Containment**: Each block contains the hash of the previous block, making the chain grow sequentially and ensuring nodes signal their acceptance by building on top of the accepted block.
+- **Consensus Algorithim**
+	- New transactions are broadcast to all nodes
+	- Each node collects new transactions into a block
+	- In each round a random node gets to broadcast its block
+	- Other nodes accept the block only if all transactions in it are valid (unspent, valid signatures)
+	- Nodes express their acceptance of the block by including its hash in the next block they create
 
 ### Proof of Work (PoW)
 - **Incentives for Honest Behavior**:
