@@ -321,7 +321,7 @@ Information security serves four vital functions for organizations:
 | **14. SQL Injection**                                             | Injecting malicious SQL commands to gain access to databases.                                                            |
 | **15. Race Conditions**                                           | Exploiting timing issues between processes to gain unauthorized access.                                                  |
 | **16. Failure to Handle Errors Properly**                         | Improper error handling can lead to system vulnerabilities or information leaks.                                         |
-| **17. Failure to Protect Network Traffic or Store Data Securely** | Sensitive data not properly encrypted, leading to potential theft【4†source】.                                           |
+| **17. Failure to Protect Network Traffic or Store Data Securely** | Sensitive data not properly encrypted, leading to potential theft.                                           |
 
 ### Secure Development Practices
 
