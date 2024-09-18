@@ -39,19 +39,24 @@
     - **Example - Byzantine Generals Problem**: The analogy involves generals trying to agree on a plan of attack or retreat. If 1/3 or more generals are traitors, reaching consensus becomes impossible. This demonstrates why Bitcoin’s consensus protocol must account for dishonest nodes.
 
 ### Consensus Without Identity: The Blockchain
-- **Why Identity Matters**: In systems with identifiable nodes, it would be easier to track malicious behavior. For example, if nodes had identities, it could be possible to designate specific roles (like the node with the lowest ID takes a step) and remove malicious actors.
-- **Bitcoin’s Lack of Identity**: Bitcoin's pseudonymous system makes identity tracking impossible by design, making it vulnerable to Sybil attacks, where a malicious actor could generate many fake identities to manipulate the network.
-- **Implicit Consensus (Bitcoin's Approach to consensus)**:
-    - **Random Node Selection**: In each round, Bitcoin selects a random node to propose the next block. If other nodes accept the block by building on it, consensus is implicitly achieved.
-    - **Block Containment**: Each block contains the hash of the previous block, making the chain grow sequentially and ensuring nodes signal their acceptance by building on top of the accepted block.
-- **Consensus Algorithim**
-	- New transactions are broadcast to all nodes
-	- Each node collects new transactions into a block
-	- In each round a random node gets to broadcast its block
-	- Other nodes accept the block only if all transactions in it are valid (unspent, valid signatures)
-	- Nodes express their acceptance of the block by including its hash in the next block they create
-- **Possible Attacks**
-	- 
+- **Why Identity Matters**: In systems with identifiable nodes, malicious behavior is easier to track. For example, nodes with identities can have designated roles (e.g., the node with the lowest ID takes an action), and malicious actors can be identified and removed from the system.
+- **Bitcoin’s Lack of Identity**: Bitcoin's pseudonymous system intentionally makes identity tracking impossible, making the network vulnerable to Sybil attacks, where a malicious actor can generate many fake identities to manipulate the network.
+- **Implicit Consensus (Bitcoin's Approach to Consensus)**:
+    - **Random Node Selection**: Bitcoin randomly selects a node in each round to propose the next block. If the other nodes accept the block by building on top of it, consensus is implicitly achieved.
+    - **Block Containment**: Each block contains the hash of the previous block, ensuring that the chain grows sequentially, and the inclusion of a new block indicates acceptance of the previous block.
+- **Consensus Algorithm**:
+    - New transactions are broadcast to all nodes.
+    - Each node collects new transactions into a block.
+    - In each round, a random node gets to broadcast its block.
+    - Other nodes accept the block only if all transactions in it are valid (unspent, valid signatures).
+    - Nodes express their acceptance of the block by including its hash in the next block they create.
+- **Possible Attacks**:
+    - **Double Spend Attack**: A malicious node can attempt to spend the same coins twice. For instance, Alice could send a transaction to Bob and have it included in a block. However, if Alice is selected to propose the next block, she could create a new block that ignores the block containing her payment to Bob and instead includes a transaction where she spends the same coins elsewhere. If the network extends her fraudulent block, the payment to Bob becomes invalid and will never be confirmed.
+    - **Denial of Service (DoS)**: A malicious node can exclude transactions from specific addresses (e.g., Bob’s transactions). However, this attack is limited because an honest node in the next round could include Bob’s transactions in their proposed block, effectively bypassing the malicious actor's interference.
+- **Scenario: Malicious Transaction From Bob's Perspective**:
+    - Bob, the merchant, hears about Alice's payment transaction over the network before it is included in a block. If Bob is too eager and allows Alice to download the software immediately, without waiting for block confirmations (a **zero-confirmation transaction**), Alice could quickly broadcast a conflicting transaction (a double-spend), and an honest node might include the new transaction in the next block.
+    - A cautious merchant would wait for multiple block confirmations before releasing the software. If Alice successfully launches a double-spend attack, Bob will see that the block containing her payment has been orphaned, and he should abandon the transaction.
+    - If, however, the next few nodes continue to build on the block containing Alice's payment to Bob, it becomes more likely that this transaction will be part of the long-term consensus chain, giving Bob confidence that the payment is valid.
 
 ### Proof of Work (PoW)
 - **Incentives for Honest Behavior**:
