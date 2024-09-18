@@ -141,6 +141,7 @@ A computer can be both the **subject** (used as a tool to attack another system)
 
 
 ### Phases of SecSDLC:
+
 The SecSDLC mirrors the SDLC but adds a security focus in each phase.
 
 | **SDLC Phase**                | **Description**                                                                                                                                                                                                                | **SecSDLC Security Aspect**                                                                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -249,57 +250,63 @@ Questions:
 - **Attacks on information systems are frequent** and come in many forms, including malware, phishing, denial-of-service attacks, and insider threats. These attacks are evolving, necessitating constant vigilance and robust defensive measures.
 
 ## Business Needs for Security
+
 Information security serves four vital functions for organizations:
 
 1. **Protects the ability to function**:
+
     - Both **general management** and **IT management** play a critical role in ensuring the security of an organization’s systems. A security breach can have devastating consequences, from operational disruptions to financial loss.
     - Information security is a **management and people issue** as much as it is a technical one. Organizations must foster a culture of security awareness, ensuring employees understand the risks and their role in mitigating them.
-
 2. **Enables the safe operation of applications**:
+
     - Modern organizations depend on applications to manage day-to-day operations, customer relations, and business intelligence. These applications must be protected from internal and external threats.
     - Management must oversee the **IT infrastructure**, ensuring that applications are continuously monitored, updated, and protected from vulnerabilities.
-
 3. **Protects the data organizations collect and use**:
+
     - **Data is one of the most valuable assets** an organization possesses, essential for operational success and customer trust. Unauthorized access to this data can lead to breaches that damage both reputation and financial stability.
     - **Data at rest** (stored data) and **data in motion** (data being transmitted) must be protected using encryption, access controls, and monitoring.
-
 4. **Safeguards technology assets**:
+
     - The infrastructure supporting technology operations must be robust, scalable, and secure. This includes servers, networks, databases, and software platforms.
     - As the organization grows, security solutions must evolve, requiring **upgrades** to outdated systems to prevent emerging threats.
 
 ## Threats to Information Security
+
 ### Threat Overview
 
 - A **threat** is any potential event or action that could harm an organization’s information systems, such as a hacker attempting to access sensitive data or a natural disaster disrupting operations.
 - Organizations must develop security policies and implement controls to mitigate these threats. Management plays a key role in recognizing and addressing potential risks.
 
 ### Common Threats:
-| **Threat Type**                             | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **1. Compromises to Intellectual Property** | Intellectual property (IP) refers to ownership of ideas, trade secrets, copyrights, trademarks, and patents. **Software piracy**, or the illegal use and distribution of software, is the most common form of IP compromise. Organizations like **SIIA** and **BSA** monitor IP breaches and enforce copyright protections.                                                                                             |
-| **2. Deliberate Software Attacks**          | These attacks use **malware** to damage or disrupt systems. Examples include **viruses**, **worms**, **Trojan horses**, and **logic bombs**. More advanced attacks include **polymorphic threats**, which change to avoid detection, and **virus hoaxes** that spread misinformation and cause disruptions.                                                                                                                    |
-| **3. Deviations in Quality of Service**     | Failures by service providers, such as **ISPs** or utility companies, can disrupt operations. **Power irregularities** like spikes or brownouts can compromise system performance, leading to downtime and potential data loss.                                                                                                                                                                                    |
-| **4. Espionage or Trespass**                | Unauthorized access to confidential information, whether through **legal competitive intelligence** or **illegal industrial espionage**. **Hackers** exploit vulnerabilities using technical skills or deception. These hackers can be categorized as **expert hackers**, who develop attack methods, and **script kiddies**, who use prewritten scripts to carry out attacks.                                                                                                                                                  |
-| **5. Human Error or Failure**               | Unintentional actions, such as mishandling data or making incorrect configurations, can expose systems to threats. **Inadequate training** or carelessness can result in data breaches or system vulnerabilities.                                                                                                                                                                             |
-| **6. Information Extortion**                | Attackers **steal sensitive information** and demand payment in exchange for not disclosing or returning it. This is common in cases involving stolen credit card information or intellectual property.                                                                                                                                                                              |
-| **7. Sabotage or Vandalism**                | Vandalism can range from defacing websites to **cyberterrorism**, where attackers aim to damage an organization’s reputation or infrastructure for ideological purposes. Hacktivists and cyberactivists often engage in these acts.                                                                                                                                                                                                                                                                 |
-| **8. Theft**                                | **Physical theft** involves stealing hardware or devices, while **electronic theft** can involve the unauthorized copying or downloading of data without the victim’s knowledge.                                                                                                                                                                                                                                                                                          |
-| **9. Technical Failures**                   | **Hardware failures** may occur when faulty components cause systems to malfunction, while **software failures** may stem from bugs or hidden flaws, sometimes intentionally placed by developers.                                                                                                                                                                                       |
-| **10. Technological Obsolescence**          | **Outdated technologies** present security vulnerabilities, as they may no longer be supported with updates or patches, leaving them susceptible to modern threats. Regular system upgrades are essential for maintaining security.                                                                                                                                                                                       |
+
+| **Threat Type**                             | **Description**                                                                                                                                                                                                                                                                                                                                                                |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **1. Compromises to Intellectual Property** | Intellectual property (IP) refers to ownership of ideas, trade secrets, copyrights, trademarks, and patents. **Software piracy**, or the illegal use and distribution of software, is the most common form of IP compromise. Organizations like **SIIA** and **BSA** monitor IP breaches and enforce copyright protections.                                                    |
+| **2. Deliberate Software Attacks**          | These attacks use **malware** to damage or disrupt systems. Examples include **viruses**, **worms**, **Trojan horses**, and **logic bombs**. More advanced attacks include **polymorphic threats**, which change to avoid detection, and **virus hoaxes** that spread misinformation and cause disruptions.                                                                    |
+| **3. Deviations in Quality of Service**     | Failures by service providers, such as **ISPs** or utility companies, can disrupt operations. **Power irregularities** like spikes or brownouts can compromise system performance, leading to downtime and potential data loss.                                                                                                                                                |
+| **4. Espionage or Trespass**                | Unauthorized access to confidential information, whether through **legal competitive intelligence** or **illegal industrial espionage**. **Hackers** exploit vulnerabilities using technical skills or deception. These hackers can be categorized as **expert hackers**, who develop attack methods, and **script kiddies**, who use prewritten scripts to carry out attacks. |
+| **5. Human Error or Failure**               | Unintentional actions, such as mishandling data or making incorrect configurations, can expose systems to threats. **Inadequate training** or carelessness can result in data breaches or system vulnerabilities.                                                                                                                                                              |
+| **6. Information Extortion**                | Attackers **steal sensitive information** and demand payment in exchange for not disclosing or returning it. This is common in cases involving stolen credit card information or intellectual property.                                                                                                                                                                        |
+| **7. Sabotage or Vandalism**                | Vandalism can range from defacing websites to **cyberterrorism**, where attackers aim to damage an organization’s reputation or infrastructure for ideological purposes. Hacktivists and cyberactivists often engage in these acts.                                                                                                                                            |
+| **8. Theft**                                | **Physical theft** involves stealing hardware or devices, while **electronic theft** can involve the unauthorized copying or downloading of data without the victim’s knowledge.                                                                                                                                                                                               |
+| **9. Technical Failures**                   | **Hardware failures** may occur when faulty components cause systems to malfunction, while **software failures** may stem from bugs or hidden flaws, sometimes intentionally placed by developers.                                                                                                                                                                             |
+| **10. Technological Obsolescence**          | **Outdated technologies** present security vulnerabilities, as they may no longer be supported with updates or patches, leaving them susceptible to modern threats. Regular system upgrades are essential for maintaining security.                                                                                                                                            |
+| **11. Forces of Nature**                    | Natural disasters such as **fire**, **flood**, **earthquake**, and **tornado** pose serious threats. These events can disrupt operations, damage infrastructure, and cause loss of data. Organizations must implement controls to limit damage and have contingency plans for continuous operations. 【4†source】                                                              |
 
 ## Types of Attacks
-| **Threat Type**                | **Description**                                                                                                                                                                                  |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **1. Malicious Code**          | Includes **viruses**, **worms**, **Trojan horses**, and **active Web scripts** designed to steal or destroy information.                                                                         |
-| **2. Hoaxes**                  | False virus alerts that cause panic and waste resources.                                                                                                                                         |
-| **3. Backdoors**               | Exploiting previously unknown vulnerabilities to access systems without authorization.                                                                                                           |
-| **4. Password Cracking**       | Methods include **brute force**, where all possible combinations are attempted, and **dictionary attacks**, where common words and phrases are used to guess passwords.                            |
-| **5. Denial-of-Service (DoS)** | Overloading a system with requests, leading to crashes or downtime. **Distributed Denial-of-Service (DDoS)** attacks are similar but use multiple sources to target a system.                     |
-| **6. Spoofing**                | Impersonating a trusted entity by **spoofing IP addresses** to gain unauthorized access.                                                                                                         |
-| **7. Man-in-the-Middle**       | Intercepting and modifying communications between two parties to steal or alter data.                                                                                                           |
-| **8. Sniffers**                | Programs that capture network traffic, which can be used for both legitimate monitoring or malicious data theft.                                                                                  |
-| **9. Phishing & Pharming**     | **Phishing** deceives users into providing sensitive information, while **pharming** redirects legitimate traffic to fraudulent websites.                                                         |
-| **10. Social Engineering**     | Manipulating people to reveal confidential information, often by exploiting trust or fear.                                                                                                       |
+
+| **Threat Type**                | **Description**                                                                                                                                                               |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **1. Malicious Code**          | Includes **viruses**, **worms**, **Trojan horses**, and **active Web scripts** designed to steal or destroy information.                                                      |
+| **2. Hoaxes**                  | False virus alerts that cause panic and waste resources.                                                                                                                      |
+| **3. Backdoors**               | Exploiting previously unknown vulnerabilities to access systems without authorization.                                                                                        |
+| **4. Password Cracking**       | Methods include **brute force**, where all possible combinations are attempted, and **dictionary attacks**, where common words and phrases are used to guess passwords.       |
+| **5. Denial-of-Service (DoS)** | Overloading a system with requests, leading to crashes or downtime. **Distributed Denial-of-Service (DDoS)** attacks are similar but use multiple sources to target a system. |
+| **6. Spoofing**                | Impersonating a trusted entity by **spoofing IP addresses** to gain unauthorized access.                                                                                      |
+| **7. Man-in-the-Middle**       | Intercepting and modifying communications between two parties to steal or alter data.                                                                                         |
+| **8. Sniffers**                | Programs that capture network traffic, which can be used for both legitimate monitoring or malicious data theft.                                                              |
+| **9. Phishing & Pharming**     | **Phishing** deceives users into providing sensitive information, while **pharming** redirects legitimate traffic to fraudulent websites.                                     |
+| **10. Social Engineering**     | Manipulating people to reveal confidential information, often by exploiting trust or fear.                                                                                    |
 
 ## Secure Software Development
 
@@ -323,111 +330,14 @@ Information security serves four vital functions for organizations:
 | **14. SQL Injection**                                             | Injecting malicious SQL commands to gain access to databases.                                                            |
 | **15. Race Conditions**                                           | Exploiting timing issues between processes to gain unauthorized access.                                                  |
 | **16. Failure to Handle Errors Properly**                         | Improper error handling can lead to system vulnerabilities or information leaks.                                         |
-| **17. Failure to Protect Network Traffic or Store Data Securely** | Sensitive data not properly encrypted, leading to potential theft.                                                       | 
+| **17. Failure to Protect Network Traffic or Store Data Securely** | Sensitive data not properly encrypted, leading to potential theft【4†source】.                                           |
 
 ### Secure Development Practices
 
 - **Software Assurance (SA)** focuses on ensuring software is designed to be **secure** and **reliable**.
 - Key design principles include: keeping the system simple, using minimum privileges, requiring proper authentication, and ensuring access controls are robust and clear.
 - The **Software Assurance Common Body of Knowledge (CBK)** provides a framework for secure software development, guiding developers in creating applications resistant to threats.
-
-
-### Key Security Design Principles:
-- Keep design **simple** and **small**.
-- Check **permissions** for access rather than exclusions.
-- Ensure every access to an object is **authorized**.
-- Use **keys or passwords** for authentication.
-- Use **minimum privileges** required for tasks.
-- Make security mechanisms **easy to use**, ensuring users apply them correctly and routinely.
-
----
-# missed shit
-
-
-## Learning Objectives
-
-Upon completion of this chapter, you should be able to:
-- Understand the business need for information security.
-- Explain why a successful information security program is the responsibility of both an organization’s general management and IT management.
-- Identify the threats posed to information security and differentiate threats to the information within systems from attacks against the information within systems.
-- Describe common issues in software development and how secure software development programs can mitigate vulnerabilities&#8203;:contentReference[oaicite:0]{index=0}.
-
-## Forces of Nature
-
-Forces of nature are among the most dangerous threats to information security. These include events such as **fire**, **flood**, **earthquake**, **hurricanes**, **lightning**, and **tsunamis**, which can disrupt not only the storage, transmission, and use of information but also affect individuals' lives&#8203;:contentReference[oaicite:1]{index=1}.
-
-Organizations must implement controls to limit damage and prepare **contingency plans** for continued operations during and after such events. These disasters, also known as **force majeure** or **acts of God**, often occur unexpectedly with little warning&#8203;:contentReference[oaicite:2]{index=2}.
-
-## Statistics on Threats
-
-According to the 2009 CSI/FBI Computer Crime and Security Survey:
-- 64% of organizations reported **malware infections**.
-- 14% indicated **system penetration** by an outsider&#8203;:contentReference[oaicite:3]{index=3}.
-
-These figures highlight the ongoing and increasing frequency of security incidents, which require constant vigilance and improvements in organizational defenses.
-
-## Espionage or Trespass
-
-Espionage and trespass include unauthorized access to protected information. The distinction between **legal competitive intelligence** and **illegal industrial espionage** is important.
-
-- **Competitive intelligence** is legal and uses publicly available data.
-- **Industrial espionage** involves illegal means to gather sensitive information&#8203;:contentReference[oaicite:4]{index=4}.
-
-Common techniques include **shoulder surfing**—where an attacker visually observes private information—and **hacking** to bypass security controls&#8203;:contentReference[oaicite:5]{index=5}.
-
-### Types of Hackers
-
-- **Expert hackers**: Skilled individuals who develop their own attack tools and share them with others.
-- **Unskilled hackers (Script Kiddies)**: Novices who use tools created by experts to exploit systems without fully understanding them&#8203;:contentReference[oaicite:6]{index=6}.
-
-Other terms include:
-- **Cracker**: A person who removes software protection to enable unauthorized duplication.
-- **Phreaker**: Someone who hacks into telephone systems to make free calls&#8203;:contentReference[oaicite:7]{index=7}.
-
-## Human Error or Failure
-
-**Human error** represents one of the greatest threats to an organization’s data. Employees may unintentionally expose information or cause harm due to:
-- **Inexperience**,
-- **Improper training**, or
-- **Incorrect assumptions**.
-
-Common mistakes include:
-- Accidental deletion or modification of data.
-- Storing data in unprotected areas.
-- Failure to apply security protocols&#8203;:contentReference[oaicite:8]{index=8}&#8203;:contentReference[oaicite:9]{index=9}.
-
-### Preventive Measures
-
-Many threats related to human error can be minimized through training and the implementation of controls, such as requiring dual confirmation for critical actions&#8203;:contentReference[oaicite:10]{index=10}.
-
-## Secure Software Development Problems
-
-Several common software development problems can introduce security risks, including:
-- **Buffer overruns**: Allowing more data to be written to a buffer than it can hold, which can lead to crashes or code execution.
-- **Command injection**: Malicious commands inserted into input fields, leading to unauthorized execution.
-- **SQL injection**: Inserting malicious SQL queries into input fields to manipulate a database&#8203;:contentReference[oaicite:11]{index=11}&#8203;:contentReference[oaicite:12]{index=12}.
-
-Additional security problems include:
-- **Cross-site scripting (XSS)**: Injecting malicious scripts into web applications to target users.
-- **Race conditions**: Exploiting the timing of system processes to cause unexpected behavior.
-- **Failure to handle errors properly**: Exposing sensitive information in error messages&#8203;:contentReference[oaicite:13]{index=13}.
-
-## Software Assurance and Secure Development Principles
-
-Organizations have adopted **Software Assurance (SA)**, a methodology that ensures software is secure and reliable throughout its lifecycle. The **SA Common Body of Knowledge (CBK)**, supported by the U.S. Department of Defense and Homeland Security, offers guidelines for secure software development&#8203;:contentReference[oaicite:14]{index=14}.
-
-### Key Security Design Principles
-
-1. **Simplicity**: Keep designs simple and small.
-2. **Access by permission**: Check permissions for access rather than exclusions.
-3. **Authorization checks**: Ensure every access to an object is authorized.
-4. **Authentication**: Use keys or passwords for authentication.
-5. **Minimum privilege**: Only grant the minimum necessary permissions for tasks&#8203;:contentReference[oaicite:15]{index=15}.
-
-These principles help in creating secure software systems that are resilient to a variety of attacks and vulnerabilities.
-
-
-
+- 
 ---
 
 ## Review Questions
