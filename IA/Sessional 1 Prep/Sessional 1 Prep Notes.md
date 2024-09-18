@@ -244,29 +244,23 @@ Questions:
 
 
 # Chapter 2: The need for Security
-
 - The **primary mission of information security** is to ensure that systems and their content remain unchanged despite potential threats. Information security is not only about preventing attacks but also maintaining the integrity, confidentiality, and availability of data. In addition, information security safeguards organizations' critical assets, ensuring they can operate efficiently.
 - If there were no threats, the focus could shift to optimizing system performance, improving ease of use, and enhancing operational efficiency.
 - **Attacks on information systems are frequent** and come in many forms, including malware, phishing, denial-of-service attacks, and insider threats. These attacks are evolving, necessitating constant vigilance and robust defensive measures.
 
 ## Business Needs for Security
-
 Information security serves four vital functions for organizations:
 
 1. **Protects the ability to function**:
-
     - Both **general management** and **IT management** play a critical role in ensuring the security of an organization’s systems. A security breach can have devastating consequences, from operational disruptions to financial loss.
     - Information security is a **management and people issue** as much as it is a technical one. Organizations must foster a culture of security awareness, ensuring employees understand the risks and their role in mitigating them.
 2. **Enables the safe operation of applications**:
-
     - Modern organizations depend on applications to manage day-to-day operations, customer relations, and business intelligence. These applications must be protected from internal and external threats.
     - Management must oversee the **IT infrastructure**, ensuring that applications are continuously monitored, updated, and protected from vulnerabilities.
 3. **Protects the data organizations collect and use**:
-
     - **Data is one of the most valuable assets** an organization possesses, essential for operational success and customer trust. Unauthorized access to this data can lead to breaches that damage both reputation and financial stability.
     - **Data at rest** (stored data) and **data in motion** (data being transmitted) must be protected using encryption, access controls, and monitoring.
 4. **Safeguards technology assets**:
-
     - The infrastructure supporting technology operations must be robust, scalable, and secure. This includes servers, networks, databases, and software platforms.
     - As the organization grows, security solutions must evolve, requiring **upgrades** to outdated systems to prevent emerging threats.
 
@@ -312,7 +306,7 @@ Information security serves four vital functions for organizations:
 
 ### Software Vulnerabilities
 
-| **Threat Type**                                                   | **Description**                                                                                                          |
+| **Types of Vulnerabilities**                                      | **Description**                                                                                                          |
 | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | **1. Malicious Code**                                             | Includes **viruses**, **worms**, **Trojan horses**, and **active Web scripts** designed to steal or destroy information. |
 | **2. Hoaxes**                                                     | **Virus hoaxes** can cause widespread panic and lead to unnecessary actions that disrupt business operations.            |
@@ -337,7 +331,7 @@ Information security serves four vital functions for organizations:
 - **Software Assurance (SA)** focuses on ensuring software is designed to be **secure** and **reliable**.
 - Key design principles include: keeping the system simple, using minimum privileges, requiring proper authentication, and ensuring access controls are robust and clear.
 - The **Software Assurance Common Body of Knowledge (CBK)** provides a framework for secure software development, guiding developers in creating applications resistant to threats.
-- 
+-
 ---
 
 ## Review Questions
