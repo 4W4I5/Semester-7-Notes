@@ -1,3 +1,6 @@
-| Chapter Number | Chapter Name                                    | Status             |
-| -------------- | ----------------------------------------------- | ------------------ |
-| 1              | Introduction to InfoSec                         | :white_check_mark: |
+| Chapter<br>Number | Chapter<br>Name                    | Status     |
+| ----------------- | ---------------------------------- | ---------- |
+| 1                 | Introduction                       | Skipped:x: |
+| 2                 | Towards decentralized P2P Currency | :warning   |
+| 3                 |                                    |            |
+| 4                 |                                    |            |
