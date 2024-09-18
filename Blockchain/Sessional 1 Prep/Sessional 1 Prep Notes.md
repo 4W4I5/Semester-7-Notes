@@ -50,6 +50,8 @@
 	- In each round a random node gets to broadcast its block
 	- Other nodes accept the block only if all transactions in it are valid (unspent, valid signatures)
 	- Nodes express their acceptance of the block by including its hash in the next block they create
+- **Possible Attacks**
+	- 
 
 ### Proof of Work (PoW)
 - **Incentives for Honest Behavior**:
