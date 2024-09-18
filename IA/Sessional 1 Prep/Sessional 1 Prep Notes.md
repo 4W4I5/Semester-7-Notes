@@ -300,9 +300,6 @@ Information security supports four vital functions for organizations:
 
 ## Secure Software Development
 ### Software Vulnerabilities
-
-Many security issues arise from flaws in software. Common problems include:
-
 - **Buffer overruns**
 - **Command injection**
 - **Cross-site scripting**
