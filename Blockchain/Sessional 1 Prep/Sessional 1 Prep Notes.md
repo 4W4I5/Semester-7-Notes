@@ -92,7 +92,8 @@
 
 ### Longest Chain Rule
 - **Definition**: The longest chain with the most accumulated proof-of-work is the valid blockchain. Nodes always follow this chain to ensure consistency.
-- **Orphan Blocks**: Occasionally, two miners may produce blocks simultaneously, creating a temporary fork. The shorter chain eventually gets orphaned, and only the longest chain remains.
+- **Useful: ** When two blocks are mined at the same time while protecting blocks already on the blockchain
+	- **Orphan Blocks**: Occasionally, two miners may produce blocks simultaneously, creating a temporary fork. The shorter chain eventually gets orphaned, and only the longest chain remains.
 
 ### Transaction Process
 - **Broadcasting Transactions**:
