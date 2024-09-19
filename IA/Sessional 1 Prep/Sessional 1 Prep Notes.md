@@ -2,7 +2,7 @@
 | -------------- | ----------------------------------------------- | ------------------ |
 | 1              | Introduction to InfoSec                         | :white_check_mark: |
 | 2              | The need for Security                           | :white_check_mark: |
-| 3              | Legal, Ethical & Professional Issues in InfoSec | :x:                |
+| 3              | Legal, Ethical & Professional Issues in InfoSec | :warning:          | 
 | 5              | Risk Management                                 | :warning:          |
 
 # Chapter 1: Introduction to InfoSec
