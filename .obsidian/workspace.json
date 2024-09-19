@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blockchain/Sessional 1 Prep/Sessional 1 Prep Notes.md",
+                "file": "IA/Sessional 1 Prep/Sessional 1 Prep Notes.md",
                 "mode": "source",
                 "source": true
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "bbf2447a7eb59639",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blockchain/Sessional 1 Prep/Sessional 1 Prep Notes.md",
+                "file": "IA/Sessional 1 Prep/Sessional 1 Prep Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blockchain/Sessional 1 Prep/Sessional 1 Prep Notes.md",
+                "file": "IA/Sessional 1 Prep/Sessional 1 Prep Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blockchain/Sessional 1 Prep/Sessional 1 Prep Notes.md"
+                "file": "IA/Sessional 1 Prep/Sessional 1 Prep Notes.md"
               }
             }
           },
@@ -173,11 +172,11 @@
   },
   "active": "3d4f681c539e5056",
   "lastOpenFiles": [
+    "IA/Note Track.md",
     "Blockchain/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "IA/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "IA/Pasted image 20240917195504.png",
     "README.md",
-    "IA/Note Track.md",
     "IA/Sessional 1 Prep",
     "SSD/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "SSD/Note Track.md",
