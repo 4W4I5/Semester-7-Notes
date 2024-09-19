@@ -92,13 +92,15 @@
 
 ### Longest Chain Rule
 - **Definition**: The longest chain with the most accumulated proof-of-work is the valid blockchain. Nodes always follow this chain to ensure consistency.
-- **Useful: ** When two blocks are mined at the same time while protecting blocks already on the blockchain
+- **Useful**: When two blocks are mined at the same time while protecting blocks already on the blockchain
 	- **Orphan Blocks**: Occasionally, two miners may produce blocks simultaneously, creating a temporary fork. The shorter chain eventually gets orphaned, and only the longest chain remains.
 
 ### Transaction Process
 - **Broadcasting Transactions**:
     - Transactions are broadcast to all nodes. Each node validates them by checking the balance of the sender and verifying signatures.
 - **Mempool**:
-    - Unconfirmed transactions wait in the **mempool** until miners include them in a block. Miners typically prioritize transactions based on the attached fees.
+    - Unconfirmed transactions wait in the **mempool** until miners include them in a block.
+	    - They have a continuation number of 0, it gets set to 1 when its posted on the blockchain.
+    - Miners typically prioritize transactions based on the attached fees.
 - **Miner Reward**:
     - Miners receive the block reward and transaction fees. They tend to prioritize transactions with higher fees to maximize their earnings.
