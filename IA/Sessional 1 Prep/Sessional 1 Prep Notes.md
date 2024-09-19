@@ -371,6 +371,7 @@ Questions:
 # Chapter 3: Legal, Ethical & Professional Issues InfoSec
 
 
+
 ## Review Questions
 1. What is the difference between law and ethics?
 2. What is civil law, and what does it accomplish?
