@@ -1,15 +1,15 @@
 > [!NOTE]
 > While the tables for both STRIDE & DREAD modelling have been added at the end, try to first solve them on your own
 
-| Lecture Number | Lecture Name                                                                              | Status                             |
-| -------------- | ----------------------------------------------------------------------------------------- | ---------------------------------- |
-| 1 & 2          | Introduction to SSD                                                                       | :warning:                          |
-| 3 & 4          | Security Requirements & Design Principles (OWASP)                                         | :warning:                          |
-| Assignment 1   | Paper study on SecSDLC                                                                    | Repeated info from Lectures 1-2 :x: |
-| 5, 6 & 7       | VM4SEC Case Study & Methodology + Architectural Design + Quantitative Security Assessment | :warning:                          |
-| Assignment 2   | Threagile                                                                                 | :warning:                          |
-| Task 1         | STRIDE Online Banking                                                                     | :white_check_mark:                 |
-| Task 2         | DREAD Threat Modelling                                                                    | :white_check_mark:                 |
+| Lecture Number | Lecture Name                                                                              | Status                              |
+| -------------- | ----------------------------------------------------------------------------------------- | ----------------------------------- |
+| 1 & 2          | Introduction to SSD                                                                       | :warning:                           |
+| 3 & 4          | Security Requirements & Design Principles (OWASP)                                         | :warning:                           |
+| Assignment 1   | Paper study on SecSDLC                                                                    | Repeated info from Lectures 1-2 :x: | 
+| 5, 6 & 7       | VM4SEC Case Study & Methodology + Architectural Design + Quantitative Security Assessment | :warning:                           |
+| Assignment 2   | Threagile                                                                                 | :warning:                           |
+| Task 1         | STRIDE Online Banking                                                                     | :white_check_mark:                  |
+| Task 2         | DREAD Threat Modelling                                                                    | :white_check_mark:                  |
 
 
 # **Lecture 1: Introduction to SSD pt1**
