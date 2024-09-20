@@ -13,6 +13,7 @@
 Here's the filled-in table on the types of currency:
 
 ### Types of Currency
+
 | **Types of Currency**            | **Advantages**                                                                          | **Disadvantages**                                                            |
 | -------------------------------- | --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
 | **Ancient Coinage**              | Durable, intrinsic value due to precious metals, widely accepted in ancient times.      | Heavy, difficult to transport, subject to counterfeiting.                    |
@@ -23,12 +24,18 @@ Here's the filled-in table on the types of currency:
 | **Non-Fiat Electronic Currency** | Decentralized, potential for privacy, low transaction costs, borderless.                | High volatility, limited acceptance, regulatory challenges.                  |
 
 ### Challenges of P2P Currency
-- **Regulatory Issues**: Lack of government control leads to regulatory uncertainty, making it difficult for P2P currencies to be legally accepted.
-- **Security Risks**: Vulnerable to hacking, fraud, and scams. P2P platforms can be exploited if proper security measures aren't in place.
-- **Scalability**: P2P networks may struggle to handle a large volume of transactions efficiently due to network congestion.
-- **Volatility**: P2P currencies like Bitcoin are highly volatile, which discourages their use as stable forms of payment.
-- **Trust**: Establishing trust between peers can be challenging without central authority, relying heavily on user reputation and the network's robustness.
-- **Adoption**: Limited acceptance compared to traditional fiat currencies, making it hard for users to rely on them for everyday transactions.
+- **Regulatory Issues**:
+	- Lack of government control leads to regulatory uncertainty, making it difficult for P2P currencies to be legally accepted.
+- **Security Risks**:
+	- Vulnerable to hacking, fraud, and scams. P2P platforms can be exploited if proper security measures aren't in place.
+- **Scalability**:
+	- P2P networks may struggle to handle a large volume of transactions efficiently due to network congestion.
+- **Volatility**:
+	- P2P currencies like Bitcoin are highly volatile, which discourages their use as stable forms of payment.
+- **Trust**:
+	- Establishing trust between peers can be challenging without central authority, relying heavily on user reputation and the network's robustness.
+- **Adoption**:
+	- Limited acceptance compared to traditional fiat currencies, making it hard for users to rely on them for everyday transactions.
 
 ### BitCoin at a High Level
 - **Definition**:
