@@ -9,41 +9,56 @@
 ## Currency
 - May(not) have intrinsic value
 	- Allows to store value instead of the object itself
-
 ### Types of Currency
 - #### Ancient Coinage
-	- Based on Precious metals
-	- Value based on value of metal
-	- Advantages
-		- Fake gold is still gold however technology for creating such diluted metals is still limited
-		- Advanced mining techniques are limited, challenging to flood the market i.e. minting is tough
-	- Problems
-		- Logistically tough to manage/store large amount of currency
-		- Raw materials required to mint
-		- Currency's value fluctuates based on speculation
+  - **Based on**: Precious metals
+  - **Value**: Derived from the value of the metal
+  - **Advantages**:
+    - Even fake gold is still valuable, as creating diluted metals is technologically challenging.
+    - Limited mining technology makes it difficult to flood the market, making minting rare.
+  - **Problems**:
+    - Hard to manage and store large amounts of physical currency.
+    - Requires raw materials to mint.
+    - Value fluctuates due to speculation.
+
 - #### Paper Currency
-	- Exchangeable commodity
-	- Issuing authority determines value based on gold value
-	- Advantages
-		- Easier to carry as large denominations can be minted
-		- Issuing authority has the power to inflate/deflate currency
-	- Disadvantages
-		- Counterfeits
-		- Runaway Inflation, IA can easily print too much
-		- Bank runs, Bank runs out of enough gold to convert
+  - **Type**: Exchangeable commodity
+  - **Value**: Determined by the issuing authority based on gold reserves.
+  - **Advantages**:
+    - Easier to carry with large denominations available.
+    - Issuing authority can inflate or deflate the currency as needed.
+  - **Disadvantages**:
+    - Risk of counterfeiting.
+    - Prone to runaway inflation if too much currency is printed.
+    - Bank runs can occur if banks don’t have enough gold to convert.
+
 - #### Fiat Currency
-	- Similar to paper currency, not linked to metals however
-	- Can be used as Electronic Currency, denominated by Fiat Currency
-		- Incentive to participate involves Transaction fees
-		- Good as a EC Party cannot just decide to mint more money for themselves than they have put in the system
-	- Why does it work?
-		- Social Contract, everyone has agreed upon the value therefore its built on trust
-		- Centralized Power, gov has power to enforce taxation and they accept currency as a means to pay taxes
-	- Advantages
-		- Similar to Paper Currency + no need to store gold in banks to convert
-	- Problems
-		- Similar to Paper Currency + More trust placed in IA
+  - **Type**: Not linked to precious metals, similar to paper currency.
+  - **Use**: Can be electronic, denominated by fiat.
+    - Transaction fees incentivize participation.
+    - EC (Electronic Currency) systems prevent entities from minting more than they have contributed.
+  - **Why it works**:
+    - **Social Contract**: The value is agreed upon and built on trust.
+    - **Centralized Power**: Governments can enforce taxation and accept fiat currency as tax payment.
+  - **Advantages**:
+    - Similar to paper currency but doesn’t require gold reserves.
+  - **Problems**:
+    - Requires additional trust in the issuing authority (IA).
+    - Similar risks as paper currency, including inflation and mismanagement.
 - #### Non-Fiat (P2P) Currency
+	- **Goal**: Create digital currency without centralized control.
+	- **Concept**: Store and transfer value without commodities or central banks. Anyone can join and participate.
+	- **Example**: Bitcoin, invented by Satoshi Nakamoto in 2009, is the first widely adopted non-fiat electronic currency.
+		- Released as a whitepaper and open-source software.
+		- Built on a decentralized peer-to-peer (P2P) network.
+		- Participants validate transactions and mint currency.
+		- System relies on the majority of users being honest (quorum).
+	- **Challenges in P2P Currency**:
+		- **Ownership**: Determining who owns a unit of currency is difficult.
+		- **Without strong ownership**:
+		- **Forgery**: Users could mint fake currency.
+		- **Double-spending**: Ensuring the same currency isn’t spent twice is challenging.
+		- **Theft**: Hard to distinguish true ownership claims from false ones.
 
 ### Physical Currency VS Electronic Currency
 
