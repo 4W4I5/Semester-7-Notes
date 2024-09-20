@@ -33,8 +33,11 @@
 		- Bank runs, Bank runs out of enough gold to convert
 - #### Fiat Currency
 	- Similar to paper currency, not linked to metals however
+	- Can be used as Electronic Currency, denominated by Fiat Currency
+		- Incentive to participate involves Transaction fees
+		- Good as a EC Party cannot just decide to mint more money for themselves than they have put in the system
 	- Why does it work?
-		- Social Contract, everyone has agreed upon the value
+		- Social Contract, everyone has agreed upon the value therefore its built on trust
 		- Centralized Power, gov has power to enforce taxation and they accept currency as a means to pay taxes
 	- Advantages
 		- Similar to Paper Currency + no need to store gold in banks to convert
@@ -42,9 +45,20 @@
 		- Similar to Paper Currency + More trust placed in IA
 - #### Non-Fiat (P2P) Currency
 
-### Physical Vs Electronic Currency
-- #### Physical Currency
-- #### Electronic Currency
+### Physical Currency VS Electronic Currency
+
+| **Feature**       | **Physical Currency**                                     | **Electronic Currency**                                        |
+| ----------------- | --------------------------------------------------------- | -------------------------------------------------------------- |
+| **Advantages**    | - Easily portable                                         | - Works online                                                 |
+|                   | - Cannot double spend (pseudoserialized banknotes)        | - Easy for issuing authority to monitor, tax, and control      |
+|                   | - Cannot repudiate payment (irreversible once given)      | - Cannot double-spend                                          |
+|                   | - Semi-anonymous with limited tracking                    | - Transactions can be repudiated (e.g., chargebacks)           |
+|                   | - Issuing Authority (IA) can inflate/deflate as necessary |                                                                |
+| **Disadvantages** | - Easy to steal (bearer token)                            | - Requires trust in the issuing authority and third parties    |
+|                   | - Hard to monitor or tax (semi-anonymous)                 | - Manual oversight and auditing needed                         |
+|                   | - Requires trust in centralized issuing authority         | - Issuing authority or third parties may prohibit transactions |
+|                   | - Cannot be used for online transactions                  | - High transaction fees                                        |
+|                   |                                                           | - No privacy (all transactions are monitored)                  |
 
 ### Challenges of P2P Currency
 - **Regulatory Issues**:
