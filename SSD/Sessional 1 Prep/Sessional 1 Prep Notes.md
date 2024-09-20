@@ -5,7 +5,7 @@
 | -------------- | ----------------------------------------------------------------------------------------- | ---------------------------------- |
 | 1 & 2          | Introduction to SSD                                                                       | :warning:                          |
 | 3 & 4          | Security Requirements & Design Principles (OWASP)                                         | :warning:                          |
-| Assignment 1   | Paper study on SecSDLC                                                                    | Repeated info from Lectures 1-2:x: |
+| Assignment 1   | Paper study on SecSDLC                                                                    | Repeated info from Lectures 1-2 :x: |
 | 5, 6 & 7       | VM4SEC Case Study & Methodology + Architectural Design + Quantitative Security Assessment | :warning:                          |
 | Assignment 2   | Threagile                                                                                 | :warning:                          |
 | Task 1         | STRIDE Online Banking                                                                     | :white_check_mark:                 |
