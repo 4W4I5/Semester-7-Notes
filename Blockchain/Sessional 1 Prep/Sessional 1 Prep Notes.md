@@ -36,7 +36,7 @@
 	- Why does it work?
 		- Social Contract, everyone has agreed upon the value
 		- Centralized Power, gov has power to enforce taxation and they accept currency as a means to pay taxes
-	- Advantges
+	- Advantages
 		- Similar to Paper Currency + no need to store gold in banks to convert
 	- Problems
 		- Similar to Paper Currency + More trust placed in IA
