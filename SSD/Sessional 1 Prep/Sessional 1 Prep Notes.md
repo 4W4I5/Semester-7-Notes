@@ -111,17 +111,14 @@ Security requirements define the conditions that a software system must meet to 
 
 #### **Key Examples**:
 - **Minimum Privileges**: Ensure that entities (programs or users) are given only the minimum privileges necessary to complete a task.
-  - **Temporary Privilege Elevation**: Should be revoked as soon as the task is completed.
-  - **Specific Privileges**: Run server processes with only the privileges they require to limit potential damage if compromised.
-
+	- **Temporary Privilege Elevation**: Should be revoked as soon as the task is completed.
+	- **Specific Privileges**: Run server processes with only the privileges they require to limit potential damage if compromised.
 - **Default Denial of Access**: If a subject does not have explicit access to an object, access should be denied by default.
-  - **Permissions First**: Access decisions are made based on permissions rather than exceptions.
-  - **Example**: A newly created file is only accessible to its creator unless permissions are explicitly granted.
-
+	- **Permissions First**: Access decisions are made based on permissions rather than exceptions.
+	- **Example**: A newly created file is only accessible to its creator unless permissions are explicitly granted.
 - **Simplicity**: Security mechanisms should be as simple as possible to reduce errors and make verification easier.
-
 - **Transparency**: The security of a system should not depend on keeping its design or implementation secret. The strength lies in well-designed algorithms and keys.
-  - **Example**: DVD players rely on encryption keys to decrypt movies, but the algorithm itself is publicly known.
+	- **Example**: DVD players rely on encryption keys to decrypt movies, but the algorithm itself is publicly known.
 
 ### **Security Design Principles**
 These principles guide how software should be designed to mitigate security risks.
@@ -136,42 +133,42 @@ These principles guide how software should be designed to mitigate security risk
 
 #### **Separation of Duties**
 - **Functions are divided** to prevent a single person from controlling all aspects of a critical task.
-  - **Example**: Separation of user roles ensures that students cannot access submission details.
+	- **Example**: Separation of user roles ensures that students cannot access submission details.
 
 #### **Compartmentalization**
 - If one process is compromised, others should remain unaffected.
-  - **Example**: Android isolates each user activity in its own virtual machine (sandbox), limiting the scope of potential attacks.
+	- **Example**: Android isolates each user activity in its own virtual machine (sandbox), limiting the scope of potential attacks.
 
 #### **Complete Mediation**
 - Every access to an object must be checked for proper authority.
-  - **Example**: If a user tries to access a file, the system must verify permissions each time rather than relying on cached access decisions.
+	- **Example**: If a user tries to access a file, the system must verify permissions each time rather than relying on cached access decisions.
 
 #### **Open Design**
 - Security should not rely on the secrecy of the design but rather on robust mechanisms like encryption keys.
-  - **Example**: Public scrutiny of encryption algorithms improves their reliability.
+	- **Example**: Public scrutiny of encryption algorithms improves their reliability.
 
 #### **Defense in Depth**
 - Implement multiple layers of defense, so that failure in one control doesn't compromise the entire system.
-  - **Example**: Combining firewalls, intrusion detection systems, and secure coding ensures better protection.
+	- **Example**: Combining firewalls, intrusion detection systems, and secure coding ensures better protection.
 
 ### **OWASP Guidelines for Secure Software Design (Use Case Level)**
 The OWASP (Open Web Application Security Project) guidelines provide best practices for securing software at the use case level.
 
 #### **User Authentication**
 - **Best Practice**: Implement strong authentication mechanisms.
-  - Use **multi-factor authentication (MFA)** to add layers of security.
-  - Ensure **passwords are hashed** using strong algorithms like **bcrypt**.
-  - Implement **account lockout** after repeated failed login attempts to prevent brute force attacks.
+	- Use **multi-factor authentication (MFA)** to add layers of security.
+	- Ensure **passwords are hashed** using strong algorithms like **bcrypt**.
+	- Implement **account lockout** after repeated failed login attempts to prevent brute force attacks.
 
 #### **User Authorization**
 - **Best Practice**: Enforce access controls consistently.
-  - Use **role-based access control (RBAC)** to limit user permissions.
-  - Validate permissions on the server side and avoid trusting client-side checks.
+	- Use **role-based access control (RBAC)** to limit user permissions.
+	- Validate permissions on the server side and avoid trusting client-side checks.
 
 #### **Input Validation**
 - **Best Practice**: Validate all inputs to prevent **injection** attacks.
-  - Use **allowlist validation** (permitting only known good data).
-  - **Sanitize inputs** to remove dangerous characters and prevent SQL injection.
+	- Use **allowlist validation** (permitting only known good data).
+	- **Sanitize inputs** to remove dangerous characters and prevent SQL injection.
 
 ---
 
@@ -188,64 +185,66 @@ Session management ensures that users' interactions with a system remain secure 
 
 ### **Error Handling and Logging**
 - **Best Practice**: Implement secure error handling and logging mechanisms.
-  - Display **generic error messages** to users, but log detailed errors server-side.
-  - Ensure **logs do not expose sensitive information** (like passwords).
-  - Monitor logs for suspicious activity (e.g., multiple failed login attempts).
+	- Display **generic error messages** to users, but log detailed errors server-side.
+	- Ensure **logs do not expose sensitive information** (like passwords).
+	- Monitor logs for suspicious activity (e.g., multiple failed login attempts).
 
 ### **Data Encryption**
 - **Best Practice**: Protect sensitive data using strong encryption.
-  - Encrypt data both at rest (e.g., in databases) and in transit (e.g., using **TLS**).
-  - Use strong, industry-standard algorithms like **AES-256** for encryption.
-  - Ensure that **encryption keys** are stored securely and separately from the encrypted data.
+	- Encrypt data both at rest (e.g., in databases) and in transit (e.g., using **TLS**).
+	- Use strong, industry-standard algorithms like **AES-256** for encryption.
+	- Ensure that **encryption keys** are stored securely and separately from the encrypted data.
 
 ### **File Uploads**
 - **Best Practice**: Securely handle file uploads to prevent attacks.
-  - Restrict file types using an **allowlist**.
-  - Validate file names to prevent **path traversal** attacks.
-  - Store uploaded files outside the web root to prevent direct execution of malicious files.
+	- Restrict file types using an **allowlist**.
+	- Validate file names to prevent **path traversal** attacks.
+	- Store uploaded files outside the web root to prevent direct execution of malicious files.
 
 ### **Cross-Site Scripting (XSS) Prevention**
 - **Best Practice**: Prevent XSS by sanitizing and escaping user input.
-  - Escape user input when rendering content in HTML or JavaScript.
-  - Use **Content Security Policy (CSP)** to limit the sources from which scripts can be loaded.
+	- Escape user input when rendering content in HTML or JavaScript.
+	- Use **Content Security Policy (CSP)** to limit the sources from which scripts can be loaded.
 
 ### **Cross-Site Request Forgery (CSRF) Protection**
 - **Best Practice**: Protect against CSRF by using anti-CSRF tokens.
-  - Ensure state-changing actions (e.g., form submissions) include unique tokens.
-  - Validate the origin of requests using **Referrer** or **Origin** headers.
+	- Ensure state-changing actions (e.g., form submissions) include unique tokens.
+	- Validate the origin of requests using **Referrer** or **Origin** headers.
 
 ### **API Security**
 - **Best Practice**: Secure APIs with robust authentication and validation.
-  - Use **OAuth2** or other secure authentication methods for APIs.
-  - Implement **rate limiting** to prevent DoS attacks.
-  - **Encrypt API traffic** using TLS to secure sensitive data.
+	- Use **OAuth2** or other secure authentication methods for APIs.
+	- Implement **rate limiting** to prevent DoS attacks.
+	- **Encrypt API traffic** using TLS to secure sensitive data.
 
 ### **Handling Sensitive Data**
 - **Best Practice**: Minimize the exposure of sensitive data.
-  - Collect and store only the minimum necessary sensitive data (e.g., personally identifiable information or PII).
-  - Use **strong encryption** and apply **data masking** where applicable.
+	- Collect and store only the minimum necessary sensitive data (e.g., personally identifiable information or PII).
+	- Use **strong encryption** and apply **data masking** where applicable.
 
 ### **Secure Configuration Management**
 - **Best Practice**: Follow secure configuration practices.
-  - Disable unnecessary services and follow the **principle of least privilege** when configuring systems.
-  - Regularly review configurations and update them according to the latest security best practices.
+	- Disable unnecessary services and follow the **principle of least privilege** when configuring systems.
+	- Regularly review configurations and update them according to the latest security best practices.
 
 ### **Logging and Monitoring**
 - **Best Practice**: Implement logging and monitoring to detect security incidents.
-  - Log key events like login attempts and access to sensitive data.
-  - Protect logs from unauthorized access and tampering.
+	- Log key events like login attempts and access to sensitive data.
+	- Protect logs from unauthorized access and tampering.
 
 ### **Third-Party Components**
 - **Best Practice**: Manage third-party components to minimize risks.
-  - Regularly update components to their latest secure versions.
-  - Use tools like **software composition analysis (SCA)** to monitor third-party components for vulnerabilities.
+	- Regularly update components to their latest secure versions.
+	- Use tools like **software composition analysis (SCA)** to monitor third-party components for vulnerabilities.
 
 ### **Secure Software Update Mechanisms**
 - **Best Practice**: Ensure secure distribution of software updates.
-  - Sign updates with cryptographic signatures to verify their authenticity.
-  - Use secure channels (e.g., **HTTPS**) to distribute updates.
+	- Sign updates with cryptographic signatures to verify their authenticity.
+	- Use secure channels (e.g., **HTTPS**) to distribute updates.
 
 ### **Continuous Security Testing**
 - **Best Practice**: Regularly test and validate security controls.
-  - Integrate security testing into the **CI/CD pipeline** to catch vulnerabilities early.
-  - Perform both static and dynamic analysis regularly.
+	- Integrate security testing into the **CI/CD pipeline** to catch vulnerabilities early.
+	- Perform both static and dynamic analysis regularly.
+
+---
