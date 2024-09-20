@@ -2,15 +2,15 @@
 > - While the tables for both STRIDE & DREAD modelling have been added at the end, try to first solve them on your own
 > - Added graded task into notes as well but not sure if its included
 
-| Lecture<br>Number | Lecture<br>Name                                                                           | Status                                            |
-| ----------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| 1 & 2             | Introduction to SSD                                                                       | :white_check_mark:                                |
-| 3 & 4             | Security Requirements & Design Principles (OWASP)                                         | :white_check_mark:                                |
-| Assignment 1      | Paper study on SecSDLC                                                                    | Repeated info from Lectures 1-2 <br>:x:           | 
-| 5, 6 & 7          | VM4SEC Case Study & Methodology + Architectural Design + Quantitative Security Assessment | :warning:                                         |
-| Assignment 2      | Threagile                                                                                 | Dunno what can come from this in the exam<br> :x: |
-| Task 1            | STRIDE Online Banking                                                                     | :white_check_mark:                                |
-| Task 2            | DREAD Threat Modelling                                                                    | :white_check_mark:                                |
+| Lecture<br>Number | Lecture<br>Name                                   | Status                                            |
+| ----------------- | ------------------------------------------------- | ------------------------------------------------- |
+| 1 & 2             | Introduction to SSD                               | :white_check_mark:                                |
+| 3 & 4             | Security Requirements & Design Principles (OWASP) | :white_check_mark:                                |
+| Assignment 1      | Paper study on SecSDLC                            | Repeated info from Lectures 1-2 <br>:x:           |
+| 5, 6 & 7          | SecSDLC VM4SEC Case Study                         | :white_check_mark:                                |
+| Assignment 2      | Threagile                                         | Dunno what can come from this in the exam<br> :x: |
+| Task 1            | STRIDE Online Banking                             | :white_check_mark:                                |
+| Task 2            | DREAD Threat Modelling                            | :white_check_mark:                                |
 
 # **Lecture 1 & 2: Introduction to SSD**
 ## **Secure Software Design?**
@@ -127,17 +127,6 @@ Deploying software securely involves **hardening** the application, which means 
 
 Security requirements define the conditions that a software system must meet to remain secure. These should be identified early in the development process and incorporated into the design phase.
 
-### **Key Examples**:
-- **Minimum Privileges**: Ensure that entities (programs or users) are given only the minimum privileges necessary to complete a task.
-	- **Temporary Privilege Elevation**: Should be revoked as soon as the task is completed.
-	- **Specific Privileges**: Run server processes with only the privileges they require to limit potential damage if compromised.
-- **Default Denial of Access**: If a subject does not have explicit access to an object, access should be denied by default.
-	- **Permissions First**: Access decisions are made based on permissions rather than exceptions.
-	- **Example**: A newly created file is only accessible to its creator unless permissions are explicitly granted.
-- **Simplicity**: Security mechanisms should be as simple as possible to reduce errors and make verification easier.
-- **Transparency**: The security of a system should not depend on keeping its design or implementation secret. The strength lies in well-designed algorithms and keys.
-	- **Example**: DVD players rely on encryption keys to decrypt movies, but the algorithm itself is publicly known.
-
 ### **Security Design Principles**
 
 > [!NOTE]
@@ -232,98 +221,51 @@ The OWASP (Open Web Application Security Project) guidelines provide best practi
 
 ---
 
-# **Lecture 5: VM4SEC Case Study**
-
-## **High-Level Methodology**
-
-### **Requirements Elicitation and Architecture Design**
-- Functional and non-functional requirements of the platform were gathered through **question and feedback sessions** with software engineers and project managers.
-- Based on these requirements, **Data Flow Diagrams (DFDs)** were created during the design phase.
-
-
-### **Model/Mechanism Configuration and Tuning**
-- **Quantitative Security Assessment (QSA)** and **Vulnerability Prediction Models (VPMs)** were used, including real-world vulnerabilities common in the company’s projects.
-- The **QSA model** was designed to identify security issues effectively.
-
-
-### **Implementation and Deployment**
-- **Security monitoring mechanisms** were implemented.
-- The security evaluation results were visualized and deployed in the company’s environment for practical evaluation during development workflows.
-
-### **Focused Groups: Key Points**
-- **Block 1**: Participants preferred **static analysis** for its ability to highlight security issues in the source code, even before compilation or execution. However, a major drawback was the **large volume of alerts**, which made management difficult.
-- **Block 2**: Most participants were unaware of trends in software security monitoring but expressed interest in **Quantitative Security Assessment (QSA)** and **Vulnerability Prediction Models (VPM)** as tools for improving development pipelines. They viewed **ML-based fuzzing** and **penetration testing** as unnecessary, preferring traditional tools.
-- **Block 3**: Participants wanted the platform to directly access source code repositories like **GitHub**, **Bitbucket**, and **GitLab**. A **Graphical User Interface (GUI)** for results visualization was also emphasized.
-- **Block 4**: Critical security characteristics like **Confidentiality**, **Integrity**, and **Availability** were identified as essential for any software under development.
-
-
-### **Requirements Elicitation Process**
-- Valuable feedback from the company led to the elicitation of both **functional** and **non-functional requirements** and the definition of the platform’s **use cases**, architecture, and technical specifications.
-- Requirements gathering involved close communication with stakeholders.
-
-
-### **Use Cases and Requirements**
-
-#### **Functional Requirements**:
-1. **Identifying software security issues**.
-2. **Assessing the security level of the software**.
-3. **Predicting software vulnerabilities**.
-
----
-
-# **Lecture 6: Architectural Design**
-
-- The system design followed the **IEEE 1471 international standard**, utilizing the **DFD technique** to visualize data flows and system structure.
-- **Context Diagram (Level-0 DFD)**: Represents the system as a black box, showing its interactions with external entities such as users and third-party systems. It helps in visualizing the system's scope and its data flows.
-
-## **Level-0 DFD** (Context Diagram)
-- **Purpose**: Provides a high-level overview of the entire system, focusing on the interaction between the system and external entities.
-	1. **Identify External Entities**: These are the people, organizations, or other systems that interact with your system. Label them clearly (e.g., User, External Tools, Third-party APIs).
-	2. **Identify the Main System**: Represent your entire system as a single process or box. This should be the core function or application you are diagramming.
-	3. **Define Data Flows**: Show how data moves between external entities and the system. Each external entity will send or receive data from the main system.
-	4. **Connect Entities to the System**: Use arrows to represent the flow of data to and from the external entities and the system.
-
-## **Level-1 DFD**
-- **Purpose**: Breaks down the main system (from Level-0) into its main sub-processes to show more detailed data flows.
-	1. **Decompose the Main System**: Divide the single system from Level-0 into multiple sub-processes that represent key functionalities (e.g., Login, Checkout, Report Generation, etc.).
-	2. **Identify Data Stores**: Add data stores where information is stored (e.g., Databases, Logs). These should represent where data is saved or retrieved.
-	3. **Define Data Flows Between Processes**: Draw data flows between the sub-processes, showing how information moves between different parts of the system.
-	4. **Show Interaction with External Entities**: Continue to show how external entities interact with individual processes or data stores within the system.
-
-
-## **Component Diagram**
-- Provides a high-level system overview, focusing on component interaction rather than technical details.
-
-## **Core Security Components**:
-1. **Quantitative Security Assessment**: Uses static analysis results and security models to compute security scores.
-2. **Vulnerability Prediction**: Predicts which parts of the software are most likely to have vulnerabilities using text mining techniques.
-
----
-
-# **Lecture 7: Quantitative Security Assessment**
-
-- Aggregates **static analysis results** to compute high-level **security scores**.
-- Security scores are based on characteristics like **Confidentiality**, **Integrity**, and **Availability**, further broken down into low-level properties like **Null Pointer** and **Buffer Overflow** vulnerabilities.
-- ### **Process Flow**:
-	1. **Start**: Begin by applying static analysis to the application.
-	2. **Compute Vulnerability Densities**: Calculate the densities of selected vulnerabilities (e.g., **Null Pointer**, **Weak Cryptography**).
-	3. **Assign Scores to Security Properties**: Based on thresholds, assign scores between 0 and 1.
-	4. **Aggregate Scores**: Aggregate scores for security properties using weights.
-	5. **Compute Security Characteristics Scores**: Calculate scores for overall security characteristics.
-	6. **Compute Overall Security Index**: Take the average of the security characteristics scores.
-	7. **End**: Finalize the assessment process.
-- ### **Security Characteristics**:
-	- **Confidentiality**.
-	- **Integrity**.
-	- **Availability**.
-- ### **Security Properties**:
-	- **Null Pointer**.
-	- **Weak Cryptography**.
-	- **Insufficient/Incorrect Logging**.
-	- **Security Misconfiguration**.
-- ### **Vulnerability Prediction**
-	- **Text mining techniques** are used to extract **textual attributes** from the source code.
-	- **Deep learning models** are applied to predict which software components are likely to contain vulnerabilities.
+# **VM4SEC Case Study: SecSDLC Walkthrough**
+- ### **1. Requirements Elicitation and Planning**
+	- **Objective**: Gather both **functional** and **non-functional requirements** to define the scope of the security solution.
+		- Begin by identifying key stakeholders, such as developers, project managers, and security teams.
+		- Conduct **interviews** and **feedback sessions** to capture their security concerns, performance expectations, and compliance requirements.
+		- Use the feedback to create **use cases**, focusing on security needs like detecting vulnerabilities, ensuring data confidentiality, and predicting potential threats.
+	- **Key Deliverable**:
+		- A comprehensive set of **functional** (e.g., software security features) and **non-functional** requirements (e.g., performance benchmarks, compliance standards).
+		- Creation of **Data Flow Diagrams (DFDs)**, which provide a high-level overview of the system’s architecture and security processes.
+- ### **2. Architectural Design**
+	- **Objective**: Develop a system architecture that supports security from the ground up, aligning with the requirements gathered.
+		- Start with high-level **Data Flow Diagrams (DFDs)** to understand how data moves through the system and interacts with external entities.
+		- Use the **IEEE 1471 Standard** to ensure that the architecture follows international security best practices.
+		- Create a **Level-0 DFD (Context Diagram)** to outline the boundaries of the system and its external connections (e.g., users, APIs, version control).
+		- Drill down into a more detailed **Level-1 DFD** to map out internal components, such as vulnerability scanning modules, security assessments, and data stores.
+	- **Key Deliverable**:
+		- A finalized **architectural design**, featuring high-level diagrams and descriptions of major system components, their interactions, and data flows.
+- ### **3. Model/Mechanism Configuration and Tuning**
+	- **Objective**: Configure and fine-tune security mechanisms, such as **Quantitative Security Assessments (QSA)** and **Vulnerability Prediction Models (VPM)**, to identify vulnerabilities and predict potential risks.
+		- Develop a **Quantitative Security Assessment** model based on security metrics like **confidentiality**, **integrity**, and **availability**.
+		- Implement a **Vulnerability Prediction Model (VPM)** by leveraging past vulnerabilities and employing text mining techniques to predict future risks in specific code components.
+		- Continuously **tune the models** to improve accuracy, incorporating feedback from real-world security scans and audits.
+	- **Key Deliverable**:
+		- Configured **QSA** and **VPM** models, ready for deployment, with baseline security metrics established.
+- ### **4. Implementation and Deployment**
+	- **Objective**: Integrate the developed security mechanisms into the company’s development environment and deploy them for real-world testing.
+		- Implement the security models (QSA and VPM) within the existing software development pipelines.
+		- Introduce **static analysis** tools to detect vulnerabilities early in the development process, with a focus on reducing false positives.
+		- Create visual tools like **dashboards** to present security assessment results in an accessible manner for non-technical stakeholders.
+	- **Key Deliverable**:
+		- Deployed security tools, including static analysis and vulnerability prediction models, along with visual dashboards to monitor security performance.
+- ### **5. Testing and Evaluation**
+	- **Objective**: Test the security features for accuracy, effectiveness, and ease of use. Gather feedback for future iterations.
+		- Conduct both automated testing (e.g., static analysis, penetration tests) and manual reviews to evaluate the security features.
+		- Analyze the effectiveness of the QSA and VPM models in detecting vulnerabilities.
+		- Gather feedback from development and security teams on the usability of the dashboards and the integration with existing tools like version control systems (e.g., GitHub).
+	- **Key Deliverable**:
+		- Comprehensive testing reports outlining detected vulnerabilities, security scores, and areas for improvement in future iterations.
+- ### **6. Maintenance and Continuous Improvement**
+	- **Objective**: Ensure ongoing security by continuously updating and fine-tuning the models and mechanisms based on new data and threats.
+		- Regularly update the vulnerability databases and machine learning models to address newly discovered vulnerabilities and adapt to evolving security challenges.
+		- Monitor the system for false positives and negatives, adjusting thresholds and algorithms as necessary.
+		- Plan periodic **security reviews** and **re-assessments** using QSA and VPM to maintain the system’s security posture over time.
+	- **Key Deliverable**:
+		- A long-term maintenance plan, incorporating regular updates, security reviews, and feedback loops to ensure the system remains secure against emerging threats.
 
 ---
 
@@ -372,7 +314,10 @@ The OWASP (Open Web Application Security Project) guidelines provide best practi
 |                       | **Denial Of Service**      | External users overwhelm the banking system with requests, causing service outage.               | Implement rate-limiting, IP blocking, and deploy DDoS protection solutions.                                                           |
 |                       | **Elevation of Privilege** | External entity exploits vulnerability to gain higher-level access (e.g., user to admin).        | Use RBAC, strict authorization checks, and regular security testing for external-facing functionalities.                              |
 
+
 ---
+
+
 # Task 2: DREAD Modelling (Online Banking)
 ## DREAD
 - Can be used without STRIDE, but then there would be no STRIDE categories and threats are realized and modelled according to DREAD only
