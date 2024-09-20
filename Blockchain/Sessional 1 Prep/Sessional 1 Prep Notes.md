@@ -19,7 +19,6 @@
 | **Physical Currency**            |                |                   |
 | **Electronic Currency**          |                |                   |
 | **Non-Fiat Electronic Currency** |                |                   |
-|                                  |                |                   |
 
 ---
 
