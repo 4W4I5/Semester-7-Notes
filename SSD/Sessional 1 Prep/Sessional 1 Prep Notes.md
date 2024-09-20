@@ -1,33 +1,30 @@
 > [!NOTE]
-> While the tables for both STRIDE & DREAD modelling have been added at the end, try to first solve them on your own
+> - While the tables for both STRIDE & DREAD modelling have been added at the end, try to first solve them on your own
+> - Added graded task into notes as well but not sure if its included
 
-| Lecture Number | Lecture Name                                                                              | Status                              |
-| -------------- | ----------------------------------------------------------------------------------------- | ----------------------------------- |
-| 1 & 2          | Introduction to SSD                                                                       | :warning:                           |
-| 3 & 4          | Security Requirements & Design Principles (OWASP)                                         | :warning:                           |
-| Assignment 1   | Paper study on SecSDLC                                                                    | Repeated info from Lectures 1-2 :x: |
-| 5, 6 & 7       | VM4SEC Case Study & Methodology + Architectural Design + Quantitative Security Assessment | :warning:                           |
-| Assignment 2   | Threagile                                                                                 | :warning:                           |
-| Task 1         | STRIDE Online Banking                                                                     | :white_check_mark:                  |
-| Task 2         | DREAD Threat Modelling                                                                    | :white_check_mark:                  |
+| Lecture<br>Number | Lecture<br>Name                                                                           | Status                              |
+| ----------------- | ----------------------------------------------------------------------------------------- | ----------------------------------- |
+| 1 & 2             | Introduction to SSD                                                                       | :white_check_mark:                  |
+| 3 & 4             | Security Requirements & Design Principles (OWASP)                                         | :white_check_mark:                  |
+| Assignment 1      | Paper study on SecSDLC                                                                    | Repeated info from Lectures 1-2 :x: |
+| 5, 6 & 7          | VM4SEC Case Study & Methodology + Architectural Design + Quantitative Security Assessment | :warning:                           |
+| Assignment 2      | Threagile                                                                                 | :warning:                           |
+| Task 1            | STRIDE Online Banking                                                                     | :white_check_mark:                  |
+| Task 2            | DREAD Threat Modelling                                                                    | :white_check_mark:                  |
 
 # **Lecture 1 & 2: Introduction to SSD**
-
 ## **Secure Software Design?**
-
-Secure Software Design refers to the process of embedding security throughout the entire Software Development Lifecycle (SDLC). The goal is to ensure that the system is designed to minimize risks, avoid vulnerabilities, and withstand potential cyberattacks.
-
 - ### **Key Characteristics**
-	- **Proactive Security**: Security must be considered from the start of the development process, rather than being added as an afterthought.
-	- **Resilience to Attacks**: Secure software is built to defend against known vulnerabilities and unforeseen security threats.
-	- **Minimized Attack Surface**: The attack surface refers to the total number of potential entry points for an attacker. By limiting unnecessary features and access points, secure software reduces these vulnerabilities.
-	- **Compliance with Standards**: Secure software adheres to relevant security standards and legal requirements (e.g., **OWASP**, **GDPR**, **HIPAA**).
+	- Secure Software Design refers to the process of embedding security throughout the entire Software Development Lifecycle (SDLC). The goal is to ensure that the system is designed to minimize risks, avoid vulnerabilities, and withstand potential cyberattacks.
+		- **Proactive Security**: Security must be considered from the start of the development process, rather than being added as an afterthought.
+		- **Resilience to Attacks**: Secure software is built to defend against known vulnerabilities and unforeseen security threats.
+		- **Minimized Attack Surface**: The attack surface refers to the total number of potential entry points for an attacker. By limiting unnecessary features and access points, secure software reduces these vulnerabilities.
+		- **Compliance with Standards**: Secure software adheres to relevant security standards and legal requirements (e.g., **OWASP**, **GDPR**, **HIPAA**).
 - ### **Importance of Secure Software Design**
 	- The increasing frequency of cyberattacks has made security an essential consideration in software development. Failing to integrate security can lead to:
 		- **Financial losses** due to breaches and theft of sensitive information.
 		- **Reputational damage** as customers and users lose trust.
 		- **Legal repercussions**, including fines for non-compliance with regulations like **GDPR** or **HIPAA**.
-
 - ### **Core Security Principles**
 	- **CIA Triad**:
 		- **Confidentiality**:
@@ -84,6 +81,7 @@ Fixing security issues early in the SDLC is much more cost-effective than addres
 	- Simulating real-world attacks to uncover potential security weaknesses.
 
 ## **Secure Deployment Practices**
+
 Deploying software securely involves **hardening** the application, which means removing unnecessary services and ensuring secure configuration. Post-deployment, it’s crucial to monitor security logs and conduct regular audits to identify any suspicious activities.
 
 ## **Misuse Cases**
@@ -108,18 +106,21 @@ Deploying software securely involves **hardening** the application, which means 
 	- Every misuse case reduces your system’s vulnerability.
 	- Misuse cases do **NOT** include human/system error
 
-## **Security-Oriented Development**
-- **Security-Oriented Implementation**: How you set system requirements and write code impacts security. Proper coding standards must be followed to avoid introducing vulnerabilities.
-- **Verification**: Regular checks are needed to catch **common code smells**, such as hardcoded passwords or improper error handling.
-- **Security-Oriented Processes**: Having a structured security strategy ensures the development team works together to build a more secure system.
-
-## **Cost of Fixing Vulnerabilities**
-
-It’s essential to remember that addressing security issues early in the SDLC is not only cheaper but also more efficient. Fixing a vulnerability post-deployment can cost **up to 100 times more** than fixing it during the design or coding phase.
+## Security Oriented Modelling
+- #### **Security-Oriented Development**
+	- **Security-Oriented Implementation**:
+		- How you set system requirements and write code impacts security. Proper coding standards must be followed to avoid introducing vulnerabilities.
+	- **Verification**:
+		- Regular checks are needed to catch **common code smells**, such as hardcoded passwords or improper error handling.
+	- **Security-Oriented Processes**:
+		- Having a structured security strategy ensures the development team works together to build a more secure system.
+	- **Cost of Fixing Vulnerabilities**
+		- It’s essential to remember that addressing security issues early in the SDLC is not only cheaper but also more efficient.
+			- Fixing a vulnerability post-deployment can cost **up to 100 times more** than fixing it during the design or coding phase.
 
 ---
 
-# **Lecture 3: Security Requirements & Design Principles (OWASP) pt 1**
+# **Lecture 3 & 4: Security Requirements & Design Principles (OWASP)**
 
 ## **Security Requirements**
 
@@ -138,143 +139,94 @@ Security requirements define the conditions that a software system must meet to 
 
 ### **Security Design Principles**
 
-These principles guide how software should be designed to mitigate security risks.
+**"PLASTIC MOLES"**
+1. **P** – **Principle of Least Privilege**
+2. **L** – **Layering**
+3. **A** – **Accountability (Check Every Access)**
+4. **S** – **Separation of Privilege**
+5. **T** – **Transparency (Open Design)**
+6. **I** – **Isolation**
+7. **C** – **Compartmentalization (Least Common Mechanism)**
+8. **M** – **Modularity**
+9. **O** – **Open Design**
+10. **L** – **Least Astonishment**
+11. **E** – **Encapsulation**
+12. **S** – **Simplicity (Economy of Mechanism)**
 
-#### **Principle of Least Privilege**
-- Subjects (users, programs) should only have access to the resources they need to perform their tasks.
-- **Example**: A system operator should not perform security administration tasks.
-
-#### **Fail-Safe Defaults**
-- The default action should be to deny access unless explicitly permitted. If a system action fails, it should leave the system in a secure state.
-- **Example**: After a failed attempt to access a resource, the system should not grant access, ensuring it remains secure.
-
-#### **Separation of Duties**
-- **Functions are divided** to prevent a single person from controlling all aspects of a critical task.
-	- **Example**: Separation of user roles ensures that students cannot access submission details.
-
-#### **Compartmentalization**
-- If one process is compromised, others should remain unaffected.
-	- **Example**: Android isolates each user activity in its own virtual machine (sandbox), limiting the scope of potential attacks.
-
-#### **Complete Mediation**
-- Every access to an object must be checked for proper authority.
-	- **Example**: If a user tries to access a file, the system must verify permissions each time rather than relying on cached access decisions.
-
-#### **Open Design**
-- Security should not rely on the secrecy of the design but rather on robust mechanisms like encryption keys.
-	- **Example**: Public scrutiny of encryption algorithms improves their reliability.
-
-#### **Defense in Depth**
-- Implement multiple layers of defense, so that failure in one control doesn't compromise the entire system.
-	- **Example**: Combining firewalls, intrusion detection systems, and secure coding ensures better protection.
+| **Security Design Principles**      | **Description**                                                                                                                                                                                                                                                                                                                                                                      |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **1. Principle of Least Privilege** | - A subject/program should be given only the minimum privileges necessary to complete its task. <br> - Temporary privilege elevation should be abandoned immediately. <br> - Append permission only for logging processes. <br> - Server processes should run with only the required privileges.                                                                                     |
+| **2. Fail-Safe Defaults**           | - Access to an object should be denied unless explicitly allowed. <br> - Basic access decisions rely on permissions, not exclusion. <br> - Default action is to deny access. <br> - If an action fails, the system should remain as secure as before. <br> - New files are accessible only to their creator. <br> - The system must retrieve the user ID for access requests.        |
+| **3. Economy of Mechanism**         | - Security mechanisms should be as simple as possible. <br> - Design, implementation, and interactions should remain straightforward to enable easier analysis, verification, and testing.                                                                                                                                                                                           |
+| **4. Open Design**                  | - Security should not depend on secrecy. <br> - The key should remain secret, but the algorithm should be open to public scrutiny. <br> - Complexity does not enhance security (e.g., DVD players decrypt disk keys with publicly known algorithms).                                                                                                                                 |
+| **5. Check Every Access**           | - Every access to every object must be checked for authorization.                                                                                                                                                                                                                                                                                                                    |
+| **6. Separation of Privilege**      | - Systems should not grant permission based on a single condition. <br> - Separation of duties: No single entity controls the entire transaction. <br> - Compartmentalization: A security issue in one process should not affect others. <br> - User actions (e.g., logins) should trigger system messages. <br> - Android activities run in separate virtual machines (sandboxing). |
+| **7. Least Common Mechanism**       | - Shared resources increase the likelihood of one service influencing another. <br> - Mechanisms for accessing resources should not be shared. <br> - A compromised web server could lead to complete system access.                                                                                                                                                                 |
+| **8. Complete Mediation**           | - Changes in authority should be carefully managed in local memories. <br> - Every access should be verified against the access control mechanism, not cached decisions. <br> - Access control must be enforced when reading files and database items.                                                                                                                               |
+| **9. Psychological Acceptability**  | - Security mechanisms should be user-friendly, with minimal interference. <br> - If security measures are confusing, users are likely to make errors. <br> - Authorized users should experience minimal obstructions.                                                                                                                                                                |
+| **10. Isolation**                   | - Physical isolation is critical: No physical connections should exist between systems. <br> - Processes, files, and user data should be isolated in modern OS environments. <br> - Public access systems must be isolated from critical infrastructure. <br> - Cryptographic software should be isolated to prevent tampering and exposure.                                         |
+| **11. Encapsulation**               | - Internal data structures should only be accessible to protected subsystem procedures. <br> - Encapsulation secures data and procedures in their own domain.                                                                                                                                                                                                                        |
+| **12. Modularity**                  | - Protocols and applications should use common cryptographic modules. <br> - Separate, protected modules enhance system security. <br> - Modular architecture supports upgrading without redesign.                                                                                                                                                                                   |
+| **13. Layering**                    | - Systems should implement multiple protection layers (defense in depth). <br> - Failure of one mechanism should not compromise the entire system.                                                                                                                                                                                                                                   |
+| **14. Least Astonishment**          | - Authorization mechanisms should be transparent, allowing users to intuitively understand security goals.                                                                                                                                                                                                                                                                           |
 
 ### **OWASP Guidelines for Secure Software Design (Use Case Level)**
 
 The OWASP (Open Web Application Security Project) guidelines provide best practices for securing software at the use case level.
 
-#### **User Authentication**
-- **Best Practice**: Implement strong authentication mechanisms.
-	- Use **multi-factor authentication (MFA)** to add layers of security.
-	- Ensure **passwords are hashed** using strong algorithms like **bcrypt**.
-	- Implement **account lockout** after repeated failed login attempts to prevent brute force attacks.
+| **Section**                         | **Guideline**                                  | **Use Case**                              | **Best Practices**                                                                                                                           |
+| ----------------------------------- | ---------------------------------------------- | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| **1. User Authentication**          | Implement strong authentication mechanisms     | When users log into the application       | - Use MFA <br> - Salted password hashing (e.g., bcrypt) <br> - Account lockout <br> - Avoid weak recovery mechanisms                         |
+| **2. User Authorization**           | Enforce access controls consistently           | When accessing resources or features      | - Role-based access control (RBAC) <br> - Server-side validation <br> - Apply least privilege <br> - Regularly review permissions            |
+| **3. Data Validation**              | Validate all inputs                            | When accepting any input                  | - Validate on both client and server <br> - Use allowlists <br> - Sanitize inputs <br> - Use prepared SQL statements                         |
+| **4. Session Management**           | Securely manage user sessions                  | When handling multiple requests           | - Random session IDs <br> - HttpOnly cookies <br> - Session timeout <br> - Use HTTPS                                                         |
+| **5. Error Handling/Logging**       | Secure error handling and logging              | On errors or unusual activity             | - Generic error messages <br> - Logs should not expose sensitive info <br> - Monitor for suspicious activity <br> - Secure logging           |
+| **6. Data Encryption**              | Encrypt sensitive data                         | When storing or transmitting data         | - Use strong encryption (e.g., AES-256) <br> - Encrypt before storage <br> - Secure cryptographic keys <br> - Implement TLS                  |
+| **7. File Uploads**                 | Secure file uploads                            | When allowing file uploads                | - Restrict file types <br> - Sanitize file names <br> - Store files outside web root <br> - Scan for malware                                 |
+| **8. Cross-Site Scripting (XSS)**   | Prevent XSS                                    | When displaying user content              | - Escape input <br> - Use Content Security Policy (CSP) <br> - Proper output encoding <br> - Sanitize input                                  |
+| **9. CSRF Protection**              | Implement CSRF protection                      | On state-changing requests                | - Use anti-CSRF tokens <br> - Re-authenticate for critical actions <br> - Validate request origin <br> - Use same-site cookies               |
+| **10. API Security**                | Secure APIs with authentication, validation    | When exposing APIs                        | - Use OAuth2 <br> - Rate limiting <br> - Validate inputs <br> - Use TLS for encryption                                                       |
+| **11. Software Updates**            | Ensure secure update distribution              | When providing updates                    | - Sign updates <br> - Use HTTPS <br> - Automate updates <br> - Validate update integrity                                                     |
+| **12. Sensitive Data Handling**     | Protect sensitive data                         | When processing or storing data           | - Minimize storage <br> - Encrypt data <br> - Use data masking <br> - Strong access controls                                                 |
+| **13. Configuration Management**    | Maintain secure configurations                 | When deploying and managing software      | - Follow least privilege <br> - Disable unnecessary features <br> - Regularly review settings <br> - Monitor for config drift                |
+| **14. Logging and Monitoring**      | Implement logging and monitoring               | For tracking security incidents           | - Log security events <br> - Protect logs <br> - Real-time monitoring <br> - Regularly review logs                                           |
+| **15. Third-Party Components**      | Manage third-party libraries                   | When using external components            | - Regularly update components <br> - Fix vulnerabilities <br> - Prefer well-maintained libraries <br> - Use SCA tools                        |
+| **16. Mobile App Security**         | Ensure secure coding practices for mobile apps | When developing mobile apps               | - Use secure storage <br> - Strong authentication <br> - TLS for communications <br> - Regularly update security protocols                   |
+| **17. Secure Deployment**           | Deploy software securely                       | When deploying to production environments | - Automate deployment <br> - Use environment-specific configs <br> - Security test before deployment <br> - Monitor for compromises          |
+| **18. Security Awareness**          | Train teams on security best practices         | During staff training or onboarding       | - Ongoing security training <br> - Promote security-first culture <br> - Stay updated on threats <br> - Encourage secure coding              |
+| **19. Continuous Security Testing** | Regularly test security controls               | Throughout development lifecycle          | - Integrate into CI/CD <br> - Regular security assessments <br> - Automate security tests <br> - Promptly fix vulnerabilities                |
+| **20. Secure SDLC**                 | Integrate security into SDLC                   | Across all development phases             | - Security in planning/design <br> - Threat modeling <br> - Security at every SDLC phase <br> - Continuous improvement of security practices |
 
-#### **User Authorization**
-- **Best Practice**: Enforce access controls consistently.
-	- Use **role-based access control (RBAC)** to limit user permissions.
-	- Validate permissions on the server side and avoid trusting client-side checks.
+### **Graded Task: NIST VS CERT at use-case levels of a system**
+> [!WARNING]
+> IDK if the graded task was acc ever spoken about in class but its in the slides
 
-#### **Input Validation**
-- **Best Practice**: Validate all inputs to prevent **injection** attacks.
-	- Use **allowlist validation** (permitting only known good data).
-	- **Sanitize inputs** to remove dangerous characters and prevent SQL injection.
-
----
-
-# **Lecture 4: Security Requirements & Design Principles (OWASP) pt2**
-
-## **Session Management**
-
-Session management ensures that users' interactions with a system remain secure over multiple requests.
-
-### **Best Practices**:
-- Use **secure, randomly generated session IDs**.
-- Store session identifiers in **HttpOnly cookies** to prevent access by JavaScript.
-- Implement **session timeout and logout** mechanisms to protect inactive sessions.
-- Use **HTTPS** to secure session data in transit and prevent session hijacking.
-
-### **Error Handling and Logging**
-- **Best Practice**: Implement secure error handling and logging mechanisms.
-	- Display **generic error messages** to users, but log detailed errors server-side.
-	- Ensure **logs do not expose sensitive information** (like passwords).
-	- Monitor logs for suspicious activity (e.g., multiple failed login attempts).
-
-### **Data Encryption**
-- **Best Practice**: Protect sensitive data using strong encryption.
-	- Encrypt data both at rest (e.g., in databases) and in transit (e.g., using **TLS**).
-	- Use strong, industry-standard algorithms like **AES-256** for encryption.
-	- Ensure that **encryption keys** are stored securely and separately from the encrypted data.
-
-### **File Uploads**
-- **Best Practice**: Securely handle file uploads to prevent attacks.
-	- Restrict file types using an **allowlist**.
-	- Validate file names to prevent **path traversal** attacks.
-	- Store uploaded files outside the web root to prevent direct execution of malicious files.
-
-### **Cross-Site Scripting (XSS) Prevention**
-- **Best Practice**: Prevent XSS by sanitizing and escaping user input.
-	- Escape user input when rendering content in HTML or JavaScript.
-	- Use **Content Security Policy (CSP)** to limit the sources from which scripts can be loaded.
-
-### **Cross-Site Request Forgery (CSRF) Protection**
-- **Best Practice**: Protect against CSRF by using anti-CSRF tokens.
-	- Ensure state-changing actions (e.g., form submissions) include unique tokens.
-	- Validate the origin of requests using **Referrer** or **Origin** headers.
-
-### **API Security**
-- **Best Practice**: Secure APIs with robust authentication and validation.
-	- Use **OAuth2** or other secure authentication methods for APIs.
-	- Implement **rate limiting** to prevent DoS attacks.
-	- **Encrypt API traffic** using TLS to secure sensitive data.
-
-### **Handling Sensitive Data**
-- **Best Practice**: Minimize the exposure of sensitive data.
-	- Collect and store only the minimum necessary sensitive data (e.g., personally identifiable information or PII).
-	- Use **strong encryption** and apply **data masking** where applicable.
-
-### **Secure Configuration Management**
-- **Best Practice**: Follow secure configuration practices.
-	- Disable unnecessary services and follow the **principle of least privilege** when configuring systems.
-	- Regularly review configurations and update them according to the latest security best practices.
-
-### **Logging and Monitoring**
-- **Best Practice**: Implement logging and monitoring to detect security incidents.
-	- Log key events like login attempts and access to sensitive data.
-	- Protect logs from unauthorized access and tampering.
-
-### **Third-Party Components**
-- **Best Practice**: Manage third-party components to minimize risks.
-	- Regularly update components to their latest secure versions.
-	- Use tools like **software composition analysis (SCA)** to monitor third-party components for vulnerabilities.
-
-### **Secure Software Update Mechanisms**
-- **Best Practice**: Ensure secure distribution of software updates.
-	- Sign updates with cryptographic signatures to verify their authenticity.
-	- Use secure channels (e.g., **HTTPS**) to distribute updates.
-
-### **Continuous Security Testing**
-- **Best Practice**: Regularly test and validate security controls.
-	- Integrate security testing into the **CI/CD pipeline** to catch vulnerabilities early.
-	- Perform both static and dynamic analysis regularly.
+| **Use Case**               | **NIST Guidelines**                                        | **CERT Guidelines**                                                 |
+| -------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------- |
+| **User Authentication**    | Emphasizes MFA and strong password policies.               | Focuses on secure password storage and session management.          |
+| **User Authorization**     | Enforces RBAC and least privilege principles.              | Stresses server-side validation and secure API authorization.       |
+| **Data Validation**        | Focuses on allowlisting and sanitization.                  | Prioritizes prepared statements to prevent SQL injection.           |
+| **Session Management**     | Secure session IDs and timeouts are key.                   | Emphasizes HttpOnly cookies and preventing session fixation.        |
+| **Error Handling**         | Log sensitive events without exposing data.                | Focuses on secure logging practices.                                |
+| **Data Encryption**        | Strong encryption for data at rest and in transit.         | Cryptographic standards with emphasis on protecting sensitive data. |
+| **File Uploads**           | Restrict file types and scan for malware.                  | Validating and sanitizing file names to prevent attacks.            |
+| **XSS Prevention**         | Sanitization and proper output encoding.                   | Focuses on escaping user input and using secure coding practices.   |
+| **CSRF Protection**        | Use of anti-CSRF tokens and origin validation.             | Focuses on re-authentication for critical actions.                  |
+| **API Security**           | Use OAuth2, validate inputs, encrypt traffic.              | Emphasizes rate limiting and secure API inputs.                     |
+| **Secure Updates**         | Sign updates, secure distribution.                         | Automatic updates and validating integrity.                         |
+| **Sensitive Data**         | Encrypt, minimize exposure, and use strong access control. | Focuses on data masking and encryption.                             |
+| **Config Management**      | Review and monitor settings, least privilege.              | Focuses on disabling unnecessary services/features.                 |
+| **Logging & Monitoring**   | Log security events and protect log integrity.             | Emphasizes real-time monitoring and alerting.                       |
+| **Third-Party Components** | Regular updates and monitoring for vulnerabilities.        | Emphasizes using secure, widely used libraries.                     |
+| **Mobile Security**        | Strong storage and encryption.                             | Focuses on avoiding client-side checks and secure storage.          |
+| **Secure Deployment**      | Automate deployments, perform security testing.            | Prioritizes secure configuration and penetration testing.           |
+| **Security Training**      | Ongoing training and promoting a security-first mindset.   | Regular training and keeping up-to-date on threats.                 |
+| **Continuous Testing**     | Automate security in CI/CD pipelines.                      | Focuses on continuous security assessments and retesting.           |
+| **SDLC Security**          | Integrate security at every phase of SDLC.                 | Emphasizes threat analysis and monitoring throughout SDLC.          |
 
 ---
 
 # **Lecture 5: VM4SEC Case Study**
-
-## **Today’s Agenda**
-- **Secure SDLC**: A complete process with an industrial case study (VM4SEC).
-- **Architecture and Methodology**: Full discussion of modules from requirements to deployment.
-- **Case Study**: Follow the **VM4SEC** platform process.
-
 
 ## **High-Level Methodology**
 

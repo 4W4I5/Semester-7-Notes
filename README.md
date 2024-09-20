@@ -2,7 +2,7 @@
 
 > [!NOTE]
 > Only sessional and finals prep material will be available and linked here.
-> Check the respective folders for class notes if i made any they will be available there
+> Check the respective folders for class notes via the `Note Track.md` file, if I've made any they will be available and linked there.
 
 | Symbols            | Meaning          |
 | ------------------ | ---------------- |
@@ -12,11 +12,11 @@
 
 # Secure Software Design (SSD)
 
-| Exam                                                                    | Status    |
-| ----------------------------------------------------------------------- | --------- |
-| [Sessional 1](SSD/Sessional%201%20Prep/Sessional%201%20Prep%20Notes.md) | :warning: |
-| [Sessional 2](SSD/Sessional%202%20Prep/Sessional%202%20Prep%20Notes.md) |           |
-| [Finals](SSD/Finals%20Prep/Finals%20Prep%20Notes.md)                    |           |
+| Exam                                                                    | Status             |
+| ----------------------------------------------------------------------- | ------------------ |
+| [Sessional 1](SSD/Sessional%201%20Prep/Sessional%201%20Prep%20Notes.md) | :white_check_mark: |
+| [Sessional 2](SSD/Sessional%202%20Prep/Sessional%202%20Prep%20Notes.md) |                    |
+| [Finals](SSD/Finals%20Prep/Finals%20Prep%20Notes.md)                    |                    |
 
 # Parallel Distributed Computing (PDC)
 
@@ -39,5 +39,5 @@
 | Exam                                                                   | Status    |
 | ---------------------------------------------------------------------- | --------- |
 | [Sessional 1](IA/Sessional%201%20Prep/Sessional%201%20Prep%20Notes.md) | :warning: |
-| [Sessional 2](IA/Sessional%202%20Prep/Sessional%202%20Prep%20Notes.md) |           | 
-| [Finals ](IA/Finals%20Prep/Finals%20Prep%20Notes.md)                   |           |
+| [Sessional 2](IA/Sessional%202%20Prep/Sessional%202%20Prep%20Notes.md) |           |
+| [Finals](IA/Finals%20Prep/Finals%20Prep%20Notes.md)                   |           |

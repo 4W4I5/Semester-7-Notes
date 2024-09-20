@@ -54,9 +54,21 @@
                 "source": true
               }
             }
+          },
+          {
+            "id": "77dbf1304813b1aa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": true
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -211,12 +223,12 @@
   "lastOpenFiles": [
     "PDC/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "IA/Sessional 1 Prep/Sessional 1 Prep Notes.md",
+    "SSD/Sessional 1 Prep/Sessional 1 Prep Notes.md",
+    "README.md",
     "Blockchain/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "Blockchain/Class Notes/5 - Blockchain 3rd September, 2024.md",
-    "SSD/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "IA/Note Track.md",
     "IA/Pasted image 20240917195504.png",
-    "README.md",
     "IA/Sessional 1 Prep",
     "SSD/Note Track.md",
     "Books/Secure Software Design/Threat modeling-Designing for Security (2014).pdf",
