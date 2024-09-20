@@ -11,8 +11,9 @@
 	- Allows to store value instead of the object itself
 
 ### Types of Currency
-| **Attributes** | **Ancient Coinage** | **Paper Currency** | **Fiat Currency** | **Electronic Currency**
-| -------------- | ------------------- | ------------------ | ----------------- |
+| **Attributes** | **Ancient Coinage** | **Paper Currency** | **Fiat Currency** | **Electronic Currency** |
+| -------------- | ------------------- | ------------------ | ----------------- | ----------------------- |
+|                |                     |                    |                   |                         |
 
 ---
 
