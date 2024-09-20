@@ -5,7 +5,7 @@
 | -------------- | ----------------------------------------------------------------------------------------- | ----------------------------------- |
 | 1 & 2          | Introduction to SSD                                                                       | :warning:                           |
 | 3 & 4          | Security Requirements & Design Principles (OWASP)                                         | :warning:                           |
-| Assignment 1   | Paper study on SecSDLC                                                                    | Repeated info from Lectures 1-2 :x: | 
+| Assignment 1   | Paper study on SecSDLC                                                                    | Repeated info from Lectures 1-2 :x: |
 | 5, 6 & 7       | VM4SEC Case Study & Methodology + Architectural Design + Quantitative Security Assessment | :warning:                           |
 | Assignment 2   | Threagile                                                                                 | :warning:                           |
 | Task 1         | STRIDE Online Banking                                                                     | :white_check_mark:                  |
@@ -26,21 +26,24 @@ Secure Software Design refers to the process of embedding security throughout th
 
 ## **Importance of Secure Software Design**
 
-The increasing frequency of cyberattacks has made security an essential consideration in software development. Failing to integrate security can lead to:
-
-- **Financial losses** due to breaches and theft of sensitive information.
-- **Reputational damage** as customers and users lose trust.
-- **Legal repercussions**, including fines for non-compliance with regulations like **GDPR** or **HIPAA**.
+-The increasing frequency of cyberattacks has made security an essential consideration in software development. Failing to integrate security can lead to:
+	- **Financial losses** due to breaches and theft of sensitive information.
+	- **Reputational damage** as customers and users lose trust.
+	- **Legal repercussions**, including fines for non-compliance with regulations like **GDPR** or **HIPAA**.
 
 ## **Core Security Principles**
 - **CIA Triad**:
 	- **Confidentiality**: Protecting information from unauthorized access.
 	- **Integrity**: Ensuring data is accurate and not tampered with.
 	- **Availability**: Ensuring the system and its data are accessible to authorized users when needed.
-- **Principle of Least Privilege (PoLP)**: Each user or process should have only the minimal privileges necessary to complete its function.
-- **Separation of Duties (SoD)**: Critical tasks should be divided among different people or systems to reduce the risk of fraud or abuse.
-- **Defense in Depth**: Layers of security controls are implemented to ensure that if one control fails, others will still protect the system.
-- **Fail-Safe Defaults**: Systems should default to a secure state, such as locking user accounts after a set number of failed login attempts.
+- **Principle of Least Privilege (PoLP)**:
+	- Each user or process should have only the minimal privileges necessary to complete its function.
+- **Separation of Duties (SoD)**:
+	- Critical tasks should be divided among different people or systems to reduce the risk of fraud or abuse.
+- **Defense in Depth**:
+	- Layers of security controls are implemented to ensure that if one control fails, others will still protect the system.
+- **Fail-Safe Defaults**:
+	- Systems should default to a secure state, such as locking user accounts after a set number of failed login attempts.
 
 ## **Secure SDLC vs. Traditional SDLC**
 
