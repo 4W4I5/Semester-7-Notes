@@ -58,13 +58,28 @@
 Fixing security issues early in the SDLC is much more cost-effective than addressing them post-deployment. The **cost of fixing vulnerabilities** increases significantly when security flaws are identified later in the process.
 
 ## **Threat Modeling**
-- Threat modeling is a structured process used to identify, assess, and mitigate potential security risks to a software system. Key steps in threat modeling include:
-	- **Identifying potential threats**:
-		- Understanding how attackers might exploit the system.
-	- **Prioritizing threats**:
-		- Determining which threats are most critical.
-	- **Implementing security measures**:
-		- Incorporating protections into the design to reduce or eliminate risks.
+- Threat modeling is a structured process used to identify, assess, and mitigate potential security risks to a software system.
+	- Key steps in threat modeling include:
+		- **Identifying potential threats**:
+			- Understanding how attackers might exploit the system.
+		- **Prioritizing threats**:
+			- Determining which threats are most critical.
+		- **Implementing security measures**:
+			- Incorporating protections into the design to reduce or eliminate risks.
+	-  Model Types
+		- STRIDE
+			- **Spoofing (S)**: Can an attacker pretend to be someone else?
+			- **Tampering (T)**: Can an attacker modify data or processes?
+			- **Repudiation (R)**: Can an attacker deny their actions?
+			- **Information Disclosure (I)**: Can sensitive information be exposed?
+			- **Denial of Service (D)**: Can an attacker prevent legitimate access to services?
+			- **Elevation of Privilege (E)**: Can an attacker gain unauthorized access or higher-level permissions?
+		- DREAD
+			- **Damage Potential (D)**: How severe is the damage if the threat is realized?
+			- **Reproducibility (R)**: How easy is it to reproduce the attack?
+			- **Exploitability (E)**: How easy is it to exploit the vulnerability?
+			- **Affected Users (A)**: How many users will be affected by the attack?
+			- **Discoverability (D)**: How easy is it to discover the vulnerability?
 
 ## **Secure Coding Standards**
 - Secure coding involves following guidelines to prevent vulnerabilities, such as:
@@ -170,6 +185,26 @@ Security requirements define the conditions that a software system must meet to 
 
 The OWASP (Open Web Application Security Project) guidelines provide best practices for securing software at the use case level.
 
+**"A DYNAMIC SAFEGUARD FRAMEWORK STRENGTHENS SOFTWARE DEFENSES"**
+- **A** – Authentication (1)
+- **D** – Data Validation (3)
+- **Y** – (S)ession Management (4)
+- **N** – (E)rror Handling/Logging (5)
+- **A** – API Security (10)
+- **M** – Mobile App Security (16)
+- **I** – Input Validation (8, 9)
+- **C** – Configuration Management (13)
+- **S** – Sensitive Data Handling (12)
+- **A** – Authorization (2)
+- **F** – File Uploads (7)
+- **E** – Encryption (6)
+- **G** – (S)oftware Updates (11)
+- **U** – Updates (third-party, 15)
+- **A** – Awareness (18)
+- **R** – Continuous Security Testing (19)
+- **D** – Deployment (17)
+- **S** – SDLC (20)
+
 | **Section**                         | **Guideline**                                  | **Use Case**                              | **Best Practices**                                                                                                                           |
 | ----------------------------------- | ---------------------------------------------- | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | **1. User Authentication**          | Implement strong authentication mechanisms     | When users log into the application       | - Use MFA <br> - Salted password hashing (e.g., bcrypt) <br> - Account lockout <br> - Avoid weak recovery mechanisms                         |
@@ -196,6 +231,15 @@ The OWASP (Open Web Application Security Project) guidelines provide best practi
 ### **Graded Task: NIST VS CERT at use-case levels of a system**
 > [!WARNING]
 > IDK if the graded task was acc ever spoken about in class but its in the slides
+
+**S.E.C.U.R.E.**
+
+- **S**: **Session Management** – NIST emphasizes session IDs and timeouts, while CERT focuses on **HttpOnly cookies** and **session fixation** prevention.
+- **E**: **Error Handling** – NIST prioritizes **logging sensitive events** without exposing data, while CERT stresses **secure logging practices** to prevent information leaks.
+- **C**: **Configuration Management** – NIST highlights **least privilege** and **monitoring settings**, while CERT focuses on **disabling unnecessary services/features** to minimize attack surfaces.
+- **U**: **User Authentication/Authorization** – NIST emphasizes **MFA**, **RBAC**, and **least privilege**, whereas CERT stresses **secure password storage**, **server-side validation**, and **API security**.
+- **R**: **Rate Limiting and Validation** – NIST suggests **OAuth2** for API security and validating inputs, while CERT emphasizes **rate limiting** and **continuous validation** to prevent abuse.
+- **E**: **Encryption & File Uploads** – NIST focuses on **strong encryption** for sensitive data at rest and in transit, while CERT concentrates on **validating file names** and restricting **file types** to prevent malicious uploads.
 
 | **Use Case**               | **NIST Guidelines**                                        | **CERT Guidelines**                                                 |
 | -------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------- |
