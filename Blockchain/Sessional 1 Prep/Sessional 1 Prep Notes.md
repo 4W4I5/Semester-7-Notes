@@ -3,22 +3,24 @@
 | 1                 | Introduction                          | Skipped :x:        |
 | 2                 | Towards decentralized P2P Currency    | :warning:          |
 | 3                 | Intro to Crypto & Cryptocurrencies    | :warning:          |
-| 4                 | How bitcoin achieves decentralization | :white_check_mark: | 
+| 4                 | How bitcoin achieves decentralization | :white_check_mark: |
 
 # Chapter 2: Decentralized P2P Currency
 ## Currency
 - May(not) have intrinsic value
 	- Allows to store value instead of the object itself
 
+Here's the filled-in table on the types of currency:
+
 ### Types of Currency
-| **Types of Currency**            | **Advantages** | **Disadvantages** |
-| -------------------------------- | -------------- | ----------------- |
-| **Ancient Coinage**              |                |                   |
-| **Paper Currency**               |                |                   |
-| **Fiat Currency**                |                |                   |
-| **Physical Currency**            |                |                   |
-| **Electronic Currency**          |                |                   |
-| **Non-Fiat Electronic Currency** |                |                   |
+| **Types of Currency**            | **Advantages**                                                                          | **Disadvantages**                                                            |
+| -------------------------------- | --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| **Ancient Coinage**              | Durable, intrinsic value due to precious metals, widely accepted in ancient times.      | Heavy, difficult to transport, subject to counterfeiting.                    |
+| **Paper Currency**               | Lightweight, easy to transport and store, mass-producible.                              | Easily damaged, inflation risk, reliance on government backing.              |
+| **Fiat Currency**                | Government-backed, widely accepted, easily manageable by central authorities.           | Subject to inflation, no intrinsic value, dependent on government stability. |
+| **Physical Currency**            | Tangible, universally understood, reliable for small transactions.                      | Inconvenient for large transactions, theft risk, costly to produce.          |
+| **Electronic Currency**          | Convenient for global transactions, fast and efficient, reduces physical storage needs. | Dependent on technology, susceptible to cyber threats and fraud.             |
+| **Non-Fiat Electronic Currency** | Decentralized, potential for privacy, low transaction costs, borderless.                | High volatility, limited acceptance, regulatory challenges.                  |
 
 ### Challenges of P2P Currency
 

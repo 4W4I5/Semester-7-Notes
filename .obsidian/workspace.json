@@ -8,24 +8,24 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3d4f681c539e5056",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IA/Sessional 1 Prep/Sessional 1 Prep Notes.md",
-                "mode": "source",
-                "source": true
-              }
-            }
-          },
-          {
             "id": "2cedba32d6cf2723",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Blockchain/Sessional 1 Prep/Sessional 1 Prep Notes.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "3d4f681c539e5056",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IA/Sessional 1 Prep/Sessional 1 Prep Notes.md",
                 "mode": "source",
                 "source": true
               }
@@ -55,8 +55,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
