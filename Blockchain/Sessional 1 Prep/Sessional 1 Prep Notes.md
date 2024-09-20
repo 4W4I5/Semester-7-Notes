@@ -12,11 +12,39 @@
 
 ### Types of Currency
 - #### Ancient Coinage
+	- Based on Precious metals
+	- Value based on value of metal
+	- Advantages
+		- Fake gold is still gold however technology for creating such diluted metals is still limited
+		- Advanced mining techniques are limited, challenging to flood the market i.e. minting is tough
+	- Problems
+		- Logistically tough to manage/store large amount of currency
+		- Raw materials required to mint
+		- Currency's value fluctuates based on speculation
 - #### Paper Currency
+	- Exchangeable commodity
+	- Issuing authority determines value based on gold value
+	- Advantages
+		- Easier to carry as large denominations can be minted
+		- Issuing authority has the power to inflate/deflate currency
+	- Disadvantages
+		- Counterfeits
+		- Runaway Inflation, IA can easily print too much
+		- Bank runs, Bank runs out of enough gold to convert
 - #### Fiat Currency
+	- Similar to paper currency, not linked to metals however
+	- Why does it work?
+		- Social Contract, everyone has agreed upon the value
+		- Centralized Power, gov has power to enforce taxation and they accept currency as a means to pay taxes
+	- Advantges
+		- Similar to Paper Currency + no need to store gold in banks to convert
+	- Problems
+		- Similar to Paper Currency + More trust placed in IA
+- #### Non-Fiat (P2P) Currency
+
+### Physical Vs Electronic Currency
 - #### Physical Currency
 - #### Electronic Currency
-- #### Non-Fiat (P2P) Currency
 
 ### Challenges of P2P Currency
 - **Regulatory Issues**:
