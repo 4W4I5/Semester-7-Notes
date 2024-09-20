@@ -135,6 +135,7 @@ Security requirements define the conditions that a software system must meet to 
 > - **Complete Mediation** connects with **Accountability** (A).
 
 **"PLASTIC MOLES"**
+
 1. **P** – **Principle of Least Privilege**
 2. **L** – **Layering**
 3. **A** – **Accountability (Check Every Access)**
@@ -222,7 +223,7 @@ The OWASP (Open Web Application Security Project) guidelines provide best practi
 ---
 
 # **VM4SEC Case Study: SecSDLC Walkthrough**
-- ### **1. Requirements Elicitation and Planning**
+- ### **1. Requirements Elicitation and Planning | Security Requirements**
 	- **Objective**: Gather both **functional** and **non-functional requirements** to define the scope of the security solution.
 		- Begin by identifying key stakeholders, such as developers, project managers, and security teams.
 		- Conduct **interviews** and **feedback sessions** to capture their security concerns, performance expectations, and compliance requirements.
@@ -230,7 +231,7 @@ The OWASP (Open Web Application Security Project) guidelines provide best practi
 	- **Key Deliverable**:
 		- A comprehensive set of **functional** (e.g., software security features) and **non-functional** requirements (e.g., performance benchmarks, compliance standards).
 		- Creation of **Data Flow Diagrams (DFDs)**, which provide a high-level overview of the system’s architecture and security processes.
-- ### **2. Architectural Design**
+- ### **2. Architectural Design | Threat Modelling**
 	- **Objective**: Develop a system architecture that supports security from the ground up, aligning with the requirements gathered.
 		- Start with high-level **Data Flow Diagrams (DFDs)** to understand how data moves through the system and interacts with external entities.
 		- Use the **IEEE 1471 Standard** to ensure that the architecture follows international security best practices.
@@ -254,16 +255,17 @@ The OWASP (Open Web Application Security Project) guidelines provide best practi
 		- Deployed security tools, including static analysis and vulnerability prediction models, along with visual dashboards to monitor security performance.
 - ### **5. Testing and Evaluation**
 	- **Objective**: Test the security features for accuracy, effectiveness, and ease of use. Gather feedback for future iterations.
-		- Conduct both automated testing (e.g., static analysis, penetration tests) and manual reviews to evaluate the security features.
+		- Conduct both automated testing (e.g., static analysis, penetration tests, Static Application Security Testing + Dynamic Application Security Testing) and manual reviews to evaluate the security features.
 		- Analyze the effectiveness of the QSA and VPM models in detecting vulnerabilities.
 		- Gather feedback from development and security teams on the usability of the dashboards and the integration with existing tools like version control systems (e.g., GitHub).
 	- **Key Deliverable**:
 		- Comprehensive testing reports outlining detected vulnerabilities, security scores, and areas for improvement in future iterations.
-- ### **6. Maintenance and Continuous Improvement**
+- ### **6. Maintenance | Patching Vulns**
 	- **Objective**: Ensure ongoing security by continuously updating and fine-tuning the models and mechanisms based on new data and threats.
 		- Regularly update the vulnerability databases and machine learning models to address newly discovered vulnerabilities and adapt to evolving security challenges.
 		- Monitor the system for false positives and negatives, adjusting thresholds and algorithms as necessary.
 		- Plan periodic **security reviews** and **re-assessments** using QSA and VPM to maintain the system’s security posture over time.
+			- Patch any vulns if found
 	- **Key Deliverable**:
 		- A long-term maintenance plan, incorporating regular updates, security reviews, and feedback loops to ensure the system remains secure against emerging threats.
 
@@ -313,7 +315,6 @@ The OWASP (Open Web Application Security Project) guidelines provide best practi
 |                       | **Information Disclosure** | External entity accesses/intercepts sensitive data from the banking system.                      | Enforce encryption, secure authentication for third-party access, and compliance with security standards (OAuth, token-based access). |
 |                       | **Denial Of Service**      | External users overwhelm the banking system with requests, causing service outage.               | Implement rate-limiting, IP blocking, and deploy DDoS protection solutions.                                                           |
 |                       | **Elevation of Privilege** | External entity exploits vulnerability to gain higher-level access (e.g., user to admin).        | Use RBAC, strict authorization checks, and regular security testing for external-facing functionalities.                              |
-
 
 ---
 
