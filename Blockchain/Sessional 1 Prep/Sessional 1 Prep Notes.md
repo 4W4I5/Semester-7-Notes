@@ -7,7 +7,12 @@
 
 # Chapter 2: Decentralized P2P Currency
 ## Currency
+- May(not) have intrinsic value
+	- Allows to store value instead of the object itself
 
+### Types of Currency
+| **Attributes** | **Ancient Coinage** | **Paper Currency** | **Fiat Currency** | **Electronic Currency**
+| -------------- | ------------------- | ------------------ | ----------------- |
 
 ---
 
