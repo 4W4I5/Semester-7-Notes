@@ -85,10 +85,11 @@ Fixing security issues early in the SDLC is much more cost-effective than addres
 Deploying software securely involves **hardening** the application, which means removing unnecessary services and ensuring secure configuration. Post-deployment, it’s crucial to monitor security logs and conduct regular audits to identify any suspicious activities.
 
 ## **Misuse Cases**
-- A misuse case details how the system can be attacked or misused, focusing on security threats rather than system errors.
-	- Draw the team’s attention to security issues.
-	- Help identify potential attack vectors early in the project.
-	- Ensure security is part of functional requirements, not just an afterthought.
+- ### Definition
+	- A misuse case details how the system can be attacked or misused, focusing on security threats rather than system errors.
+		- Draw the team’s attention to security issues.
+		- Help identify potential attack vectors early in the project.
+		- Ensure security is part of functional requirements, not just an afterthought.
 - ### Examples:
 	- **Defacing a website**:
 		- An attacker’s goal might be to alter or vandalize a website's content.
@@ -138,6 +139,11 @@ Security requirements define the conditions that a software system must meet to 
 	- **Example**: DVD players rely on encryption keys to decrypt movies, but the algorithm itself is publicly known.
 
 ### **Security Design Principles**
+
+> [!NOTE]
+> - **Fail-Safe Defaults** can be linked to **Accountability** (A).
+> - **Psychological Acceptability** connects with **Least Astonishment** (L).
+> - **Complete Mediation** connects with **Accountability** (A).
 
 **"PLASTIC MOLES"**
 1. **P** – **Principle of Least Privilege**
