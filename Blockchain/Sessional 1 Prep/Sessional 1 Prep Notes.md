@@ -20,6 +20,13 @@
 | **Electronic Currency**          |                |                   |
 | **Non-Fiat Electronic Currency** |                |                   |
 
+### Challenges of P2P Currency
+
+### BitCoin at a high level
+
+### Mining
+
+
 ---
 
 # Chapter 3: Intro Crypto & Cryptocurrencies
