@@ -5,7 +5,7 @@
 | 3                 | Intro to Crypto & Cryptocurrencies    | :warning:   |
 | 4                 | How bitcoin achieves decentralization | :warning:   |
 
-# Chapter 2: Decentrailized P2P Currency
+# Chapter 2: Decentralized P2P Currency
 
 ---
 
@@ -100,7 +100,7 @@
     - Transactions are broadcast to all nodes. Each node validates them by checking the balance of the sender and verifying signatures.
 - **Mempool**:
     - Unconfirmed transactions wait in the **mempool** until miners include them in a block.
-	    - They have a continuation number of 0, it gets set to 1 when its posted on the blockchain. 
+	    - They have a continuation number of 0, it gets set to 1 when its posted on the blockchain.
     - Miners typically prioritize transactions based on the attached fees.
 - **Miner Reward**:
     - Miners receive the block reward and transaction fees. They tend to prioritize transactions with higher fees to maximize their earnings.
