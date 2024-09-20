@@ -11,9 +11,15 @@
 	- Allows to store value instead of the object itself
 
 ### Types of Currency
-| **Types of Currency** | **Advantages** | **Disadvantages** |
-| --------------------- | -------------- | ----------------- |
-|                       |                |                   |
+| **Types of Currency**            | **Advantages** | **Disadvantages** |
+| -------------------------------- | -------------- | ----------------- |
+| **Ancient Coinage**              |                |                   |
+| **Paper Currency**               |                |                   |
+| **Fiat Currency**                |                |                   |
+| **Physical Currency**            |                |                   |
+| **Electronic Currency**          |                |                   |
+| **Non-Fiat Electronic Currency** |                |                   |
+|                                  |                |                   |
 
 ---
 
