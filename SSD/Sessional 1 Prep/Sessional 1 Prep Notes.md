@@ -186,6 +186,8 @@ Security requirements define the conditions that a software system must meet to 
 The OWASP (Open Web Application Security Project) guidelines provide best practices for securing software at the use case level.
 
 > [!NOTE]
+> !!!!!!! This is not perfect at all but not much i can do !!!!!!!
+>
 > **"A DYNAMIC SAFEGUARD FRAMEWORK STRENGTHENS SOFTWARE DEFENSES"**
 > - **A** – Authentication (1)
 > - **D** – Data Validation (3)
