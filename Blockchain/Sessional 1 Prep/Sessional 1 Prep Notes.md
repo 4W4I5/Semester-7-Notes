@@ -6,6 +6,8 @@
 | 4                 | How bitcoin achieves decentralization | :warning:   |
 
 # Chapter 2: Decentralized P2P Currency
+## Currency
+
 
 ---
 
