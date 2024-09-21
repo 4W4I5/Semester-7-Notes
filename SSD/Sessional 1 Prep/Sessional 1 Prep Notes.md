@@ -155,7 +155,7 @@ Security requirements define the conditions that a software system must meet to 
 > 2. **L** – **Layering**
 > 3. **A** – **Accountability (Check Every Access)**
 > 4. **S** – **Separation of Privilege**
-> 5. **T** – **Transparency (Open Design)**
+> 5. **T** – **Transparency**
 > 6. **I** – **Isolation**
 > 7. **C** – **Compartmentalization (Least Common Mechanism)**
 > 8. **M** – **Modularity**
