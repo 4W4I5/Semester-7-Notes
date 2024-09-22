@@ -147,3 +147,11 @@
 - `argv`: Pointer to the argument vector for the program (usually from `main`).
 - `size`: Pointer to store the number of processes in the communicator.
 - `rank`: Pointer to store the rank of the calling process.
+
+
+- **Question**: What is the one extra parameter used in MPI_Recv() that is not used in MPI_Send(), and in what circumstances would it be of greater importance?
+	- **Answer**:
+		- The status parameter (of MPI_Status type) is the extra parameter. It may be of greater importance when we call the MPI_Recv() using wildcards for either source or tag, or possibly both. This parameter provides us with information on the (i) source, (ii) tag, and (iii) error from the incoming message from another process.
+- **Question**: Single-Program-Multiple-Data (SPMD) is similar to what in Flynn's taxonomy
+	- **Answer**:
+		- MIMD
