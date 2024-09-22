@@ -1,7 +1,7 @@
 | Chapter<br>Number | Chapter<br>Name                       | Status             |
 | ----------------- | ------------------------------------- | ------------------ |
 | 1                 | Introduction                          | Skipped :x:        |
-| 2                 | Towards decentralized P2P Currency    | :white_check_mark: | 
+| 2                 | Towards decentralized P2P Currency    | :white_check_mark: |
 | 3                 | Intro to Crypto & Cryptocurrencies    | :white_check_mark: |
 | 4                 | How bitcoin achieves decentralization | :white_check_mark: |
 
