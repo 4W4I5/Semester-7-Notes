@@ -43,8 +43,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blockchain/Sessional 1 Prep/Sessional 1 Prep Notes.md",
+                "file": "PDC/Sessional 1 Prep/Sessional 1 Prep Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blockchain/Sessional 1 Prep/Sessional 1 Prep Notes.md",
+                "file": "PDC/Sessional 1 Prep/Sessional 1 Prep Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blockchain/Sessional 1 Prep/Sessional 1 Prep Notes.md"
+                "file": "PDC/Sessional 1 Prep/Sessional 1 Prep Notes.md"
               }
             }
           },
@@ -195,11 +194,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "2cedba32d6cf2723",
+  "active": "75b5ed2072afd494",
   "lastOpenFiles": [
-    "PDC/Sessional 1 Prep/Sessional 1 Prep Notes.md",
-    "Blockchain/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "IA/Sessional 1 Prep/Sessional 1 Prep Notes.md",
+    "Blockchain/Sessional 1 Prep/Sessional 1 Prep Notes.md",
+    "PDC/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "SSD/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "README.md",
     "Blockchain/Class Notes/5 - Blockchain 3rd September, 2024.md",
