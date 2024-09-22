@@ -5,121 +5,120 @@
 | 3                 | MPI P2P                | :warning: |
 
 ---
+# **1. Parallel and Distributed Computing (PDC) Overview**
 
-# **Parallel and Distributed Computing (PDC) Overview**
+## **Introduction to Parallel and Distributed Computing**
+- ### **Parallel Computing**
+	-
+- ### **Distributed Computing**
+- ### **Differences Between Parallel and Distributed Computing**
 
-## **1. Introduction to Parallel and Distributed Computing**
-### **1.1 Parallel Computing**
-### **1.2 Distributed Computing**
-### **1.3 Differences Between Parallel and Distributed Computing**
+## **Goals and Importance of PDC**
+- ### **Why Use Parallel Computing?**
+- ### **Why Use Distributed Computing?**
 
-## **2. Goals and Importance of PDC**
-### **2.1 Why Use Parallel Computing?**
-### **2.2 Why Use Distributed Computing?**
+## **Challenges in Single-Core Processors**
+- ### **Moore’s Law**
+- ### **Power Consumption**
+- ### **Heat Dissipation**
+- ### **Limits of Single-Core Processors**
 
-## **3. Challenges in Single-Core Processors**
-### **3.1 Moore’s Law**
-### **3.2 Power Consumption**
-### **3.3 Heat Dissipation**
-### **3.4 Limits of Single-Core Processors**
+## **Multi-Core and Many-Core Processors**
+- ### **Introduction to Multi-Core Processors**
+- ### **Benefits of Multi-Core over Single-Core**
+- ### **Examples of Multi-Core Architectures**
+- ### **The New Moore’s Law and Multi-core Era**
 
-## **4. Multi-Core and Many-Core Processors**
-### **4.1 Introduction to Multi-Core Processors**
-### **4.2 Benefits of Multi-Core over Single-Core**
-### **4.3 Examples of Multi-Core Architectures**
-### **4.4 The New Moore’s Law and Multi-core Era**
+## **Parallelization Strategy**
+- ### **Problem Understanding**
+- ### **Partitioning and Decomposition**
+	- #### **Domain Decomposition**
+	- #### **Functional Decomposition**
+	- #### **Fine-Grained vs Coarse-Grained Tasks**
+- ### **Task Assignment**
+- ### **Orchestration and Mapping**
 
-## **5. Parallelization Strategy**
-### **5.1 Problem Understanding**
-### **5.2 Partitioning and Decomposition**
-#### **5.2.1 Domain Decomposition**
-#### **5.2.2 Functional Decomposition**
-#### **5.2.3 Fine-Grained vs Coarse-Grained Tasks**
-### **5.3 Task Assignment**
-### **5.4 Orchestration and Mapping**
+## **Communication in Parallel and Distributed Systems**
+- ### **Inter-Task Communication**
+	- #### **Latency and Bandwidth**
+- ### **Synchronous vs Asynchronous Communication**
+- ### **Communication Patterns**
+	- #### **Point-to-Point Communication**
+	- #### **Collective Communication**
 
-## **6. Communication in Parallel and Distributed Systems**
-### **6.1 Inter-Task Communication**
-#### **6.1.1 Latency and Bandwidth**
-### **6.2 Synchronous vs Asynchronous Communication**
-### **6.3 Communication Patterns**
-#### **6.3.1 Point-to-Point Communication**
-#### **6.3.2 Collective Communication**
+## **Synchronization Mechanisms**
+- ### **Barrier Synchronization**
+- ### **Locks and Semaphores**
+- ### **Deadlocks and Avoiding Synchronization Issues**
 
-## **7. Synchronization Mechanisms**
-### **7.1 Barrier Synchronization**
-### **7.2 Locks and Semaphores**
-### **7.3 Deadlocks and Avoiding Synchronization Issues**
+## **Granularity in Parallel Computing**
+- ### **Fine-Grained Parallelism**
+- ### **Coarse-Grained Parallelism**
+- ### **Trade-offs Between Fine and Coarse Grains**
 
-## **8. Granularity in Parallel Computing**
-### **8.1 Fine-Grained Parallelism**
-### **8.2 Coarse-Grained Parallelism**
-### **8.3 Trade-offs Between Fine and Coarse Grains**
+## **Examples of Parallel and Distributed Systems**
+- ### **Chip Multi-Processors (CMP)**
+- ### **Distributed Systems (Clusters, Grids, Cloud)**
 
-## **9. Examples of Parallel and Distributed Systems**
-### **9.1 Chip Multi-Processors (CMP)**
-### **9.2 Distributed Systems (Clusters, Grids, Cloud)**
-
-## **10. Conclusion**
-### **10.1 Future Trends in Parallel and Distributed Computing**
-### **10.2 Key Takeaways**
-
----
-
-# **Parallel Architectures Overview**
-
-## **1. Introduction to Parallel Architectures**
-### **1.1 Definition and Importance**
-### **1.2 Types of Parallel Architectures**
-
-## **2. Flynn’s Taxonomy**
-### **2.1 Overview of Flynn’s Taxonomy**
-#### **2.1.1 Single Instruction, Single Data Stream (SISD)**
-#### **2.1.2 Single Instruction, Multiple Data Stream (SIMD)**
-#### **2.1.3 Multiple Instruction, Single Data Stream (MISD)**
-#### **2.1.4 Multiple Instruction, Multiple Data Stream (MIMD)**
-
-## **3. Shared vs. Distributed Memory Systems**
-### **3.1 Symmetric Multiprocessors (SMP)**
-#### **3.1.1 Architecture and Features of SMP**
-#### **3.1.2 Advantages of SMP**
-### **3.2 Non-Uniform Memory Access (NUMA)**
-#### **3.2.1 NUMA Architecture and Features**
-#### **3.2.2 Cache-Coherent NUMA (CC-NUMA)**
-#### **3.2.3 Pros and Cons of NUMA**
-### **3.3 Distributed Memory Systems**
-#### **3.3.1 Distributed Memory Characteristics**
-#### **3.3.2 Message Passing in Distributed Memory**
-
-## **4. Hybrid Systems**
-### **4.1 Combination of Shared and Distributed Memory**
-### **4.2 Example of Hybrid Architectures**
-
-## **5. Cluster Computing**
-### **5.1 Overview of Cluster Systems**
-### **5.2 Characteristics of Clusters**
-### **5.3 Benefits of Clusters**
-### **5.4 Cluster System Architecture**
-
-## **6. Grid Computing**
-### **6.1 Introduction to Grid Computing**
-### **6.2 Grid Computing Architecture**
-### **6.3 Differences Between Clusters and Grids**
-
-## **7. Cloud Computing**
-### **7.1 Introduction to Cloud Computing**
-### **7.2 Characteristics of Cloud Computing**
-### **7.3 Cloud Service Models**
-### **7.4 Cloud Providers and Infrastructure**
-
-## **8. Supercomputers**
-### **8.1 Definition and Characteristics**
-### **8.2 Performance Measurement (FLOPS)**
-### **8.3 Top Supercomputers List**
+## **Conclusion**
+- ### **Future Trends in Parallel and Distributed Computing**
+- ### **Key Takeaways**
 
 ---
 
-# MPI P2P
+# **2. Parallel Architectures**
+
+## **Introduction to Parallel Architectures**
+- ### **Definition and Importance**
+- ### **Types of Parallel Architectures**
+
+## **Flynn’s Taxonomy**
+- ### **Overview of Flynn’s Taxonomy**
+	- #### **Single Instruction, Single Data Stream (SISD)**
+	- #### **Single Instruction, Multiple Data Stream (SIMD)**
+	- #### **Multiple Instruction, Single Data Stream (MISD)**
+	- #### **Multiple Instruction, Multiple Data Stream (MIMD)**
+
+## **Shared vs. Distributed Memory Systems**
+- ### **Symmetric Multiprocessors (SMP)**
+	- #### **Architecture and Features of SMP**
+	- #### **Advantages of SMP**
+- ### **Non-Uniform Memory Access (NUMA)**
+	- #### **NUMA Architecture and Features**
+	- #### **Cache-Coherent NUMA (CC-NUMA)**
+	- #### **Pros and Cons of NUMA**
+- ### **Distributed Memory Systems**
+	- #### **Distributed Memory Characteristics**
+	- #### **Message Passing in Distributed Memory**
+
+## **Hybrid Systems**
+- ### **Combination of Shared and Distributed Memory**
+- ### **Example of Hybrid Architectures**
+
+## **Cluster Computing**
+- ### **Overview of Cluster Systems**
+- ### **Characteristics of Clusters**
+- ### **Benefits of Clusters**
+- ### **Cluster System Architecture**
+
+## **Grid Computing**
+- ### **Introduction to Grid Computing**
+- ### **Grid Computing Architecture**
+- ### **Differences Between Clusters and Grids**
+
+## **Cloud Computing**
+- ### **Introduction to Cloud Computing**
+- ### **Characteristics of Cloud Computing**
+- ### **Cloud Service Models**
+- ### **Cloud Providers and Infrastructure**
+
+## **Supercomputers**
+- ### **Definition and Characteristics**
+- ### **Performance Measurement (FLOPS)**
+- ### **Top Supercomputers List**
+---
+
+# **3. MPI P2P**
 
 | **MPI Function** | **Type**                | **Use**                                                                    | **Functional Definition**                                                                                                          | **Arguments**                                                                                             | **Returns**                                                                  |
 | ---------------- | ----------------------- | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
