@@ -1,8 +1,8 @@
-| Chapter<br>Number | Chapter<br>Name        | Status    |
-| ----------------- | ---------------------- | --------- |
-| 1                 | PDC Overview           | :warning: |
-| 2                 | Parallel Architectures | :warning: |
-| 3                 | MPI P2P                | :warning: |
+| Chapter<br>Number | Chapter<br>Name        | Status             |
+| ----------------- | ---------------------- | ------------------ |
+| 1                 | PDC Overview           | :white_check_mark: |
+| 2                 | Parallel Architectures | :white_check_mark: |
+| 3                 | MPI P2P                | :white_check_mark: | 
 
 ---
 
@@ -182,57 +182,111 @@
 
 # **2. Parallel Architectures**
 
+>[!NOTE]
+
+> Nothing special, copied content from slides and restructured them
+
 ## **Introduction to Parallel Architectures**
-- ### **Definition and Importance**
-- ### **Types of Parallel Architectures**
+- **Definition**: Systems designed for simultaneous task execution across multiple processors.
+- **Importance**: Enhances computational speed and efficiency for large-scale problems.
+- **Types**:
+	- Shared Memory Systems.
+	- Distributed Memory Systems.
+	- Hybrid Systems.
 
 ## **Flynn’s Taxonomy**
-- ### **Overview of Flynn’s Taxonomy**
-	- #### **Single Instruction, Single Data Stream (SISD)**
-	- #### **Single Instruction, Multiple Data Stream (SIMD)**
-	- #### **Multiple Instruction, Single Data Stream (MISD)**
-	- #### **Multiple Instruction, Multiple Data Stream (MIMD)**
+- **Overview**: Classification of parallel systems based on instruction and data streams.
+	- **SISD**:
+		- Single processor.
+		- Single instruction on one data stream.
+		- Deterministic execution.
+	- **SIMD**:
+		- Parallel processor architecture.
+		- Single instruction applied to multiple data elements.
+		- Example: GPUs.
+	- **MISD**:
+		- Multiple processors execute different instructions on the same data.
+		- Rare in practical use.
+	- **MIMD**:
+		- Most common parallel architecture.
+		- Multiple processors execute different instructions on separate data.
+		- Examples: Multi-core processors, clusters.
 
 ## **Shared vs. Distributed Memory Systems**
-- ### **Symmetric Multiprocessors (SMP)**
-	- #### **Architecture and Features of SMP**
-	- #### **Advantages of SMP**
-- ### **Non-Uniform Memory Access (NUMA)**
-	- #### **NUMA Architecture and Features**
-	- #### **Cache-Coherent NUMA (CC-NUMA)**
-	- #### **Pros and Cons of NUMA**
-- ### **Distributed Memory Systems**
-	- #### **Distributed Memory Characteristics**
-	- #### **Message Passing in Distributed Memory**
+- **SMP (Symmetric Multiprocessors)**:
+	- Processors share memory and I/O space, communicating via shared memory (single bus).
+	- All processors have the same access time to any memory region.
+	- **Advantages**:
+		- **Performance**: Work can be executed in parallel.
+		- **Availability**: The system continues functioning even if one processor fails.
+		- **Incremental Growth**: Adding more processors enhances performance.
+		- **Scalability**: Products can range based on the number of processors.
+	- **Multithreading**: Instruction streams are divided into smaller threads and executed in parallel.
+- **NUMA (Non-Uniform Memory Access)**:
+	- All processors can access all memory regions, but access times differ depending on the memory location relative to the processor.
+	- **CC-NUMA (Cache-Coherent NUMA)**:
+		- Cache coherence is maintained across all processors, even though memory access times vary.
+	- **Motivation for NUMA**:
+		- SMP systems face scalability limits due to bus traffic (typically between 16 and 64 processors).
+		- NUMA allows larger-scale multiprocessing while retaining some of the benefits of SMP.
+	- **Operation**:
+		- Each processor has its own L1 and L2 caches, and each node has its own main memory.
+		- Nodes are connected through a network, and processors view all memory as a single addressable space.
+		- Memory requests are handled in order: L1 cache → L2 cache → local memory → remote memory.
+	- **Pros**: Performs better at higher levels of parallelism without major software changes.
+	- **Cons**: Performance degrades with excessive remote memory access.
+- **Distributed Memory Systems**:
+	- Each processor has private memory, and data exchange occurs explicitly through message passing (e.g., using the MPI library).
+	- The user has full control over data placement and management.
 
 ## **Hybrid Systems**
-- ### **Combination of Shared and Distributed Memory**
-- ### **Example of Hybrid Architectures**
+- **Definition**: A hybrid system combines distributed memory with multiprocessor shared memory nodes, making it the most common parallel architecture.
+- **Architecture**: Typically involves distributed memory systems where each node contains shared memory multiprocessors.
+- **Example**: Supercomputers that use shared memory within individual nodes and distributed memory between nodes, connected via an interconnection network.
+- **Use Case**: Commonly used to solve large-scale problems through distributed systems, utilizing paradigms such as cluster, grid, and cloud computing.
 
 ## **Cluster Computing**
-- ### **Overview of Cluster Systems**
-- ### **Characteristics of Clusters**
-- ### **Benefits of Clusters**
-- ### **Cluster System Architecture**
+- **Definition**: A loosely coupled collection of independent computers (uni-processor systems or SMPs) that work together as one unit.
+- **Characteristics**:
+	- High performance and availability.
+	- Each computer (node) works as part of a unified resource.
+	- Clusters do not have shared memory and communicate via network connections.
+- **Benefits**: Scalability and superior price/performance ratio.
+- **Architecture**: Nodes are interconnected, with middleware providing a unified interface, single point of entry, and unified job management system.
+- **Cluster vs. SMP**:
+	- SMP is easier to manage, has lower physical space requirements, and uses less power.
+	- Clusters offer superior scalability and availability due to redundancy.
 
 ## **Grid Computing**
-- ### **Introduction to Grid Computing**
-- ### **Grid Computing Architecture**
-- ### **Differences Between Clusters and Grids**
+- **Definition**: A system of heterogeneous, geographically dispersed computers that provide CPU power and data storage capacity for applications executed across multiple locations.
+- **Architecture**: Decentralized and distributed, with resources coordinated through general-purpose protocols and interfaces.
+- **Differences from Clusters**:
+	- Clusters are localized, while grids are globally distributed.
+	- Grids provide more decentralized resource control compared to clusters.
 
 ## **Cloud Computing**
-- ### **Introduction to Cloud Computing**
-- ### **Characteristics of Cloud Computing**
-- ### **Cloud Service Models**
-- ### **Cloud Providers and Infrastructure**
+- **Definition**: Network-based computing that offers on-demand services via the internet, hiding the complexity of the underlying infrastructure.
+- **Characteristics**:
+	- Always available, anywhere, anytime.
+	- Pay-as-you-use model.
+	- Elasticity: Ability to scale up or down based on demand.
+	- Uses a shared pool of configurable resources.
+- **Service Models**:
+	- **IaaS**: Infrastructure as a Service.
+	- **PaaS**: Platform as a Service.
+	- **SaaS**: Software as a Service.
 
 ## **Supercomputers**
-- ### **Definition and Characteristics**
-- ### **Performance Measurement (FLOPS)**
-- ### **Top Supercomputers List**
+- **Definition**: The most powerful computing systems in terms of processing capacity and calculation speed at the time of their introduction.
+- **Performance Measurement**:
+	- Measured in FLOPS (Floating Point Operations Per Second).
+	- **LINPACK Benchmark**: Officially used to evaluate supercomputer speed.
+
+
 ---
 
 # **3. MPI P2P**
+- MPI is MIMD/SPMD type of parallelism
 
 | **MPI Function** | **Type**                | **Use**                                                                    | **Functional Definition**                                                                                                          | **Arguments**                                                                                             | **Returns**                                                                  |
 | ---------------- | ----------------------- | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
@@ -264,6 +318,6 @@
 - **Question**: What is the one extra parameter used in MPI_Recv() that is not used in MPI_Send(), and in what circumstances would it be of greater importance?
 	- **Answer**:
 		- The status parameter (of MPI_Status type) is the extra parameter. It may be of greater importance when we call the MPI_Recv() using wildcards for either source or tag, or possibly both. This parameter provides us with information on the (i) source, (ii) tag, and (iii) error from the incoming message from another process.
-- **Question**: Single-Program-Multiple-Data (SPMD) is similar to what in Flynn's taxonomy
+- **Question**: Single-Program-Multiple-Data (SPMD) is similar to what in Flynn's taxonomy. Hint: This is what MPI is.
 	- **Answer**:
 		- MIMD
