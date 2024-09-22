@@ -1,8 +1,8 @@
 | Chapter<br>Number | Chapter<br>Name                       | Status             |
 | ----------------- | ------------------------------------- | ------------------ |
 | 1                 | Introduction                          | Skipped :x:        |
-| 2                 | Towards decentralized P2P Currency    | :warning:          |
-| 3                 | Intro to Crypto & Cryptocurrencies    | :warning:          |
+| 2                 | Towards decentralized P2P Currency    | :white_check_mark: | 
+| 3                 | Intro to Crypto & Cryptocurrencies    | :white_check_mark: |
 | 4                 | How bitcoin achieves decentralization | :white_check_mark: |
 
 # Chapter 2: Decentralized P2P Currency
@@ -20,7 +20,6 @@
     - Hard to manage and store large amounts of physical currency.
     - Requires raw materials to mint.
     - Value fluctuates due to speculation.
-
 - #### Paper Currency
   - **Type**: Exchangeable commodity
   - **Value**: Determined by the issuing authority based on gold reserves.
@@ -31,7 +30,6 @@
     - Risk of counterfeiting.
     - Prone to runaway inflation if too much currency is printed.
     - Bank runs can occur if banks don’t have enough gold to convert.
-
 - #### Fiat Currency
   - **Type**: Not linked to precious metals, similar to paper currency.
   - **Use**: Can be electronic, denominated by fiat.
@@ -122,28 +120,158 @@
 
 # Chapter 3: Intro Crypto & Cryptocurrencies
 ## Cryptographic Hash Functions
-## Hash Pointers & Data Structures
-- Hash Pointers and Data Structures
-	- hash pointer
-		- pointer to where previous block is stored + cryptographic hash of that block
-			- chain is structured in a way that a block that is not the genesis block will keep a tamper-sensitive record of all previous blocks in the chains and a pointer to the last directly accessible node
-		- allows easy retrieval and then verification
-		- NOTE:: Keep in mind the 3 properties of hash when solving hash problems later on
-	- merkle tree
-		- used for transaction verficaiton/checking if transaction exists in tree/chain
-		- binary tree formed by hash pointers, stores hash of the chain not the actual data
-			- if odd number of transactions to calc, duplicate the last stored hash node.
-		- chain nodes are leaf nodes
-		- root of tree aka as merkle root, i.e. hash of the whole chain/tree. represents integrity of entire set of data, value needs to be stored securely/obtained via a trustworthy mechanism
-		- first transaction like a binary tree, is at the bottom leftmost
-		- provides traversal efficiency
-			- to check a certain block, use merkle proof
-				- get one transaction, use hash of siblings to generate merkle root and compare w stored value
-		- verifies membership in O(logn)
-## Public Key Cryptography
-## Public Key as Identities
-## Simple Cryptocurrencies
----
+
+A **hash function** processes an input of arbitrary size and produces a fixed-size output (e.g., 256 bits). It must be computationally efficient, meaning the time to compute the hash should scale linearly with the input size. A general-purpose hash function can be used for data structures like hash tables, but **cryptographic hash functions** require additional properties:
+
+1. **Collision-Resistance**:
+	- A cryptographic hash function is resistant to collisions if it is computationally infeasible to find two distinct inputs (x and y, where x ≠ y) such that `H(x) = H(y)`. Although collisions theoretically exist (because the input space is infinite and the output space is finite), the goal is to make finding them practically impossible.
+	- Example: For SHA-256, you’d need to hash 2^128 inputs before finding a collision, which would take more time than the universe’s age, even with modern computing power.
+1. **Hiding**:
+	- If `y = H(x)`, it must be infeasible to figure out the input `x` from the output `y`. This requires the input `x` to be unpredictable, often achieved by combining it with a randomly chosen value (nonce).
+	- For example, if you hash "heads" or "tails," it's easy to reverse the process if there are only two options. To prevent this, the input is typically combined with a random nonce: `H(r || x)`.
+1. **Puzzle-Friendliness**:
+	- A hash function is puzzle-friendly if, given a target output `y`, finding an input `x` such that `H(k || x) = y` is computationally infeasible. This property ensures that no shortcuts exist in the computation, forcing attackers to perform a brute-force search.
+### Applications of Hash Functions
+- **Message Digests**:
+	- Hashes can be used to verify the integrity of data without storing or comparing the entire file. For instance, Alice can hash a file before uploading it to the cloud and later verify that the file hasn’t been tampered with by checking the hash.
+- **Commitment Schemes**:
+	- A **commitment** is like placing a secret value inside a sealed envelope, where you can’t change the content after committing, but the content remains hidden until revealed.
+	- A commitment scheme is constructed using a cryptographic hash, where the commitment is computed as `H(nonce || msg)`, and the commitment is verified by providing both `nonce` and `msg` to ensure it matches the original.
+## Hash Pointers and Data Structures
+
+A **hash pointer** is a data structure that combines a pointer to data with the cryptographic hash of that data. The hash serves two purposes:
+
+1. It points to the location of the data.
+2. It verifies the integrity of the data, ensuring that it hasn’t been altered.
+The hash pointer allows us to build more complex data structures like **blockchains** and **Merkle trees** with tamper-evident properties.
+
+### **Blockchain Using Hash Pointers**
+- In a **blockchain**, each block contains data and a hash pointer to the previous block, forming a chain of blocks. The hash pointer ensures that any tampering with a block’s data would break the hash chain.
+- The blockchain is **tamper-evident**: If an adversary modifies the data in any block (say, block `k`), the hash pointer in the subsequent block (`k+1`) would no longer match, revealing the tampering.
+- This makes blockchains suitable for building systems that need tamper-evidence, such as **cryptocurrencies**, where blocks represent transaction histories.
+- The first block in the chain is called the **genesis block**, and the head of the chain holds the hash pointer that links the entire blockchain. As long as the head pointer is secure, the entire chain remains tamper-evident.
+
+### **Merkle Trees**
+- A **Merkle tree** is a binary tree where each leaf node represents a block of data, and every non-leaf node stores the hash of its child nodes.
+- To verify that a particular data block exists in the tree, you don’t need to hash the entire tree. Instead, you can compute hashes along the path from the leaf node to the root, comparing only a logarithmic number of nodes.
+- **Proof of Membership**: If someone wants to prove that a particular data block is in a Merkle tree, they only need to provide the block itself and the hash pointers along the path from the block to the root of the tree. This allows quick verification without needing the entire tree.
+- **Proof of Non-Membership**: In a **sorted Merkle tree** (where leaf nodes are sorted lexicographically), it’s possible to prove that a specific block doesn’t exist. To do so, you show the neighboring blocks before and after the missing block’s position. If these two blocks are consecutive, it proves the absence of the queried block.
+
+#### Merkle Tree Use Case in Cryptocurrencies:
+- **Efficient Membership Proof**: Instead of verifying the entire blockchain for transaction history, cryptocurrencies like **Bitcoin** use Merkle trees to verify specific transactions efficiently. The root of the Merkle tree represents the entire set of transactions in a block, and the tree allows anyone to verify a specific transaction’s inclusion by providing just the relevant hashes along the path to the root.
+
+### **Merkle-Damgård Construction**
+- This construction extends a hash function that operates on fixed-size inputs into one that works on inputs of arbitrary size.
+- The input data is broken into blocks, each block is hashed using the hash function, and the result of each hash is passed into the next block. For the first block, an **initialization vector (IV)** is used, which is a predetermined constant.
+- The Merkle-Damgård construction ensures that if the underlying fixed-length hash function is collision-resistant, the overall function will be collision-resistant.
+
+## Digital Signatures
+
+A **digital signature** is the digital equivalent of a handwritten signature. It guarantees that:
+
+1. Only the holder of the private key can generate the signature.
+2. Anyone with the public key can verify the signature’s validity.
+3. The signature is tied to the specific document and cannot be transferred to another.
+
+### **Signature Scheme Components**
+1. **Key Generation**: A pair of keys (public and private) is generated.
+2. **Signing**: The private key signs a message.
+3. **Verification**: The public key verifies the signature.
+
+### **Properties**:
+1. **Unforgeability**:
+	- It’s computationally infeasible for an attacker to forge a valid signature without the private key, even if they have access to the public key and other signed messages.
+
+2. **Existential Unforgeability**:
+	- An attacker cannot forge a valid signature for a new message, even after seeing multiple valid signatures for other messages.
+
+### **ECDSA**: Bitcoin’s signature scheme is based on **Elliptic Curve Digital Signature Algorithm (ECDSA)**, a secure elliptic curve-based scheme.
+- **Private Key**: 256 bits
+- **Public Key**: 512 bits (uncompressed) or 257 bits (compressed)
+- **Message to Sign**: 256 bits (usually a hash of the actual message)
+
+### **Signature of Hash Pointers**:
+- In systems like blockchains, signing a **hash pointer** is equivalent to signing the entire chain of data it points to. This means that signing the head of a blockchain effectively signs all the previous blocks.
+
+## Public Keys as Identities
+
+In decentralized systems, a **public key** acts as an identity. If a message is signed by a private key, and the signature can be verified using the public key, then it is as if the public key “spoke” the message.
+
+### **Decentralized Identity Management**
+- In decentralized systems like **Bitcoin**, users generate their own identities by creating a new key pair. No central authority is needed to issue identities or manage registration.
+- These identities are referred to as **addresses** in Bitcoin, which are just hashes of public keys. Users can generate and discard new identities freely, enhancing privacy.
+
+
+## Simple Cryptocurrency Models
+### **GoofyCoin**
+- **Creation**: Goofy can create new coins by signing a statement with a unique coin ID.
+- **Transfer**: Owners transfer coins by signing statements that specify the new owner’s public key.
+- **Double-Spending Problem**: GoofyCoin doesn’t prevent double-spending, where the same coin is transferred to multiple recipients.
+
+### **ScroogeCoin**
+- **Append-Only Ledger**: Scrooge publishes a **blockchain** containing all transactions. This prevents double-spending, as any transaction not in the blockchain is invalid.
+- **Centralization Issue**: Scrooge has control over the ledger and can deny transactions or mint new coins arbitrarily, making the system centralized.
+
+## Exercises From the Book
+### 1. Authenticated Data Structures (SecureBox)
+
+**Question**: You are designing SecureBox, an authenticated online file storage system. For simplicity, there is a single folder. Users must be able to add, edit, delete, retrieve files, and list the folder contents. When a user retrieves a file, SecureBox must provide proof that the file hasn’t been tampered with since its last update. If a file doesn’t exist, the server must report that — with proof. The goal is to minimize proof size, verification time, and digest size. Can you devise a protocol where proof size, verification time, and digest size are all sublinear?
+
+**Answer**:
+
+To achieve sublinear efficiency, we can use **Merkle Trees**. Here’s how the solution works:
+
+- **Merkle Tree Structure**: Each file is stored as a leaf node in a Merkle tree. The root of the Merkle tree acts as the **digest** that the user stores.
+- **Operations (Add/Delete/Edit)**:
+	- For these operations, only the affected leaf node and the path to the root need updating. This ensures sublinear changes to the tree.
+- **Verification**:
+	- When retrieving a file, the server provides the file’s hash and the hash values along the path to the root.
+	- The user verifies the integrity by recomputing the path from the file to the root, checking against the stored digest.
+- **Proof Size and Verification Time**:
+	- Since the proof only requires the path from the file to the root, the proof size and verification time are `O(log n)`, where `n` is the number of files.
+- **Digest Size**:
+	- The digest remains a constant `O(1)`, as it only stores the root hash.
+### 2. Birthday Attack
+
+**Question 1**: Show that the time-space trade-off is parameterizable: we can achieve any space complexity between `O(1)` and `O(2^(n/2))` with a corresponding decrease in time complexity.
+
+**Answer**:
+
+The **time-space trade-off** is parameterized by choosing a variable number `t` between `1` and `2^(n/2)` for the space complexity. By storing `t` hash outputs:
+
+- The time complexity to find a collision is reduced to `O(2^n / t^2)`.
+- The space complexity is `O(t)`.
+Thus, we can adjust `t` to achieve any space complexity between `O(1)` (with time `O(2^n)`) and `O(2^(n/2))` (with time `O(2^(n/2))`).
+
+**Question 2**: Is there an attack for which the product of time and space complexity is `o(2^n)`?
+
+**Answer**:
+
+No, there is no known attack where the product of time and space complexity is less than `2^n`. The **birthday paradox** provides the best known trade-off, where the product remains `O(2^n)`. Achieving an attack with a product complexity of `o(2^n)` is currently infeasible in cryptographic contexts.
+
+### 3. Hash Function Properties
+
+**Question**: Let `H` be a hash function that is both hiding and puzzle-friendly. Consider `G(z) = H(z) || z_last`, where `z_last` represents the last bit of `z`. Show that `G` is puzzle-friendly but not hiding.
+
+**Answer**:
+
+- **Puzzle-Friendliness**:
+  `G(z)` retains the puzzle-friendliness of `H(z)` because solving for `G(z)` requires solving the hash function `H(z)`, which remains computationally hard. The additional `z_last` bit doesn’t provide shortcuts, so `G(z)` is puzzle-friendly.
+- **Not Hiding**:
+  `G(z)` is **not hiding** because `z_last`, the last bit of the input `z`, is appended directly to the output, leaking part of the input. This compromises the hiding property, as an attacker gains partial knowledge of `z`.
+
+### 4. Randomness in ScroogeCoin
+
+**Question**: In ScroogeCoin, if Mallory generates `(sk, pk)` pairs until her secret key matches someone else’s, what will she be able to do? How long will it take on average? What happens if Alice’s random number generator has a bug and her key generation produces only 1,000 distinct pairs?
+
+**Answer**:
+
+- **Matching Secret Key**:
+  If Mallory’s secret key matches someone else’s public key, she can impersonate that person by signing transactions on their behalf. However, since ScroogeCoin uses 256-bit keys, the probability of matching is `1 in 2^256`, making this attack infeasible.
+- **Average Time to Match**:
+  On average, it would take **2^256 attempts** to find a matching secret key, which is practically impossible even with immense computing power.
+- **Alice’s Bug**:
+  If Alice’s random number generator is faulty and only produces 1,000 distinct key pairs, Mallory can simply brute-force the 1,000 possibilities. This would take at most 1,000 attempts, making the system easily compromised.
 
 # Chapter 4: How bitcoin achieves decentralization
 ## Centralization vs. Decentralization
