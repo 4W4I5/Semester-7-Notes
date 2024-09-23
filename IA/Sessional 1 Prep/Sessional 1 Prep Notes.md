@@ -370,6 +370,149 @@ Questions:
 
 # Chapter 3: Legal, Ethical & Professional Issues InfoSec
 
+## Introduction
+    - Organizations have legal and ethical responsibilities to minimize liabilities and reduce risks from both electronic and physical threats.
+    - The information security professional must:
+        - Understand the current legal environment
+        - Stay updated on emerging laws and regulations
+        - Watch for new issues that require attention
+
+## Law and Ethics in Information Security
+    - **Laws**: Rules that mandate or prohibit specific behavior in society.
+    - **Ethics**: Define what is socially acceptable behavior; based on cultural mores (fixed moral attitudes or customs of a group).
+    - Laws carry sanctions imposed by governing authorities, while ethics do not have such legal enforcement.
+
+## Organizational Liability and the Need for Counsel
+    - **Liability**: The legal obligation to compensate for wrongs committed by an organization or its employees.
+    - **Restitution**: Compensation for damages caused.
+    - **Due care**: Ensuring employees know acceptable behavior and consequences of illegal actions.
+    - **Due diligence**: The continuous effort to protect others and maintain a level of security.
+    - **Jurisdiction**: The authority of a court to hear a case based on the location of the wrong.
+    - **Long-arm jurisdiction**: Extends a court’s reach beyond its local area if a connection to the territory can be established.
+
+## Policy versus Law
+    - **Policies**: Organizational expectations governing employee behavior.
+    - Policies function as internal laws within an organization and must be well-crafted, complete, and applied uniformly.
+    - **Difference**: Ignorance of law is not an acceptable defense, but ignorance of policy may be considered.
+
+### Criteria for Policy Enforcement
+    - **Dissemination**: Distribution to all employees
+    - **Review**: Employees must read and acknowledge policies
+    - **Comprehension**: Ensure employees understand the policies
+    - **Compliance**: Employees must agree to adhere to the policies
+    - **Uniform enforcement**: Policies must be consistently applied across the organization
+
+## Types of Law
+    - **Civil law**: Governs relationships and disputes between individuals and organizations.
+    - **Criminal law**: Addresses actions harmful to society and is enforced by the state.
+    - **Private law**: Regulates relationships between individuals and organizations (e.g., family, commercial, labor laws).
+    - **Public law**: Regulates the administration of government agencies and their relationships with citizens (e.g., criminal, administrative, constitutional law).
+
+## Ethics and Information Security
+    - Many professional groups have established explicit ethical guidelines for the workplace.
+    - IT and information security fields do not have universally binding codes of ethics.
+    - Professional associations and certification bodies work to establish ethical guidelines.
+    - These groups can prescribe ethical conduct but often lack enforcement powers.
+
+### Ethical Concepts in Information Security
+    - **The Ten Commandments of Computer Ethics** (from the Computer Ethics Institute):
+        1. Thou shalt not use a computer to harm others.
+        2. Thou shalt not interfere with other people’s work.
+        3. Thou shalt not snoop in other people's files.
+        4. Thou shalt not use a computer to steal.
+        5. Thou shalt not use a computer to bear false witness.
+        6. Thou shalt not copy proprietary software for which you haven’t paid.
+        7. Thou shalt not use others’ computer resources without authorization.
+        8. Thou shalt not appropriate others' intellectual output.
+        9. Thou shalt think about the social consequences of the systems you design.
+        10. Thou shalt use computers in ways that show respect for others.
+
+## Ethical Differences Across Cultures
+    - Different national cultures can have varying definitions of ethical behavior.
+    - Ethical challenges arise when behaviors accepted in one culture are unacceptable in another.
+    - Ethical conflicts can occur in scenarios like:
+        - Software license infringement
+        - Illicit use of systems
+        - Misuse of corporate resources
+
+## Ethics and Education
+    - Education is key to leveling ethical perceptions in an organization.
+    - Employees must be trained in ethical behavior, especially in information security.
+    - Proper ethical and legal training helps create informed, well-prepared, and low-risk users.
+
+## Deterring Unethical and Illegal Behavior
+    - Three causes of unethical behavior:
+        - **Ignorance**
+        - **Accident**
+        - **Intent**
+    - **Deterrence** is the best method for preventing unethical behavior through:
+        - Laws, policies, and technical controls
+    - Deterrents are effective only when:
+        - There is fear of penalty
+        - There is a high probability of being caught
+        - There is a probability of penalty being administered
+
+## Codes of Ethics and Professional Organizations
+    - Many professional organizations have established codes of conduct for members.
+    - **Codes of ethics** can positively influence judgment but are not universally enforced by employers.
+    - Information security professionals must act ethically, adhering to employer policies and legal standards.
+
+## Relevant U.S. Laws
+
+### General Computer Crime Laws
+    - **Computer Fraud and Abuse Act of 1986 (CFA Act)**: A cornerstone of U.S. computer-related federal laws.
+    - **National Information Infrastructure Protection Act of 1996**: Modified the CFA and increased penalties for certain crimes.
+    - **USA PATRIOT Act of 2001**: Expanded law enforcement’s power to combat terrorism.
+    - **Computer Security Act of 1987**: Established minimum security standards for federal computer systems.
+
+## Privacy
+    - Privacy is defined as the state of being free from unsanctioned intrusion.
+    - The ability to aggregate data from multiple sources has increased the potential for privacy violations.
+
+### U.S. Privacy Regulations
+    - **Federal Privacy Act of 1974**: Regulates government protection of personal information.
+    - **Electronic Communications Privacy Act of 1986**: Regulates interception of electronic communications.
+    - **Health Insurance Portability and Accountability Act of 1996 (HIPAA)**: Protects the confidentiality of healthcare data.
+    - **Gramm-Leach-Bliley Act of 1999**: Requires financial institutions to disclose their privacy policies to customers.
+
+### Identity Theft
+    - Defined by the Federal Trade Commission as the use of someone’s personal information without permission to commit fraud.
+    - Key steps for addressing identity theft include reporting it to consumer reporting agencies, closing compromised accounts, and notifying the police.
+
+## Export and Espionage Laws
+    - **Economic Espionage Act of 1996**: Protects U.S. trade secrets.
+    - **Security and Freedom Through Encryption Act of 1999 (SAFE Act)**: Ensures the right to use encryption without government interference and relaxes export restrictions.
+
+## U.S. Copyright Law
+    - Intellectual property is recognized as a protected asset under U.S. law.
+    - Copyright law extends to electronic formats, with limited use permitted for news reporting, teaching, and scholarship.
+
+## Financial Reporting
+    - **Sarbanes-Oxley Act of 2002**: Affects public companies by increasing the reliability of financial reporting and corporate governance.
+
+## Freedom of Information Act of 1966 (FOIA)
+    - Allows public access to federal records unless classified as a national security matter.
+    - Exemptions include state/local government records and private business information.
+
+## State and Local Regulations
+    - Information security professionals must understand and ensure compliance with state and local regulations related to technology and security.
+
+## International Laws and Legal Bodies
+    - International business requires sensitivity to the laws and ethical values of different countries.
+    - Political complexity and cultural differences make international laws difficult to enforce.
+
+### European Council Cyber-Crime Convention
+    - Establishes a task force to oversee global Internet security laws.
+    - Emphasizes copyright infringement prosecution but lacks effective enforcement mechanisms.
+
+### Agreement on Trade-Related Aspects of Intellectual Property Rights (TRIPS)
+    - Overseen by the WTO, TRIPS is the first international effort to protect intellectual property rights.
+    - It outlines protection, enforcement, and dispute resolution for intellectual property laws globally.
+
+### Digital Millennium Copyright Act (DMCA)
+    - The U.S. contribution to international efforts against copyright infringement.
+    - Prohibits circumvention of technological copyright protection and the trafficking of devices to do so.
+    - Excludes ISPs from certain copyright liabilities.
 
 
 ## Review Questions
@@ -408,7 +551,7 @@ Questions:
 ---
 
 
-# Chapter 4: Risk Management
+# Chapter 5: Risk Management
 
 
 ## Review Questions
