@@ -516,26 +516,47 @@ Questions:
 
 
 ## Review Questions
+
 1. What is the difference between law and ethics?
+    - Laws are rules that mandate or prohibit specific behavior in society and carry sanctions imposed by governing authorities. Ethics define socially acceptable behavior based on cultural mores and do not have legal enforcement.
 2. What is civil law, and what does it accomplish?
+    - Civil law governs relationships and disputes between individuals and organizations, providing a framework for resolving conflicts and ensuring justice.
 3. What are the primary examples of public law?
+    - Public law includes criminal law, administrative law, and constitutional law, regulating the administration of government agencies and their relationships with citizens.
 4. Which law amended the Computer Fraud and Abuse Act of 1986, and what did it change?
+    - The National Information Infrastructure Protection Act of 1996 amended the CFAA and increased penalties for certain computer-related crimes.
 5. Which law was specifically created to deal with encryption policy in the United States?
+    - The Security and Freedom Through Encryption Act of 1999 (SAFE Act) was created to ensure the right to use encryption without government interference.
 6. What is privacy in an information security context?
+    - Privacy is defined as the state of being free from unsanctioned intrusion, particularly regarding the collection and use of personal information.
 7. What is another name for the Kennedy-Kassebaum Act (1996), and why is it important to organizations that are not in the health care industry?
+    - Health Insurance Portability and Accountability Act (HIPAA). It is important because it mandates the protection of personal health information, impacting how organizations handle sensitive data.
 8. If you work for a financial service organization such as a bank or credit union, which 1999 law affects your use of customer data? What other affects does it have?
+    - The Gramm-Leach-Bliley Act of 1999 affects the use of customer data, requiring financial institutions to disclose their privacy policies to customers and ensuring the confidentiality of personal information.
 9. What is the primary purpose of the USA PATRIOT Act?
+    - The primary purpose of the USA PATRIOT Act is to expand law enforcement’s powers to combat terrorism and enhance national security.
 10. Which 1997 law provides guidance on the use of encryption?
+    - The Security and Freedom Through Encryption Act of 1999 (SAFE Act) provides guidance on the use of encryption.
 11. What is intellectual property (IP)? Is it afforded the same protection in every country of the world? What laws currently protect it in the United States and Europe?
+    - Intellectual property (IP) refers to creations of the mind, such as inventions, designs, and artistic works. It is not afforded the same protection in every country. In the U.S., IP is protected under copyright law, while in Europe, similar protections exist under various directives and treaties.
 12. How does the Sarbanes-Oxley Act of 2002 affect information security managers?
+    - The Sarbanes-Oxley Act increases the reliability of financial reporting and corporate governance, requiring information security managers to implement controls to protect financial data.
 13. What is due care? Why should an organization make sure to exercise due care in its usual course of operations?
+    - Due care refers to the legal obligation to ensure that employees know acceptable behavior and the consequences of illegal actions. Organizations should exercise due care to minimize legal liabilities and maintain security.
 14. How is due diligence different from due care? Why are both important?
+    - Due diligence involves the continuous effort to protect others and maintain a level of security, while due care focuses on known acceptable behaviors. Both are important for risk management and compliance.
 15. What is a policy? How is it different from a law?
+    - A policy is an organizational expectation governing employee behavior, functioning as internal laws. The main difference is that ignorance of the law is not an acceptable defense, while ignorance of policy may be considered.
 16. What are the three general categories of unethical and illegal behavior?
+    - The three categories are ignorance, accident, and intent.
 17. What is the best method for preventing an illegal or unethical activity?
+    - The best method for preventing illegal or unethical activity is through deterrence, which includes laws, policies, and technical controls.
 18. Of the information security organizations listed that have codes of ethics, which has been established for the longest time? When was it founded?
+    - The organization established for the longest time is not specified in the provided content, but many professional organizations have been founded to promote ethical guidelines.
 19. Of the organizations listed that have codes of ethics, which is focused on auditing and control?
+    - The specific organization focused on auditing and control is not identified in the provided content.
 20. What can be done to deter someone from committing a crime?
+    - To deter someone from committing a crime, there must be a fear of penalty, a high probability of being caught, and a probability of the penalty being administered.
 
 ### Case Study
 
