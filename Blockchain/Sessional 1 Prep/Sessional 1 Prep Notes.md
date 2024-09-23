@@ -212,66 +212,53 @@ In decentralized systems, a **public key** acts as an identity. If a message is 
 - **Append-Only Ledger**: Scrooge publishes a **blockchain** containing all transactions. This prevents double-spending, as any transaction not in the blockchain is invalid.
 - **Centralization Issue**: Scrooge has control over the ledger and can deny transactions or mint new coins arbitrarily, making the system centralized.
 
-## Exercises From the Book
+# Book Questions
+
 ### 1. Authenticated Data Structures (SecureBox)
-
 **Question**: You are designing SecureBox, an authenticated online file storage system. For simplicity, there is a single folder. Users must be able to add, edit, delete, retrieve files, and list the folder contents. When a user retrieves a file, SecureBox must provide proof that the file hasn’t been tampered with since its last update. If a file doesn’t exist, the server must report that — with proof. The goal is to minimize proof size, verification time, and digest size. Can you devise a protocol where proof size, verification time, and digest size are all sublinear?
-
 **Answer**:
-
-To achieve sublinear efficiency, we can use **Merkle Trees**. Here’s how the solution works:
-
-- **Merkle Tree Structure**: Each file is stored as a leaf node in a Merkle tree. The root of the Merkle tree acts as the **digest** that the user stores.
-- **Operations (Add/Delete/Edit)**:
-	- For these operations, only the affected leaf node and the path to the root need updating. This ensures sublinear changes to the tree.
-- **Verification**:
-	- When retrieving a file, the server provides the file’s hash and the hash values along the path to the root.
-	- The user verifies the integrity by recomputing the path from the file to the root, checking against the stored digest.
-- **Proof Size and Verification Time**:
-	- Since the proof only requires the path from the file to the root, the proof size and verification time are `O(log n)`, where `n` is the number of files.
+To achieve sublinear efficiency, we can use **Merkle Trees**.
+- **Merkle Tree Structure**: The digest is the hash of the root of a Merkle tree, where each leaf node corresponds to a file, and its value is the hash of the file content. Intermediate nodes are hashes of the concatenation of their child nodes.
+- **Operations** (Add/Delete/Edit):
+    - When a user adds, deletes, or edits a file, the server only needs to update the hash values of the nodes along the path from the affected leaf node to the root. The user’s digest is updated accordingly.
+- **Proof Size and Verification**:
+    - When retrieving a file, SecureBox sends the file’s hash and the hash values along the path to the root. The user verifies the file's integrity by recomputing the path from the file to the root.
+    - The proof size and verification time are both `O(log n)`, where `n` is the number of files.
 - **Digest Size**:
-	- The digest remains a constant `O(1)`, as it only stores the root hash.
+    - The digest size is constant `O(1)`, as it only stores the root hash.
+This protocol ensures sublinear proof size, verification time, and digest size by taking advantage of the logarithmic depth of the Merkle tree.
+
 ### 2. Birthday Attack
-
 **Question 1**: Show that the time-space trade-off is parameterizable: we can achieve any space complexity between `O(1)` and `O(2^(n/2))` with a corresponding decrease in time complexity.
-
 **Answer**:
-
 The **time-space trade-off** is parameterized by choosing a variable number `t` between `1` and `2^(n/2)` for the space complexity. By storing `t` hash outputs:
-
 - The time complexity to find a collision is reduced to `O(2^n / t^2)`.
 - The space complexity is `O(t)`.
 Thus, we can adjust `t` to achieve any space complexity between `O(1)` (with time `O(2^n)`) and `O(2^(n/2))` (with time `O(2^(n/2))`).
 
 **Question 2**: Is there an attack for which the product of time and space complexity is `o(2^n)`?
-
 **Answer**:
-
 No, there is no known attack where the product of time and space complexity is less than `2^n`. The **birthday paradox** provides the best known trade-off, where the product remains `O(2^n)`. Achieving an attack with a product complexity of `o(2^n)` is currently infeasible in cryptographic contexts.
 
 ### 3. Hash Function Properties
-
 **Question**: Let `H` be a hash function that is both hiding and puzzle-friendly. Consider `G(z) = H(z) || z_last`, where `z_last` represents the last bit of `z`. Show that `G` is puzzle-friendly but not hiding.
-
 **Answer**:
-
 - **Puzzle-Friendliness**:
-  `G(z)` retains the puzzle-friendliness of `H(z)` because solving for `G(z)` requires solving the hash function `H(z)`, which remains computationally hard. The additional `z_last` bit doesn’t provide shortcuts, so `G(z)` is puzzle-friendly.
-- **Not Hiding**:
-  `G(z)` is **not hiding** because `z_last`, the last bit of the input `z`, is appended directly to the output, leaking part of the input. This compromises the hiding property, as an attacker gains partial knowledge of `z`.
+  `G(z)` retains the puzzle-friendliness of `H(z)` because solving for `G(z)` still requires solving the original hash function `H(z)`. Thus, `G(z)` remains computationally hard to reverse or solve without computing `H(z)`.
+- **Non-Hiding**:
+  `G(z)` is **not hiding** because the last bit of `z` (`z_last`) is appended to the hash output. This leaks part of the input (`z`), compromising the hiding property since an attacker gains partial knowledge of `z` simply by observing `G(z)`.
 
 ### 4. Randomness in ScroogeCoin
 
 **Question**: In ScroogeCoin, if Mallory generates `(sk, pk)` pairs until her secret key matches someone else’s, what will she be able to do? How long will it take on average? What happens if Alice’s random number generator has a bug and her key generation produces only 1,000 distinct pairs?
-
 **Answer**:
-
-- **Matching Secret Key**:
-  If Mallory’s secret key matches someone else’s public key, she can impersonate that person by signing transactions on their behalf. However, since ScroogeCoin uses 256-bit keys, the probability of matching is `1 in 2^256`, making this attack infeasible.
-- **Average Time to Match**:
-  On average, it would take **2^256 attempts** to find a matching secret key, which is practically impossible even with immense computing power.
+- **Key Collision**:
+  If Mallory generates `(sk, pk)` pairs until her secret key matches someone else’s, she could impersonate that person by signing transactions on their behalf. Given ScroogeCoin uses 256-bit secret keys, the probability of finding a collision is approximately `2^-128`, which is practically impossible.
+- **Average Time**:
+  On average, it would take `2^128` attempts to find a matching secret key.
 - **Alice’s Bug**:
-  If Alice’s random number generator is faulty and only produces 1,000 distinct key pairs, Mallory can simply brute-force the 1,000 possibilities. This would take at most 1,000 attempts, making the system easily compromised.
+  If Alice's random number generator only produces 1,000 distinct pairs, Mallory could simply brute-force those possibilities. If the network contains many public keys, this drastically reduces security. For example, if there are 10,000 unique public keys, Mallory could succeed in approximately `1000/10000 = 0.1` trials, making it extremely vulnerable.
+
 
 # Chapter 4: How bitcoin achieves decentralization
 ## Centralization vs. Decentralization
@@ -364,3 +351,44 @@ No, there is no known attack where the product of time and space complexity is l
     - Miners typically prioritize transactions based on the attached fees.
 - **Miner Reward**:
     - Miners receive the block reward and transaction fees. They tend to prioritize transactions with higher fees to maximize their earnings.
+
+# Past Paper/Book Questions
+
+- **1: Explain the decentralized consensus algorithm used in Bitcoin to agree on a valid block. Discuss why consensus without identity is used in Blockchain?**
+    - New transactions are broadcast to all nodes.
+    - Each node collects new transactions into a block.
+    - A random node broadcasts its block during each round.
+    - Other nodes accept the block if all transactions are valid.
+    - Nodes express acceptance by including the block's hash in their next block.
+    - **No identity in consensus:**
+        - There's no central authority to assign identities, preventing Sybil attacks (fake nodes controlled by one entity).
+        - Pseudonymity is a goal in Bitcoin to preserve privacy.
+- **2: Why do miners run “full nodes” while Bob the merchant uses a “lite node” with simplified payment verification?**
+    - Miners need full nodes to validate transactions and blocks, ensuring the integrity of the blockchain.
+    - Bob, the merchant, only needs to verify recent transactions to prevent fraud, relying on miners for full validation.
+- **3: If a malicious ISP controls a user’s connections, can it launch a double-spend attack? How much computational effort would this take?**
+    - Yes, the ISP could attempt a double-spend by creating a fork.
+    - To succeed, the ISP would need over 50% of the network's hashing power, which is highly computationally demanding.
+- **4: Why does Bob check how many confirmations CA→ B has received, instead of comparing chain lengths?**
+    - Confirmations reduce the chance of reorganization, as each confirmation means the transaction is deeper in the chain.
+    - Checking confirmations is simpler and sufficient compared to computing chain differences.
+- **5: Even when all nodes are honest, blocks will occasionally get orphaned: if two miners Minnie and Mynie discover blocks nearly simultaneously, neither will have time to hear about the other’s block before broadcasting hers.**
+	- **5a: What determines whose block will end up on the consensus branch?**
+	    - The block that gets extended first by another miner becomes part of the consensus branch.
+	- **5b: What factors affect the rate of orphan blocks? Can you derive a formula?**
+	    - Factors: network latency, block propagation time, mining difficulty.
+	    - Orphan rates depend on how quickly new blocks propagate and the frequency of simultaneous block discoveries.
+	- **5c: Try to empirically measure the orphan rate on the Bitcoin network.**
+	    - Measure by tracking block propagation times and observing simultaneous block broadcasts, leading to chain splits.
+	- **5d: If Mynie hears about Minnie’s block before discovering her own, did she waste her effort?**
+	    - Yes, Mynie’s block becomes invalid if she learns about Minnie’s block just before she mines hers.
+	- **5e: Do all miners experience orphaned blocks at the same rate?**
+	    - No, miners with better network connectivity or larger pools are less affected, while smaller miners suffer more.
+- **6a: How can a miner establish a hard-to-fake identity?**
+    - Miners can include a unique identifier in the coinbase transaction, which makes their blocks identifiable.
+- **6b: If a miner misbehaves, can others boycott her?**
+    - In theory, miners could boycott by refusing to build on her blocks, but coordination across the network would be difficult.
+- **7a: What is the probability of finding a block in the next 10 minutes assuming constant hash power?**
+    - The probability is around 63%, assuming block discovery follows an exponential distribution with a 10-minute average.
+- **7b: How should Bob set x so that with 99% confidence, 6 blocks will be found within x minutes?**
+    - Bob should set x to around 60 minutes for 99% confidence that 6 blocks will be found.
