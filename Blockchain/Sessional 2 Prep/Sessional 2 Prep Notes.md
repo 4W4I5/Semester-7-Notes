@@ -46,6 +46,12 @@ NOTE:: Add in points from Heading "Storage Costs" slides here
 ## 2) Locking Script: Pay2PubKey
 ## 3) Locking Script: Pay2PubKeyHash
 # Lecture 7-Intro: Introduction to Ethereum
+## 1) Example to understand the need of a smart contract
+## 2) Bitcoin Scripts in Practice
+## 3) Ethereum Accounts & Types
+## 4) Contracts
+## 5) Ethereum Virtual Machine
+## 6) Turing Completeness
 # Lecture 7-A: Interfacing with Ethereum
 # Lecture 7-B: Ganache & Truffle
 # Lecture 7-C: Smart Contracts
