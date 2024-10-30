@@ -42,7 +42,16 @@
 #### Locking Script: Pay2PubKey
 #### Locking Script: Pay2PubKeyHash
 ## 3) Application of Bitcoin Scripts
+- Escrow Transactions
+- Green Addresses
+- Efficient MicroPayments
 ## 4: Bitcoin Blocks
+- Why group transactions into a single block
+	- Batch Processing of transactions as consensus on each individual transaction would slow the chain down
+	- Hash Chain of blocks is faster to verify than the Hash Chain of every transaction, again due to Batch Processing.
+- Merkle Tree
+- Bitcoin Block Header
+- Coinbase Transaction Contents
 # Lecture 6: The Bitcoin Network
 ## 1) Node Types & Roles
 Maybe add 7, 8 and 9 here
@@ -59,8 +68,6 @@ NOTE:: Add in points from Heading "Should I relay a proposed transaction" slides
 NOTE:: Add in points from Heading "Storage Costs" slides here
 ## 8) Thin/SPV Clients
 ## 9) Software Diversity
-
-# Lecture X: Bitcoin Transactions & Script
 
 # Lecture 7-Intro: Introduction to Ethereum
 ## 1) Example to understand the need of a smart contract
