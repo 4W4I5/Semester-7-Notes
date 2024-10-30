@@ -31,6 +31,20 @@ NOTE:: Add in points from Heading "Storage Costs" slides here
 ## 9) Software Diversity
 
 # Lecture X: Bitcoin Transactions & Script
+## 1) Transactions
+- UTXO
+- Block mining
+- Bitcoin Batches + Locks
+- Bitcoin Transfer Process
+- Locking & Unlocking Scripts
+- Coinbase Transactions
+- Fees
+- Script
+- PKI
+- Realworld Example of BTC Transfer
+- Transaction Fields
+## 2) Locking Script: Pay2PubKey
+## 3) Locking Script: Pay2PubKeyHash
 # Lecture 7-Intro: Introduction to Ethereum
 # Lecture 7-A: Interfacing with Ethereum
 # Lecture 7-B: Ganache & Truffle
