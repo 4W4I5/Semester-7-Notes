@@ -43,7 +43,16 @@
 #### Locking Script: Pay2PubKeyHash
 ## 3) Application of Bitcoin Scripts
 - Escrow Transactions
+	- Seller wants payment before shipping goods
+	- Middleman generates a transaction with some fraction of total value as required input before transferring goods from the seller to the buyer
+		- Transaction is signed by both the middleman and buyer
 - Green Addresses
+	- Why use it?
+		- Recipient might be offline or might not be able to verify the transaction at the current moment in time
+		- Bypass confirmation waiting times
+	- Practical use
+		- Buying fastfood, not practical to wait for an hour to confirm the transaction
+		- Introduce a 3rd party known as the bank that can interact with both recipient and sender. The bank uses a "green" or trusted address to pay the seller with funds deducted directly from the sender's account. Since the bank owns a trusted address they are highly secure and usable confirmation of transactions
 - Efficient MicroPayments
 ## 4: Bitcoin Blocks
 - Why group transactions into a single block
