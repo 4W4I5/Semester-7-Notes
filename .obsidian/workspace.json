@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blockchain/Sessional 2 Prep/Sessional 2 Prep Notes.md",
+                "file": "IA/Sessional 2 Prep/Sessional 2 Prep Notes.md",
                 "mode": "source",
                 "source": true
               },
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "bbf2447a7eb59639",
@@ -94,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blockchain/Sessional 2 Prep/Sessional 2 Prep Notes.md",
+                "file": "IA/Sessional 2 Prep/Sessional 2 Prep Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blockchain/Sessional 2 Prep/Sessional 2 Prep Notes.md",
+                "file": "IA/Sessional 2 Prep/Sessional 2 Prep Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -140,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blockchain/Sessional 2 Prep/Sessional 2 Prep Notes.md"
+                "file": "IA/Sessional 2 Prep/Sessional 2 Prep Notes.md"
               },
               "icon": "lucide-list",
               "title": "Outline of Sessional 2 Prep Notes"
@@ -193,18 +192,20 @@
   },
   "active": "ce1b281a22b8793b",
   "lastOpenFiles": [
-    "Untitled.md",
-    "Blockchain/Sessional 2 Prep/Sessional 2 Prep Notes.md",
-    "Blockchain/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "README.md",
-    "Blockchain/Sessional 2 Prep",
-    "IA/Policy Task.md",
+    "IA/Sessional 2 Prep/Sessional 2 Prep Notes.md",
+    "IA/Sessional 2 Prep",
     "IA/Sessional 1 Prep/Sessional 1 Prep Notes.md",
+    "IA/Note Track.md",
+    "IA/Pasted image 20240917195504.png",
+    "IA/Policy Task.md",
+    "Blockchain/Sessional 2 Prep/Sessional 2 Prep Notes.md",
+    "Untitled.md",
+    "Blockchain/Sessional 1 Prep/Sessional 1 Prep Notes.md",
+    "Blockchain/Sessional 2 Prep",
     "PDC/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "SSD/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "Blockchain/Class Notes/5 - Blockchain 3rd September, 2024.md",
-    "IA/Note Track.md",
-    "IA/Pasted image 20240917195504.png",
     "IA/Sessional 1 Prep",
     "SSD/Note Track.md",
     "Books/Secure Software Design/Threat modeling-Designing for Security (2014).pdf",
@@ -214,7 +215,6 @@
     "Books/Secure Software Design/Secure Coding in C and C++ (2nd Edition).pdf",
     "Books/Secure Software Design/Introduction to Software Testing.pdf",
     "Books/Secure Software Design/Computer Security-Principles and Practice (4th Edition).pdf",
-    "Books/Secure Software Design",
     "PDC/Note Track.md",
     "Blockchain/Note Track.md",
     "PDC/Class Notes/5 - PDC 2nd September, 2024.md",
@@ -229,7 +229,6 @@
     "Class Notes/19th August%2C 2024.md",
     "Blockchain/Finals Prep/Finals Prep Notes.md",
     "IA/Sessional 2 Prep/Sessional 1 Prep Notes.md",
-    "IA/Sessional 2 Prep/Sessional 2 Prep Notes.md",
     "InfoSec/Finals Prep/Images/Pasted image 20240604013816.png",
     "InfoSec/Finals Prep/Images/Pasted image 20240603230754.png",
     "InfoSec/Finals Prep/Images/Pasted image 20240603230747.png",
