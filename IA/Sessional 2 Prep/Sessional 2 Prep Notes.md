@@ -140,15 +140,15 @@
 - Use of keys not required, although a Message Authn Code (MAC) can be attached to the message
 - Used mainly in password verification systems to confirm the identity of the user.
 ### Cryptographic Algorithms
-- ##### Grouped into
-	- #### Symmetric Encryption
+- #### Grouped into
+	- ##### Symmetric Encryption
 		- AKA Same key encryption, both the sender and receiver have the key
 		- Implemented via DES, 3DES and AES
-	- #### Asymmetric Encryption
+	- ##### Asymmetric Encryption
 		- AKA Public-Key encryption
 		- Either key can decrypt/encrypt messages encrypted by the other
 		- Implemented first via RSA
-- ##### Encryption Key Size
+- #### Encryption Key Size
 ### Cryptographic Tools
 ### Public-Key Infrastructure (PKI)
 ### Digital Sigs
