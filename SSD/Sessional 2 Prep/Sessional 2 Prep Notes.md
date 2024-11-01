@@ -421,201 +421,181 @@ Output encoding ensures that user-generated data cannot interfere with or alter 
    - Ensure output encoding is compatible with all systems (e.g., XML, SQL, LDAP).
    - Encode data in OS commands to prevent command injection.
 
-# Lecture 13 & 14: Secure Coding Practices (Authentication and Password Management)
-- **Password Storage**: Store only salted cryptographic hashes of passwords, never plain-text passwords. Use strong one-way hashes on a trusted server.
-- **Password Complexity and Length**: Enforce complexity and minimum length policies to strengthen passwords against brute-force attacks.
-- **Account Lockout**: Disable password entry after multiple failed login attempts to prevent brute-force and credential stuffing attacks.
-- **Secure Transmission**: Use secure protocols (e.g., HTTPS) to protect credentials in transit. Only use HTTP POST for credential transmission, and never send passwords over an unencrypted connection.
-- **Password Salting**: Add unique salts to each password before hashing to prevent the use of rainbow tables.
+---
+
+# Lecture 14 & 15: Secure Coding Practices (Authentication and Password Management)
+
+
+### 1. **Password Storage**
+- **Guideline**: Store only salted, cryptographic hashes of passwords—never store plain-text passwords. Always hash passwords on a trusted server to prevent exposure.
+- **Implementation**: Use strong one-way hash functions like `bcrypt` with unique salts to protect against attacks.
+
+  ```python
+  from bcrypt import hashpw, gensalt, checkpw
+
+  # Storing a new password
+  def store_password(plain_password):
+      salt = gensalt()
+      hashed_password = hashpw(plain_password.encode(), salt)
+      return hashed_password
+
+  # Verifying a password
+  def verify_password(stored_hash, attempted_password):
+      return checkpw(attempted_password.encode(), stored_hash)
+  ```
+
+
+### 2. **Password Complexity and Length**
+- **Guideline**: Enforce complexity (uppercase, lowercase, digits, special characters) and minimum length requirements to guard against brute-force attacks.
+- **Implementation**: Define password rules that meet security standards, typically requiring a minimum of 8 characters.
+
+  ```python
+  import re
+
+  def validate_password_complexity(password):
+      # Password must have at least 8 characters, an uppercase, a lowercase, a digit, and a special character
+      if len(password) < 8: return False
+      if not re.search(r"[A-Z]", password): return False
+      if not re.search(r"[a-z]", password): return False
+      if not re.search(r"[0-9]", password): return False
+      if not re.search(r"[@$!%*?&]", password): return False
+      return True
+  ```
+
+
+### 3. **Account Lockout**
+- **Guideline**: Temporarily disable password entry after multiple failed login attempts to prevent brute-force and credential stuffing attacks.
+- **Implementation**: Use an in-memory tracking system to log failed attempts and enforce lockout duration.
+
+  ```python
+  from datetime import datetime, timedelta
+
+  failed_login_attempts = {}
+  MAX_ATTEMPTS = 5
+  LOCKOUT_PERIOD = timedelta(minutes=15)
+
+  def login(username, password):
+      current_time = datetime.now()
+      if username in failed_login_attempts:
+          attempts, lockout_time = failed_login_attempts[username]
+          if attempts >= MAX_ATTEMPTS and current_time < lockout_time:
+              return "Account is locked. Try again later."
+          elif current_time >= lockout_time:
+              failed_login_attempts[username] = (0, None)
+
+      # Password verification
+      if verify_password(get_stored_password(username), password):
+          failed_login_attempts[username] = (0, None)  # Reset on success
+          return "Login successful"
+      else:
+          attempts, _ = failed_login_attempts.get(username, (0, None))
+          failed_login_attempts[username] = (attempts + 1, current_time + LOCKOUT_PERIOD)
+          return "Invalid password"
+  ```
+
+
+### 4. **Secure Transmission (HTTPS Enforcement)**
+- **Guideline**: Use HTTPS for all credential transmission and restrict credential transmission to HTTP POST only.
+- **Implementation**: Redirect HTTP to HTTPS to enforce secure connections and apply the `Secure` attribute to session cookies.
+
+  ```python
+  from flask import Flask, redirect, request
+
+  @app.before_request
+  def enforce_https():
+      if not request.is_secure:
+          return redirect(request.url.replace("http://", "https://"))
+  ```
+
+
+### 5. **Password Salting**
+- **Guideline**: Add unique salts to each password before hashing to prevent attacks using precomputed hash tables (rainbow tables).
+
+*Example in password storage function above.*
+
 
 ## Extended Authentication Controls
-- **Access Control**: Require authentication for all non-public pages and resources, with controls on a trusted system.
-- **Centralized Authentication**: Use standardized, tested authentication services and segregate authentication logic from resources.
-- **Fail-Securely**: Authentication controls should fail without granting access by default.
-- **Credential Management**: Store credentials for external service access securely and separately.
+
+### 6. **Access Control**
+- **Guideline**: Require authentication for all non-public resources, enforcing controls on a trusted system.
+- **Implementation**: Use centralized authentication services, and manage permissions to protect sensitive data from unauthorized access.
+
+### 7. **Centralized Authentication**
+- **Guideline**: Implement a standardized, tested authentication service, separating authentication logic from resources and using redirection where necessary.
+- **Implementation**: Ensure access control checks fail securely without granting access by default.
+
+### 8. **Credential Management**
+- **Guideline**: Store sensitive credentials for external services in secure, encrypted storage and ensure secure transmission.
+
+---
 
 ## Additional Authentication Protocols
-- **Secure Error Messages**: Authentication failure responses should avoid revealing which part of the authentication data was incorrect.
-- **External System Authentication**: Use authentication when accessing sensitive external systems and securely store these credentials.
-- **Temporary Passwords and Reset Controls**:
-  - Only send reset links to pre-registered addresses.
-  - Temporary passwords and links should expire quickly and prompt immediate password changes.
-- **Password Change Protocols**: Prevent re-use of recent passwords, enforce policy-based change intervals, and ensure passwords are a day old before changing.
+
+### 9. **Secure Error Messages**
+- **Guideline**: Use generic error messages for failed authentication attempts to avoid exposing which part of the credentials was incorrect.
+
+  ```python
+  if not username_exists or not password_correct:
+      return "Invalid credentials"
+  ```
+
+### 10. **Temporary Passwords and Reset Controls**
+- **Guideline**: Send reset links only to pre-registered email addresses. Temporary passwords and reset links should have a short expiration period and require immediate change on the next login.
+- **Implementation**: Generate secure reset links with expiration.
+
+  ```python
+  import hashlib, time
+
+  def generate_reset_link(user_email):
+      expiration_time = int(time.time()) + 600  # 10-minute expiry
+      token = hashlib.sha256(f"{user_email}{expiration_time}".encode()).hexdigest()
+      return f"https://example.com/reset_password?token={token}&exp={expiration_time}"
+  ```
+
+### 11. **Password Change Protocols**
+- **Guideline**: Prevent password reuse, enforce change intervals, and ensure passwords are at least a day old before changes.
+
+  ```python
+  password_history = {}
+  PASSWORD_EXPIRY_DAYS = 90
+
+  def update_password(user_id, new_password):
+      for old_password, change_date in password_history.get(user_id, []):
+          if checkpw(new_password.encode(), old_password) and (datetime.now() - change_date).days < PASSWORD_EXPIRY_DAYS:
+              raise ValueError("New password must be different and cannot be reused")
+      password_history[user_id].append((store_password(new_password), datetime.now()))
+  ```
+
+---
 
 ## User Notifications and Controls
-- **Session Security**: Notify users when a password reset occurs.
-- **Account Security Alerts**: Report last login attempts at the next successful login.
-- **Disable "Remember Me"**: Avoid persistent logins for password fields, and monitor for repeated attacks across multiple accounts.
+
+### 12. **Session Security and Notifications**
+- **Guideline**: Notify users when password resets occur and report the last login attempts at their next login. Disable "Remember Me" functionality for login forms to prevent session hijacking.
+- **Implementation**: Implement logging and tracking for unauthorized access attempts across accounts.
+
+---
 
 ## High-Sensitivity Requirements
-- **Critical Actions**: Require re-authentication for critical actions.
-- **Multi-Factor Authentication**: Use MFA for highly sensitive accounts.
-- **Third-Party Code**: Inspect any third-party authentication code for security vulnerabilities.
+
+### 13. **Critical Actions and Re-Authentication**
+- **Guideline**: Re-authenticate users before performing high-privilege actions, ensuring it’s as secure as the initial login process.
+
+### 14. **Multi-Factor Authentication (MFA)**
+- **Guideline**: Use MFA for highly sensitive accounts, implementing one-time passwords (OTPs) where possible.
+
+  ```python
+  import pyotp
+
+  user_secret = pyotp.random_base32()
+  def generate_otp(secret):
+      return pyotp.TOTP(secret).now()
+  ```
+
+---
 
 ## Secure Defaults and Vendor Credentials
-- **Default Credentials**: Change or disable vendor-supplied credentials.
 
-### 1. Password Storage (Hashing with Salt)
+### 15. **Change Default Credentials**
+- **Guideline**: Replace vendor-supplied default credentials, or disable them entirely if not required.
 
-Using **bcrypt** in Python to hash passwords with a unique salt for each password.
-
-```python
-from bcrypt import hashpw, gensalt, checkpw
-
-# Storing a new password
-def store_password(plain_password):
-    # Generate a salt and hash the password
-    salt = gensalt()
-    hashed_password = hashpw(plain_password.encode(), salt)
-    return hashed_password
-
-# Verifying a password
-def verify_password(stored_hash, attempted_password):
-    return checkpw(attempted_password.encode(), stored_hash)
-```
-
-### 2. Password Complexity Check
-
-Implement password complexity rules to ensure passwords meet security requirements (e.g., min length, mix of chars).
-
-```python
-import re
-
-def validate_password_complexity(password):
-    # Ensures password is at least 8 chars, includes uppercase, lowercase, number, and special character
-    if len(password) < 8:
-        return False
-    if not re.search(r"[A-Z]", password): # Uppercase
-        return False
-    if not re.search(r"[a-z]", password): # Lowercase
-        return False
-    if not re.search(r"[0-9]", password): # Number
-        return False
-    if not re.search(r"[@$!%*?&]", password): # Special character
-        return False
-    return True
-```
-
-### 3. Account Lockout
-
-Limit login attempts to prevent brute-force attacks.
-
-```python
-from datetime import datetime, timedelta
-
-# Sample in-memory tracking of failed attempts
-failed_login_attempts = {}
-MAX_ATTEMPTS = 5
-LOCKOUT_PERIOD = timedelta(minutes=15)
-
-def login(username, password):
-    current_time = datetime.now()
-
-    # Check if account is locked
-    if username in failed_login_attempts:
-        attempts, lockout_time = failed_login_attempts[username]
-        if attempts >= MAX_ATTEMPTS and current_time < lockout_time:
-            return "Account is locked. Try again later."
-        elif current_time >= lockout_time:
-            # Reset lockout if time has passed
-            failed_login_attempts[username] = (0, None)
-
-    # Password verification (assume verify_password function from above)
-    if verify_password(get_stored_password(username), password):
-        failed_login_attempts[username] = (0, None) # Reset on successful login
-        return "Login successful"
-    else:
-        attempts, _ = failed_login_attempts.get(username, (0, None))
-        failed_login_attempts[username] = (attempts + 1, current_time + LOCKOUT_PERIOD)
-        return "Invalid password"
-```
-
-### 4. Secure Transmission (Enforcing HTTPS in Flask)
-
-Redirect all HTTP requests to HTTPS in a Flask app for secure password transmission.
-
-```python
-from flask import Flask, redirect, request
-
-app = Flask(__name__)
-
-@app.before_request
-def enforce_https():
-    if not request.is_secure:
-        return redirect(request.url.replace("http://", "https://"))
-
-@app.route('/login', methods=['POST'])
-def login():
-    # Process login request securely
-    pass
-```
-
-### 5. Secure Password Reset Link (Example with Expiry)
-
-Generate a one-time password reset link with a short expiration time.
-
-```python
-import hashlib
-import time
-
-# Example URL generation with expiration
-def generate_reset_link(user_email):
-    expiration_time = int(time.time()) + 600 # 10 minutes from now
-    token_data = f"{user_email}{expiration_time}"
-    token = hashlib.sha256(token_data.encode()).hexdigest()
-    return f"https://example.com/reset_password?token={token}&exp={expiration_time}"
-
-# Verify reset link
-def verify_reset_link(token, user_email, expiration_time):
-    if int(time.time()) > expiration_time:
-        return False
-    token_data = f"{user_email}{expiration_time}"
-    expected_token = hashlib.sha256(token_data.encode()).hexdigest()
-    return token == expected_token
-```
-
-### 6. Enforcing Password Expiry (Prevent Reuse and Require Updates)
-
-Ensure passwords can’t be reused and that they expire periodically.
-
-```python
-from datetime import datetime, timedelta
-
-# Track password changes for each user
-password_history = {}
-PASSWORD_EXPIRY_DAYS = 90
-
-def update_password(user_id, new_password):
-    if user_id not in password_history:
-        password_history[user_id] = []
-
-    # Check if password was used recently
-    for old_password, change_date in password_history[user_id]:
-        if checkpw(new_password.encode(), old_password) and (datetime.now() - change_date).days < PASSWORD_EXPIRY_DAYS:
-            raise ValueError("New password must be different and cannot be reused")
-
-    # Store new password and timestamp
-    hashed_password = store_password(new_password)
-    password_history[user_id].append((hashed_password, datetime.now()))
-```
-
-### 7. Multi-Factor Authentication (MFA) via OTP
-
-An example of generating a one-time password (OTP) as a second authentication factor.
-
-```python
-import pyotp
-
-# Generate and verify OTP using Time-based OTP
-def generate_otp(secret):
-    totp = pyotp.TOTP(secret)
-    return totp.now()
-
-def verify_otp(secret, otp_code):
-    totp = pyotp.TOTP(secret)
-    return totp.verify(otp_code)
-
-# Setup a user's secret for OTP
-user_secret = pyotp.random_base32()
-print("OTP Code:", generate_otp(user_secret)) # Display OTP for user input
-```
