@@ -105,7 +105,7 @@
 - **Cryptology** -> Science of Encryption, includes Cryptography & Cryptanalysis
 		- **Cryptography** -> Making and using code to secure messages
 		- **Cryptanalysis** -> Cracking or breaking Encrypted messages back into their unencrypted form
-	- Foundations of Cryptology (Skipped, nothing to note)
+	- ~~Foundations of Cryptology (Skipped, nothing to note)~~
 - **Terminology**
 	- **Algorithm** -> A set of rules or steps designed to perform a specific task, such as encryption or decryption.
 	- **Bit stream cipher** -> A cipher that encrypts data one bit at a time, often used for streaming data.
@@ -183,9 +183,20 @@
 		- Management Protocols
 		- Polices & Procedures
 - ### Digital Sigs
+	- Needed to verify sender integrity
+	- Follows Digital Signature Standard (DSS)
+	- Enforces Non-Repudiation
 - ### Digital Certs
+	- Issued by trusted Certificate Authorities (CAs)
+	- Bind an entity's public key to their identity
+	- Contain information such as certificate holder’s name, public key, CA's digital signature, and expiration date
+	- Used in SSL/TLS to establish secure connections online
+	- Help verify the authenticity of a sender or website, enhancing trust and security
 - ### Hybrid Cryptography Systems
-- ### Steganography (Skipped, too simple)
+	- Asymmetric key encryption not widely used, unless its with digital certs
+	- Most common is the Deffie-Hellman Key Exchange:
+		- Use of Asymmetric keys to transfer a symmetric key which is then used for transmitting messages
+- ### ~~Steganography (Skipped, too simple)~~
 ## Protocols for Secure Communications
 - ### Securing Internet Communication with S-HTTP & SSL
 - ### Securing EMAIL with S/MIME, PEM and PGP
