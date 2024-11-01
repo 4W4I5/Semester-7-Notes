@@ -63,49 +63,49 @@
 25. **How do DFDs help to assess the impact of new features on system security?**
     When a new feature is introduced, a DFD can show how it affects existing data flows and security boundaries, helping to identify and address any new vulnerabilities introduced.
 # Lecture 2: Impact of DFDs in Security Analysis
-### 1. **How do DFDs enhance the effectiveness of threat modeling in security analysis?**
+## 1. **How do DFDs enhance the effectiveness of threat modeling in security analysis?**
 
    DFDs play a critical role in threat modeling by visually representing how data flows through a system, where it’s stored, and who interacts with it. This helps security analysts understand the relationships between entities, processes, and data stores, identifying points of vulnerability and potential threats. Threat modeling, which typically includes processes like STRIDE (Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege), relies on clear visual cues provided by DFDs to spot security gaps.
 
    For instance, during threat modeling, analysts can examine each data flow to determine if it could be intercepted, modified, or deleted, then evaluate if mitigations—such as encryption, authentication, or logging—are in place. DFDs provide a map to systematically apply threat models, helping analysts to more thoroughly address threats and prevent security breaches.
 
-### 2. **In what ways do DFDs contribute to identifying and mitigating data exposure risks in complex systems?**
+## 2. **In what ways do DFDs contribute to identifying and mitigating data exposure risks in complex systems?**
 
    DFDs are invaluable in exposing how data moves across system components, especially in large or multi-layered systems. By mapping out data flows, DFDs highlight sensitive areas where data could be accessed by unauthorized entities or unintentionally exposed due to a misconfiguration or lack of security control. Specifically, DFDs help isolate data paths that cross trust boundaries, such as between internal systems and external users, which are prime areas for implementing protections like encryption and access control.
 
    For instance, if a data flow from a public interface to an internal process isn't encrypted, it creates a vulnerability where sensitive data could be intercepted by malicious actors. DFDs allow analysts to visualize and scrutinize such flows, prompting them to secure these paths by applying the necessary controls. This approach minimizes data exposure risks by ensuring all data transitions across trust boundaries are secure.
 
-### 3. **How do DFDs assist in identifying trust boundaries, and why is this significant for security analysis?**
+## 3. **How do DFDs assist in identifying trust boundaries, and why is this significant for security analysis?**
 
    Trust boundaries in DFDs are critical as they delineate areas where different levels of security requirements apply. A trust boundary marks a transition between parts of a system with differing levels of access control or security assumptions, such as between internal networks and external client access. By clearly defining these boundaries, DFDs allow security analysts to identify where sensitive data crosses from a secure to an unsecured environment, highlighting the need for additional protection.
 
    This is significant for security because trust boundaries often mark the "attack surface" of a system. Attackers may exploit data crossing boundaries that lack encryption, authentication, or authorization mechanisms. By analyzing these points, DFDs reveal where controls should be strengthened, such as adding firewalls, implementing multi-factor authentication, or enforcing access restrictions. This reduces the system's vulnerability by securing potential attack vectors at these critical junctures.
 
-### 4. **How can DFDs aid in improving compliance with data protection regulations, and what role do they play in regulatory audits?**
+## 4. **How can DFDs aid in improving compliance with data protection regulations, and what role do they play in regulatory audits?**
 
    DFDs are valuable for demonstrating how data is handled, stored, and transmitted within a system, which is essential for regulatory compliance with standards like GDPR, HIPAA, and PCI-DSS. These regulations require organizations to document data flows, showing where data originates, how it’s processed, and where it’s stored, along with security measures in place to protect it. DFDs help provide this documentation by clearly visualizing the flow and handling of data, making it easier to assess compliance.
 
    In regulatory audits, DFDs serve as visual evidence of how data is managed, showing auditors that data handling practices align with regulatory requirements. DFDs can also help identify where sensitive data (e.g., personally identifiable information) is processed, aiding in the implementation of controls such as data encryption, access restrictions, and secure storage solutions. With these visual aids, DFDs support a proactive approach to data security, helping organizations meet compliance standards and streamline audits.
 
-### 5. **In what ways do DFDs contribute to identifying areas vulnerable to insider threats, and how can they aid in developing protective measures?**
+## 5. **In what ways do DFDs contribute to identifying areas vulnerable to insider threats, and how can they aid in developing protective measures?**
 
    Insider threats are a significant risk, often stemming from authorized users misusing their access to critical systems and data. DFDs help by outlining the data access points for various processes, systems, and roles, allowing security teams to analyze which users or roles have access to sensitive data flows. By studying these diagrams, analysts can pinpoint areas where excessive or unnecessary access is granted, which could be exploited by insiders.
 
    For instance, a DFD might reveal that a particular user role has access to data flows beyond what is necessary for their job function. This information enables analysts to tighten access controls, enforcing the principle of least privilege by restricting access to only what is essential. Additionally, DFDs can highlight where monitoring and logging should be implemented to track insider access to critical data, creating a record that can be reviewed for suspicious behavior. This proactive step mitigates the risk of insider threats by ensuring sensitive data is only accessible to authorized individuals and monitoring is in place for accountability.
 
-### 6. **How do DFDs enhance collaboration between development and security teams in the system development lifecycle (SDLC)?**
+## 6. **How do DFDs enhance collaboration between development and security teams in the system development lifecycle (SDLC)?**
 
    DFDs serve as a common language for both development and security teams, offering a visual representation that bridges technical and security perspectives. In the SDLC, particularly during the design and planning phases, DFDs allow developers to see how their implementations could impact security, while security teams can identify risks and propose mitigations without needing to dive deep into the code.
 
    For example, as a development team designs a new feature, they can create or update a DFD to show new data flows and components introduced to the system. Security teams can then use this updated DFD to identify security needs, such as data encryption or additional authentication, early in the development cycle. This collaboration prevents security issues from being an afterthought and encourages the integration of security controls at the design level. The result is a more secure product, developed with input from both teams, enhancing overall system resilience.
 
-### 7. **How can DFDs help in identifying and reducing redundant data flows that may increase security risk?**
+## 7. **How can DFDs help in identifying and reducing redundant data flows that may increase security risk?**
 
    Redundant data flows—data moving unnecessarily between processes or duplicated across multiple stores—can increase a system's attack surface and create additional security risks. DFDs help security analysts and system architects visualize these flows, making it easier to spot and eliminate inefficiencies.
 
    For example, a DFD may show that a particular piece of data is processed by two separate entities when only one is necessary. Eliminating this redundancy reduces the potential entry points for attackers, decreases system complexity, and minimizes potential data exposure. Additionally, reducing redundant flows makes it easier to implement security controls as fewer pathways need to be secured, streamlining overall data management and reducing the chance of overlooked vulnerabilities.
 
-### 8. **How do DFDs assist in the security analysis of new system features, particularly for assessing security impact?**
+## 8. **How do DFDs assist in the security analysis of new system features, particularly for assessing security impact?**
 
    When new features are added to a system, they often introduce additional data flows and modify existing ones, which can create new security challenges. DFDs are used to update these flows to include new feature components, processes, or external interactions, allowing security analysts to assess the potential security impact of the additions.
 
@@ -231,6 +231,15 @@
 
 Input validation is critical to ensure data entering the system is properly sanitized, validated, and consistent with expected formats. This process is vital to prevent injection attacks, cross-site scripting (XSS), and data corruption.
 
+Can be achieved through:
+
+- Conducting all input validation on server-side
+- Identify all data-sources and group them into trusted & non-trusted
+- Validate all data from untrusted sources i.e. DBs, filestreams, etcetc
+- Use a centralized input validation routine for the whole application (quiz)
+- Specify character sets to use for all inputs to encode into i.e. UTF-8
+- All validation failures must result in input rejection
+
 ## Importance of UTF-8 for security
 1. Standardization:
 	- UTF-8 is a widely adopted encoding standard that supports a vast range of characters from different languages. This standardization helps in maintaining consistency and avoiding encoding-related vulnerabilities.
@@ -241,10 +250,8 @@ Input validation is critical to ensure data entering the system is properly sani
 
 ### Key Principles and Best Practices
 1. **Server-Side Validation**:
-   - Always perform validation on the server side, as client-side validation can be bypassed by attackers.
-   - Example (Python/Flask):
-
-     ```python
+	- Always perform validation on the server side, as client-side validation can be bypassed by attackers.
+	- Example (Python/Flask):  ```python
      from flask import Flask, request, jsonify
      import re
 
@@ -260,12 +267,13 @@ Input validation is critical to ensure data entering the system is properly sani
      ```
 
 
-2. **Classify Data Sources**:
-   - Identify sources of data as *trusted* or *untrusted* (e.g., user input vs. internal APIs).
-   - Only apply validation to untrusted sources, minimizing potential security risks from external data.
-   - Example:
 
-     ```python
+
+
+2. **Classify Data Sources**:
+	- Identify sources of data as *trusted* or *untrusted* (e.g., user input vs. internal APIs).
+	- Only apply validation to untrusted sources, minimizing potential security risks from external data.
+	- Example:  ```python
      trusted_sources = ['internal_api', 'trusted_database']
      untrusted_sources = ['user_input', 'external_api']
 
@@ -274,11 +282,13 @@ Input validation is critical to ensure data entering the system is properly sani
      ```
 
 
-3. **Centralized Validation Routines**:
-   - Use a single, central function to handle validation for consistency across the application.
-   - Example:
 
-     ```python
+
+
+3. **Centralized Validation Routines + Use Allow-Lists (Positive Validation)**:
+	- Use a single, central function to handle validation for consistency across the application.
+	- Define expected characters or formats, focusing on acceptable patterns rather than attempting to list all invalid cases.
+	- Example:  ```python
      def centralized_validation(data, pattern):
          if not re.match(pattern, data):
              raise ValueError("Invalid data")
@@ -286,19 +296,19 @@ Input validation is critical to ensure data entering the system is properly sani
 
      # Specific validation functions that use the centralized method
      def validate_username(username):
-         return centralized_validation(username, "^[a-zA-Z0-9_]+$")
+         return centralized_validation(username, r"^[a-zA-Z0-9_]+$")     # REGEX used here is an example of what is allowed
+
+	# Specific validation functions that use the centralized method
+	def validate_password(password):
+		return centralized_validation(password, r"^[a-zA-Z0-9]+$")
      ```
 
 
-4. **Use Allow-Lists (Positive Validation)**:
-   - Define expected characters or formats, focusing on acceptable patterns rather than attempting to list all invalid cases.
-   - Example: Specify that only alphanumeric and underscore characters are allowed for usernames to prevent injection attacks.
 
-5. **Specify Character Sets (Canonicalization)**:
-   - Ensures that data conforms to a standard character encoding (e.g., UTF-8), which reduces encoding-based vulnerabilities.
-   - Example:
-
-     ```python
+4. **Specify Character Sets (Canonicalization)**:
+	- Ensures that data conforms to a standard character encoding (e.g., UTF-8), which reduces encoding-based vulnerabilities.
+	- Example:
+      ```python
      def validate_utf8(data):
          try:
              data.encode('utf-8')
@@ -308,14 +318,14 @@ Input validation is critical to ensure data entering the system is properly sani
      ```
 
 
-6. **Reject Invalid Input**:
-   - Invalid data should be outright rejected, with an appropriate error response (e.g., HTTP 400 for bad requests).
-   - Ensures that data doesn’t silently fail, which could lead to unexpected issues later.
+5 **Reject Invalid Input**:
+	- Invalid data should be outright rejected, with an appropriate error response (e.g., HTTP 400 for bad requests).
+	- Ensures that data doesn’t silently fail, which could lead to unexpected issues later.
 
-7. **Additional Coding Scenarios**:
-   - Validate data types (e.g., ensure integers where required).
-   - Check data ranges to prevent overflow or underflow vulnerabilities.
-   - Implement additional controls if potentially hazardous input is allowed.
+6. **Additional Coding Scenarios**:
+	- Validate data types (e.g., ensure integers where required).
+	- Check data ranges to prevent overflow or underflow vulnerabilities.
+	- Implement additional controls if potentially hazardous input is allowed.
 
 ---
 
@@ -328,6 +338,9 @@ Output encoding ensures that user-generated data cannot interfere with or alter 
    - Perform encoding server-side to prevent an attacker from injecting code.
 	   - Use of `html.escape()` to convert special characters like `>`, `<`, `&` and `"` into their HTML-Safe equivs
    - Example (Python/Flask):
+
+
+
 
      ```python
      from flask import Flask, render_template_string, request
@@ -343,9 +356,15 @@ Output encoding ensures that user-generated data cannot interfere with or alter 
      ```
 
 
+
+
+
 2. **Standardized Encoding Routines**:
    - Use tested routines specific to each data type to ensure encoding works correctly in HTML, JavaScript, and URLs.
    - Example (Java with OWASP Java Encoder):
+
+
+
 
      ```java
      import org.owasp.encoder.Encode;
@@ -369,6 +388,9 @@ Output encoding ensures that user-generated data cannot interfere with or alter 
      ```
 
 
+
+
+
 3. **Contextual Encoding**:
    - Use context-specific encoding. For example, encoding for HTML output prevents HTML injection but may not protect against JavaScript injection unless encoded accordingly.
 
@@ -376,12 +398,18 @@ Output encoding ensures that user-generated data cannot interfere with or alter 
    - Define character sets like UTF-8 to ensure encoding compatibility and prevent issues with special characters.
    - Example (PHP):
 
+
+
+
      ```php
      header('Content-Type: text/html; charset=UTF-8');
      $user_input = "<script>alert('XSS');</script>";
      $encoded_input = htmlspecialchars($user_input, ENT_QUOTES, 'UTF-8');
      echo "<p>$encoded_input</p>";
      ```
+
+
+
 
 
 5. **Output Encoding for Various Contexts**:
