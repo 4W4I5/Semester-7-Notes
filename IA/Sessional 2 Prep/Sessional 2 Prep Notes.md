@@ -36,33 +36,47 @@
 - Law Enforcement Involvement
 	- Benefits/Drawbacks of Law Enforcement Involvement
 # Chapter 6: Security Technology: Firewalls & VPNs
-- Physical Design Process
-- Firewalls
-	- Processing Modes of Firewalls
-		- Packet Filtering
-		- Application Gateways
-		- Circuit Gateways
-		- MAC Layer Firewalls
-		- Hybrids
-	- Firewalls Categorized by Generation
-	- Firewalls Categorized by Structure
-	- Software vs Hardware: The SOHO Firewall Debate
-	- Firewall Architectures
-		- Packet Filtering Routers
-		- Screened Host Firewalls
-		- Dual-Homed Firewalls
-		- Screened Subnet Firewalls
-	- Selecting the Right Firewall
-	- Configuring & Managing Firewalls
-	- Best Practices
-	- Firewall Rules
-	- Content Filters
-	- Protecting Remote Connections
-	- Remote Access
-	- RADIUS, TACACS & Diameter
-	- Securing Authn w/ Kerberos
-	- Seasme
-- Virtual Private Networks (VPNs)
+- ### Physical Design Process
+## Firewalls
+- ### Processing Modes of Firewalls
+	- Packet Filtering
+	- Application Gateways
+	- Circuit Gateways
+	- MAC Layer Firewalls
+	- Hybrids
+- ### Categorization of Firewalls
+	- #### By Generation
+	- #### By Structure
+- ### Software vs Hardware: The SOHO Firewall Debate
+- ### Firewall Architectures
+	- Packet Filtering Routers
+	- Screened Host Firewalls
+	- Dual-Homed Firewalls
+	- Screened Subnet Firewalls
+- ### Selecting the Right Firewall
+- ### Configuring & Managing Firewalls
+- ### Best Practices
+- ### Firewall Rules
+- ### Content Filters
+- ### Protecting Remote Connections
+- ### Remote Access
+- ### RADIUS, TACACS & Diameter
+| Feature                  | RADIUS                                                                                                  | Diameter                                                                                             | TACACS+                                                                        | Kerberos                                                                    |
+|:------------------------ |:------------------------------------------------------------------------------------------------------- |:---------------------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------ |:--------------------------------------------------------------------------- |
+| **Purpose**              | Centralized authentication and authorization for remote access, network devices, and wireless networks. | The advanced version of RADIUS is used for AAA in IP-based networks, especially 3G and LTE networks. | Centralized AAA, is typically used in network devices (Cisco).                 | Secure authentication for user sessions in a centralized environment (SSO). |
+| **Protocol Type**        | UDP (User Datagram Protocol)                                                                            | TCP/SCTP (Stream Control Transmission Protocol)                                                      | TCP (Transmission Control Protocol)                                            | Symmetric Key Cryptography (with a trusted third party for tickets)         |
+| **Encryption**           | Only passwords are encrypted                                                                            | Encrypts full packets                                                                                | Encrypts the entire payload                                                    | Uses cryptographic tickets and session keys for authentication              |
+| **Authentication**       | Single-step authentication is often used for 802.1x, VPNs, and dial-up.                                 | Multi-step authentication offers better scalability and reliability than RADIUS.                     | Handles separate authentication, authorization, and accounting (AAA) services. | Ticket-based authentication with Single Sign-On (SSO) functionality         |
+| **Transport Protocol**   | UDP                                                                                                     | TCP/SCTP                                                                                             | TCP                                                                            | None (uses tickets and secret keys)                                         |
+| **Vendor**               | Open, widely supported                                                                                  | Evolved from RADIUS, 3GPP standard                                                                   | Cisco proprietary                                                              | MIT-developed, often used in Microsoft Active Directory                     |
+| **Performance**          | Lightweight, lower reliability due to UDP.                                                              | More reliable and scalable than RADIUS.                                                              | High reliability due to the use of TCP.                                        | High security, built for strong, centralized environments                   |
+| **Compatibility**        | Compatible with a wide range of devices and services                                                    | It is mainly used in modern mobile and IP-based networks.                                            | Primarily used with Cisco devices.                                             | Common in Windows environments (integrated with AD)                         |
+| **Authentication Model** | Centralized (Username/Password)                                                                         | Centralized                                                                                          | Centralized (AAA)                                                              | Centralized using tickets (SSO model)                                       |
+| **Scalability**          | Moderate (due to UDP limitations)                                                                       | Highly scalable (designed for telecom and large networks).                                           | Moderate, typically for managing fewer devices.                                | High scalability, especially in AD environments                             |
+- ### Securing Authn w/ Kerberos
+- ### Seasme
+## Virtual Private Networks (VPNs)
+- ### Modes
 	- Transport Mode
 	- Tunnel Mode
 # Chapter 7: Security Technology: IDPS
@@ -149,12 +163,29 @@
 		- Either key can decrypt/encrypt messages encrypted by the other
 		- Implemented first via RSA
 - ### Encryption Key Size
-- ### Cryptographic Tools
+	- Theoretical Operations to break an encryption is thought to be 2<sup>k</sup> operations where `k` is the keysize. However it takes half that time in reality on average.
+	- Keysize is what determines an Encryption algos strength, the security of the key is not as important
+- ### Use of Cryptography
+	- Conceal contents of sensitive messages
+	- Verify contents of messages and the identities of their senders
+	- Must be able to be integrated into everyday world of computing
 - ### Public-Key Infrastructure (PKI)
+	- Provides:
+		- Authn
+		- Auth
+		- Integrity
+		- Privacy
+		- Non-Repudiation
+	- Uses:
+		- Certificate Authority (CA)
+		- Registration Authority (RA)
+		- Certificate Directories
+		- Management Protocols
+		- Polices & Procedures
 - ### Digital Sigs
 - ### Digital Certs
 - ### Hybrid Cryptography Systems
-### Steganography
+- ### Steganography (Skipped, too simple)
 ## Protocols for Secure Communications
 - ### Securing Internet Communication with S-HTTP & SSL
 - ### Securing EMAIL with S/MIME, PEM and PGP
