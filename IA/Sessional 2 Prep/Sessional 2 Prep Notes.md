@@ -1,9 +1,9 @@
-| Chapter<br>Number | Chapter<br>Name                       | Status    |
-| ----------------- | ------------------------------------- | --------- |
-| 4                 | Planning for Security                 | :warning: |
-| 6                 | Security Technology: Firewalls & VPNs | :warning: |
-| 7                 | Security Technology: IDPS             | :warning: |
-| 8                 | Cryptography                          | :warning: |
+| Chapter<br>Number | Chapter<br>Name                       | Status             |
+| ----------------- | ------------------------------------- | ------------------ |
+| 4                 | Planning for Security                 | :warning:          |
+| 6                 | Security Technology: Firewalls & VPNs | :warning:          |
+| 7                 | Security Technology: IDPS             | :warning:          |
+| 8                 | Cryptography                          | :white_check_mark: |
 
 # Chapter 4: Planning for Security
 - InfoSec Planning & Governance
@@ -198,8 +198,36 @@
 		- Use of Asymmetric keys to transfer a symmetric key which is then used for transmitting messages
 - ### ~~Steganography (Skipped, too simple)~~
 ## Protocols for Secure Communications
+## Protocols for Secure Communications
 - ### Securing Internet Communication with S-HTTP & SSL
-- ### Securing EMAIL with S/MIME, PEM and PGP
+  - **SSL**: Uses public key encryption to establish secure connections over the Internet.
+  - **S-HTTP**: Encrypts individual HTTP messages between client and server, layering SSL over HTTP.
+  - Together, SSL and S-HTTP secure data exchanges across virtual connections, ensuring data confidentiality and integrity.
+- ### Securing Email with S/MIME, PEM, and PGP
+  - **S/MIME**: Extends MIME with digital signatures for secure email encoding.
+  - **PEM**: Uses 3DES for message encryption and RSA for key exchanges and digital signatures.
+  - **PGP**: Employs the IDEA cipher for message encryption, widely used for secure email communications.
 - ### Securing Web Transactions with SET, SSL, and S-HTTP
+  - **SET**: Developed by MasterCard and VISA to secure online and retail transactions, encrypting credit card details using DES.
+  - **SSL & S-HTTP**: Used to secure communications in online transactions, protecting sensitive data exchanges.
 - ### Securing Wireless Networks with WEP & WPA
-- ### Securing TCP/IP with IPSec & PGP
+  - **WEP**: Early standard for Wi-Fi security, though vulnerable to attacks.
+  - **WPA/WPA2**: Enhanced protocols to address WEP’s flaws, using stronger encryption for network protection.
+  - **Next-Gen Protocols**: Includes AES-based standards like RSN and CCMP for robust wireless security.
+  - **Bluetooth**: Requires security controls to avoid exploitation within its transmission range.
+
+|                    | **WEP**                                                   | **WPA**                                                                                               |
+| ------------------ | --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| **Encryption**     | Already Broken                                            | Overcomes all WEP shortcomings                                                                        |
+|                    | 40-bit Key                                                | 128-Bit Key                                                                                           |
+|                    | Static key                                                | Dynamic Key - Each user is assigned a key per session with additional keys calculated for each packet |
+|                    | Manual Key Distribution - Each key is manually punched in | Automatic Key Distribution                                                                            |
+| **Authentication** | Broken - WEP key itself is used for Authn                 | Improved User Authn, using 802.1x & EA                                                                |
+- ### Securing TCP/IP with IPSec and PGP
+  - **IPSec**: Framework for TCP/IP security, incorporating cryptographic methods:
+    - Diffie-Hellman key exchange for secure keys
+    - Public key cryptography to verify identity
+    - Bulk encryption for data privacy
+    - Digital certificates as digital ID cards for authentication
+  - **PGP**: A hybrid cryptosystem for file and email encryption, combining top cryptographic methods.
+    - Provides six key services: digital signature authentication, message encryption, compression, email compatibility, segmentation, and key management, making it an open-source standard for secure communication.
