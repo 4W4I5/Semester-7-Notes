@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SSD/Sessional 2 Prep/Sessional 2 Prep Notes.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Sessional 2 Prep Notes"
+              "title": "README"
             }
           }
         ]
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SSD/Sessional 2 Prep/Sessional 2 Prep Notes.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Sessional 2 Prep Notes"
+              "title": "Backlinks for README"
             }
           },
           {
@@ -112,12 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SSD/Sessional 2 Prep/Sessional 2 Prep Notes.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Sessional 2 Prep Notes"
+              "title": "Outgoing links from README"
             }
           },
           {
@@ -139,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SSD/Sessional 2 Prep/Sessional 2 Prep Notes.md"
+                "file": "README.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Sessional 2 Prep Notes"
+              "title": "Outline of README"
             }
           },
           {
@@ -192,8 +192,8 @@
   },
   "active": "eb2fe0419065fcc5",
   "lastOpenFiles": [
-    "SSD/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "SSD/Sessional 2 Prep/Sessional 2 Prep Notes.md",
+    "SSD/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "README.md",
     "SSD/Sessional 2 Prep",
     "IA/Sessional 2 Prep/Sessional 2 Prep Notes.md",
