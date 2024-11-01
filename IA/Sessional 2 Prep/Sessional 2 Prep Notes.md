@@ -105,7 +105,7 @@
 	- **Encrypt** -> The process of transforming plaintext into ciphertext to secure information.
 	- **Key/Cryptovariable** -> A secret value used in cryptographic algorithms to encrypt and decrypt data.
 	- **Keyspace** -> The total number of possible values for a key in a cryptosystem.
-	- **Link encryptio**n -> An encryption method where data is encrypted at each link in a communication chain, including headers and metadata.
+	- **Link encryption** -> An encryption method where data is encrypted at each link in a communication chain, including headers and metadata.
 	- **Plaintext/cleartext** -> The original, readable data before encryption.
 	- **Steganography** -> The practice of hiding messages or information within other non-secret text, images, or media.
 	- **Work factor** -> The estimated time and resources required to break a cryptosystem by an attacker.
@@ -115,15 +115,34 @@
 	- Types:
 		- Monoalphabetic: Only one alphabet is used
 		- Polyalphabetic: Use of two or more alphabets
-		- Vigenere: Made up of 26 distinct cipher alphabets where the letters of a key and the PT are mapped onto a grid to get a new letter
+		- Vigenère: Made up of 26 distinct cipher alphabets where the letters of a key and the PT are mapped onto a grid to get a new letter
 - **Transposition Cipher**
+	- Rearrange values within a block to create CT
+	- Can be done bitwise or bytewise
 - **Exclusive OR (XOR)**
+	- Boolean Function
+		- If two bits are the same, then output a binary 0
+		- If two bits are **not** the same, then output a binary 1
+	- Not recommended to be used on its own, very simple to break
 - **Vernam Cipher**
+	- Developed by AT&T
+	- Use a set of characters once per encryption process, makes it hard to perform known ciphertext attacks
+	- PadValues are added to PT(converted to numeric values), the sum exists in modulo 26 and is converted into a ciphertext letter
 - **Book-Based Ciphers**
+	- Uses text in a book to decrypt a message
+	- **Book Cipher** -> CT is a list of codes representing page, line & word numbers
+	- **Running Key Cipher** -> Uses a book for passing a key to cipher that is similar to vigenere, sender provides encrypted message with sequence of numbers from predetermined book to be used as an indicator block
+	- **Template Cipher** -> Involves the use of hidden message in book, letter, or other message; requires page with specific number of holes cut into it. Should've been called a cheese slice cipher.
 ### Hash Functions
+- Mathematical algos to confirm message identity and verify that it has not been changed
+- Hash Algos
+	- Public functions that create hash value
+- Use of keys not required, although a Message Authn Code (MAC) can be attached to the message
+- Used mainly in password verification systems to confirm the identity of the user.
 ### Cryptographic Algorithms
-### Symmetric Encryption
-### Asymmetric Encryption
+- Grouped into
+	- #### Symmetric Encryption
+	- #### Asymmetric Encryption
 ### Encryption Key Size
 ### Cryptographic Tools
 ### Public-Key Infrastructure (PKI)
