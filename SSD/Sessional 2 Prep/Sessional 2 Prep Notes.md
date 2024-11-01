@@ -427,7 +427,7 @@ Output encoding ensures that user-generated data cannot interfere with or alter 
 ## Secure Defaults and Vendor Credentials
 - **Default Credentials**: Change or disable vendor-supplied credentials.
 
-# 1. Password Storage (Hashing with Salt)
+### 1. Password Storage (Hashing with Salt)
 
 Using **bcrypt** in Python to hash passwords with a unique salt for each password.
 
@@ -446,7 +446,7 @@ def verify_password(stored_hash, attempted_password):
     return checkpw(attempted_password.encode(), stored_hash)
 ```
 
-## 2. Password Complexity Check
+### 2. Password Complexity Check
 
 Implement password complexity rules to ensure passwords meet security requirements (e.g., min length, mix of chars).
 
@@ -468,7 +468,7 @@ def validate_password_complexity(password):
     return True
 ```
 
-## 3. Account Lockout
+### 3. Account Lockout
 
 Limit login attempts to prevent brute-force attacks.
 
@@ -502,7 +502,7 @@ def login(username, password):
         return "Invalid password"
 ```
 
-## 4. Secure Transmission (Enforcing HTTPS in Flask)
+### 4. Secure Transmission (Enforcing HTTPS in Flask)
 
 Redirect all HTTP requests to HTTPS in a Flask app for secure password transmission.
 
@@ -522,7 +522,7 @@ def login():
     pass
 ```
 
-## 5. Secure Password Reset Link (Example with Expiry)
+### 5. Secure Password Reset Link (Example with Expiry)
 
 Generate a one-time password reset link with a short expiration time.
 
@@ -546,7 +546,7 @@ def verify_reset_link(token, user_email, expiration_time):
     return token == expected_token
 ```
 
-## 6. Enforcing Password Expiry (Prevent Reuse and Require Updates)
+### 6. Enforcing Password Expiry (Prevent Reuse and Require Updates)
 
 Ensure passwords can’t be reused and that they expire periodically.
 
@@ -571,7 +571,7 @@ def update_password(user_id, new_password):
     password_history[user_id].append((hashed_password, datetime.now()))
 ```
 
-## 7. Multi-Factor Authentication (MFA) via OTP
+### 7. Multi-Factor Authentication (MFA) via OTP
 
 An example of generating a one-time password (OTP) as a second authentication factor.
 
