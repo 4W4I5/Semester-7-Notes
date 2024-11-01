@@ -198,7 +198,6 @@
 		- Use of Asymmetric keys to transfer a symmetric key which is then used for transmitting messages
 - ### ~~Steganography (Skipped, too simple)~~
 ## Protocols for Secure Communications
-## Protocols for Secure Communications
 - ### Securing Internet Communication with S-HTTP & SSL
   - **SSL**: Uses public key encryption to establish secure connections over the Internet.
   - **S-HTTP**: Encrypts individual HTTP messages between client and server, layering SSL over HTTP.
