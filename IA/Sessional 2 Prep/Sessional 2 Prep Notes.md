@@ -87,7 +87,7 @@
 - Packet Sniffers
 - Wireless Security Tools
 # Chapter 8: Cryptography
-### Introduction
+## Introduction
 - **Cryptology** -> Science of Encryption, includes Cryptography & Cryptanalysis
 		- **Cryptography** -> Making and using code to secure messages
 		- **Cryptanalysis** -> Cracking or breaking Encrypted messages back into their unencrypted form
@@ -109,7 +109,7 @@
 	- **Plaintext/cleartext** -> The original, readable data before encryption.
 	- **Steganography** -> The practice of hiding messages or information within other non-secret text, images, or media.
 	- **Work factor** -> The estimated time and resources required to break a cryptosystem by an attacker.
-### Cipher Methods
+## Cipher Methods
 - **Substitution Cipher**
 	- Exchange one value for another
 	- Types:
@@ -139,25 +139,25 @@
 	- Public functions that create hash value
 - Use of keys not required, although a Message Authn Code (MAC) can be attached to the message
 - Used mainly in password verification systems to confirm the identity of the user.
-### Cryptographic Algorithms
-- #### Grouped into
-	- ##### Symmetric Encryption
+## Cryptographic Algorithms
+- ### Grouped into
+	- #### Symmetric Encryption
 		- AKA Same key encryption, both the sender and receiver have the key
 		- Implemented via DES, 3DES and AES
-	- ##### Asymmetric Encryption
+	- #### Asymmetric Encryption
 		- AKA Public-Key encryption
 		- Either key can decrypt/encrypt messages encrypted by the other
 		- Implemented first via RSA
-- #### Encryption Key Size
-### Cryptographic Tools
-### Public-Key Infrastructure (PKI)
-### Digital Sigs
-### Digital Certs
-### Hybrid Cryptography Systems
+- ### Encryption Key Size
+- ### Cryptographic Tools
+- ### Public-Key Infrastructure (PKI)
+- ### Digital Sigs
+- ### Digital Certs
+- ### Hybrid Cryptography Systems
 ### Steganography
-### Protocols for Secure Communications
-### Securing Internet Communication with S-HTTP & SSL
-### Securing EMAIL with S/MIME, PEM and PGP
-### Securing Web Transactions with SET, SSL, and S-HTTP
-### Securing Wireless Networks with WEP & WPA
-### Securing TCP/IP with IPSec & PGP
+## Protocols for Secure Communications
+- ### Securing Internet Communication with S-HTTP & SSL
+- ### Securing EMAIL with S/MIME, PEM and PGP
+- ### Securing Web Transactions with SET, SSL, and S-HTTP
+- ### Securing Wireless Networks with WEP & WPA
+- ### Securing TCP/IP with IPSec & PGP
