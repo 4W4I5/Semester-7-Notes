@@ -251,7 +251,8 @@ Can be achieved through:
 ### Key Principles and Best Practices
 1. **Server-Side Validation**:
 	- Always perform validation on the server side, as client-side validation can be bypassed by attackers.
-	- Example (Python/Flask):  ```python
+	- Example (Python/Flask):
+	  ```python
      from flask import Flask, request, jsonify
      import re
 
@@ -273,7 +274,8 @@ Can be achieved through:
 2. **Classify Data Sources**:
 	- Identify sources of data as *trusted* or *untrusted* (e.g., user input vs. internal APIs).
 	- Only apply validation to untrusted sources, minimizing potential security risks from external data.
-	- Example:  ```python
+	- Example:
+	  ```python
      trusted_sources = ['internal_api', 'trusted_database']
      untrusted_sources = ['user_input', 'external_api']
 
@@ -288,7 +290,8 @@ Can be achieved through:
 3. **Centralized Validation Routines + Use Allow-Lists (Positive Validation)**:
 	- Use a single, central function to handle validation for consistency across the application.
 	- Define expected characters or formats, focusing on acceptable patterns rather than attempting to list all invalid cases.
-	- Example:  ```python
+	- Example:  
+	  ```python
      def centralized_validation(data, pattern):
          if not re.match(pattern, data):
              raise ValueError("Invalid data")
@@ -598,4 +601,3 @@ Output encoding ensures that user-generated data cannot interfere with or alter 
 
 ### 15. **Change Default Credentials**
 - **Guideline**: Replace vendor-supplied default credentials, or disable them entirely if not required.
-
