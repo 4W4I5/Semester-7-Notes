@@ -1,16 +1,115 @@
-| Lecture<br>Number | Lecture<br>Name                                      | Status    |
-| ----------------- | ---------------------------------------------------- | --------- |
-| 1                 | Significance of DFDs in security analysis            | :warning: |
-| 2                 | DFD Impact in security analysis                      | :warning: |
-| Task 1            | Threat Modelling in STRIDE                           | :warning: |
-| Task 2            | Threat Modelling in DREAD                            | :warning: |
-| 3                 | Attacker Profiling (MITRE)                           | :warning: |
-| 4                 | Secure Coding Practices: Input Validation            | :warning: |
-| 5                 | Secure Coding Practices: Output Encoding             | :warning: |
-| 14 & 15           | Secure Coding Practices: Authn & Password Management | :warning: |
-
+| Lecture<br>Number | Lecture<br>Name                                      | Status             |
+| ----------------- | ---------------------------------------------------- | ------------------ |
+| 1                 | Significance of DFDs in security analysis            | :white_check_mark: | 
+| 2                 | DFD Impact in security analysis                      | :white_check_mark: |
+| Task 1            | Threat Modelling in STRIDE                           | :white_check_mark: |
+| Task 2            | Threat Modelling in DREAD                            | :white_check_mark: |
+| 3                 | Attacker Profiling (MITRE)                           | :x:                |
+| 12 & 13           | Secure Coding Practices: Input Validation            | :white_check_mark: |
+| 12 & 13           | Secure Coding Practices: Output Encoding             | :white_check_mark: |
+| 14 & 15           | Secure Coding Practices: Authn & Password Management | :white_check_mark: |
 
 ---
+# Lecture 1: Significance of DFDs in Security Analysis
+## Q/A
+1. **What is a Data Flow Diagram (DFD), and how is it used in security analysis?**
+   A DFD is a graphical representation of data flows within a system, showing how data moves between processes, data stores, and external entities. In security analysis, DFDs are used to understand the system’s data flows and identify potential points where data could be exposed or manipulated.
+2. **Why are DFDs important for identifying potential security risks?**
+   By mapping out all data movements and processes, DFDs can reveal points of entry, exit, and storage for data, helping analysts pinpoint areas vulnerable to unauthorized access, leaks, and attacks.
+3. **How can DFDs help in visualizing and understanding data movement in a system?**
+   DFDs break down complex systems into smaller, manageable parts, showing how data flows in and out of each component, making it easier to understand data handling and potential security implications.
+4. **What are the main components of a DFD, and why are they critical for security analysis?**
+   The main components include external entities, processes, data stores, and data flows. Each plays a role in security analysis by representing areas where data is handled, processed, or stored and where threats could arise.
+5. **How do DFDs assist in identifying entry points for potential security vulnerabilities?**
+   DFDs show external entities and how they interact with the system. Entry points—connections to these entities—are potential security vulnerabilities where attackers could gain unauthorized access.
+6. **What role do DFDs play in threat modeling?**
+   DFDs are foundational in threat modeling, helping analysts to systematically identify, analyze, and address threats by visualizing where data flows might be compromised.
+7. **How can DFDs be used to map out data flows and security boundaries in a system?**
+   DFDs show data flows and the boundaries between trusted and untrusted components, called trust boundaries. These help identify where data is exposed to external systems and where security controls should be applied.
+8. **What is the relationship between DFDs and data classification in security?**
+   By mapping out data flows, DFDs can help classify the sensitivity of data at different points in the system, which informs decisions on required security measures like encryption and access control.
+9. **In what ways can DFDs support compliance with security standards and regulations?**
+   DFDs help demonstrate how data is handled, supporting compliance with regulations like GDPR, HIPAA, and PCI-DSS by showing secure data flows, storage points, and access controls.
+10. **How does a DFD aid in identifying the types of data being processed and stored in a system?**
+    DFDs provide a comprehensive view of all data handled within a system, allowing security analysts to classify data by type and determine the appropriate level of security for each data type.
+11. **What is a trust boundary in a DFD, and how does it impact security analysis?**
+    A trust boundary is a separation between areas of different trust levels, such as between internal and external networks. It’s crucial in security analysis because data crossing these boundaries may require additional protection.
+12. **How do DFDs help to visualize potential data leakages or exposures?**
+    By mapping data flows, DFDs can reveal areas where data might be accessible to unauthorized users or systems, helping to identify where protections against leaks are needed.
+13. **How does a DFD contribute to understanding user and system roles in a security context?**
+    DFDs identify who or what accesses data at each point, helping security analysts to map user roles and ensure that only authorized roles have access to sensitive data.
+14. **What are the common security pitfalls to watch out for when creating or analyzing a DFD?**
+    Common pitfalls include omitting processes or data flows, over-complicating the DFD, or failing to represent all trust boundaries, each of which could lead to incomplete or misleading security analysis.
+15. **How can a DFD highlight areas where encryption or access control is needed?**
+    DFDs help to pinpoint where data is stored or transmitted, making it easier to identify areas where encryption should be applied to protect data in transit or at rest.
+16. **What is the importance of creating different DFD levels for security analysis?**
+    Multi-level DFDs provide varying detail, from high-level overviews to detailed process flows, offering a thorough security perspective across different levels of system operation.
+17. **How can DFDs help in defining mitigation strategies for security threats?**
+    By visualizing data flows and trust boundaries, DFDs help identify where controls, like firewalls, access restrictions, and encryption, can mitigate identified threats.
+18. **How can DFDs help identify areas vulnerable to Man-in-the-Middle (MITM) attacks?**
+    Data flows crossing external boundaries or public networks in a DFD are potential points for MITM attacks. The DFD allows for pinpointing and securing these data flows.
+19. **In what way can a DFD aid in improving incident response planning?**
+    Understanding data flows and storage points in a DFD helps in designing response plans by showing potential data breach locations, prioritizing incident responses based on data sensitivity.
+20. **How can data flows in a DFD reveal potential insider threats?**
+    DFDs show internal data flows, allowing security analysts to identify high-risk data access points, permissions, or areas where excessive access could lead to insider threats.
+21. **What is the impact of a poorly constructed DFD on security analysis?**
+    An inaccurate or incomplete DFD can lead to missed security vulnerabilities and an ineffective analysis, potentially leaving the system exposed to attacks.
+22. **How can DFDs assist in identifying redundant or unnecessary data flows that may increase risk?**
+    DFDs help analysts spot redundant flows, which can be removed to simplify the system and reduce unnecessary security exposures.
+23. **How do DFDs enhance collaboration between security analysts and developers?**
+    DFDs provide a clear, visual representation of the system that both developers and security analysts can refer to, improving understanding and collaboration on security requirements.
+24. **What techniques can be used to validate DFDs for security accuracy?**
+    DFDs can be validated through walkthroughs, peer reviews, and by comparing them with system requirements to ensure all data flows and trust boundaries are accurately represented.
+25. **How do DFDs help to assess the impact of new features on system security?**
+    When a new feature is introduced, a DFD can show how it affects existing data flows and security boundaries, helping to identify and address any new vulnerabilities introduced.
+# Lecture 2: Impact of DFDs in Security Analysis
+## 1. **How do DFDs enhance the effectiveness of threat modeling in security analysis?**
+
+   DFDs play a critical role in threat modeling by visually representing how data flows through a system, where it’s stored, and who interacts with it. This helps security analysts understand the relationships between entities, processes, and data stores, identifying points of vulnerability and potential threats. Threat modeling, which typically includes processes like STRIDE (Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege), relies on clear visual cues provided by DFDs to spot security gaps.
+
+   For instance, during threat modeling, analysts can examine each data flow to determine if it could be intercepted, modified, or deleted, then evaluate if mitigations—such as encryption, authentication, or logging—are in place. DFDs provide a map to systematically apply threat models, helping analysts to more thoroughly address threats and prevent security breaches.
+
+## 2. **In what ways do DFDs contribute to identifying and mitigating data exposure risks in complex systems?**
+
+   DFDs are invaluable in exposing how data moves across system components, especially in large or multi-layered systems. By mapping out data flows, DFDs highlight sensitive areas where data could be accessed by unauthorized entities or unintentionally exposed due to a misconfiguration or lack of security control. Specifically, DFDs help isolate data paths that cross trust boundaries, such as between internal systems and external users, which are prime areas for implementing protections like encryption and access control.
+
+   For instance, if a data flow from a public interface to an internal process isn't encrypted, it creates a vulnerability where sensitive data could be intercepted by malicious actors. DFDs allow analysts to visualize and scrutinize such flows, prompting them to secure these paths by applying the necessary controls. This approach minimizes data exposure risks by ensuring all data transitions across trust boundaries are secure.
+
+## 3. **How do DFDs assist in identifying trust boundaries, and why is this significant for security analysis?**
+
+   Trust boundaries in DFDs are critical as they delineate areas where different levels of security requirements apply. A trust boundary marks a transition between parts of a system with differing levels of access control or security assumptions, such as between internal networks and external client access. By clearly defining these boundaries, DFDs allow security analysts to identify where sensitive data crosses from a secure to an unsecured environment, highlighting the need for additional protection.
+
+   This is significant for security because trust boundaries often mark the "attack surface" of a system. Attackers may exploit data crossing boundaries that lack encryption, authentication, or authorization mechanisms. By analyzing these points, DFDs reveal where controls should be strengthened, such as adding firewalls, implementing multi-factor authentication, or enforcing access restrictions. This reduces the system's vulnerability by securing potential attack vectors at these critical junctures.
+
+## 4. **How can DFDs aid in improving compliance with data protection regulations, and what role do they play in regulatory audits?**
+
+   DFDs are valuable for demonstrating how data is handled, stored, and transmitted within a system, which is essential for regulatory compliance with standards like GDPR, HIPAA, and PCI-DSS. These regulations require organizations to document data flows, showing where data originates, how it’s processed, and where it’s stored, along with security measures in place to protect it. DFDs help provide this documentation by clearly visualizing the flow and handling of data, making it easier to assess compliance.
+
+   In regulatory audits, DFDs serve as visual evidence of how data is managed, showing auditors that data handling practices align with regulatory requirements. DFDs can also help identify where sensitive data (e.g., personally identifiable information) is processed, aiding in the implementation of controls such as data encryption, access restrictions, and secure storage solutions. With these visual aids, DFDs support a proactive approach to data security, helping organizations meet compliance standards and streamline audits.
+
+## 5. **In what ways do DFDs contribute to identifying areas vulnerable to insider threats, and how can they aid in developing protective measures?**
+
+   Insider threats are a significant risk, often stemming from authorized users misusing their access to critical systems and data. DFDs help by outlining the data access points for various processes, systems, and roles, allowing security teams to analyze which users or roles have access to sensitive data flows. By studying these diagrams, analysts can pinpoint areas where excessive or unnecessary access is granted, which could be exploited by insiders.
+
+   For instance, a DFD might reveal that a particular user role has access to data flows beyond what is necessary for their job function. This information enables analysts to tighten access controls, enforcing the principle of least privilege by restricting access to only what is essential. Additionally, DFDs can highlight where monitoring and logging should be implemented to track insider access to critical data, creating a record that can be reviewed for suspicious behavior. This proactive step mitigates the risk of insider threats by ensuring sensitive data is only accessible to authorized individuals and monitoring is in place for accountability.
+
+## 6. **How do DFDs enhance collaboration between development and security teams in the system development lifecycle (SDLC)?**
+
+   DFDs serve as a common language for both development and security teams, offering a visual representation that bridges technical and security perspectives. In the SDLC, particularly during the design and planning phases, DFDs allow developers to see how their implementations could impact security, while security teams can identify risks and propose mitigations without needing to dive deep into the code.
+
+   For example, as a development team designs a new feature, they can create or update a DFD to show new data flows and components introduced to the system. Security teams can then use this updated DFD to identify security needs, such as data encryption or additional authentication, early in the development cycle. This collaboration prevents security issues from being an afterthought and encourages the integration of security controls at the design level. The result is a more secure product, developed with input from both teams, enhancing overall system resilience.
+
+## 7. **How can DFDs help in identifying and reducing redundant data flows that may increase security risk?**
+
+   Redundant data flows—data moving unnecessarily between processes or duplicated across multiple stores—can increase a system's attack surface and create additional security risks. DFDs help security analysts and system architects visualize these flows, making it easier to spot and eliminate inefficiencies.
+
+   For example, a DFD may show that a particular piece of data is processed by two separate entities when only one is necessary. Eliminating this redundancy reduces the potential entry points for attackers, decreases system complexity, and minimizes potential data exposure. Additionally, reducing redundant flows makes it easier to implement security controls as fewer pathways need to be secured, streamlining overall data management and reducing the chance of overlooked vulnerabilities.
+
+## 8. **How do DFDs assist in the security analysis of new system features, particularly for assessing security impact?**
+
+   When new features are added to a system, they often introduce additional data flows and modify existing ones, which can create new security challenges. DFDs are used to update these flows to include new feature components, processes, or external interactions, allowing security analysts to assess the potential security impact of the additions.
+
+   By examining the updated DFD, security teams can determine if the new feature introduces additional trust boundaries or interacts with sensitive data in a way that requires enhanced security controls. For instance, if a new feature requires data to be transmitted externally, the DFD would highlight this new flow, enabling security teams to assess the need for secure transmission protocols, access restrictions, or auditing measures. This proactive analysis allows security to be built into new features from the outset, reducing the risk of introducing vulnerabilities into the system.
 
 # Task 1: STRIDE Modelling (Online Banking)
 - STRIDE Acronym
@@ -126,3 +225,369 @@
 | **Backend Servers**         | **Denial of Service (DoS)** (attacker overwhelms backend servers with traffic to take down the service) | 7                    | 8                   | 5                  | 9                  | 6                   | **7.0**             |
 | **Third-Party Services**    | **Supply Chain Attack** (compromise of third-party services used in the banking system)                 | 9                    | 6                   | 4                  | 8                  | 5                   | **6.4**             |
 | **Customer Notifications**  | **Sensitive Data Leak in Email/SMS** (sensitive info exposed in clear text in notifications)            | 6                    | 6                   | 5                  | 8                  | 7                   | **6.4**             |
+
+# Lecture 12 & 13: Secure Coding Practices (Input Validation & Output Encoding)
+## Input Validation
+
+Input validation is critical to ensure data entering the system is properly sanitized, validated, and consistent with expected formats. This process is vital to prevent injection attacks, cross-site scripting (XSS), and data corruption.
+
+## Importance of UTF-8 for security
+1. Standardization:
+	- UTF-8 is a widely adopted encoding standard that supports a vast range of characters from different languages. This standardization helps in maintaining consistency and avoiding encoding-related vulnerabilities.
+2. Avoiding Overlong Encodings:
+	- UTF-8 encoding ensures that each character is represented in a consistent manner. Overlong UTF-8 encodings, which can represent the same character in multiple ways, have been used in the past to bypass security checks 1). By adhering to the UTF-8 standard, you mitigate the risk of such attacks.
+1. Compatibility:
+	- UTF-8 is compatible with ASCII, making it easier to integrate with existing systems and reducing the risk of encoding errors that could be exploited by attackers
+
+### Key Principles and Best Practices
+1. **Server-Side Validation**:
+   - Always perform validation on the server side, as client-side validation can be bypassed by attackers.
+   - Example (Python/Flask):
+
+     ```python
+     from flask import Flask, request, jsonify
+     import re
+
+     app = Flask(__name__)
+
+     @app.route('/submit', methods=['POST'])
+     def submit():
+         data = request.json
+         username = data.get('username')
+         if not re.match("^[a-zA-Z0-9_]+$", username):
+             return jsonify({"error": "Invalid username"}), 400
+         return jsonify({"message": "Input is valid"}), 200
+     ```
+
+
+2. **Classify Data Sources**:
+   - Identify sources of data as *trusted* or *untrusted* (e.g., user input vs. internal APIs).
+   - Only apply validation to untrusted sources, minimizing potential security risks from external data.
+   - Example:
+
+     ```python
+     trusted_sources = ['internal_api', 'trusted_database']
+     untrusted_sources = ['user_input', 'external_api']
+
+     def classify_source(source):
+         return "trusted" if source in trusted_sources else "untrusted"
+     ```
+
+
+3. **Centralized Validation Routines**:
+   - Use a single, central function to handle validation for consistency across the application.
+   - Example:
+
+     ```python
+     def centralized_validation(data, pattern):
+         if not re.match(pattern, data):
+             raise ValueError("Invalid data")
+         return True
+
+     # Specific validation functions that use the centralized method
+     def validate_username(username):
+         return centralized_validation(username, "^[a-zA-Z0-9_]+$")
+     ```
+
+
+4. **Use Allow-Lists (Positive Validation)**:
+   - Define expected characters or formats, focusing on acceptable patterns rather than attempting to list all invalid cases.
+   - Example: Specify that only alphanumeric and underscore characters are allowed for usernames to prevent injection attacks.
+
+5. **Specify Character Sets (Canonicalization)**:
+   - Ensures that data conforms to a standard character encoding (e.g., UTF-8), which reduces encoding-based vulnerabilities.
+   - Example:
+
+     ```python
+     def validate_utf8(data):
+         try:
+             data.encode('utf-8')
+         except UnicodeEncodeError:
+             raise ValueError("Invalid UTF-8 data")
+         return True
+     ```
+
+
+6. **Reject Invalid Input**:
+   - Invalid data should be outright rejected, with an appropriate error response (e.g., HTTP 400 for bad requests).
+   - Ensures that data doesn’t silently fail, which could lead to unexpected issues later.
+
+7. **Additional Coding Scenarios**:
+   - Validate data types (e.g., ensure integers where required).
+   - Check data ranges to prevent overflow or underflow vulnerabilities.
+   - Implement additional controls if potentially hazardous input is allowed.
+
+---
+
+### Output Encoding
+
+Output encoding ensures that user-generated data cannot interfere with or alter the application’s intended functionality by encoding it before rendering it in HTML, JavaScript, or other interpretable contexts. It ensures that data is treated as text rather than executable code.
+
+#### Key Principles and Best Practices
+1. **Server-Side Encoding**:
+   - Perform encoding server-side to prevent an attacker from injecting code.
+	   - Use of `html.escape()` to convert special characters like `>`, `<`, `&` and `"` into their HTML-Safe equivs
+   - Example (Python/Flask):
+
+     ```python
+     from flask import Flask, render_template_string, request
+     import html
+
+     app = Flask(__name__)
+
+     @app.route('/submit_comment', methods=['POST'])
+     def submit_comment():
+         user_comment = request.form['comment']
+         encoded_comment = html.escape(user_comment)
+         return render_template_string('<p>{{ comment }}</p>', comment=encoded_comment)
+     ```
+
+
+2. **Standardized Encoding Routines**:
+   - Use tested routines specific to each data type to ensure encoding works correctly in HTML, JavaScript, and URLs.
+   - Example (Java with OWASP Java Encoder):
+
+     ```java
+     import org.owasp.encoder.Encode;
+
+     public class OutputEncodingExample {
+         public static void main(String[] args) {
+             String userInput = "<script>alert('XSS');</script>";
+             
+             // HTML encoding
+             String htmlEncoded = Encode.forHtml(userInput);
+             System.out.println("HTML Encoded: " + htmlEncoded);
+             
+             // JavaScript encoding
+             String jsEncoded = Encode.forJavaScript(userInput);
+             System.out.println("JavaScript Encoded: " + jsEncoded);
+             
+             // URL encoding
+             String urlEncoded = Encode.forUriComponent(userInput);
+             System.out.println("URL Encoded: " + urlEncoded);
+         }
+     ```
+
+
+3. **Contextual Encoding**:
+   - Use context-specific encoding. For example, encoding for HTML output prevents HTML injection but may not protect against JavaScript injection unless encoded accordingly.
+
+4. **Specify Character Sets for Outputs**:
+   - Define character sets like UTF-8 to ensure encoding compatibility and prevent issues with special characters.
+   - Example (PHP):
+
+     ```php
+     header('Content-Type: text/html; charset=UTF-8');
+     $user_input = "<script>alert('XSS');</script>";
+     $encoded_input = htmlspecialchars($user_input, ENT_QUOTES, 'UTF-8');
+     echo "<p>$encoded_input</p>";
+     ```
+
+
+5. **Output Encoding for Various Contexts**:
+   - Encoding in HTML replaces special characters like `<` with `&lt;`.
+   - Encoding in JavaScript prevents executable scripts by encoding characters like `<` and `>`.
+
+#### Additional Coding Scenarios for Output Encoding
+   - Encode all data from untrusted sources before outputting it to the client.
+   - Ensure output encoding is compatible with all systems (e.g., XML, SQL, LDAP).
+   - Encode data in OS commands to prevent command injection.
+
+# Lecture 13 & 14: Secure Coding Practices (Authentication and Password Management)
+- **Password Storage**: Store only salted cryptographic hashes of passwords, never plain-text passwords. Use strong one-way hashes on a trusted server.
+- **Password Complexity and Length**: Enforce complexity and minimum length policies to strengthen passwords against brute-force attacks.
+- **Account Lockout**: Disable password entry after multiple failed login attempts to prevent brute-force and credential stuffing attacks.
+- **Secure Transmission**: Use secure protocols (e.g., HTTPS) to protect credentials in transit. Only use HTTP POST for credential transmission, and never send passwords over an unencrypted connection.
+- **Password Salting**: Add unique salts to each password before hashing to prevent the use of rainbow tables.
+
+## Extended Authentication Controls
+- **Access Control**: Require authentication for all non-public pages and resources, with controls on a trusted system.
+- **Centralized Authentication**: Use standardized, tested authentication services and segregate authentication logic from resources.
+- **Fail-Securely**: Authentication controls should fail without granting access by default.
+- **Credential Management**: Store credentials for external service access securely and separately.
+
+## Additional Authentication Protocols
+- **Secure Error Messages**: Authentication failure responses should avoid revealing which part of the authentication data was incorrect.
+- **External System Authentication**: Use authentication when accessing sensitive external systems and securely store these credentials.
+- **Temporary Passwords and Reset Controls**:
+  - Only send reset links to pre-registered addresses.
+  - Temporary passwords and links should expire quickly and prompt immediate password changes.
+- **Password Change Protocols**: Prevent re-use of recent passwords, enforce policy-based change intervals, and ensure passwords are a day old before changing.
+
+## User Notifications and Controls
+- **Session Security**: Notify users when a password reset occurs.
+- **Account Security Alerts**: Report last login attempts at the next successful login.
+- **Disable "Remember Me"**: Avoid persistent logins for password fields, and monitor for repeated attacks across multiple accounts.
+
+## High-Sensitivity Requirements
+- **Critical Actions**: Require re-authentication for critical actions.
+- **Multi-Factor Authentication**: Use MFA for highly sensitive accounts.
+- **Third-Party Code**: Inspect any third-party authentication code for security vulnerabilities.
+
+## Secure Defaults and Vendor Credentials
+- **Default Credentials**: Change or disable vendor-supplied credentials.
+
+# 1. Password Storage (Hashing with Salt)
+
+Using **bcrypt** in Python to hash passwords with a unique salt for each password.
+
+```python
+from bcrypt import hashpw, gensalt, checkpw
+
+# Storing a new password
+def store_password(plain_password):
+    # Generate a salt and hash the password
+    salt = gensalt()
+    hashed_password = hashpw(plain_password.encode(), salt)
+    return hashed_password
+
+# Verifying a password
+def verify_password(stored_hash, attempted_password):
+    return checkpw(attempted_password.encode(), stored_hash)
+```
+
+## 2. Password Complexity Check
+
+Implement password complexity rules to ensure passwords meet security requirements (e.g., min length, mix of chars).
+
+```python
+import re
+
+def validate_password_complexity(password):
+    # Ensures password is at least 8 chars, includes uppercase, lowercase, number, and special character
+    if len(password) < 8:
+        return False
+    if not re.search(r"[A-Z]", password): # Uppercase
+        return False
+    if not re.search(r"[a-z]", password): # Lowercase
+        return False
+    if not re.search(r"[0-9]", password): # Number
+        return False
+    if not re.search(r"[@$!%*?&]", password): # Special character
+        return False
+    return True
+```
+
+## 3. Account Lockout
+
+Limit login attempts to prevent brute-force attacks.
+
+```python
+from datetime import datetime, timedelta
+
+# Sample in-memory tracking of failed attempts
+failed_login_attempts = {}
+MAX_ATTEMPTS = 5
+LOCKOUT_PERIOD = timedelta(minutes=15)
+
+def login(username, password):
+    current_time = datetime.now()
+
+    # Check if account is locked
+    if username in failed_login_attempts:
+        attempts, lockout_time = failed_login_attempts[username]
+        if attempts >= MAX_ATTEMPTS and current_time < lockout_time:
+            return "Account is locked. Try again later."
+        elif current_time >= lockout_time:
+            # Reset lockout if time has passed
+            failed_login_attempts[username] = (0, None)
+
+    # Password verification (assume verify_password function from above)
+    if verify_password(get_stored_password(username), password):
+        failed_login_attempts[username] = (0, None) # Reset on successful login
+        return "Login successful"
+    else:
+        attempts, _ = failed_login_attempts.get(username, (0, None))
+        failed_login_attempts[username] = (attempts + 1, current_time + LOCKOUT_PERIOD)
+        return "Invalid password"
+```
+
+## 4. Secure Transmission (Enforcing HTTPS in Flask)
+
+Redirect all HTTP requests to HTTPS in a Flask app for secure password transmission.
+
+```python
+from flask import Flask, redirect, request
+
+app = Flask(__name__)
+
+@app.before_request
+def enforce_https():
+    if not request.is_secure:
+        return redirect(request.url.replace("http://", "https://"))
+
+@app.route('/login', methods=['POST'])
+def login():
+    # Process login request securely
+    pass
+```
+
+## 5. Secure Password Reset Link (Example with Expiry)
+
+Generate a one-time password reset link with a short expiration time.
+
+```python
+import hashlib
+import time
+
+# Example URL generation with expiration
+def generate_reset_link(user_email):
+    expiration_time = int(time.time()) + 600 # 10 minutes from now
+    token_data = f"{user_email}{expiration_time}"
+    token = hashlib.sha256(token_data.encode()).hexdigest()
+    return f"https://example.com/reset_password?token={token}&exp={expiration_time}"
+
+# Verify reset link
+def verify_reset_link(token, user_email, expiration_time):
+    if int(time.time()) > expiration_time:
+        return False
+    token_data = f"{user_email}{expiration_time}"
+    expected_token = hashlib.sha256(token_data.encode()).hexdigest()
+    return token == expected_token
+```
+
+## 6. Enforcing Password Expiry (Prevent Reuse and Require Updates)
+
+Ensure passwords can’t be reused and that they expire periodically.
+
+```python
+from datetime import datetime, timedelta
+
+# Track password changes for each user
+password_history = {}
+PASSWORD_EXPIRY_DAYS = 90
+
+def update_password(user_id, new_password):
+    if user_id not in password_history:
+        password_history[user_id] = []
+
+    # Check if password was used recently
+    for old_password, change_date in password_history[user_id]:
+        if checkpw(new_password.encode(), old_password) and (datetime.now() - change_date).days < PASSWORD_EXPIRY_DAYS:
+            raise ValueError("New password must be different and cannot be reused")
+
+    # Store new password and timestamp
+    hashed_password = store_password(new_password)
+    password_history[user_id].append((hashed_password, datetime.now()))
+```
+
+## 7. Multi-Factor Authentication (MFA) via OTP
+
+An example of generating a one-time password (OTP) as a second authentication factor.
+
+```python
+import pyotp
+
+# Generate and verify OTP using Time-based OTP
+def generate_otp(secret):
+    totp = pyotp.TOTP(secret)
+    return totp.now()
+
+def verify_otp(secret, otp_code):
+    totp = pyotp.TOTP(secret)
+    return totp.verify(otp_code)
+
+# Setup a user's secret for OTP
+user_secret = pyotp.random_base32()
+print("OTP Code:", generate_otp(user_secret)) # Display OTP for user input
+```
