@@ -66,4 +66,50 @@
 	- Transport Mode
 	- Tunnel Mode
 # Chapter 7: Security Technology: IDPS
+- Introduction
+- Terminology
+- Why use an IDPS
+- Types
+- Detection Methods
+- Response Behavior
+- Approaches & Products
+- Strengths & Limitations
+- Deployment & Implementation
+- Measuring the Effectiveness of IDPS
+	- Honeypots, Honeynets & Padded Cell Systems
+	- Trap & Trace Systems
+- Active Intrusion Prevention
+- Scanning & Analysis Tools
+- Port Scanners
+- Firewall Analysis Tools
+- OS Detection Tools
+- Vuln Scanners
+- Packet Sniffers
+- Wireless Security Tools
 # Chapter 8: Cryptography
+- Introduction
+- Foundations of Cryptology
+- Terminology
+- Cipher Methods
+- Substitution Cipher
+- Transposition Cipher
+- Exclusive OR (XOR)
+- Vernam Cipher
+- Book-Based Ciphers
+- Hash Functions
+- Cryptographic Algorithms
+- Symmetric Encryption
+- Asymmetric Encryption
+- Encryption Key Size
+- Cryptographic Tools
+- Public-Key Infrastructure (PKI)
+- Digital Sigs
+- Digital Certs
+- Hybrid Cryptography Systems
+- Steganography
+- Protocols for Secure Communications
+- Securing Internet Communication with S-HTTP & SSL
+- Securing EMAIL with S/MIME, PEM and PGP
+- Securing Web Transactions with SET, SSL, and S-HTTP
+- Securing Wireless Networks with WEP & WPA
+- Securing TCP/IP with IPSec & PGP
