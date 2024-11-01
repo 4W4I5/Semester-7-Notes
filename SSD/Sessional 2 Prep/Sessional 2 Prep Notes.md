@@ -252,19 +252,31 @@ Can be achieved through:
 1. **Server-Side Validation**:
 	- Always perform validation on the server side, as client-side validation can be bypassed by attackers.
 	- Example (Python/Flask):
+
 	  ```python
+	  
+
      from flask import Flask, request, jsonify
+
      import re
 
      app = Flask(__name__)
 
      @app.route('/submit', methods=['POST'])
+
      def submit():
+
          data = request.json
+
          username = data.get('username')
+
          if not re.match("^[a-zA-Z0-9_]+$", username):
+
              return jsonify({"error": "Invalid username"}), 400
+
          return jsonify({"message": "Input is valid"}), 200
+
+
      ```
 
 
@@ -272,15 +284,23 @@ Can be achieved through:
 
 
 2. **Classify Data Sources**:
+
 	- Identify sources of data as *trusted* or *untrusted* (e.g., user input vs. internal APIs).
 	- Only apply validation to untrusted sources, minimizing potential security risks from external data.
 	- Example:
+
 	  ```python
+	  
+
      trusted_sources = ['internal_api', 'trusted_database']
+
      untrusted_sources = ['user_input', 'external_api']
 
      def classify_source(source):
+
          return "trusted" if source in trusted_sources else "untrusted"
+
+
      ```
 
 
@@ -288,41 +308,64 @@ Can be achieved through:
 
 
 3. **Centralized Validation Routines + Use Allow-Lists (Positive Validation)**:
+
 	- Use a single, central function to handle validation for consistency across the application.
 	- Define expected characters or formats, focusing on acceptable patterns rather than attempting to list all invalid cases.
-	- Example:  
-	  ```python
+	- Example:
+	-
+	```python
      def centralized_validation(data, pattern):
          if not re.match(pattern, data):
              raise ValueError("Invalid data")
          return True
 
      # Specific validation functions that use the centralized method
+
      def validate_username(username):
+
          return centralized_validation(username, r"^[a-zA-Z0-9_]+$")     # REGEX used here is an example of what is allowed
 
 	# Specific validation functions that use the centralized method
+
 	def validate_password(password):
+
 		return centralized_validation(password, r"^[a-zA-Z0-9]+$")
+
+
      ```
 
 
 
 4. **Specify Character Sets (Canonicalization)**:
+
 	- Ensures that data conforms to a standard character encoding (e.g., UTF-8), which reduces encoding-based vulnerabilities.
 	- Example:
+
       ```python
+      
+
      def validate_utf8(data):
+
          try:
+
              data.encode('utf-8')
+
          except UnicodeEncodeError:
+
              raise ValueError("Invalid UTF-8 data")
+
          return True
+
+
      ```
 
 
+
+
 5 **Reject Invalid Input**:
+
 	- Invalid data should be outright rejected, with an appropriate error response (e.g., HTTP 400 for bad requests).
+
 	- Ensures that data doesn’t silently fail, which could lead to unexpected issues later.
 
 6. **Additional Coding Scenarios**:
@@ -332,15 +375,16 @@ Can be achieved through:
 
 ---
 
-### Output Encoding
+## Output Encoding
 
 Output encoding ensures that user-generated data cannot interfere with or alter the application’s intended functionality by encoding it before rendering it in HTML, JavaScript, or other interpretable contexts. It ensures that data is treated as text rather than executable code.
 
-#### Key Principles and Best Practices
+### Key Principles and Best Practices
 1. **Server-Side Encoding**:
    - Perform encoding server-side to prevent an attacker from injecting code.
 	   - Use of `html.escape()` to convert special characters like `>`, `<`, `&` and `"` into their HTML-Safe equivs
    - Example (Python/Flask):
+
 
 
 
@@ -362,9 +406,11 @@ Output encoding ensures that user-generated data cannot interfere with or alter 
 
 
 
+
 2. **Standardized Encoding Routines**:
    - Use tested routines specific to each data type to ensure encoding works correctly in HTML, JavaScript, and URLs.
    - Example (Java with OWASP Java Encoder):
+
 
 
 
@@ -394,12 +440,14 @@ Output encoding ensures that user-generated data cannot interfere with or alter 
 
 
 
+
 3. **Contextual Encoding**:
    - Use context-specific encoding. For example, encoding for HTML output prevents HTML injection but may not protect against JavaScript injection unless encoded accordingly.
 
 4. **Specify Character Sets for Outputs**:
    - Define character sets like UTF-8 to ensure encoding compatibility and prevent issues with special characters.
    - Example (PHP):
+
 
 
 
@@ -415,11 +463,12 @@ Output encoding ensures that user-generated data cannot interfere with or alter 
 
 
 
+
 5. **Output Encoding for Various Contexts**:
    - Encoding in HTML replaces special characters like `<` with `&lt;`.
    - Encoding in JavaScript prevents executable scripts by encoding characters like `<` and `>`.
 
-#### Additional Coding Scenarios for Output Encoding
+### Additional Coding Scenarios for Output Encoding
    - Encode all data from untrusted sources before outputting it to the client.
    - Ensure output encoding is compatible with all systems (e.g., XML, SQL, LDAP).
    - Encode data in OS commands to prevent command injection.
@@ -429,9 +478,10 @@ Output encoding ensures that user-generated data cannot interfere with or alter 
 # Lecture 14 & 15: Secure Coding Practices (Authentication and Password Management)
 
 
-### 1. **Password Storage**
+## 1. **Password Storage**
 - **Guideline**: Store only salted, cryptographic hashes of passwords—never store plain-text passwords. Always hash passwords on a trusted server to prevent exposure.
 - **Implementation**: Use strong one-way hash functions like `bcrypt` with unique salts to protect against attacks.
+
 
   ```python
   from bcrypt import hashpw, gensalt, checkpw
@@ -448,9 +498,11 @@ Output encoding ensures that user-generated data cannot interfere with or alter 
   ```
 
 
-### 2. **Password Complexity and Length**
+
+## 2. **Password Complexity and Length**
 - **Guideline**: Enforce complexity (uppercase, lowercase, digits, special characters) and minimum length requirements to guard against brute-force attacks.
 - **Implementation**: Define password rules that meet security standards, typically requiring a minimum of 8 characters.
+
 
   ```python
   import re
@@ -466,9 +518,11 @@ Output encoding ensures that user-generated data cannot interfere with or alter 
   ```
 
 
-### 3. **Account Lockout**
+
+## 3. **Account Lockout**
 - **Guideline**: Temporarily disable password entry after multiple failed login attempts to prevent brute-force and credential stuffing attacks.
 - **Implementation**: Use an in-memory tracking system to log failed attempts and enforce lockout duration.
+
 
   ```python
   from datetime import datetime, timedelta
@@ -497,9 +551,11 @@ Output encoding ensures that user-generated data cannot interfere with or alter 
   ```
 
 
-### 4. **Secure Transmission (HTTPS Enforcement)**
+
+## 4. **Secure Transmission (HTTPS Enforcement)**
 - **Guideline**: Use HTTPS for all credential transmission and restrict credential transmission to HTTP POST only.
 - **Implementation**: Redirect HTTP to HTTPS to enforce secure connections and apply the `Secure` attribute to session cookies.
+
 
   ```python
   from flask import Flask, redirect, request
@@ -511,11 +567,11 @@ Output encoding ensures that user-generated data cannot interfere with or alter 
   ```
 
 
-### 5. **Password Salting**
+
+## 5. **Password Salting**
 - **Guideline**: Add unique salts to each password before hashing to prevent attacks using precomputed hash tables (rainbow tables).
 
 *Example in password storage function above.*
-
 
 ## Extended Authentication Controls
 
@@ -537,14 +593,17 @@ Output encoding ensures that user-generated data cannot interfere with or alter 
 ### 9. **Secure Error Messages**
 - **Guideline**: Use generic error messages for failed authentication attempts to avoid exposing which part of the credentials was incorrect.
 
+
   ```python
   if not username_exists or not password_correct:
       return "Invalid credentials"
   ```
 
+
 ### 10. **Temporary Passwords and Reset Controls**
 - **Guideline**: Send reset links only to pre-registered email addresses. Temporary passwords and reset links should have a short expiration period and require immediate change on the next login.
 - **Implementation**: Generate secure reset links with expiration.
+
 
   ```python
   import hashlib, time
@@ -555,8 +614,10 @@ Output encoding ensures that user-generated data cannot interfere with or alter 
       return f"https://example.com/reset_password?token={token}&exp={expiration_time}"
   ```
 
+
 ### 11. **Password Change Protocols**
 - **Guideline**: Prevent password reuse, enforce change intervals, and ensure passwords are at least a day old before changes.
+
 
   ```python
   password_history = {}
@@ -568,6 +629,7 @@ Output encoding ensures that user-generated data cannot interfere with or alter 
               raise ValueError("New password must be different and cannot be reused")
       password_history[user_id].append((store_password(new_password), datetime.now()))
   ```
+
 
 ---
 
@@ -587,6 +649,7 @@ Output encoding ensures that user-generated data cannot interfere with or alter 
 ### 14. **Multi-Factor Authentication (MFA)**
 - **Guideline**: Use MFA for highly sensitive accounts, implementing one-time passwords (OTPs) where possible.
 
+
   ```python
   import pyotp
 
@@ -594,6 +657,7 @@ Output encoding ensures that user-generated data cannot interfere with or alter 
   def generate_otp(secret):
       return pyotp.TOTP(secret).now()
   ```
+
 
 ---
 
