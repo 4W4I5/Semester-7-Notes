@@ -87,29 +87,53 @@
 - Packet Sniffers
 - Wireless Security Tools
 # Chapter 8: Cryptography
-- Introduction
-- Foundations of Cryptology
-- Terminology
-- Cipher Methods
-- Substitution Cipher
-- Transposition Cipher
-- Exclusive OR (XOR)
-- Vernam Cipher
-- Book-Based Ciphers
-- Hash Functions
-- Cryptographic Algorithms
-- Symmetric Encryption
-- Asymmetric Encryption
-- Encryption Key Size
-- Cryptographic Tools
-- Public-Key Infrastructure (PKI)
-- Digital Sigs
-- Digital Certs
-- Hybrid Cryptography Systems
-- Steganography
-- Protocols for Secure Communications
-- Securing Internet Communication with S-HTTP & SSL
-- Securing EMAIL with S/MIME, PEM and PGP
-- Securing Web Transactions with SET, SSL, and S-HTTP
-- Securing Wireless Networks with WEP & WPA
-- Securing TCP/IP with IPSec & PGP
+### Introduction
+- **Cryptology** -> Science of Encryption, includes Cryptography & Cryptanalysis
+		- **Cryptography** -> Making and using code to secure messages
+		- **Cryptanalysis** -> Cracking or breaking Encrypted messages back into their unencrypted form
+	- Foundations of Cryptology (Skipped, nothing to note)
+- **Terminology**
+	- **Algorithm** -> A set of rules or steps designed to perform a specific task, such as encryption or decryption.
+	- **Bit stream cipher** -> A cipher that encrypts data one bit at a time, often used for streaming data.
+	- **Block cipher** -> A cipher that encrypts data in fixed-size blocks (e.g., 64 or 128 bits) for increased security and structure.
+	- **Cipher or cryptosystem** -> A method of encryption and decryption to secure information from unauthorized access.
+	- **Ciphertext/cryptogram** -> The encrypted output that appears as an unreadable or scrambled format.
+	- **Code** -> A method of converting data into a different form, often used to represent data with symbols or keywords for privacy or brevity.
+	- **Decipher** -> The process of converting ciphertext back into readable plaintext.
+	- **Decrypt** -> The reverse process of encryption, transforming ciphertext into its original plaintext form.
+	- **Encipher** -> The process of converting plaintext into unreadable ciphertext.
+	- **Encrypt** -> The process of transforming plaintext into ciphertext to secure information.
+	- **Key/Cryptovariable** -> A secret value used in cryptographic algorithms to encrypt and decrypt data.
+	- **Keyspace** -> The total number of possible values for a key in a cryptosystem.
+	- **Link encryptio**n -> An encryption method where data is encrypted at each link in a communication chain, including headers and metadata.
+	- **Plaintext/cleartext** -> The original, readable data before encryption.
+	- **Steganography** -> The practice of hiding messages or information within other non-secret text, images, or media.
+	- **Work factor** -> The estimated time and resources required to break a cryptosystem by an attacker.
+### Cipher Methods
+- **Substitution Cipher**
+	- Exchange one value for another
+	- Types:
+		- Monoalphabetic: Only one alphabet is used
+		- Polyalphabetic: Use of two or more alphabets
+		- Vigenere: Made up of 26 distinct cipher alphabets where the letters of a key and the PT are mapped onto a grid to get a new letter
+- **Transposition Cipher**
+- **Exclusive OR (XOR)**
+- **Vernam Cipher**
+- **Book-Based Ciphers**
+### Hash Functions
+### Cryptographic Algorithms
+### Symmetric Encryption
+### Asymmetric Encryption
+### Encryption Key Size
+### Cryptographic Tools
+### Public-Key Infrastructure (PKI)
+### Digital Sigs
+### Digital Certs
+### Hybrid Cryptography Systems
+### Steganography
+### Protocols for Secure Communications
+### Securing Internet Communication with S-HTTP & SSL
+### Securing EMAIL with S/MIME, PEM and PGP
+### Securing Web Transactions with SET, SSL, and S-HTTP
+### Securing Wireless Networks with WEP & WPA
+### Securing TCP/IP with IPSec & PGP
