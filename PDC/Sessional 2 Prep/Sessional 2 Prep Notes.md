@@ -87,7 +87,7 @@
 	- ### Measuring Performance
 		- Done via Clock ticks in time and Clock Rate in hertz
 		- Formula:
-			- Clock Cycle (CC) = 1/Clock Rate(CR)
+			- $Clock Cycle (CC) = \frac{1}{Clock Rate (CR)}$
 		- Best metric to use is Floating-Point Operations per Second (FLOPS) + Millions of Instructions Per Second (MIPS)
 - ## Benchmarks
 	- ### Why Do Benchmarks?
@@ -125,7 +125,7 @@
 			- SPLASH - Scientific applications & kernels
 - ## Performance Metrics - Parallel Systems
 	- ### Amdahl's Law
-		- `Speedup = 1 / (1 - p)`
+		- $Speedup = \frac{1}{(1 - p)}$
 			- p is section of code that can be parallelized
 			- Max Speedup is 1/p, can't go higher than that
 		- Only for a fixed problem size, as there is a limit to the parallelization
@@ -138,8 +138,9 @@
 			- t<sub>p</sub> -> execution time on a multi processor
 		- Can also use computational steps instead of time in this formula
 	- ### Speedup Factor
-		- S(p) = t<sub>s</sub> / f \* t<sub>s</sub> + (1 - f) \* t<sub>s</sub>/p
-		- $\frac{1}{1}$
+		- $S(p) = \frac{t_s}{f*t_s + (1-f)* \frac{t_s}{p}}$ = $\frac{p}{1 + (p - 1)f}$
+	- ### Speedup given N number of CPUs
+		- $S(numOfProc) = \frac{1}{f_s\frac{f_p}{numOfProc}}$
 	- ### Super-linear Speedup Example - Searching
 	- ### Efficiency
 	- ### Speedups and Efficiencies of Parallel Program
