@@ -4,8 +4,7 @@
 | 7              | OpenMP               | :warning: |
 | 8              | Performance Analysis | :warning: |
 
->[!WARNING]
-
+> [!WARNING]
 > MATHJAX does not render on github mobile, view the notes on the browser to see the formulae
 
 # Lecture 6: Advanced MPI
