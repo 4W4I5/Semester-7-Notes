@@ -124,10 +124,22 @@
 		- Parallel Computers
 			- SPLASH - Scientific applications & kernels
 - ## Performance Metrics - Parallel Systems
-	- ### Amdahl's Law & Speedup Factor
-	- ### Maximum Speedup (Amdahl's Law)
+	- ### Amdahl's Law
+		- `Speedup = 1 / (1 - p)`
+			- p is section of code that can be parallelized
+			- Max Speedup is 1/p, can't go higher than that
+		- Only for a fixed problem size, as there is a limit to the parallelization
+		- Possible to get Super-Linear Speedup i.e. a speedup value greater than `p`
+			- Extra memory available in multi-processor system
+			- Nondeterministic Algorithm
 	- ### Speedup
-	- ### Linear and Superlinear Speedup
+		- $S(p) = \frac{t_s}{t_p}$
+			- t<sub>s</sub> -> execution time on a single processor
+			- t<sub>p</sub> -> execution time on a multi processor
+		- Can also use computational steps instead of time in this formula
+	- ### Speedup Factor
+		- S(p) = t<sub>s</sub> / f \* t<sub>s</sub> + (1 - f) \* t<sub>s</sub>/p
+		- $\frac{1}{1}$
 	- ### Super-linear Speedup Example - Searching
 	- ### Efficiency
 	- ### Speedups and Efficiencies of Parallel Program
