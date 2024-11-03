@@ -135,21 +135,22 @@
 		- Possible to get Super-Linear Speedup i.e. a speedup value greater than `p`
 			- Extra memory available in multi-processor system
 			- Nondeterministic Algorithm
-	- ### Speedup
 		- $S(p) = \frac{t_s}{t_p}$
 			- t<sub>s</sub> -> execution time on a single processor
 			- t<sub>p</sub> -> execution time on a multi processor
 		- Can also use computational steps instead of time in this formula
-	- ### Speedup Factor
-		- $S(p) = \frac{t_s}{f*t_s + (1-f)\frac{t_s}{p}}$
-		- $S(p) = \frac{p}{1 + (p - 1)f}$
-	- ### Speedup given N number of CPUs
-		- $S(numOfProc) = \frac{1}{f_s\frac{f_p}{numOfProc}}$
-	- ### Super-linear Speedup Example - Searching
+		- $$S(p) = \frac{t_s}{f*t_s + (1-f)\frac{t_s}{p}}$$
+		- $$S(p) = \frac{p}{1 + (p - 1)f}$$
+		- #### Speedup given N number of CPUs
+			- $S(numOfProc) = \frac{1}{f_s\frac{f_p}{numOfProc}}$
+	- ### Gustafson’s Law (Scaled)
+		- $S(p) = p + s(1-p)$
+			- where p -> numOfProc
 	- ### Efficiency
 		- $Efficiency = \frac{Speedup S(p)}{numOfProc}$
-	- ### Speedups and Efficiencies of Parallel Program
-	- ### Gustafson’s Law
-	- ### Amdahl versus Gustafson's Law
 - ## Scalability
 	- ### Strong vs Weak Scalability
+		- **Strongly Scalable** -> Increase in numOfProc/Threads with no change in problem size leads to same efficiency
+			- Governed by Amdahl's law, concerned with a fixed problem size
+		- **Weakly Scalable** -> Increase in problem size + numOfProc/Threads leads to no change in efficiency
+			- Governed by Amdahl's law, concerned with a scaled problem size
