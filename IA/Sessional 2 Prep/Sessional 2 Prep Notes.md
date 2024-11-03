@@ -1,8 +1,8 @@
 | Chapter<br>Number | Chapter<br>Name                       | Status             |
 | ----------------- | ------------------------------------- | ------------------ |
-| 4                 | Planning for Security                 | :warning:          |
+| 4                 | Planning for Security                 | :white_check_mark: |
 | 6                 | Security Technology: Firewalls & VPNs | :warning:          |
-| 7                 | Security Technology: IDPS             | :warning:          |
+| 7                 | Security Technology: IDPS             | :warning:          | 
 | 8                 | Cryptography                          | :white_check_mark: |
 
 # Chapter 4: Planning for Security
