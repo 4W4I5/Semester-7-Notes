@@ -10,8 +10,8 @@
 - **Planning Levels:** Help translate an organization's strategic plans into tactical objectives.
 - **Planning and the CISO**
 - **Information Security Governance:**
-  - **Definition:** Set of responsibilities and practices exercised by the board and executive management.
-  - **Goals:**
+	- **Definition:** Set of responsibilities and practices exercised by the board and executive management.
+- **Goals:**
     - Provide strategic direction
     - Establish objectives
     - Measure progress toward objectives
