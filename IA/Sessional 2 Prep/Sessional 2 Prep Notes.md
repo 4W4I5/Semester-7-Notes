@@ -263,7 +263,7 @@ Lists other standards that influence this policy document, including relevant fe
 | **Level**             | Insight                 | Knowledge             | Information                |
 | **Objective**         | Understanding           | Skill                 | Exposure                   |
 | **Teaching Method**   | Theoretical instruction | Practical instruction | Media, videos, newsletters |
-| **Test Measure**      | Essays                  | Problem-solving       | True/False, MCQ            | 
+| **Test Measure**      | Essays                  | Problem-solving       | True/False, MCQ            |
 | **Impact Time Frame** | Long-term               | Intermediate          | Short-term                 |
 
 ### Continuity Strategies
@@ -317,6 +317,8 @@ Lists other standards that influence this policy document, including relevant fe
 ### Benefits of Law Enforcement Involvement
 - Enhanced evidence processing and legal support.
 - Expertise in handling investigations and securing necessary legal documentation.
+
+---
 
 # Chapter 6: Security Technology: Firewalls & VPNs
 - ### Physical Design Process
