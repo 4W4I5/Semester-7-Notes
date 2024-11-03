@@ -6,765 +6,242 @@
 | 8                 | Cryptography                          | :white_check_mark: |
 
 # Chapter 4: Planning for Security
-- InfoSec Planning & Governance
-```
-· Planning levels help translate organization's strategic
-plans into tactical objectives.
-. Planning and the CISO
-. Information Security Governance
-	- Governance:
-	. Set of responsibilities and practices exercised by the
-	board and executive management
-	· Goal to provide strategic direction, establishment of
-	objectives, and measurement of progress toward
-	objectives
-	. Also verifies/validates that risk management practices
-	are appropriate and assets used properly
-
-
-. Information Security Governance outcomes
-	- Five goals:
-		· Strategic alignment
-		. Risk management
-		. Resource management
-		. Performance measures
-		· Value delivery
-
-
-Responsibilities
-· Oversee overall corporate security
-posture (accountable to board) -> CEO
-
-. Brief board, customers, public -> CEO
-
-. Set security policy, procedures,
-program, training for company -> CSO, CIO, CRO + Department/Agency Head
-
-. Respond to security breaches
-(investigate, mitigate, litigate) -> CSO, CIO, CRO + Department/Agency Head
-
-· Responsible for independent
-annual audit coordination -> Mid Level Manager + CSO, CIO, CRO + Department/Agency Head
-
-. Implement/audit/enforce/assess
-compliance -> Mid Level Manager + CSO, CIO, CRO + Department/Agency Head
-
-· Communicate policies, program
-(training)  -> Staff/Emp + Mid Level Manager
-
-. Implement policy; report security
-vulnerabilities and breaches -> Staff/Emp
-
-```
-
-- InfoSec Policy, Standards & Practices
-
-```
-
-. Management from communities of interest must
-make policies the basis for all information security
-planning, design, and deployment.
-. Policies direct how issues should be addressed
-and technologies used.
-. Policies should never contradict law, must be able
-to stand up in court, and must be properly
-administered.
-. Security policies are the least expensive controls to
-execute but most difficult to implement properly.
-
-```
-
-
-- Policy as the Foundation of Planning
-
-```
-
-. Policy functions as organizational law that dictates
-acceptable and unacceptable behavior.
-. Standards: more detailed statements of what must
-be done to comply with policy
-. Practices, procedures, and guidelines effectively
-explain how to comply with policy.
-. For a policy to be effective, it must be properly
-disseminated, read, understood, and agreed to by
-all members of the organization, and uniformly
-enforced.
-
-```
-NOTE:: Check the diag on slide 10
-
-- Enterprise Information Security Policy (EISP)
-
-```
-· Sets strategic direction, scope, and tone for all
-security efforts within the organization
-. Executive-level document, usually drafted by or
-with Chief Information Officer (CIO) of the
-organization
-. Typically addresses compliance in two areas:
-	- Ensure meeting of requirements to establish program and assigning responsibilities therein to various organizational components
-	- Use of specified penalties and disciplinary action
-
-. EISP Elements should include:
-	- Overview of corporate security philosophy
-	- Information on the structure of the organization and
-	people in information security roles
-	- Articulated responsibilities for security shared by all
-	members of the organization
-	- Articulated responsibilities for security unique to
-	each role in the organization
-
-Statement of Purpose -> Answers the question "What is this policy for?" Provides a framework that helps the
-reader understand the intent of the document. Can include text such as the following:
-"This document will:
-. Identify the elements of a good security policy
-. Explain the need for information security
-. Specify the various categories of information security
-Identify the information security responsibilities and roles
-Identify appropriate levels of security through standards and guidelines
-This document establishes an overarching security policy and direction for our
-company. Individual departments are expected to establish standards, guidelines,
-and operating procedures that adhere to and reference this policy while
-addressing their specific and individual needs."#
-
-Information Security Elements -> Defines information security. For example:
-"Protecting the confidentiality, integrity, and availability of information while in
-processing, transmission, and storage, through the use of policy, education and
-training, and technology ... "
-This section can also lay out security definitions or philosophies to darify the policy.
-
-Need for Information Security -> Provides information on the importance of information security in the
-organization and the legal and ethical obligation to protect critical information
-about customers, employees, and markets.
-
-Information Security Responsibillities and Roles -> Defines the organizational structure designed to support information security
-within the organization. Identifies categories of people with responsibility for
-information security (IT department, management, users) and those
-responsibilities, induding maintenance of this document.
-
-Reference to Other Information Standards and Guidelines -> Lists other standards that influence this policy document and are influenced by it,
-perhaps incuding relevant federal laws, state laws, and other policies.
-
-```
-
-- Issue-Specific Security Policy (ISSP)
-
-```
-
-· The ISSP:
-	- Addresses specific areas of technology
-	- Requires frequent updates
-	- Contains statement on the organization's position on
-	specific issue
-. Three common approaches when creating and
-managing ISSPs:
-	- Create a number of independent ISSP documents
-	- Create a single comprehensive ISSP document
-	- Create a modular ISSP document
-
-. Components of the policy:
-- Statement of policy
-	a. Scope and applicability
-	b. Definition of technology addressed
-	c. Responsibilities
-- Authorized access and usage of equipment
-	a. User access
-	b. Fair and responsible use
-	C. Protection of privacy
-- Prohibited use of equipment
-	a. Disruptive use or misuse
-	b. Criminal use
-	c. Offensive or harassing materials
-	d. Copyrighted, licensed, or other intellectual property
-	e. Other restrictions
-- Systems management
-	a. Management of stored materials
-	b. Employee monitoring
-	C. Virus protection
-	d. Physical security
-	e. Encryption
-- Violations of policy
-	a. Procedures for reporting violations
-	b. Penalties for violations
-- Policy review and modification
-	a. Scheduled review of policy procedures for modification
-	b. Legal disclaimers
-- Limitations of liability
-	a. Statements of liability
-	b. Other disclaimers as needed
-
-```
-
-- Systems-Specific (SysSP)
-```
-
-. SysSPs often function as standards or procedures used
-when configuring or maintaining systems.
-· Systems-specific policies fall into two groups:
-	- Managerial guidance
-	- Technical specifications
-. Access control lists (ACLs) can restrict access for a
-particular user, computer, time, duration-even a
-particular file.
-. Configuration rule policies govern how security system
-reacts to received data.
-. Combination SysSPs combine managerial guidance
-and technical specifications.
-
-```
-- Policy Management
-
-```
-
-. Policies must be managed as they constantly
-change.
-· To remain viable, security policies must have:
-	- A responsible manager
-	- A schedule of reviews
-	- A method for making recommendations for reviews
-	- A policy issuance and revision date
-	- Automated policy management
-
-```
-
-- The InfoSec Blueprint
-```
-
-· Basis for design, selection, and implementation of
-all security policies, education and training
-programs, and technological controls
-. Detailed version of security framework (outline of
-overall information security strategy for
-organization)
-. Specifies tasks and order in which they are to be
-accomplished
-· Should also serve as a scalable, upgradeable, and
-comprehensive plan for the current and future
-information security needs
-
-```
-- The ISO-27000 Series
-```
-
-. One of the most widely referenced security models
-. Standard framework for information security that
-states organizational security policy is needed to
-provide management direction and support
-. Purpose is to give recommendations for
-information security management
-. Provides a starting point for developing
-organizational security
-
-```
-
-| **ISO 27000 Series Standard** | **Title or Topic**                                                                                     | **Comment**                                                                                                                  |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
-| 27000:2014                    | Series Overview and Terminology                                                                        | Defines terminology and vocabulary for the standard series                                                                   |
-| 27001:2013                    | Information Security Management System Specification                                                   | Drawn from B57799:2                                                                                                          |
-| 27002:2013                    | Code of Practice for Information Security Management                                                   | Renamed from ISO/IEC 17799; drawn from B57799:1                                                                              |
-| 27003:2010                    | Information Security Management Systems Implementation Guidelines                                      | Guidelines for project planning requirements for implementing an I5MS                                                        |
-| 27004:2009                    | Information Security Measurements and Metrics                                                          | Performance measure and metrics for information security management decisions                                                |
-| 27005-2011                    | ISMS Risk Management                                                                                   | Supports 27001, but doesn't recommend any specific risk method                                                               |
-| 27006-2011                    | Requirements for Bodies Providing Audit and Certification of an ISMS                                   | Largely intended to support the accreditation of certification bodies providing ISMS certification                           |
-| 27007:2011                    | Guideline for ISMS Auditing                                                                            | Focuses on management systems                                                                                                |
-| 27008:2011                    | Guideline for Inforation Security Auditing                                                             | Focuses on security controls                                                                                                 |
-| 27013:2012                    | Guideline on the Integrated Implementation of ISO/EC 20000-1 and ISO1EC 27001                          | Support for implementing an integrated dual management system                                                                |
-| 27014:2013                    | Information Security Governance Framework                                                              | ISO's approach to security governance- guidance on evaluating, directing. monitoring, and communicating information security |
-| 27015:2012                    | Information Security Management Guidelines for Financial Services                                      | Guidance for financial services organizations                                                                                |
-| 27019:2013                    | Information security management guidelines for process control systems specific to the energy industry | Focused on helping organizations in the energy industry implement IS0 standards                                              |
-
-- NIST Security Models
-```
-
-. Another possible approach described in the
-documents available from Computer Security
-Resource Center of NIST
-	- SP 800-12
-	- SP 800-14
-	- SP 800-18 Rev. 1
-	- SP 800-26
-	- SP 800-30
-
-```
-- NIST Special Publication 800-14
-```
-
-. Security supports the mission of the organization
-and is an integral element of sound management.
-. Security should be cost effective; owners have
-security responsibilities outside their own
-organizations.
-. Security responsibilities and accountability should
-be made explicit; security requires a
-comprehensive and integrated approach.
-. Security should be periodically reassessed;
-security is constrained by societal factors.
-. Thirty-three principles for securing systems (see
-Table 4-5)
-
-```
-- NIST CYSEC Framework
-
-```
-
-. Consists of three fundamental components:
-	- Framework core: set of information security activities
-	an organization is expected to perform and their
-	desired results
-	- Framework tiers: help relate the maturity of security
-	programs and implement corresponding measures
-	and functions
-	- Framework profile: used to perform a gap analysis
-	between the current and a desired state of
-	information security/risk management
-· Seven-step approach to implementing/improving
-programs:
-	- Prioritize and scope
-	- Orient
-	- Create current profile
-	- Conduct risk assessment
-	- Create target profile
-	- Determine, analyze, prioritize gaps
-	- Implement action plan
-```
-- Other Sources of Security Frameworks
-```
-
-. Federal Agency Security Practices (FASP)
-. Computer Emergency Response Team
-Coordination Center (CERT/CC)
-. International Association of Professional Security
-Consultants
-
-```
-- Design of Security Architecture
-```
-
-. Spheres of security: foundation of the security
-framework
-. Levels of controls:
-	- Management controls set the direction and scope of
-	the security processes and provide detailed
-	instructions for its conduct.
-	- Operational controls address personnel and physical
-	security, and the protection of production
-	inputs/outputs.
-	- Technical controls are the tactical and technical
-	implementations related to designing and integrating
-	security in the organization.
-· Defense in depth
-	- Implementation of security in layers
-	- Requires that organization establish multiple layers
-	of security controls and safeguards
-· Security perimeter
-	- Border of security protecting internal systems from
-	outside threats
-	- Does not protect against internal attacks from
-	employee threats or onsite physical threats
-
-```
-- Security Education, Training & Awareness Program (SETA)
-```
-
-. Once general security policy exists, implement
-security education, training, and awareness (SETA)
-program
-. SETA is a control measure designed to reduce
-accidental security breaches.
-. The SETA program consists of security education,
-security training, and security awareness.
-. Enhances security by improving awareness,
-developing skills, and knowledge, and building in-
-depth knowledge
-
-```
-- Security Education
-```
-
-. Everyone in an organization needs to be trained
-and aware of information security; not every
-member needs a formal degree or certificate in
-information security.
-. When formal education is deemed appropriate, an
-employee can investigate courses in continuing
-education from local institutions of higher learning.
-. A number of universities have formal coursework in
-information security.
-
-```
-
-- Security Training
-```
-
-. Provides members of the organization with detailed
-information and hands-on instruction to prepare
-them to perform their duties securely
-. Management of information security can develop
-customized in-house training or outsource the
-training program.
-. Alternatives to formal training include conferences
-and programs offered through professional
-organizations.
-
-```
-- Awareness Program
-```
-
-. One of the least frequently implemented but most
-beneficial programs is the security awareness
-program.
-. Designed to keep information security at the
-forefront of users' minds
-. Need not be complicated or expensive
-. If the program is not actively implemented,
-employees may begin to neglect security matters,
-and risk of employee accidents and failures are
-likely to increase.
-
-```
-
-|                       | **Education**                                                                                  | **Training**                                                             | **Awareness**                                |
-| --------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | -------------------------------------------- |
-| **Attribute**         | Why                                                                                            | How                                                                      | What                                         |
-| **Level**             | Insight                                                                                        | Knowledge                                                                | Information                                  |
-| **Objective**         | Understanding                                                                                  | Skill                                                                    | Exposure                                     |
-| **Teaching Method**   | Theoretical instruction<br>- Discussion seminar<br>- Background reading<br>- Hands-on practice | Practical instruction<br>- Lecture<br>- Case study workshop<br>- Posters | Media<br>- Videos<br>- Newsletters           |
-| **Test Measure**      | Essay (interpret learning)                                                                     | Problem solving (apply learning)                                         | - True or False<br>- MCQ (Identify Learning) |
-| **Impact Time Frame** | Long term                                                                                      | Intermediate                                                             | Short term                                   |
-
-- Continuity Strategies
-```
-
-. Incident response plans (IRPs); disaster recovery plans
-(DRPs); business continuity plans (BCPs)
-. Primary functions of above plans:
-	- IRP focuses on immediate response; if attack escalates
-	or is disastrous, process changes to disaster recovery
-	and BCP.
-	- DRP typically focuses on restoring systems after
-	disasters occur; as such, it is closely associated with
-	BCP.
-	- BCP occurs concurrently with DRP when damage is
-	major or ongoing, requiring more than simple restoration
-	of information and information resources.
-. Before planning can actually begin, a team has to
-start the process.
-. Champion: high-level manager to support,
-promote, and endorse findings of the project
-. Project manager: leads project and ensures sound
-project planning process is used, a complete and
-useful project plan is developed, and project
-resources are prudently managed
-. Team members: should be managers, or their
-representatives, from various communities of
-interest: business, IT, and information security
-```
-
-NOTE:: Add the CP Timeline on Slide 41
-
-```
-			|Contingency Planning|
-					  |
-					  V
-		  |Business Impact Analysis|
-		/        	  |             \
-	   /		      V              \
-     |IR|     |Disaster Recovery|   |Business Continunity|
-				  
-```
-
-- Contingency Planning Process
-```
-
-. Includes the following steps:
-- Develop CP policy statement
-- Conduct business impact analysis
-- Identify preventive controls
-- Create contingency strategies
-- Develop contingency plan
-- Ensure plan testing, training, and exercises
-- Ensure plan maintenance
-
-DIAGRAM:
-- Form the CP Team
-- Develop the CP policy Statement
-- Conduct BIA
-	- Determine mission/business processes & recover criticality
-	- Identity Resource requirements
-	- Identity Recovery Priorities for system resources
-- Form subordinate planning teams (IR/DR/BC)
-- Develop subordinate planning policies (IR/DR/BC)
-- Integrate the BIA
-- Identity Preventative controls
-- Organize Response teams (IR/DR/BC)
-- Create Response Strategies (IR/DR/BC)
-- Develop subordinate plans (IR/DR/BC)
-- Ensure plan testing, training & excerises
-- Ensure plan maintenance
-
-```
-- CP Policy
-```
-
-. Should contain the following sections:
-	- Introductory statement of philosophical perspective
-	- Statement of scope/purpose
-	- Call for periodic risk assessment/BIA
-	- Specification of CP's major components
-	- Call for/guidance in the selection of recovery options
-	- Requirement to test the various plans regularly
-	- Identification of key regulations and standards
-	- Identification of key people responsible for CP operations
-	- Challenge to the organization members for support
-	- Administrative information
-
-```
-- Business Impact Analysis (BIA)
-```
-
-. Investigation and assessment of various adverse
-events that can affect organization
-. Assumes security controls have been bypassed, have
-failed, or have proven ineffective, and attack has
-succeeded
-· Organization should consider scope, plan, balance,
-knowledge of objectives, and follow-ups
-· Three stages:
-- Determine mission/business processes and recovery criticality
-- Identify recovery priorities for system resources
-- Identify resource requirements
-
-```
-
-NOTE:: Add diag on slide 46
-
-- Incident Response Planning
-```
-
-. Incident response planning includes identification
-of, classification of, and response to an incident.
-. Attacks classified as incidents if they:
-	- Are directed against information assets
-	- Have a realistic chance of success
-	- Could threaten confidentiality, integrity, or availability
-	of information resources
-. Incident response (IR) is more reactive than
-proactive, with the exception of planning that must
-occur to prepare IR teams to be ready to
-ady to react to
-
-. Incident response planning includes identification
-of, classification of, and response to an incident.
-. Attacks classified as incidents if they:
-	- Are directed against information assets
-	- Have a realistic chance of success
-	- Could threaten confidentiality, integrity, or availability
-	of information resources
-. Incident response (IR) is more reactive than
-proactive, with the exception of planning that must
-occur to prepare IR teams to be ready to react to
-an incident.
-
-. Incident response policy identifies the following key
-components:
-	- Statement of management commitment
-	- Purpose/objectives of policy
-	- Scope of policy
-	- Definition of InfoSec incidents and related terms
-	- Organizational structure
-	- Prioritization or severity ratings of incidents
-	- Performance measures
-	- Reporting and contact forms
-
-. Incident Planning
-	- Predefined responses enable the organization to react
-	quickly and effectively to the detected incident if:
-. The organization has an IR team
-. The organization can detect the incident
-	- IR team consists of individuals needed to handle
-	systems as incident takes place.
-. Incident response plan
-	- Format and content
-	- Storage
-	- Testing
-
-. Incident detection
-	- Most common occurrence is complaint about
-	technology support, often delivered to help desk.
-	- Careful training is needed to quickly identify and
-	classify an incident.
-	- Once incident is properly identified, the organization
-	can respond.
-	- Incident indicators vary.
-
-. Incident reaction
-	- Consists of actions that guide the organization to stop incident,
-	mitigate its impact, and provide information for recovery
-	- Actions that must occur quickly:
-		. Notification of key personnel
-		. Documentation of the incident
-. Incident containment strategies
-	- Containment of incident's scope or impact as first priority; must
-	then determine which information systems are affected
-	- Organization can stop incident and attempt to recover control
-	through a number or strategies.
-
-. Incident recovery
-	- Once incident has been contained and control of
-	systems regained, the next stage is recovery.
-	- The first task is to identify human resources needed
-	and launch them into action.
-	- Full extent of the damage must be assessed.
-	- Organization repairs vulnerabilities, addresses any
-	shortcomings in safeguards, and restores data and
-	services of the systems.
-
-· Damage assessment
-	- Several sources of information on damage can be
-	used, including system logs, intrusion detection logs,
-	configuration logs and documents, documentation
-	from incident response, and results of detailed
-	assessment of systems and data storage.
-	- Computer evidence must be carefully collected,
-	documented, and maintained to be usable in formal
-	or informal proceedings.
-	- Individuals who assess damage need special
-	training.
-	
-. Automated response
-	- New systems can respond to incident threat
-	autonomously.
-	- Downsides of current automated response systems
-	may outweigh benefits.
-		. Legal liabilities of a counterattack
-		. Ethical issues
-```
-- Disaster Recovery Planning
-```
-
-. Disaster recovery planning (DRP) is preparation for
-and recovery from a disaster.
-· The contingency planning team must decide which
-actions constitute disasters and which constitute
-incidents.
-. When situations are classified as disasters, plans
-change as to how to respond; take action to secure
-most valuable assets to preserve value for the
-longer term.
-. DRP strives to reestablish operations at the
-primary site.
-
-```
-- Business Continuity Planning
-```
-
-· Prepares the organization to reestablish or relocate
-critical business operations during a disaster that
-affects operations at the primary site
-. If disaster has rendered the current location
-unusable, there must be a plan to allow business to
-continue functioning.
-. Development of BCP is somewhat simpler than
-IRP or DRP.
-	- Consists primarily of selecting a continuity strategy
-	and integrating off-site data storage and recovery
-	functions into this strategy
-
-· Continuity strategies
-	- There are a number of strategies for planning for
-	business continuity.
-	- Determining factor in selecting between options is
-	usually cost.
-	- In general, there are three exclusive options: hot
-	sites, warm sites, and cold sites.
-	- Three shared functions: time-share, service bureaus,
-	and mutual agreements
-
-. Off-site disaster data storage
-	- To get sites up and running quickly, an organization
-	must have the ability to move data into new site's
-	systems.
-	- Options for getting operations up and running
-	include:
-		. Electronic vaulting
-		· Remote journaling
-		· Database shadowing
-```
-- Crisis Management
-```
-
-· Actions taken in response to an emergency to
-minimize injury/loss of life, preserve organization's
-image/market share, and complement disaster
-recovery/business continuity processes
-. What may truly distinguish an incident from a
-disaster are the actions of the response teams.
-. Disaster recovery personnel must know their roles
-without any supporting documentation.
-	- Preparation
-	- Training
-	- Rehearsal
-
-· Crisis management team is responsible for
-managing the event from an enterprise perspective
-and covers:
-	- Supporting personnel and families during crisis
-	- Determining impact on normal business operations
-	and, if necessary, making disaster declaration
-	- Keeping the public informed
-	- Communicating with major customers, suppliers,
-	partners, regulatory agencies, industry
-	organizations, the media, and other interested
-	parties
-· Key areas of crisis management also include:
-	- Verifying personnel head count
-	- Checking alert roster
-	- Checking emergency information cards
-```
-- The Consolidated Contingency Plan
-```
-
-· Single document set approach combines all
-aspects of contingency policy and plan,
-incorporating IR, DR, and BC plans.
-. Often created and stored electronically, it should be
-easily accessible by employees in time of need.
-	- Small- and medium-sized organizations may also
-	store hard copies of the document.
-
-```
-- Law Enforcement Involvement
-```
-
-. When incident at hand constitutes a violation of
-law, the organization may determine involving law
-enforcement is necessary.
-· Questions:
-	- When should law enforcement get involved?
-	- What level of law enforcement agency should be
-	involved (local, state, federal)?
-	- What happens when law enforcement agency is
-	involved?
-. Some questions are best answered by the legal
-department.
-
-```
-- Benefits/Drawbacks of Law Enforcement Involvement
-```
-
-. Involving law enforcement agencies has
-advantages:
-	- Agencies may be better equipped at processing
-	evidence.
-	- Organization may be less effective in extracting
-	necessary information to legally convict suspected
-	criminal.
-	- Law enforcement agencies are prepared to handle
-	any necessary warrants and subpoenas.
-	- Law enforcement is skilled at obtaining witness
-	statements and other information collection.
-
-```
+Here's a reformatted version of your chapter content with improved clarity and organization:
+
+---
+
+# Chapter 4: Planning for Security
+
+## InfoSec Planning & Governance
+
+- **Planning Levels:** Help translate an organization's strategic plans into tactical objectives.
+- **Planning and the CISO**
+- **Information Security Governance:**
+  - **Definition:** Set of responsibilities and practices exercised by the board and executive management.
+  - **Goals:**
+    - Provide strategic direction
+    - Establish objectives
+    - Measure progress toward objectives
+    - Verify/validate that risk management practices are appropriate and assets are used properly
+
+### Information Security Governance Outcomes
+- **Five Goals:**
+  - Strategic alignment
+  - Risk management
+  - Resource management
+  - Performance measures
+  - Value delivery
+
+### Responsibilities
+- Oversee overall corporate security posture (accountable to board) → **CEO**
+- Brief board, customers, public → **CEO**
+- Set security policy, procedures, program, training for company → **CSO, CIO, CRO + Department/Agency Head**
+- Respond to security breaches (investigate, mitigate, litigate) → **CSO, CIO, CRO + Department/Agency Head**
+- Responsible for independent annual audit coordination → **Mid Level Manager + CSO, CIO, CRO + Department/Agency Head**
+- Implement/audit/enforce/assess compliance → **Mid Level Manager + CSO, CIO, CRO + Department/Agency Head**
+- Communicate policies, program (training) → **Staff/Employees + Mid Level Manager**
+- Implement policy; report security vulnerabilities and breaches → **Staff/Employees**
+
+---
+
+## InfoSec Policy, Standards & Practices
+
+- Management from communities of interest must make policies the basis for all information security planning, design, and deployment.
+- Policies direct how issues should be addressed and technologies used.
+- Policies should never contradict law, must be able to stand up in court, and must be properly administered.
+- Security policies are the least expensive controls to execute but most difficult to implement properly.
+
+---
+
+## Policy as the Foundation of Planning
+
+- **Function:** Policy acts as organizational law dictating acceptable and unacceptable behavior.
+- **Standards:** Detailed statements of what must be done to comply with policy.
+- **Practices, Procedures, and Guidelines:** Explain how to comply with policy.
+- **Effectiveness:** For a policy to be effective, it must be properly disseminated, read, understood, agreed to by all members of the organization, and uniformly enforced.
+
+---
+
+## Enterprise Information Security Policy (EISP)
+
+- **Purpose:** Sets strategic direction, scope, and tone for all security efforts within the organization.
+- **Document Type:** Executive-level, usually drafted by or with the Chief Information Officer (CIO).
+- **Compliance Areas:**
+  - Ensure meeting requirements to establish the program and assign responsibilities.
+  - Use specified penalties and disciplinary action.
+
+### EISP Elements
+- Overview of corporate security philosophy
+- Information on the structure of the organization and personnel in information security roles
+- Articulated responsibilities for security shared by all members of the organization
+- Unique responsibilities for security for each role
+
+**Statement of Purpose:**
+Answers the question "What is this policy for?" and provides a framework that helps the reader understand the intent of the document. It establishes overarching security policy and direction for the company.
+
+**Information Security Elements:**
+Defines information security, for example: "Protecting the confidentiality, integrity, and availability of information through policy, education and training, and technology."
+
+**Need for Information Security:**
+Outlines the importance of protecting critical information about customers, employees, and markets.
+
+**Information Security Responsibilities and Roles:**
+Defines the organizational structure for supporting information security within the organization.
+
+**Reference to Other Information Standards and Guidelines:**
+Lists other standards that influence this policy document, including relevant federal and state laws.
+
+---
+
+## Issue-Specific Security Policy (ISSP)
+
+- **Purpose:** Addresses specific areas of technology, requires frequent updates, and contains statements on the organization's position on specific issues.
+- **Common Approaches:**
+  - Independent ISSP documents
+  - Single comprehensive ISSP document
+  - Modular ISSP document
+
+### Components of the Policy:
+- **Statement of Policy:**
+  - Scope and applicability
+  - Definition of technology addressed
+  - Responsibilities
+- **Authorized Access and Usage of Equipment:**
+  - User access
+  - Fair and responsible use
+  - Protection of privacy
+- **Prohibited Use of Equipment:**
+  - Disruptive use or misuse
+  - Criminal use
+  - Offensive or harassing materials
+  - Copyrighted or licensed materials
+  - Other restrictions
+- **Systems Management:**
+  - Management of stored materials
+  - Employee monitoring
+  - Virus protection
+  - Physical security
+  - Encryption
+- **Violations of Policy:**
+  - Procedures for reporting violations
+  - Penalties for violations
+- **Policy Review and Modification:**
+  - Scheduled review of policy procedures for modification
+  - Legal disclaimers
+- **Limitations of Liability:**
+  - Statements of liability
+  - Other disclaimers as needed
+
+---
+
+## Systems-Specific Policy (SysSP)
+
+- **Purpose:** Functions as standards or procedures for configuring or maintaining systems.
+- **Types:**
+  - Managerial guidance
+  - Technical specifications
+- **Access Control Lists (ACLs):** Restrict access for users, computers, and specific files.
+- **Configuration Rule Policies:** Govern how security systems react to received data.
+- **Combination SysSPs:** Combine managerial guidance and technical specifications.
+
+---
+
+## Policy Management
+
+- **Management Needs:** Policies must be managed as they change frequently.
+- **Requirements for Viability:**
+  - Responsible manager
+  - Schedule of reviews
+  - Method for recommendations
+  - Policy issuance and revision date
+  - Automated policy management
+
+---
+
+## The InfoSec Blueprint
+
+- **Definition:** Basis for design, selection, and implementation of all security policies, education and training programs, and technological controls.
+- **Details:** Specifies tasks and order for accomplishment.
+- **Scalability:** Should serve as a comprehensive plan for current and future information security needs.
+
+---
+
+## The ISO-27000 Series
+
+- **Overview:** One of the most widely referenced security models, providing a standard framework for information security management.
+- **Purpose:** Offers recommendations for information security management and a starting point for developing organizational security.
+
+| **ISO 27000 Series Standard** | **Title or Topic** | **Comment** |
+| ----------------------------- | ----------------- | ----------- |
+| 27000:2014                    | Series Overview and Terminology | Defines terminology and vocabulary for the series |
+| 27001:2013                    | Information Security Management System Specification | Drawn from B57799:2 |
+| 27002:2013                    | Code of Practice for Information Security Management | Renamed from ISO/IEC 17799; drawn from B57799:1 |
+| 27003:2010                    | Information Security Management Systems Implementation Guidelines | Guidelines for project planning for implementing ISMS |
+| 27004:2009                    | Information Security Measurements and Metrics | Performance measures and metrics for management decisions |
+| 27005-2011                    | ISMS Risk Management | Supports 27001 without recommending a specific risk method |
+| 27006-2011                    | Requirements for Bodies Providing Audit and Certification of an ISMS | Supports accreditation of certification bodies |
+| 27007:2011                    | Guideline for ISMS Auditing | Focuses on management systems |
+| 27008:2011                    | Guideline for Information Security Auditing | Focuses on security controls |
+| 27013:2012                    | Guideline on the Integrated Implementation of ISO/IEC 20000-1 and ISO/IEC 27001 | Supports implementing an integrated dual management system |
+| 27014:2013                    | Information Security Governance Framework | Guidance on evaluating and monitoring information security |
+| 27015:2012                    | Information Security Management Guidelines for Financial Services | Guidance for financial services organizations |
+| 27019:2013                    | Information Security Management Guidelines for Process Control Systems in Energy Industry | Focused on helping energy organizations implement ISO standards |
+
+---
+
+## NIST Security Models
+
+- **Key Publications:**
+  - SP 800-12
+  - SP 800-14
+  - SP 800-18 Rev. 1
+  - SP 800-26
+  - SP 800-30
+
+---
+
+## NIST Special Publication 800-14
+
+- **Key Principles:**
+  - Security supports the organization's mission and is integral to sound management.
+  - Security should be cost-effective; owners have responsibilities beyond their organizations.
+  - Responsibilities and accountability should be explicit; security requires a comprehensive approach.
+  - Security should be periodically reassessed; it's constrained by societal factors.
+  - Includes thirty-three principles for securing systems.
+
+---
+
+## NIST CYSEC Framework
+
+- **Components:**
+  - **Framework Core:** Set of information security activities expected from an organization.
+  - **Framework Tiers:** Relate the maturity of security programs to corresponding measures and functions.
+  - **Framework Profile:** Used for gap analysis between current and desired information security states.
+- **Seven-Step Approach:**
+  - Prioritize and scope
+  - Orient
+  - Create current profile
+  - Conduct risk assessment
+  - Create target profile
+  - Determine, analyze, prioritize gaps
+  - Implement action plan
+
+---
+
+## Other Sources of Security Frameworks
+
+- Federal Agency Security Practices (FASP)
+- Computer Emergency Response Team Coordination Center (CERT/CC)
+- International Association of Professional Security Consultants
+
+---
+
+## Design of Security Architecture
+
+- **Spheres of Security:** Foundation of the security framework.
+- **Levels of Controls:**
+  - **Management Controls:** Set direction and scope, provide detailed instructions.
+  - **Operational Controls:** Address personnel and physical security, protect production inputs/outputs
 # Chapter 6: Security Technology: Firewalls & VPNs
 - ### Physical Design Process
 	- Selects technologies to support information security blueprint
