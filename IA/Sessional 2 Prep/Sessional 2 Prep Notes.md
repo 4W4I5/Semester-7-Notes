@@ -13,9 +13,9 @@
 	- **Definition:** Set of responsibilities and practices exercised by the board and executive management.
 	- **Goals:**
 		- Provide strategic direction
-    - Establish objectives
-    - Measure progress toward objectives
-    - Verify/validate that risk management practices are appropriate and assets are used properly
+		- Establish objectives
+		- Measure progress toward objectives
+		- Verify/validate that risk management practices are appropriate and assets are used properly
 
 ### Information Security Governance Outcomes
 - **Five Goals:**
