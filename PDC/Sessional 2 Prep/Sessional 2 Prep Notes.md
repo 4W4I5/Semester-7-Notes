@@ -1,11 +1,11 @@
 | Lecture Number | Lecture Title        | Status             |
 | -------------- | -------------------- | ------------------ |
-| 6              | Advanced MPI         | :warning:          |
+| 6              | Advanced MPI         | :white_check_mark: |
 | 7              | OpenMP               | :warning:          |
 | 8              | Performance Analysis | :white_check_mark: |
 
 > [!WARNING]
-> MATHJAX does not render on github mobile, view the notes on the browser to see the formulae
+> MATHJAX does not render on github mobile, view the notes for lecture 8 on the browser to see the formulae
 
 # Lecture 6: Advanced MPI
 - ## Communications
@@ -14,13 +14,28 @@
 		- Same value/array is sent to every proc including itself i.e. buffer can be overwritten during sending
 		- Sending buffer is also used as a receiving buffer
 	- ### Scatter (MPI_Scatter)
+		- Send a portion(send_count) of a given array to each proc
+		- Separate buffers for sending and receiving
 	- ### ScatterV (MPI_ScatterV)
+		- Similar to Scatter, defines an array for send_count to specify which proc gets how many elements
+		- use of `displs`, determines the offset for the proc results. i.e. a displs value of 3 for proc 2 would mean to store the first result at index 3 in the result arr
+			- its a cumulative sum of the send_count arr, if no gap is to be taken in b/w proc results
 	- ### Gather (MPI_Gather)
+		- Receive data from each proc and store into an array on calling proccess
+		- send_count/recv_count is used to specify how many elements are _gathered_ and stored from each proc simultaneously
+			- if each proc had arr of size 2, the resulting array would be `p1-0, p1-1, p2-0, p-1...` where pX is the process
 	- ### AllGather (MPI_Allgather)
+		- Similar to Gather, however the result is received by each and every process incl itself
 	- ### AllToAll (MPI_Alltoall)
+		- - Similar to AllGather, however the result is sent to each and every process incl itself and then received by all.
 	- ### GatherV (MPI_GatherV)
+		- Similar to Gather, defines an array for send_count to specify which proc receives how many elements
+		- use of `displs`, determines the offset for the proc results. i.e. a displs value of 3 for proc 2 would mean to store the first result at index 3 in the result arr
+			- its a cumulative sum of the send_count arr, if no gap is to be taken in b/w proc results
 	- ### AllGatherV (MPI_AllgatherV)
+		- Similar to AllGather, defines a send_count buffer and a displs buffer
 	- ### AllToAllV (MPI_AlltoallV)
+		- Similar to AllToAll, defines a send_count buffer and a displs buffer
 - ## Synchronization
 	- ### Barrier (MPI_Barrier)
 		- Wait until all procs have called MPI_Barrier
@@ -32,56 +47,24 @@
 		- Max, Min, Sum, Prod, LAND, BAND, LOR, BOR, LXOR, BXOR, MAXLOC, MINLOC
 			- L/B Binary operators -> Logical/Binary
 			- LOC -> Location
+	- **Requirements**
+		- Count, Operation and Root have to be the same in all sending and receiving procs
 	- ### Reduce (MPI_Allreduce)
+		- Gather values from all procs and perform an operation in calling proc
 		- #### Scalar reduction
 			- Operation combines all values of the processes
 		- #### Array reduction
 			- Elements of the arrays are combined in an element-wise fashion, returned result is an array
 	- ### AllReduce (MPI_Allreduce)
+		- Gather values from all procs and perform an operation in calling proc before sending to all procs
 # Lecture 7: OpenMP
-## preserve h3
-- ### Parallel and Distributed Computing
-- ### OpenMP
-- ### Memory Models
-- ### Goals
-- ### Release History
-- ### Programming Shared Memory Systems
-- ### Hello World - pthreads based version
-- ### Hello World - OpenMP version
-- ### Compiling
-- ### OpenMP - User Interface Model
-- ### OpenMP - Syntax
-- ### Fork/Join Execution Model
-- ### Using OpenMP
-- ### OpenMP Directives
-- ### Supported Clauses for the Parallel Construct
-- ### OpenMP Constructs
-- ### OpenMP: Parallel Regions
-- ### The parallel directive
-- ### How Many Threads?
-- ### IF clause
-- ### NUM_THREADS clause
-- ### omp_set_num_threads() function
-- ### OMP_NUM_THREADS - Environment Variable
-- ### Execution Status in Parallel Region
-- ### Shared and Private Data
-- ### Shared and Private Data - Example (1/4)
-- ### Shared and Private Data - Example (2/4)
-- ### Shared and Private Data - Example (3/4)
-- ### Shared and Private Data - Example (4/4)
-- ### Getting ID of Current Thread
-- ### Work-Sharing Constructs
-- ### Do/For Work-Sharing Construct
-- ### Problems with Static Scheduling
-- ### Dynamic Scheduling
-- ### Threads share Global variables!
-- ### ThreadCount: A better implementation
-- ### ThreadCount: OpenMP Implementation
-- ### Critical-Section (CS) Problem
-- ### Critical Section
-- ### OpenMP - Synchronization Constructs
-- ### Barrier Synchronization
-- ### Reduction (Data-sharing Attribute Clause)
+- ## Introduction
+	- Directive set for C/C++ compiler, included as standard
+		- Requires `-fopenmp` switch during compilation and/or the `include <omp.h>` header include
+- ## Num of Threads to use
+	- 
+- ## PRAGMA Calls
+	-
 
 # Lecture 8: Performance Analysis
 > [!WARNING]
