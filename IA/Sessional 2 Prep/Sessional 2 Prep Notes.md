@@ -777,10 +777,10 @@ advantages:
 - ### Processing Modes of Firewalls
 	- Packet Filtering
 		- Packet filtering firewalls examine header information of data packets
-- Most often based on combination of:
-	- Internet Protocol (IP) source and destination address
-	- Direction (inbound or outbound)
-	- Transmission Control Protocol (TCP) or User Datagram Protocol (UDP) source and destination port requests
+		- Most often based on combination of:
+			- Internet Protocol (IP) source and destination address
+			- Direction (inbound or outbound)
+			- Transmission Control Protocol (TCP) or User Datagram Protocol (UDP) source and destination port requests
 
 . Simple firewall models enforce rules designed to prohibit
 packets with certain addresses or partial addresses
