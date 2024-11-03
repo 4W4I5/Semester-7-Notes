@@ -141,7 +141,7 @@
 			- t<sub>p</sub> -> execution time on a multi processor
 		- Can also use computational steps instead of time in this formula
 	- ### Speedup Factor
-		- $S(p) = \frac{t_s}{f*t_s + (1-f)* \frac{t_s}{p}}$
+		- $S(p) = \frac{t_s}{f*t_s + (1-f)\frac{t_s}{p}}$ = $\frac{p}{1 + (p - 1)f}$
 		- $S(p) = \frac{p}{1 + (p - 1)f}$
 	- ### Speedup given N number of CPUs
 		- $S(numOfProc) = \frac{1}{f_s\frac{f_p}{numOfProc}}$
