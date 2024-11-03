@@ -1,8 +1,8 @@
 | Chapter<br>Number | Chapter<br>Name                       | Status             |
 | ----------------- | ------------------------------------- | ------------------ |
 | 4                 | Planning for Security                 | :white_check_mark: |
-| 6                 | Security Technology: Firewalls & VPNs | :warning:          |
-| 7                 | Security Technology: IDPS             | :warning:          | 
+| 6                 | Security Technology: Firewalls & VPNs | :white_check_mark: |
+| 7                 | Security Technology: IDPS             | :warning:          |
 | 8                 | Cryptography                          | :white_check_mark: |
 
 # Chapter 4: Planning for Security
@@ -337,26 +337,101 @@ Lists other standards that influence this policy document, including relevant fe
 			- Direction (inbound or outbound)
 			- Transmission Control Protocol (TCP) or User Datagram Protocol (UDP) source and destination port requests
 		- Simple firewall models enforce rules designed to prohibit packets with certain addresses or partial addresses
+		- Three subsets of packet filtering firewalls:
+			- Static filtering: requires that filtering rules governing how the firewall decides which packets are allowed and which are denied are developed and installed
+			- Dynamic filtering: allows firewall to react to emergent event and update or create rules to deal with event
+			- Stateful inspection: firewalls that keep track of each network connection between internal and external systems using a state table
 	- Application Gateways
+		- Frequently installed on a dedicated computer; also known as a proxy server.
+		- Since a proxy server is often placed in an unsecured area of the network (e.g., DMZ), it is exposed to higher levels of risk from less trusted networks.
+		- Additional filtering routers can be implemented behind the proxy server, further protecting internal systems.
 	- Circuit Gateways
+		- Circuit gateway firewalls operate at the transport layer.
+		- Similar to filtering firewalls, they do not usually look at data traffic flowing between two networks but prevent direct connections between one network and another.
+		- This is accomplished by creating tunnels connecting specific processes or systems on each side of the firewall and allowing only authorized traffic in the tunnels.
 	- MAC Layer Firewalls
+		- Designed to operate at the media access control layer of the OSI network model.
+		- Able to consider the specific identity of a host computer in its filtering decisions.
+		- MAC addresses of specific host computers are linked to access control list (ACL) entries that identify specific types of packets that can be sent to each host; all other traffic is blocked.
 	- Hybrids
+		- Combine elements of other types of firewalls, such as packet filtering and proxy services, or packet filtering and circuit gateways.
+		- Alternately, they may consist of two separate firewall devices, each a separate firewall system, but connected to work in tandem.
 - ### Categorization of Firewalls
 	- #### By Generation
+		1. **First generation**: Static packet filtering firewalls.
+		2. **Second generation**: Application-level firewalls or proxy servers.
+		3. **Third generation**: Stateful inspection firewalls.
+		4. **Fourth generation**: Dynamic packet filtering firewalls, allowing only packets with particular source, destination, and port addresses to enter.
+		5. **Fifth generation**: Kernel proxies, which are specialized forms working under the kernel of Windows NT.
 	- #### By Structure
-- ### Software vs Hardware: The SOHO Firewall Debate
+		- Most firewalls are appliances: stand-alone, self-contained systems
+		- Commercial-grade firewall system consists of firewall application software running on general-purpose computer
+		- Small office/home office (SOHO) or residential-grade firewalls, aka broadband gateways or DSL/cable modem routers, connect user's local area network or a specific computer system to Internetworking device
+		- Residential-grade firewall software is installed directly on the user's system
 - ### Firewall Architectures
-	- Packet Filtering Routers
-	- Screened Host Firewalls
-	- Dual-Homed Firewalls
-	- Screened Subnet Firewalls
+	- Firewall devices can be configured in various network connection architectures.
+	- The configuration that works best depends on three factors:
+	    1. Objectives of the network.
+	    2. The organization’s ability to develop and implement architectures.
+	    3. The budget available for the function.
+	- Four common architectural implementations of firewalls:
+		- **Packet Filtering Routers**
+			- Most organizations with Internet connection have a router serving as interface to Internet
+			- Many of these routers can be configured to reject packets that organization does not allow into network
+			- Drawbacks include a lack of auditing and strong authentication
+		- **Screened Host Firewalls**
+			- Combines packet filtering router with separate, dedicated firewall such as an application proxy server
+			- Allows router to prescreen packets to minimize traffic/load on internal proxy
+			- Separate host is often referred to as bastion host; can be rich target for external attacks and should be very thoroughly secured
+		- **Dual-Homed Firewalls**
+			- Bastion host contains two network interface cards (NICs): one connected to external network, one connected to internal network
+			- Implementation of this architecture often makes use of network address translation (NAT), creating another barrier to intrusion from external attackers
+		- **Screened Subnet Firewalls**
+			- Dominant architecture used today is the screened subnet firewall
+			- Commonly consists of two or more internal bastion hosts behind packet filtering router, with each host protecting trusted network:
+				- Connections from outside (untrusted network) routed through external filtering router
+				- Connections from outside (untrusted network) are routed into and out of routing firewall to separate network segment known as DMZ
+				- Connections into trusted internal network allowed only from DMZ bastion host servers
+			- Screened subnet performs two functions:
+				- Protects DMZ systems and information from outside threats
+				- Protects the internal networks by limiting how external connections can gain access to internal systems
+			- Another facet of DMZs: extranets
 - ### Selecting the Right Firewall
+	- What firewall offers the right balance between protection and cost for the organization’s needs?
+	- Which features are included in the base price and which are not?
+	- Ease of setup and configuration. How accessible are staff technicians who can configure the firewall?
+	- Can the firewall adapt to the organization’s growing network?
+	- Cost is the second most important issue.
 - ### Configuring & Managing Firewalls
+	- Each firewall device must have its own set of configuration rules regulating its actions.
+	- Firewall policy configuration is usually complex and difficult.
+	- Configuring firewall policies is both an art and a science.
+	- When security rules conflict with business performance, security often loses.
 - ### Best Practices
+	- All traffic from the trusted network is allowed out.
+	- The firewall device is never directly accessed from the public network.
+	- Simple Mail Transport Protocol (SMTP) data is allowed to pass through the firewall.
+	- Internet Control Message Protocol (ICMP) data is denied.
+	- Telnet access to internal servers should be blocked.
+	- When Web services are offered outside the firewall, HTTP traffic should be denied from reaching internal networks.
 - ### Firewall Rules
+	- Operate by examining data packets and performing comparison with predetermined logical rules
+	- Logic based on set of guidelines most commonly referred to as firewall rules, rule base, or firewall logic
+	- Most firewalls use packet header information to determine whether specific packet should be allowed or denied
 - ### Content Filters
+	- Content filters allow administrators to restrict access to certain content from within the network.
+	- They are essentially scripts or programs restricting user access to certain networking protocols or Internet locations.
+	- The primary focus is to restrict internal access to external material.
+	- Commonly restrict access to non-business Web sites or deny incoming spam.
 - ### Protecting Remote Connections
+	- Installing Internetwork connections requires leased lines or other data channels; these connections are usually secured under formal service agreements.
+	- When individuals seek to connect to the organization's network, a more flexible option must be provided.
+	- Virtual Private Networks (VPNs) have become more popular due to the spread of the Internet.
 - ### Remote Access
+	- Unsecured dial-up connection points represent a substantial exposure to attack.
+	- Attackers can use a device called a war dialer to locate connection points.
+	- A war dialer is an automatic phone-dialing program that dials every number in a configured range and records the number if a modem picks up.
+	- Some technologies (such as RADIUS, TACACS, and CHAP password systems) have improved the authentication process.
 - ### RADIUS, TACACS & Diameter
 
 | Feature                  | RADIUS                                                                                                  | Diameter                                                                                             | TACACS+                                                                        | Kerberos                                                                    |
@@ -373,32 +448,191 @@ Lists other standards that influence this policy document, including relevant fe
 | **Scalability**          | Moderate (due to UDP limitations)                                                                       | Highly scalable (designed for telecom and large networks).                                           | Moderate, typically for managing fewer devices.                                | High scalability, especially in AD environments                             |
 
 - ### Securing Authn w/ Kerberos
-- ### Seasme
+	- Kerberos provides secure third-party authentication using symmetric key encryption to validate individual users to various network resources.
+	- Kerberos keeps a database containing private keys of clients and servers.
+	- Consists of three interacting services:
+	    - Authentication Server (AS)
+	    - Key Distribution Center (KDC)
+	    - Ticket Granting Service (TGS)
+- ### SEASME
+	- Secure European System for Applications in a Multivendor Environment (SESAME); similar to Kerberos in that user is first authenticated to authentication server and receives token
+	- Token then presented to privilege attribute server (instead of ticket granting service as in Kerberos) as proof of identity to gain privilege attribute certificate (PAC)
+	- Uses public key encryption; adds additional and more sophisticated access control features; more scalable encryption systems; improved manageability; auditing features; delegation of responsibility for allowing access
 ## Virtual Private Networks (VPNs)
+- Private and secure network connection between systems; uses data communication capability of unsecured and public network
+- Securely extends organization's internal network connections to remote locations beyond trusted network
+- Three VPN technologies defined:
+	- Trusted VPN
+	- Secure VPN
+	- Hybrid VPN (combines trusted and secure)
+- VPN must accomplish:
+	- Encapsulation of incoming and outgoing data
+	- Encryption of incoming and outgoing data
+	- Authentication of remote computer and (perhaps) remote user as well
 - ### Modes
-	- Transport Mode
-	- Tunnel Mode
+	- **Transport Mode**
+		- Data within IP packet is encrypted, but header information is not
+		- Allows user to establish secure link directly with remote host, encrypting only data contents of packet
+		- Two popular uses:
+			- End-to-end transport of encrypted data
+			- Remote access worker connects to office network over Internet by connecting to a VPN server on the perimeter
+	- **Tunnel Mode**
+		- Organization establishes two perimeter tunnel servers
+		- These servers act as encryption points, encrypting all traffic that will traverse unsecured network
+		- Primary benefit to this model is that an intercepted packet reveals nothing about true destination system
+		- Example of tunnel mode VPN: Microsoft's Internet Security and Acceleration (ISA) Server
 # Chapter 7: Security Technology: IDPS
-- Introduction
-- Terminology
-- Why use an IDPS
-- Types
-- Detection Methods
-- Response Behavior
-- Approaches & Products
-- Strengths & Limitations
-- Deployment & Implementation
-- Measuring the Effectiveness of IDPS
-	- Honeypots, Honeynets & Padded Cell Systems
-	- Trap & Trace Systems
-- Active Intrusion Prevention
-- Scanning & Analysis Tools
-- Port Scanners
-- Firewall Analysis Tools
-- OS Detection Tools
-- Vuln Scanners
-- Packet Sniffers
-- Wireless Security Tools
+- ### Introduction
+	- An intrusion occurs when a hacker attempts to gain entry into or disrupt the normal operations of an organization's information systems.
+	- Intrusion prevention consists of activities that deter an intrusion.
+	- Intrusion detection consists of procedures and systems that identify system intrusions.
+	- Intrusion reaction encompasses actions an organization undertakes when an intrusion event is detected.
+	- Intrusion correction activities involve the complete restoration of operations to a normal state and seek to identify the source and method of intrusion.
+	- Intrusion detection systems detect a violation of their configuration and activate alarms.
+	- Many IDPSs enable administrators to configure systems to notify them directly of trouble via e-mail or pagers.
+	- Systems can also be configured to notify an external security service organization of a “break-in.”
+- ### Terminology
+	- Alarm clustering and compaction
+	- Alarm filtering
+	- Alert or alarm
+	- Confidence value
+	- Evasion
+	- False attack stimulus
+	- False negative and false positive
+	- Noise
+	- Site policy
+	- Site policy awareness
+	- True attack stimulus
+	- Tuning
+- ### Why use an IDPS
+	- **Intrusion detection:**
+	    - Primary purpose is to identify and report an intrusion.
+	    - Can quickly contain an attack and prevent/mitigate loss or damage.
+	    - Detects and deals with preambles to attacks.
+	- Data collection allows the organization to examine what happened after an intrusion and why.
+	- Serves as a deterrent by increasing the fear of detection.
+	- Can help management with quality assurance and continuous improvement.
+- ### Types
+	- IDPSs operate as network-based or host-based systems.
+	- Network-based IDPS is focused on protecting network information assets.
+	    - Wireless IDPS: focuses on wireless networks.
+	    - Network behavior analysis IDPS: examines traffic flow on a network in an attempt to recognize abnormal patterns.
+	    - Resides on a computer or an appliance connected to a segment of an organization's network; looks for indications of attacks.
+		- When examining packets, a NIDPS looks for attack patterns within network traffic.
+		- Installed at specific places in the network where it can monitor traffic going into and out of a particular network segment.
+		- To determine whether an attack has occurred or is underway, compare measured activity to known signatures in the knowledge base.
+		- This is done by using a special implementation of the TCP/IP stack:
+		    - In the process of protocol stack verification, NIDPSs look for invalid data packets.
+		    - In the application protocol verification, higher-order protocols are examined for unexpected packet behavior or improper use.
+		- **Advantages of NIDPSs:**
+			- Good network design and placement can enable an organization to monitor a large network with few devices.
+			- NIDPSs are usually passive and can be deployed into existing networks with little disruption to normal operations.
+			- NIDPSs are not usually susceptible to direct attack and may not be detectable by attackers.
+		- **Disadvantages of NIDPSs:**
+			- Can become overwhelmed by network volume and fail to recognize attacks.
+			- Require access to all traffic to be monitored.
+			- Cannot analyze encrypted packets.
+			- Cannot reliably ascertain if an attack was successful or not.
+			- Some forms of attack are not easily discerned by NIDPSs, specifically those involving fragmented packets.
+		- **Wireless NIDPS:**
+		    - Monitors and analyzes wireless network traffic.
+		    - Issues associated with it include physical security, sensor range, access point and wireless switch locations, wired network connections, and cost.
+	- **Network behavior analysis systems:**
+	    - Identify problems related to the flow of traffic.
+	    - Types of events commonly detected include denial-of-service (DoS) attacks, scanning, worms, unexpected application services, and policy violations.
+	    - Offer intrusion prevention capabilities that are passive, inline, and both passive and inline.
+	**Host-based IDPS (HIDPS):**
+		- Resides on a particular computer or server (host) and monitors activity only on that system.
+		- Benchmarks and monitors the status of key system files and detects when an intruder creates, modifies, or deletes files.
+		- Advantage over NIDPS: can access encrypted information traveling over the network and make decisions about potential or actual attacks.
+		- Most HIDPSs work on the principle of configuration or change management.
+		- **Advantages of HIDPSs:**
+			- Can detect local events on host systems and detect attacks that may elude a network-based IDPS.
+			- Functions on the host system, where encrypted traffic will have been decrypted and is available for processing.
+			- Not affected by the use of switched network protocols.
+			- Can detect inconsistencies in how applications and systems programs were used by examining records stored in audit logs.
+		- **Disadvantages of HIDPSs:**
+			- Pose more management issues.
+			- Vulnerable both to direct attacks and attacks against the host operating system.
+			- Does not detect multi-host scanning nor scanning of non-host network devices.
+			- Susceptible to some DoS attacks.
+			- Can use large amounts of disk space.
+			- Can inflict a performance overhead on its host systems.
+	- **Signature-based detection:**
+		- Matches known signatures.
+		- Examines network traffic in search of patterns that distinct signatures.
+		- Widely used because many attacks have clear signatures.
+		- Problem with this approach is that new attack patterns must continually be added to the IDPS's database of signatures.
+		- Slow, methodical attacks involving multiple events might escape detection.
+	- **Anomaly-based detection:**
+		- Anomaly-based detection (or behavior-based detection) collects statistical summaries by observing traffic known to be normal.
+		- When measured activity is outside baseline parameters or clipping level, IDPS sends an alert to the administrator.
+		- IDPS can detect new types of attacks.
+		- Requires much more overhead and processing capacity than signature-based detection.
+		- May generate many false positives.
+	- **Stateful protocol analysis:**
+		- SPA: process of comparing known normal/benign protocol profiles against observed traffic.
+		- Stores and uses relevant data detected in a session to identify intrusions involving multiple requests/responses; allows IDPS to better detect specialized, multi-session attacks (also called deep packet inspection).
+		- Drawbacks: analytical complexity; heavy processing overhead; may fail to detect intrusion unless the protocol violates fundamental behavior; may interfere with normal operations of the protocol.
+	- **Log file monitors:**
+		- Log file monitor (LFM) similar to NIDPS.
+		- Reviews log files generated by servers, network devices, and even other IDPSs for patterns and signatures.
+		- Patterns that signify an attack may be much easier to identify when the entire network and its systems are viewed as a whole.
+		- Requires considerable resources since it involves the collection, movement, storage, and analysis of large quantities of log data.
+- ### Detection Methods
+- merged w above
+- ### Response Behavior
+	- IDPS response to external stimulation depends on the configuration and function; many response options are available.
+	- IDPS responses can be classified as active or passive:
+	    - Active response: collecting additional information about the intrusion, modifying the network environment, taking action against the intrusion.
+	    - Passive response: setting off alarms or notifications, collecting passive data through SNMP traps.
+	- Many IDPSs can generate routine reports and other detailed documents.
+	- Failsafe features protect IDPS from being circumvented.
+- ### Approaches & Products
+	- **Technical and policy considerations:**
+	    - What is your systems environment?
+	    - What are your security goals and objectives?
+	    - What is your existing security policy?
+	- **Organizational requirements and constraints:**
+	    - What requirements are levied from outside the organization?
+	    - What are your organization's resource constraints?
+	- **IDPS product features and quality:**
+		- Is the product sufficiently scalable for your environment?
+		- How has the product been tested?
+		- What user level of expertise is targeted by the product?
+		- Is the product designed to evolve as the organization grows?
+		- What are the support provisions for the product?
+- ### Strengths & Limitations
+- NOTE:: Limitations is not complete
+	- IDPSs perform the following functions well:
+		- Monitoring and analysis of system events and user behaviors.
+		- Testing security states of system configurations.
+		- Baselining security state of systems and tracking changes.
+		- Recognizing patterns of system events corresponding to known attacks.
+		- Recognizing activity patterns that vary from normal activity.
+		- Managing OS audit and logging mechanisms and data they generate.
+		- Alerting appropriate staff when attacks are detected.
+		- Measuring enforcement of security policies encoded in the analysis engine.
+		- Providing default information on security policies.
+		- Allowing non-security experts to perform important security monitoring functions.
+	- IDPSs have weaknesses and vulnerabilities:
+		- Can produce false alerts and negatives.
+		- Configuring and managing IDPSs can be complex.
+		- IDPSs do not address all risks.
+		- Not all IDPSs are designed to detect every type of intrusion.
+		- Effectiveness depends on the level of experience and knowledge of the individuals managing the systems.
+- ### Deployment & Implementation
+- ### Measuring the Effectiveness of IDPS
+	- ### Honeypots, Honeynets & Padded Cell Systems
+	- ### Trap & Trace Systems
+- ### Active Intrusion Prevention
+- ### Scanning & Analysis Tools
+- ### Port Scanners
+- ### Firewall Analysis Tools
+- ### OS Detection Tools
+- ###  Vuln Scanners
+- ### Packet Sniffers
+- ### Wireless Security Tools
 # Chapter 8: Cryptography
 ## Introduction
 - **Cryptology** -> Science of Encryption, includes Cryptography & Cryptanalysis

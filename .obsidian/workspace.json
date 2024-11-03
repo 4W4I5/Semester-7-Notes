@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IA/Sessional 2 Prep/Sessional 2 Prep Notes.md",
+                "file": "PDC/Sessional 2 Prep/Sessional 2 Prep Notes.md",
                 "mode": "source",
                 "source": true
               },
@@ -192,17 +192,20 @@
   },
   "active": "52125d63edd51083",
   "lastOpenFiles": [
-    "Pasted image 20241103110923.png",
-    "SSD/Sessional 2 Prep/Sessional 2 Prep Notes.md",
     "README.md",
+    "PDC/Sessional 2 Prep/Sessional 2 Prep Notes.md",
+    "PDC/Sessional 2 Prep",
+    "PDC/Note Track.md",
+    "Pasted image 20241103110923.png",
+    "IA/Policy Task.md",
+    "IA/Pasted image 20240917195504.png",
+    "IA/Note Track.md",
+    "IA/Sessional 2 Prep/Sessional 2 Prep Notes.md",
+    "SSD/Sessional 2 Prep/Sessional 2 Prep Notes.md",
     "SSD/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "SSD/Sessional 2 Prep",
-    "IA/Sessional 2 Prep/Sessional 2 Prep Notes.md",
     "IA/Sessional 2 Prep",
     "IA/Sessional 1 Prep/Sessional 1 Prep Notes.md",
-    "IA/Note Track.md",
-    "IA/Pasted image 20240917195504.png",
-    "IA/Policy Task.md",
     "Blockchain/Sessional 2 Prep/Sessional 2 Prep Notes.md",
     "Untitled.md",
     "Blockchain/Sessional 1 Prep/Sessional 1 Prep Notes.md",
@@ -216,8 +219,6 @@
     "Books/Secure Software Design/The CLASP Application Security Process (2005).pdf",
     "Books/Secure Software Design/Software Security Engineering.pdf",
     "Books/Secure Software Design/Secure Coding in C and C++ (2nd Edition).pdf",
-    "Books/Secure Software Design/Introduction to Software Testing.pdf",
-    "PDC/Note Track.md",
     "Blockchain/Note Track.md",
     "PDC/Class Notes/5 - PDC 2nd September, 2024.md",
     "SSD/Class Notes/5 - SSD 2nd September, 2024.md",
@@ -236,7 +237,6 @@
     "InfoSec/Finals Prep/Images/Pasted image 20240603230810.png",
     "InfoSec/Finals Prep/Images/Pasted image 20240603230643.png",
     "InfoSec/Info_sec/Info sec/Info sec P9.png",
-    "InfoSec/Info_sec/Info sec/Info sec P8.png",
-    "InfoSec/Info_sec/Info sec/Info sec P7.png"
+    "InfoSec/Info_sec/Info sec/Info sec P8.png"
   ]
 }
