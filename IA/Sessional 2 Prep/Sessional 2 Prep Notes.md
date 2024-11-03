@@ -6,12 +6,6 @@
 | 8                 | Cryptography                          | :white_check_mark: |
 
 # Chapter 4: Planning for Security
-Here's a reformatted version of your chapter content with improved clarity and organization:
-
----
-
-# Chapter 4: Planning for Security
-
 ## InfoSec Planning & Governance
 
 - **Planning Levels:** Help translate an organization's strategic plans into tactical objectives.
