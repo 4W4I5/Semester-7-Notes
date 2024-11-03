@@ -769,8 +769,8 @@ advantages:
 - ### Physical Design Process
 - Selects technologies to support information security blueprint
 - Identifies complete technical solutions based on these technologies, including deployment, operations, and maintenance elements, to improve security of environment
-. Designs physical security measures to support technical solution
-. Prepares project plans for implementation phase that follows
+- Designs physical security measures to support technical solution
+- Prepares project plans for implementation phase that follows
 ## Firewalls
 - ### Processing Modes of Firewalls
 	- Packet Filtering
