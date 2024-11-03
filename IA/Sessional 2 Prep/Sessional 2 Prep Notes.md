@@ -70,18 +70,23 @@
 - Unique responsibilities for security for each role
 
 **Statement of Purpose:**
+
 Answers the question "What is this policy for?" and provides a framework that helps the reader understand the intent of the document. It establishes overarching security policy and direction for the company.
 
 **Information Security Elements:**
+
 Defines information security, for example: "Protecting the confidentiality, integrity, and availability of information through policy, education and training, and technology."
 
 **Need for Information Security:**
+
 Outlines the importance of protecting critical information about customers, employees, and markets.
 
 **Information Security Responsibilities and Roles:**
+
 Defines the organizational structure for supporting information security within the organization.
 
 **Reference to Other Information Standards and Guidelines:**
+
 Lists other standards that influence this policy document, including relevant federal and state laws.
 
 ---
@@ -351,6 +356,7 @@ Lists other standards that influence this policy document, including relevant fe
 - ### Protecting Remote Connections
 - ### Remote Access
 - ### RADIUS, TACACS & Diameter
+
 | Feature                  | RADIUS                                                                                                  | Diameter                                                                                             | TACACS+                                                                        | Kerberos                                                                    |
 |:------------------------ |:------------------------------------------------------------------------------------------------------- |:---------------------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------ |:--------------------------------------------------------------------------- |
 | **Purpose**              | Centralized authentication and authorization for remote access, network devices, and wireless networks. | The advanced version of RADIUS is used for AAA in IP-based networks, especially 3G and LTE networks. | Centralized AAA, is typically used in network devices (Cisco).                 | Secure authentication for user sessions in a centralized environment (SSO). |
@@ -363,6 +369,7 @@ Lists other standards that influence this policy document, including relevant fe
 | **Compatibility**        | Compatible with a wide range of devices and services                                                    | It is mainly used in modern mobile and IP-based networks.                                            | Primarily used with Cisco devices.                                             | Common in Windows environments (integrated with AD)                         |
 | **Authentication Model** | Centralized (Username/Password)                                                                         | Centralized                                                                                          | Centralized (AAA)                                                              | Centralized using tickets (SSO model)                                       |
 | **Scalability**          | Moderate (due to UDP limitations)                                                                       | Highly scalable (designed for telecom and large networks).                                           | Moderate, typically for managing fewer devices.                                | High scalability, especially in AD environments                             |
+
 - ### Securing Authn w/ Kerberos
 - ### Seasme
 ## Virtual Private Networks (VPNs)
@@ -512,6 +519,7 @@ Lists other standards that influence this policy document, including relevant fe
 |                    | Static key                                                | Dynamic Key - Each user is assigned a key per session with additional keys calculated for each packet |
 |                    | Manual Key Distribution - Each key is manually punched in | Automatic Key Distribution                                                                            |
 | **Authentication** | Broken - WEP key itself is used for Authn                 | Improved User Authn, using 802.1x & EA                                                                |
+
 - ### Securing TCP/IP with IPSec and PGP
   - **IPSec**: Framework for TCP/IP security, incorporating cryptographic methods:
     - Diffie-Hellman key exchange for secure keys
