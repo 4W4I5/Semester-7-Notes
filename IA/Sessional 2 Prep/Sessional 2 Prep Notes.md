@@ -11,7 +11,7 @@
 - **Planning and the CISO**
 - **Information Security Governance:**
 	- **Definition:** Set of responsibilities and practices exercised by the board and executive management.
-- **Goals:**
+	- **Goals:**
     - Provide strategic direction
     - Establish objectives
     - Measure progress toward objectives
