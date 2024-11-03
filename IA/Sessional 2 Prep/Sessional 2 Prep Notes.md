@@ -772,11 +772,10 @@ advantages:
 	- Designs physical security measures to support technical solution
 	- Prepares project plans for implementation phase that follows
 ## Firewalls
-. Prevent specific types of information from moving between
-the outside world (untrusted network) and the inside world
-(trusted network)
+- Prevent specific types of information from moving between
+the outside world (untrusted network) and the inside world(trusted network)
 
-· May be separate computer system; a software service
+- May be separate computer system; a software service
 running on existing router or server; or a separate network
 containing supporting devices
 - ### Processing Modes of Firewalls
