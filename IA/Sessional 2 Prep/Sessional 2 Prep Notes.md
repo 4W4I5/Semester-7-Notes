@@ -774,7 +774,6 @@ technologies, including deployment, operations, and
 maintenance elements, to improve security of environment
 . Designs physical security measures to support technical
 solution
-
 . Prepares project plans for implementation phase that follows
 ## Firewalls
 - ### Processing Modes of Firewalls
