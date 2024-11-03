@@ -235,6 +235,89 @@ Lists other standards that influence this policy document, including relevant fe
 - **Levels of Controls:**
   - **Management Controls:** Set direction and scope, provide detailed instructions.
   - **Operational Controls:** Address personnel and physical security, protect production inputs/outputs
+
+Here’s a concise summary of your security education and contingency planning materials, highlighting key points and concepts:
+
+### Security Education, Training & Awareness Program (SETA)
+
+- **Purpose**: SETA aims to minimize accidental security breaches through education, training, and awareness.
+
+#### Components:
+1. **Security Education**:
+   - Everyone should be aware of information security principles; formal degrees are not necessary for all.
+   - Employees may pursue relevant courses in higher education.
+
+2. **Security Training**:
+   - Provides detailed, hands-on instruction for secure job performance.
+   - Can be customized in-house or outsourced; alternatives include professional conferences.
+
+3. **Awareness Program**:
+   - Essential for keeping security at the forefront of employees' minds.
+   - Should be simple and cost-effective; lack of implementation can increase security risks.
+
+|                       | **Education**                     | **Training**                      | **Awareness**                  |
+|-----------------------|-----------------------------------|----------------------------------|--------------------------------|
+| **Attribute**         | Why                               | How                              | What                           |
+| **Level**             | Insight                           | Knowledge                        | Information                    |
+| **Objective**         | Understanding                     | Skill                            | Exposure                       |
+| **Teaching Method**   | Theoretical instruction           | Practical instruction            | Media, videos, newsletters     |
+| **Test Measure**      | Essays                            | Problem-solving                  | True/False, MCQ               |
+| **Impact Time Frame** | Long-term                         | Intermediate                     | Short-term                     |
+
+### Continuity Strategies
+- Involves **Incident Response Plans (IRPs)**, **Disaster Recovery Plans (DRPs)**, and **Business Continuity Plans (BCPs)**.
+- **Key Functions**:
+  - **IRP**: Immediate response to incidents.
+  - **DRP**: Focus on restoring systems after disasters.
+  - **BCP**: Ensures ongoing operations during major disruptions.
+
+### Contingency Planning Process
+1. Develop CP policy statement.
+2. Conduct business impact analysis (BIA).
+3. Identify preventive controls.
+4. Create contingency strategies.
+5. Develop contingency plans.
+6. Ensure testing and maintenance.
+
+### Business Impact Analysis (BIA)
+- Evaluates potential adverse events on the organization.
+- Key Stages:
+  - Identify critical business processes.
+  - Set recovery priorities.
+  - Assess resource requirements.
+
+### Incident Response Planning
+- Focuses on identifying and responding to incidents affecting information assets.
+- **Key Components of IR Policy**:
+  - Management commitment.
+  - Definition of incidents.
+  - Organizational structure and severity ratings.
+- **Incident Management**:
+  - Detection, reaction, recovery, and assessment of incidents.
+
+### Disaster Recovery & Business Continuity Planning
+- **Disaster Recovery Planning (DRP)**: Prepares for recovery after disasters.
+- **Business Continuity Planning (BCP)**: Ensures continuation of critical operations during disruptions.
+- Continuity strategies include hot, warm, and cold sites.
+
+### Crisis Management
+- Actions to minimize harm during emergencies.
+- Involves training and preparation for disaster response teams.
+
+### Consolidated Contingency Plan
+- Combines all contingency policies into a single document for accessibility.
+
+### Law Enforcement Involvement
+- Considerations for involving law enforcement in security incidents:
+  - Timing and level of agency involvement.
+  - Legal implications and evidence handling.
+
+### Benefits of Law Enforcement Involvement
+- Enhanced evidence processing and legal support.
+- Expertise in handling investigations and securing necessary legal documentation.
+
+This structured approach can help convey essential information clearly and effectively for your audience! Let me know if you need further modifications or details.
+
 # Chapter 6: Security Technology: Firewalls & VPNs
 - ### Physical Design Process
 	- Selects technologies to support information security blueprint
