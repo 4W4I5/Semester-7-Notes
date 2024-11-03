@@ -7,7 +7,6 @@
 
 # Chapter 4: Planning for Security
 ## InfoSec Planning & Governance
-
 - **Planning Levels:** Help translate an organization's strategic plans into tactical objectives.
 - **Planning and the CISO**
 - **Information Security Governance:**
