@@ -776,8 +776,8 @@ advantages:
 - May be separate computer system; a software service running on existing router or server; or a separate network containing supporting devices
 - ### Processing Modes of Firewalls
 	- Packet Filtering
-. Packet filtering firewalls examine header information of data packets
-. Most often based on combination of:
+		- Packet filtering firewalls examine header information of data packets
+ Most often based on combination of:
 . Internet Protocol (IP) source and destination address
 . Direction (inbound or outbound)
 Transmission Control Protocol (TCP) or User Datagram
