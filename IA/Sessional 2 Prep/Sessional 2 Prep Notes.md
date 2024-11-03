@@ -236,10 +236,7 @@ Lists other standards that influence this policy document, including relevant fe
   - **Management Controls:** Set direction and scope, provide detailed instructions.
   - **Operational Controls:** Address personnel and physical security, protect production inputs/outputs
 
-Here’s a concise summary of your security education and contingency planning materials, highlighting key points and concepts:
-
 ### Security Education, Training & Awareness Program (SETA)
-
 - **Purpose**: SETA aims to minimize accidental security breaches through education, training, and awareness.
 
 #### Components:
