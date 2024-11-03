@@ -257,14 +257,14 @@ Lists other standards that influence this policy document, including relevant fe
    - Essential for keeping security at the forefront of employees' minds.
    - Should be simple and cost-effective; lack of implementation can increase security risks.
 
-|                       | **Education**                     | **Training**                      | **Awareness**                  |
-|-----------------------|-----------------------------------|----------------------------------|--------------------------------|
-| **Attribute**         | Why                               | How                              | What                           |
-| **Level**             | Insight                           | Knowledge                        | Information                    |
-| **Objective**         | Understanding                     | Skill                            | Exposure                       |
-| **Teaching Method**   | Theoretical instruction           | Practical instruction            | Media, videos, newsletters     |
-| **Test Measure**      | Essays                            | Problem-solving                  | True/False, MCQ               |
-| **Impact Time Frame** | Long-term                         | Intermediate                     | Short-term                     |
+|                       | **Education**           | **Training**          | **Awareness**              |
+| --------------------- | ----------------------- | --------------------- | -------------------------- |
+| **Attribute**         | Why                     | How                   | What                       |
+| **Level**             | Insight                 | Knowledge             | Information                |
+| **Objective**         | Understanding           | Skill                 | Exposure                   |
+| **Teaching Method**   | Theoretical instruction | Practical instruction | Media, videos, newsletters |
+| **Test Measure**      | Essays                  | Problem-solving       | True/False, MCQ            | 
+| **Impact Time Frame** | Long-term               | Intermediate          | Short-term                 |
 
 ### Continuity Strategies
 - Involves **Incident Response Plans (IRPs)**, **Disaster Recovery Plans (DRPs)**, and **Business Continuity Plans (BCPs)**.
