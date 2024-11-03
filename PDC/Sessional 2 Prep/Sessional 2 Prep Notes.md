@@ -1,37 +1,43 @@
-| Lecture Number | Lecture Title        | Status    |
-| -------------- | -------------------- | --------- |
-| 6              | Advanced MPI         | :warning: |
-| 7              | OpenMP               | :warning: |
-| 8              | Performance Analysis | :warning: |
+| Lecture Number | Lecture Title        | Status             |
+| -------------- | -------------------- | ------------------ |
+| 6              | Advanced MPI         | :warning:          |
+| 7              | OpenMP               | :warning:          |
+| 8              | Performance Analysis | :white_check_mark: |
 
 > [!WARNING]
 > MATHJAX does not render on github mobile, view the notes on the browser to see the formulae
 
 # Lecture 6: Advanced MPI
-
-## preserve h3
-- ### Message Passing Interface (MPI) - Collective Communication
-- ### Collective Communications
-- ### Broadcast
-- ### Broadcasting with MPI_Bcast
-- ### MPI_Scatter
-- ### MPI_Scatter - Example
-- ### MPI_Gather
-- ### MPI_Gather - Example
-- ### MPI_Scatterv
-- ### MPI_Gatherv
-- ### MPI_Allgather
-- ### MPI_Allgatherv
-- ### MPI_Alltoall
-- ### MPI_Alltoallv
-- ### Synchronization
-- ### Barrier Synchronization
-- ### MPI_BARRIER
-- ### Reductions
-- ### MPI_Reduce
-- ### MPI_Reduce - Example
-- ### MPI_Allreduce
-- ### Reduction Operations
+- ## Communications
+	- ### Broadcast (MPI_Bcast)
+		- 1-Many Comms
+		- Same value/array is sent to every proc including itself i.e. buffer can be overwritten during sending
+		- Sending buffer is also used as a receiving buffer
+	- ### Scatter (MPI_Scatter)
+	- ### ScatterV (MPI_ScatterV)
+	- ### Gather (MPI_Gather)
+	- ### AllGather (MPI_Allgather)
+	- ### AllToAll (MPI_Alltoall)
+	- ### GatherV (MPI_GatherV)
+	- ### AllGatherV (MPI_AllgatherV)
+	- ### AllToAllV (MPI_AlltoallV)
+- ## Synchronization
+	- ### Barrier (MPI_Barrier)
+		- Wait until all procs have called MPI_Barrier
+- ## Reductions
+	- **Types**
+		- Result only available @ root proc
+		- Result available @ all procs
+	- **Operations**
+		- Max, Min, Sum, Prod, LAND, BAND, LOR, BOR, LXOR, BXOR, MAXLOC, MINLOC
+			- L/B Binary operators -> Logical/Binary
+			- LOC -> Location
+	- ### Reduce (MPI_Allreduce)
+		- #### Scalar reduction
+			- Operation combines all values of the processes
+		- #### Array reduction
+			- Elements of the arrays are combined in an element-wise fashion, returned result is an array
+	- ### AllReduce (MPI_Allreduce)
 # Lecture 7: OpenMP
 ## preserve h3
 - ### Parallel and Distributed Computing
@@ -80,7 +86,6 @@
 # Lecture 8: Performance Analysis
 > [!WARNING]
 > Only the formulae seem important enough to come in the sessional
-
 
 - ## Performance
 	- ### Performance Metrics
@@ -141,8 +146,8 @@
 		- Can also use computational steps instead of time in this formula
 		- $$S(p) = \frac{t_s}{f*t_s + (1-f)\frac{t_s}{p}}$$
 		- $$S(p) = \frac{p}{1 + (p - 1)f}$$
-		- #### Speedup given N number of CPUs
-			- $S(numOfProc) = \frac{1}{f_s\frac{f_p}{numOfProc}}$
+		- #### Speedup given N number of CPUs (EZ Amdahl's)
+			- $S(numOfProc) = \frac{1}{f_s + \frac{f_p}{numOfProc}}$
 	- ### Gustafson’s Law (Scaled)
 		- $S(p) = p + s(1-p)$
 			- where p -> numOfProc
