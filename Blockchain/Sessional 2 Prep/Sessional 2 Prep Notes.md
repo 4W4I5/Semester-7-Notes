@@ -9,7 +9,7 @@
 
 # Lecture 5: Mechanics of Bitcoin
 ## 1) Bitcoin Transactions
-#### Transaction Input & Outputs
+### Transaction Input & Outputs
 - Inputs can be considered as "debits" against a bitcoin account
 	- Reference to a prevTransactionID, similar to an array, it is also indexed i.e. can pick out exact value sent to an address as a transaction is just an entry in the ledger
 - Outputs can be considered as "credits" added to a bitcoin account
@@ -27,7 +27,7 @@
 	- Not signed by the input owner
 	- Sum of all Inputs and Outputs not being Zero
 ## 2) Bitcoin Scripts
-#### Transactions
+### Transactions
 - UTXO
 - Block mining
 - Bitcoin Batches + Locks
@@ -39,8 +39,8 @@
 - PKI
 - Realworld Example of BTC Transfer
 - Transaction Fields
-#### Locking Script: Pay2PubKey
-#### Locking Script: Pay2PubKeyHash
+### Locking Script: Pay2PubKey
+### Locking Script: Pay2PubKeyHash
 ## 3) Application of Bitcoin Scripts
 - Escrow Transactions
 	- Seller wants payment before shipping goods
@@ -101,18 +101,27 @@
 - Coinbase Transaction Contents
 # Lecture 6: The Bitcoin Network
 ## 1) Node Types & Roles
+
 Maybe add 7, 8 and 9 here
+
 ## 2) Extended Bitcoin Network
 ## 3) Bitcoin Relay Networks
 ## 4) Bitcoin P2P Network
+
 NOTE:: Add in points from Heading "Joining the P2P network" slides here
+
 NOTE:: Add in points from Heading "Transaction Propagation" slides here
+
 NOTE:: Add in points from Heading "Block Propagation nearly identical" slides here
+
 NOTE:: Add in points from Heading "Should I relay a proposed transaction" slides here
+
 ## 5) Network Discovery
 ## 6) Race Conditions
 ## 7) Fully-Validating Nodes
+
 NOTE:: Add in points from Heading "Storage Costs" slides here
+
 ## 8) Thin/SPV Clients
 ## 9) Software Diversity
 
@@ -126,3 +135,170 @@ NOTE:: Add in points from Heading "Storage Costs" slides here
 # Lecture 7-A: Interfacing with Ethereum
 # Lecture 7-B: Ganache & Truffle
 # Lecture 7-C: Smart Contracts
+## Boilerplate
+
+```
+//SPDX-License-Identifier: MIT                 <- Used to specify what license the contract falls under, generally MIT is best
+pragma solidity >= X.X.XX < X.X.XX             <- Specify which compiler versions to support, can also use ^X.X.XX to include specified version and till the next                                                       breaking change
+
+contract someContractName {                    <- Main contract block where everything happens, can specify multiple
+	function someContractFunction() viewSpecifier {  <- functions to be served by the contract
+	}
+}
+```
+
+- Any variables declared outside of the contract scope itself will be globally accessible and publicly as well
+## Code blocks
+- ### Address
+	- `address`: Holds an Ethereum address (20 byte value). `address payable` : Same as address, but includes additional methods `transfer` and `send`
+	- Operators:
+		- Comparisons: `<=`, `<`, `==`, `!=`, `>=` and `>`
+	- Methods:
+		- #### Balance
+			- `<address>.balance (uint256)`: balance of the Address in Wei
+		- #### Transfer
+			- `<address>.transfer(uint256 amount)`: send given amount of Wei to Address, throws on failure
+		- #### Send
+			- `<address>.send(uint256 amount) returns (bool)`: send given amount of Wei to Address, returns false on failure
+- ### Struct
+	- New types can be declared using struct.
+
+```solidity
+struct Funder {
+    address addr;
+    uint amount;
+}
+
+Funder funders;
+```
+
+- ### Mapping
+	- Declared as `mapping(_KeyType => _ValueType)`
+	- Mappings can be seen as **hash tables** which are virtually initialized such that every possible key exists and is mapped to a value.
+	- **Key** can be almost any type except for a mapping, a dynamically sized array, a contract, an enum, or a struct. **value** can actually be any type, including mappings.
+## Functions
+- ### Structure
+	- `function (<parameter types>) {internal|external|public|private} [pure|constant|view|payable] [returns (<return types>)]`
+- ### Visibility Modifiers
+	- `public` - Accessible from this contract, inherited contracts and externally
+	- `private` - Accessible only from this contract
+	- `internal` - Accessible only from this contract and contracts inheriting from it
+	- `external` - Cannot be accessed internally, only externally. Recommended to reduce gas. Access internally with `this.f`.
+- ### Parameters
+	- #### Input parameters
+		- Parameters are declared just like variables and are `memory` variables.
+
+```solidity
+function f(uint _a, uint _b) {}
+```
+
+- #### Output parameters
+	- Output parameters are declared after the `returns` keyword
+	- Output can also be specified using `return` statement. In that case, we can omit parameter name `returns (uint)`.
+	- Multiple return types are possible with `return (v0, v1, ..., vn)`.
+
+```solidity
+function f(uint _a, uint _b) returns (uint _sum) {
+   _sum = _a + _b;
+}
+```
+
+- ### Constructor
+	- Function that is executed during contract deployment. Defined using the `constructor` keyword.
+
+```solidity
+contract C {
+   address owner;
+   uint status;
+   constructor(uint _status) {
+       owner = msg.sender;
+       status = _status;
+   }
+}
+```
+
+- ### Function Calls
+	- #### Internal Function Calls
+		- Functions of the current contract can be called directly (internally - via jumps) and also recursively
+
+```solidity
+contract C {
+    function funA() returns (uint) { 
+       return 5; 
+    }
+    
+    function FunB(uint _a) returns (uint ret) { 
+       return funA() + _a; 
+    }
+}
+```
+
+- #### External Function Calls
+	- `this.g(8);` and `c.g(2);` (where c is a contract instance) are also valid function calls, but, the function will be called “externally”, via a message call.
+> `.gas()` and `.value()` can also be used with external function calls.
+- #### Named Calls
+	- Function call arguments can also be given by name in any order as below.
+
+```solidity
+function f(uint a, uint b) {  }
+
+function g() {
+    f({b: 1, a: 2});
+}
+```
+
+- ### Function Modifier
+	- Modifiers can automatically check a condition prior to executing the function.
+
+```solidity
+modifier onlyOwner {
+    require(msg.sender == owner);
+    _;
+}
+
+function close() onlyOwner {
+    selfdestruct(owner);
+}
+```
+
+- `pure` for functions: Disallows modification or access of state.
+- `view` for functions: Disallows modification of state.
+- `payable` for functions: Allows them to receive Ether together with a call.
+- `constant` for state variables: Disallows assignment (except initialization), does not occupy storage slot.
+- `immutable` for state variables: Allows assignment at construction time and is constant when deployed. Is stored in code.
+- `anonymous` for events: Does not store event signature as topic.
+- `indexed` for event parameters: Stores the parameter as topic.
+- `virtual` for functions and modifiers: Allows the function’s or modifier’s behavior to be changed in derived contracts.
+- `override`: States that this function, modifier or public state variable changes the behavior of a function or modifier in a base contract.
+- ### View or Constant Functions
+	- Functions can be declared `view` or `constant` in which case they promise not to modify the state, but can read from them.
+
+```solidity
+function f(uint a) view returns (uint) {
+    return a * b; // where b is a storage variable
+}
+```
+
+> The compiler does not enforce yet that a `view` method is not modifying state.
+- ### Pure Functions
+	- Functions can be declared `pure` in which case they promise not to read from or modify the state.
+
+```solidity
+function f(uint a) pure returns (uint) {
+    return a * 42;
+}
+```
+
+- ### Payable Functions
+	- Functions that receive `Ether` are marked as `payable` function.
+## Transaction variables
+- `msg.data (bytes)`: complete calldata
+- `msg.gas (uint)`: remaining gas
+- `msg.sender (address)`: sender of the message (current call)
+- `msg.sig (bytes4)`: first four bytes of the calldata (i.e. function identifier)
+- `msg.value (uint)`: number of wei sent with the message
+- `tx.gasprice (uint)`: gas price of the transaction
+- `tx.origin (address)`: sender of the transaction (full call chain)
+## Validations & Assertions
+- `assert(bool condition)`: abort execution and revert state changes if condition is `false` (use for internal error)
+- `require(bool condition)`: abort execution and revert state changes if condition is `false` (use for malformed input or error in external component)
