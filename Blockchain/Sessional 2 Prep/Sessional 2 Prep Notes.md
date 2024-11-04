@@ -133,7 +133,22 @@ NOTE:: Add in points from Heading "Storage Costs" slides here
 ## 5) Ethereum Virtual Machine
 ## 6) Turing Completeness
 # Lecture 7-A: Interfacing with Ethereum
-### 
+- ### Two ways to do it
+	- **Developers** -> Web3JS
+	- **Consumers** -> Metamask or Mist Browser(WIP)
+- ### Switching Networks
+	- Main ETH network
+		- Real Value
+	- Goerli TestNet
+		- PoS consensus
+	- Sepolia TestNet
+		- PoS consensus
+			- Used to be PoW before the merge in 2022
+		- Will not be maintained long term
+	- Localhost 8545
+		- Ganache
+- ### ETH Accounts
+	- 
 # Lecture 7-B: Ganache (Local TestNet)
 ## Ganache
 - Trivia
