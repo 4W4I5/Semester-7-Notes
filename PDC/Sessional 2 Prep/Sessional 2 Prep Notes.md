@@ -1,7 +1,7 @@
 | Lecture Number | Lecture Title        | Status             |
 | -------------- | -------------------- | ------------------ |
 | 6              | Advanced MPI         | :white_check_mark: |
-| 7              | OpenMP               | :warning:          |
+| 7              | OpenMP               | :white_check_mark: | 
 | 8              | Performance Analysis | :white_check_mark: |
 
 > [!WARNING]
