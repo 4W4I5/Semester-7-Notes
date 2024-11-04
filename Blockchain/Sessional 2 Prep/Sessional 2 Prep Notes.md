@@ -148,7 +148,12 @@ NOTE:: Add in points from Heading "Storage Costs" slides here
 	- Localhost 8545
 		- Ganache
 - ### ETH Accounts
-	- 
+	- **Holds (Stored as hex)**:
+		- Account Address
+		- Public Key
+		- Private Key
+	- Used for all 4 networks mentioned above
+		- Account address has its own context for every network, value from one network does not work in the other
 # Lecture 7-B: Ganache (Local TestNet)
 ## Ganache
 - Trivia
