@@ -1,11 +1,11 @@
-| Chapter<br>Number | Chapter<br>Name           | Status             |
-| ----------------- | ------------------------- | ------------------ |
-| 5                 | Mechanics of Bitcoin      | :warning:          |
-| 6                 | The bitcoin network       | :warning:          |
-| 7-Intro           | Introduction to Ethereum  | :warning:          |
-| 7-A               | Interfacing with Ethereum | :warning:          |
-| 7-B               | Ganache (Local TestNet)   | :white_check_mark: |
-| 7-C               | Smart Contracts           | :white_check_mark: |
+| Chapter<br>Number | Chapter<br>Name                                    | Status             |
+| ----------------- | -------------------------------------------------- | ------------------ |
+| 5                 | Mechanics of Bitcoin + Bitcoin Transactions slides | :warning:          |
+| 6                 | The bitcoin network                                | :warning:          |
+| 7-Intro           | Introduction to Ethereum                           | :warning:          |
+| 7-A               | Interfacing with Ethereum                          | :white_check_mark: |
+| 7-B               | Ganache (Local TestNet)                            | :white_check_mark: |
+| 7-C               | Smart Contracts                                    | :white_check_mark: |
 
 # Lecture 5: Mechanics of Bitcoin
 ## 1) Bitcoin Transactions
