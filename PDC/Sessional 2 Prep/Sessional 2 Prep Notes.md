@@ -71,23 +71,67 @@
 - ## Function Calls
 	- ### Set \# of Threads
 		- `omp_set_num_threads(threadNum)`
-		- Call before entering a parallel region
+			- Call before entering a parallel region
+	- ### Get ID of Current Threads
+		- `omp_get_thread_num()`
+			- Note that worker threads i.e. threads spawned from work-sharing clauses, cannot spawn new threads
+	- ### Get total number of threads for current block
+		- `omp_get_num_threads()`
 	- ### Check Parallel region is active
 		- `omp_in_parallel()`
-		- Call within a parallel region, returns true if yes, false if no
+			- Call within a parallel region, returns true if yes, false if no
 - ## PRAGMA Calls
 	- ### Basic Structure
 		- `#pragma omp clause1[clause2[...]]` -> OpenMP Compiler Directive
-		- All code within these blocks will run even if it fails some condition or has an execution error, it just will not be parallel
+			- All code within these blocks will run even if it fails some condition or has an execution error, it just will not be parallel
 	- ### Parallel Region
 		- `#pragma omp parallel {Code body}` -> All code within this body is duplicated and run by a set number of threads
 			- Can call `omp_set_num_threads()` above this to set the max number of allowed threads to execute that specific block
 	- ### IF Clause
 		- `#pragma omp parallel if (someStatement) {Code Body}`
-		- Executes in parallel if statement is true, otherwise runs in serial.
+			- Executes in parallel if statement is true, otherwise runs in serial.
 	- ### NUM_Threads
 		- `#pragma omp parallel if (someStatement) num_threads(np) {Code Body}`
 			- where np is a value that stores the required number of threads
+	- ### Shared & Private Data (Access Mode)
+		- By default `shared` is used, each thread can globally address the same memory address i.e. `a[5]`
+			- `#pragma omp parallel shared(threadData)`
+		- For private access where each thread works on its own copy of the memory address contents, use
+			- `#pragma omp parallel private(threadData)` -> threadData is just a var that is being passed to each of the threads
+		- To use the initialized values the variable had before entering the parallel region
+			- `#pragma omp parallel firstprivate(threadData)`
+		- For loop exclusive use, the final iteration updates the value of the `threadData`
+			- `#pragma omp parallel for lastprivate(threadData)`
+	- ### Alter Default Access Behavior
+		- For each var passed to this clause, specify an Access mode
+		- By default no vars are shared
+			- `#pragma omp parallel default(none) shared(thisIsThreadGlobal) private(thisIsThreadLocal)`
+		- By default all vars are shared unless marked private (No need to do what was done above and mark a global thread, its already there)
+			- `#pragma omp parallel default(shared) private(thisIsThreadLocal)`
+		- By default all vars are private unless marked shared(Safest option)
+			- `#pragma omp parallel default(private) private(thisIsThreadLocal)`
+	- ### Loops
+		- Share iterations of a given loop among the running threads, note that no new threads are spawned for this
+			- `#pragma omp for schedule()`
+		- `Schedule()`, determines the mechanism used and how many threads will be assigned to the total execution
+			- `schedule(static, 10)` -> RoundRobin + 10 threads assigned to complete this loop
+			- `schedule(dynamic, 10)` -> Chunks are auto-assigned based on how much a previous thread was able to finish. Increases overhead.
+		- Sync or not to be in Sync
+			- Can set the loop iterations split among the threads to run without waiting for the other, there is an implicit barrier at the end of the loop when in sync
+			- `#pragma omp for nowait`
+	- ### Master thread
+		- Used to run code on the main thread, all other threads ignore this section
+			- `#pragma omp master`
+	- ### Critical (Thread Mutex)
+		- Used to force a Code Block to use a single thread at a time i.e. mutexes
+		- Section that uses Critical must be an atomic section, needs to be as simple as possible
+			- `#pragma omp critical`
+	- ### Barrier
+		- Similar to OpenMPI, all threads will be blocked after completion until the final thread reaches that code block too
+			- `#pragma omp barrier`
+	- ### Reduction
+		- Similar to OpenMPI, operators are specified within clause. Operators are `max`, `min`, `+`, `-`, `*`, etcetc. Creates a private copy that is then shared
+			- `#pragma omp parallel reduction(max:someArrayOrVar)`
 
 # Lecture 8: Performance Analysis
 > [!WARNING]
