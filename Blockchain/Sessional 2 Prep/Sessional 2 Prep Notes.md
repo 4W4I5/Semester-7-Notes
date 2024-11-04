@@ -157,17 +157,17 @@ NOTE:: Add in points from Heading "Storage Costs" slides here
 		- Account address has its own context for every network, value from one network does not work in the other
 # Lecture 7-B: Ganache (Local TestNet)
 ## Ganache
-- Trivia
-	- Ganache GUI listens at port 7545, CLI at port 8545
-- Advantages
-	- No need to obtain test ether; you "award" yourself mining rewards that you can use for testing
-	- When deploy contract on Ethereum blockchain, we pay gas. It is best to test contract locally without any fee, and when the contract is ready then we deploy it the main ethereum.
-	- Uploading work to both ethereum and test networks takes time. This means that we need to wait for our contracts to deploy on the chain before testing them, which can be avoided with a local blockchain set up with Ganache. No other users, just you
-	- No other contracts, just the ones you deploy after you launch it
-- Disadvantages
-	- Having no other users means that it doesn't behave the same as a public blockchain. There's no competition for transaction space or sequencing of transactions.
-	- No miners other than you means that mining is more predictable; therefore, you can't test some scenarios that occur on a public blockchain.
-	- Having no other contracts means you have to deploy everything that you want to test, including dependencies and contract libraries.
+- ### Trivia
+	- Ganache GUI uses port 7545; CLI uses port 8545.
+- ### Advantages
+	- No need for test ether; you can self-award mining rewards for testing.
+	- Test contracts locally without gas fees before deploying to the Ethereum mainnet.
+	- Avoid delays in contract deployment by using a local Ganache setup with no other users.
+	- Only your contracts are present, simplifying the testing process.
+- ### Disadvantages
+	- No other users means it doesn't replicate public blockchain behavior; no competition for transaction space.
+	- Predictable mining lacks scenarios found on a public blockchain.
+	- You must deploy all contracts and dependencies for testing, as no others are available.
 # Lecture 7-C: Smart Contracts
 ## Boilerplate
 
