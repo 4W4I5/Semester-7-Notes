@@ -99,6 +99,7 @@
 	- Bits (4 bytes)
 	- Nonce (4 bytes)
 - Coinbase Transaction Contents
+	- `Nothing to note here`
 # Lecture 6: The Bitcoin Network
 ## 1) Node Types & Roles
 
