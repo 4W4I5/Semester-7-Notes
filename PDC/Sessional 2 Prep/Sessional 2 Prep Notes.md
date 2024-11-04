@@ -67,7 +67,7 @@
 		- `NUM_THREADS(threadNum)` Clause
 		- `omp_set_num_threads(threadNum);`
 		- exporting `OMP_NUM_THREADS` with `threadNum`
-		-Default Implementation
+		- Default Implementation
 - ## Function Calls
 	- ### Set \# of Threads
 		- `omp_set_num_threads(threadNum)`
