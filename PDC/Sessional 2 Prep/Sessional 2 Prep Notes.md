@@ -62,9 +62,32 @@
 	- Directive set for C/C++ compiler, included as standard
 		- Requires `-fopenmp` switch during compilation and/or the `include <omp.h>` header include
 - ## Num of Threads to use
-	- 
+	- Can be in set in a number of ways (in order of precedence)
+		- IF clause
+		- `NUM_THREADS(threadNum)` Clause
+		- `omp_set_num_threads(threadNum);`
+		- exporting `OMP_NUM_THREADS` with `threadNum`
+		-Default Implementation
+- ## Function Calls
+	- ### Set \# of Threads
+		- `omp_set_num_threads(threadNum)`
+		- Call before entering a parallel region
+	- ### Check Parallel region is active
+		- `omp_in_parallel()`
+		- Call within a parallel region, returns true if yes, false if no
 - ## PRAGMA Calls
-	-
+	- ### Basic Structure
+		- `#pragma omp clause1[clause2[...]]` -> OpenMP Compiler Directive
+		- All code within these blocks will run even if it fails some condition or has an execution error, it just will not be parallel
+	- ### Parallel Region
+		- `#pragma omp parallel {Code body}` -> All code within this body is duplicated and run by a set number of threads
+			- Can call `omp_set_num_threads()` above this to set the max number of allowed threads to execute that specific block
+	- ### IF Clause
+		- `#pragma omp parallel if (someStatement) {Code Body}`
+		- Executes in parallel if statement is true, otherwise runs in serial.
+	- ### NUM_Threads
+		- `#pragma omp parallel if (someStatement) num_threads(np) {Code Body}`
+			- where np is a value that stores the required number of threads
 
 # Lecture 8: Performance Analysis
 > [!WARNING]
