@@ -173,7 +173,7 @@ NOTE:: Add in points from Heading "Storage Costs" slides here
 
 ```
 //SPDX-License-Identifier: MIT                 <- Used to specify what license the contract falls under, generally MIT is best
-pragma solidity >= X.X.XX < X.X.XX             <- Specify which compiler versions to support, can also use ^X.X.XX to include specified version and till the next                                                       breaking change
+pragma solidity >= X.X.XX < X.X.XX             <- Specify which compiler versions to support, can also use ^X.X.XX to include specified version and till the next breaking change
 
 contract someContractName {                    <- Main contract block where everything happens, can specify multiple
 	function someContractFunction() viewSpecifier {  <- functions to be served by the contract
