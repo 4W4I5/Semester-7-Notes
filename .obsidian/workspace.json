@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blockchain/Sessional 2 Prep/Sessional 2 Prep Notes.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Sessional 2 Prep Notes"
+              "title": "README"
             }
           }
         ],
@@ -207,8 +207,8 @@
   },
   "active": "c960a1eac2295680",
   "lastOpenFiles": [
-    "IA/Sessional 2 Prep/Sessional 2 Prep Notes.md",
     "Blockchain/Sessional 2 Prep/Sessional 2 Prep Notes.md",
+    "IA/Sessional 2 Prep/Sessional 2 Prep Notes.md",
     "README.md",
     "PDC/Sessional 2 Prep/Sessional 2 Prep Notes.md",
     "PDC/Sessional 2 Prep",

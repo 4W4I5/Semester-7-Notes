@@ -31,7 +31,7 @@
 | Exam                                                                           | Status             |
 | ------------------------------------------------------------------------------ | ------------------ |
 | [Sessional 1](Blockchain/Sessional%201%20Prep/Sessional%201%20Prep%20Notes.md) | :white_check_mark: |
-| [Sessional 2](Blockchain/Sessional%202%20Prep/Sessional%202%20Prep%20Notes.md) | :warning:          |
+| [Sessional 2](Blockchain/Sessional%202%20Prep/Sessional%202%20Prep%20Notes.md) | :white_check_mark: | 
 | [Finals](Blockchain/Finals%20Prep/Finals%20Prep%20Notes.md)                    |                    |
 
 # Information Assurance
