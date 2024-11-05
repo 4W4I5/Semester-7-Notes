@@ -305,12 +305,23 @@
 	- Nodes prioritize the **longest valid chain** to resolve conflicts.
 	- This approach enables consensus and maintains network consistency.
 # Lecture 7-Intro: Introduction to Ethereum
-## 1) Pay-To-Script-Hash (P2SH)
-- Used when a transaction has inputs that reference one UTXO from a previous transaction and then another input for some other UTXO
-	- Redeem script specifies a 2-of-3 multisig
-## 4) Contracts
-## 5) Ethereum Virtual Machine
-## 6) Turing Completeness
+## 1) Accounts in Ethereum
+- ### Types of accounts
+	- **Externally Owned Accounts**
+		- Have their own Private key
+			- Can control access to their funds/contracts
+		- Can initate transactions
+	- **Contract Accounts**
+		- Has smart contract code, EOAs do not have this
+		- Owned + controlled by the logic of its own code
+		- Can only react to transactions or call other contracts (inheritance)
+## 2) Contracts
+- Have their own addresses, just like EOA. Can send/receive funds if marked payable in code
+- Contain functions that transactions can call
+- Contracts are executed by a transaction by setting one of its outputs to the transaction address
+	- The state of the contract is then saved on the blockchain as it is a transaction
+## 3) Ethereum Virtual Machine
+## 4) Turing Completeness & implications
 # Lecture 7-A: Interfacing with Ethereum
 - ### Two ways to do it
 	- **Developers** -> Web3JS
