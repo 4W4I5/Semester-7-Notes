@@ -9,7 +9,7 @@
 
 > [!WARNING]
 > - Lecture 5 and the unnumbered lecture have a lot of similar content, merged the two
-> - Moved P2SH from Lecture 7-Intro to 5 with the other locking scripts
+> - Moved P2SH from Lecture 7-Intro to Lecture 5 with the other locking scripts
 
 # Lecture 5: Mechanics of Bitcoin
 ## 1) Transaction Input & Outputs
@@ -103,6 +103,28 @@
 			- In this setup:
 				- The redeem script (included in the transaction by the spender) matches the `redeemScriptHash` set by the sender.
 				- `OP_CHECKMULTISIG` then verifies that two valid signatures out of three are present, satisfying the redeem script.
+		- ##### Pay-to-Script-Hash (P2SH) Stack Execution for 2-of-3 Multi-Signature
+			- **Scenario Setup:**
+				- **ScriptPubKey (Locking Script):** `<redeemScriptHash> OP_EQUAL`
+				- **Redeem Script:** `OP_2 <pubKey1> <pubKey2> <pubKey3> OP_3 OP_CHECKMULTISIG`
+				- **scriptSig (Unlocking Script):** `<rSIG1> <rSIG2> <redeemScript>`
+			- **Execution Stages:**
+				- **Stage 1: Unlocking Script Execution**
+					- Push `rSIG1` onto the stack: `[rSIG1]`
+					- Push `rSIG2` onto the stack: `[rSIG1, rSIG2]`
+					- Push `RedeemScript` onto the stack: `[rSIG1, rSIG2, RedeemScript]`
+					- Hash the `RedeemScript` and compare with `<redeemScriptHash>`
+						- Push `redeemScriptHash` from ScriptPubKey: `[rSIG1, rSIG2, RedeemScript, redeemScriptHash]`
+						- `OP_EQUAL`: Checks if `RedeemScript` hash matches `redeemScriptHash`; if true, moves to Stage 2, else fails.
+				- **Stage 2: Redeem Script Execution (Multi-Signature Verification)**
+					- Push `OP_2` (number of required signatures): `[rSIG1, rSIG2, 2]`
+					- Push `<pubKey1>`, `<pubKey2>`, and `<pubKey3>`: `[rSIG1, rSIG2, 2, pubKey1, pubKey2, pubKey3]`
+					- Push `OP_3` (total number of public keys): `[rSIG1, rSIG2, 2, pubKey1, pubKey2, pubKey3, 3]`
+					- `OP_CHECKMULTISIG`:
+						- Pops `3` (public key count) and `2` (required signature count)
+						- Verifies `rSIG1` and `rSIG2` match any two of the public keys provided
+			- If both signatures match the required public keys, the script returns true, validating the transaction; otherwise, it fails.
+
 ## 3) Application of Bitcoin Scripts
 - Escrow Transactions
 	- Seller wants payment before shipping goods
