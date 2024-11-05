@@ -1,7 +1,7 @@
 | Chapter<br>Number | Chapter<br>Name                                    | Status             |
 | ----------------- | -------------------------------------------------- | ------------------ |
 | 5                 | Mechanics of Bitcoin + Bitcoin Transactions slides | :warning:          |
-| 6                 | The bitcoin network                                | :warning:          |
+| 6                 | The bitcoin network                                | :white_check_mark: |
 | 7-Intro           | Introduction to Ethereum                           | :warning:          |
 | 7-A               | Interfacing with Ethereum                          | :white_check_mark: |
 | 7-B               | Ganache (Local TestNet)                            | :white_check_mark: |
@@ -102,30 +102,124 @@
 	- `Nothing to note here`
 # Lecture 6: The Bitcoin Network
 ## 1) Node Types & Roles
-
-Maybe add 7, 8 and 9 here
-
+- **Overview of Nodes**
+	- All nodes in Bitcoin’s P2P network are equal but can have specialized roles.
+	- Key roles:
+		- **Routing** data
+		- **Blockchain Maintenance**
+		- **Mining**
+		- **Wallet Services**
+	- Additional servers:
+		- **Mining pool protocols**
+		- **Lightweight client-access protocols**
+- **Full Nodes**
+	- Perform four main functions:
+		- **Wallet** management
+		- **Mining** (optional for some full nodes)
+		- **Blockchain Storage**
+		- **Network Routing**
+	- Criteria for adding new blocks:
+		- **Meets Hash Target**
+		- **Valid Transactions**
+		- **Chain Consistency** (avoiding forks)
+- **Node Definition**
+	- Any device in the network capable of sending, receiving, or forwarding Bitcoin data.
+	- Examples: Computers, smartphones, servers.
+	- All nodes participate in **routing**; additional functionalities depend on node type.
+- **Functionality of Nodes**
+	- Nodes validate and propagate:
+		- **Transactions**
+		- **Blocks**
+	- Nodes constantly **discover and connect to peers** to ensure resilience.
+- **SPV (Lightweight) Nodes**
+	- Store only **block headers** rather than full transaction data.
+	- Depend on full nodes for **transaction verification**.
+	- Commonly used in mobile wallets due to minimal storage needs.
+- **Fully-Validating Nodes**
+	- Maintain the **entire blockchain** (currently over 40 GB).
+	- Contribute to network security by verifying and relaying every transaction.
+	- Support the network’s decentralization and integrity.
 ## 2) Extended Bitcoin Network
+- **Definition**: An expanded version of the Bitcoin P2P network, including specialized protocols and nodes.
+- **Purpose**: Allows diverse devices and services to connect without needing full blockchain storage.
+- **Components**:
+	- **Stratum Protocol**: Used primarily by mining operations.
+	- **Pool-Mining Protocols**: Enable pooled mining and reward distribution.
+- **Node Types in the Extended Network**:
+	- **Lightweight (SPV) Wallet**:
+		- Includes **Wallet** and **Network Node** on the Bitcoin P2P protocol.
+		- Operates without a blockchain, relying on full nodes for data verification.
+	- **Pool Protocol Servers**:
+		- **Gateway routers** linking the Bitcoin P2P network to nodes using other protocols (e.g., Stratum, pool mining).
+	- **Mining Nodes**:
+		- Contain the **mining function** only, with no blockchain storage.
+		- Connect via **Stratum** or other **pool-mining protocols**.
+	- **Lightweight (SPV) Stratum Wallet**:
+		- Includes **Wallet** and **Network Node** on the Stratum protocol.
+		- Relies on mining pools or gateways for blockchain data.
+	- **Reference Client (Bitcoin Core)**:
+		- Full node containing **Wallet**, **Miner**, **Blockchain Database**, and **Network Routing**.
+		- Acts as the standard Bitcoin implementation.
+	- **Full Blockchain Node**:
+		- Stores the **entire blockchain** and functions as a **Network Routing Node**.
+		- Does not necessarily perform mining or wallet operations.
+	- **Solo Miner**:
+		- Contains **mining functionality** with a full blockchain copy and **Network Routing**.
+		- Operates independently on the Bitcoin P2P network, directly contributing to the blockchain.
 ## 3) Bitcoin Relay Networks
+- **Purpose**: Enhance **block propagation speed**, reducing latency and aiding mining efficiency.
+- **Example**:
+	- **FIBRE (Fast Internet Bitcoin Relay Engine)** creates a high-speed overlay to expedite block transmission.
+- **Value**: Reduces delays, especially beneficial for miners spread across different locations.
 ## 4) Bitcoin P2P Network
-
-NOTE:: Add in points from Heading "Joining the P2P network" slides here
-
-NOTE:: Add in points from Heading "Transaction Propagation" slides here
-
-NOTE:: Add in points from Heading "Block Propagation nearly identical" slides here
-
-NOTE:: Add in points from Heading "Should I relay a proposed transaction" slides here
-
+- **Decentralized Structure**: A mesh network without central control, nodes interconnect in an ad-hoc manner.
+- **Node Types**:
+	- **Full Nodes** with complete blockchain data
+	- **SPV Nodes** for lightweight data access
+	- **Mining Nodes**
+	- **Wallet Nodes**
+- **Communication**: Nodes connect via TCP (usually on port 8333) and share transaction/block data.
+- **Connection Inactivity**: Nodes drop peers after 3 hours of inactivity to maintain network freshness.
+- ### Joining the P2P Network
+	- **Node Initialization**: New nodes join by connecting to existing peers.
+	- **Handshake**:
+		- Sends a **version** message with protocol version, services, and blockchain height.
+		- Peers reply with `verack` to confirm the connection.
+	- **Peer Discovery**:
+		- DNS seeds and `addr` messages help nodes find peers.
+		- `getaddr` requests retrieve additional IPs for redundancy.
+- ### Transaction Propagation
+	- **Mempool**:
+		- Each node holds unconfirmed transactions in **temporary storage** until included in a block.
+	- **Relaying**:
+		- Nodes validate transactions before forwarding.
+		- Transactions spread to all peers, ensuring network-wide visibility.
+- ### Block Propagation
+	- **Process**:
+		- Blocks propagate similarly to transactions, spreading across the network.
+		- Relaying new blocks to peers promotes consensus.
+	- **Inventory (`inv`) Messages**:
+		- Help nodes identify missing blocks or transactions, minimizing redundant data transmission.
+- ### Should I Relay a Proposed Transaction?
+	- **Relay Checks**:
+		1. **Transaction Validation**: Transaction must be valid within the current blockchain context.
+			- Nodes run scripts for each input to confirm it returns **true**.
+		2. **Double-Spend Check**: Verifies that outputs being redeemed haven’t been spent.
+		3. **Duplicate Check**: Avoids relaying transactions already seen, preventing redundancy.
+		4. **Standard Script Requirement**: Only relays transactions with **"standard" scripts** (based on a whitelist) for compatibility.
+	- **Efficiency**: These checks filter transactions, conserving network resources and supporting reliability.
 ## 5) Network Discovery
+- **Peer Discovery**:
+	- Nodes find peers using **DNS seeds** or by reconnecting with previous peers.
+	- Nodes share **addr** messages to keep peer lists updated.
+- **Resilience**:
+	- Stale or inactive connections are dynamically replaced.
+	- Ensures robust, decentralized connectivity.
 ## 6) Race Conditions
-## 7) Fully-Validating Nodes
-
-NOTE:: Add in points from Heading "Storage Costs" slides here
-
-## 8) Thin/SPV Clients
-## 9) Software Diversity
-
+- **Cause**: Occurs when nodes receive competing blocks or transactions at nearly the same time.
+- **Resolution**:
+	- Nodes prioritize the **longest valid chain** to resolve conflicts.
+	- This approach enables consensus and maintains network consistency.
 # Lecture 7-Intro: Introduction to Ethereum
 ## 1) Example to understand the need of a smart contract
 ## 2) Bitcoin Scripts in Practice
