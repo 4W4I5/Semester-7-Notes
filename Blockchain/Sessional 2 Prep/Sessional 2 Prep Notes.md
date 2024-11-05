@@ -263,9 +263,9 @@
 	- Nodes prioritize the **longest valid chain** to resolve conflicts.
 	- This approach enables consensus and maintains network consistency.
 # Lecture 7-Intro: Introduction to Ethereum
-## 1) Example to understand the need of a smart contract
-## 2) Bitcoin Scripts in Practice
-## 3) Ethereum Accounts & Types
+## 1) Pay-To-Script-Hash (P2SH)
+- Used when a transaction has inputs that reference one UTXO from a previous transaction and then another input for some other UTXO
+	- Redeem script specifies a 2-of-3 multisig
 ## 4) Contracts
 ## 5) Ethereum Virtual Machine
 ## 6) Turing Completeness
