@@ -1,46 +1,72 @@
 | Chapter<br>Number | Chapter<br>Name                                    | Status             |
 | ----------------- | -------------------------------------------------- | ------------------ |
-| 5                 | Mechanics of Bitcoin + Bitcoin Transactions slides | :warning:          |
+| 5                 | Mechanics of Bitcoin + Bitcoin Transactions slides | :white_check_mark: | 
 | 6                 | The bitcoin network                                | :white_check_mark: |
 | 7-Intro           | Introduction to Ethereum                           | :warning:          |
 | 7-A               | Interfacing with Ethereum                          | :white_check_mark: |
 | 7-B               | Ganache (Local TestNet)                            | :white_check_mark: |
 | 7-C               | Smart Contracts                                    | :white_check_mark: |
 
+> [!WARNING]
+> Lecture 5 and the unnumbered lecture have a lot of similar content, merged the two
+
 # Lecture 5: Mechanics of Bitcoin
-## 1) Bitcoin Transactions
-### Transaction Input & Outputs
-- Inputs can be considered as "debits" against a bitcoin account
-	- Reference to a prevTransactionID, similar to an array, it is also indexed i.e. can pick out exact value sent to an address as a transaction is just an entry in the ledger
-- Outputs can be considered as "credits" added to a bitcoin account
-	- Spending/'Assigning Outputs' is the process of signing a transaction that transfers value from prevTransaction to newOwnerAddr
-	- Splitting + Merging Value of coins
-		- Splitting -> Alice needs to pay X BTC but she only has a X+N BTC where N is some offset. She can pay herself with N BTC to split the original X BTC and then pay with the split Y BTC and still have the balance cause of the N BTC.
-			- No new coins are generated, just a new UTXO with the smaller value that can be traced back to the original coinbase reward value.
-		- Merging -> Bob got paid 15 BTC from Sender1 and 5 BTC from Sender2. He can create a new transaction with 2 inputs referring to the Outputs of Sender1 and Sender2 to merge the value into a new UTXO that has the total value of 20 BTC
-	- Multiple inputs from different owners
-		- Multiple people can Output to the same address, however they will each then sign the transaction i.e. it will hold the sigs of all parties involved in the Inputs
-- Inputs have to add up to the Outputs i.e.;
-	- Inputs + transaction fees == Outputs. (Outputs add up to slightly less than the Inputs. The difference represents an implied transaction fee)
-	- Coinbase/Initial transaction does `NOT` have any inputs.
-- Transactions are invalidated by the following;
-	- Not signed by the input owner
-	- Sum of all Inputs and Outputs not being Zero
-## 2) Bitcoin Scripts
-### Transactions
-- UTXO
-- Block mining
-- Bitcoin Batches + Locks
-- Bitcoin Transfer Process
-- Locking & Unlocking Scripts
-- Coinbase Transactions
-- Fees
-- Script
-- PKI
-- Realworld Example of BTC Transfer
-- Transaction Fields
-### Locking Script: Pay2PubKey
-### Locking Script: Pay2PubKeyHash
+## 1) Transaction Input & Outputs
+#### Transaction Inputs & Outputs
+- **Inputs** represent "debits," referencing previous transaction IDs. They’re indexed, allowing precise identification of the value sent to an address. Each input is a reference to a previous Unspent Transaction Output (UTXO).
+- **Outputs** act as "credits," indicating the value added to a recipient’s account. Signing a transaction spends or assigns these outputs to a new owner's address.
+#### Splitting & Merging Value of Coins
+- **Splitting**: To pay an amount (e.g., X BTC), if Alice only has X+N BTC, she can split by paying herself N BTC and use the remaining X BTC for the transaction.
+    - This creates a new UTXO with the correct amount, traceable to the original UTXO.
+- **Merging**: If Bob receives 15 BTC from Sender1 and 5 BTC from Sender2, he can create a new transaction with two inputs, merging them into a 20 BTC UTXO.
+#### Multiple Inputs & Transaction Fees
+- Transactions can include multiple inputs from different owners, requiring all signatories to sign.
+- **Fee Structure**: Inputs + transaction fees must equal Outputs. (Outputs are slightly less, with the difference being the transaction fee).
+- **Coinbase Transactions**: These are initial transactions that introduce new BTC into circulation as mining rewards and do not have any inputs.
+#### Validity Rules
+- A transaction is invalid if:
+    - It’s not signed by the input owner(s).
+    - The sum of all inputs and outputs isn’t zero.
+## 2) UTXOs (Un-numbered slides) + Scripts
+- ### Unspent Transaction Outputs (UTXOs)
+	- **UTXOs (Unspent Transaction Outputs)**:
+		- Every Bitcoin transaction generates UTXOs, representing the "leftover" value after a transaction, which can be used as inputs in future transactions. UTXOs track unspent funds associated with each address, preventing double-spending and preserving Bitcoin's accounting integrity.
+	    - **Analogy**:
+		    - Similar to receiving change after a cash transaction, where a large denomination is split into smaller units. For example, if you pay 3 BTC out of 5 BTC coin you own, you receive a 2 BTC UTXO as "change."
+	- #### Block Mining Recap
+		1. **Transaction Initiation**:
+			- When a transaction is made (e.g., from sender A to receiver B), it’s first sent to the network.
+		2. **Broadcasting**:
+			- The transaction is broadcasted across the Bitcoin network nodes.
+		3. **Inclusion in a Block**:
+			- A miner selects the transaction from the mempool (a pool of pending transactions) and, upon successfully solving the consensus puzzle, includes it in a new block.
+		4. **Verification & Consensus**:
+			- Other nodes verify the block's validity and, upon consensus, add it to their copy of the blockchain ledger.
+	- #### Bitcoin Batches & Locking/Unlocking Scripts
+		- **UTXO Batches**:
+			- Multiple UTXOs can be aggregated for efficiency, allowing a single transaction to reference several UTXOs as inputs, which can then be spent in multiple outputs.
+		- **Locking Scripts (ScriptPubKey)**:
+			- Every UTXO is "locked" using a script that associates it with the recipient's public key. This script defines the conditions needed to spend the UTXO.
+		- **Unlocking Scripts (ScriptSig)**:
+			- When spending a UTXO, the sender provides an unlocking script (usually their digital signature), allowing the transfer. This signature is proof of ownership for the specific UTXO.
+	- #### Coinbase Transactions
+		- **Coinbase Transaction**:
+			- The only method to introduce new Bitcoin into the system, the Coinbase transaction is the miner’s reward for successfully mining a block. It has no inputs and generates the reward directly as a new UTXO.
+		- **Reward Composition**:
+			- This reward includes newly minted BTC and the transaction fees collected from other transactions within the block, incentivizing miners to prioritize transactions with higher fees.
+- ### Scripts
+	- Very similar to lexical analysis with how it uses a stack
+		- `2 7 OP_ADD 3 OP_SUB 1 OP_ADD 7 OP_EQUAL`
+			- `PUSH` operands to the stack until an operator is pushed, after which `POP` the required operands with the operator and `PUSH` the result back to the top of the stack
+				- Can be nested
+		- Common crypto operators
+			- OP_DUP -> Duplicate operand to the top of the stack
+			- OP_HASH160 -> Hash **twice**: First via SHA-256, then via RIPEMD-160
+			- OP_EQUALVERIFY -> True if both operands are equal, Returns false + invalid transaction if not
+			- OP_CHECKSIG -> Verifies that the signature matches the input publickey
+			- OP_CHECKMULTISIG -> Verifies a given number of signatures against their publickeys
+	- #### Locking Script: Pay2PubKey
+	- #### Locking Script: Pay2PubKeyHash
 ## 3) Application of Bitcoin Scripts
 - Escrow Transactions
 	- Seller wants payment before shipping goods
