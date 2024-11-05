@@ -1,6 +1,6 @@
 | Chapter<br>Number | Chapter<br>Name                                    | Status             |
 | ----------------- | -------------------------------------------------- | ------------------ |
-| 5                 | Mechanics of Bitcoin + Bitcoin Transactions slides | :white_check_mark: | 
+| 5                 | Mechanics of Bitcoin + Bitcoin Transactions slides | :white_check_mark: |
 | 6                 | The bitcoin network                                | :white_check_mark: |
 | 7-Intro           | Introduction to Ethereum                           | :warning:          |
 | 7-A               | Interfacing with Ethereum                          | :white_check_mark: |
@@ -65,6 +65,11 @@
 			- OP_EQUALVERIFY -> True if both operands are equal, Returns false + invalid transaction if not
 			- OP_CHECKSIG -> Verifies that the signature matches the input publickey
 			- OP_CHECKMULTISIG -> Verifies a given number of signatures against their publickeys
+	- Transactions with scripts
+		- RECAP: Bitcoin addresses are just the public key hashed using `OP_HASH160`, with checksum added to the end + version number in the front and then the whole thing is converted into Base58
+		- Transaction overview: Alice sends bob a transaction, bob later spends that transaction
+			- Bob first generates a public/private key pair before Alice generates the transaction
+			-
 	- #### Locking Script: Pay2PubKey
 	- #### Locking Script: Pay2PubKeyHash
 ## 3) Application of Bitcoin Scripts
