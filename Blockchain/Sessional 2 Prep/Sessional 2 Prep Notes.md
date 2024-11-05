@@ -2,7 +2,7 @@
 | ----------------- | -------------------------------------------------- | ------------------ |
 | 5                 | Mechanics of Bitcoin + Bitcoin Transactions slides | :white_check_mark: |
 | 6                 | The bitcoin network                                | :white_check_mark: |
-| 7-Intro           | Introduction to Ethereum                           | :warning:          |
+| 7-Intro           | Introduction to Ethereum                           | :white_check_mark: | 
 | 7-A               | Interfacing with Ethereum                          | :white_check_mark: |
 | 7-B               | Ganache (Local TestNet)                            | :white_check_mark: |
 | 7-C               | Smart Contracts                                    | :white_check_mark: |
@@ -321,7 +321,17 @@
 - Contracts are executed by a transaction by setting one of its outputs to the transaction address
 	- The state of the contract is then saved on the blockchain as it is a transaction
 ## 3) Ethereum Virtual Machine
+- Multiple clients in various programming languages
+	- All synced via the web3 API that uses JSON-RPC
+	- Kind of follows the old client-server model
 ## 4) Turing Completeness & implications
+- Halting problem, no way to determine how much execution time a program will take
+- Possibility of a DOS attack on the blockchain by running a neverending contract
+- Fix?
+	- Implementation of Gas fee
+	- Every write to the state consumes a gas fee that the sender has to pay to the contract
+	- Gas is calculated based on the complexity of the contract, every instruction accounts for some level of gas fees
+	- Allows for execution to stop when an address is out of gas
 # Lecture 7-A: Interfacing with Ethereum
 - ### Two ways to do it
 	- **Developers** -> Web3JS
