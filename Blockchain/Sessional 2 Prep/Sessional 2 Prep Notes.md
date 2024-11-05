@@ -8,22 +8,23 @@
 | 7-C               | Smart Contracts                                    | :white_check_mark: |
 
 > [!WARNING]
-> Lecture 5 and the unnumbered lecture have a lot of similar content, merged the two
+> - Lecture 5 and the unnumbered lecture have a lot of similar content, merged the two
+> - Moved P2SH from Lecture 7-Intro to 5 with the other locking scripts
 
 # Lecture 5: Mechanics of Bitcoin
 ## 1) Transaction Input & Outputs
-#### Transaction Inputs & Outputs
+### Transaction Inputs & Outputs
 - **Inputs** represent "debits," referencing previous transaction IDs. They’re indexed, allowing precise identification of the value sent to an address. Each input is a reference to a previous Unspent Transaction Output (UTXO).
 - **Outputs** act as "credits," indicating the value added to a recipient’s account. Signing a transaction spends or assigns these outputs to a new owner's address.
-#### Splitting & Merging Value of Coins
+### Splitting & Merging Value of Coins
 - **Splitting**: To pay an amount (e.g., X BTC), if Alice only has X+N BTC, she can split by paying herself N BTC and use the remaining X BTC for the transaction.
     - This creates a new UTXO with the correct amount, traceable to the original UTXO.
 - **Merging**: If Bob receives 15 BTC from Sender1 and 5 BTC from Sender2, he can create a new transaction with two inputs, merging them into a 20 BTC UTXO.
-#### Multiple Inputs & Transaction Fees
+### Multiple Inputs & Transaction Fees
 - Transactions can include multiple inputs from different owners, requiring all signatories to sign.
 - **Fee Structure**: Inputs + transaction fees must equal Outputs. (Outputs are slightly less, with the difference being the transaction fee).
 - **Coinbase Transactions**: These are initial transactions that introduce new BTC into circulation as mining rewards and do not have any inputs.
-#### Validity Rules
+### Validity Rules
 - A transaction is invalid if:
     - It’s not signed by the input owner(s).
     - The sum of all inputs and outputs isn’t zero.
@@ -83,6 +84,25 @@
 		    - `OP_EQUALVERIFY` checks that this hash matches the specified public key hash.
 		    - `OP_CHECKSIG` verifies the signature against the public key.
 		- **Note**: In the script notation above, `s` (sender) and `r` (receiver) prefixes denote the parts of the script each party provides.
+	3. **Pay-to-Script-Hash (P2SH)**
+	    - **Purpose**: P2SH enables transactions with custom locking conditions. Instead of specifying a public key, the sender specifies a hash of a redeem script, which contains the spending conditions.
+	    - **ScriptPubKey**: `<rSIG> <redeemScriptHash> OP_EQUAL`
+	    - **Redeem Script**: The recipient provides a **redeem script** (a custom set of instructions) whose hash matches the one specified by the sender.
+	    - **Unlocking (scriptSig)**: To unlock a P2SH output, the recipient provides:
+	        - The **redeem script** (whose hash matches the `redeemScriptHash`).
+	        - The required inputs or signatures as per the redeem script.
+	    - **Verification**:
+	        - The transaction checks that the hash of the redeem script matches `redeemScriptHash` provided by the sender.
+	        - Then, the script interpreter runs the redeem script to ensure all conditions (e.g., signatures) are met.
+		- ###### Example of P2SH with a Multi-Signature Redeem Script
+			- For instance, a P2SH address could be set up with a redeem script that requires multiple signatures, such as **2-of-3** multisig:
+		- **ScriptPubKey** (locking script): `<redeemScriptHash> OP_EQUAL`
+		- **Redeem Script**: `OP_2 <pubKey1> <pubKey2> <pubKey3> OP_3 OP_CHECKMULTISIG`
+		    - This script specifies that any two out of three provided public keys must sign the transaction to unlock it.
+		- **scriptSig** (unlocking script): `<rSIG1> <rSIG2> <redeemScript>`
+			- In this setup:
+				- The redeem script (included in the transaction by the spender) matches the `redeemScriptHash` set by the sender.
+				- `OP_CHECKMULTISIG` then verifies that two valid signatures out of three are present, satisfying the redeem script.
 ## 3) Application of Bitcoin Scripts
 - Escrow Transactions
 	- Seller wants payment before shipping goods
