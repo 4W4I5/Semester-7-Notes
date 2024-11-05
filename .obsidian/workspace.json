@@ -13,30 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IA/Sessional 2 Prep/Sessional 2 Prep Notes.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Sessional 2 Prep Notes"
-            }
-          },
-          {
-            "id": "c960a1eac2295680",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IA/Sessional 2 Prep/Sessional 2 Prep Notes.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Sessional 2 Prep Notes"
+              "title": "README"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -205,10 +190,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "c960a1eac2295680",
+  "active": "52125d63edd51083",
   "lastOpenFiles": [
-    "README.md",
     "IA/Sessional 2 Prep/Sessional 2 Prep Notes.md",
+    "README.md",
     "Blockchain/Sessional 2 Prep/Sessional 2 Prep Notes.md",
     "PDC/Sessional 2 Prep/Sessional 2 Prep Notes.md",
     "PDC/Sessional 2 Prep",

@@ -7,7 +7,7 @@
 | Symbols            | Meaning                  |
 | ------------------ | ------------------------ |
 | :x:                | Will not be made         |
-| :warning:          | In progress/Not complete | 
+| :warning:          | In progress/Not complete |
 | :white_check_mark: | Completed                |
 
 # Secure Software Design (SSD)
@@ -36,8 +36,8 @@
 
 # Information Assurance
 
-| Exam                                                                   | Status    |
-| ---------------------------------------------------------------------- | --------- |
-| [Sessional 1](IA/Sessional%201%20Prep/Sessional%201%20Prep%20Notes.md) | :warning: |
-| [Sessional 2](IA/Sessional%202%20Prep/Sessional%202%20Prep%20Notes.md) | :warning: |
-| [Finals](IA/Finals%20Prep/Finals%20Prep%20Notes.md)                    |           |
+| Exam                                                                   | Status             |
+| ---------------------------------------------------------------------- | ------------------ |
+| [Sessional 1](IA/Sessional%201%20Prep/Sessional%201%20Prep%20Notes.md) | :warning:          |
+| [Sessional 2](IA/Sessional%202%20Prep/Sessional%202%20Prep%20Notes.md) | :white_check_mark: |
+| [Finals](IA/Finals%20Prep/Finals%20Prep%20Notes.md)                    |                    |

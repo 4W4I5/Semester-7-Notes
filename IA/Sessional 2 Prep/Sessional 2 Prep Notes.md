@@ -2,7 +2,7 @@
 | ----------------- | ------------------------------------- | ------------------ |
 | 4                 | Planning for Security                 | :white_check_mark: |
 | 6                 | Security Technology: Firewalls & VPNs | :white_check_mark: |
-| 7                 | Security Technology: IDPS             | :warning:          |
+| 7                 | Security Technology: IDPS             | :white_check_mark: | 
 | 8                 | Cryptography                          | :white_check_mark: |
 
 # Chapter 4: Planning for Security
@@ -541,7 +541,7 @@ Lists other standards that influence this policy document, including relevant fe
 	    - Identify problems related to the flow of traffic.
 	    - Types of events commonly detected include denial-of-service (DoS) attacks, scanning, worms, unexpected application services, and policy violations.
 	    - Offer intrusion prevention capabilities that are passive, inline, and both passive and inline.
-	**Host-based IDPS (HIDPS):**
+	- **Host-based IDPS (HIDPS):**
 		- Resides on a particular computer or server (host) and monitors activity only on that system.
 		- Benchmarks and monitors the status of key system files and detects when an intruder creates, modifies, or deletes files.
 		- Advantage over NIDPS: can access encrypted information traveling over the network and make decisions about potential or actual attacks.
@@ -603,7 +603,6 @@ Lists other standards that influence this policy document, including relevant fe
 		- Is the product designed to evolve as the organization grows?
 		- What are the support provisions for the product?
 - ### Strengths & Limitations
-- NOTE:: Limitations is not complete
 	- IDPSs perform the following functions well:
 		- Monitoring and analysis of system events and user behaviors.
 		- Testing security states of system configurations.
@@ -622,17 +621,76 @@ Lists other standards that influence this policy document, including relevant fe
 		- Not all IDPSs are designed to detect every type of intrusion.
 		- Effectiveness depends on the level of experience and knowledge of the individuals managing the systems.
 - ### Deployment & Implementation
+	- **Control Strategies**:
+		- **Centralized**: Central management of all IDPS functions.
+		- **Fully Distributed**: Control functions applied locally at each IDPS component.
+		- **Partially Distributed**: Combines centralized and local response; local agents handle immediate threats, reporting to a central hub for broad threat analysis.
+	- **Deployment Considerations**:
+	    - Careful component placement to avoid performance impact.
+	    - NIDPS (Network-based) and HIDPS (Host-based) IDPS can be deployed together to cover both individual systems and networks.
+	- **Deploying Network-Based IDPSs (NIDPS)**:
+		- Recommended locations:
+			- **Location 1**: Behind external firewalls in the DMZ.
+			- **Location 2**: Outside external firewalls.
+		    - **Location 3**: On major network backbones.
+		    - **Location 4**: On critical subnets.
+	- **Deploying Host-Based IDPSs (HIDPS)**:
+	- Implement on critical systems first, expanding to cover additional systems based on desired security coverage.
 - ### Measuring the Effectiveness of IDPS
-	- ### Honeypots, Honeynets & Padded Cell Systems
-	- ### Trap & Trace Systems
+	- **Evaluation Metrics**:
+		- Key metrics include thresholds, blacklists/whitelists, alert configurations, and code review.
+		- Vendors often include testing mechanisms to validate IDPS performance.
+	- **Testing IDPSs**:
+		- Administrators can:
+			- Replay real virus or worm packets.
+			- Simulate incomplete TCP/IP sessions.
+			- Conduct tests on hardened systems to replicate realistic threats.
+- ### Honeypots, Honeynets & Padded Cell Systems
+	- **Honeypots**: Decoy systems designed to divert attackers from critical systems.
+	- **Honeynets**: Networks of honeypots connected to gather attacker data.
+	- **Padded Cell Systems**: Protected honeypots that redirect attackers to a controlled environment when detected.
+	- **Advantages**:
+		- Divert attackers from valuable resources.
+		- Provide response time to administrators.
+		- Capture detailed data on attacker actions.
+		- Effective for detecting insider threats.
+	- **Disadvantages**:
+		- Legal concerns and unclear implications.
+		- High maintenance and expertise required.
+		- Potential to provoke more aggressive attacks.
+- ### Trap & Trace Systems
+	- **Trap-and-Trace Techniques**: Detect and trace intrusions using a combination of honeypots and alarms.
+	- **Legal Considerations**:
+		- **Enticement**: Legally attracting attackers (e.g., with sensitive-looking data).
+		- **Entrapment**: Illegally luring someone into a crime.
 - ### Active Intrusion Prevention
+	- **Countermeasures**:
+		- Tools like **LaBrea** simulate live systems by holding attacker connections to deter or analyze attacker behavior.
 - ### Scanning & Analysis Tools
+	- **Footprinting**: Collecting publicly available information on a target.
+	- **Fingerprinting**: Surveying target networks to identify services, operating systems, and vulnerabilities.
 - ### Port Scanners
+	- Tools to identify active devices and services on a network, aiding attackers and defenders in discovering networked assets and potential weaknesses.
 - ### Firewall Analysis Tools
+	- **Purpose**: Automated tools to analyze firewall configurations and assist in identifying security gaps.
+	- **Usage Considerations**:
+		- Defensive intent is key; understanding attack methods can help close security gaps effectively.
 - ### OS Detection Tools
-- ###  Vuln Scanners
+	- **Purpose**: Identify a target system's OS to determine specific vulnerabilities.
+	- **Common Use**: Attackers leverage OS detection to plan targeted attacks, while defenders use it to address system-specific weaknesses.
+- ### Vulnerability Scanners
+	- **Active Scanners**: Generate network traffic to identify vulnerabilities directly.
+	- **Passive Scanners**: Monitor network traffic to identify vulnerable server and client software without active probing.
+	- **Benefits**: Detect client-side vulnerabilities often missed by active scanners.
 - ### Packet Sniffers
+	- **Function**: Capture and analyze network traffic.
+	- **Legal Usage**: Must be used on authorized networks, with consent from network owners and data creators.
 - ### Wireless Security Tools
+	- **Purpose**: Essential for assessing risks on wireless networks, which are often overlooked in security planning.
+	- **Toolkit Requirements**:
+		- Wireless traffic sniffing.
+		- Scanning wireless hosts.
+		- Assessing the confidentiality level of wireless networks.
 # Chapter 8: Cryptography
 ## Introduction
 - **Cryptology** -> Science of Encryption, includes Cryptography & Cryptanalysis
