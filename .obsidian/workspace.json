@@ -8,17 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "8685052f2005ee76",
+            "id": "87813b16c7b35eb2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Blockchain/Finals Prep/Finals Prep Notes.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Finals Prep Notes"
             }
           }
         ]
@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "bbf2447a7eb59639",
@@ -190,20 +191,21 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "8685052f2005ee76",
+  "active": "87813b16c7b35eb2",
   "lastOpenFiles": [
-    "PDC/Finals Prep/Finals Prep Notes.md",
+    "Blockchain/Sessional 2 Prep/Sessional 2 Prep Notes.md",
+    "Blockchain/Sessional 1 Prep/Sessional 1 Prep Notes.md",
+    "Blockchain/Finals Prep/Finals Prep Notes.md",
     "README.md",
+    "PDC/Finals Prep/Finals Prep Notes.md",
     "PDC/Finals Prep",
     "SSD/Finals Prep/Finals Prep Notes.md",
     "SSD/Finals Prep",
-    "Blockchain/Finals Prep/Finals Prep Notes.md",
     "Blockchain/Finals Prep",
     "IA/Finals Prep/Finals Prep Notes.md",
     "IA/Finals Prep",
     "IA/Sessional 2 Prep/Sessional 2 Prep Notes.md",
     "IA/Policy Task.md",
-    "Blockchain/Sessional 2 Prep/Sessional 2 Prep Notes.md",
     "PDC/Sessional 2 Prep/Sessional 2 Prep Notes.md",
     "PDC/Sessional 2 Prep",
     "PDC/Note Track.md",
@@ -216,7 +218,6 @@
     "IA/Sessional 2 Prep",
     "IA/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "Untitled.md",
-    "Blockchain/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "Blockchain/Sessional 2 Prep",
     "PDC/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "Blockchain/Class Notes/5 - Blockchain 3rd September, 2024.md",

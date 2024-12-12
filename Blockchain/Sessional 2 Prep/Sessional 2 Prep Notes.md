@@ -2,7 +2,7 @@
 | ----------------- | -------------------------------------------------- | ------------------ |
 | 5                 | Mechanics of Bitcoin + Bitcoin Transactions slides | :white_check_mark: |
 | 6                 | The bitcoin network                                | :white_check_mark: |
-| 7-Intro           | Introduction to Ethereum                           | :white_check_mark: | 
+| 7-Intro           | Introduction to Ethereum                           | :white_check_mark: |
 | 7-A               | Interfacing with Ethereum                          | :white_check_mark: |
 | 7-B               | Ganache (Local TestNet)                            | :white_check_mark: |
 | 7-C               | Smart Contracts                                    | :white_check_mark: |
