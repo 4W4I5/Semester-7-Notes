@@ -112,8 +112,8 @@
       "There should be at most one consecutive blank line.": false
     },
     "Convert Spaces to Tabs": {
-      "Converts leading spaces to tabs.": false,
-      "Tabsize": 4
+      "Converts leading spaces to tabs.": true,
+      "Tabsize": "4"
     },
     "Empty Line Around Code Fences": {
       "Ensures that there is an empty line around code fences unless they start or end a document.": true
@@ -142,7 +142,7 @@
       "Ensures that fullwidth characters are not followed by whitespace (either single spaces or a tab). Note that this may causes issues with markdown format in some cases.": false
     },
     "Space after list markers": {
-      "There should be a single space after list markers and checkboxes.": false
+      "There should be a single space after list markers and checkboxes.": true
     },
     "Space between Chinese and English or numbers": {
       "Ensures that Chinese and English or numbers are separated by a single space. Follow this [guidelines](https://github.com/sparanoid/chinese-copywriting-guidelines)": false

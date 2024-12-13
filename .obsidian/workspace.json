@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "87813b16c7b35eb2",
+            "id": "d9b4be0a006aaa01",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blockchain/Finals Prep/Finals Prep Notes.md",
+                "file": "IA/Finals Prep/Finals Prep Notes.md",
                 "mode": "source",
                 "source": true
               },
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "bbf2447a7eb59639",
@@ -152,8 +151,8 @@
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin no longer active"
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
             }
           },
           {
@@ -191,20 +190,21 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "87813b16c7b35eb2",
+  "active": "d9b4be0a006aaa01",
   "lastOpenFiles": [
+    "IA/Sessional 2 Prep/Sessional 2 Prep Notes.md",
+    "IA/Finals Prep/Finals Prep Notes.md",
+    "IA/Sessional 1 Prep/Sessional 1 Prep Notes.md",
+    "README.md",
+    "Blockchain/Finals Prep/Finals Prep Notes.md",
     "Blockchain/Sessional 2 Prep/Sessional 2 Prep Notes.md",
     "Blockchain/Sessional 1 Prep/Sessional 1 Prep Notes.md",
-    "Blockchain/Finals Prep/Finals Prep Notes.md",
-    "README.md",
     "PDC/Finals Prep/Finals Prep Notes.md",
     "PDC/Finals Prep",
     "SSD/Finals Prep/Finals Prep Notes.md",
     "SSD/Finals Prep",
     "Blockchain/Finals Prep",
-    "IA/Finals Prep/Finals Prep Notes.md",
     "IA/Finals Prep",
-    "IA/Sessional 2 Prep/Sessional 2 Prep Notes.md",
     "IA/Policy Task.md",
     "PDC/Sessional 2 Prep/Sessional 2 Prep Notes.md",
     "PDC/Sessional 2 Prep",
@@ -216,7 +216,6 @@
     "SSD/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "SSD/Sessional 2 Prep",
     "IA/Sessional 2 Prep",
-    "IA/Sessional 1 Prep/Sessional 1 Prep Notes.md",
     "Untitled.md",
     "Blockchain/Sessional 2 Prep",
     "PDC/Sessional 1 Prep/Sessional 1 Prep Notes.md",

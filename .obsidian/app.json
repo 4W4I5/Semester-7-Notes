@@ -7,5 +7,7 @@
   "showLineNumber": true,
   "readableLineLength": false,
   "foldHeading": false,
-  "defaultViewMode": "source"
+  "defaultViewMode": "source",
+  "smartIndentList": false,
+  "useTab": true
 }

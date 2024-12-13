@@ -2,7 +2,7 @@
 | ----------------- | ------------------------------------- | ------------------ |
 | 4                 | Planning for Security                 | :white_check_mark: |
 | 6                 | Security Technology: Firewalls & VPNs | :white_check_mark: |
-| 7                 | Security Technology: IDPS             | :white_check_mark: | 
+| 7                 | Security Technology: IDPS             | :white_check_mark: |
 | 8                 | Cryptography                          | :white_check_mark: |
 
 # Chapter 4: Planning for Security
