@@ -237,66 +237,49 @@ In decentralized systems, a **public key** acts as an identity. If a message is 
 # Book Questions
 
 ## 1. Authenticated Data Structures (SecureBox)
-
-**Question**: You are designing SecureBox, an authenticated online file storage system. For simplicity, there is a single folder. Users must be able to add, edit, delete, retrieve files, and list the folder contents. When a user retrieves a file, SecureBox must provide proof that the file hasn’t been tampered with since its last update. If a file doesn’t exist, the server must report that — with proof. The goal is to minimize proof size, verification time, and digest size. Can you devise a protocol where proof size, verification time, and digest size are all sublinear?
-
-**Answer**:
-
-To achieve sublinear efficiency, we can use **Merkle Trees**.
-
-- **Merkle Tree Structure**: The digest is the hash of the root of a Merkle tree, where each leaf node corresponds to a file, and its value is the hash of the file content. Intermediate nodes are hashes of the concatenation of their child nodes.
-- **Operations** (Add/Delete/Edit):
-	- When a user adds, deletes, or edits a file, the server only needs to update the hash values of the nodes along the path from the affected leaf node to the root. The user’s digest is updated accordingly.
-- **Proof Size and Verification**:
-	- When retrieving a file, SecureBox sends the file’s hash and the hash values along the path to the root. The user verifies the file's integrity by recomputing the path from the file to the root.
-	- The proof size and verification time are both `O(log n)`, where `n` is the number of files.
-- **Digest Size**:
-	- The digest size is constant `O(1)`, as it only stores the root hash.
-This protocol ensures sublinear proof size, verification time, and digest size by taking advantage of the logarithmic depth of the Merkle tree.
+- **Question**: You are designing SecureBox, an authenticated online file storage system. For simplicity, there is a single folder. Users must be able to add, edit, delete, retrieve files, and list the folder contents. When a user retrieves a file, SecureBox must provide proof that the file hasn’t been tampered with since its last update. If a file doesn’t exist, the server must report that — with proof. The goal is to minimize proof size, verification time, and digest size. Can you devise a protocol where proof size, verification time, and digest size are all sublinear?
+	- **Answer**:
+		- To achieve sublinear efficiency, we can use **Merkle Trees**.
+		- **Merkle Tree Structure**: The digest is the hash of the root of a Merkle tree, where each leaf node corresponds to a file, and its value is the hash of the file content. Intermediate nodes are hashes of the concatenation of their child nodes.
+		- **Operations** (Add/Delete/Edit):
+			- When a user adds, deletes, or edits a file, the server only needs to update the hash values of the nodes along the path from the affected leaf node to the root. The user’s digest is updated accordingly.
+		- **Proof Size and Verification**:
+			- When retrieving a file, SecureBox sends the file’s hash and the hash values along the path to the root. The user verifies the file's integrity by recomputing the path from the file to the root.
+			- The proof size and verification time are both `O(log n)`, where `n` is the number of files.
+		- **Digest Size**:
+			- The digest size is constant `O(1)`, as it only stores the root hash.
+	- This protocol ensures sublinear proof size, verification time, and digest size by taking advantage of the logarithmic depth of the Merkle tree.
 
 ## 2. Birthday Attack
-
-**Question 1**: Show that the time-space trade-off is parameterizable: we can achieve any space complexity between `O(1)` and `O(2^(n/2))` with a corresponding decrease in time complexity.
-
-**Answer**:
-
-The **time-space trade-off** is parameterized by choosing a variable number `t` between `1` and `2^(n/2)` for the space complexity. By storing `t` hash outputs:
-
-- The time complexity to find a collision is reduced to `O(2^n / t^2)`.
-- The space complexity is `O(t)`.
-Thus, we can adjust `t` to achieve any space complexity between `O(1)` (with time `O(2^n)`) and `O(2^(n/2))` (with time `O(2^(n/2))`).
-
-**Question 2**: Is there an attack for which the product of time and space complexity is `o(2^n)`?
-
-**Answer**:
-
-No, there is no known attack where the product of time and space complexity is less than `2^n`. The **birthday paradox** provides the best known trade-off, where the product remains `O(2^n)`. Achieving an attack with a product complexity of `o(2^n)` is currently infeasible in cryptographic contexts.
+- **Question 1**: Show that the time-space trade-off is parameterizable: we can achieve any space complexity between `O(1)` and `O(2^(n/2))` with a corresponding decrease in time complexity.
+	- **Answer**:
+		- The **time-space trade-off** is parameterized by choosing a variable number `t` between `1` and `2^(n/2)` for the space complexity. By storing `t` hash outputs:
+			- The time complexity to find a collision is reduced to `O(2^n / t^2)`.
+			- The space complexity is `O(t)`.
+		- Thus, we can adjust `t` to achieve any space complexity between `O(1)` (with time `O(2^n)`) and `O(2^(n/2))` (with time `O(2^(n/2))`).
+- **Question 2**: Is there an attack for which the product of time and space complexity is `o(2^n)`?
+	-**Answer**:
+		- No, there is no known attack where the product of time and space complexity is less than `2^n`. The **birthday paradox** provides the best known trade-off, where the product remains `O(2^n)`. Achieving an attack with a product complexity of `o(2^n)` is currently infeasible in cryptographic contexts.
 
 ## 3. Hash Function Properties
-
-**Question**: Let `H` be a hash function that is both hiding and puzzle-friendly. Consider `G(z) = H(z) || z_last`, where `z_last` represents the last bit of `z`. Show that `G` is puzzle-friendly but not hiding.
-
-**Answer**:
-
-- **Puzzle-Friendliness**:
-  `G(z)` retains the puzzle-friendliness of `H(z)` because solving for `G(z)` still requires solving the original hash function `H(z)`. Thus, `G(z)` remains computationally hard to reverse or solve without computing `H(z)`.
-- **Non-Hiding**:
-  `G(z)` is **not hiding** because the last bit of `z` (`z_last`) is appended to the hash output. This leaks part of the input (`z`), compromising the hiding property since an attacker gains partial knowledge of `z` simply by observing `G(z)`.
+- **Question**: Let `H` be a hash function that is both hiding and puzzle-friendly. Consider `G(z) = H(z) || z_last`, where `z_last` represents the last bit of `z`. Show that `G` is puzzle-friendly but not hiding.
+	- **Answer**:
+		- **Puzzle-Friendliness**:
+		  `G(z)` retains the puzzle-friendliness of `H(z)` because solving for `G(z)` still requires solving the original hash function `H(z)`. Thus, `G(z)` remains computationally hard to reverse or solve without computing `H(z)`.
+		- **Non-Hiding**:
+		  `G(z)` is **not hiding** because the last bit of `z` (`z_last`) is appended to the hash output. This leaks part of the input (`z`), compromising the hiding property since an attacker gains partial knowledge of `z` simply by observing `G(z)`.
 
 ## 4. Randomness in ScroogeCoin
+- **Question**: In ScroogeCoin, if Mallory generates `(sk, pk)` pairs until her secret key matches someone else’s, what will she be able to do? How long will it take on average? What happens if Alice’s random number generator has a bug and her key generation produces only 1,000 distinct pairs?
+	- **Answer**:
+		- **Key Collision**:
+		  If Mallory generates `(sk, pk)` pairs until her secret key matches someone else’s, she could impersonate that person by signing transactions on their behalf. Given ScroogeCoin uses 256-bit secret keys, the probability of finding a collision is approximately `2^-128`, which is practically impossible.
+		- **Average Time**:
+		  On average, it would take `2^128` attempts to find a matching secret key.
+		- **Alice’s Bug**:
+		  If Alice's random number generator only produces 1,000 distinct pairs, Mallory could simply brute-force those possibilities. If the network contains many public keys, this drastically reduces security. For example, if there are 10,000 unique public keys, Mallory could succeed in approximately `1000/10000 = 0.1` trials, making it extremely vulnerable.
 
-**Question**: In ScroogeCoin, if Mallory generates `(sk, pk)` pairs until her secret key matches someone else’s, what will she be able to do? How long will it take on average? What happens if Alice’s random number generator has a bug and her key generation produces only 1,000 distinct pairs?
-
-**Answer**:
-
-- **Key Collision**:
-  If Mallory generates `(sk, pk)` pairs until her secret key matches someone else’s, she could impersonate that person by signing transactions on their behalf. Given ScroogeCoin uses 256-bit secret keys, the probability of finding a collision is approximately `2^-128`, which is practically impossible.
-- **Average Time**:
-  On average, it would take `2^128` attempts to find a matching secret key.
-- **Alice’s Bug**:
-  If Alice's random number generator only produces 1,000 distinct pairs, Mallory could simply brute-force those possibilities. If the network contains many public keys, this drastically reduces security. For example, if there are 10,000 unique public keys, Mallory could succeed in approximately `1000/10000 = 0.1` trials, making it extremely vulnerable.
-
-
+---
 # Chapter 4: How bitcoin achieves decentralization
 ## 4.1: Centralization vs. Decentralization
 
@@ -429,11 +412,11 @@ No, there is no known attack where the product of time and space complexity is l
 	- The probability is around 63%, assuming block discovery follows an exponential distribution with a 10-minute average.
 - **7b: How should Bob set x so that with 99% confidence, 6 blocks will be found within x minutes?**
 	- Bob should set x to around 60 minutes for 99% confidence that 6 blocks will be found.
+
 ---
-
 >[!NOTE]
-
 > Sessional 2 + Finals Content
+---
 
 # Lecture 5: Mechanics of Bitcoin
 ## 1) Transaction Input & Outputs
@@ -608,11 +591,14 @@ No, there is no known attack where the product of time and space complexity is l
 	- Nonce (4 bytes)
 - Coinbase Transaction Contents
 	- `Nothing to note here`
+
+---
+
 # Lecture 6: The Bitcoin Network
 ## 1) Node Types & Roles
 - #### **Node Definition**
 	- Any device in the network capable of sending, receiving, or forwarding Bitcoin data.
-	- Examples: Computers, smartphones, servers.
+		- Examples: Computers, smartphones, servers.
 	- All nodes participate in **routing**; additional functionalities depend on node type.
 - #### **Overview of Nodes**
 	- **Functionality of Nodes**
@@ -641,11 +627,11 @@ No, there is no known attack where the product of time and space complexity is l
 | **Mining Nodes**                    | Focused on mining without storing the blockchain. Connect through Pool Protocol or Stratum Server.                                                 | **Miner**, connection via **Pool Protocol Server** or **Stratum Server** |
 
 ## 2) Bitcoin Relay Networks
-- **Bitcoin Mining and Latency**
+- ### **Bitcoin Mining and Latency**
 	- Miners compete to solve the **Proof-of-Work (PoW)** problem to extend the blockchain.
 	- Reducing the time between block propagation and starting a new round is critical for profitability.
 	- **Network latency** directly impacts miners' profit margins.
-- **Bitcoin Relay Network**
+- ### **Bitcoin Relay Network**
 	- Designed to minimize block transmission latency between miners.
 	- Created in **2015** by Matt Corallo to enhance block synchronization with low latency.
 	- Hosted on **Amazon Web Services (AWS)**, connecting miners and mining pools globally.
@@ -653,7 +639,7 @@ No, there is no known attack where the product of time and space complexity is l
 		- **TCP** is used for the Bitcoin Relay Network
 		- **UDP** is used for **FIBRE**
 	- Are **NOT** replacements to the P2P Network but instead overlay on top
-- **Transition to FIBRE (Fast Internet Bitcoin Relay Engine)**
+- ### **Transition to FIBRE (Fast Internet Bitcoin Relay Engine)**
 	- Introduced in **2016**, also by Matt Corallo, to replace the original relay network.
 	- **UDP-based**, addressing latency issues caused by TCP.
 	- Implements **Compact Block Optimization** to reduce data transmission and further lower latency.
