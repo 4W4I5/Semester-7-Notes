@@ -629,34 +629,32 @@ No, there is no known attack where the product of time and space complexity is l
 		- **Valid Transactions**
 		- **Chain Consistency** (avoiding forks)
 - #### Node Types
-	- **SPV (Lightweight) Nodes**
-		- Store only **block headers** rather than full transaction data.
-		- Depend on full nodes for **transaction verification**.
-		- Commonly used in mobile wallets due to minimal storage needs.
-	- **Fully-Validating Nodes**
-		- Maintain the **entire blockchain** (currently over 40 GB).
-		- Contribute to network security by verifying and relaying every transaction.
-		- Support the network’s decentralization and integrity.
-	- **Lightweight (SPV) Wallet**:
-		- Includes **Wallet** and **Network Node** on the Bitcoin P2P protocol.
-		- Operates without a blockchain, relying on full nodes for data verification.
-	- **Pool Protocol Servers**:
-		- **Gateway routers** linking the Bitcoin P2P network to nodes using other protocols (e.g., Stratum, pool mining).
-	- **Mining Nodes**:
-		- Contain the **mining function** only, with no blockchain storage.
-		- Connect via **Stratum** or other **pool-mining protocols**.
-	- **Lightweight (SPV) Stratum Wallet**:
-		- Includes **Wallet** and **Network Node** on the Stratum protocol.
-		- Relies on mining pools or gateways for blockchain data.
-	- **Reference Client (Bitcoin Core)**:
-		- Full node containing **Wallet**, **Miner**, **Blockchain Database**, and **Network Routing**.
-		- Acts as the standard Bitcoin implementation.
-	- **Full Blockchain Node**:
-		- Stores the **entire blockchain** and functions as a **Network Routing Node**.
-		- Does not necessarily perform mining or wallet operations.
-	- **Solo Miner**:
-		- Contains **mining functionality** with a full blockchain copy and **Network Routing**.
-		- Operates independently on the Bitcoin P2P network, directly contributing to the blockchain.
+	- **Reference Client (Bitcoin Core)**
+		- Serves as the standard Bitcoin implementation.
+		- Contains all **4 Key Nodes**:
+			- **Wallet**, **Miner**, **Full Blockchain**, and **Network Routing**.
+	- **Full Blockchain Node**
+		- Does not perform mining or wallet operations but ensures data integrity and routing.
+		- Includes:
+			- **Full Blockchain** and **Network Routing**.
+	- **Solo Miner**
+		- Operates independently, contributing directly to the blockchain.
+		- Combines:
+			- **Full Blockchain**, **Miner**, and **Network Routing**.
+	- **Pool Protocol Servers**
+		- Function as:
+			- **Gateway Routers** connecting to the Bitcoin P2P network via pool mining or Stratum protocols.
+	- **Lightweight SPV Wallet**
+		- Operates without storing the blockchain, relying on full nodes for data verification.
+		- Consists of:
+			- **Wallet** and **Network Routing Node**.
+		- Can be a **SPV Stratum Wallet**
+			- By Replacing:
+				- **Network Routing Node** with a **Pool Protocol: Stratum Server**
+	- **Mining Nodes**
+		- Do not store the blockchain.
+		- Combine:
+			- **Miner** and a connection through either a **Pool Protocol Server** or **Stratum Server**.
 
 ## 3) Bitcoin Relay Networks
 - **Purpose**: Enhance **block propagation speed**, reducing latency and aiding mining efficiency.
