@@ -657,10 +657,22 @@ No, there is no known attack where the product of time and space complexity is l
 			- **Miner** and a connection through either a **Pool Protocol Server** or **Stratum Server**.
 
 ## 3) Bitcoin Relay Networks
-- **Purpose**: Enhance **block propagation speed**, reducing latency and aiding mining efficiency.
-- **Example**:
-	- **FIBRE (Fast Internet Bitcoin Relay Engine)** creates a high-speed overlay to expedite block transmission.
-- **Value**: Reduces delays, especially beneficial for miners spread across different locations.
+- **Bitcoin Mining and Latency**
+    - Miners compete to solve the **Proof-of-Work (PoW)** problem to extend the blockchain.
+    - Reducing the time between block propagation and starting a new round is critical for profitability.
+    - **Network latency** directly impacts miners' profit margins.
+- **Bitcoin Relay Network**
+    - Designed to minimize block transmission latency between miners.
+    - Created in **2015** by Matt Corallo to enhance block synchronization with low latency.
+    - Hosted on **Amazon Web Services (AWS)**, connecting miners and mining pools globally.
+    - Relied on **TCP**, which introduced a **performance bottleneck** due to packet resend semantics for handling packet loss.
+	    - **TCP** is used for the Bitcoin Relay Network
+	    - **UDP** is used for **FIBRE**
+    - Are **NOT** replacements to the P2P Network but instead overlay on top
+- **Transition to FIBRE (Fast Internet Bitcoin Relay Engine)**
+    - Introduced in **2016**, also by Matt Corallo, to replace the original relay network.
+    - **UDP-based**, addressing latency issues caused by TCP.
+    - Implements **Compact Block Optimization** to reduce data transmission and further lower latency.
 ## 4) Bitcoin P2P Network
 - **Decentralized Structure**: A mesh network without central control, nodes interconnect in an ad-hoc manner.
 - **Communication**: Nodes connect via TCP (usually on port 8333) and share transaction/block data.
