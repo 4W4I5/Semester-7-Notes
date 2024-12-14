@@ -616,30 +616,19 @@ No, there is no known attack where the product of time and space complexity is l
 	- All nodes participate in **routing**; additional functionalities depend on node type.
 - #### **Overview of Nodes**
 	- **Functionality of Nodes**
-		- Nodes validate and propagate:
+		- **Wallet** management
+		- **Mining** (optional for some full nodes)
+		- **Blockchain Storage**
+		- **Network Routing**
+		- All Nodes validate and propagate:
 			- **Transactions**
 			- **Blocks**
 		- Nodes constantly **discover and connect to peers** to ensure resilience.
-	- All nodes in Bitcoin’s P2P network are equal but can have specialized roles.
-		- Key roles:
-			- **Routing** data
-			- **Blockchain Maintenance**
-			- **Mining**
-			- **Wallet Services**
-		- Additional servers:
-			- **Mining pool protocols**
-			- **Lightweight client-access protocols**
+	- **Criteria for adding new blocks:**
+		- **Meets Hash Target**
+		- **Valid Transactions**
+		- **Chain Consistency** (avoiding forks)
 - #### Node Types
-	- **Full Nodes**
-		- Perform four main functions:
-			- **Wallet** management
-			- **Mining** (optional for some full nodes)
-			- **Blockchain Storage**
-			- **Network Routing**
-		- Criteria for adding new blocks:
-			- **Meets Hash Target**
-			- **Valid Transactions**
-			- **Chain Consistency** (avoiding forks)
 	- **SPV (Lightweight) Nodes**
 		- Store only **block headers** rather than full transaction data.
 		- Depend on full nodes for **transaction verification**.
@@ -668,13 +657,6 @@ No, there is no known attack where the product of time and space complexity is l
 	- **Solo Miner**:
 		- Contains **mining functionality** with a full blockchain copy and **Network Routing**.
 		- Operates independently on the Bitcoin P2P network, directly contributing to the blockchain.
-## 2) Extended Bitcoin Network
-- **Definition**: An expanded version of the Bitcoin P2P network, including specialized protocols and nodes.
-- **Purpose**: Allows diverse devices and services to connect without needing full blockchain storage.
-- **Components**:
-	- **Stratum Protocol**: Used primarily by mining operations. Main protocol for communication b/w nodes
-	- **Pool-Mining Protocols**: Enable pooled mining and reward distribution.
-- **Node Types in the Extended Network**:
 
 ## 3) Bitcoin Relay Networks
 - **Purpose**: Enhance **block propagation speed**, reducing latency and aiding mining efficiency.
@@ -683,11 +665,6 @@ No, there is no known attack where the product of time and space complexity is l
 - **Value**: Reduces delays, especially beneficial for miners spread across different locations.
 ## 4) Bitcoin P2P Network
 - **Decentralized Structure**: A mesh network without central control, nodes interconnect in an ad-hoc manner.
-- **Node Types**:
-	- **Full Nodes** with complete blockchain data
-	- **SPV Nodes** for lightweight data access
-	- **Mining Nodes**
-	- **Wallet Nodes**
 - **Communication**: Nodes connect via TCP (usually on port 8333) and share transaction/block data.
 - **Connection Inactivity**: Nodes drop peers after 3 hours of inactivity to maintain network freshness.
 - ### Joining the P2P Network
