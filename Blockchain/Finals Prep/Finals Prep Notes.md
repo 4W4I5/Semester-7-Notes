@@ -634,7 +634,8 @@ No, there is no known attack where the product of time and space complexity is l
 		- Contains all **4 Key Nodes**:
 			- **Wallet**, **Miner**, **Full Blockchain**, and **Network Routing**.
 	- **Full Blockchain Node**
-		- Does not perform mining or wallet operations but ensures data integrity and routing.
+		- Does not perform mining or wallet operations but ensures;
+			- Every transaction and block is stored and forwarded
 		- Includes:
 			- **Full Blockchain** and **Network Routing**.
 	- **Solo Miner**
@@ -646,6 +647,7 @@ No, there is no known attack where the product of time and space complexity is l
 			- **Gateway Routers** connecting to the Bitcoin P2P network via pool mining or Stratum protocols.
 	- **Lightweight SPV Wallet**
 		- Operates without storing the blockchain, relying on full nodes for data verification.
+			- Request Specific transactions as needed to verify payments
 		- Consists of:
 			- **Wallet** and **Network Routing Node**.
 		- Can be a **SPV Stratum Wallet**
