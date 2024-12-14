@@ -718,6 +718,10 @@ No, there is no known attack where the product of time and space complexity is l
 - **Peer Discovery**:
 	- Nodes find peers using **DNS seeds** or by reconnecting with previous peers.
 	- Nodes share **addr** messages to keep peer lists updated.
+	- **Procedure:**
+		1. Query DNS via number of DNS Seeds i.e. DNS Servers that provide the list containing the IP of every bitcoin node
+			- DNS Seeds are special in the sense that they return a list of randomly selected nodes that are using the port 8333
+		2. One known node aka the `SEED NODE` is 
 - **Resilience**:
 	- Stale or inactive connections are dynamically replaced.
 	- Ensures robust, decentralized connectivity.
