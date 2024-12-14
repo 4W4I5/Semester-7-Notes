@@ -649,7 +649,7 @@ No, there is no known attack where the product of time and space complexity is l
 - **Definition**: An expanded version of the Bitcoin P2P network, including specialized protocols and nodes.
 - **Purpose**: Allows diverse devices and services to connect without needing full blockchain storage.
 - **Components**:
-	- **Stratum Protocol**: Used primarily by mining operations.
+	- **Stratum Protocol**: Used primarily by mining operations. Main protocol for communication b/w nodes
 	- **Pool-Mining Protocols**: Enable pooled mining and reward distribution.
 - **Node Types in the Extended Network**:
 	- **Lightweight (SPV) Wallet**:
@@ -721,7 +721,7 @@ No, there is no known attack where the product of time and space complexity is l
 	- **Procedure:**
 		1. Query DNS via number of DNS Seeds i.e. DNS Servers that provide the list containing the IP of every bitcoin node
 			- DNS Seeds are special in the sense that they return a list of randomly selected nodes that are using the port 8333
-		2. One known node aka the `SEED NODE` is 
+		2. One known node aka the `SEED NODE` is
 - **Resilience**:
 	- Stale or inactive connections are dynamically replaced.
 	- Ensures robust, decentralized connectivity.
