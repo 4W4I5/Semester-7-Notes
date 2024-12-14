@@ -139,7 +139,7 @@
 ---
 
 # Chapter 3: Intro Crypto & Cryptocurrencies
-## Cryptographic Hash Functions
+## 3.1: Cryptographic Hash Functions
 
 A **hash function** processes an input of arbitrary size and produces a fixed-size output (e.g., 256 bits). It must be computationally efficient, meaning the time to compute the hash should scale linearly with the input size. A general-purpose hash function can be used for data structures like hash tables, but **cryptographic hash functions** require additional properties:
 
@@ -157,7 +157,7 @@ A **hash function** processes an input of arbitrary size and produces a fixed-si
 - **Commitment Schemes**:
 	- A **commitment** is like placing a secret value inside a sealed envelope, where you can’t change the content after committing, but the content remains hidden until revealed.
 	- A commitment scheme is constructed using a cryptographic hash, where the commitment is computed as `H(nonce || msg)`, and the commitment is verified by providing both `nonce` and `msg` to ensure it matches the original.
-## Hash Pointers and Data Structures
+## 3.2: Hash Pointers and Data Structures
 
 A **hash pointer** is a data structure that combines a pointer to data with the cryptographic hash of that data. The hash serves two purposes:
 
@@ -185,7 +185,7 @@ The hash pointer allows us to build more complex data structures like **blockcha
 - The input data is broken into blocks, each block is hashed using the hash function, and the result of each hash is passed into the next block. For the first block, an **initialization vector (IV)** is used, which is a predetermined constant.
 - The Merkle-Damgård construction ensures that if the underlying fixed-length hash function is collision-resistant, the overall function will be collision-resistant.
 
-## Digital Signatures
+## 3.3: Digital Signatures
 
 A **digital signature** is the digital equivalent of a handwritten signature. It guarantees that:
 
@@ -205,7 +205,7 @@ A **digital signature** is the digital equivalent of a handwritten signature. It
 2. **Existential Unforgeability**:
 	- An attacker cannot forge a valid signature for a new message, even after seeing multiple valid signatures for other messages.
 
-### **ECDSA**: Bitcoin’s signature scheme is based on **Elliptic Curve Digital Signature Algorithm (ECDSA)**, a secure elliptic curve-based scheme.
+#### **ECDSA**: Bitcoin’s signature scheme is based on **Elliptic Curve Digital Signature Algorithm (ECDSA)**, a secure elliptic curve-based scheme.
 - **Private Key**: 256 bits
 - **Public Key**: 512 bits (uncompressed) or 257 bits (compressed)
 - **Message to Sign**: 256 bits (usually a hash of the actual message)
@@ -213,7 +213,7 @@ A **digital signature** is the digital equivalent of a handwritten signature. It
 ### **Signature of Hash Pointers**:
 - In systems like blockchains, signing a **hash pointer** is equivalent to signing the entire chain of data it points to. This means that signing the head of a blockchain effectively signs all the previous blocks.
 
-## Public Keys as Identities
+## 3.4:  Public Keys as Identities
 
 In decentralized systems, a **public key** acts as an identity. If a message is signed by a private key, and the signature can be verified using the public key, then it is as if the public key “spoke” the message.
 
@@ -222,7 +222,7 @@ In decentralized systems, a **public key** acts as an identity. If a message is 
 - These identities are referred to as **addresses** in Bitcoin, which are just hashes of public keys. Users can generate and discard new identities freely, enhancing privacy.
 
 
-## Simple Cryptocurrency Models
+## 3.5: Simple Cryptocurrency Models
 ### **GoofyCoin**
 - **Creation**: Goofy can create new coins by signing a statement with a unique coin ID.
 - **Transfer**: Owners transfer coins by signing statements that specify the new owner’s public key.
@@ -321,7 +321,7 @@ No, there is no known attack where the product of time and space complexity is l
 - **Byzantine Faults**: Nodes in a distributed system may fail arbitrarily, sending conflicting information to other nodes. A Byzantine fault-tolerant system is one that can still reach consensus even when some nodes are acting maliciously.
 	- **Example - Byzantine Generals Problem**: The analogy involves generals trying to agree on a plan of attack or retreat. If 1/3 or more generals are traitors, reaching consensus becomes impossible. This demonstrates why Bitcoin’s consensus protocol must account for dishonest nodes.
 
-### Consensus Without Identity: The Blockchain
+## 4.3: Consensus Without Identity: The Blockchain
 - **Why Identity Matters**: In systems with identifiable nodes, malicious behavior is easier to track. For example, nodes with identities can have designated roles (e.g., the node with the lowest ID takes an action), and malicious actors can be identified and removed from the system.
 - **Bitcoin’s Lack of Identity**: Bitcoin's pseudonymous system intentionally makes identity tracking impossible, making the network vulnerable to Sybil attacks, where a malicious actor can generate many fake identities to manipulate the network.
 - **Implicit Consensus (Bitcoin's Approach to Consensus)**:
@@ -341,7 +341,7 @@ No, there is no known attack where the product of time and space complexity is l
 	- Bob, the merchant, hears about Alice's payment transaction over the network before it is included in a block. If Bob is too eager and allows Alice to download the software immediately, without waiting for block confirmations (a **zero-confirmation transaction**), Alice could quickly broadcast a conflicting transaction (a double-spend), and an honest node might include the new transaction in the next block.
 	- A cautious merchant would wait for multiple block confirmations before releasing the software. If Alice successfully launches a double-spend attack, Bob will see that the block containing her payment has been orphaned, and he should abandon the transaction.
 	- If, however, the next few nodes continue to build on the block containing Alice's payment to Bob, it becomes more likely that this transaction will be part of the long-term consensus chain, giving Bob confidence that the payment is valid.
-## Incentives for Distributed Consensus
+## 4.4: Incentives for Distributed Consensus
 ### Proof of Work (PoW)
 - **Properties of PoW**
 	- 1: Somewhat Difficult to compute i.e. Block Rewards
