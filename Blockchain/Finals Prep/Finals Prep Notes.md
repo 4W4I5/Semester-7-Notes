@@ -961,5 +961,5 @@ function f(uint a) pure returns (uint) {
 ## Onecoin - Scamcoin
 - Created by Dr. Ruja Ignatova, aliased as the CryptoQueen
 - Marketed OneCoin as the superior alternative to BitCoin and then vanished
-	- Marketing campaign was succesful enough to get Dr. Ignatova featured on a forbes magazine
-- 
+	- Marketing campaign was successful enough to get Dr. Ignatova featured on a forbes magazine
+-
