@@ -227,6 +227,7 @@ In decentralized systems, a **public key** acts as an identity. If a message is 
 - **Creation**: Goofy can create new coins by signing a statement with a unique coin ID.
 - **Transfer**: Owners transfer coins by signing statements that specify the new owner’s public key.
 - **Double-Spending Problem**: GoofyCoin doesn’t prevent double-spending, where the same coin is transferred to multiple recipients.
+- **Issue:** No hash pointer to the previous block, a spender can append the same coin in the transaction
 
 ### **ScroogeCoin**
 - **Append-Only Ledger**: Scrooge publishes a **blockchain** containing all transactions. This prevents double-spending, as any transaction not in the blockchain is invalid.
