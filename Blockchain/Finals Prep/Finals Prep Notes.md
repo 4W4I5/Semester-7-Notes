@@ -131,6 +131,9 @@
 - **Mining Pools**:
 	- Many miners join mining pools to combine their computational power and share rewards, making it easier to earn bitcoins consistently.
 
+### Double-Spending
+- **Prevention**:
+	- 
 
 ---
 
