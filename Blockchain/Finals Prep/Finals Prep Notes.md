@@ -10,7 +10,7 @@
 | 7-A               | Interfacing with Ethereum                          | :white_check_mark: |
 | 7-B               | Ganache (Local TestNet)                            | :white_check_mark: |
 | 7-C               | Smart Contracts                                    | :white_check_mark: |
-| 7-E               | Ethereum Tokens                                    | :warning:          | 
+| 7-E               | Ethereum Tokens                                    | :warning:          |
 
 > [!WARNING]
 > - Lecture 5 and the unnumbered lecture have a lot of similar content, merged the two
