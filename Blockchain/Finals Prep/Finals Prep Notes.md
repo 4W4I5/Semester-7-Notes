@@ -133,7 +133,8 @@
 
 ### Double-Spending
 - **Prevention**:
-	- 
+	- To prevent users from mining their own coins and using them, everyone maintains a ledger of all transactions
+		- NOTE:: The ledger being central defeats the point of cryptocurrency so it is important everyone has a copy of the ledger to maintain
 
 ---
 
