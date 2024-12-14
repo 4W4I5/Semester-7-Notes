@@ -297,7 +297,7 @@ No, there is no known attack where the product of time and space complexity is l
 
 
 # Chapter 4: How bitcoin achieves decentralization
-## Centralization vs. Decentralization
+## 4.1: Centralization vs. Decentralization
 
 | **Aspect**          | **Centralized Systems**                                                      | **Decentralized Systems**                                                                |
 | ------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
@@ -307,7 +307,7 @@ No, there is no known attack where the product of time and space complexity is l
 | **Scalability**     | Easier to scale quickly due to central control.                              | More complex to scale due to decentralized nature.                                       |
 | **Fault Tolerance** | Vulnerable to failure if the central authority is compromised.               | More resilient; failure of one node doesn’t collapse the system.                         |
 
-### Distributed Consensus
+## 4.2: Distributed Consensus
 - **What is Distributed Consensus?**:
 	- A distributed consensus protocol ensures that all non-faulty (honest) nodes in a network agree on the same value, even in the presence of malicious or faulty nodes.
 	- This protocol requires two properties:
