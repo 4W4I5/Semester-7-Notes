@@ -629,100 +629,115 @@ No, there is no known attack where the product of time and space complexity is l
 		- **Valid Transactions**
 		- **Chain Consistency** (avoiding forks)
 - #### Node Types
-	- **Reference Client (Bitcoin Core)**
-		- Serves as the standard Bitcoin implementation.
-		- Contains all **4 Key Nodes**:
-			- **Wallet**, **Miner**, **Full Blockchain**, and **Network Routing**.
-	- **Full Blockchain Node**
-		- Does not perform mining or wallet operations but ensures;
-			- Every transaction and block is stored and forwarded
-		- Includes:
-			- **Full Blockchain** and **Network Routing**.
-	- **Solo Miner**
-		- Operates independently, contributing directly to the blockchain.
-		- Combines:
-			- **Full Blockchain**, **Miner**, and **Network Routing**.
-	- **Pool Protocol Servers**
-		- Function as:
-			- **Gateway Routers** connecting to the Bitcoin P2P network via pool mining or Stratum protocols.
-	- **Lightweight SPV Wallet**
-		- Operates without storing the blockchain, relying on full nodes for data verification.
-			- Request Specific transactions as needed to verify payments
-		- Consists of:
-			- **Wallet** and **Network Routing Node**.
-		- Can be a **SPV Stratum Wallet**
-			- By Replacing:
-				- **Network Routing Node** with a **Pool Protocol: Stratum Server**
-	- **Mining Nodes**
-		- Do not store the blockchain.
-		- Combine:
-			- **Miner** and a connection through either a **Pool Protocol Server** or **Stratum Server**.
 
-## 3) Bitcoin Relay Networks
+| **Node Type**                       | **Description**                                                                                                                                    | **Components**                                                           |
+| ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| **Reference Client (Bitcoin Core)** | Serves as the standard Bitcoin implementation. Includes all key functionalities.                                                                   | **Wallet**, **Miner**, **Full Blockchain**, **Network Routing**          |
+| **Full Blockchain Node**            | Ensures every transaction and block is stored and forwarded but does not perform mining or wallet operations.                                      | **Full Blockchain**, **Network Routing**                                 |
+| **Solo Miner**                      | Operates independently, contributing directly to the blockchain.                                                                                   | **Full Blockchain**, **Miner**, **Network Routing**                      |
+| **Pool Protocol Servers**           | Function as gateway routers connecting to the Bitcoin P2P network via pool mining or Stratum protocols.                                            | **Network Routing** (via pool mining/Stratum protocols)                  |
+| **Lightweight SPV Wallet**          | Operates without storing the blockchain, relying on full nodes for data verification. Requests specific transactions as needed to verify payments. | **Wallet**, **Network Routing Node**                                     |
+| **SPV Stratum Wallet**              | A variation of SPV Wallet using a Pool Protocol: Stratum Server instead of a Network Routing Node.                                                 | **Wallet**, **Pool Protocol: Stratum Server**                            |
+| **Mining Nodes**                    | Focused on mining without storing the blockchain. Connect through Pool Protocol or Stratum Server.                                                 | **Miner**, connection via **Pool Protocol Server** or **Stratum Server** |
+
+## 2) Bitcoin Relay Networks
 - **Bitcoin Mining and Latency**
-    - Miners compete to solve the **Proof-of-Work (PoW)** problem to extend the blockchain.
-    - Reducing the time between block propagation and starting a new round is critical for profitability.
-    - **Network latency** directly impacts miners' profit margins.
+	- Miners compete to solve the **Proof-of-Work (PoW)** problem to extend the blockchain.
+	- Reducing the time between block propagation and starting a new round is critical for profitability.
+	- **Network latency** directly impacts miners' profit margins.
 - **Bitcoin Relay Network**
-    - Designed to minimize block transmission latency between miners.
-    - Created in **2015** by Matt Corallo to enhance block synchronization with low latency.
-    - Hosted on **Amazon Web Services (AWS)**, connecting miners and mining pools globally.
-    - Relied on **TCP**, which introduced a **performance bottleneck** due to packet resend semantics for handling packet loss.
-	    - **TCP** is used for the Bitcoin Relay Network
-	    - **UDP** is used for **FIBRE**
-    - Are **NOT** replacements to the P2P Network but instead overlay on top
+	- Designed to minimize block transmission latency between miners.
+	- Created in **2015** by Matt Corallo to enhance block synchronization with low latency.
+	- Hosted on **Amazon Web Services (AWS)**, connecting miners and mining pools globally.
+	- Relied on **TCP**, which introduced a **performance bottleneck** due to packet resend semantics for handling packet loss.
+		- **TCP** is used for the Bitcoin Relay Network
+		- **UDP** is used for **FIBRE**
+	- Are **NOT** replacements to the P2P Network but instead overlay on top
 - **Transition to FIBRE (Fast Internet Bitcoin Relay Engine)**
-    - Introduced in **2016**, also by Matt Corallo, to replace the original relay network.
-    - **UDP-based**, addressing latency issues caused by TCP.
-    - Implements **Compact Block Optimization** to reduce data transmission and further lower latency.
-## 4) Bitcoin P2P Network
-- **Decentralized Structure**: A mesh network without central control, nodes interconnect in an ad-hoc manner.
-- **Communication**: Nodes connect via TCP (usually on port 8333) and share transaction/block data.
-- **Connection Inactivity**: Nodes drop peers after 3 hours of inactivity to maintain network freshness.
+	- Introduced in **2016**, also by Matt Corallo, to replace the original relay network.
+	- **UDP-based**, addressing latency issues caused by TCP.
+	- Implements **Compact Block Optimization** to reduce data transmission and further lower latency.
+## 3) Bitcoin P2P Network
+- ### Decentralized Structure
+	- Operates as a **mesh network** without central control.
+	- Nodes connect in an **ad-hoc manner** with random topology.
+	- All nodes are considered equal; new nodes can join at any time.
+	- Forget inactive or unresponsive nodes after **3 hours** to maintain network freshness.
+- ### Communication
+	- Nodes communicate via **TCP** (default port 8333).
+	- Share transaction and block data through the protocol.
 - ### Joining the P2P Network
-	- **Node Initialization**: New nodes join by connecting to existing peers.
-	- **Handshake**:
-		- Sends a **version** message with protocol version, services, and blockchain height.
+	1. **Node Initialization**:
+		- New nodes join by connecting to existing peers.
+		- Requires at least one known peer to bootstrap the connection.
+	2. **Handshake Process**:
+		- Sends a **version** message with:
+			- Protocol version (e.g., 70002).
+			- Local services supported (e.g., NODE_NETWORK).
+			- Current blockchain height.
+			- Basic identifying information (e.g., `addrYou`, `addrMe`, and `subver`).
 		- Peers reply with `verack` to confirm the connection.
-	- **Peer Discovery**:
-		- DNS seeds and `addr` messages help nodes find peers.
-		- `getaddr` requests retrieve additional IPs for redundancy.
+	3. **Peer Discovery**:
+		- New nodes find peers using:
+			- **DNS Seeds**: Special DNS servers that provide a list of randomly selected IPs of Bitcoin nodes.
+				- Examples:
+					- bitcoin.sipa.be
+					- dnsseed.bluematt.me
+					- dnsseed.bitcoin.dashjr.org
+					- seed.bitcoinstats.com
+			- **Seed Nodes**: Known nodes used for introductions before discovering new peers.
+			- `**getaddr**` **Requests**: Nodes request additional IPs to expand the peer list.
+		- **No Geographic Topology**: Node connections are not influenced by physical location.
 - ### Transaction Propagation
-	- **Mempool**:
-		- Each node holds unconfirmed transactions in **temporary storage** until included in a block.
-	- **Relaying**:
-		- Nodes validate transactions before forwarding.
-		- Transactions spread to all peers, ensuring network-wide visibility.
+	- **Flooding Protocol**:
+		- Transactions are propagated using a simple flooding algorithm, ensuring network-wide visibility.
+		- Nodes store unconfirmed transactions in the **mempool** until included in a block.
+	- **Relay Conditions**:
+		1. Transaction is valid with the current blockchain.
+		2. Outputs being redeemed have not been spent (no double-spends).
+		3. Transaction hasn’t been seen before (avoid redundancy).
+		4. Script matches a predefined whitelist of "standard" scripts (avoids unusual or infinite-loop scripts).
 - ### Block Propagation
-	- **Process**:
-		- Blocks propagate similarly to transactions, spreading across the network.
-		- Relaying new blocks to peers promotes consensus.
-	- **Inventory (`inv`) Messages**:
-		- Help nodes identify missing blocks or transactions, minimizing redundant data transmission.
-- ### Should I Relay a Proposed Transaction?
-	- **Relay Checks**:
-		1. **Transaction Validation**: Transaction must be valid within the current blockchain context.
-			- Nodes run scripts for each input to confirm it returns **true**.
-		2. **Double-Spend Check**: Verifies that outputs being redeemed haven’t been spent.
-		3. **Duplicate Check**: Avoids relaying transactions already seen, preventing redundancy.
-		4. **Standard Script Requirement**: Only relays transactions with **"standard" scripts** (based on a whitelist) for compatibility.
-	- **Efficiency**: These checks filter transactions, conserving network resources and supporting reliability.
-## 5) Network Discovery
-- **Peer Discovery**:
-	- Nodes find peers using **DNS seeds** or by reconnecting with previous peers.
-	- Nodes share **addr** messages to keep peer lists updated.
-	- **Procedure:**
-		1. Query DNS via number of DNS Seeds i.e. DNS Servers that provide the list containing the IP of every bitcoin node
-			- DNS Seeds are special in the sense that they return a list of randomly selected nodes that are using the port 8333
-		2. One known node aka the `SEED NODE` is
-- **Resilience**:
-	- Stale or inactive connections are dynamically replaced.
-	- Ensures robust, decentralized connectivity.
-## 6) Race Conditions
-- **Cause**: Occurs when nodes receive competing blocks or transactions at nearly the same time.
-- **Resolution**:
-	- Nodes prioritize the **longest valid chain** to resolve conflicts.
-	- This approach enables consensus and maintains network consistency.
+	- Similar to transaction propagation, blocks spread across the network via relaying.
+	- **Relay Conditions**:
+		1. Block meets the hash target.
+		2. Contains valid transactions (all scripts must pass validation).
+		3. Builds on the current longest chain (avoiding forks).
+	- **Inventory (**`**inv**`**) Messages**:
+		- Nodes use these to identify missing blocks or transactions, minimizing redundant data transmission.
+- ### Race Conditions
+	- Occurs when nodes receive competing blocks or transactions at nearly the same time.
+	- **Resolution**:
+		- Nodes prioritize the **longest valid chain**.
+		- Geographic network position influences which transaction/block a node processes first.
+
+## 4) Network Discovery
+- ### Overview
+	- Essential for new nodes to discover peers and participate in the network.
+	- Achieved through DNS seeds, seed nodes, and peer communication.
+- ### Methods of Discovery
+	1. **DNS Seeds**:
+		- Query specialized DNS servers to get a list of Bitcoin nodes (IP addresses).
+		- Examples of DNS seeds:
+			- bitcoin.sipa.be
+			- dnsseed.bluematt.me
+			- dnsseed.bitcoin.dashjr.org
+			- seed.bitcoinstats.com
+		- Example Command:
+			- `dig seed.bitcoinstats.com +short` returns a list of random IPs.
+	2. **Seed Nodes**:
+		- Use one known node (seed node) to establish an initial connection and discover other peers.
+		- The client disconnects from the seed node after introductions.
+	3. **TCP Connections**:
+		- Nodes establish connections, usually on port 8333.
+		- Once connected, nodes exchange messages and begin the handshake process.
+## 5) Software Diversity
+- About **90%** of nodes run the **Core Bitcoin** client (written in C++).
+- Other successful implementations:
+	- **BitcoinJ** (Java).
+	- **Libbitcoin** (C++).
+	- **btcd** (Go).
+- Historical Reference: Original "Satoshi" client no longer in active use.
 # Lecture 7-Intro: Introduction to Ethereum
 ## 1) Accounts in Ethereum
 - ### Types of accounts
