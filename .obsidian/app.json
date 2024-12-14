@@ -9,5 +9,6 @@
   "foldHeading": false,
   "defaultViewMode": "source",
   "smartIndentList": true,
-  "useTab": true
+  "useTab": true,
+  "showUnsupportedFiles": true
 }
