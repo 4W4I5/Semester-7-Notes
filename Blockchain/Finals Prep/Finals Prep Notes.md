@@ -25,35 +25,35 @@
   - **Based on**: Precious metals
   - **Value**: Derived from the value of the metal
   - **Advantages**:
-    - Even fake gold is still valuable, as creating diluted metals is technologically challenging.
-    - Limited mining technology makes it difficult to flood the market, making minting rare.
+	- Even fake gold is still valuable, as creating diluted metals is technologically challenging.
+	- Limited mining technology makes it difficult to flood the market, making minting rare.
   - **Problems**:
-    - Hard to manage and store large amounts of physical currency.
-    - Requires raw materials to mint.
-    - Value fluctuates due to speculation.
+	- Hard to manage and store large amounts of physical currency.
+	- Requires raw materials to mint.
+	- Value fluctuates due to speculation.
 - #### Paper Currency
   - **Type**: Exchangeable commodity
   - **Value**: Determined by the issuing authority based on gold reserves.
   - **Advantages**:
-    - Easier to carry with large denominations available.
-    - Issuing authority can inflate or deflate the currency as needed.
+	- Easier to carry with large denominations available.
+	- Issuing authority can inflate or deflate the currency as needed.
   - **Disadvantages**:
-    - Risk of counterfeiting.
-    - Prone to runaway inflation if too much currency is printed.
-    - Bank runs can occur if banks don’t have enough gold to convert.
+	- Risk of counterfeiting.
+	- Prone to runaway inflation if too much currency is printed.
+	- Bank runs can occur if banks don’t have enough gold to convert.
 - #### Fiat Currency
   - **Type**: Not linked to precious metals, similar to paper currency.
   - **Use**: Can be electronic, denominated by fiat.
-    - Transaction fees incentivize participation.
-    - EC (Electronic Currency) systems prevent entities from minting more than they have contributed.
+	- Transaction fees incentivize participation.
+	- EC (Electronic Currency) systems prevent entities from minting more than they have contributed.
   - **Why it works**:
-    - **Social Contract**: The value is agreed upon and built on trust.
-    - **Centralized Power**: Governments can enforce taxation and accept fiat currency as tax payment.
+	- **Social Contract**: The value is agreed upon and built on trust.
+	- **Centralized Power**: Governments can enforce taxation and accept fiat currency as tax payment.
   - **Advantages**:
-    - Similar to paper currency but doesn’t require gold reserves.
+	- Similar to paper currency but doesn’t require gold reserves.
   - **Problems**:
-    - Requires additional trust in the issuing authority (IA).
-    - Similar risks as paper currency, including inflation and mismanagement.
+	- Requires additional trust in the issuing authority (IA).
+	- Similar risks as paper currency, including inflation and mismanagement.
 - #### Non-Fiat (P2P) Currency
 	- **Goal**: Create digital currency without centralized control.
 	- **Concept**: Store and transfer value without commodities or central banks. Anyone can join and participate.
@@ -235,12 +235,12 @@ To achieve sublinear efficiency, we can use **Merkle Trees**.
 
 - **Merkle Tree Structure**: The digest is the hash of the root of a Merkle tree, where each leaf node corresponds to a file, and its value is the hash of the file content. Intermediate nodes are hashes of the concatenation of their child nodes.
 - **Operations** (Add/Delete/Edit):
-    - When a user adds, deletes, or edits a file, the server only needs to update the hash values of the nodes along the path from the affected leaf node to the root. The user’s digest is updated accordingly.
+	- When a user adds, deletes, or edits a file, the server only needs to update the hash values of the nodes along the path from the affected leaf node to the root. The user’s digest is updated accordingly.
 - **Proof Size and Verification**:
-    - When retrieving a file, SecureBox sends the file’s hash and the hash values along the path to the root. The user verifies the file's integrity by recomputing the path from the file to the root.
-    - The proof size and verification time are both `O(log n)`, where `n` is the number of files.
+	- When retrieving a file, SecureBox sends the file’s hash and the hash values along the path to the root. The user verifies the file's integrity by recomputing the path from the file to the root.
+	- The proof size and verification time are both `O(log n)`, where `n` is the number of files.
 - **Digest Size**:
-    - The digest size is constant `O(1)`, as it only stores the root hash.
+	- The digest size is constant `O(1)`, as it only stores the root hash.
 This protocol ensures sublinear proof size, verification time, and digest size by taking advantage of the logarithmic depth of the Merkle tree.
 
 ## 2. Birthday Attack
@@ -299,38 +299,38 @@ No, there is no known attack where the product of time and space complexity is l
 
 ### Distributed Consensus
 - **What is Distributed Consensus?**:
-    - A distributed consensus protocol ensures that all non-faulty (honest) nodes in a network agree on the same value, even in the presence of malicious or faulty nodes.
-    - This protocol requires two properties:
-        1. It must reach a conclusion with all honest nodes agreeing on the value.
-        2. The final value must have been proposed by at least one correct node.
+	- A distributed consensus protocol ensures that all non-faulty (honest) nodes in a network agree on the same value, even in the presence of malicious or faulty nodes.
+	- This protocol requires two properties:
+		1. It must reach a conclusion with all honest nodes agreeing on the value.
+		2. The final value must have been proposed by at least one correct node.
 - **Challenges in Consensus**:
-    - **Imperfect Networks**: In a peer-to-peer system like Bitcoin, not all nodes are connected, and some may not receive the same transaction data at the same time. Latency, node crashes, and malicious nodes contribute to difficulties in ensuring all nodes agree on a common state.
-    - **Byzantine Generals Problem**: This is a metaphor for a situation in distributed systems where some participants might act maliciously. The problem shows that consensus is impossible if more than 1/3 of nodes are faulty or malicious.
+	- **Imperfect Networks**: In a peer-to-peer system like Bitcoin, not all nodes are connected, and some may not receive the same transaction data at the same time. Latency, node crashes, and malicious nodes contribute to difficulties in ensuring all nodes agree on a common state.
+	- **Byzantine Generals Problem**: This is a metaphor for a situation in distributed systems where some participants might act maliciously. The problem shows that consensus is impossible if more than 1/3 of nodes are faulty or malicious.
 
 ### Byzantine Fault Tolerance (BFT)
 - **Byzantine Faults**: Nodes in a distributed system may fail arbitrarily, sending conflicting information to other nodes. A Byzantine fault-tolerant system is one that can still reach consensus even when some nodes are acting maliciously.
-    - **Example - Byzantine Generals Problem**: The analogy involves generals trying to agree on a plan of attack or retreat. If 1/3 or more generals are traitors, reaching consensus becomes impossible. This demonstrates why Bitcoin’s consensus protocol must account for dishonest nodes.
+	- **Example - Byzantine Generals Problem**: The analogy involves generals trying to agree on a plan of attack or retreat. If 1/3 or more generals are traitors, reaching consensus becomes impossible. This demonstrates why Bitcoin’s consensus protocol must account for dishonest nodes.
 
 ### Consensus Without Identity: The Blockchain
 - **Why Identity Matters**: In systems with identifiable nodes, malicious behavior is easier to track. For example, nodes with identities can have designated roles (e.g., the node with the lowest ID takes an action), and malicious actors can be identified and removed from the system.
 - **Bitcoin’s Lack of Identity**: Bitcoin's pseudonymous system intentionally makes identity tracking impossible, making the network vulnerable to Sybil attacks, where a malicious actor can generate many fake identities to manipulate the network.
 - **Implicit Consensus (Bitcoin's Approach to Consensus)**:
 	- If a node extends a chain from new block then it gets accepted however if a previous block is used then it is implicitly rejected. This prevents illegal branching within the chain
-	    - **Random Node Selection**: Bitcoin randomly selects a node in each round to propose the next block. If the other nodes accept the block by building on top of it, consensus is implicitly achieved.
-	    - **Block Containment**: Each block contains the hash of the previous block, ensuring that the chain grows sequentially, and the inclusion of a new block indicates acceptance of the previous block.
+		- **Random Node Selection**: Bitcoin randomly selects a node in each round to propose the next block. If the other nodes accept the block by building on top of it, consensus is implicitly achieved.
+		- **Block Containment**: Each block contains the hash of the previous block, ensuring that the chain grows sequentially, and the inclusion of a new block indicates acceptance of the previous block.
 - **Consensus Algorithm**:
-    - New transactions are broadcast to all nodes.
-    - Each node collects new transactions into a block.
-    - In each round, a random node gets to broadcast its block.
-    - Other nodes accept the block only if all transactions in it are valid (unspent, valid signatures).
-    - Nodes express their acceptance of the block by including its hash in the next block they create.
+	- New transactions are broadcast to all nodes.
+	- Each node collects new transactions into a block.
+	- In each round, a random node gets to broadcast its block.
+	- Other nodes accept the block only if all transactions in it are valid (unspent, valid signatures).
+	- Nodes express their acceptance of the block by including its hash in the next block they create.
 - **Possible Attacks**:
-    - **Double Spend Attack**: A malicious node can attempt to spend the same coins twice. For instance, Alice could send a transaction to Bob and have it included in a block. However, if Alice is selected to propose the next block, she could create a new block that ignores the block containing her payment to Bob and instead includes a transaction where she spends the same coins elsewhere. If the network extends her fraudulent block, the payment to Bob becomes invalid and will never be confirmed.
-    - **Denial of Service (DoS)**: A malicious node can exclude transactions from specific addresses (e.g., Bob’s transactions). However, this attack is limited because an honest node in the next round could include Bob’s transactions in their proposed block, effectively bypassing the malicious actor's interference.
+	- **Double Spend Attack**: A malicious node can attempt to spend the same coins twice. For instance, Alice could send a transaction to Bob and have it included in a block. However, if Alice is selected to propose the next block, she could create a new block that ignores the block containing her payment to Bob and instead includes a transaction where she spends the same coins elsewhere. If the network extends her fraudulent block, the payment to Bob becomes invalid and will never be confirmed.
+	- **Denial of Service (DoS)**: A malicious node can exclude transactions from specific addresses (e.g., Bob’s transactions). However, this attack is limited because an honest node in the next round could include Bob’s transactions in their proposed block, effectively bypassing the malicious actor's interference.
 - **Scenario: Malicious Transaction From Bob's Perspective**:
-    - Bob, the merchant, hears about Alice's payment transaction over the network before it is included in a block. If Bob is too eager and allows Alice to download the software immediately, without waiting for block confirmations (a **zero-confirmation transaction**), Alice could quickly broadcast a conflicting transaction (a double-spend), and an honest node might include the new transaction in the next block.
-    - A cautious merchant would wait for multiple block confirmations before releasing the software. If Alice successfully launches a double-spend attack, Bob will see that the block containing her payment has been orphaned, and he should abandon the transaction.
-    - If, however, the next few nodes continue to build on the block containing Alice's payment to Bob, it becomes more likely that this transaction will be part of the long-term consensus chain, giving Bob confidence that the payment is valid.
+	- Bob, the merchant, hears about Alice's payment transaction over the network before it is included in a block. If Bob is too eager and allows Alice to download the software immediately, without waiting for block confirmations (a **zero-confirmation transaction**), Alice could quickly broadcast a conflicting transaction (a double-spend), and an honest node might include the new transaction in the next block.
+	- A cautious merchant would wait for multiple block confirmations before releasing the software. If Alice successfully launches a double-spend attack, Bob will see that the block containing her payment has been orphaned, and he should abandon the transaction.
+	- If, however, the next few nodes continue to build on the block containing Alice's payment to Bob, it becomes more likely that this transaction will be part of the long-term consensus chain, giving Bob confidence that the payment is valid.
 ## Incentives for Distributed Consensus
 ### Proof of Work (PoW)
 - **Properties of PoW**
@@ -338,30 +338,30 @@ No, there is no known attack where the product of time and space complexity is l
 	- 2: Parameterizable Cost i.e. avg time b/w blocks dictates the probability that the next block is won by the owner
 	- 3: Trivial to verify i.e. easy to calculate the block hash as nonce is provided as well which is part of Transaction fees
 - **Incentives for Honest Behavior**:
-    - Miners are rewarded with **newly created bitcoins (block rewards)** and transaction fees when they add valid blocks to the blockchain. Invalid blocks are rejected by the network, causing the miner to lose both the block reward and the energy invested in solving the hash puzzle.
-    - **Cost of Attack**: Gaining control of 51% of the network’s hash power is economically prohibitive due to the immense cost of energy and hardware. This discourages large-scale attacks.
+	- Miners are rewarded with **newly created bitcoins (block rewards)** and transaction fees when they add valid blocks to the blockchain. Invalid blocks are rejected by the network, causing the miner to lose both the block reward and the energy invested in solving the hash puzzle.
+	- **Cost of Attack**: Gaining control of 51% of the network’s hash power is economically prohibitive due to the immense cost of energy and hardware. This discourages large-scale attacks.
 - **Hash Puzzles and Mining**:
-    - **Hash Puzzle**: Miners must find a **nonce** such that the hash of the block (combining the previous block's hash, transactions, and the nonce) is smaller than a predefined target value. The goal is to make the hash start with a specific number of leading zeros.
-	    - Such a goal is needed to make the hash difficult to compute **(Property 1 of PoW)**
-    - **Mining Process**: Miners repeatedly try different nonce values until they find one that produces a valid hash. The successful miner broadcasts the block to the network, and other miners validate the block by checking its hash.
+	- **Hash Puzzle**: Miners must find a **nonce** such that the hash of the block (combining the previous block's hash, transactions, and the nonce) is smaller than a predefined target value. The goal is to make the hash start with a specific number of leading zeros.
+		- Such a goal is needed to make the hash difficult to compute **(Property 1 of PoW)**
+	- **Mining Process**: Miners repeatedly try different nonce values until they find one that produces a valid hash. The successful miner broadcasts the block to the network, and other miners validate the block by checking its hash.
 - **Mining Reward**:
-    - Initially, miners were rewarded with **50 BTC** per block, and this amount halves approximately every four years. By 2040, the block reward will cease, and miners will rely solely on **transaction fees**.
-    - **Finite Supply**: Bitcoin's total supply is capped at **21 million** coins, which helps ensure long-term value retention as scarcity increases over time.
+	- Initially, miners were rewarded with **50 BTC** per block, and this amount halves approximately every four years. By 2040, the block reward will cease, and miners will rely solely on **transaction fees**.
+	- **Finite Supply**: Bitcoin's total supply is capped at **21 million** coins, which helps ensure long-term value retention as scarcity increases over time.
 
 ### Double-Spending Attack
 - **Definition**: A double-spend attack occurs when a user tries to spend the same bitcoin more than once by broadcasting two conflicting transactions.
-    - **Example**: Alice sends bitcoin to Bob for a service, and simultaneously broadcasts another transaction to spend the same bitcoin to another address she controls.
+	- **Example**: Alice sends bitcoin to Bob for a service, and simultaneously broadcasts another transaction to spend the same bitcoin to another address she controls.
 - **Defense Mechanisms**:
-    - **Longest Chain Rule**: Honest nodes follow the longest valid blockchain, ensuring that only one of the conflicting transactions (Alice → Bob or Alice → herself) gets confirmed.
-    - **Confirmations**: The risk of a successful double-spend attack diminishes with each confirmation. Typically, after **six confirmations**, the transaction is considered highly secure.
+	- **Longest Chain Rule**: Honest nodes follow the longest valid blockchain, ensuring that only one of the conflicting transactions (Alice → Bob or Alice → herself) gets confirmed.
+	- **Confirmations**: The risk of a successful double-spend attack diminishes with each confirmation. Typically, after **six confirmations**, the transaction is considered highly secure.
 
 ### Mining Economics
 - **Profitability**:
-    - Miners earn rewards from block creation and transaction fees. Profitability is influenced by the **cost of electricity, mining hardware**, and **mining difficulty**.
+	- Miners earn rewards from block creation and transaction fees. Profitability is influenced by the **cost of electricity, mining hardware**, and **mining difficulty**.
 - **Mining Farms**:
-    - Large-scale operations, often located in areas with **cheap electricity and cool climates**, have an economic advantage due to economies of scale.
+	- Large-scale operations, often located in areas with **cheap electricity and cool climates**, have an economic advantage due to economies of scale.
 - **Malware Mining**:
-    - Some attackers use malware to hijack computers, using the victim's resources (electricity and hardware) to mine cryptocurrencies for their own gain.
+	- Some attackers use malware to hijack computers, using the victim's resources (electricity and hardware) to mine cryptocurrencies for their own gain.
 
 ### Longest Chain Rule
 - **Definition**: The longest chain with the most accumulated proof-of-work is the valid blockchain. Nodes always follow this chain to ensure consistency.
@@ -370,54 +370,54 @@ No, there is no known attack where the product of time and space complexity is l
 
 ### Transaction Process
 - **Broadcasting Transactions**:
-    - Transactions are broadcast to all nodes. Each node validates them by checking the balance of the sender and verifying signatures.
+	- Transactions are broadcast to all nodes. Each node validates them by checking the balance of the sender and verifying signatures.
 - **Mempool**:
-    - Unconfirmed transactions wait in the **mempool** until miners include them in a block.
-	    - They have a continuation number of 0, it gets set to 1 when its posted on the blockchain.
-    - Miners typically prioritize transactions based on the attached fees.
+	- Unconfirmed transactions wait in the **mempool** until miners include them in a block.
+		- They have a continuation number of 0, it gets set to 1 when its posted on the blockchain.
+	- Miners typically prioritize transactions based on the attached fees.
 - **Miner Reward**:
-    - Miners receive the block reward and transaction fees. They tend to prioritize transactions with higher fees to maximize their earnings.
+	- Miners receive the block reward and transaction fees. They tend to prioritize transactions with higher fees to maximize their earnings.
 
 # Past Paper/Book Questions
 
 - **1: Explain the decentralized consensus algorithm used in Bitcoin to agree on a valid block. Discuss why consensus without identity is used in Blockchain?**
-    - New transactions are broadcast to all nodes.
-    - Each node collects new transactions into a block.
-    - A random node broadcasts its block during each round.
-    - Other nodes accept the block if all transactions are valid.
-    - Nodes express acceptance by including the block's hash in their next block.
-    - **No identity in consensus:**
-        - There's no central authority to assign identities, preventing Sybil attacks (fake nodes controlled by one entity).
-        - Pseudonymity is a goal in Bitcoin to preserve privacy.
+	- New transactions are broadcast to all nodes.
+	- Each node collects new transactions into a block.
+	- A random node broadcasts its block during each round.
+	- Other nodes accept the block if all transactions are valid.
+	- Nodes express acceptance by including the block's hash in their next block.
+	- **No identity in consensus:**
+		- There's no central authority to assign identities, preventing Sybil attacks (fake nodes controlled by one entity).
+		- Pseudonymity is a goal in Bitcoin to preserve privacy.
 - **2: Why do miners run “full nodes” while Bob the merchant uses a “lite node” with simplified payment verification?**
-    - Miners need full nodes to validate transactions and blocks, ensuring the integrity of the blockchain.
-    - Bob, the merchant, only needs to verify recent transactions to prevent fraud, relying on miners for full validation.
+	- Miners need full nodes to validate transactions and blocks, ensuring the integrity of the blockchain.
+	- Bob, the merchant, only needs to verify recent transactions to prevent fraud, relying on miners for full validation.
 - **3: If a malicious ISP controls a user’s connections, can it launch a double-spend attack? How much computational effort would this take?**
-    - Yes, the ISP could attempt a double-spend by creating a fork.
-    - To succeed, the ISP would need over 50% of the network's hashing power, which is highly computationally demanding.
+	- Yes, the ISP could attempt a double-spend by creating a fork.
+	- To succeed, the ISP would need over 50% of the network's hashing power, which is highly computationally demanding.
 - **4: Why does Bob check how many confirmations CA→ B has received, instead of comparing chain lengths?**
-    - Confirmations reduce the chance of reorganization, as each confirmation means the transaction is deeper in the chain.
-    - Checking confirmations is simpler and sufficient compared to computing chain differences.
+	- Confirmations reduce the chance of reorganization, as each confirmation means the transaction is deeper in the chain.
+	- Checking confirmations is simpler and sufficient compared to computing chain differences.
 - **5: Even when all nodes are honest, blocks will occasionally get orphaned: if two miners Minnie and Mynie discover blocks nearly simultaneously, neither will have time to hear about the other’s block before broadcasting hers.**
 	- **5a: What determines whose block will end up on the consensus branch?**
-	    - The block that gets extended first by another miner becomes part of the consensus branch.
+		- The block that gets extended first by another miner becomes part of the consensus branch.
 	- **5b: What factors affect the rate of orphan blocks? Can you derive a formula?**
-	    - Factors: network latency, block propagation time, mining difficulty.
-	    - Orphan rates depend on how quickly new blocks propagate and the frequency of simultaneous block discoveries.
+		- Factors: network latency, block propagation time, mining difficulty.
+		- Orphan rates depend on how quickly new blocks propagate and the frequency of simultaneous block discoveries.
 	- **5c: Try to empirically measure the orphan rate on the Bitcoin network.**
-	    - Measure by tracking block propagation times and observing simultaneous block broadcasts, leading to chain splits.
+		- Measure by tracking block propagation times and observing simultaneous block broadcasts, leading to chain splits.
 	- **5d: If Mynie hears about Minnie’s block before discovering her own, did she waste her effort?**
-	    - Yes, Mynie’s block becomes invalid if she learns about Minnie’s block just before she mines hers.
+		- Yes, Mynie’s block becomes invalid if she learns about Minnie’s block just before she mines hers.
 	- **5e: Do all miners experience orphaned blocks at the same rate?**
-	    - No, miners with better network connectivity or larger pools are less affected, while smaller miners suffer more.
+		- No, miners with better network connectivity or larger pools are less affected, while smaller miners suffer more.
 - **6a: How can a miner establish a hard-to-fake identity?**
-    - Miners can include a unique identifier in the coinbase transaction, which makes their blocks identifiable.
+	- Miners can include a unique identifier in the coinbase transaction, which makes their blocks identifiable.
 - **6b: If a miner misbehaves, can others boycott her?**
-    - In theory, miners could boycott by refusing to build on her blocks, but coordination across the network would be difficult.
+	- In theory, miners could boycott by refusing to build on her blocks, but coordination across the network would be difficult.
 - **7a: What is the probability of finding a block in the next 10 minutes assuming constant hash power?**
-    - The probability is around 63%, assuming block discovery follows an exponential distribution with a 10-minute average.
+	- The probability is around 63%, assuming block discovery follows an exponential distribution with a 10-minute average.
 - **7b: How should Bob set x so that with 99% confidence, 6 blocks will be found within x minutes?**
-    - Bob should set x to around 60 minutes for 99% confidence that 6 blocks will be found.
+	- Bob should set x to around 60 minutes for 99% confidence that 6 blocks will be found.
 
 | Chapter<br>Number | Chapter<br>Name                                    | Status             |
 | ----------------- | -------------------------------------------------- | ------------------ |
@@ -439,7 +439,7 @@ No, there is no known attack where the product of time and space complexity is l
 - **Outputs** act as "credits," indicating the value added to a recipient’s account. Signing a transaction spends or assigns these outputs to a new owner's address.
 ### Splitting & Merging Value of Coins
 - **Splitting**: To pay an amount (e.g., X BTC), if Alice only has X+N BTC, she can split by paying herself N BTC and use the remaining X BTC for the transaction.
-    - This creates a new UTXO with the correct amount, traceable to the original UTXO.
+	- This creates a new UTXO with the correct amount, traceable to the original UTXO.
 - **Merging**: If Bob receives 15 BTC from Sender1 and 5 BTC from Sender2, he can create a new transaction with two inputs, merging them into a 20 BTC UTXO.
 ### Multiple Inputs & Transaction Fees
 - Transactions can include multiple inputs from different owners, requiring all signatories to sign.
@@ -447,14 +447,14 @@ No, there is no known attack where the product of time and space complexity is l
 - **Coinbase Transactions**: These are initial transactions that introduce new BTC into circulation as mining rewards and do not have any inputs.
 ### Validity Rules
 - A transaction is invalid if:
-    - It’s not signed by the input owner(s).
-    - The sum of all inputs and outputs isn’t zero.
+	- It’s not signed by the input owner(s).
+	- The sum of all inputs and outputs isn’t zero.
 ## 2) UTXOs (Un-numbered slides) + Scripts
 - ### Unspent Transaction Outputs (UTXOs)
 	- **UTXOs (Unspent Transaction Outputs)**:
 		- Every Bitcoin transaction generates UTXOs, representing the "leftover" value after a transaction, which can be used as inputs in future transactions. UTXOs track unspent funds associated with each address, preventing double-spending and preserving Bitcoin's accounting integrity.
-	    - **Analogy**:
-		    - Similar to receiving change after a cash transaction, where a large denomination is split into smaller units. For example, if you pay 3 BTC out of 5 BTC coin you own, you receive a 2 BTC UTXO as "change."
+		- **Analogy**:
+			- Similar to receiving change after a cash transaction, where a large denomination is split into smaller units. For example, if you pay 3 BTC out of 5 BTC coin you own, you receive a 2 BTC UTXO as "change."
 	- #### Block Mining Recap
 		1. **Transaction Initiation**:
 			- When a transaction is made (e.g., from sender A to receiver B), it’s first sent to the network.
@@ -500,26 +500,26 @@ No, there is no known attack where the product of time and space complexity is l
 		- Script: `<rSIG> <rPUBKEY> OP_DUP OP_HASH160 <sPUBKEYHASH> OP_EQUALVERIFY OP_CHECKSIG`
 		- **Process**: The sender specifies a public key hash, and the recipient provides their signature and public key.
 		- **Steps**:
-		    - `OP_DUP` duplicates the public key.
-		    - `OP_HASH160` hashes the public key.
-		    - `OP_EQUALVERIFY` checks that this hash matches the specified public key hash.
-		    - `OP_CHECKSIG` verifies the signature against the public key.
+			- `OP_DUP` duplicates the public key.
+			- `OP_HASH160` hashes the public key.
+			- `OP_EQUALVERIFY` checks that this hash matches the specified public key hash.
+			- `OP_CHECKSIG` verifies the signature against the public key.
 		- **Note**: In the script notation above, `s` (sender) and `r` (receiver) prefixes denote the parts of the script each party provides.
 	3. **Pay-to-Script-Hash (P2SH)**
-	    - **Purpose**: P2SH enables transactions with custom locking conditions. Instead of specifying a public key, the sender specifies a hash of a redeem script, which contains the spending conditions.
-	    - **ScriptPubKey**: `<rSIG> <redeemScriptHash> OP_EQUAL`
-	    - **Redeem Script**: The recipient provides a **redeem script** (a custom set of instructions) whose hash matches the one specified by the sender.
-	    - **Unlocking (scriptSig)**: To unlock a P2SH output, the recipient provides:
-	        - The **redeem script** (whose hash matches the `redeemScriptHash`).
-	        - The required inputs or signatures as per the redeem script.
-	    - **Verification**:
-	        - The transaction checks that the hash of the redeem script matches `redeemScriptHash` provided by the sender.
-	        - Then, the script interpreter runs the redeem script to ensure all conditions (e.g., signatures) are met.
+		- **Purpose**: P2SH enables transactions with custom locking conditions. Instead of specifying a public key, the sender specifies a hash of a redeem script, which contains the spending conditions.
+		- **ScriptPubKey**: `<rSIG> <redeemScriptHash> OP_EQUAL`
+		- **Redeem Script**: The recipient provides a **redeem script** (a custom set of instructions) whose hash matches the one specified by the sender.
+		- **Unlocking (scriptSig)**: To unlock a P2SH output, the recipient provides:
+			- The **redeem script** (whose hash matches the `redeemScriptHash`).
+			- The required inputs or signatures as per the redeem script.
+		- **Verification**:
+			- The transaction checks that the hash of the redeem script matches `redeemScriptHash` provided by the sender.
+			- Then, the script interpreter runs the redeem script to ensure all conditions (e.g., signatures) are met.
 		- ###### Example of P2SH with a Multi-Signature Redeem Script
 			- For instance, a P2SH address could be set up with a redeem script that requires multiple signatures, such as **2-of-3** multisig:
 		- **ScriptPubKey** (locking script): `<redeemScriptHash> OP_EQUAL`
 		- **Redeem Script**: `OP_2 <pubKey1> <pubKey2> <pubKey3> OP_3 OP_CHECKMULTISIG`
-		    - This script specifies that any two out of three provided public keys must sign the transaction to unlock it.
+			- This script specifies that any two out of three provided public keys must sign the transaction to unlock it.
 		- **scriptSig** (unlocking script): `<rSIG1> <rSIG2> <redeemScript>`
 			- In this setup:
 				- The redeem script (included in the transaction by the spender) matches the `redeemScriptHash` set by the sender.
@@ -563,23 +563,23 @@ No, there is no known attack where the product of time and space complexity is l
 - Efficient MicroPayments
 	- **How it works?**
 		- **Initial Transaction Setup**:
-		    - Alice deposits funds in a transaction that locks a certain amount (e.g., 100) for both parties in a multisig account.
-		    - This setup creates a trust-minimized payment channel, where funds can only be spent if both parties sign each transaction.
+			- Alice deposits funds in a transaction that locks a certain amount (e.g., 100) for both parties in a multisig account.
+			- This setup creates a trust-minimized payment channel, where funds can only be spent if both parties sign each transaction.
 		- **Incremental Payment Transactions:**
-		    - Each time Alice wants to pay Bob for a service (e.g., each second of streaming), she creates a transaction that moves a small amount from her balance to Bob's, signing it herself.
-		    - However, these incremental transactions are _off-chain_ and are not published immediately on the blockchain. Instead, they are recorded and only finalized (published) when either Alice or Bob decides to close the channel.
+			- Each time Alice wants to pay Bob for a service (e.g., each second of streaming), she creates a transaction that moves a small amount from her balance to Bob's, signing it herself.
+			- However, these incremental transactions are _off-chain_ and are not published immediately on the blockchain. Instead, they are recorded and only finalized (published) when either Alice or Bob decides to close the channel.
 		- **Final Settlement:**
-		    - Once Alice has finished making payments, the last signed transaction showing the final balances can be published on the blockchain to settle the funds. This avoids multiple on-chain transactions, minimizing fees.
+			- Once Alice has finished making payments, the last signed transaction showing the final balances can be published on the blockchain to settle the funds. This avoids multiple on-chain transactions, minimizing fees.
 	- **Implications of Non-Signing or Trickery**
 		- **If Bob Refuses to Sign:**
-		    - If Bob doesn’t sign any of the transactions, the funds remain locked, and Alice can demand a refund after a timeout. This timeout mechanism protects Alice from losing funds if Bob becomes unresponsive.
+			- If Bob doesn’t sign any of the transactions, the funds remain locked, and Alice can demand a refund after a timeout. This timeout mechanism protects Alice from losing funds if Bob becomes unresponsive.
 		- **If Alice Refuses to Sign or Tries to Double-Spend:**
-		    - If Alice tries to backtrack or spend the same funds in multiple ways, the design of the protocol, with a series of incrementally updated transactions signed by both parties, prevents her from successfully double-spending. Only the latest signed transaction has value when closing the channel.
+			- If Alice tries to backtrack or spend the same funds in multiple ways, the design of the protocol, with a series of incrementally updated transactions signed by both parties, prevents her from successfully double-spending. Only the latest signed transaction has value when closing the channel.
 	- **Security Implications and Protections**
 		- **Timeout Refunds:**
-		    - A time-locked refund transaction ensures Alice can get her funds back if Bob refuses to cooperate after locking funds. This feature adds a layer of security against malicious or unresponsive counter-parties.
+			- A time-locked refund transaction ensures Alice can get her funds back if Bob refuses to cooperate after locking funds. This feature adds a layer of security against malicious or unresponsive counter-parties.
 		- **Final Signed State:**
-		    - Since only the last signed transaction can be published, both parties are incentivized to cooperate throughout, ensuring honesty and preventing either party from publishing an old state.
+			- Since only the last signed transaction can be published, both parties are incentivized to cooperate throughout, ensuring honesty and preventing either party from publishing an old state.
 ## 4: Bitcoin Blocks
 - Why group transactions into a single block
 	- Batch Processing of transactions as consensus on each individual transaction would slow the chain down
@@ -958,8 +958,65 @@ function f(uint a) pure returns (uint) {
 - `require(bool condition)`: abort execution and revert state changes if condition is `false` (use for malformed input or error in external component)
 
 # Lecture 7-E: Ethereum Tokens
-## Onecoin - Scamcoin
-- Created by Dr. Ruja Ignatova, aliased as the CryptoQueen
-- Marketed OneCoin as the superior alternative to BitCoin and then vanished
-	- Marketing campaign was successful enough to get Dr. Ignatova featured on a forbes magazine
--
+## **OneCoin Scam**
+1. **OneCoin: The "Bitcoin Killer"**
+	- Marketed as a revolutionary cryptocurrency by Dr. Ruja Ignatova (Cryptoqueen).
+	- Lacked blockchain, operated on a SQL database.
+	- Promised high returns, leading to billions in investor losses.
+	- Timeline:
+		- Rapid revenue growth (2015-2017).
+		- Dr. Ruja disappeared in October 2017 amidst concerns.
+2. **Victim Experience: Jen McAdam**
+	- Initially invested €16,000 personally, convinced others to invest €250,000.
+	- Discovered the lack of blockchain after asking technical questions.
+	- Responses from OneCoin representatives were evasive and misleading.
+3. **Why Scams Work in Crypto**
+	- Exploits excitement around Bitcoin’s success.
+	- Offers the allure of "getting rich quick" through new opportunities.
+	- Lack of technical knowledge among investors aids deception.
+## **Crowdfunding: Initial Coin Offerings (ICOs)**
+1. **Definition and Process**
+	- Crowdfunding mechanism for blockchain projects.
+	- Key Steps:
+		- Develop a whitepaper outlining goals and token specifics.
+		- Create tokens on platforms like Ethereum or Binance Smart Chain.
+		- Sell tokens to raise funds, often in Bitcoin or Ethereum.
+		- Distribute tokens post-ICO for trading or platform use.
+2. **Advantages**
+	- Lower entry barriers for fundraising.
+	- Global access to investors.
+	- Potential speculative gains for early participants.
+3. **Risks**
+	- Lack of regulation increases chances of scams.
+	- Project viability is uncertain; many fail to deliver.
+	- Market volatility affects token value unpredictably.
+4. **Largest ICOs by Funds Raised**
+	- EOS: $4.0 billion.
+	- Telegram Open Network: $1.7 billion.
+	- Others: Filecoin ($257M), Tezos ($232M), etc.
+## **Ethereum Tokens**
+1. **Ethereum Tokens**
+	- **Mechanism:**
+		- Tokens are managed via smart contracts, unlike Ether, which is intrinsic to the Ethereum protocol.
+		- Requires custom smart contracts for token creation and management.
+	- **ERC Standards:**
+		- ERC-20: Fungible tokens (e.g., utility tokens, stablecoins).
+		- ERC-721: Non-fungible tokens (NFTs).
+		- ERC-1155: Hybrid fungible and non-fungible tokens.
+2. **Smart Contracts and Interoperability**
+	- Automate token functionalities like ownership, transfers, and logic.
+	- Ensure compatibility across Ethereum-based apps, wallets, and exchanges.
+	- Tools like OpenZeppelin simplify contract creation and deployment.
+
+### **Practical Application and Development**
+1. **ERC-20 Tokens**
+	- Widely used for fungible tokens in Ethereum's ecosystem.
+	- Features include fungibility, interoperability, and adherence to common standards.
+2. **Deployment of ERC-20 Tokens**
+	- Tools: OpenZeppelin Wizard for rapid contract generation.
+	- Example Use Case:
+		- Create a "Coffee Token" for redemption of goods.
+		- Burn tokens upon use to ensure accountability.
+3. **Testing and Deployment Steps**
+	- Use Remix IDE to compile and deploy smart contracts.
+	- Transfer tokens to different addresses and test burn functionality.
