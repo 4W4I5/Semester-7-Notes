@@ -956,3 +956,10 @@ function f(uint a) pure returns (uint) {
 ## Validations & Assertions
 - `assert(bool condition)`: abort execution and revert state changes if condition is `false` (use for internal error)
 - `require(bool condition)`: abort execution and revert state changes if condition is `false` (use for malformed input or error in external component)
+
+# Lecture 7-E: Ethereum Tokens
+## Onecoin - Scamcoin
+- Created by Dr. Ruja Ignatova, aliased as the CryptoQueen
+- Marketed OneCoin as the superior alternative to BitCoin and then vanished
+	- Marketing campaign was succesful enough to get Dr. Ignatova featured on a forbes magazine
+- 

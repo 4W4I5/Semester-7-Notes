@@ -8,6 +8,6 @@
   "readableLineLength": false,
   "foldHeading": false,
   "defaultViewMode": "source",
-  "smartIndentList": false,
+  "smartIndentList": true,
   "useTab": true
 }
