@@ -19,6 +19,7 @@
 ---
 
 >[!NOTE]
+
 > Sessional 1 Content
 
 # Chapter 2: Decentralized P2P Currency
@@ -431,6 +432,7 @@ No, there is no known attack where the product of time and space complexity is l
 ---
 
 >[!NOTE]
+
 > Sessional 2 + Finals Content
 
 # Lecture 5: Mechanics of Bitcoin
@@ -608,50 +610,44 @@ No, there is no known attack where the product of time and space complexity is l
 	- `Nothing to note here`
 # Lecture 6: The Bitcoin Network
 ## 1) Node Types & Roles
-- **Overview of Nodes**
-	- All nodes in Bitcoin’s P2P network are equal but can have specialized roles.
-	- Key roles:
-		- **Routing** data
-		- **Blockchain Maintenance**
-		- **Mining**
-		- **Wallet Services**
-	- Additional servers:
-		- **Mining pool protocols**
-		- **Lightweight client-access protocols**
-- **Full Nodes**
-	- Perform four main functions:
-		- **Wallet** management
-		- **Mining** (optional for some full nodes)
-		- **Blockchain Storage**
-		- **Network Routing**
-	- Criteria for adding new blocks:
-		- **Meets Hash Target**
-		- **Valid Transactions**
-		- **Chain Consistency** (avoiding forks)
-- **Node Definition**
+- #### **Node Definition**
 	- Any device in the network capable of sending, receiving, or forwarding Bitcoin data.
 	- Examples: Computers, smartphones, servers.
 	- All nodes participate in **routing**; additional functionalities depend on node type.
-- **Functionality of Nodes**
-	- Nodes validate and propagate:
-		- **Transactions**
-		- **Blocks**
-	- Nodes constantly **discover and connect to peers** to ensure resilience.
-- **SPV (Lightweight) Nodes**
-	- Store only **block headers** rather than full transaction data.
-	- Depend on full nodes for **transaction verification**.
-	- Commonly used in mobile wallets due to minimal storage needs.
-- **Fully-Validating Nodes**
-	- Maintain the **entire blockchain** (currently over 40 GB).
-	- Contribute to network security by verifying and relaying every transaction.
-	- Support the network’s decentralization and integrity.
-## 2) Extended Bitcoin Network
-- **Definition**: An expanded version of the Bitcoin P2P network, including specialized protocols and nodes.
-- **Purpose**: Allows diverse devices and services to connect without needing full blockchain storage.
-- **Components**:
-	- **Stratum Protocol**: Used primarily by mining operations. Main protocol for communication b/w nodes
-	- **Pool-Mining Protocols**: Enable pooled mining and reward distribution.
-- **Node Types in the Extended Network**:
+- #### **Overview of Nodes**
+	- **Functionality of Nodes**
+		- Nodes validate and propagate:
+			- **Transactions**
+			- **Blocks**
+		- Nodes constantly **discover and connect to peers** to ensure resilience.
+	- All nodes in Bitcoin’s P2P network are equal but can have specialized roles.
+		- Key roles:
+			- **Routing** data
+			- **Blockchain Maintenance**
+			- **Mining**
+			- **Wallet Services**
+		- Additional servers:
+			- **Mining pool protocols**
+			- **Lightweight client-access protocols**
+- #### Node Types
+	- **Full Nodes**
+		- Perform four main functions:
+			- **Wallet** management
+			- **Mining** (optional for some full nodes)
+			- **Blockchain Storage**
+			- **Network Routing**
+		- Criteria for adding new blocks:
+			- **Meets Hash Target**
+			- **Valid Transactions**
+			- **Chain Consistency** (avoiding forks)
+	- **SPV (Lightweight) Nodes**
+		- Store only **block headers** rather than full transaction data.
+		- Depend on full nodes for **transaction verification**.
+		- Commonly used in mobile wallets due to minimal storage needs.
+	- **Fully-Validating Nodes**
+		- Maintain the **entire blockchain** (currently over 40 GB).
+		- Contribute to network security by verifying and relaying every transaction.
+		- Support the network’s decentralization and integrity.
 	- **Lightweight (SPV) Wallet**:
 		- Includes **Wallet** and **Network Node** on the Bitcoin P2P protocol.
 		- Operates without a blockchain, relying on full nodes for data verification.
@@ -672,6 +668,14 @@ No, there is no known attack where the product of time and space complexity is l
 	- **Solo Miner**:
 		- Contains **mining functionality** with a full blockchain copy and **Network Routing**.
 		- Operates independently on the Bitcoin P2P network, directly contributing to the blockchain.
+## 2) Extended Bitcoin Network
+- **Definition**: An expanded version of the Bitcoin P2P network, including specialized protocols and nodes.
+- **Purpose**: Allows diverse devices and services to connect without needing full blockchain storage.
+- **Components**:
+	- **Stratum Protocol**: Used primarily by mining operations. Main protocol for communication b/w nodes
+	- **Pool-Mining Protocols**: Enable pooled mining and reward distribution.
+- **Node Types in the Extended Network**:
+
 ## 3) Bitcoin Relay Networks
 - **Purpose**: Enhance **block propagation speed**, reducing latency and aiding mining efficiency.
 - **Example**:
