@@ -10,11 +10,16 @@
 | 7-A               | Interfacing with Ethereum                          | :white_check_mark: |
 | 7-B               | Ganache (Local TestNet)                            | :white_check_mark: |
 | 7-C               | Smart Contracts                                    | :white_check_mark: |
-| 7-E               | Ethereum Tokens                                    | :white_check_mark: | 
+| 7-E               | Ethereum Tokens                                    | :white_check_mark: |
 
 > [!WARNING]
 > - Lecture 5 and the unnumbered lecture have a lot of similar content, merged the two
 > - Moved P2SH from Lecture 7-Intro to Lecture 5 with the other locking scripts
+
+---
+
+>[!NOTE]
+> Sessional 1 Content
 
 # Chapter 2: Decentralized P2P Currency
 ## Currency
@@ -418,19 +423,10 @@ No, there is no known attack where the product of time and space complexity is l
 	- The probability is around 63%, assuming block discovery follows an exponential distribution with a 10-minute average.
 - **7b: How should Bob set x so that with 99% confidence, 6 blocks will be found within x minutes?**
 	- Bob should set x to around 60 minutes for 99% confidence that 6 blocks will be found.
+---
 
-| Chapter<br>Number | Chapter<br>Name                                    | Status             |
-| ----------------- | -------------------------------------------------- | ------------------ |
-| 5                 | Mechanics of Bitcoin + Bitcoin Transactions slides | :white_check_mark: |
-| 6                 | The bitcoin network                                | :white_check_mark: |
-| 7-Intro           | Introduction to Ethereum                           | :white_check_mark: |
-| 7-A               | Interfacing with Ethereum                          | :white_check_mark: |
-| 7-B               | Ganache (Local TestNet)                            | :white_check_mark: |
-| 7-C               | Smart Contracts                                    | :white_check_mark: |
-
-> [!WARNING]
-> - Lecture 5 and the unnumbered lecture have a lot of similar content, merged the two
-> - Moved P2SH from Lecture 7-Intro to Lecture 5 with the other locking scripts
+>[!NOTE]
+> Sessional 2 + Finals Content
 
 # Lecture 5: Mechanics of Bitcoin
 ## 1) Transaction Input & Outputs

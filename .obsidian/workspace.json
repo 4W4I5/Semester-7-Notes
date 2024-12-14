@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e977c32fd69d5016",
+        "id": "f587503d330ac9c0",
         "type": "tabs",
         "children": [
           {
-            "id": "50a0b2b3ee7bf8fc",
+            "id": "0dcb08dc3909c511",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -190,8 +190,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b8b68edca48e5359",
+  "active": "0dcb08dc3909c511",
   "lastOpenFiles": [
+    "Blockchain/Finals Prep/Finals Prep Notes.md",
     "Blockchain/Finals Prep/Smart Contracts/Wallet.sol",
     "Blockchain/Finals Prep/Smart Contracts/SimpleFactory.sol",
     "Blockchain/Finals Prep/Smart Contracts/SimpleStorage.sol",
@@ -202,10 +203,8 @@
     "Blockchain/Finals Prep/Smart Contracts/ERC20.sol",
     "Blockchain/Finals Prep/Smart Contracts/Donet.sol",
     "Blockchain/Finals Prep/Smart Contracts/donet.sol",
-    "Blockchain/Finals Prep/Smart Contracts/Coffee.sol",
     "Blockchain/Finals Prep/Smart Contracts.md",
     "README.md",
-    "Blockchain/Finals Prep/Finals Prep Notes.md",
     "IA/Finals Prep/Finals Prep Notes.md",
     "IA/Sessional 2 Prep/Sessional 2 Prep Notes.md",
     "IA/Sessional 1 Prep/Sessional 1 Prep Notes.md",
