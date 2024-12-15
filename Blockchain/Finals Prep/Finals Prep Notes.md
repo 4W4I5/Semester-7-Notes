@@ -89,7 +89,7 @@
 |                   | - Cannot be used for online transactions                  | - High transaction fees                                        |
 |                   |                                                           | - No privacy (all transactions are monitored)                  |
 
-### Challenges of P2P Currency
+### Challenges of P2P Currency (R.S<sup>2</sup>.V.T.A)
 - **Regulatory Issues**:
 	- Lack of government control leads to regulatory uncertainty, making it difficult for P2P currencies to be legally accepted.
 - **Security Risks**:
