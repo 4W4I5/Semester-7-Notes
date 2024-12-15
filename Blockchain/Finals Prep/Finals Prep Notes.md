@@ -142,7 +142,7 @@
 ## 3.1: Cryptographic Hash Functions
 
 A **hash function** processes an input of arbitrary size and produces a fixed-size output (e.g., 256 bits). It must be computationally efficient, meaning the time to compute the hash should scale linearly with the input size. A general-purpose hash function can be used for data structures like hash tables, but **cryptographic hash functions** require additional properties:
-#### Acronym: C.H.P
+### Cryptographic Hash Properties (Cr.H.Pf)
 1. **Collision-Resistance**:
 	- A cryptographic hash function is resistant to collisions if it is computationally infeasible to find two distinct inputs (x and y, where x ≠ y) such that `H(x) = H(y)`. Although collisions theoretically exist (because the input space is infinite and the output space is finite), the goal is to make finding them practically impossible.
 	- Example: For SHA-256, you’d need to hash 2^128 inputs before finding a collision, which would take more time than the universe’s age, even with modern computing power.
