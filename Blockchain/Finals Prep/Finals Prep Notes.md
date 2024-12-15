@@ -19,6 +19,7 @@
 ---
 
 >[!NOTE]
+
 > - Sessional 1 Content
 
 # Chapter 2: Decentralized P2P Currency
@@ -142,6 +143,7 @@
 ## 3.1: Cryptographic Hash Functions
 
 A **hash function** processes an input of arbitrary size and produces a fixed-size output (e.g., 256 bits). It must be computationally efficient, meaning the time to compute the hash should scale linearly with the input size. A general-purpose hash function can be used for data structures like hash tables, but **cryptographic hash functions** require additional properties:
+
 ### Cryptographic Hash Properties (Cr.H.Pf)
 1. **Collision-Resistance**:
 	- A cryptographic hash function is resistant to collisions if it is computationally infeasible to find two distinct inputs (x and y, where x ≠ y) such that `H(x) = H(y)`. Although collisions theoretically exist (because the input space is infinite and the output space is finite), the goal is to make finding them practically impossible.
@@ -247,7 +249,6 @@ In decentralized systems, a **public key** acts as an identity. If a message is 
 			- The proof size and verification time are both `O(log n)`, where `n` is the number of files.
 		- **Digest Size**:
 			- The digest size is constant `O(1)`, as it only stores the root hash.
-	- This protocol ensures sublinear proof size, verification time, and digest size by taking advantage of the logarithmic depth of the Merkle tree.
 
 ## 2. Birthday Attack
 - **Question 1**: Show that the time-space trade-off is parameterizable: we can achieve any space complexity between `O(1)` and `O(2^(n/2))` with a corresponding decrease in time complexity.
@@ -257,7 +258,7 @@ In decentralized systems, a **public key** acts as an identity. If a message is 
 			- The space complexity is `O(t)`.
 		- Thus, we can adjust `t` to achieve any space complexity between `O(1)` (with time `O(2^n)`) and `O(2^(n/2))` (with time `O(2^(n/2))`).
 - **Question 2**: Is there an attack for which the product of time and space complexity is `o(2^n)`?
-	-**Answer**:
+	- **Answer**:
 		- No, there is no known attack where the product of time and space complexity is less than `2^n`. The **birthday paradox** provides the best known trade-off, where the product remains `O(2^n)`. Achieving an attack with a product complexity of `o(2^n)` is currently infeasible in cryptographic contexts.
 
 ## 3. Hash Function Properties
@@ -413,7 +414,9 @@ In decentralized systems, a **public key** acts as an identity. If a message is 
 	- Bob should set x to around 60 minutes for 99% confidence that 6 blocks will be found.
 
 ---
+
 >[!NOTE]
+
 > - Sessional 2 + Finals Content
 ---
 
