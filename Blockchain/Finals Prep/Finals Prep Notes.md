@@ -918,7 +918,7 @@ function close() onlyOwner {
 ```
 
 - `pure` for functions: Disallows modification or access of state.
-- `view` for functions: Disallows modification of state.
+- `view` for functions: Disallows modification of state. Defines 0 Gas usage but will contribute to gas costs if nested within a function that modifies state
 - `payable` for functions: Allows them to receive Ether together with a call.
 - `constant` for state variables: Disallows assignment (except initialization), does not occupy storage slot.
 - `immutable` for state variables: Allows assignment at construction time and is constant when deployed. Is stored in code.
