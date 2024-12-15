@@ -70,9 +70,9 @@
 	- **Challenges in P2P Currency**:
 		- **Ownership**: Determining who owns a unit of currency is difficult.
 		- **Without strong ownership**:
-		- **Forgery**: Users could mint fake currency.
-		- **Double-spending**: Ensuring the same currency isn’t spent twice is challenging.
-		- **Theft**: Hard to distinguish true ownership claims from false ones.
+			- **Forgery**: Users could mint fake currency.
+			- **Double-spending**: Ensuring the same currency isn’t spent twice is challenging.
+			- **Theft**: Hard to distinguish true ownership claims from false ones.
 
 ### Physical Currency VS Electronic Currency
 
