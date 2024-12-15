@@ -272,12 +272,13 @@ In decentralized systems, a **public key** acts as an identity. If a message is 
 ## 4. Randomness in ScroogeCoin
 - **Question**: In ScroogeCoin, if Mallory generates `(sk, pk)` pairs until her secret key matches someone else’s, what will she be able to do? How long will it take on average? What happens if Alice’s random number generator has a bug and her key generation produces only 1,000 distinct pairs?
 	- **Answer**:
-		- **Key Collision**:
-		  If Mallory generates `(sk, pk)` pairs until her secret key matches someone else’s, she could impersonate that person by signing transactions on their behalf. Given ScroogeCoin uses 256-bit secret keys, the probability of finding a collision is approximately `2^-128`, which is practically impossible.
-		- **Average Time**:
-		  On average, it would take `2^128` attempts to find a matching secret key.
+		- **IDEALLY**
+			- **Key Collision**:
+			  If Mallory generates `(sk, pk)` pairs until her secret key matches someone else’s, she could impersonate that person by signing transactions on their behalf. Given ScroogeCoin uses 256-bit secret keys, the probability of finding a collision is approximately `2^-128`, which is practically impossible.
+			- **Average Time**:
+			  On average, it would take `2^128` attempts to find a matching secret key.
 		- **Alice’s Bug**:
-		  If Alice's random number generator only produces 1,000 distinct pairs, Mallory could simply brute-force those possibilities. If the network contains many public keys, this drastically reduces security. For example, if there are 10,000 unique public keys, Mallory could succeed in approximately `1000/10000 = 0.1` trials, making it extremely vulnerable.
+			- If Alice's random number generator only produces 1,000 distinct pairs, Mallory could simply brute-force those possibilities. If the network contains many public keys, this drastically reduces security. For example, if there are 10,000 unique public keys, Mallory could succeed in approximately `1000/10000 = 0.1` trials, making it extremely vulnerable.
 
 ---
 # Chapter 4: How bitcoin achieves decentralization
