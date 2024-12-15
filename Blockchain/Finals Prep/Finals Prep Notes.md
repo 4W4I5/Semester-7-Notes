@@ -19,8 +19,7 @@
 ---
 
 >[!NOTE]
-
-> Sessional 1 Content
+> - Sessional 1 Content
 
 # Chapter 2: Decentralized P2P Currency
 ## Currency
@@ -415,7 +414,7 @@ In decentralized systems, a **public key** acts as an identity. If a message is 
 
 ---
 >[!NOTE]
-> Sessional 2 + Finals Content
+> - Sessional 2 + Finals Content
 ---
 
 # Lecture 5: Mechanics of Bitcoin
