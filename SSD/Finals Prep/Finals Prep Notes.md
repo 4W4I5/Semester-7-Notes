@@ -110,8 +110,28 @@ def set_session_id(response):
 
 ---
 # Lecture 16 & 17: Access Control
+> [!WARNING]
+> Missing code
+
+
+- Use trusted system objects (e.g., server-side session objects) for access authorization decisions.
+- Employ a single, site-wide component for access authorization checks, including libraries for external authorization services.
+- Ensure access controls fail securely.
+- Deny all access if security configuration information is inaccessible.
+- Enforce authorization controls on every request, including those from server-side scripts.
+- Segregate privileged logic from general application code.
+- Restrict access to files, resources, protected URLs, and protected functions to authorized users only.
 ---
 # Lecture 16 & 17: Cryptographic Practices
+> [!WARNING]
+> Missing code
+
+- Implement cryptographic functions on trusted systems to protect secrets from users.
+- Ensure secrets are protected from unauthorized access.
+- Cryptographic modules should fail securely.
+- Use approved random number generators from cryptographic modules for generating random numbers, file names, GUIDs, and strings.
+- Ensure cryptographic modules comply with standards such as FIPS 140-2 or equivalent.
+- Establish and follow a policy and process for managing cryptographic keys.
 ---
 # Lecture 18 & 19: Error Handling
 ---
