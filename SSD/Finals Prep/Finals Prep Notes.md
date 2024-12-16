@@ -104,6 +104,9 @@ def set_session_id(response):
 		- Validates the session ID stored in the session against the session ID from cookies to prevent session hijacking.
 	5. **Session ID Management**:
 		- On each response, updates the session with the current session ID from the cookies.
+> [!WARNING]
+> Missing Auth & Session management 2 code
+
 
 ---
 # Lecture 16 & 17: Access Control
