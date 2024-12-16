@@ -12,4 +12,20 @@
 
 ---
 
-# 
+# Lecture 14 & 15: Session Management
+---
+# Lecture 16 & 17: Access Control
+---
+# Lecture 16 & 17: Cryptographic Practices
+---
+# Lecture 18 & 19: Error Handling
+---
+# Lecture 18 & 19: Data Protection
+---
+# Lecture 20: Database Security, File & Memory Management
+---
+# Lecture 21 & 22: Static Application Security Testing
+---
+# Lecture 23 & 24: Dynamic Application Security Testing
+---
+# Lecture 26: DevSecOps
