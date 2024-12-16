@@ -134,10 +134,45 @@ def set_session_id(response):
 - Establish and follow a policy and process for managing cryptographic keys.
 ---
 # Lecture 18 & 19: Error Handling
+> [!WARNING]
+> Missing code
+
+- Deny access by default in error handling logic for security controls.
+- Implement logging on trusted systems.
+- Ensure logging supports both success and failure of specified security events.
+- Include important log event data in logs.
+- Prevent execution of untrusted data in log viewing interfaces or software.
+- Restrict log access to authorized individuals only.
+- Use a central routine for all logging operations.
+- ### Best Practices
+	- Avoid storing sensitive information in logs (e.g., session identifiers, passwords).
+	- Enable log analysis mechanisms.
+	- Log critical events such as:
+		- Input validation failures.
+		- Authentication attempts (especially failures).
+		- Access control failures.
+		- Apparent tampering events or unexpected state changes.
+		- Attempts with invalid or expired session tokens.
+		- System exceptions.
+		- Administrative functions, including security configuration changes.
+		- Backend TLS connection failures.
 ---
 # Lecture 18 & 19: Data Protection
+> [!WARNING]
+> Missing code
+
+- Implement the principle of least privilege, restricting users to only the necessary functionality, data, and system information required for their tasks.
+- Protect cached or temporary copies of sensitive data on the server from unauthorized access, and purge them as soon as they are no longer needed.
+- Encrypt highly sensitive stored information, such as authentication data, even on the server side.
+- Prevent unauthorized access to server-side source code.
+- Avoid storing passwords, connection strings, or other sensitive data in plaintext or insecure formats on the client side.
+- Remove comments from user-accessible production code that may expose sensitive backend information.
 ---
 # Lecture 20: Database Security, File & Memory Management
+> [!WARNING]
+> Missing code
+
+
 ---
 # Lecture 21 & 22: Static Application Security Testing
 ---
