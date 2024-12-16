@@ -11,6 +11,8 @@
 | :white_check_mark: | Completed                |
 
 # Secure Software Design (SSD)
+> [!WARNING]
+> Content for SSD finals is spread over all 3 files, they would be too large to read through otherwise
 
 | Exam                                                                    | Status             |
 | ----------------------------------------------------------------------- | ------------------ |
