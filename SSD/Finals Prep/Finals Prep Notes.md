@@ -47,6 +47,63 @@
 - ### Session Expiration
 	- Set sessions to expire after a reasonable duration of inactivity to balance usability and security.
 	- For sensitive operations, implement idle session timeouts to ensure user activity is required to maintain session validity.
+- ### Code
+
+```python
+from flask import Flask, session, redirect, url_for, request, flash
+import datetime
+from functools import wraps
+
+app = Flask(__name__)
+app.secret_key = 'supersecretkey'  # Use a secure secret key in production
+
+# Centralized authentication decorator
+def login_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if 'username' not in session:
+            return redirect(url_for('login', next=request.url))
+        return f(*args, **kwargs)
+    return decorated_function
+
+@app.route('/logout')
+@login_required
+def logout():
+    session.pop('username', None)
+    flash('You were successfully logged out')
+    return redirect(url_for('home'))
+
+@app.before_request
+def make_session_permanent():
+    session.permanent = True
+    app.permanent_session_lifetime = datetime.timedelta(minutes=5)  # Set session expiration
+
+@app.before_request
+def check_session_id():
+    if 'session_id' in session:
+        if session['session_id'] != request.cookies.get('session_id'):
+            session.clear()
+            flash('Session is invalid')
+            return redirect(url_for('login'))
+
+@app.after_request
+def set_session_id(response):
+    if 'username' in session:
+        session['session_id'] = request.cookies.get('session_id')
+    return response
+```
+
+- #### Key Features in Session Management:
+	1. **Login Requirement**:
+		- The `login_required` decorator ensures only authenticated users can access specific routes.
+	2. **Logout**:
+		- Removes the session's `username` to log out the user.
+	3. **Session Lifetime**:
+		- Sessions are set to be permanent with an expiration time of 5 minutes of inactivity using `app.permanent_session_lifetime`.
+	4. **Session ID Validation**:
+		- Validates the session ID stored in the session against the session ID from cookies to prevent session hijacking.
+	5. **Session ID Management**:
+		- On each response, updates the session with the current session ID from the cookies.
 
 ---
 # Lecture 16 & 17: Access Control
