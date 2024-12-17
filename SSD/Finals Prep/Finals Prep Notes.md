@@ -47,7 +47,7 @@
 - ### Session Expiration
 	- Set sessions to expire after a reasonable duration of inactivity to balance usability and security.
 	- For sensitive operations, implement idle session timeouts to ensure user activity is required to maintain session validity.
-- ### Code
+- ### Code 1
 
 ```python
 from flask import Flask, session, redirect, url_for, request, flash
@@ -107,6 +107,84 @@ def set_session_id(response):
 > [!WARNING]
 > Missing Auth & Session management 2 code
 
+### Code 2
+
+```python
+from flask import Flask, session, redirect, url_for, request, flash
+import datetime
+from functools import wraps
+
+app = Flask(__name__)
+app.secret_key = 'supersecretkey'  # Use a secure secret key in production
+
+# Centralized authentication decorator
+def login_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if 'username' not in session:
+            return redirect(url_for('login', next=request.url))
+        return f(*args, **kwargs)
+    return decorated_function
+
+@app.route('/logout')
+@login_required
+def logout():
+    session.pop('username', None)
+    flash('You were successfully logged out')
+    return redirect(url_for('home'))
+
+@app.before_request
+def make_session_permanent():
+    session.permanent = True
+    app.permanent_session_lifetime = datetime.timedelta(minutes=5)  # Set session expiration
+
+@app.before_request
+def check_session_id():
+    if 'session_id' in session:
+        if session['session_id'] != request.cookies.get('session_id'):
+            session.clear()
+            flash('Session is invalid')
+            return redirect(url_for('login'))
+
+@app.after_request
+def set_session_id(response):
+    if 'username' in session:
+        session['session_id'] = request.cookies.get('session_id')
+    return response
+```
+
+#### **What is Different Compared to the First Version?**
+
+1. **No Changes in Session Management Code**:
+    - The session management logic in both versions is identical.
+    - Both versions include:
+        - **Session Expiration**:
+            - `make_session_permanent` sets the session lifetime to 5 minutes.
+        - **Session ID Validation**:
+            - `check_session_id` compares session ID in cookies with the session-stored ID to prevent session hijacking.
+        - **Session ID Assignment**:
+            - `set_session_id` updates the session with the cookie-stored `session_id`.
+2. **Password and Authentication Enhancements**:
+    - The second version introduces significant improvements in password and authentication management (e.g., password strength validation, default password detection, reuse prevention, etc.).
+    - However, these changes are unrelated to session management.
+3. **No New Tokens or Advanced Session Logic**:
+    - Per-request tokens or session revalidation for sensitive operations are not implemented in this version either.
+    - No additional handling of concurrent sessions, idle session monitoring, or forced session termination for high-risk activities.
+4. **Session Security**:
+
+    - There are no new enhancements like setting cookie flags (`secure=True` and `httponly=True`) in the second version. These were recommended earlier but not yet implemented.
+
+---
+
+### **Summary of Differences**
+
+The **session management code** remains identical between both versions. However, the second version introduces enhancements in **password management**, **default password detection**, and **password reuse prevention**, which do not directly impact session management.
+
+If you want to further enhance session security, consider:
+
+1. Enforcing `secure=True` and `httponly=True` for session cookies.
+2. Adding per-request tokens for critical actions.
+3. Implementing concurrent session prevention.
 
 ---
 # Lecture 16 & 17: Access Control
