@@ -289,8 +289,8 @@ session['role'] = user['role']
 # Lecture 16 & 17: Cryptographic Practices
 - ### 1. Implement Cryptographic Functions on Trusted Systems to Protect Secrets from Users
 	- **Fernet Encryption**:
-	    - The application uses **Fernet** from the `cryptography` library for **symmetric encryption**. Fernet ensures secure encryption and decryption of sensitive data.
-	    - The cryptographic functions (`encrypt_data` and `decrypt_data`) are implemented securely on the **server-side**, ensuring that secrets are not exposed to users.
+		- The application uses **Fernet** from the `cryptography` library for **symmetric encryption**. Fernet ensures secure encryption and decryption of sensitive data.
+		- The cryptographic functions (`encrypt_data` and `decrypt_data`) are implemented securely on the **server-side**, ensuring that secrets are not exposed to users.
 **Example**:
 
 ```python
@@ -306,7 +306,7 @@ def decrypt_data(encrypted_data):
 
 - ### 2. Ensure Secrets Are Protected from Unauthorized Access
 	- **Session Keys**:
-	    - The session key (`app.secret_key`) is generated using a **cryptographically secure random number generator** (`os.urandom`), ensuring it cannot be easily guessed or compromised.
+		- The session key (`app.secret_key`) is generated using a **cryptographically secure random number generator** (`os.urandom`), ensuring it cannot be easily guessed or compromised.
 
 **Example**:
 
@@ -315,7 +315,7 @@ app.secret_key = os.urandom(24)
 ```
 
 - **Secure Password Storage**:
-    - User passwords are stored as **hashed values** using SHA-256. Hashing ensures that raw passwords are never stored in plain text.
+	- User passwords are stored as **hashed values** using SHA-256. Hashing ensures that raw passwords are never stored in plain text.
 
 **Example**:
 
@@ -325,6 +325,7 @@ users = {
     'user': {'password_hash': sha256(b'userpass').hexdigest(), 'role': 'user'}
 }
 ```
+
 - ### 3. Cryptographic Modules Should Fail Securely
 	- If cryptographic operations fail (e.g., during decryption), the system **fails securely** without exposing sensitive data.
 	- Error messages are generic, and the system does not leak implementation details.
@@ -351,8 +352,8 @@ def internal_server_error(e):
 
 - ### 4. Use Approved Random Number Generators for Secure Randomness
 - The code uses **approved cryptographic random number generators**:
-    - `os.urandom` for generating secure session keys.
-    - `secrets.token_urlsafe` for generating **secure random strings** (e.g., GUIDs, file names).
+	- `os.urandom` for generating secure session keys.
+	- `secrets.token_urlsafe` for generating **secure random strings** (e.g., GUIDs, file names).
 **Example**:
 
 ```python
@@ -361,10 +362,11 @@ def generate_secure_random_string(length=32):
 
 app.secret_key = os.urandom(24)
 ```
+
 - ### 5. Ensure Cryptographic Modules Comply with Standards (e.g., FIPS 140-2)
 - **Fernet**:
-    - The `cryptography` library's Fernet implementation is **FIPS 140-2 compliant**. It uses AES encryption in **CBC mode** with **HMAC for integrity**, meeting strong security standards.
-    - This ensures that encrypted data is protected against tampering.
+	- The `cryptography` library's Fernet implementation is **FIPS 140-2 compliant**. It uses AES encryption in **CBC mode** with **HMAC for integrity**, meeting strong security standards.
+	- This ensures that encrypted data is protected against tampering.
 **Example**:
 
 ```python
@@ -373,8 +375,8 @@ cipher_suite = Fernet(app.config['SECRET_KEY'])
 
 - ### 6. Establish and Follow a Policy and Process for Managing Cryptographic Keys
 - The code includes a **key management policy** to emphasize secure storage of encryption keys.
-    - Keys are expected to be stored in **environment variables** or a secure vault.
-    - If the key is unavailable, the application securely raises an error and refuses to proceed.
+	- Keys are expected to be stored in **environment variables** or a secure vault.
+	- If the key is unavailable, the application securely raises an error and refuses to proceed.
 **Example**:
 
 ```python
@@ -384,15 +386,15 @@ def key_management_policy():
         raise ValueError("Encryption key is not set in the environment variables!")
 ```
 
-### 7. Additional Recommendations
+## 7. Additional Recommendations
 - **Session Security**:
-    - Use the `secure=True` and `httponly=True` flags for session cookies to protect against **XSS** and ensure cookies are only transmitted over secure channels (HTTPS).
+	- Use the `secure=True` and `httponly=True` flags for session cookies to protect against **XSS** and ensure cookies are only transmitted over secure channels (HTTPS).
 - **Key Rotation**:
-    - Periodically rotate encryption keys to limit the impact of a compromised key.
+	- Periodically rotate encryption keys to limit the impact of a compromised key.
 - **Logging and Monitoring**:
-    - Log cryptographic failures (without sensitive data) for monitoring and analysis.
+	- Log cryptographic failures (without sensitive data) for monitoring and analysis.
 - **Input Validation**:
-    - Validate all user-provided input (e.g., encryption data) to prevent misuse of cryptographic functions.
+	- Validate all user-provided input (e.g., encryption data) to prevent misuse of cryptographic functions.
 
 ---
 # Lecture 18 & 19: Error Handling
@@ -422,9 +424,9 @@ handler = logging.handlers.RotatingFileHandler(LOG_FILE, maxBytes=1024 * 1024, b
 
 - ### Ensure Logging Supports Both Success and Failure of Specified Security Events
 	- The application logs both successful and failed events, such as:
-	    - Input validation failures.
-	    - Access control failures.
-	    - Unauthorized attempts to access sensitive endpoints.
+		- Input validation failures.
+		- Access control failures.
+		- Unauthorized attempts to access sensitive endpoints.
 
 **Examples**:
 
@@ -446,10 +448,10 @@ if user != "admin":
 
 - ### Include Important Log Event Data in Logs
 	- Logs include critical details such as:
-	    - Event type.
-	    - HTTP request method and path.
-	    - Remote IP address.
-	    - User information where applicable.
+		- Event type.
+		- HTTP request method and path.
+		- Remote IP address.
+		- User information where applicable.
 **Example**:
 
 ```python
@@ -479,11 +481,12 @@ def view_logs():
 os.makedirs(LOG_DIR, exist_ok=True)
 os.chmod(LOG_DIR, 0o700)
 ```
-- Additionally, only users with the **admin role** can view the log content via the `/logs` endpoint.
 
+- Additionally, only users with the **admin role** can view the log content via the `/logs` endpoint.
 - ### Use a Central Routine for All Logging Operations
 	- A centralized `log_event` function handles all logging operations, ensuring consistent formatting and preventing sensitive data leakage.
 **Example**:
+
 ```python
 def log_event(event_type, details=""):
     if not isinstance(details, str):
@@ -498,11 +501,14 @@ def log_event(event_type, details=""):
 	- **Run Mode Security**:
 		- The `app.run` should explicitly define `debug` set to False to ensure debug mode is disabled
 **Example**:
+
 ```python
 app.run(debug=False)
 ```
+
 	- **Avoid Storing Sensitive Information in Logs**:
 	    - The `log_event` function redacts sensitive details such as passwords to prevent accidental exposure.
+
 **Example**:
 
 ```python
@@ -511,15 +517,15 @@ if "password" in details.lower():
 ```
 
 - **Enable Log Analysis Mechanisms**:
-    - Logs are stored in a structured format (`%(asctime)s - %(name)s - %(levelname)s - %(message)s`), which allows for automated log analysis and monitoring.
+	- Logs are stored in a structured format (`%(asctime)s - %(name)s - %(levelname)s - %(message)s`), which allows for automated log analysis and monitoring.
 - **Log Critical Events**:
-    - Input validation failures.
-    - Access control failures.
-    - Authentication attempts, particularly failures.
-    - Apparent tampering or unexpected state changes.
-    - Attempts with invalid or expired session tokens.
-    - System exceptions.
-    - Administrative activities like log access and configuration changes.
+	- Input validation failures.
+	- Access control failures.
+	- Authentication attempts, particularly failures.
+	- Apparent tampering or unexpected state changes.
+	- Attempts with invalid or expired session tokens.
+	- System exceptions.
+	- Administrative activities like log access and configuration changes.
 
 **Example of Critical Event Logging**:
 
@@ -529,7 +535,7 @@ if response.status_code >= 400:
 ```
 
 - **Backend TLS Connection Failures**:
-    - Log errors and failures related to system or cryptographic modules (e.g., while reading files or processing requests).
+	- Log errors and failures related to system or cryptographic modules (e.g., while reading files or processing requests).
 **Example**:
 
 ```python
@@ -545,13 +551,12 @@ except IOError as e:
 # Lecture 18 & 19: Data Protection
 > [!WARNING]
 > Missing code, N/A in GCR
-
-- Implement the principle of least privilege, restricting users to only the necessary functionality, data, and system information required for their tasks.
-- Protect cached or temporary copies of sensitive data on the server from unauthorized access, and purge them as soon as they are no longer needed.
-- Encrypt highly sensitive stored information, such as authentication data, even on the server side.
-- Prevent unauthorized access to server-side source code.
-- Avoid storing passwords, connection strings, or other sensitive data in plaintext or insecure formats on the client side.
-- Remove comments from user-accessible production code that may expose sensitive backend information.
+- **Least Privilege**: Restrict users using RBAC mechanisms.
+- **Temporary Data**: Securely store and delete cached or temporary data.
+- **Encryption**: Encrypt sensitive stored data using strong cryptographic libraries (e.g., `cryptography`).
+- **Server-Side Source Code**: Block unauthorized access to backend files and directories.
+- **No Plaintext Storage**: Store secrets in environment variables or secure vaults, not in plaintext.
+- **Strip Comments**: Remove comments and debug information from production code.
 ---
 # Lecture 20: Database Security, File & Memory Management
 > [!WARNING]
