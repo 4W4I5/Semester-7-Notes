@@ -104,8 +104,6 @@ def set_session_id(response):
 		- Validates the session ID stored in the session against the session ID from cookies to prevent session hijacking.
 	5. **Session ID Management**:
 		- On each response, updates the session with the current session ID from the cookies.
-> [!WARNING]
-> Missing Auth & Session management 2 code
 
 ## Code 2
 
@@ -1112,7 +1110,6 @@ def process_input(data):
         return "Invalid input"  
 ```
 
-
 #### **SQL Injection Fuzzing**
 
 **Goal:** Test input validation against SQL injection.
@@ -1136,7 +1133,6 @@ def fetch_user(username):
 query = "SELECT * FROM users WHERE name = ?"  
 cursor.execute(query, (username,))  
 ```
-
 
 #### **Buffer Overflow Fuzzing**
 
@@ -1174,6 +1170,7 @@ def process_large_data(data):
 **Vulnerability:** Older versions of dependencies may contain known security risks.
 
 - Example:
+
 ```
 Django==2.2  
 requests==2.19.1  
@@ -1199,12 +1196,15 @@ requests==2.20.0
 ```
 
 - Fix: Update to a secure version.
+
 ```
 requests==2.22.0  
 ```
 
 #### **License Compliance Issues**
+
 **Goal:** Ensure dependencies comply with licensing policies.
+
 - Example:
 
 ```
@@ -1216,8 +1216,11 @@ some-unknown-library==1.0.0
 ```
 lxml==4.6.3  
 ```
+
 #### **Automated SCA in CI/CD Pipelines**
+
 **Goal:** Integrate SCA tools into CI/CD to monitor dependencies continuously.
+
 **Example CI/CD Pipeline:**
 
 ```yaml
@@ -1239,6 +1242,7 @@ jobs:
       run: |  
         safety check --full-report  
 ```
+
 **Fix:** Regularly update dependencies based on tool recommendations.
 
 ## **4. Key Points for Exam Preparation**
@@ -1254,7 +1258,9 @@ jobs:
 ---
 # Lecture 26: DevSecOps
 ## **DevOps**
+
 **Definition:**
+
 DevOps combines Software Development (Dev) and IT Operations (Ops) to shorten the Systems Development Life Cycle (SDLC) and provide continuous delivery with high software quality.
 
 **Key Features:**
@@ -1267,18 +1273,19 @@ DevOps combines Software Development (Dev) and IT Operations (Ops) to shorten th
 **Roles:**
 
 - **Development Team:**
-    - Writes code
-    - Designs new features
-    - Tests features
+	- Writes code
+	- Designs new features
+	- Tests features
 - **Operations Team:**
-    - Manages servers
-    - Handles scaling issues and bandwidth
-    - Ensures security
-    - Manages backups
+	- Manages servers
+	- Handles scaling issues and bandwidth
+	- Ensures security
+	- Manages backups
 
 ## **DevSecOps**
 
 **Definition:**
+
 DevSecOps integrates **Security** into DevOps, embedding security practices throughout the entire SDLC: planning, development, build, test, deploy, operate, and monitor.
 
 **Key Features:**
@@ -1296,63 +1303,60 @@ DevSecOps integrates **Security** into DevOps, embedding security practices thro
 ## **DevSecOps Process for Ransomware Prevention**
 
 **Ransomware:**
+
 A type of malware that encrypts data on a victim’s computer, demanding payment to release it.
 
 ### **Steps to Address Ransomware:**
 
 1. **Develop:**
 
-    - Educate developers about vulnerabilities that can lead to ransomware and related threats.
+	- Educate developers about vulnerabilities that can lead to ransomware and related threats.
 2. **Build & Test:**
 
-    - Verify that no known ransomware vulnerabilities exist in software artifacts, including third-party components and container images.
+	- Verify that no known ransomware vulnerabilities exist in software artifacts, including third-party components and container images.
 3. **Deploy:**
 
-    - Ensure that Infrastructure as Code (IaC) templates, deployment tools, and cloud environments are scanned and free of malware and ransomware.
+	- Ensure that Infrastructure as Code (IaC) templates, deployment tools, and cloud environments are scanned and free of malware and ransomware.
 4. **Update:**
 
-    - Protect CI/CD infrastructure to prevent supply chain attacks that could inject ransomware during updates.
-    - Prioritize and deploy security updates immediately to mitigate ransomware threats.
+	- Protect CI/CD infrastructure to prevent supply chain attacks that could inject ransomware during updates.
+	- Prioritize and deploy security updates immediately to mitigate ransomware threats.
 5. **Monitor:**
 
-    - Implement ransomware-specific monitoring in production environments.
-    - Use tools like File Integrity Monitoring (FIM) and Endpoint Detection and Response (EDR) to identify ransomware activities early.
+	- Implement ransomware-specific monitoring in production environments.
+	- Use tools like File Integrity Monitoring (FIM) and Endpoint Detection and Response (EDR) to identify ransomware activities early.
 6. **Evolve:**
 
-    - Continuously review and update ransomware controls based on lessons learned from recent attacks in relevant industries.
+	- Continuously review and update ransomware controls based on lessons learned from recent attacks in relevant industries.
 
 ## **Examples of Ransomware Attacks**
 
 1. **Colonial Pipeline Attack:**
 
-    - **Incident:** Attackers compromised a VPN password and deployed ransomware on the company’s network.
-    - **Impact:** Shutdown of the fuel pipeline, causing fuel shortages across the East Coast of the U.S.
-    - **Ransom Paid:** $4.5 million.
+	- **Incident:** Attackers compromised a VPN password and deployed ransomware on the company’s network.
+	- **Impact:** Shutdown of the fuel pipeline, causing fuel shortages across the East Coast of the U.S.
+	- **Ransom Paid:** $4.5 million.
 2. **Kaseya Attack:**
 
-    - **Incident:** Attackers injected ransomware into a software update of a trusted IT solution.
-    - **Impact:** Distributed to thousands of organizations, infecting them with ransomware.
+	- **Incident:** Attackers injected ransomware into a software update of a trusted IT solution.
+	- **Impact:** Distributed to thousands of organizations, infecting them with ransomware.
 3. **JBS Foods:**
 
-    - **Incident:** Ransomware attack shut down slaughterhouses in three countries.
-    - **Impact:** Disrupted the global meat supply chain.
-    - **Ransom Paid:** $11 million.
+	- **Incident:** Ransomware attack shut down slaughterhouses in three countries.
+	- **Impact:** Disrupted the global meat supply chain.
+	- **Ransom Paid:** $11 million.
 
 ## **Key Concepts for Exam**
 
 - **DevOps vs. DevSecOps:**
-
-    - Understand the differences and how security is integrated into DevOps to form DevSecOps.
+	- Understand the differences and how security is integrated into DevOps to form DevSecOps.
 - **Benefits of Integrating Security into DevOps:**
-
-    - Faster and more secure software delivery
-    - Reduced compliance costs
-    - Enhanced protection against vulnerabilities and attacks
+	- Faster and more secure software delivery
+	- Reduced compliance costs
+	- Enhanced protection against vulnerabilities and attacks
 - **Steps in DevSecOps for Ransomware Prevention:**
-
-    - Develop, Build & Test, Deploy, Update, Monitor, and Evolve
+	- Develop, Build & Test, Deploy, Update, Monitor, and Evolve
 - **Real-World Ransomware Examples and Solutions:**
-
-    - Familiarize yourself with cases like Colonial Pipeline, Kaseya, and JBS Foods to understand the impact and mitigation strategies.
+	- Familiarize yourself with cases like Colonial Pipeline, Kaseya, and JBS Foods to understand the impact and mitigation strategies.
 
 **Tip:** Focus on the **DevSecOps process steps** and real-world ransomware attack examples, as these are crucial for understanding practical security integration and its importance in modern software development.
