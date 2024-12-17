@@ -858,19 +858,26 @@ int main() {
 1. **SQL Injection**
 	- Vulnerability: Unsanitized user inputs are used in SQL queries.
 	- Example:		```python
-        query = "SELECT * FROM users WHERE id = " + user_id  
-        ```
+		query = "SELECT * FROM users WHERE id = " + user_id
+
+		```
 
 
 	- Fix: Use parameterized queries.		```python
-        query = "SELECT * FROM users WHERE id = ?"  
-        cursor.execute(query, (user_id,))  
-        ```
+
+
+		query = "SELECT * FROM users WHERE id = ?"
+		cursor.execute(query, (user_id,))
+
+
+		```
 
 
 2. **Command Injection**
+
 	- Vulnerability: User inputs are passed to system commands.
 	- Example:
+
 
 
 		```python
@@ -878,12 +885,15 @@ int main() {
         ```
 
 
+
 	- Fix: Use subprocess module with argument sanitization.
+
 
 
 		```python
         subprocess.run(["ls", directory], check=True)  
         ```
+
 
 
 3. **Path Traversal**
@@ -892,13 +902,16 @@ int main() {
 	- Example:
 
 
+
 		```python
         with open("/data/" + filename, "r") as file:  
             return file.read()  
         ```
 
 
+
 	- Fix: Validate file names and sanitize inputs.
+
 
 
 		```python
@@ -909,10 +922,12 @@ int main() {
         ```
 
 
+
 4. **Hardcoded Secrets**
 
 	- Vulnerability: Secrets (e.g., API keys, passwords) are hardcoded in the source code.
 	- Example:
+
 
 
 		```python
@@ -920,12 +935,15 @@ int main() {
         ```
 
 
+
 	- Fix: Use environment variables.
+
 
 
 		```python
         API_KEY = os.getenv("API_KEY")  
         ```
+
 
 
 5. **Insufficient Logging**
@@ -934,9 +952,11 @@ int main() {
 	- Fix: Log security events with appropriate levels.
 
 
+
 		```python
         logging.warning("Failed login attempt for user %s", user)  
         ```
+
 
 
 6. **Weak Cryptography**
@@ -945,17 +965,21 @@ int main() {
 	- Example:
 
 
+
 		```python
         cipher = DES.new(b"12345678", DES.MODE_ECB)  
         ```
 
 
+
 	- Fix: Replace DES with strong algorithms like AES.
+
 
 
 		```python
         cipher = AES.new(b"mysecretpassword", AES.MODE_ECB)  
         ```
+
 
 
 ## **3. Summary Table**
@@ -975,5 +999,343 @@ int main() {
 
 ---
 # Lecture 23 & 24: Dynamic Application Security Testing
+
+## **1. Dynamic Application Security Testing (DAST)**
+### **1.1 Cross-Site Scripting (XSS)**
+
+**Vulnerability:**
+
+- XSS allows attackers to inject malicious scripts into web pages viewed by other users.
+**Example Code:**
+
+```python
+from flask import Flask, request, render_template_string  
+app = Flask(__name__)  
+
+@app.route("/greet", methods=["GET"])  
+def greet():  
+    name = request.args.get("name", "")  
+    return render_template_string(f"<h1>Hello, {name}!</h1>")  
+```
+
+**Fix:** Escape user inputs to prevent script injection.
+
+```python
+from flask import escape  
+
+@app.route("/greet", methods=["GET"])  
+def greet():  
+    name = escape(request.args.get("name", ""))  
+    return render_template_string(f"<h1>Hello, {name}!</h1>")  
+```
+
+**Explanation:**
+
+- **`escape`** sanitizes input by replacing special characters with HTML-safe equivalents.
+### **1.2 SQL Injection**
+
+**Vulnerability:**
+
+- Occurs when user input is directly included in SQL queries, allowing attackers to manipulate the database.
+**Example Code:**
+
+```python
+import sqlite3  
+from flask import Flask, request  
+
+app = Flask(__name__)  
+
+@app.route("/user")  
+def get_user():  
+    user_id = request.args.get("id")  
+    conn = sqlite3.connect("users.db")  
+    cursor = conn.cursor()  
+    cursor.execute("SELECT * FROM users WHERE id = " + user_id)  
+    return cursor.fetchall()  
+```
+
+**Fix:** Use parameterized queries to treat input as data, not executable code.
+
+```python
+cursor.execute("SELECT * FROM users WHERE id = ?", (user_id,))  
+```
+
+**Explanation:**
+
+- Parameterized queries ensure that user input is safely passed to the database query, preventing injection.
+
+---
+
+### **1.3 Command Injection**
+
+**Vulnerability:**
+
+- Occurs when user input is passed to OS commands, potentially allowing arbitrary execution.
+
+**Example Code:**
+
+```python
+import os  
+from flask import Flask, request  
+
+app = Flask(__name__)  
+
+@app.route("/run")  
+def run_command():  
+    command = request.args.get("command")  
+    os.system("echo " + command)  
+    return "Command executed."  
+```
+
+**Fix:** Use `subprocess.run` with proper argument handling.
+
+```python
+import subprocess  
+
+@app.route("/run")  
+def run_command():  
+    command = request.args.get("command")  
+    subprocess.run(["echo", command], check=True)  
+    return "Command executed."  
+```
+
+**Explanation:**
+
+- **`subprocess.run`** safely executes commands with arguments instead of concatenating inputs.
+
+---
+
+## **2. Fuzz Testing**
+
+### **2.1 Overview**
+
+- Fuzz testing (fuzzing) is an automated technique that injects random, malformed, or unexpected inputs into an application to find security flaws.
+- Effective for detecting vulnerabilities like buffer overflows, input validation issues, and crashes.
+
+---
+
+### **2.2 Fuzz Testing Examples**
+
+#### **Basic Input Validation**
+
+**Vulnerability:**
+
+- Insecure handling of input.
+
+**Example Code:**
+
+```python
+def process_input(data):  
+    if data.isdigit():  
+        return int(data) * 2  
+    else:  
+        return "Invalid input"  
+```
+
+**Fuzzing Test Code:**
+
+```python
+from pythonfuzz.main import PythonFuzz  
+
+@PythonFuzz  
+def fuzz_test_input(data):  
+    try:  
+        result = process_input(data.decode("utf-8", "ignore"))  
+    except Exception as e:  
+        print(f"Error found with input: {data} - Exception: {e}")  
+        raise e  
+
+if __name__ == "__main__":  
+    fuzz_test_input()  
+```
+
+**Fix:** Validate input length and content.
+
+```python
+def process_input(data):  
+    if data and data.isdigit() and len(data) < 10:  
+        return int(data) * 2  
+    else:  
+        return "Invalid input"  
+```
+
+---
+
+#### **SQL Injection Fuzzing**
+
+**Goal:** Test input validation against SQL injection.
+
+**Example Code:**
+
+```python
+def fetch_user(username):  
+    connection = sqlite3.connect(":memory:")  
+    cursor = connection.cursor()  
+    cursor.execute("CREATE TABLE users (name TEXT, age INTEGER)")  
+    cursor.execute("INSERT INTO users VALUES ('Alice', 30), ('Bob', 25)")  
+    query = f"SELECT * FROM users WHERE name = '{username}'"  
+    cursor.execute(query)  
+    return cursor.fetchall()  
+```
+
+**Fix:** Use parameterized queries.
+
+```python
+query = "SELECT * FROM users WHERE name = ?"  
+cursor.execute(query, (username,))  
+```
+
+---
+
+#### **Buffer Overflow Fuzzing**
+
+**Vulnerability:** Mishandling large inputs leads to buffer overflow.
+
+**Example Code:**
+
+```python
+def process_large_data(data):  
+    buffer = bytearray(64)  
+    for i, byte in enumerate(data):  
+        buffer[i] = byte  
+```
+
+**Fix:** Limit input size to prevent overflow.
+
+```python
+def process_large_data(data):  
+    buffer = bytearray(64)  
+    for i, byte in enumerate(data[:64]):  
+        buffer[i] = byte  
+```
+
+---
+
+## **3. Software Composition Analysis (SCA)**
+
+### **3.1 Overview**
+
+- **SCA** analyzes third-party libraries and dependencies for known vulnerabilities, version conflicts, and license compliance issues.
+- Crucial for modern applications relying heavily on open-source components.
+
+---
+
+### **3.2 Examples**
+
+#### **Outdated Dependencies**
+
+**Vulnerability:** Older versions of dependencies may contain known security risks.
+
+- Example:
+
+
+	```
+    Django==2.2  
+    requests==2.19.1  
+    pandas==0.24.2  
+    ```
+
+
+- Fix: Update dependencies to secure versions.
+
+
+	```
+    Django==3.2.5  
+    requests==2.22.0  
+    pandas==1.3.0  
+    ```
+
+
+
+---
+
+#### **Vulnerable Dependency with Known CVEs**
+
+**Goal:** Identify dependencies with vulnerabilities using SCA tools.
+
+- Example:
+
+
+	```
+    requests==2.20.0  
+    ```
+
+
+- Fix: Update to a secure version.
+
+
+	```
+    requests==2.22.0  
+    ```
+
+
+
+---
+
+#### **License Compliance Issues**
+
+**Goal:** Ensure dependencies comply with licensing policies.
+
+- Example:
+
+
+	```
+    some-unknown-library==1.0.0  
+    ```
+
+
+- Fix: Replace with compatible alternatives.
+
+
+	```
+    lxml==4.6.3  
+    ```
+
+
+
+---
+
+#### **Automated SCA in CI/CD Pipelines**
+
+**Goal:** Integrate SCA tools into CI/CD to monitor dependencies continuously.
+
+**Example CI/CD Pipeline:**
+
+```yaml
+name: Security Scan  
+on: [push]  
+jobs:  
+  security-scan:  
+    runs-on: ubuntu-latest  
+    steps:  
+    - uses: actions/checkout@v2  
+    - name: Set up Python  
+      uses: actions/setup-python@v2  
+      with:  
+        python-version: '3.x'  
+    - name: Install dependencies  
+      run: |  
+        pip install safety  
+    - name: Run SCA with Safety  
+      run: |  
+        safety check --full-report  
+```
+
+**Fix:** Regularly update dependencies based on tool recommendations.
+
+---
+
+## **4. Key Points for Exam Preparation**
+
+1. **DAST** focuses on runtime vulnerabilities like XSS, SQL Injection, and Command Injection.
+2. **Fuzz Testing** identifies input validation errors, buffer overflows, and parsing issues.
+3. **SCA** helps secure software supply chains by analyzing third-party dependencies.
+4. Understand vulnerabilities and fixes for:
+	- **XSS**: Escape user inputs.
+	- **SQL Injection**: Use parameterized queries.
+	- **Command Injection**: Use `subprocess.run`.
+	- **Buffer Overflow**: Validate input size.
+
+Let me know if you need further clarifications or additional topics for exam preparation.
 ---
 # Lecture 26: DevSecOps
