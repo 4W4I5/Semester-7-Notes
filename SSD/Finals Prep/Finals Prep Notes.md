@@ -495,6 +495,12 @@ def log_event(event_type, details=""):
 ```
 
 - ### Best Practices
+	- **Run Mode Security**:
+		- The `app.run` should explicitly define `debug` set to False to ensure debug mode is disabled
+**Example**:
+```python
+app.run(debug=False)
+```
 	- **Avoid Storing Sensitive Information in Logs**:
 	    - The `log_event` function redacts sensitive details such as passwords to prevent accidental exposure.
 **Example**:
