@@ -3,10 +3,10 @@
 | 14 & 15           | Secure Coding Practices: Session Management                                         | :white_check_mark: |
 | 16 & 17           | Secure Coding Practices: Access Control                                             | :white_check_mark: |
 | 16 & 17           | Secure Coding Practices: Cryptographic Practices                                    | :white_check_mark: |
-| 18 & 19           | Secure Coding Practices: Error Handling                                             | :warning:          |
-| 18 & 19           | Secure Coding Practices: Data Protection                                            | :warning:          |
-| 20                | Secure Coding Practices: Database Security,<br> File Management & Memory Management | :warning:          |
-| 21 & 22           | Code Security Testing: SAST                                                         | :warning:          |
+| 18 & 19           | Secure Coding Practices: Error Handling                                             | :white_check_mark: |
+| 18 & 19           | Secure Coding Practices: Data Protection                                            | :white_check_mark: |
+| 20                | Secure Coding Practices: Database Security,<br> File Management & Memory Management | :white_check_mark: | 
+| 21 & 22           | Code Security Testing Methods                                                       | :warning:          |
 | 23 & 24           | Code Security Testing: DAST                                                         | :warning:          |
 | 26                | DevSecOps                                                                           | :warning:          |
 
@@ -724,7 +724,7 @@ int main() {
     - Securely handle memory allocations.
     - Avoid dangling pointers and memory leaks.
 ---
-# Lecture 21 & 22: Static Application Security Testing
+# Lecture 21 & 22: Code Security Testing Methods
 ---
 # Lecture 23 & 24: Dynamic Application Security Testing
 ---
