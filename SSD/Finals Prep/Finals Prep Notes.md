@@ -562,10 +562,167 @@ except IOError as e:
 
 ---
 # Lecture 20: Database Security, File & Memory Management
-> [!WARNING]
-> Missing code
+- ### **1. Database Security**
+	-**Overview:**
+		- OWASP emphasizes securing database access by enforcing strong authentication, using parameterized queries to prevent SQL injection, and applying least privilege principles. Regular database updates and patching mitigate vulnerabilities.
+	- **Best Practices:**
+		- Use **Parameterized Queries** to prevent SQL Injection.
+		- Enforce **Least Privilege** for database accounts.
+		- Enable **Strong Authentication** mechanisms.
+		- Regularly **patch and update** database systems.
+- ### Example: Secure Database Query with Parameterized Queries (Python + SQL)
+
+```python
+import sqlite3
+
+# Secure SQL query using parameterized statements
+def fetch_user_data(user_id):
+    try:
+        conn = sqlite3.connect("secure_db.db")
+        cursor = conn.cursor()
+
+        # Parameterized query to prevent SQL Injection
+        query = "SELECT * FROM users WHERE id = ?"
+        cursor.execute(query, (user_id,))
+
+        result = cursor.fetchall()
+        print("User Data:", result)
+    except Exception as e:
+        print("Database Error:", e)
+    finally:
+        conn.close()
+
+# Example usage
+fetch_user_data(1)
+```
+
+- ### Example: Principle of Least Privilege
+	- Ensure database users only have the required permissions.
+
+```sql
+-- Create a user with restricted privileges
+CREATE USER 'app_user'@'localhost' IDENTIFIED BY 'StrongPassword123!';
+GRANT SELECT, INSERT, UPDATE ON secure_db.* TO 'app_user'@'localhost';
+```
 
 
+- ### **2. File Management**
+	- **Overview:**
+		- Secure handling of files includes validating file types, enforcing strict access controls, and storing files securely. Avoid executing untrusted files and sanitize file names.
+	- **Best Practices:**
+		- Validate file types and sizes before storage.
+		- Use secure directories for file storage.
+		- **Sanitize file names** to prevent directory traversal attacks.
+		- Avoid execution of untrusted files.
+- ### Example: Secure File Upload Validation (Python)
+```python
+import os
+from werkzeug.utils import secure_filename
+
+UPLOAD_FOLDER = '/secure/uploads'
+ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg'}
+
+def allowed_file(filename):
+    # Validate file type
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+def upload_file(file):
+    if file and allowed_file(file.filename):
+        # Sanitize filename
+        filename = secure_filename(file.filename)
+        file.save(os.path.join(UPLOAD_FOLDER, filename))
+        print("File uploaded successfully!")
+    else:
+        print("Invalid file type!")
+
+# Example usage
+# upload_file(request.files['file'])
+```
+
+- ### Example: Preventing Directory Traversal Attacks
+	- **Do not trust user input for file paths. Use secure, absolute paths.**
+
+```python
+import os
+
+BASE_DIRECTORY = '/secure/uploads'
+
+def safe_file_access(filename):
+    safe_path = os.path.join(BASE_DIRECTORY, os.path.basename(filename))
+    if os.path.commonprefix([safe_path, BASE_DIRECTORY]) != BASE_DIRECTORY:
+        raise ValueError("Invalid file path!")
+    # Access file securely
+    with open(safe_path, 'r') as file:
+        return file.read()
+```
+
+- ## **3. Memory Management**
+	- **Overview:**
+		- Proper memory management avoids vulnerabilities like buffer overflows and use-after-free bugs. Best practices include validating memory access, securely handling pointers, and freeing memory properly.
+	- **Best Practices:**
+		- Use safe functions for memory operations.
+		- **Validate buffer sizes** to avoid overflows.
+		- Securely handle pointers (avoid dangling pointers).
+		- Free unused memory to prevent leaks.
+- ### Example: Avoid Buffer Overflow (C)
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+void safe_function(char *input) {
+    char buffer[50];
+
+    // Ensuring input does not exceed buffer size
+    if (strlen(input) < sizeof(buffer)) {
+        strcpy(buffer, input);
+        printf("Safe input: %s\n", buffer);
+    } else {
+        printf("Error: Input exceeds buffer size!\n");
+    }
+}
+
+int main() {
+    char user_input[100];
+    printf("Enter input: ");
+    fgets(user_input, sizeof(user_input), stdin);
+    safe_function(user_input);
+    return 0;
+}
+```
+
+- ### Example: Prevent Memory Leaks (C++ with Smart Pointers)
+
+```cpp
+#include <iostream>
+#include <memory>
+
+void processData() {
+    // Smart pointer automatically manages memory
+    std::unique_ptr<int> ptr = std::make_unique<int>(10);
+    std::cout << "Value: " << *ptr << std::endl;
+} // Memory is released here automatically
+
+int main() {
+    processData();
+    return 0;
+}
+```
+
+
+#### **Summary Checklist**
+1. **Database Security**:
+    - Use parameterized queries.
+    - Enforce least privilege.
+    - Update and patch databases regularly.
+2. **File Management**:
+    - Validate file types and sizes.
+    - Store files in secure directories.
+    - Sanitize file names to prevent path traversal.
+3. **Memory Management**:
+    - Prevent buffer overflows.
+    - Securely handle memory allocations.
+    - Avoid dangling pointers and memory leaks.
 ---
 # Lecture 21 & 22: Static Application Security Testing
 ---
