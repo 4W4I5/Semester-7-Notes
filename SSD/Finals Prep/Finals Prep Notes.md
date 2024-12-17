@@ -396,15 +396,10 @@ def key_management_policy():
 
 ---
 # Lecture 18 & 19: Error Handling
-> [!WARNING]
-> Missing code
 
-# Logging Security Highlights
-
-### - Deny Access by Default in Error Handling Logic for Security Controls
-
-- The application implements a **403 error handler** that denies access by default when unauthorized access attempts are detected.
-- Unauthorized actions trigger warnings in the log file for audit purposes.
+- ### Deny Access by Default in Error Handling Logic for Security Controls
+	- The application implements a **403 error handler** that denies access by default when unauthorized access attempts are detected.
+	- Unauthorized actions trigger warnings in the log file for audit purposes.
 
 **Example**:
 
@@ -415,10 +410,8 @@ def access_denied(error):
     return jsonify({"error": "Access Denied"}), 403
 ```
 
-### - Implement Logging on Trusted Systems
-
-- Logging operations occur on the server-side using **RotatingFileHandler**. Logs are securely written to a file stored in a **restricted directory** to prevent tampering.
-
+- ### Implement Logging on Trusted Systems
+	- Logging operations occur on the server-side using **RotatingFileHandler**. Logs are securely written to a file stored in a **restricted directory** to prevent tampering.
 **Example**:
 
 ```python
@@ -427,12 +420,11 @@ os.chmod(LOG_DIR, 0o700)  # Restrict directory access for security
 handler = logging.handlers.RotatingFileHandler(LOG_FILE, maxBytes=1024 * 1024, backupCount=5)
 ```
 
-### - Ensure Logging Supports Both Success and Failure of Specified Security Events
-
-- The application logs both successful and failed events, such as:
-    - Input validation failures.
-    - Access control failures.
-    - Unauthorized attempts to access sensitive endpoints.
+- ### Ensure Logging Supports Both Success and Failure of Specified Security Events
+	- The application logs both successful and failed events, such as:
+	    - Input validation failures.
+	    - Access control failures.
+	    - Unauthorized attempts to access sensitive endpoints.
 
 **Examples**:
 
@@ -452,14 +444,12 @@ if user != "admin":
     abort(403)
 ```
 
-### - Include Important Log Event Data in Logs
-
-- Logs include critical details such as:
-    - Event type.
-    - HTTP request method and path.
-    - Remote IP address.
-    - User information where applicable.
-
+- ### Include Important Log Event Data in Logs
+	- Logs include critical details such as:
+	    - Event type.
+	    - HTTP request method and path.
+	    - Remote IP address.
+	    - User information where applicable.
 **Example**:
 
 ```python
@@ -468,11 +458,9 @@ def log_request():
     log_event("Request", f"{request.method} {request.path} requested by {request.remote_addr}")
 ```
 
-### - Prevent Execution of Untrusted Data in Log Viewing Interfaces or Software
-
-- Access to logs is restricted to **authorized individuals** (admins only).
-- Input validation ensures only authenticated admin users can view logs.
-
+- ### Prevent Execution of Untrusted Data in Log Viewing Interfaces or Software
+	- Access to logs is restricted to **authorized individuals** (admins only).
+	- Input validation ensures only authenticated admin users can view logs.
 **Example**:
 
 ```python
@@ -483,25 +471,19 @@ def view_logs():
         return access_denied(403)
 ```
 
-### - Restrict Log Access to Authorized Individuals Only
-
-- Log files are stored in a restricted directory (`0o700`) to ensure that only the application and administrators have access.
-
+- ### Restrict Log Access to Authorized Individuals Only
+	- Log files are stored in a restricted directory (`0o700`) to ensure that only the application and administrators have access.
 **Example**:
 
 ```python
 os.makedirs(LOG_DIR, exist_ok=True)
 os.chmod(LOG_DIR, 0o700)
 ```
-
 - Additionally, only users with the **admin role** can view the log content via the `/logs` endpoint.
 
-### - Use a Central Routine for All Logging Operations
-
-- A centralized `log_event` function handles all logging operations, ensuring consistent formatting and preventing sensitive data leakage.
-
+- ### Use a Central Routine for All Logging Operations
+	- A centralized `log_event` function handles all logging operations, ensuring consistent formatting and preventing sensitive data leakage.
 **Example**:
-
 ```python
 def log_event(event_type, details=""):
     if not isinstance(details, str):
@@ -512,11 +494,9 @@ def log_event(event_type, details=""):
     logger.info(log_message)
 ```
 
-### - Best Practices
-
-- **Avoid Storing Sensitive Information in Logs**:
-    - The `log_event` function redacts sensitive details such as passwords to prevent accidental exposure.
-
+- ### Best Practices
+	- **Avoid Storing Sensitive Information in Logs**:
+	    - The `log_event` function redacts sensitive details such as passwords to prevent accidental exposure.
 **Example**:
 
 ```python
@@ -525,10 +505,8 @@ if "password" in details.lower():
 ```
 
 - **Enable Log Analysis Mechanisms**:
-
     - Logs are stored in a structured format (`%(asctime)s - %(name)s - %(levelname)s - %(message)s`), which allows for automated log analysis and monitoring.
 - **Log Critical Events**:
-
     - Input validation failures.
     - Access control failures.
     - Authentication attempts, particularly failures.
@@ -546,7 +524,6 @@ if response.status_code >= 400:
 
 - **Backend TLS Connection Failures**:
     - Log errors and failures related to system or cryptographic modules (e.g., while reading files or processing requests).
-
 **Example**:
 
 ```python
@@ -555,10 +532,9 @@ except IOError as e:
     return jsonify({"error": "Unable to read logs"}), 500
 ```
 
-### - Additional Notes
-
-- Rotating logs using `RotatingFileHandler` ensures log files do not grow indefinitely, improving manageability and reducing the risk of denial-of-service from excessive log growth.
-- Access control for critical operations (e.g., viewing logs) ensures logs cannot be accessed or manipulated by unauthorized individuals.
+- ### Additional Notes
+	- Rotating logs using `RotatingFileHandler` ensures log files do not grow indefinitely, improving manageability and reducing the risk of denial-of-service from excessive log growth.
+	- Access control for critical operations (e.g., viewing logs) ensures logs cannot be accessed or manipulated by unauthorized individuals.
 ---
 # Lecture 18 & 19: Data Protection
 > [!WARNING]
