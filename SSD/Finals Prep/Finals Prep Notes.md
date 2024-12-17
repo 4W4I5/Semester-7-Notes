@@ -1253,3 +1253,106 @@ jobs:
 	- **Buffer Overflow**: Validate input size.
 ---
 # Lecture 26: DevSecOps
+## **DevOps**
+**Definition:**
+DevOps combines Software Development (Dev) and IT Operations (Ops) to shorten the Systems Development Life Cycle (SDLC) and provide continuous delivery with high software quality.
+
+**Key Features:**
+
+- **Automation Tools:** Utilizes tools like Puppet, Jenkins, GitHub, and various code editors to automate development and operations tasks.
+- **Collaboration:** Emphasizes close collaboration between development and operations teams, often involving role exchanges and shared responsibilities.
+- **High-Scale Application Delivery:** Targets large-scale applications, ensuring that development from coding to production covers all aspects seamlessly.
+- **Continuous Integration and Delivery:** Focuses on automating steps to maintain continuous delivery and integration, ensuring rapid and reliable software releases.
+
+**Roles:**
+
+- **Development Team:**
+    - Writes code
+    - Designs new features
+    - Tests features
+- **Operations Team:**
+    - Manages servers
+    - Handles scaling issues and bandwidth
+    - Ensures security
+    - Manages backups
+
+## **DevSecOps**
+
+**Definition:**
+DevSecOps integrates **Security** into DevOps, embedding security practices throughout the entire SDLC: planning, development, build, test, deploy, operate, and monitor.
+
+**Key Features:**
+
+- **Shared Security Responsibility:** Every employee and team, including development and operations, is responsible for security.
+- **Automated Security Integration:** Combines application development, security, operations, and Infrastructure as Code (IaC) in an automated, continuous delivery cycle.
+- **Protection Against Attacks:** Builds defenses into the development pipeline to prevent supply chain attacks and compromises in CI/CD processes.
+
+**Advantages:**
+
+- **Faster, More Secure Delivery:** Reduces the cost of compliance and accelerates the delivery of secure software.
+- **Enhanced Collaboration:** Security becomes a collective responsibility, fostering better collaboration between teams.
+- **Proactive Security Measures:** Integrates security checks and defenses early in the development process, minimizing vulnerabilities.
+
+## **DevSecOps Process for Ransomware Prevention**
+
+**Ransomware:**
+A type of malware that encrypts data on a victim’s computer, demanding payment to release it.
+
+### **Steps to Address Ransomware:**
+
+1. **Develop:**
+
+    - Educate developers about vulnerabilities that can lead to ransomware and related threats.
+2. **Build & Test:**
+
+    - Verify that no known ransomware vulnerabilities exist in software artifacts, including third-party components and container images.
+3. **Deploy:**
+
+    - Ensure that Infrastructure as Code (IaC) templates, deployment tools, and cloud environments are scanned and free of malware and ransomware.
+4. **Update:**
+
+    - Protect CI/CD infrastructure to prevent supply chain attacks that could inject ransomware during updates.
+    - Prioritize and deploy security updates immediately to mitigate ransomware threats.
+5. **Monitor:**
+
+    - Implement ransomware-specific monitoring in production environments.
+    - Use tools like File Integrity Monitoring (FIM) and Endpoint Detection and Response (EDR) to identify ransomware activities early.
+6. **Evolve:**
+
+    - Continuously review and update ransomware controls based on lessons learned from recent attacks in relevant industries.
+
+## **Examples of Ransomware Attacks**
+
+1. **Colonial Pipeline Attack:**
+
+    - **Incident:** Attackers compromised a VPN password and deployed ransomware on the company’s network.
+    - **Impact:** Shutdown of the fuel pipeline, causing fuel shortages across the East Coast of the U.S.
+    - **Ransom Paid:** $4.5 million.
+2. **Kaseya Attack:**
+
+    - **Incident:** Attackers injected ransomware into a software update of a trusted IT solution.
+    - **Impact:** Distributed to thousands of organizations, infecting them with ransomware.
+3. **JBS Foods:**
+
+    - **Incident:** Ransomware attack shut down slaughterhouses in three countries.
+    - **Impact:** Disrupted the global meat supply chain.
+    - **Ransom Paid:** $11 million.
+
+## **Key Concepts for Exam**
+
+- **DevOps vs. DevSecOps:**
+
+    - Understand the differences and how security is integrated into DevOps to form DevSecOps.
+- **Benefits of Integrating Security into DevOps:**
+
+    - Faster and more secure software delivery
+    - Reduced compliance costs
+    - Enhanced protection against vulnerabilities and attacks
+- **Steps in DevSecOps for Ransomware Prevention:**
+
+    - Develop, Build & Test, Deploy, Update, Monitor, and Evolve
+- **Real-World Ransomware Examples and Solutions:**
+
+    - Familiarize yourself with cases like Colonial Pipeline, Kaseya, and JBS Foods to understand the impact and mitigation strategies.
+
+**Tip:** Focus on the **DevSecOps process steps** and real-world ransomware attack examples, as these are crucial for understanding practical security integration and its importance in modern software development.
