@@ -287,15 +287,113 @@ session['role'] = user['role']
 
 ---
 # Lecture 16 & 17: Cryptographic Practices
-> [!WARNING]
-> Missing code
+- ### 1. Implement Cryptographic Functions on Trusted Systems to Protect Secrets from Users
+	- **Fernet Encryption**:
+	    - The application uses **Fernet** from the `cryptography` library for **symmetric encryption**. Fernet ensures secure encryption and decryption of sensitive data.
+	    - The cryptographic functions (`encrypt_data` and `decrypt_data`) are implemented securely on the **server-side**, ensuring that secrets are not exposed to users.
+**Example**:
 
-- Implement cryptographic functions on trusted systems to protect secrets from users.
-- Ensure secrets are protected from unauthorized access.
-- Cryptographic modules should fail securely.
-- Use approved random number generators from cryptographic modules for generating random numbers, file names, GUIDs, and strings.
-- Ensure cryptographic modules comply with standards such as FIPS 140-2 or equivalent.
-- Establish and follow a policy and process for managing cryptographic keys.
+```python
+def encrypt_data(plain_text):
+    return cipher_suite.encrypt(plain_text.encode())
+
+def decrypt_data(encrypted_data):
+    try:
+        return cipher_suite.decrypt(encrypted_data).decode()
+    except:
+        return "Decryption failed. Data may have been tampered with."
+```
+
+- ### 2. Ensure Secrets Are Protected from Unauthorized Access
+	- **Session Keys**:
+	    - The session key (`app.secret_key`) is generated using a **cryptographically secure random number generator** (`os.urandom`), ensuring it cannot be easily guessed or compromised.
+
+**Example**:
+
+```python
+app.secret_key = os.urandom(24)
+```
+
+- **Secure Password Storage**:
+    - User passwords are stored as **hashed values** using SHA-256. Hashing ensures that raw passwords are never stored in plain text.
+
+**Example**:
+
+```python
+users = {
+    'admin': {'password_hash': sha256(b'adminpass').hexdigest(), 'role': 'admin'},
+    'user': {'password_hash': sha256(b'userpass').hexdigest(), 'role': 'user'}
+}
+```
+- ### 3. Cryptographic Modules Should Fail Securely
+	- If cryptographic operations fail (e.g., during decryption), the system **fails securely** without exposing sensitive data.
+	- Error messages are generic, and the system does not leak implementation details.
+**Example**:
+
+```python
+def decrypt_data(encrypted_data):
+    try:
+        return cipher_suite.decrypt(encrypted_data).decode()
+    except:
+        # Fail securely if decryption fails
+        return "Decryption failed. Data may have been tampered with."
+```
+
+- The application also handles **cryptographic module failures** globally using a `500` error handler.
+
+**Example**:
+
+```python
+@app.errorhandler(500)
+def internal_server_error(e):
+    return "An internal error occurred, and cryptographic operations could not complete securely.", 500
+```
+
+- ### 4. Use Approved Random Number Generators for Secure Randomness
+- The code uses **approved cryptographic random number generators**:
+    - `os.urandom` for generating secure session keys.
+    - `secrets.token_urlsafe` for generating **secure random strings** (e.g., GUIDs, file names).
+**Example**:
+
+```python
+def generate_secure_random_string(length=32):
+    return secrets.token_urlsafe(length)
+
+app.secret_key = os.urandom(24)
+```
+- ### 5. Ensure Cryptographic Modules Comply with Standards (e.g., FIPS 140-2)
+- **Fernet**:
+    - The `cryptography` library's Fernet implementation is **FIPS 140-2 compliant**. It uses AES encryption in **CBC mode** with **HMAC for integrity**, meeting strong security standards.
+    - This ensures that encrypted data is protected against tampering.
+**Example**:
+
+```python
+cipher_suite = Fernet(app.config['SECRET_KEY'])
+```
+
+- ### 6. Establish and Follow a Policy and Process for Managing Cryptographic Keys
+- The code includes a **key management policy** to emphasize secure storage of encryption keys.
+    - Keys are expected to be stored in **environment variables** or a secure vault.
+    - If the key is unavailable, the application securely raises an error and refuses to proceed.
+**Example**:
+
+```python
+def key_management_policy():
+    key = os.getenv('FERNET_SECRET_KEY')
+    if not key:
+        raise ValueError("Encryption key is not set in the environment variables!")
+```
+
+### 7. Additional Recommendations
+- **Session Security**:
+    - Use the `secure=True` and `httponly=True` flags for session cookies to protect against **XSS** and ensure cookies are only transmitted over secure channels (HTTPS).
+- **Key Rotation**:
+    - Periodically rotate encryption keys to limit the impact of a compromised key.
+- **Logging and Monitoring**:
+    - Log cryptographic failures (without sensitive data) for monitoring and analysis.
+- **Input Validation**:
+    - Validate all user-provided input (e.g., encryption data) to prevent misuse of cryptographic functions.
+
 ---
 # Lecture 18 & 19: Error Handling
 > [!WARNING]
