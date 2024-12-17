@@ -1112,7 +1112,6 @@ def process_input(data):
         return "Invalid input"  
 ```
 
----
 
 #### **SQL Injection Fuzzing**
 
@@ -1138,7 +1137,6 @@ query = "SELECT * FROM users WHERE name = ?"
 cursor.execute(query, (username,))  
 ```
 
----
 
 #### **Buffer Overflow Fuzzing**
 
@@ -1162,16 +1160,12 @@ def process_large_data(data):
         buffer[i] = byte  
 ```
 
----
-
 ## **3. Software Composition Analysis (SCA)**
 
 ### **3.1 Overview**
 
 - **SCA** analyzes third-party libraries and dependencies for known vulnerabilities, version conflicts, and license compliance issues.
 - Crucial for modern applications relying heavily on open-source components.
-
----
 
 ### **3.2 Examples**
 
@@ -1180,43 +1174,19 @@ def process_large_data(data):
 **Vulnerability:** Older versions of dependencies may contain known security risks.
 
 - Example:
-
-
-
-
-
-
-	```
-    Django==2.2  
-    requests==2.19.1  
-    pandas==0.24.2  
-    ```
-
-
-
-
-
+```
+Django==2.2  
+requests==2.19.1  
+pandas==0.24.2  
+```
 
 - Fix: Update dependencies to secure versions.
 
-
-
-
-
-
-	```
-    Django==3.2.5  
-    requests==2.22.0  
-    pandas==1.3.0  
-    ```
-
-
-
-
-
-
-
----
+```
+Django==3.2.5  
+requests==2.22.0  
+pandas==1.3.0  
+```
 
 #### **Vulnerable Dependency with Known CVEs**
 
@@ -1224,82 +1194,30 @@ def process_large_data(data):
 
 - Example:
 
-
-
-
-
-
-	```
-    requests==2.20.0  
-    ```
-
-
-
-
-
+```
+requests==2.20.0  
+```
 
 - Fix: Update to a secure version.
-
-
-
-
-
-
-	```
-    requests==2.22.0  
-    ```
-
-
-
-
-
-
-
----
+```
+requests==2.22.0  
+```
 
 #### **License Compliance Issues**
-
 **Goal:** Ensure dependencies comply with licensing policies.
-
 - Example:
 
-
-
-
-
-
-	```
-    some-unknown-library==1.0.0  
-    ```
-
-
-
-
-
+```
+some-unknown-library==1.0.0  
+```
 
 - Fix: Replace with compatible alternatives.
 
-
-
-
-
-
-	```
-    lxml==4.6.3  
-    ```
-
-
-
-
-
-
-
----
-
+```
+lxml==4.6.3  
+```
 #### **Automated SCA in CI/CD Pipelines**
-
 **Goal:** Integrate SCA tools into CI/CD to monitor dependencies continuously.
-
 **Example CI/CD Pipeline:**
 
 ```yaml
@@ -1321,10 +1239,7 @@ jobs:
       run: |  
         safety check --full-report  
 ```
-
 **Fix:** Regularly update dependencies based on tool recommendations.
-
----
 
 ## **4. Key Points for Exam Preparation**
 
@@ -1336,7 +1251,5 @@ jobs:
 	- **SQL Injection**: Use parameterized queries.
 	- **Command Injection**: Use `subprocess.run`.
 	- **Buffer Overflow**: Validate input size.
-
-Let me know if you need further clarifications or additional topics for exam preparation.
 ---
 # Lecture 26: DevSecOps
