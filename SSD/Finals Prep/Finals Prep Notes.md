@@ -551,12 +551,15 @@ except IOError as e:
 # Lecture 18 & 19: Data Protection
 > [!WARNING]
 > Missing code, N/A in GCR
+
+
 - **Least Privilege**: Restrict users using RBAC mechanisms.
 - **Temporary Data**: Securely store and delete cached or temporary data.
 - **Encryption**: Encrypt sensitive stored data using strong cryptographic libraries (e.g., `cryptography`).
 - **Server-Side Source Code**: Block unauthorized access to backend files and directories.
 - **No Plaintext Storage**: Store secrets in environment variables or secure vaults, not in plaintext.
 - **Strip Comments**: Remove comments and debug information from production code.
+
 ---
 # Lecture 20: Database Security, File & Memory Management
 > [!WARNING]
