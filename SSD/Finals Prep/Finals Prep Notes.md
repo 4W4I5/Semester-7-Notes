@@ -544,7 +544,7 @@ except IOError as e:
 ---
 # Lecture 18 & 19: Data Protection
 > [!WARNING]
-> Missing code
+> Missing code, N/A in GCR
 
 - Implement the principle of least privilege, restricting users to only the necessary functionality, data, and system information required for their tasks.
 - Protect cached or temporary copies of sensitive data on the server from unauthorized access, and purge them as soon as they are no longer needed.
