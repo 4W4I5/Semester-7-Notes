@@ -176,10 +176,6 @@ def set_session_id(response):
 
 ---
 # Lecture 16 & 17: Access Control
-> [!WARNING]
-> Missing code
-
-
 - Use trusted system objects (e.g., server-side session objects) for access authorization decisions.
 - Employ a single, site-wide component for access authorization checks, including libraries for external authorization services.
 - Ensure access controls fail securely.
@@ -187,6 +183,108 @@ def set_session_id(response):
 - Enforce authorization controls on every request, including those from server-side scripts.
 - Segregate privileged logic from general application code.
 - Restrict access to files, resources, protected URLs, and protected functions to authorized users only.
+## Code example with points highlighted
+- ### 1. Use Trusted System Objects for Access Authorization Decisions
+	- **Server-Side Session Objects**:
+		- The code uses **Flask's `session` object** to manage user authentication and authorization.
+		- Access control decisions are based on the session-stored information (`username` and `role`) to ensure that authorization decisions are made securely on the **server-side**, not on the client-side.
+**Example**:
+
+```python
+if 'username' not in session:
+    return redirect(url_for('login'))
+```
+
+- ### 2. Employ a Single, Site-Wide Component for Access Authorization Checks
+	- **Centralized Authorization Decorators**:
+		- The `login_required` decorator ensures that access to protected routes is restricted to authenticated users.
+		- The `role_required` decorator enforces **Role-Based Access Control (RBAC)**, ensuring only users with the appropriate role (e.g., `admin`) can access privileged resources.
+		- This centralization makes access control **consistent and reusable** throughout the application.
+**Example**:
+
+```python
+@login_required
+@role_required('admin')
+def admin():
+    return "Admin only area!"
+```
+
+- ### 3. Ensure Access Controls Fail Securely
+	- If a user does not meet access criteria (e.g., incorrect role), the `role_required` decorator securely **denies access** by redirecting the user to an unauthorized page.
+	- No information about restricted resources or logic is exposed.
+**Example**:
+
+```python
+if 'username' not in session or session.get('role') != role:
+    return redirect(url_for('unauthorized'))
+```
+
+- **500 Error Handling**: If the system encounters an internal error and cannot retrieve security configurations, it securely denies access instead of failing open.
+	**Example**:
+
+```python
+@app.errorhandler(500)
+def internal_server_error(e):
+    return "An internal error occurred, and the application could not retrieve the security configuration.", 500
+```
+
+- ### 4. Deny All Access if Security Configuration Information Is Inaccessible
+	- In case of an internal error (`500`), the application does not expose sensitive security information and denies all access.
+	- The **error handler** ensures that the system fails securely.
+- ### 5. Enforce Authorization Controls on Every Request
+	- The **`login_required`** and **`role_required`** decorators ensure that **every protected route** checks for proper authorization.
+	- This enforcement applies even to requests initiated by **server-side scripts**.
+**Example**:
+
+```python
+@login_required
+def dashboard():
+    return f"Welcome to your dashboard, {session['username']}!"
+```
+
+- ### 6. Segregate Privileged Logic from General Application Code
+	- Privileged routes such as the **admin-only section** (`/admin`) are protected using both `login_required` and `role_required('admin')` decorators.
+	- This ensures that admin logic is segregated and inaccessible to general users.
+**Example**:
+
+```python
+@app.route('/admin')
+@login_required
+@role_required('admin')
+def admin():
+    return "Admin only area!"
+```
+
+- ### 7. Restrict Access to Files, Resources, Protected URLs, and Functions
+	- Access to **protected URLs** (`/dashboard`, `/admin`) is restricted using session-based checks.
+	- Unauthorized users are **redirected** to a secure "unauthorized" page with a `403` status code.
+**Example**:
+
+```python
+@app.route('/unauthorized')
+def unauthorized():
+    return "You do not have access to this page!", 403
+```
+
+- ### 8. Additional Recommendations
+	- **Session Security**:
+		- Use `secure=True` and `httponly=True` flags for session cookies to protect against **Cross-Site Scripting (XSS)** and ensure cookies are only sent over **HTTPS**.
+		- Implement session **timeouts** to minimize the risk of hijacked sessions.
+	- **Session Regeneration**:
+		- On successful login, regenerate session IDs to prevent **session fixation attacks**.
+**Example** (additional logic to add):
+
+```python
+session.clear()  # Clear old session
+session['username'] = username
+session['role'] = user['role']
+```
+
+- **Logging and Monitoring**:
+	- Log unauthorized access attempts to detect and monitor potential attacks.
+- **Rate Limiting**:
+	- Implement rate limiting to prevent abuse, such as repeated access attempts to restricted URLs.
+
 ---
 # Lecture 16 & 17: Cryptographic Practices
 > [!WARNING]
