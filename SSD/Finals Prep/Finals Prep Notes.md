@@ -563,11 +563,8 @@ except IOError as e:
 ---
 # Lecture 20: Database Security, File & Memory Management
 - ### **1. Database Security**
-
-	-**Overview:**
-
+	- **Overview:**
 		- OWASP emphasizes securing database access by enforcing strong authentication, using parameterized queries to prevent SQL injection, and applying least privilege principles. Regular database updates and patching mitigate vulnerabilities.
-
 	- **Best Practices:**
 		- Use **Parameterized Queries** to prevent SQL Injection.
 		- Enforce **Least Privilege** for database accounts.
@@ -857,130 +854,86 @@ int main() {
 ## **2. Common Vulnerabilities and Fixes**
 1. **SQL Injection**
 	- Vulnerability: Unsanitized user inputs are used in SQL queries.
-	- Example:		```python
-		query = "SELECT * FROM users WHERE id = " + user_id
+- Example:
 
-		```
+```python
+query = "SELECT * FROM users WHERE id = " + user_id
+```
 
+- Fix: Use parameterized queries.
 
-	- Fix: Use parameterized queries.		```python
-
-
-		query = "SELECT * FROM users WHERE id = ?"
-		cursor.execute(query, (user_id,))
-
-
-		```
-
+```python
+query = "SELECT * FROM users WHERE id = ?"
+cursor.execute(query, (user_id,))
+```
 
 2. **Command Injection**
+- Vulnerability: User inputs are passed to system commands.
+- Example:
 
-	- Vulnerability: User inputs are passed to system commands.
-	- Example:
+```python
+os.system("ls " + directory)  
+```
 
+- Fix: Use subprocess module with argument sanitization.
 
-
-		```python
-        os.system("ls " + directory)  
-        ```
-
-
-
-	- Fix: Use subprocess module with argument sanitization.
-
-
-
-		```python
-        subprocess.run(["ls", directory], check=True)  
-        ```
-
-
+```python
+subprocess.run(["ls", directory], check=True)  
+```
 
 3. **Path Traversal**
+- Vulnerability: Improper file path validation allows unauthorized access to sensitive files.
+- Example:
 
-	- Vulnerability: Improper file path validation allows unauthorized access to sensitive files.
-	- Example:
+```python
+with open("/data/" + filename, "r") as file:  
+return file.read()  
+```
 
+- Fix: Validate file names and sanitize inputs.
 
-
-		```python
-        with open("/data/" + filename, "r") as file:  
-            return file.read()  
-        ```
-
-
-
-	- Fix: Validate file names and sanitize inputs.
-
-
-
-		```python
-        if ".." in filename:  
-            raise ValueError("Invalid filename")  
-        with open(os.path.join("/data", filename), "r") as file:  
-            return file.read()  
-        ```
-
-
+```python
+if ".." in filename:  
+raise ValueError("Invalid filename")  
+with open(os.path.join("/data", filename), "r") as file:  
+return file.read()  
+```
 
 4. **Hardcoded Secrets**
+- Vulnerability: Secrets (e.g., API keys, passwords) are hardcoded in the source code.
+- Example:
 
-	- Vulnerability: Secrets (e.g., API keys, passwords) are hardcoded in the source code.
-	- Example:
+```python
+API_KEY = "my_secret_api_key"  
+```
 
+- Fix: Use environment variables.
 
-
-		```python
-        API_KEY = "my_secret_api_key"  
-        ```
-
-
-
-	- Fix: Use environment variables.
-
-
-
-		```python
-        API_KEY = os.getenv("API_KEY")  
-        ```
-
-
+```python
+API_KEY = os.getenv("API_KEY")  
+```
 
 5. **Insufficient Logging**
-
 	- Vulnerability: Failed logins or suspicious activity are not logged.
 	- Fix: Log security events with appropriate levels.
 
-
-
-		```python
-        logging.warning("Failed login attempt for user %s", user)  
-        ```
-
-
+```python
+logging.warning("Failed login attempt for user %s", user)  
+```
 
 6. **Weak Cryptography**
-
 	- Vulnerability: Use of outdated encryption algorithms (e.g., DES).
 	- Example:
 
+```python
+cipher = DES.new(b"12345678", DES.MODE_ECB)  
+```
 
+- Fix: Replace DES with strong algorithms like AES.
 
-		```python
-        cipher = DES.new(b"12345678", DES.MODE_ECB)  
-        ```
-
-
-
-	- Fix: Replace DES with strong algorithms like AES.
-
-
-
-		```python
-        cipher = AES.new(b"mysecretpassword", AES.MODE_ECB)  
-        ```
-
-
+```python
+cipher = AES.new(b"mysecretpassword", AES.MODE_ECB)  
+```
 
 ## **3. Summary Table**
 
@@ -1229,6 +1182,10 @@ def process_large_data(data):
 - Example:
 
 
+
+
+
+
 	```
     Django==2.2  
     requests==2.19.1  
@@ -1236,7 +1193,15 @@ def process_large_data(data):
     ```
 
 
+
+
+
+
 - Fix: Update dependencies to secure versions.
+
+
+
+
 
 
 	```
@@ -1244,6 +1209,10 @@ def process_large_data(data):
     requests==2.22.0  
     pandas==1.3.0  
     ```
+
+
+
+
 
 
 
@@ -1256,17 +1225,33 @@ def process_large_data(data):
 - Example:
 
 
+
+
+
+
 	```
     requests==2.20.0  
     ```
 
 
+
+
+
+
 - Fix: Update to a secure version.
+
+
+
+
 
 
 	```
     requests==2.22.0  
     ```
+
+
+
+
 
 
 
@@ -1279,17 +1264,33 @@ def process_large_data(data):
 - Example:
 
 
+
+
+
+
 	```
     some-unknown-library==1.0.0  
     ```
 
 
+
+
+
+
 - Fix: Replace with compatible alternatives.
+
+
+
+
 
 
 	```
     lxml==4.6.3  
     ```
+
+
+
+
 
 
 
