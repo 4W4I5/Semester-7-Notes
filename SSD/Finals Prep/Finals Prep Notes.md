@@ -6,9 +6,9 @@
 | 18 & 19           | Secure Coding Practices: Error Handling                                             | :white_check_mark: |
 | 18 & 19           | Secure Coding Practices: Data Protection                                            | :white_check_mark: |
 | 20                | Secure Coding Practices: Database Security,<br> File Management & Memory Management | :white_check_mark: |
-| 21 & 22           | Code Security Testing Methods                                                       | :warning:          |
-| 23 & 24           | Code Security Testing: DAST                                                         | :warning:          |
-| 26                | DevSecOps                                                                           | :warning:          |
+| 21 & 22           | Code Security Testing Methods                                                       | :white_check_mark: |
+| 23 & 24           | Code Security Testing: DAST                                                         | :white_check_mark: |
+| 26                | DevSecOps                                                                           | :white_check_mark: |
 
 ---
 
