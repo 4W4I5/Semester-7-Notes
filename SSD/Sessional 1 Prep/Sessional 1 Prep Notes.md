@@ -66,7 +66,7 @@ Fixing security issues early in the SDLC is much more cost-effective than addres
 			- Determining which threats are most critical.
 		- **Implementing security measures**:
 			- Incorporating protections into the design to reduce or eliminate risks.
-	-  Model Types
+	- Model Types
 		- STRIDE
 			- **Spoofing (S)**: Can an attacker pretend to be someone else?
 			- **Tampering (T)**: Can an attacker modify data or processes?
@@ -121,6 +121,24 @@ Deploying software securely involves **hardening** the application, which means 
 	- Focus on **breadth over depth**: Cover as many potential attack vectors as possible, even if you can’t model all threats in detail.
 	- Every misuse case reduces your system’s vulnerability.
 	- Misuse cases do **NOT** include human/system error
+- ### **Possible Threats & Attacks**
+| **Category**               | **Threat/Attack**                                                                                                |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| **Authentication**         | - Brute Force Attacks- Credential Stuffing- Phishing Attacks- Session Hijacking- Weak Authentication Mechanisms  |
+| **Authorization**          | - Privilege Escalation (Vertical/Horizontal)- Broken Access Control- Misconfigured Permissions                   |
+| **Confidentiality**        | - Data Breaches- Eavesdropping- Insecure API Endpoints- Insecure Data Storage                                    |
+| **Integrity**              | - Data Tampering- Injection Attacks (SQL, NoSQL, Command)- Replay Attacks- Supply Chain Attacks                  |
+| **Availability**           | - Denial of Service (DoS)- Distributed Denial of Service (DDoS)- Ransomware- Resource Exhaustion                 |
+| **Accountability**         | - Log Manipulation- Spoofing Attacks- Repudiation (denying actions taken)                                        |
+| **Network**                | - Man-in-the-Middle (MITM) Attacks- DNS Spoofing/Poisoning- ARP Spoofing- Packet Sniffing                        |
+| **Software/Application**   | - Cross-Site Scripting (XSS)- Cross-Site Request Forgery (CSRF)- Broken Authentication- Insecure Deserialization |
+| **Physical/Environmental** | - Physical Theft- Shoulder Surfing- Environmental Failures (e.g., power outages, fires)                          |
+| **Insider**                | - Malicious Insiders- Negligent Insiders- Third-Party Risks                                                      |
+| **Cryptographic Security** | - Weak or Deprecated Algorithms- Key Exposure- Poor Key Management- Padding Oracle Attacks                       |
+| **Cloud/Virtualization**   | - Account Hijacking- Misconfigured Cloud Services- Hypervisor Exploits                                           |
+| **Social Engineering**     | - Pretexting- Baiting- Tailgating                                                                                |
+| **Emerging Threats**       | - AI/ML Poisoning- IoT Exploits- Quantum Computing Attacks                                                       | 
+
 
 ## Security Oriented Modelling
 - #### **Security-Oriented Development**
