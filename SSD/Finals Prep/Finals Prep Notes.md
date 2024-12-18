@@ -850,7 +850,7 @@ int main() {
 	- **Disadvantages:**
 		- Requires regular updates and maintenance of test suites.
 ## **2. Common Vulnerabilities and Fixes**
-1. **SQL Injection**
+### 1. **SQL Injection**
 	- Vulnerability: Unsanitized user inputs are used in SQL queries.
 - Example:
 
@@ -865,7 +865,7 @@ query = "SELECT * FROM users WHERE id = ?"
 cursor.execute(query, (user_id,))
 ```
 
-2. **Command Injection**
+### 2. **Command Injection**
 - Vulnerability: User inputs are passed to system commands.
 - Example:
 
@@ -879,7 +879,7 @@ os.system("ls " + directory)
 subprocess.run(["ls", directory], check=True)  
 ```
 
-3. **Path Traversal**
+### 3. **Path Traversal**
 - Vulnerability: Improper file path validation allows unauthorized access to sensitive files.
 - Example:
 
@@ -897,7 +897,7 @@ with open(os.path.join("/data", filename), "r") as file:
 return file.read()  
 ```
 
-4. **Hardcoded Secrets**
+### 4. **Hardcoded Secrets**
 - Vulnerability: Secrets (e.g., API keys, passwords) are hardcoded in the source code.
 - Example:
 
@@ -911,17 +911,17 @@ API_KEY = "my_secret_api_key"
 API_KEY = os.getenv("API_KEY")  
 ```
 
-5. **Insufficient Logging**
-	- Vulnerability: Failed logins or suspicious activity are not logged.
-	- Fix: Log security events with appropriate levels.
+### 5. **Insufficient Logging**
+- Vulnerability: Failed logins or suspicious activity are not logged.
+- Fix: Log security events with appropriate levels.
 
 ```python
 logging.warning("Failed login attempt for user %s", user)  
 ```
 
-6. **Weak Cryptography**
-	- Vulnerability: Use of outdated encryption algorithms (e.g., DES).
-	- Example:
+### 6. **Weak Cryptography**
+- Vulnerability: Use of outdated encryption algorithms (e.g., DES).
+- Example:
 
 ```python
 cipher = DES.new(b"12345678", DES.MODE_ECB)  
