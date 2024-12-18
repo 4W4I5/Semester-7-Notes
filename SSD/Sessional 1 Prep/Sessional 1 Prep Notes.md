@@ -122,22 +122,21 @@ Deploying software securely involves **hardening** the application, which means 
 	- Every misuse case reduces your system’s vulnerability.
 	- Misuse cases do **NOT** include human/system error
 - ### **Possible Threats & Attacks**
-| **Category**               | **Threat/Attack**                                                                                                |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| **Authentication**         | - Brute Force Attacks- Credential Stuffing- Phishing Attacks- Session Hijacking- Weak Authentication Mechanisms  |
-| **Authorization**          | - Privilege Escalation (Vertical/Horizontal)- Broken Access Control- Misconfigured Permissions                   |
-| **Confidentiality**        | - Data Breaches- Eavesdropping- Insecure API Endpoints- Insecure Data Storage                                    |
-| **Integrity**              | - Data Tampering- Injection Attacks (SQL, NoSQL, Command)- Replay Attacks- Supply Chain Attacks                  |
-| **Availability**           | - Denial of Service (DoS)- Distributed Denial of Service (DDoS)- Ransomware- Resource Exhaustion                 |
-| **Accountability**         | - Log Manipulation- Spoofing Attacks- Repudiation (denying actions taken)                                        |
-| **Network**                | - Man-in-the-Middle (MITM) Attacks- DNS Spoofing/Poisoning- ARP Spoofing- Packet Sniffing                        |
-| **Software/Application**   | - Cross-Site Scripting (XSS)- Cross-Site Request Forgery (CSRF)- Broken Authentication- Insecure Deserialization |
-| **Physical/Environmental** | - Physical Theft- Shoulder Surfing- Environmental Failures (e.g., power outages, fires)                          |
-| **Insider**                | - Malicious Insiders- Negligent Insiders- Third-Party Risks                                                      |
-| **Cryptographic Security** | - Weak or Deprecated Algorithms- Key Exposure- Poor Key Management- Padding Oracle Attacks                       |
-| **Cloud/Virtualization**   | - Account Hijacking- Misconfigured Cloud Services- Hypervisor Exploits                                           |
-| **Social Engineering**     | - Pretexting- Baiting- Tailgating                                                                                |
-| **Emerging Threats**       | - AI/ML Poisoning- IoT Exploits- Quantum Computing Attacks                                                       | 
+|**Threat Type**|**Examples of Attacks (Excluding Human Error)**|
+| ---                           | ---                                                                                                                                             |
+| **Data Breach**               | - Credential Stuffing<br>- Exploiting Weak Authentication Mechanisms<br>- Insecure API Endpoints                                                        |
+| **Data Tampering**            | - SQL Injection<br>- NoSQL Injection- Command Injection<br>- Supply Chain Attacks                                                                       |
+| **Unauthorized Access**       | - Privilege Escalation (Vertical/Horizontal)<br>- Broken Access Control<br>- Exploiting Misconfigured Permissions                                       |
+| **Eavesdropping**             | - Man-in-the-Middle (MITM) Attacks<br>- Packet Sniffing<br>- ARP Spoofing<br>- Exploiting Unsecured Communication Channels                                  |
+| **Denial of Service**         | - DoS/DDoS Attacks<br>- Resource Exhaustion Attacks (CPU, Memory, Bandwidth Overload)<br>- Ransomware Lockdowns                                         |
+| **Replay Attacks**            | - Session Hijacking<br>- Token Reuse via Captured Data Packets                                                                                      |
+| **Cryptographic Failures**    | - Weak Encryption Algorithms (e.g., MD5, SHA-1)<br>- Exploiting Poor Key Management Practices<br>- Padding Oracle Attacks                               |
+| **Misuse of Software**        | - Cross-Site Scripting (XSS)<br>- Cross-Site Request Forgery (CSRF)<br>- Insecure Deserialization<br>- Exploiting Insecure API Design                       |
+| **Supply Chain Attacks**      | - Malicious Code in Third-Party Libraries<br>- Dependency Tampering<br>- Backdoors in Software Packages                                                 |
+| **Cloud/Virtualization**      | - Account Hijacking via Cloud APIs<br>- Exploiting Misconfigured Cloud Services<br>- Hypervisor Attacks (Compromising Virtual Machines)                 |
+| **IoT Exploits**              | - Compromising Weakly Secured IoT Devices<br>- Pivoting Attacks Through IoT to Core Systems                                                         |
+| **Physical Security Threats** | - Direct Physical Access to Systems (Stolen Hardware)<br>- Physical Tampering of Hardware Components                                                |
+| **Emerging Threats**          | - AI/ML Poisoning (Training Models with Malicious Data)<br>- Exploiting Predictive Systems for Faulty Outputs<br>- Quantum-Based Cryptographic Exploits |
 
 
 ## Security Oriented Modelling
