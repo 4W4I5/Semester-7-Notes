@@ -123,20 +123,20 @@ Deploying software securely involves **hardening** the application, which means 
 	- Misuse cases do **NOT** include human/system error
 - ### **Possible Threats & Attacks**
 
-|**Threat Type**|**Examples of Attacks (Excluding Human Error)**|
-| ---                           | ---                                                                                                                                             |
-| **Data Breach**               | - Bruteforce attacks<br>- Exploiting Weak Authentication Mechanisms<br>- Insecure API Endpoints                                                        |
-| **Data Tampering**            | - SQL Injection<br>- NoSQL Injection<br>- Command Injection<br>- Supply Chain Attacks                                                                       |
+| **Threat Type**               | **Examples of Attacks (Excluding Human Error)**                                                                                                         |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Data Breach**               | - Bruteforce attacks<br>- Exploiting Weak Authentication Mechanisms<br>- Insecure API Endpoints                                                         |
+| **Data Tampering**            | - SQL Injection<br>- NoSQL Injection<br>- Command Injection                                                                                             | 
 | **Unauthorized Access**       | - Privilege Escalation (Vertical/Horizontal)<br>- Broken Access Control<br>- Exploiting Misconfigured Permissions                                       |
-| **Eavesdropping**             | - Man-in-the-Middle (MITM) Attacks<br>- Packet Sniffing<br>- ARP Spoofing<br>- Exploiting Unsecured Communication Channels                                  |
+| **Eavesdropping**             | - Man-in-the-Middle (MITM) Attacks<br>- Packet Sniffing<br>- ARP Spoofing<br>- Exploiting Unsecured Communication Channels                              |
 | **Denial of Service**         | - DoS/DDoS Attacks<br>- Resource Exhaustion Attacks (CPU, Memory, Bandwidth Overload)<br>- Ransomware Lockdowns                                         |
-| **Replay Attacks**            | - Session Hijacking<br>- Token Reuse via Captured Data Packets                                                                                      |
+| **Replay Attacks**            | - Session Hijacking<br>- Token Reuse via Captured Data Packets                                                                                          |
 | **Cryptographic Failures**    | - Weak Encryption Algorithms (e.g., MD5, SHA-1)<br>- Exploiting Poor Key Management Practices<br>- Padding Oracle Attacks                               |
-| **Misuse of Software**        | - Cross-Site Scripting (XSS)<br>- Cross-Site Request Forgery (CSRF)<br>- Insecure Deserialization<br>- Exploiting Insecure API Design                       |
+| **Misuse of Software**        | - Cross-Site Scripting (XSS)<br>- Cross-Site Request Forgery (CSRF)<br>- Insecure Deserialization<br>- Exploiting Insecure API Design                   |
 | **Supply Chain Attacks**      | - Malicious Code in Third-Party Libraries<br>- Dependency Tampering<br>- Backdoors in Software Packages                                                 |
 | **Cloud/Virtualization**      | - Account Hijacking via Cloud APIs<br>- Exploiting Misconfigured Cloud Services<br>- Hypervisor Attacks (Compromising Virtual Machines)                 |
-| **IoT Exploits**              | - Compromising Weakly Secured IoT Devices<br>- Pivoting Attacks Through IoT to Core Systems                                                         |
-| **Physical Security Threats** | - Direct Physical Access to Systems (Stolen Hardware)<br>- Physical Tampering of Hardware Components                                                |
+| **IoT Exploits**              | - Compromising Weakly Secured IoT Devices<br>- Pivoting Attacks Through IoT to Core Systems                                                             |
+| **Physical Security Threats** | - Direct Physical Access to Systems (Stolen Hardware)<br>- Physical Tampering of Hardware Components                                                    |
 | **Emerging Threats**          | - AI/ML Poisoning (Training Models with Malicious Data)<br>- Exploiting Predictive Systems for Faulty Outputs<br>- Quantum-Based Cryptographic Exploits |
 
 ## Security Oriented Modelling
