@@ -122,10 +122,11 @@ Deploying software securely involves **hardening** the application, which means 
 	- Every misuse case reduces your system’s vulnerability.
 	- Misuse cases do **NOT** include human/system error
 - ### **Possible Threats & Attacks**
+
 |**Threat Type**|**Examples of Attacks (Excluding Human Error)**|
 | ---                           | ---                                                                                                                                             |
-| **Data Breach**               | - Credential Stuffing<br>- Exploiting Weak Authentication Mechanisms<br>- Insecure API Endpoints                                                        |
-| **Data Tampering**            | - SQL Injection<br>- NoSQL Injection- Command Injection<br>- Supply Chain Attacks                                                                       |
+| **Data Breach**               | - Bruteforce attacks<br>- Exploiting Weak Authentication Mechanisms<br>- Insecure API Endpoints                                                        |
+| **Data Tampering**            | - SQL Injection<br>- NoSQL Injection<br>- Command Injection<br>- Supply Chain Attacks                                                                       |
 | **Unauthorized Access**       | - Privilege Escalation (Vertical/Horizontal)<br>- Broken Access Control<br>- Exploiting Misconfigured Permissions                                       |
 | **Eavesdropping**             | - Man-in-the-Middle (MITM) Attacks<br>- Packet Sniffing<br>- ARP Spoofing<br>- Exploiting Unsecured Communication Channels                                  |
 | **Denial of Service**         | - DoS/DDoS Attacks<br>- Resource Exhaustion Attacks (CPU, Memory, Bandwidth Overload)<br>- Ransomware Lockdowns                                         |
@@ -137,7 +138,6 @@ Deploying software securely involves **hardening** the application, which means 
 | **IoT Exploits**              | - Compromising Weakly Secured IoT Devices<br>- Pivoting Attacks Through IoT to Core Systems                                                         |
 | **Physical Security Threats** | - Direct Physical Access to Systems (Stolen Hardware)<br>- Physical Tampering of Hardware Components                                                |
 | **Emerging Threats**          | - AI/ML Poisoning (Training Models with Malicious Data)<br>- Exploiting Predictive Systems for Faulty Outputs<br>- Quantum-Based Cryptographic Exploits |
-
 
 ## Security Oriented Modelling
 - #### **Security-Oriented Development**
