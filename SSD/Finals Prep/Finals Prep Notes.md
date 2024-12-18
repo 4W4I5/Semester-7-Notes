@@ -952,12 +952,10 @@ cipher = AES.new(b"mysecretpassword", AES.MODE_ECB)
 # Lecture 23 & 24: Dynamic Application Security Testing
 
 ## **1. Dynamic Application Security Testing (DAST)**
-### **1.1 Cross-Site Scripting (XSS)**
-
-**Vulnerability:**
-
-- XSS allows attackers to inject malicious scripts into web pages viewed by other users.
-**Example Code:**
+- ### **1.1 Cross-Site Scripting (XSS)**
+	- **Vulnerability:**
+		- XSS allows attackers to inject malicious scripts into web pages viewed by other users.
+- **Example Code:**
 
 ```python
 from flask import Flask, request, render_template_string  
@@ -969,7 +967,7 @@ def greet():
     return render_template_string(f"<h1>Hello, {name}!</h1>")  
 ```
 
-**Fix:** Escape user inputs to prevent script injection.
+- **Fix:** Escape user inputs to prevent script injection.
 
 ```python
 from flask import escape  
@@ -980,16 +978,12 @@ def greet():
     return render_template_string(f"<h1>Hello, {name}!</h1>")  
 ```
 
-**Explanation:**
-
-- **`escape`** sanitizes input by replacing special characters with HTML-safe equivalents.
-### **1.2 SQL Injection**
-
-**Vulnerability:**
-
-- Occurs when user input is directly included in SQL queries, allowing attackers to manipulate the database.
-**Example Code:**
-
+- **Explanation:**
+	- **`escape`** sanitizes input by replacing special characters with HTML-safe equivalents.
+- ### **1.2 SQL Injection**
+- **Vulnerability:**
+	- Occurs when user input is directly included in SQL queries, allowing attackers to manipulate the database.
+- **Example Code:**
 ```python
 import sqlite3  
 from flask import Flask, request  
@@ -1005,26 +999,17 @@ def get_user():
     return cursor.fetchall()  
 ```
 
-**Fix:** Use parameterized queries to treat input as data, not executable code.
-
+- **Fix:** Use parameterized queries to treat input as data, not executable code.
 ```python
 cursor.execute("SELECT * FROM users WHERE id = ?", (user_id,))  
 ```
 
-**Explanation:**
-
-- Parameterized queries ensure that user input is safely passed to the database query, preventing injection.
-
----
-
-### **1.3 Command Injection**
-
-**Vulnerability:**
-
-- Occurs when user input is passed to OS commands, potentially allowing arbitrary execution.
-
-**Example Code:**
-
+- **Explanation:**
+	- Parameterized queries ensure that user input is safely passed to the database query, preventing injection.
+- ### **1.3 Command Injection**
+- **Vulnerability:**
+	- Occurs when user input is passed to OS commands, potentially allowing arbitrary execution.
+- **Example Code:**
 ```python
 import os  
 from flask import Flask, request  
@@ -1038,7 +1023,7 @@ def run_command():
     return "Command executed."  
 ```
 
-**Fix:** Use `subprocess.run` with proper argument handling.
+- **Fix:** Use `subprocess.run` with proper argument handling.
 
 ```python
 import subprocess  
@@ -1050,31 +1035,18 @@ def run_command():
     return "Command executed."  
 ```
 
-**Explanation:**
-
-- **`subprocess.run`** safely executes commands with arguments instead of concatenating inputs.
-
----
+- **Explanation:**
+	- **`subprocess.run`** safely executes commands with arguments instead of concatenating inputs.
 
 ## **2. Fuzz Testing**
-
-### **2.1 Overview**
-
-- Fuzz testing (fuzzing) is an automated technique that injects random, malformed, or unexpected inputs into an application to find security flaws.
-- Effective for detecting vulnerabilities like buffer overflows, input validation issues, and crashes.
-
----
-
-### **2.2 Fuzz Testing Examples**
-
-#### **Basic Input Validation**
-
-**Vulnerability:**
-
-- Insecure handling of input.
-
-**Example Code:**
-
+- ### **2.1 Overview**
+	- Fuzz testing (fuzzing) is an automated technique that injects random, malformed, or unexpected inputs into an application to find security flaws.
+	- Effective for detecting vulnerabilities like buffer overflows, input validation issues, and crashes.
+- ### **2.2 Fuzz Testing Examples**
+	- #### **Basic Input Validation**
+		- **Vulnerability:**
+			- Insecure handling of input.
+		- **Example Code:**
 ```python
 def process_input(data):  
     if data.isdigit():  
@@ -1083,8 +1055,7 @@ def process_input(data):
         return "Invalid input"  
 ```
 
-**Fuzzing Test Code:**
-
+- **Fuzzing Test Code:**
 ```python
 from pythonfuzz.main import PythonFuzz  
 
@@ -1100,8 +1071,7 @@ if __name__ == "__main__":
     fuzz_test_input()  
 ```
 
-**Fix:** Validate input length and content.
-
+- **Fix:** Validate input length and content.
 ```python
 def process_input(data):  
     if data and data.isdigit() and len(data) < 10:  
@@ -1110,12 +1080,9 @@ def process_input(data):
         return "Invalid input"  
 ```
 
-#### **SQL Injection Fuzzing**
-
-**Goal:** Test input validation against SQL injection.
-
-**Example Code:**
-
+- #### **SQL Injection Fuzzing**
+	- **Goal:** Test input validation against SQL injection.
+- **Example Code:**
 ```python
 def fetch_user(username):  
     connection = sqlite3.connect(":memory:")  
@@ -1126,20 +1093,15 @@ def fetch_user(username):
     cursor.execute(query)  
     return cursor.fetchall()  
 ```
-
-**Fix:** Use parameterized queries.
-
+- **Fix:** Use parameterized queries.
 ```python
 query = "SELECT * FROM users WHERE name = ?"  
 cursor.execute(query, (username,))  
 ```
 
-#### **Buffer Overflow Fuzzing**
-
-**Vulnerability:** Mishandling large inputs leads to buffer overflow.
-
-**Example Code:**
-
+- #### **Buffer Overflow Fuzzing**
+	- **Vulnerability:** Mishandling large inputs leads to buffer overflow.
+- **Example Code:**
 ```python
 def process_large_data(data):  
     buffer = bytearray(64)  
@@ -1147,8 +1109,7 @@ def process_large_data(data):
         buffer[i] = byte  
 ```
 
-**Fix:** Limit input size to prevent overflow.
-
+- **Fix:** Limit input size to prevent overflow.
 ```python
 def process_large_data(data):  
     buffer = bytearray(64)  
@@ -1158,19 +1119,13 @@ def process_large_data(data):
 
 ## **3. Software Composition Analysis (SCA)**
 
-### **3.1 Overview**
-
-- **SCA** analyzes third-party libraries and dependencies for known vulnerabilities, version conflicts, and license compliance issues.
-- Crucial for modern applications relying heavily on open-source components.
-
-### **3.2 Examples**
-
-#### **Outdated Dependencies**
-
-**Vulnerability:** Older versions of dependencies may contain known security risks.
-
+- ### **3.1 Overview**
+	- **SCA** analyzes third-party libraries and dependencies for known vulnerabilities, version conflicts, and license compliance issues.
+	- Crucial for modern applications relying heavily on open-source components.
+- ### **3.2 Examples**
+	- #### **Outdated Dependencies**
+		- **Vulnerability:** Older versions of dependencies may contain known security risks.
 - Example:
-
 ```
 Django==2.2  
 requests==2.19.1  
@@ -1178,50 +1133,36 @@ pandas==0.24.2
 ```
 
 - Fix: Update dependencies to secure versions.
-
 ```
 Django==3.2.5  
 requests==2.22.0  
 pandas==1.3.0  
 ```
 
-#### **Vulnerable Dependency with Known CVEs**
-
-**Goal:** Identify dependencies with vulnerabilities using SCA tools.
-
+- #### **Vulnerable Dependency with Known CVEs**
+	- **Goal:** Identify dependencies with vulnerabilities using SCA tools.
 - Example:
-
 ```
 requests==2.20.0  
 ```
-
 - Fix: Update to a secure version.
-
 ```
 requests==2.22.0  
 ```
-
-#### **License Compliance Issues**
-
-**Goal:** Ensure dependencies comply with licensing policies.
-
+- #### **License Compliance Issues**
+	- **Goal:** Ensure dependencies comply with licensing policies.
 - Example:
-
 ```
 some-unknown-library==1.0.0  
 ```
-
 - Fix: Replace with compatible alternatives.
-
 ```
 lxml==4.6.3  
 ```
 
-#### **Automated SCA in CI/CD Pipelines**
-
-**Goal:** Integrate SCA tools into CI/CD to monitor dependencies continuously.
-
-**Example CI/CD Pipeline:**
+- #### **Automated SCA in CI/CD Pipelines**
+	- **Goal:** Integrate SCA tools into CI/CD to monitor dependencies continuously.
+- **Example CI/CD Pipeline:**
 
 ```yaml
 name: Security Scan  
@@ -1242,11 +1183,8 @@ jobs:
       run: |  
         safety check --full-report  
 ```
-
-**Fix:** Regularly update dependencies based on tool recommendations.
-
+- **Fix:** Regularly update dependencies based on tool recommendations.
 ## **4. Key Points for Exam Preparation**
-
 1. **DAST** focuses on runtime vulnerabilities like XSS, SQL Injection, and Command Injection.
 2. **Fuzz Testing** identifies input validation errors, buffer overflows, and parsing issues.
 3. **SCA** helps secure software supply chains by analyzing third-party dependencies.
@@ -1258,96 +1196,68 @@ jobs:
 ---
 # Lecture 26: DevSecOps
 ## **DevOps**
-
-**Definition:**
-
-DevOps combines Software Development (Dev) and IT Operations (Ops) to shorten the Systems Development Life Cycle (SDLC) and provide continuous delivery with high software quality.
-
-**Key Features:**
-
-- **Automation Tools:** Utilizes tools like Puppet, Jenkins, GitHub, and various code editors to automate development and operations tasks.
-- **Collaboration:** Emphasizes close collaboration between development and operations teams, often involving role exchanges and shared responsibilities.
-- **High-Scale Application Delivery:** Targets large-scale applications, ensuring that development from coding to production covers all aspects seamlessly.
-- **Continuous Integration and Delivery:** Focuses on automating steps to maintain continuous delivery and integration, ensuring rapid and reliable software releases.
-
-**Roles:**
-
-- **Development Team:**
-	- Writes code
-	- Designs new features
-	- Tests features
-- **Operations Team:**
-	- Manages servers
-	- Handles scaling issues and bandwidth
-	- Ensures security
-	- Manages backups
-
+- **Definition:**
+	- DevOps combines Software Development (Dev) and IT Operations (Ops) to shorten the Systems Development Life Cycle (SDLC) and provide continuous delivery with high software quality.
+- **Key Features:**
+	- **Automation Tools:** Utilizes tools like Puppet, Jenkins, GitHub, and various code editors to automate development and operations tasks.
+	- **Collaboration:** Emphasizes close collaboration between development and operations teams, often involving role exchanges and shared responsibilities.
+	- **High-Scale Application Delivery:** Targets large-scale applications, ensuring that development from coding to production covers all aspects seamlessly.
+	- **Continuous Integration and Delivery:** Focuses on automating steps to maintain continuous delivery and integration, ensuring rapid and reliable software releases.
+- **Roles:**
+	- **Development Team:**
+		- Writes code
+		- Designs new features
+		- Tests features
+	- **Operations Team:**
+		- Manages servers
+		- Handles scaling issues and bandwidth
+		- Ensures security
+		- Manages backups
 ## **DevSecOps**
-
-**Definition:**
-
-DevSecOps integrates **Security** into DevOps, embedding security practices throughout the entire SDLC: planning, development, build, test, deploy, operate, and monitor.
-
-**Key Features:**
-
-- **Shared Security Responsibility:** Every employee and team, including development and operations, is responsible for security.
-- **Automated Security Integration:** Combines application development, security, operations, and Infrastructure as Code (IaC) in an automated, continuous delivery cycle.
-- **Protection Against Attacks:** Builds defenses into the development pipeline to prevent supply chain attacks and compromises in CI/CD processes.
-
-**Advantages:**
-
-- **Faster, More Secure Delivery:** Reduces the cost of compliance and accelerates the delivery of secure software.
-- **Enhanced Collaboration:** Security becomes a collective responsibility, fostering better collaboration between teams.
-- **Proactive Security Measures:** Integrates security checks and defenses early in the development process, minimizing vulnerabilities.
+- **Definition:**
+	- DevSecOps integrates **Security** into DevOps, embedding security practices throughout the entire SDLC: planning, development, build, test, deploy, operate, and monitor.
+- **Key Features:**
+	- **Shared Security Responsibility:** Every employee and team, including development and operations, is responsible for security.
+	- **Automated Security Integration:** Combines application development, security, operations, and Infrastructure as Code (IaC) in an automated, continuous delivery cycle.
+	- **Protection Against Attacks:** Builds defenses into the development pipeline to prevent supply chain attacks and compromises in CI/CD processes.
+- **Advantages:**
+	- **Faster, More Secure Delivery:** Reduces the cost of compliance and accelerates the delivery of secure software.
+	- **Enhanced Collaboration:** Security becomes a collective responsibility, fostering better collaboration between teams.
+	- **Proactive Security Measures:** Integrates security checks and defenses early in the development process, minimizing vulnerabilities.
 
 ## **DevSecOps Process for Ransomware Prevention**
-
-**Ransomware:**
-
-A type of malware that encrypts data on a victim’s computer, demanding payment to release it.
-
-### **Steps to Address Ransomware:**
-
-1. **Develop:**
-
-	- Educate developers about vulnerabilities that can lead to ransomware and related threats.
-2. **Build & Test:**
-
-	- Verify that no known ransomware vulnerabilities exist in software artifacts, including third-party components and container images.
-3. **Deploy:**
-
-	- Ensure that Infrastructure as Code (IaC) templates, deployment tools, and cloud environments are scanned and free of malware and ransomware.
-4. **Update:**
-
-	- Protect CI/CD infrastructure to prevent supply chain attacks that could inject ransomware during updates.
-	- Prioritize and deploy security updates immediately to mitigate ransomware threats.
-5. **Monitor:**
-
-	- Implement ransomware-specific monitoring in production environments.
-	- Use tools like File Integrity Monitoring (FIM) and Endpoint Detection and Response (EDR) to identify ransomware activities early.
-6. **Evolve:**
-
-	- Continuously review and update ransomware controls based on lessons learned from recent attacks in relevant industries.
+- **Ransomware:**
+	- A type of malware that encrypts data on a victim’s computer, demanding payment to release it.
+- ### **Steps to Address Ransomware:**
+	1. **Develop:**
+		- Educate developers about vulnerabilities that can lead to ransomware and related threats.
+	2. **Build & Test:**
+		- Verify that no known ransomware vulnerabilities exist in software artifacts, including third-party components and container images.
+	3. **Deploy:**
+		- Ensure that Infrastructure as Code (IaC) templates, deployment tools, and cloud environments are scanned and free of malware and ransomware.
+	4. **Update:**
+		- Protect CI/CD infrastructure to prevent supply chain attacks that could inject ransomware during updates.
+		- Prioritize and deploy security updates immediately to mitigate ransomware threats.
+	5. **Monitor:**
+		- Implement ransomware-specific monitoring in production environments.
+		- Use tools like File Integrity Monitoring (FIM) and Endpoint Detection and Response (EDR) to identify ransomware activities early.
+	6. **Evolve:**
+		- Continuously review and update ransomware controls based on lessons learned from recent attacks in relevant industries.
 
 ## **Examples of Ransomware Attacks**
-
 1. **Colonial Pipeline Attack:**
-
 	- **Incident:** Attackers compromised a VPN password and deployed ransomware on the company’s network.
 	- **Impact:** Shutdown of the fuel pipeline, causing fuel shortages across the East Coast of the U.S.
 	- **Ransom Paid:** $4.5 million.
 2. **Kaseya Attack:**
-
 	- **Incident:** Attackers injected ransomware into a software update of a trusted IT solution.
 	- **Impact:** Distributed to thousands of organizations, infecting them with ransomware.
 3. **JBS Foods:**
-
 	- **Incident:** Ransomware attack shut down slaughterhouses in three countries.
 	- **Impact:** Disrupted the global meat supply chain.
 	- **Ransom Paid:** $11 million.
 
 ## **Key Concepts for Exam**
-
 - **DevOps vs. DevSecOps:**
 	- Understand the differences and how security is integrated into DevOps to form DevSecOps.
 - **Benefits of Integrating Security into DevOps:**
