@@ -1,6 +1,3 @@
-> [!NOTE]
-> - While the tables for both STRIDE & DREAD modelling have been added at the end, try to first solve them on your own
-> - Added graded task into notes as well but not sure if its included
 
 | Lecture<br>Number | Lecture<br>Name                                   | Status                                            |
 | ----------------- | ------------------------------------------------- | ------------------------------------------------- |
