@@ -22,13 +22,27 @@
             }
           },
           {
+            "id": "5e321e38d3bf79ce",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SSD/Finals Prep/Finals Prep Notes.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Finals Prep Notes"
+            }
+          },
+          {
             "id": "123e91aabac4b2db",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "SSD/Sessional 1 Prep/Sessional 1 Prep Notes.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
@@ -37,6 +51,26 @@
           }
         ],
         "currentTab": 1
+      },
+      {
+        "id": "a9518c09bec387ea",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3b4244e9dffa9e0e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SSD/Sessional 2 Prep/Sessional 2 Prep Notes.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Sessional 2 Prep Notes"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -206,12 +240,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "123e91aabac4b2db",
+  "active": "5e321e38d3bf79ce",
   "lastOpenFiles": [
     "README.md",
-    "SSD/Finals Prep/Finals Prep Notes.md",
-    "SSD/Sessional 2 Prep/Sessional 2 Prep Notes.md",
     "SSD/Sessional 1 Prep/Sessional 1 Prep Notes.md",
+    "SSD/Sessional 2 Prep/Sessional 2 Prep Notes.md",
+    "SSD/Finals Prep/Finals Prep Notes.md",
     "SSD/Note Track.md",
     "Blockchain/Finals Prep/Finals Prep Notes.md",
     "Blockchain/Finals Prep/Smart Contracts/Wallet.sol",
