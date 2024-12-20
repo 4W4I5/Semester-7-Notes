@@ -70,7 +70,7 @@ def login_required(f):
 @login_required
 def logout():
     session.pop('username', None)
-    flash('You were successfully logged out')
+    flash('You were successfully logged out')+
     return redirect(url_for('home'))
 
 @app.before_request
