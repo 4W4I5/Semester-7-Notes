@@ -723,134 +723,20 @@ int main() {
 ---
 # Lecture 21 & 22: Code Security Testing Methods
 ## **1. Code Security Testing Methods**
-- ### **1.1 Static Code Analysis (SAST)**
-	- **Description:**
-		- SAST is the process of analyzing source code _without execution_ to identify vulnerabilities like SQL injection, buffer overflows, insecure coding practices, and other security flaws.
-		- Conducted in the early stages of development as part of the Secure Software Development Life Cycle (SDLC).
-	- **Tools:**
-		- SonarQube
-		- Checkmarx
-		- Veracode
-		- Fortify
-	- **Advantages:**
-		- Detects issues early before code is executed.
-		- Integrates well into CI/CD pipelines, allowing automation.
-		- Identifies common vulnerabilities like injection flaws and improper error handling.
-	- **Disadvantages:**
-		- Produces **false positives** where non-critical issues are flagged.
-		- Cannot identify vulnerabilities that arise only during **runtime** execution.
-- ### **1.2 Dynamic Code Analysis (DAST)**
-	- **Description:**
-		- DAST analyzes the application while it is running to uncover vulnerabilities such as authentication flaws, misconfigurations, and insecure APIs.
-		- Focuses on real-world attack scenarios and runtime behaviors.
-	- **Tools:**
-		- OWASP ZAP
-		- Burp Suite
-		- Acunetix
-		- Netsparker
-	- **Advantages:**
-		- Detects **runtime vulnerabilities** such as logic flaws and misconfigurations.
-		- Simulates real-world attacks on the application to assess its security posture.
-	- **Disadvantages:**
-		- Requires the application to be in a **deployable state**.
-		- Cannot detect vulnerabilities in source code before runtime.
-- ### **1.3 Manual Code Review**
-	- **Description:**
-		- Security experts or developers manually inspect the code to identify vulnerabilities, insecure design patterns, and deviations from secure coding guidelines.
-		- Requires following established standards like **OWASP**, **CERT**, and secure coding best practices.
-	- **Best Practices:**
-		- Focus on input validation, output encoding, authentication, and encryption.
-		- Prioritize reviewing critical code areas (e.g., business logic).
-	- **Advantages:**
-		- Can uncover **complex logic flaws** that automated tools may miss.
-		- Allows detailed analysis of custom or non-standard implementations.
-	- **Disadvantages:**
-		- Time-consuming and labor-intensive.
-		- Requires expertise in secure coding and understanding application logic.
-- ### **1.4 Peer Code Review**
-	- **Description:**
-		- Developers review each other's code as part of the development workflow (e.g., using **pull requests** on GitHub).
-	- **Advantages:**
-		- Identifies issues early in development.
-		- Promotes knowledge sharing and best practices among team members.
-	- **Disadvantages:**
-		- Developers may overlook **security-specific flaws** without proper training.
-		- Limited scope compared to dedicated security reviews.
-- ### **1.5 Fuzz Testing (Fuzzing)**
-	- **Description:**
-		- Automated testing that feeds an application with random, unexpected, or malformed inputs to uncover vulnerabilities like crashes, buffer overflows, or unhandled exceptions.
-	- **Tools:**
-		- AFL (American Fuzzy Lop)
-		- Peach Fuzzer
-		- Sulley Framework
-		- libFuzzer
-	- **Advantages:**
-		- Highly effective at finding memory-related vulnerabilities (e.g., buffer overflows).
-		- Can identify application weaknesses under unusual input conditions.
-	- **Disadvantages:**
-		- Resource-intensive and requires a well-defined test environment.
-		- Difficult to analyze the root cause of discovered issues.
-- ### **1.6 Penetration Testing (Pen Testing)**
-	- **Description:**
-		- Simulates real-world attacks to identify and exploit vulnerabilities in an application.
-		- Types:
-			- **Black-box testing:** No prior knowledge of the application.
-			- **White-box testing:** Full access to source code and architecture.
-			- **Gray-box testing:** Partial knowledge of the application.
-	- **Advantages:**
-		- Mimics real-world attack scenarios to identify critical vulnerabilities.
-		- Assesses the application’s **defense mechanisms** and overall security posture.
-	- **Disadvantages:**
-		- Time-consuming and expensive.
-		- Internal flaws may remain undetected unless white-box or gray-box testing is performed.
-- ### **1.7 Security Unit Testing**
-	- **Description:**
-		- Integrates security-specific checks into unit tests to verify secure behavior of individual functions, modules, or classes.
-	- **Tools:**
-		- JUnit (Java)
-		- pytest (Python)
-		- NUnit (C#)
-	- **Advantages:**
-		- Detects security issues early in the development process.
-		- Seamlessly integrates with standard testing frameworks.
-	- **Disadvantages:**
-		- Limited scope as it focuses only on specific modules or functions.
-- ### **1.8 Interactive Application Security Testing (IAST)**
-	- **Description:**
-		- Combines features of **SAST** and **DAST** by analyzing code and runtime behavior simultaneously during execution.
-	- **Tools:**
-		- Contrast Security
-		- Seeker (by Synopsys)
-	- **Advantages:**
-		- Provides more accurate results by combining static and runtime analysis.
-		- Detects security flaws during execution that cannot be found by SAST or DAST alone.
-	- **Disadvantages:**
-		- Resource-intensive and may impact application performance.
-- ### **1.9 Software Composition Analysis (SCA)**
-	- **Description:**
-		- Scans third-party libraries and dependencies to identify known vulnerabilities in open-source components.
-	- **Tools:**
-		- Snyk
-		- WhiteSource
-		- OWASP Dependency-Check
-		- Black Duck
-	- **Advantages:**
-		- Identifies vulnerabilities in third-party libraries.
-		- Ensures compliance with open-source software licenses.
-	- **Disadvantages:**
-		- Limited to **known vulnerabilities**; cannot detect zero-day issues.
-		- Does not address issues in custom code.
-- ### **1.10 Security Regression Testing**
-	- **Description:**
-		- Ensures that previously fixed security vulnerabilities do not reappear after new changes to the code.
-		- Can be automated as part of a regression test suite.
-	-**Advantages:**
-		- Prevents reintroduction of security flaws after updates.
-		- Automates security checks in CI/CD pipelines.
-	- **Disadvantages:**
-		- Requires regular updates and maintenance of test suites.
+| **Index** | **Method**                                      | **Description**                                                                                               | **Tools**                                             | **Advantages**                                                                                                     | **Disadvantages**                                                                              |
+| --------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| **1**     | Static Code Analysis (SAST)                     | Analyzes source code without execution to identify vulnerabilities like SQL injection, buffer overflows, etc. | SonarQube, Checkmarx, Veracode, Fortify               | Detects issues early, integrates well into CI/CD pipelines, identifies common vulnerabilities like injection flaws | Produces false positives, cannot detect vulnerabilities that arise during runtime execution.   |
+| **2**     | Dynamic Code Analysis (DAST)                    | Analyzes the application while running to uncover runtime vulnerabilities.                                    | OWASP ZAP, Burp Suite, Acunetix, Netsparker           | Detects runtime vulnerabilities, simulates real-world attacks.                                                     | Requires deployable state, cannot detect pre-runtime vulnerabilities.                          |
+| **3**     | Manual Code Review                              | Developers manually inspect the code to identify vulnerabilities and insecure design patterns.                | N/A                                                   | Uncovers complex logic flaws, detailed analysis of custom code.                                                    | Time-consuming, requires expertise, labor-intensive.                                           |
+| **4**     | Peer Code Review                                | Developers review each other’s code as part of the development workflow.                                      | N/A                                                   | Identifies issues early, promotes knowledge sharing and best practices.                                            | May overlook security flaws, limited scope.                                                    |
+| **5**     | Fuzz Testing (Fuzzing)                          | Automated testing with random, malformed inputs to find vulnerabilities.                                      | AFL, Peach Fuzzer, Sulley Framework, libFuzzer        | Effective at finding memory-related vulnerabilities, detects weaknesses under unusual input conditions.            | Resource-intensive, difficult to analyze root cause of issues.                                 |
+| **6**     | Penetration Testing (Pen Testing)               | Simulates real-world attacks to identify vulnerabilities.                                                     | N/A                                                   | Mimics real-world attacks, assesses defense mechanisms.                                                            | Time-consuming, expensive, internal flaws may remain undetected in black-box testing.          |
+| **7**     | Security Unit Testing                           | Integrates security checks into unit tests to verify secure behavior of individual components.                | JUnit (Java), pytest (Python), NUnit (C#)             | Detects security issues early, integrates with standard testing frameworks.                                        | Limited scope, focuses only on specific modules or functions.                                  |
+| **8**     | Interactive Application Security Testing (IAST) | Combines features of SAST and DAST by analyzing code and runtime behavior simultaneously.                     | Contrast Security, Seeker (by Synopsys)               | Provides more accurate results by combining static and runtime analysis, detects security flaws during execution.  | Resource-intensive, may impact application performance.                                        |
+| **9**     | Software Composition Analysis (SCA)             | Scans third-party libraries to identify vulnerabilities in open-source components.                            | Snyk, WhiteSource, OWASP Dependency-Check, Black Duck | Identifies vulnerabilities in third-party libraries, ensures compliance with open-source software licenses.        | Limited to known vulnerabilities, cannot detect zero-day issues, does not address custom code. |
+| **10**    | Security Regression Testing                     | Ensures previously fixed vulnerabilities do not reappear after code changes.                                  | N/A                                                   | Prevents reintroduction of security flaws, automates security checks in CI/CD pipelines.                           | Requires regular updates and maintenance of test suites.                                       |
 ## **2. Common Vulnerabilities and Fixes**
-### 1. **SQL Injection**
+- ### 1. **SQL Injection**
 	- Vulnerability: Unsanitized user inputs are used in SQL queries.
 - Example:
 
@@ -865,8 +751,8 @@ query = "SELECT * FROM users WHERE id = ?"
 cursor.execute(query, (user_id,))
 ```
 
-### 2. **Command Injection**
-- Vulnerability: User inputs are passed to system commands.
+- ### 2. **Command Injection**
+	- Vulnerability: User inputs are passed to system commands.
 - Example:
 
 ```python
@@ -879,8 +765,8 @@ os.system("ls " + directory)
 subprocess.run(["ls", directory], check=True)  
 ```
 
-### 3. **Path Traversal**
-- Vulnerability: Improper file path validation allows unauthorized access to sensitive files.
+- ### 3. **Path Traversal**
+	- Vulnerability: Improper file path validation allows unauthorized access to sensitive files.
 - Example:
 
 ```python
@@ -897,8 +783,8 @@ with open(os.path.join("/data", filename), "r") as file:
 return file.read()  
 ```
 
-### 4. **Hardcoded Secrets**
-- Vulnerability: Secrets (e.g., API keys, passwords) are hardcoded in the source code.
+- ### 4. **Hardcoded Secrets**
+	- Vulnerability: Secrets (e.g., API keys, passwords) are hardcoded in the source code.
 - Example:
 
 ```python
@@ -911,16 +797,16 @@ API_KEY = "my_secret_api_key"
 API_KEY = os.getenv("API_KEY")  
 ```
 
-### 5. **Insufficient Logging**
-- Vulnerability: Failed logins or suspicious activity are not logged.
+- ### 5. **Insufficient Logging**
+	- Vulnerability: Failed logins or suspicious activity are not logged.
 - Fix: Log security events with appropriate levels.
 
 ```python
 logging.warning("Failed login attempt for user %s", user)  
 ```
 
-### 6. **Weak Cryptography**
-- Vulnerability: Use of outdated encryption algorithms (e.g., DES).
+- ### 6. **Weak Cryptography**
+	- Vulnerability: Use of outdated encryption algorithms (e.g., DES).
 - Example:
 
 ```python
