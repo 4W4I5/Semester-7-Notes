@@ -397,7 +397,7 @@ def key_management_policy():
 ---
 # Lecture 18 & 19: Error Handling
 
-- ### Deny Access by Default in Error Handling Logic for Security Controls
+- ### 1. Deny Access by Default in Error Handling Logic for Security Controls
 	- The application implements a **403 error handler** that denies access by default when unauthorized access attempts are detected.
 	- Unauthorized actions trigger warnings in the log file for audit purposes.
 
@@ -410,7 +410,7 @@ def access_denied(error):
     return jsonify({"error": "Access Denied"}), 403
 ```
 
-- ### Implement Logging on Trusted Systems
+- ### 2. Implement Logging on Trusted Systems
 	- Logging operations occur on the server-side using **RotatingFileHandler**. Logs are securely written to a file stored in a **restricted directory** to prevent tampering.
 **Example**:
 
@@ -420,7 +420,7 @@ os.chmod(LOG_DIR, 0o700)  # Restrict directory access for security
 handler = logging.handlers.RotatingFileHandler(LOG_FILE, maxBytes=1024 * 1024, backupCount=5)
 ```
 
-- ### Ensure Logging Supports Both Success and Failure of Specified Security Events
+- ### 3. Ensure Logging Supports Both Success and Failure of Specified Security Events
 	- The application logs both successful and failed events, such as:
 		- Input validation failures.
 		- Access control failures.
@@ -444,7 +444,7 @@ if user != "admin":
     abort(403)
 ```
 
-- ### Include Important Log Event Data in Logs
+- ### 4. Include Important Log Event Data in Logs
 	- Logs include critical details such as:
 		- Event type.
 		- HTTP request method and path.
@@ -458,7 +458,7 @@ def log_request():
     log_event("Request", f"{request.method} {request.path} requested by {request.remote_addr}")
 ```
 
-- ### Prevent Execution of Untrusted Data in Log Viewing Interfaces or Software
+- ### 5. Prevent Execution of Untrusted Data in Log Viewing Interfaces or Software
 	- Access to logs is restricted to **authorized individuals** (admins only).
 	- Input validation ensures only authenticated admin users can view logs.
 **Example**:
@@ -471,7 +471,7 @@ def view_logs():
         return access_denied(403)
 ```
 
-- ### Restrict Log Access to Authorized Individuals Only
+- ### 6. Restrict Log Access to Authorized Individuals Only
 	- Log files are stored in a restricted directory (`0o700`) to ensure that only the application and administrators have access.
 **Example**:
 
@@ -481,7 +481,7 @@ os.chmod(LOG_DIR, 0o700)
 ```
 
 - Additionally, only users with the **admin role** can view the log content via the `/logs` endpoint.
-- ### Use a Central Routine for All Logging Operations
+- ### 7. Use a Central Routine for All Logging Operations
 	- A centralized `log_event` function handles all logging operations, ensuring consistent formatting and preventing sensitive data leakage.
 **Example**:
 
@@ -495,7 +495,7 @@ def log_event(event_type, details=""):
     logger.info(log_message)
 ```
 
-- ### Best Practices
+- ### 8. Best Practices
 	- **Run Mode Security**:
 		- The `app.run` should explicitly define `debug` set to False to ensure debug mode is disabled
 **Example**:
