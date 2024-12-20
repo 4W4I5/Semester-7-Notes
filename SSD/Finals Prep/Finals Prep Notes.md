@@ -723,18 +723,20 @@ int main() {
 ---
 # Lecture 21 & 22: Code Security Testing Methods
 ## **1. Code Security Testing Methods**
-| **Index** | **Method**                                      | **Description**                                                                                               | **Tools**                                             | **Advantages**                                                                                                     | **Disadvantages**                                                                              |
-| --------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
-| **1**     | Static Code Analysis (SAST)                     | Analyzes source code without execution to identify vulnerabilities like SQL injection, buffer overflows, etc. | SonarQube, Checkmarx, Veracode, Fortify               | Detects issues early, integrates well into CI/CD pipelines, identifies common vulnerabilities like injection flaws | Produces false positives, cannot detect vulnerabilities that arise during runtime execution.   |
-| **2**     | Dynamic Code Analysis (DAST)                    | Analyzes the application while running to uncover runtime vulnerabilities.                                    | OWASP ZAP, Burp Suite, Acunetix, Netsparker           | Detects runtime vulnerabilities, simulates real-world attacks.                                                     | Requires deployable state, cannot detect pre-runtime vulnerabilities.                          |
-| **3**     | Manual Code Review                              | Developers manually inspect the code to identify vulnerabilities and insecure design patterns.                | N/A                                                   | Uncovers complex logic flaws, detailed analysis of custom code.                                                    | Time-consuming, requires expertise, labor-intensive.                                           |
-| **4**     | Peer Code Review                                | Developers review each other’s code as part of the development workflow.                                      | N/A                                                   | Identifies issues early, promotes knowledge sharing and best practices.                                            | May overlook security flaws, limited scope.                                                    |
-| **5**     | Fuzz Testing (Fuzzing)                          | Automated testing with random, malformed inputs to find vulnerabilities.                                      | AFL, Peach Fuzzer, Sulley Framework, libFuzzer        | Effective at finding memory-related vulnerabilities, detects weaknesses under unusual input conditions.            | Resource-intensive, difficult to analyze root cause of issues.                                 |
-| **6**     | Penetration Testing (Pen Testing)               | Simulates real-world attacks to identify vulnerabilities.                                                     | N/A                                                   | Mimics real-world attacks, assesses defense mechanisms.                                                            | Time-consuming, expensive, internal flaws may remain undetected in black-box testing.          |
-| **7**     | Security Unit Testing                           | Integrates security checks into unit tests to verify secure behavior of individual components.                | JUnit (Java), pytest (Python), NUnit (C#)             | Detects security issues early, integrates with standard testing frameworks.                                        | Limited scope, focuses only on specific modules or functions.                                  |
-| **8**     | Interactive Application Security Testing (IAST) | Combines features of SAST and DAST by analyzing code and runtime behavior simultaneously.                     | Contrast Security, Seeker (by Synopsys)               | Provides more accurate results by combining static and runtime analysis, detects security flaws during execution.  | Resource-intensive, may impact application performance.                                        |
-| **9**     | Software Composition Analysis (SCA)             | Scans third-party libraries to identify vulnerabilities in open-source components.                            | Snyk, WhiteSource, OWASP Dependency-Check, Black Duck | Identifies vulnerabilities in third-party libraries, ensures compliance with open-source software licenses.        | Limited to known vulnerabilities, cannot detect zero-day issues, does not address custom code. |
-| **10**    | Security Regression Testing                     | Ensures previously fixed vulnerabilities do not reappear after code changes.                                  | N/A                                                   | Prevents reintroduction of security flaws, automates security checks in CI/CD pipelines.                           | Requires regular updates and maintenance of test suites.                                       |
+
+| **Index** | **Method**                                          | **Type**      | **Description**                                                                                               | **Tools**                                             | **Advantages**                                                                                                      | **Disadvantages**                                                                              |
+| --------- | --------------------------------------------------- | ------------- | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| **1**     | **SAST (Static Code Analysis)**                     | Pre-execution | Analyzes source code without execution to identify vulnerabilities like SQL injection, buffer overflows, etc. | SonarQube, Checkmarx, Veracode, Fortify               | Early issue detection, integrates well into CI/CD pipelines, identifies common vulnerabilities like injection flaws | Produces false positives, cannot detect vulnerabilities that arise during runtime execution.   |
+| **2**     | **DAST (Dynamic Code Analysis)**                    | Runtime       | Analyzes the application while running to uncover runtime vulnerabilities.                                    | OWASP ZAP, Burp Suite, Acunetix, Netsparker           | Identifies runtime flaws, simulates real-world attacks.                                                             | Requires deployable code, cannot detect pre-runtime vulnerabilities.                           |
+| **3**     | **Manual Code Review**                              | Pre-execution | Developers manually inspect the code to identify vulnerabilities and insecure design patterns.                | N/A                                                   | Detects logic flaws, detailed analysis of custom code.                                                              | Time-consuming, requires expertise, labor-intensive.                                           |
+| **4**     | **Peer Code Review**                                | Pre-execution | Developers review each other’s code as part of the development workflow.                                      | N/A                                                   | Promotes knowledge sharing, identifies issues early.                                                                | Limited security focus, may overlook certain security flaws.                                   |
+| **5**     | **Fuzz Testing**                                    | Runtime       | Automated testing with random, malformed inputs to find vulnerabilities.                                      | AFL, Peach Fuzzer, Sulley Framework, libFuzzer        | Detects memory-related vulnerabilities, uncovers weaknesses under unusual input conditions.                         | Resource-intensive, difficult to analyze root causes of issues.                                |
+| **6**     | **Penetration Testing**                             | Runtime       | Simulates real-world attacks to identify vulnerabilities.                                                     | N/A                                                   | Simulates real-world attacks, assesses defense mechanisms.                                                          | Expensive, time-consuming, internal flaws may remain undetected in black-box testing.          |
+| **7**     | **Security Unit Testing**                           | Pre-execution | Integrates security checks into unit tests to verify secure behavior of individual components.                | JUnit (Java), pytest (Python), NUnit (C#)             | Integrates well into development, detects security issues early.                                                    | Limited to specific modules/functions, does not cover broader application security.            |
+| **8**     | **IAST (Interactive Application Security Testing)** | Mixed         | Combines SAST and DAST to analyze code and runtime behavior simultaneously.                                   | Contrast Security, Seeker (by Synopsys)               | Combines static and dynamic analysis, provides more accurate results, detects security flaws during execution.      | Performance impact, resource-intensive.                                                        |
+| **9**     | **SCA (Software Composition Analysis)**             | Pre-execution | Scans third-party libraries to identify vulnerabilities in open-source components.                            | Snyk, WhiteSource, OWASP Dependency-Check, Black Duck | Detects library vulnerabilities, ensures compliance with open-source software licenses.                             | Limited to known vulnerabilities, cannot detect zero-day issues, does not address custom code. |
+| **10**    | **Security Regression Testing**                     | Pre-execution | Ensures previously fixed vulnerabilities do not reappear after code changes.                                  | N/A                                                   | Prevents reintroduction of vulnerabilities, automates checks in CI/CD pipelines.                                    | Requires regular maintenance and updates of test suites.                                       |
+
 ## **2. Common Vulnerabilities and Fixes**
 - ### 1. **SQL Injection**
 	- Vulnerability: Unsanitized user inputs are used in SQL queries.
@@ -819,21 +821,6 @@ cipher = DES.new(b"12345678", DES.MODE_ECB)
 cipher = AES.new(b"mysecretpassword", AES.MODE_ECB)  
 ```
 
-## **3. Summary Table**
-
-| **Method**                  | **Type**      | **Advantages**                    | **Disadvantages**            |
-| --------------------------- | ------------- | --------------------------------- | ---------------------------- |
-| SAST                        | Pre-execution | Early issue detection             | False positives              |
-| DAST                        | Runtime       | Identifies runtime flaws          | Needs deployable code        |
-| Manual Code Review          | Pre-execution | Detects logic flaws               | Time-consuming               |
-| Peer Code Review            | Pre-execution | Knowledge sharing                 | Limited security focus       |
-| Fuzz Testing                | Runtime       | Uncovers crashes and input issues | Resource-intensive           |
-| Pen Testing                 | Runtime       | Simulates real-world attacks      | Expensive                    |
-| Security Unit Testing       | Pre-execution | Integrates into development       | Limited scope                |
-| IAST                        | Mixed         | Combines SAST and DAST benefits   | Performance impact           |
-| SCA                         | Pre-execution | Detects library vulnerabilities   | Limited to known issues      |
-| Security Regression Testing | Pre-execution | Prevents reintroduction of bugs   | Requires regular maintenance |
-
 ---
 # Lecture 23 & 24: Dynamic Application Security Testing
 
@@ -870,6 +857,7 @@ def greet():
 - **Vulnerability:**
 	- Occurs when user input is directly included in SQL queries, allowing attackers to manipulate the database.
 - **Example Code:**
+
 ```python
 import sqlite3  
 from flask import Flask, request  
@@ -886,6 +874,7 @@ def get_user():
 ```
 
 - **Fix:** Use parameterized queries to treat input as data, not executable code.
+
 ```python
 cursor.execute("SELECT * FROM users WHERE id = ?", (user_id,))  
 ```
@@ -896,6 +885,7 @@ cursor.execute("SELECT * FROM users WHERE id = ?", (user_id,))
 - **Vulnerability:**
 	- Occurs when user input is passed to OS commands, potentially allowing arbitrary execution.
 - **Example Code:**
+
 ```python
 import os  
 from flask import Flask, request  
@@ -933,6 +923,7 @@ def run_command():
 		- **Vulnerability:**
 			- Insecure handling of input.
 		- **Example Code:**
+
 ```python
 def process_input(data):  
     if data.isdigit():  
@@ -942,6 +933,7 @@ def process_input(data):
 ```
 
 - **Fuzzing Test Code:**
+
 ```python
 from pythonfuzz.main import PythonFuzz  
 
@@ -958,6 +950,7 @@ if __name__ == "__main__":
 ```
 
 - **Fix:** Validate input length and content.
+
 ```python
 def process_input(data):  
     if data and data.isdigit() and len(data) < 10:  
@@ -969,6 +962,7 @@ def process_input(data):
 - #### **SQL Injection Fuzzing**
 	- **Goal:** Test input validation against SQL injection.
 - **Example Code:**
+
 ```python
 def fetch_user(username):  
     connection = sqlite3.connect(":memory:")  
@@ -979,7 +973,9 @@ def fetch_user(username):
     cursor.execute(query)  
     return cursor.fetchall()  
 ```
+
 - **Fix:** Use parameterized queries.
+
 ```python
 query = "SELECT * FROM users WHERE name = ?"  
 cursor.execute(query, (username,))  
@@ -988,6 +984,7 @@ cursor.execute(query, (username,))
 - #### **Buffer Overflow Fuzzing**
 	- **Vulnerability:** Mishandling large inputs leads to buffer overflow.
 - **Example Code:**
+
 ```python
 def process_large_data(data):  
     buffer = bytearray(64)  
@@ -996,6 +993,7 @@ def process_large_data(data):
 ```
 
 - **Fix:** Limit input size to prevent overflow.
+
 ```python
 def process_large_data(data):  
     buffer = bytearray(64)  
@@ -1012,6 +1010,7 @@ def process_large_data(data):
 	- #### **Outdated Dependencies**
 		- **Vulnerability:** Older versions of dependencies may contain known security risks.
 - Example:
+
 ```
 Django==2.2  
 requests==2.19.1  
@@ -1019,6 +1018,7 @@ pandas==0.24.2
 ```
 
 - Fix: Update dependencies to secure versions.
+
 ```
 Django==3.2.5  
 requests==2.22.0  
@@ -1028,20 +1028,27 @@ pandas==1.3.0
 - #### **Vulnerable Dependency with Known CVEs**
 	- **Goal:** Identify dependencies with vulnerabilities using SCA tools.
 - Example:
+
 ```
 requests==2.20.0  
 ```
+
 - Fix: Update to a secure version.
+
 ```
 requests==2.22.0  
 ```
+
 - #### **License Compliance Issues**
 	- **Goal:** Ensure dependencies comply with licensing policies.
 - Example:
+
 ```
 some-unknown-library==1.0.0  
 ```
+
 - Fix: Replace with compatible alternatives.
+
 ```
 lxml==4.6.3  
 ```
@@ -1069,6 +1076,7 @@ jobs:
       run: |  
         safety check --full-report  
 ```
+
 - **Fix:** Regularly update dependencies based on tool recommendations.
 ## **4. Key Points for Exam Preparation**
 1. **DAST** focuses on runtime vulnerabilities like XSS, SQL Injection, and Command Injection.
