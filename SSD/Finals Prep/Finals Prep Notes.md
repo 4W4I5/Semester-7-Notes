@@ -183,7 +183,7 @@ def set_session_id(response):
 - Restrict access to files, resources, protected URLs, and protected functions to authorized users only.
 ## Code example with points highlighted
 - ### 1. Use Trusted System Objects for Access Authorization Decisions
-	- **Server-Side Session Objects**:
+	- **Server-Side Session Objects:**
 		- The code uses **Flask's `session` object** to manage user authentication and authorization.
 		- Access control decisions are based on the session-stored information (`username` and `role`) to ensure that authorization decisions are made securely on the **server-side**, not on the client-side.
 **Example**:
