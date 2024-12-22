@@ -21,7 +21,6 @@
 		- Establish objectives
 		- Measure progress toward objectives
 		- Verify/validate that risk management practices are appropriate and assets are used properly
-
 - ### Information Security Governance Outcomes
 	- **Five Goals:**
 	  - Strategic alignment
@@ -29,7 +28,6 @@
 	  - Resource management
 	  - Performance measures
 	  - Value delivery
-
 - ### Responsibilities
 	- Oversee overall corporate security posture (accountable to board) → **CEO**
 	- Brief board, customers, public → **CEO**
@@ -61,7 +59,6 @@
 - **Compliance Areas:**
   - Ensure meeting requirements to establish the program and assign responsibilities.
   - Use specified penalties and disciplinary action.
-
 - ### EISP Elements
 	- Overview of corporate security philosophy
 	- Information on the structure of the organization and personnel in information security roles
@@ -85,7 +82,6 @@
 	- Independent ISSP documents
 	- Single comprehensive ISSP document
 	- Modular ISSP document
-
 - ### Components of the Policy:
 	- **Statement of Policy:**
 		- Scope and applicability
@@ -166,7 +162,6 @@
 | 27014:2013                    | Information Security Governance Framework | Guidance on evaluating and monitoring information security |
 | 27015:2012                    | Information Security Management Guidelines for Financial Services | Guidance for financial services organizations |
 | 27019:2013                    | Information Security Management Guidelines for Process Control Systems in Energy Industry | Focused on helping energy organizations implement ISO standards |
-
 
 ## NIST Security Models
 
@@ -283,7 +278,9 @@
 
 # Chapter 5: Risk Management
 ## Classic Risk Analysis Calculations
+
 Some IT security certification exams test a simple process for:
+
 - **Computing probable losses**
 - **Computing how countermeasures will alter the likelihood of losses**
 - **Deciding whether those countermeasures produce benefits that exceed their costs**
@@ -306,40 +303,40 @@ Some IT security certification exams test a simple process for:
 - ### Solution:
 ## Problems with Classic Risk Analysis
 1. **Uneven Multiyear Cash Flows**:
-    Issues arise with both attack and defense costs over multiple years, especially in terms of ROI (Return on Investment), NPV (Net Present Value), and IRR (Internal Rate of Return).
+	Issues arise with both attack and defense costs over multiple years, especially in terms of ROI (Return on Investment), NPV (Net Present Value), and IRR (Internal Rate of Return).
 2. **Total Cost of Incident**:
-    Classic analysis assumes that losses result only from asset loss. In many cases, losses are from factors like personal identification theft or data breach, rather than direct asset damage.
-    **Important**: Must compute the total cost of an incident, including repairs, lawsuits, and other factors.
+	Classic analysis assumes that losses result only from asset loss. In many cases, losses are from factors like personal identification theft or data breach, rather than direct asset damage.
+	**Important**: Must compute the total cost of an incident, including repairs, lawsuits, and other factors.
 3. **Many-to-Many Relationships**:
-    Classic models often assume one countermeasure protects one resource, which is not always true. For example, a firewall may protect multiple resources, and a server may be secured by multiple countermeasures.
+	Classic models often assume one countermeasure protects one resource, which is not always true. For example, a firewall may protect multiple resources, and a server may be secured by multiple countermeasures.
 4. **Difficulty in Computing Annualized Rates of Occurrence**:
-    There is often no reliable way to estimate the occurrence rate of some risks, making it a significant issue in classic risk analysis.
+	There is often no reliable way to estimate the occurrence rate of some risks, making it a significant issue in classic risk analysis.
 5. **Problems with "Hard-Headed Thinking"**:
-    Security benefits are hard to quantify. If only "hard numbers" are considered, it can lead to under-investment in security.
+	Security benefits are hard to quantify. If only "hard numbers" are considered, it can lead to under-investment in security.
 
 ## Risk Management Components
 1. **Risk Identification**
-    - Identify, inventory, and categorize assets.
-    - Classify, value, and prioritize assets.
-    - Identify and prioritize threats.
-    - Specify asset vulnerabilities.
+	- Identify, inventory, and categorize assets.
+	- Classify, value, and prioritize assets.
+	- Identify and prioritize threats.
+	- Specify asset vulnerabilities.
 2. **Risk Assessment**
-    - Determine loss frequency.
-    - Evaluate loss magnitude.
-    - Calculate risk.
-    - Assess risk acceptability.
+	- Determine loss frequency.
+	- Evaluate loss magnitude.
+	- Calculate risk.
+	- Assess risk acceptability.
 3. **Risk Control**
-    - Select control strategies.
-    - Justify controls.
-    - Implement, monitor, and assess controls.
+	- Select control strategies.
+	- Justify controls.
+	- Implement, monitor, and assess controls.
 
 ## The Roles of the Communities of Interest
 - **Information Security, Management, Users, and IT**: All must collaborate.
 - **Responsibilities**:
-    - Evaluating the risk controls.
-    - Determining cost-effective control options.
-    - Acquiring/installing needed controls.
-    - Ensuring effectiveness of controls.
+	- Evaluating the risk controls.
+	- Determining cost-effective control options.
+	- Acquiring/installing needed controls.
+	- Ensuring effectiveness of controls.
 
 ## Risk Appetite and Residual Risk
 - **Risk Appetite**: Defines the level of risk an organization is willing to accept, balancing security with accessibility.
@@ -353,14 +350,14 @@ Some IT security certification exams test a simple process for:
 
 ## Risk Identification Process
 1. **Plan & Organize the Process**:
-    - Form a team from all affected groups.
-    - Set periodic deliverables, reviews, and presentations.
+	- Form a team from all affected groups.
+	- Set periodic deliverables, reviews, and presentations.
 2. **Identify, Inventory, and Categorize Assets**:
-    - Start with identifying assets, including people, procedures, data, software, hardware, and networking.
-    - Categorize assets based on their type.
+	- Start with identifying assets, including people, procedures, data, software, hardware, and networking.
+	- Categorize assets based on their type.
 3. **Classify, Value, and Prioritize Information Assets**:
-    - Classification schemes may include confidential, internal, and public data.
-    - Prioritize assets based on criticality to business success, revenue, and potential damage if lost.
+	- Classification schemes may include confidential, internal, and public data.
+	- Prioritize assets based on criticality to business success, revenue, and potential damage if lost.
 
 ## Asset Categorization
 - **People**: Employees and non-employees.
@@ -385,6 +382,7 @@ Some IT security certification exams test a simple process for:
 5. **Assess Risk Acceptability**: Evaluate residual risk against the risk appetite.
 
 ## Risk Assessment Example:
+
 <Placeholder for Loss Frequency, Loss Magnitude, Risk Calculation>
 
 ## The FAIR Approach to Risk Assessment
@@ -403,15 +401,20 @@ Some IT security certification exams test a simple process for:
 ## Selecting a Risk Control Strategy
 - Consider asset value, threat level, and potential loss.
 - Rules of thumb for selecting a strategy:
-    - When a vulnerability exists.
-    - When the cost of exploitation is less than the potential gain.
+	- When a vulnerability exists.
+	- When the cost of exploitation is less than the potential gain.
 
 ## Justifying Controls
 - Estimate the costs and benefits of a proposed control.
 - Compare the **Annualized Loss Expectancy (ALE)** before and after implementing the control.
 
-### **Cost-Benefit Analysis (CBA) Formula**:
-CBA=ALE(prior)−ALE(post)−Annualized Cost of Safeguard (ACS)\text{CBA} = \text{ALE(prior)} - \text{ALE(post)} - \text{Annualized Cost of Safeguard (ACS)}
+## **Cost-Benefit Analysis (CBA)**
+- **CBA = ALE(prior) - ALE(post) - ACS**
+	- **ALE(prior)**: Pre-implementation annualized loss expectancy.
+	- **ALE(post)**: Post-implementation annualized loss expectancy.
+	- **ACS**: Annualized cost of safeguard.
+	- ### **Cost-Benefit Analysis (CBA) Formula**:
+		- CBA=ALE(prior)−ALE(post)−Annualized Cost of Safeguard (ACS)\text{CBA} = \text{ALE(prior)} - \text{ALE(post)} - \text{Annualized Cost of Safeguard (ACS)}
 
 ## Implementation, Monitoring, and Assessment of Risk Controls
 - **Implementation**: Put the control strategy into action.
