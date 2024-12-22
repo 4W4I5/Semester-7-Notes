@@ -1,7 +1,7 @@
 | Chapter<br>Number | Chapter<br>Name                       | Status             |
 | ----------------- | ------------------------------------- | ------------------ |
 | 4                 | Planning for Security                 | :white_check_mark: |
-| 5                 | Risk Management                       | :warning:          |
+| 5                 | Risk Management                       | :white_check_mark: |
 | 6                 | Security Technology: Firewalls & VPNs | :white_check_mark: |
 | 7                 | Security Technology: IDPS             | :white_check_mark: |
 | 8                 | Cryptography                          | :white_check_mark: |
@@ -451,26 +451,69 @@ Some IT security certification exams test a simple process for:
 - **Monitoring Risk**: Continuously review and update risk management processes.
 
 ## Review Questions
-1. What is risk management? Why is the identification of risks, by listing assets and their vulnerabilities, so important to the risk management process?
-2. According to Sun Tzu, what two key understandings must you achieve to be successful in battle?
-3. Who is responsible for risk management in an organization? Which community of interest usually takes the lead in information security risk management?
-4. In risk management strategies, why must periodic review be a part of the process?
-5. Why do networking components need more examination from an information security perspective than from a systems development perspective?
-6. What value does an automated asset inventory system have for the risk identification process?
-7. What information attribute is often of great value for local networks that use static addressing?
-8. Which is more important to the systems components classification scheme: that the asset identification list be comprehensive or mutually exclusive?
-9. What’s the difference between an asset’s ability to generate revenue and its ability to generate profit?
-10. What are vulnerabilities? How do you identify them?
-11. What is competitive disadvantage? Why has it emerged as a factor?
-12. What are the strategies for controlling risk as described in this chapter?
-13. Describe the “defend” strategy. List and describe the three common methods.
-14. Describe the “transfer” strategy. Describe how outsourcing can be used for this purpose.
-15. Describe the “mitigate” strategy. What three planning approaches are discussed in the text as opportunities to mitigate risk?
-16. How is an incident response plan different from a disaster recovery plan?
-17. What is risk appetite? Explain why risk appetite varies from organization to organization.
-18. What is a cost benefit analysis?
-19. What is the definition of single loss expectancy? What is annual loss expectancy?
-20. What is residual risk?
+1. **What is risk management? Why is the identification of risks, by listing assets and their vulnerabilities, so important to the risk management process?**
+	- **Risk management** is the process of identifying, assessing, and controlling risks to minimize potential negative impacts on an organization's assets. The identification of risks by listing assets and their vulnerabilities is critical because it allows an organization to prioritize its efforts. Understanding which assets are most valuable and vulnerable helps in allocating resources effectively to mitigate risks.
+2. **According to Sun Tzu, what two key understandings must you achieve to be successful in battle?**
+	- Sun Tzu emphasized understanding both **yourself** and **your enemy**. This translates into knowing your own strengths and weaknesses, as well as understanding the threats and challenges posed by external forces.
+3. **Who is responsible for risk management in an organization? Which community of interest usually takes the lead in information security risk management?**
+	- Responsibility for risk management is shared across multiple levels of the organization, but **information security teams** usually take the lead in **information security risk management**. They collaborate with management, users, and IT departments to evaluate and mitigate risks.
+4. **In risk management strategies, why must periodic review be a part of the process?**
+	- Periodic reviews are necessary to ensure that risk management strategies remain effective as new threats, vulnerabilities, and changes in the organization's operations or environment may arise.
+5. **Why do networking components need more examination from an information security perspective than from a systems development perspective?**
+	- Networking components often serve as points of entry or exit for attackers. From an information security perspective, vulnerabilities in networks can expose the entire organization to significant risks, whereas the systems development perspective may focus more on functionality and performance.
+6. **What value does an automated asset inventory system have for the risk identification process?**
+	- An automated asset inventory system provides a comprehensive and accurate list of assets, facilitating more efficient identification and classification. It helps ensure that no critical assets are overlooked and can track changes to asset status, enhancing risk assessment accuracy.
+7. **What information attribute is often of great value for local networks that use static addressing?**
+	- **IP address** information is of great value, as static addressing helps identify and track specific devices within the network, making it easier to monitor for unusual activity and ensure proper access controls.
+8. **Which is more important to the systems components classification scheme: that the asset identification list be comprehensive or mutually exclusive?**
+	- It is more important for the asset identification list to be **mutually exclusive**. Each asset should belong to only one category, to avoid overlap and ensure that the assets are properly categorized and prioritized.
+9. **What’s the difference between an asset’s ability to generate revenue and its ability to generate profit?**
+	- **Revenue generation** refers to the asset's role in bringing income into the organization, whereas **profit generation** reflects the asset’s contribution after subtracting costs and expenses, indicating its true financial value.
+10. **What are vulnerabilities? How do you identify them?**
+	- **Vulnerabilities** are weaknesses or flaws in an asset that could be exploited by threats to cause harm. They can be identified through methods like vulnerability assessments, penetration testing, security audits, and by reviewing past security incidents.
+11. **What is competitive disadvantage? Why has it emerged as a factor?**
+	- A **competitive disadvantage** occurs when an organization’s assets, processes, or performance lag behind its competitors. It has emerged as a factor because, in today’s digital economy, failure to manage risks effectively (such as data breaches or inefficiencies) can harm an organization’s reputation and market position.
+12. **What are the strategies for controlling risk as described in this chapter?**
+	- The main strategies for controlling risk are **defense** (preventative measures), **transfer** (shifting risk to others), **mitigation** (reducing the impact of risks), **acceptance** (accepting risks when the cost of mitigation is too high), and **termination** (eliminating activities that introduce high risk).
+13. **Describe the “defend” strategy. List and describe the three common methods.**
+	- The **defend** strategy involves implementing measures to prevent the exploitation of vulnerabilities. The three common methods are:
+		1. **Avoidance**: Altering the business processes to avoid exposure to risk.
+		2. **Prevention**: Installing safeguards to prevent attacks or exploitation.
+		3. **Detection**: Implementing systems to detect and alert on security events.
+14. **Describe the “transfer” strategy. Describe how outsourcing can be used for this purpose.**
+	- The **transfer** strategy involves shifting the responsibility for risk to another party, such as an insurance company or a third-party vendor. Outsourcing can be used to transfer certain risks (e.g., IT infrastructure or data management) to an external provider, who then takes on the associated risks.
+15. **Describe the “mitigate” strategy. What three planning approaches are discussed in the text as opportunities to mitigate risk?**
+	- The **mitigate** strategy involves reducing the impact of risks when they occur. The three approaches for mitigating risk are:
+		1. **Reducing likelihood**: Implementing safeguards to make an attack less likely.
+		2. **Reducing impact**: Preparing for and minimizing the damage of an attack.
+		3. **Improving recovery**: Ensuring quick recovery through business continuity planning.
+16. **How is an incident response plan different from a disaster recovery plan?**
+	- An **incident response plan** is designed to handle the detection, containment, and management of security incidents, while a **disaster recovery plan** focuses on restoring business operations after a significant disruption, often involving IT infrastructure and data recovery.
+17. **What is risk appetite? Explain why risk appetite varies from organization to organization.**
+	- **Risk appetite** is the amount of risk an organization is willing to accept in pursuit of its objectives. It varies based on factors like the organization’s industry, financial resources, and overall strategy.
+18. **What is a cost-benefit analysis?**
+	- A **cost-benefit analysis** is a process that compares the costs of a security measure with the potential benefits, helping organizations determine whether the investment in a particular risk control is justified.
+19. **What is the definition of single loss expectancy? What is annual loss expectancy?**
+	- **Single Loss Expectancy (SLE)** is the expected monetary loss from a single occurrence of a specific risk event. **Annual Loss Expectancy (ALE)** is the expected loss over the course of a year, calculated by multiplying SLE by the **Annual Rate of Occurrence (ARO)**.
+20. **What is residual risk?**
+	- **Residual risk** is the remaining risk after risk control measures have been implemented. It is the portion of risk that cannot be mitigated or transferred and must be managed or accepted.
+
+### Case Study Answers
+
+1. **Did Charlie effectively organize the work before the meeting? Why or why not? Make a list of the important issues you think should be covered by the work plan. For each issue, provide a short explanation.**
+
+	- Charlie made an attempt to organize the work, but there are gaps in the clarity of the work plan. Important issues to cover should include:
+		1. **Asset Inventory Process**: Clear guidelines for identifying and categorizing assets, ensuring all critical assets are included.
+		2. **Risk Prioritization**: Identifying how to prioritize assets based on their value and vulnerabilities.
+		3. **Team Responsibilities**: Defining each team member's role to ensure all aspects of the inventory are covered.
+		4. **Periodic Reviews**: Setting dates for progress updates to ensure alignment with overall goals.
+		5. **Communication Plan**: Establishing clear channels for communication and escalation of issues.
+2. **Will the company get useful information from the team it has assembled? Why or why not?**
+
+	- The company may get useful information if the team is diverse and has the necessary expertise to identify and assess risks effectively. However, the team must be clear on their responsibilities and the importance of accurately categorizing and valuing assets. Without proper guidance and clarity on roles, the team may struggle to deliver comprehensive results.
+3. **Why might some attendees resist the goals of the meeting? Does it seem that each person invited was briefed on the importance of the event and the issues behind it?**
+
+	- Attendees may resist if they do not fully understand the importance of asset identification and risk management or feel that their time is being used inefficiently. If the team was not properly briefed on the significance of the task, they may lack the motivation to engage seriously in the project. Clear communication and briefing on the business impact of the process could alleviate some of this resistance.
 
 ### Case Study
 
@@ -478,9 +521,17 @@ As Charlie wrapped up the meeting, he ticked off a few key reminders for everyon
 
 Questions:
 
-1. Did Charlie effectively organize the work before the meeting? Why or why not? Make a list of the important issues you think should be covered by the work plan. For each issue, provide a short explanation.
-2. Will the company get useful information from the team it has assembled? Why or why not?
-3. Why might some attendees resist the goals of the meeting? Does it seem that each person invited was briefed on the importance of the event and the issues behind it?
+- **Did Charlie effectively organize the work before the meeting? Why or why not? Make a list of the important issues you think should be covered by the work plan. For each issue, provide a short explanation.**
+	- Charlie made an attempt to organize the work, but there are gaps in the clarity of the work plan. Important issues to cover should include:
+		1. **Asset Inventory Process**: Clear guidelines for identifying and categorizing assets, ensuring all critical assets are included.
+		2. **Risk Prioritization**: Identifying how to prioritize assets based on their value and vulnerabilities.
+		3. **Team Responsibilities**: Defining each team member's role to ensure all aspects of the inventory are covered.
+		4. **Periodic Reviews**: Setting dates for progress updates to ensure alignment with overall goals.
+		5. **Communication Plan**: Establishing clear channels for communication and escalation of issues.
+- **Will the company get useful information from the team it has assembled? Why or why not?**
+	- The company may get useful information if the team is diverse and has the necessary expertise to identify and assess risks effectively. However, the team must be clear on their responsibilities and the importance of accurately categorizing and valuing assets. Without proper guidance and clarity on roles, the team may struggle to deliver comprehensive results.
+- **Why might some attendees resist the goals of the meeting? Does it seem that each person invited was briefed on the importance of the event and the issues behind it?**
+	- Attendees may resist if they do not fully understand the importance of asset identification and risk management or feel that their time is being used inefficiently. If the team was not properly briefed on the significance of the task, they may lack the motivation to engage seriously in the project. Clear communication and briefing on the business impact of the process could alleviate some of this resistance.
 
 ---
 
@@ -1229,7 +1280,7 @@ Lists other standards that influence this policy document, including relevant fe
 		- Patterns that signify an attack may be much easier to identify when the entire network and its systems are viewed as a whole.
 		- Requires considerable resources since it involves the collection, movement, storage, and analysis of large quantities of log data.
 - ### Detection Methods
-- merged w above
+	- merged w above
 - ### Response Behavior
 	- IDPS response to external stimulation depends on the configuration and function; many response options are available.
 	- IDPS responses can be classified as active or passive:
@@ -1440,21 +1491,21 @@ Lists other standards that influence this policy document, including relevant fe
 - ### ~~Steganography (Skipped, too simple)~~
 ## Protocols for Secure Communications
 - ### Securing Internet Communication with S-HTTP & SSL
-  - **SSL**: Uses public key encryption to establish secure connections over the Internet.
-  - **S-HTTP**: Encrypts individual HTTP messages between client and server, layering SSL over HTTP.
-  - Together, SSL and S-HTTP secure data exchanges across virtual connections, ensuring data confidentiality and integrity.
+	- **SSL**: Uses public key encryption to establish secure connections over the Internet.
+	- **S-HTTP**: Encrypts individual HTTP messages between client and server, layering SSL over HTTP.
+	- Together, SSL and S-HTTP secure data exchanges across virtual connections, ensuring data confidentiality and integrity.
 - ### Securing Email with S/MIME, PEM, and PGP
-  - **S/MIME**: Extends MIME with digital signatures for secure email encoding.
-  - **PEM**: Uses 3DES for message encryption and RSA for key exchanges and digital signatures.
-  - **PGP**: Employs the IDEA cipher for message encryption, widely used for secure email communications.
+	- **S/MIME**: Extends MIME with digital signatures for secure email encoding.
+	- **PEM**: Uses 3DES for message encryption and RSA for key exchanges and digital signatures.
+	- **PGP**: Employs the IDEA cipher for message encryption, widely used for secure email communications.
 - ### Securing Web Transactions with SET, SSL, and S-HTTP
-  - **SET**: Developed by MasterCard and VISA to secure online and retail transactions, encrypting credit card details using DES.
-  - **SSL & S-HTTP**: Used to secure communications in online transactions, protecting sensitive data exchanges.
+	- **SET**: Developed by MasterCard and VISA to secure online and retail transactions, encrypting credit card details using DES.
+	- **SSL & S-HTTP**: Used to secure communications in online transactions, protecting sensitive data exchanges.
 - ### Securing Wireless Networks with WEP & WPA
-  - **WEP**: Early standard for Wi-Fi security, though vulnerable to attacks.
-  - **WPA/WPA2**: Enhanced protocols to address WEP’s flaws, using stronger encryption for network protection.
-  - **Next-Gen Protocols**: Includes AES-based standards like RSN and CCMP for robust wireless security.
-  - **Bluetooth**: Requires security controls to avoid exploitation within its transmission range.
+	- **WEP**: Early standard for Wi-Fi security, though vulnerable to attacks.
+	- **WPA/WPA2**: Enhanced protocols to address WEP’s flaws, using stronger encryption for network protection.
+	- **Next-Gen Protocols**: Includes AES-based standards like RSN and CCMP for robust wireless security.
+	- **Bluetooth**: Requires security controls to avoid exploitation within its transmission range.
 
 |                    | **WEP**                                                   | **WPA**                                                                                               |
 | ------------------ | --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
