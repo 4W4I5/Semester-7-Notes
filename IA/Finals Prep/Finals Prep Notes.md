@@ -282,7 +282,170 @@
 ---
 
 # Chapter 5: Risk Management
+## Classic Risk Analysis Calculations
+Some IT security certification exams test a simple process for:
+- **Computing probable losses**
+- **Computing how countermeasures will alter the likelihood of losses**
+- **Deciding whether those countermeasures produce benefits that exceed their costs**
+- ### Related Terminologies
+	- **Asset Value**
+	- **Exposure Factor**
+	- **Single Loss Expectancy (SLE)**
+	- **Annual Rate of Occurrence (ARO)**
+	- **Annual Loss Expectancy (ALE)**
+	- **Countermeasure Impact**
+	- **Annualized Countermeasure Cost (ACC) and Net Value**
+- ### Example
+	- **Scenario**:
+		- There is an IT server valued at **$100,000**. If an attack occurs, **80%** of the asset is exposed.
+		- The attack is likely to happen once in two years.
+		- Now after analysis, there are two possible countermeasures (A and B):
+			1. **Countermeasure A**: Reduces the exposure by **75%**, but the occurrence rate remains the same. It will cost **$17,000** per year.
+			2. **Countermeasure B**: Reduces the occurrence to once in **4 years**, keeping the exposure rate the same. It will cost **$4,000** per year.
+		- **Question**: Which countermeasure is better, A or B?
+- ### Solution:
+## Problems with Classic Risk Analysis
+1. **Uneven Multiyear Cash Flows**:
+    Issues arise with both attack and defense costs over multiple years, especially in terms of ROI (Return on Investment), NPV (Net Present Value), and IRR (Internal Rate of Return).
+2. **Total Cost of Incident**:
+    Classic analysis assumes that losses result only from asset loss. In many cases, losses are from factors like personal identification theft or data breach, rather than direct asset damage.
+    **Important**: Must compute the total cost of an incident, including repairs, lawsuits, and other factors.
+3. **Many-to-Many Relationships**:
+    Classic models often assume one countermeasure protects one resource, which is not always true. For example, a firewall may protect multiple resources, and a server may be secured by multiple countermeasures.
+4. **Difficulty in Computing Annualized Rates of Occurrence**:
+    There is often no reliable way to estimate the occurrence rate of some risks, making it a significant issue in classic risk analysis.
+5. **Problems with "Hard-Headed Thinking"**:
+    Security benefits are hard to quantify. If only "hard numbers" are considered, it can lead to under-investment in security.
 
+## Risk Management Components
+1. **Risk Identification**
+    - Identify, inventory, and categorize assets.
+    - Classify, value, and prioritize assets.
+    - Identify and prioritize threats.
+    - Specify asset vulnerabilities.
+2. **Risk Assessment**
+    - Determine loss frequency.
+    - Evaluate loss magnitude.
+    - Calculate risk.
+    - Assess risk acceptability.
+3. **Risk Control**
+    - Select control strategies.
+    - Justify controls.
+    - Implement, monitor, and assess controls.
+
+## The Roles of the Communities of Interest
+- **Information Security, Management, Users, and IT**: All must collaborate.
+- **Responsibilities**:
+    - Evaluating the risk controls.
+    - Determining cost-effective control options.
+    - Acquiring/installing needed controls.
+    - Ensuring effectiveness of controls.
+
+## Risk Appetite and Residual Risk
+- **Risk Appetite**: Defines the level of risk an organization is willing to accept, balancing security with accessibility.
+- **Residual Risk**: The risk that remains after controls are applied. The goal is to bring residual risk in line with the organization's risk appetite.
+
+## Risk Facing an Information Asset's Value
+- **Residual Risk**: The risk not covered by safeguards.
+- **Amount of vulnerability** reduced by safeguards.
+- **Amount of threat** reduced by safeguards.
+- **Amount of asset value** protected by safeguards.
+
+## Risk Identification Process
+1. **Plan & Organize the Process**:
+    - Form a team from all affected groups.
+    - Set periodic deliverables, reviews, and presentations.
+2. **Identify, Inventory, and Categorize Assets**:
+    - Start with identifying assets, including people, procedures, data, software, hardware, and networking.
+    - Categorize assets based on their type.
+3. **Classify, Value, and Prioritize Information Assets**:
+    - Classification schemes may include confidential, internal, and public data.
+    - Prioritize assets based on criticality to business success, revenue, and potential damage if lost.
+
+## Asset Categorization
+- **People**: Employees and non-employees.
+- **Procedures**: Can either expose valuable knowledge or be sensitive.
+- **Data**: Includes management and protection of information.
+- **Software**: Applications, OS, and security components.
+- **Hardware**: System devices, peripherals, and security controls.
+
+## Identifying and Prioritizing Threats
+- Assess which threats pose the greatest danger to assets.
+- Consider the costs of recovery and prevention of attacks.
+
+## Specifying Asset Vulnerabilities
+- **Vulnerabilities**: Specific avenues threat agents can exploit.
+- Involve brainstorming sessions with diverse organizational backgrounds.
+
+## Risk Assessment
+1. **Plan & Organize the Process**
+2. **Determine Loss Frequency**: Likelihood of an attack occurring.
+3. **Evaluate Loss Magnitude**: How much of an asset can be lost.
+4. **Calculate Risk**: Risk = Loss Frequency x Loss Magnitude.
+5. **Assess Risk Acceptability**: Evaluate residual risk against the risk appetite.
+
+## Risk Assessment Example:
+<Placeholder for Loss Frequency, Loss Magnitude, Risk Calculation>
+
+## The FAIR Approach to Risk Assessment
+1. Identify scenario components.
+2. Evaluate loss event frequency.
+3. Evaluate probable loss magnitude.
+4. Derive and articulate risk.
+
+## Risk Control Strategies
+- **Defense**: Prevent exploitation of vulnerabilities.
+- **Transfer**: Shift the risk to other assets or organizations.
+- **Mitigate**: Reduce the impact of attacks.
+- **Acceptance**: Accept the risk if the cost of mitigation is too high.
+- **Termination**: Avoid business activities that introduce uncontrollable risks.
+
+## Selecting a Risk Control Strategy
+- Consider asset value, threat level, and potential loss.
+- Rules of thumb for selecting a strategy:
+    - When a vulnerability exists.
+    - When the cost of exploitation is less than the potential gain.
+
+## Justifying Controls
+- Estimate the costs and benefits of a proposed control.
+- Compare the **Annualized Loss Expectancy (ALE)** before and after implementing the control.
+
+### **Cost-Benefit Analysis (CBA) Formula**:
+CBA=ALE(prior)−ALE(post)−Annualized Cost of Safeguard (ACS)\text{CBA} = \text{ALE(prior)} - \text{ALE(post)} - \text{Annualized Cost of Safeguard (ACS)}
+
+## Implementation, Monitoring, and Assessment of Risk Controls
+- **Implementation**: Put the control strategy into action.
+- **Monitoring**: Continuously assess the effectiveness of the controls.
+- **Ongoing Assessment**: Adjust controls as needed to reduce residual risk.
+
+## Quantitative vs Qualitative Risk Control Practices
+- **Quantitative**: Uses actual values or estimates to assess risk.
+- **Qualitative**: Relies on non-numerical measures or scales for evaluation.
+
+## Benchmarking and Best Practices
+- **Benchmarking**: Study practices from other organizations.
+- **Best Practices**: Apply superior methods for information protection.
+- **Challenges**: No two organizations are identical, and best practices evolve over time.
+
+## Other Feasibility Studies
+1. **Organizational Feasibility**: Assesses the fit of IS alternatives with organizational goals.
+2. **Operational Feasibility**: Assesses user and management support.
+3. **Technical Feasibility**: Assesses the technical capacity for implementing controls.
+4. **Political Feasibility**: Evaluates consensus and relationships among stakeholders.
+
+## Recommended Risk Control Practices
+- Justify the budget for protecting critical assets.
+- Select balanced controls to protect multiple asset-threat pairs.
+
+## Documenting Results
+- Document the chosen control strategy for each information asset-threat pair.
+- Action plans can be documented for each asset-vulnerability pair.
+
+## The NIST Risk Management Framework
+- **Framing Risk**: Understand the overall risk context.
+- **Assessing Risk**: Evaluate threats and vulnerabilities.
+- **Responding to Risk**: Implement appropriate control measures.
+- **Monitoring Risk**: Continuously review and update risk management processes.
 
 ## Review Questions
 1. What is risk management? Why is the identification of risks, by listing assets and their vulnerabilities, so important to the risk management process?
