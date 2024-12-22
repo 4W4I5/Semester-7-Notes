@@ -57,8 +57,8 @@
 - **Purpose:** Sets strategic direction, scope, and tone for all security efforts within the organization.
 - **Document Type:** Executive-level, usually drafted by or with the Chief Information Officer (CIO).
 - **Compliance Areas:**
-  - Ensure meeting requirements to establish the program and assign responsibilities.
-  - Use specified penalties and disciplinary action.
+	- Ensure meeting requirements to establish the program and assign responsibilities.
+	- Use specified penalties and disciplinary action.
 - ### EISP Elements
 	- Overview of corporate security philosophy
 	- Information on the structure of the organization and personnel in information security roles
@@ -501,7 +501,6 @@ Some IT security certification exams test a simple process for:
 ### Case Study Answers
 
 1. **Did Charlie effectively organize the work before the meeting? Why or why not? Make a list of the important issues you think should be covered by the work plan. For each issue, provide a short explanation.**
-
 	- Charlie made an attempt to organize the work, but there are gaps in the clarity of the work plan. Important issues to cover should include:
 		1. **Asset Inventory Process**: Clear guidelines for identifying and categorizing assets, ensuring all critical assets are included.
 		2. **Risk Prioritization**: Identifying how to prioritize assets based on their value and vulnerabilities.
@@ -509,10 +508,8 @@ Some IT security certification exams test a simple process for:
 		4. **Periodic Reviews**: Setting dates for progress updates to ensure alignment with overall goals.
 		5. **Communication Plan**: Establishing clear channels for communication and escalation of issues.
 2. **Will the company get useful information from the team it has assembled? Why or why not?**
-
 	- The company may get useful information if the team is diverse and has the necessary expertise to identify and assess risks effectively. However, the team must be clear on their responsibilities and the importance of accurately categorizing and valuing assets. Without proper guidance and clarity on roles, the team may struggle to deliver comprehensive results.
 3. **Why might some attendees resist the goals of the meeting? Does it seem that each person invited was briefed on the importance of the event and the issues behind it?**
-
 	- Attendees may resist if they do not fully understand the importance of asset identification and risk management or feel that their time is being used inefficiently. If the team was not properly briefed on the significance of the task, they may lack the motivation to engage seriously in the project. Clear communication and briefing on the business impact of the process could alleviate some of this resistance.
 
 ### Case Study
@@ -1033,13 +1030,13 @@ Questions:
 | **Authentication** | Broken - WEP key itself is used for Authn                 | Improved User Authn, using 802.1x & EA                                                                |
 
 - ### Securing TCP/IP with IPSec and PGP
-  - **IPSec**: Framework for TCP/IP security, incorporating cryptographic methods:
-	- Diffie-Hellman key exchange for secure keys
-	- Public key cryptography to verify identity
-	- Bulk encryption for data privacy
-	- Digital certificates as digital ID cards for authentication
-  - **PGP**: A hybrid cryptosystem for file and email encryption, combining top cryptographic methods.
-	- Provides six key services: digital signature authentication, message encryption, compression, email compatibility, segmentation, and key management, making it an open-source standard for secure communication.
+	- **IPSec**: Framework for TCP/IP security, incorporating cryptographic methods:
+		- Diffie-Hellman key exchange for secure keys
+		- Public key cryptography to verify identity
+		- Bulk encryption for data privacy
+		- Digital certificates as digital ID cards for authentication
+	- **PGP**: A hybrid cryptosystem for file and email encryption, combining top cryptographic methods.
+		- Provides six key services: digital signature authentication, message encryption, compression, email compatibility, segmentation, and key management, making it an open-source standard for secure communication.
 
 ---
 # Chapter 9: Physical Security
