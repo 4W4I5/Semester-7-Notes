@@ -1040,6 +1040,11 @@ Questions:
 
 ---
 # Chapter 9: Physical Security
+
+
+
+
+
 ---
 # Chapter 10: Implementing Information Security
 ---
