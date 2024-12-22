@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
-                "mode": "preview",
+                "file": "IA/Finals Prep/Finals Prep Notes.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Finals Prep Notes"
             }
           }
         ]
@@ -192,8 +192,8 @@
   },
   "active": "28ad9ec9a392acb8",
   "lastOpenFiles": [
-    "IA/Finals Prep/Finals Prep Notes.md",
     "README.md",
+    "IA/Finals Prep/Finals Prep Notes.md",
     "SSD/Finals Prep/Finals Prep Notes.md",
     "SSD/Sessional 2 Prep/Sessional 2 Prep Notes.md",
     "SSD/Sessional 1 Prep/Sessional 1 Prep Notes.md",
