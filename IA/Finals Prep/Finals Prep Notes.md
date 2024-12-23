@@ -1240,7 +1240,7 @@ The organization translates the blueprint for information security into a projec
     - Amount of effort required
     - Estimated capital and noncapital expenses
     - Identification of dependencies between/among tasks
-- Each major WBS task is further divided into smaller tasks or specific action steps.
+- Ea+ch major WBS task is further divided into smaller tasks or specific action steps.
 
 ## Project Planning Considerations
 As the project plan is developed, adding detail is not always straightforward. Special considerations include financial, priority, time and schedule, staff, procurement, organizational feasibility, training and indoctrination, and scope.
