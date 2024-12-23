@@ -1039,12 +1039,13 @@ Questions:
 		- Provides six key services: digital signature authentication, message encryption, compression, email compatibility, segmentation, and key management, making it an open-source standard for secure communication.
 
 ---
-## Chapter 9: Physical Security
-### Overview
+# Chapter 9: Physical Security
+
+## Overview
 
 Physical security addresses the design, implementation, and maintenance of countermeasures that protect the physical resources of an organization. Most controls can be circumvented if an attacker gains physical access. Physical security is as important as logical security.
 
-### Major Sources of Physical Loss
+## Major Sources of Physical Loss
 1. Extreme temperature
 2. Gases
 3. Liquids
@@ -1053,164 +1054,128 @@ Physical security addresses the design, implementation, and maintenance of count
 6. Movement
 7. Energy anomalies
 
-### Community Roles
+
+## Community Roles
 - **General Management**: Responsible for facility security.
 - **IT Management and Professionals**: Responsible for environmental and access security.
 - **Information Security Management and Professionals**: Perform risk assessments and implementation reviews.
 
-### Physical Access Controls
-#### Secure Facility
 
-A secure facility is a physical location engineered with controls designed to minimize the risk of attacks from physical threats. It leverages natural terrain, traffic flow, urban development, and protective mechanisms (e.g., fences, gates, walls, guards, alarms).
-
-#### Walls, Fencing, and Gates
-#### Guards
-#### Dogs
-#### ID Cards and Badges
-- Tie physical security with information access control.
-- **ID Card**: Typically concealed.
-- **Name Badge**: Visible.
-- Serve as simple biometrics (facial recognition).
-- Vulnerabilities: Cards can be duplicated, stolen, or modified.
-- Risk: Tailgating occurs when an unauthorized individual follows an authorized user through a control.
-
-#### Locks and Keys
-- **Types of Locks**:
-	- Mechanical
-	- Electromechanical
-- **Categories of Locks**:
-	- Manual
-	- Programmable
-	- Electronic
-	- Biometric
-- Locks fail in two ways:
-	- **Fail-safe lock**: Unlocks during failure.
-	- **Fail-secure lock**: Remains locked during failure.
-
-
-#### Mantraps
-
-- Small enclosure with separate entry and exit points.
-- Access is verified within the enclosure.
-- Unauthorized individuals are denied exit until a security override.
-
-
-#### Electronic Monitoring
-
-- Records events where other controls are impractical or incomplete.
-- Utilizes cameras, video recorders, and closed-circuit television (CCT) systems.
-- **Drawbacks**:
-	- Reactive; does not prevent access or prohibited activity.
-	- Recordings are often reviewed post-incident.
-
-
-#### Alarms and Alarm Systems
-
-- Notify when an event occurs.
-- Detect fire, intrusion, environmental disturbances, or service interruptions.
-- Relies on sensors:
-	- Motion detectors
-	- Smoke detectors
-	- Thermal detectors
-	- Glass breakage detectors
-	- Weight sensors
-	- Contact sensors
-	- Vibration sensors
+## Physical Access Controls
+- ### Secure Facility
+	- A secure facility is a physical location engineered with controls designed to minimize the risk of attacks from physical threats. It leverages natural terrain, traffic flow, urban development, and protective mechanisms (e.g., fences, gates, walls, guards, alarms).
+- ### Walls, Fencing, and Gates
+- ### Guards
+- ### Dogs
+- ### ID Cards and Badges
+	- Tie physical security with information access control.
+	- **ID Card**: Typically concealed.
+	- **Name Badge**: Visible.
+	- Serve as simple biometrics (facial recognition).
+	- Vulnerabilities: Cards can be duplicated, stolen, or modified.
+	- Risk: Tailgating occurs when an unauthorized individual follows an authorized user through a control.
+- ### Locks and Keys
+	- **Types of Locks**:
+		- Mechanical
+		- Electromechanical
+	- **Categories of Locks**:
+		- Manual
+		- Programmable
+		- Electronic
+		- Biometric
+	- Locks fail in two ways:
+		- **Fail-safe lock**: Unlocks during failure.
+		- **Fail-secure lock**: Remains locked during failure.
+- ### Mantraps
+	- Small enclosure with separate entry and exit points.
+	- Access is verified within the enclosure.
+	- Unauthorized individuals are denied exit until a security override.
+- ### Electronic Monitoring
+	- Records events where other controls are impractical or incomplete.
+	- Utilizes cameras, video recorders, and closed-circuit television (CCT) systems.
+	- **Drawbacks**:
+		- Reactive; does not prevent access or prohibited activity.
+		- Recordings are often reviewed post-incident.
+- ### Alarms and Alarm Systems
+	- Notify when an event occurs.
+	- Detect fire, intrusion, environmental disturbances, or service interruptions.
+	- Relies on sensors:
+		- Motion detectors
+		- Smoke detectors
+		- Thermal detectors
+		- Glass breakage detectors
+		- Weight sensors
+		- Contact sensors
+		- Vibration sensors
+- ### Computer Rooms and Wiring Closets
+	- Require attention to confidentiality, integrity, and availability.
+	- Vulnerable to custodial staff who have unsupervised access.
+- ### Interior Walls and Doors
+	- Security can be compromised by poorly constructed walls and doors.
+	- High-security areas require firewall-grade walls and crash bars on doors.
 
 
-#### Computer Rooms and Wiring Closets
-
-- Require attention to confidentiality, integrity, and availability.
-- Vulnerable to custodial staff who have unsupervised access.
-
-
-#### Interior Walls and Doors
-
-- Security can be compromised by poorly constructed walls and doors.
-- High-security areas require firewall-grade walls and crash bars on doors.
-
-
-### Fire Security and Safety
-
+## Fire Security and Safety
 Fires are the most serious threat to personnel and property, necessitating strong detection and response measures.
 
-#### Fire Detection and Response
-
-- **Fire Suppression Systems**: Devices to detect and respond to fire by denying heat, fuel, or oxygen.
-	- Water and mist systems
-	- Carbon dioxide systems
-	- Soda acid systems
-	- Gas-based systems
-- **Fire Detection Systems**:
-	- Manual and automatic categories.
+- ### Fire Detection and Response
+	- **Fire Suppression Systems**: Devices to detect and respond to fire by denying heat, fuel, or oxygen.
+		- Water and mist systems
+		- Carbon dioxide systems
+		- Soda acid systems
+		- Gas-based systems
+	- **Fire Detection Systems**:
+		- Manual and automatic categories.
+		- Types:
+			- Thermal detection
+			- Smoke detection
+			- Flame detection
+	- **Fire Suppression Systems**:
+		- Portable extinguishers rated by fire type (A, B, C, D).
+		- Installed systems (sprinkler or gaseous).
+- ### Gaseous Emission Systems
 	- Types:
-		- Thermal detection
-		- Smoke detection
-		- Flame detection
-- **Fire Suppression Systems**:
-	- Portable extinguishers rated by fire type (A, B, C, D).
-	- Installed systems (sprinkler or gaseous).
+		- Carbon dioxide: Removes oxygen.
+		- Halon: Classified as ozone-depleting; alternatives include FM-200, Inergen, FE-13.
 
 
-#### Gaseous Emission Systems
+## Utility and Structural Failures
+- ### Supporting Utilities
+	- Significant impact on facility operations, including:
+		- Heating, ventilation, air conditioning (HVAC)
+		- Power
+		- Water
+- ### HVAC Systems
+	- Risks include:
+		- Temperature extremes
+		- Poor filtration
+		- Improper humidity levels
+		- Static electricity
+	- **Ventilation Shafts**: Large ducts should have wire mesh grids for security.
+- ### Power Management and Conditioning
+	- Electrical concerns:
+		- Voltage and amperage levels
+		- Noise interference
+	- **Grounding and Amperage**: Prevents circuit overloading and fire risks.
+	- **Uninterruptible Power Supply (UPS)**: Provides backup power; configurations include standby, ferroresonant standby, line-interactive, and true online.
+	- **Emergency Shutoff**: Stops power in emergencies to prevent harm.
+- ### Water Problems
+	- Risks:
+		- Lack of water affects fire suppression and cooling systems.
+		- Surplus water causes flooding or leaks.
+	- Water detection systems should integrate with alarms.
+- ### Structural Collapse
+	- Overloaded structures may fail, causing injury or loss of life.
+	- Periodic inspections by civil engineers are critical.
 
-- Types:
-	- Carbon dioxide: Removes oxygen.
-	- Halon: Classified as ozone-depleting; alternatives include FM-200, Inergen, FE-13.
-
-
-### Utility and Structural Failures
-
-#### Supporting Utilities
-
-- Significant impact on facility operations, including:
-	- Heating, ventilation, air conditioning (HVAC)
-	- Power
-	- Water
-
-
-#### HVAC Systems
-
-- Risks include:
-	- Temperature extremes
-	- Poor filtration
-	- Improper humidity levels
-	- Static electricity
-- **Ventilation Shafts**: Large ducts should have wire mesh grids for security.
-
-
-#### Power Management and Conditioning
-
-- Electrical concerns:
-	- Voltage and amperage levels
-	- Noise interference
-- **Grounding and Amperage**: Prevents circuit overloading and fire risks.
-- **Uninterruptible Power Supply (UPS)**: Provides backup power; configurations include standby, ferroresonant standby, line-interactive, and true online.
-- **Emergency Shutoff**: Stops power in emergencies to prevent harm.
-
-
-#### Water Problems
-
-- Risks:
-	- Lack of water affects fire suppression and cooling systems.
-	- Surplus water causes flooding or leaks.
-- Water detection systems should integrate with alarms.
-
-
-#### Structural Collapse
-
-- Overloaded structures may fail, causing injury or loss of life.
-- Periodic inspections by civil engineers are critical.
-
-
-### Maintenance of Facility Systems
+## Maintenance of Facility Systems
 
 - Regular documentation, evaluation, and testing are essential.
 - Documentation integrates into disaster recovery plans.
 - Testing identifies and strengthens weak points.
 
 
-### Data Interception
+## Data Interception
 
 - Methods:
 	- Direct observation
@@ -1219,7 +1184,7 @@ Fires are the most serious threat to personnel and property, necessitating stron
 - **TEMPEST Program**: Reduces risks of electromagnetic radiation (EMR) monitoring.
 
 
-### Mobile and Portable Systems
+## Mobile and Portable Systems
 
 - Laptops, handhelds, and PDAs require additional security.
 - Controls include:
@@ -1227,13 +1192,13 @@ Fires are the most serious threat to personnel and property, necessitating stron
 	- Motion-detecting burglar alarms.
 
 
-### Remote Computing Security
+## Remote Computing Security
 
 - **Remote Site Computing**: Involves telecommuting via Internet or dial-up.
 - External connections must be secured to protect internal networks.
 
 
-### Special Considerations for Physical Security Threats
+## Special Considerations for Physical Security Threats
 
 - **In-House vs. Outsourced Security**:
 	- Outsourcing benefits: Expertise and experience.
