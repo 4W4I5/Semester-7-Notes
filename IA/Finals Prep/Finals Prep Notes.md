@@ -1324,6 +1324,15 @@ must be placed in another company
 information from employees that should not be
 released
 
+Inventory Management
+• Computing equipment should be inventoried and
+inspected on a regular basis
+• Classified information should also be inventoried
+and managed
+Physical security of computing equipment, data
+storage media, and classified documents varies for
+each organization
+
 ---
 # Chapter 10: Implementing Information Security
 ---
