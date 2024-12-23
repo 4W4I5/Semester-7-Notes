@@ -5,7 +5,7 @@
 | 6                 | Security Technology: Firewalls & VPNs | :white_check_mark: |
 | 7                 | Security Technology: IDPS             | :white_check_mark: |
 | 8                 | Cryptography                          | :white_check_mark: |
-| 9                 | Physical Security                     | :warning:          |
+| 9                 | Physical Security                     | :white_check_mark: |
 | 10                | Implementing Information Security     | :warning:          |
 | 11                | Security & Personnel                  | :warning:          |
 | 12                | Information Security Maintenance      | :warning:          |
@@ -1116,6 +1116,7 @@ Physical security addresses the design, implementation, and maintenance of count
 
 
 ## Fire Security and Safety
+
 Fires are the most serious threat to personnel and property, necessitating strong detection and response measures.
 
 - ### Fire Detection and Response
@@ -1205,7 +1206,6 @@ Fires are the most serious threat to personnel and property, necessitating stron
 	- Downsides: High cost, loss of control, and trust issues.
 - **Social Engineering**: Uses manipulation to gain unauthorized information.
 
-
 ## Inventory Management
 
 - Regular inventory and inspection of computing equipment and classified information are necessary.
@@ -1215,6 +1215,348 @@ Physical security encompasses the safeguarding of facilities, computing equipmen
 
 ---
 # Chapter 10: Implementing Information Security
+
+• SecSDLC implementation phase is accomplished
+by changing the configuration and operation of an
+organization's information systems.
+• Implementation includes changes to:
+	— Procedures (through policy)
+	— People (through training)
+	— Hardware (through firewalls)
+	— Software (through encryption)
+	— Data (through classification)
+Organization translates blueprint for information
+security into a project plan.
+
+Information Security Project
+Management
+• Project plan must address project leadership,
+managerial/technical/budgetary considerations,
+and organizational resistance to change.
+• Major steps in executing a project plan are:
+	— Planning the project
+	— Supervising tasks and action steps
+	— Wrapping up
+• Each organization must determine its own project
+management methodology for IT and information
+security projects.
+
+Developing the Project Plan
+• Creation of a project plan can be done using work
+breakdown structure (WBS).
+• Major project tasks in WBS are:
+	— Work to be accomplished
+	— Assignees
+	— Start and end dates
+	— Amount of effort required
+	— Estimated capital and noncapital expenses
+	— Identification of dependencies between/among tasks
+• Each major WBS task is further divided into smaller
+tasks or specific action steps.
+
+Project Planning Considerations
+• As project plan is developed, adding detail is not
+always straightforward.
+Special considerations include financial, priority,
+time and schedule, staff, procurement,
+organizational feasibility, training and
+indoctrination, and scope.
+• Financial considerations
+	— Regardless of existing information security needs,
+	the amount of effort that can be expended depends
+	on available funds.
+	— Cost-benefit analysis must be reviewed and verified
+	prior to the development of a project plan.
+	— Both public and private organizations have
+	budgetary constraints, though of a different nature.
+	— To justify an amount budgeted for a security project
+	at either public or for-profit organizations, it may be
+	useful to benchmark expenses of similar
+	organizations.
+• Priority considerations
+	— In general, the most important information security
+	controls should be scheduled first.
+	— Implementation of controls is guided by prioritization
+	of threats and value of threatened information assets.
+• Time and scheduling considerations
+	— Time impacts project plans at dozens of points,
+	including:
+		•  Time to realize control's return on investment
+		• Time to train the users
+		• Time to order, receive, install, and configure security
+		control
+• Staffing considerations
+	— Need for qualified, trained, and available personnel
+	constrains project plan
+	— Experienced staff is often needed to implement
+	technologies and develop and implement policies and
+	training programs.
+• Procurement considerations
+	— Often constraints on the selection of equipment/services
+		• Some organizations require use of particular service
+		vendors/manufacturers/suppliers.
+	— These constraints may limit which technologies can be
+	acquired.
+Organizational feasibility considerations
+	— Changes should be transparent to system users
+	unless the new technology is intended to change
+	procedures (e.g., requiring additional authentication
+	or verification).
+	— Successful project requires that organization be able
+	to assimilate proposed changes.
+	— New technologies sometimes require new policies,
+	employee training, and education.
+• Training and indoctrination considerations
+	— Size of organization and normal conduct of business
+	may preclude a large training program for new
+	security procedures/technologies.
+	— If so, the organization should conduct phased-in or
+	pilot implementation.
+• Scope considerations
+	— Project scope: description of project's features,
+	capabilities, functions, and quality level, used as the
+	basis of a project plan
+	— Organizations should implement large information
+	security projects in stages.
+
+The Need for Project Management
+• Project management requires a unique set of skills
+and thorough understanding of a broad body of
+specialized knowledge.
+• Most information security projects require a trained
+project manager (a CISO) or skilled IT manager
+trained in project management techniques.
+• Supervised implementation
+	— Some organizations may designate a champion from
+	general management community of interest to
+	supervise implementation of information security
+	project plan.
+	— An alternative is to designate a senior IT manager or
+	CIO to lead implementation.
+	— Best solution is to designate a suitable person from
+	information security community of interest.
+	— In final analysis, each organization must find project
+	leadership best suited to its specific needs.
+• Executing the plan
+	— A negative feedback loop ensures that project
+	progress is measured periodically.
+		• When significant deviation occurs, corrective action is
+		taken.
+	— Often, a project manager can adjust one of three
+	planning parameters for the task being corrected:
+		• Effort and money allocated
+		• Elapsed time/ScheduIing impact
+		• Quality or quantity of deliverable
+• Project wrap-up
+	— Project wrap-up is usually handled as procedural
+	task and assigned to mid-level IT or information
+	security manager.
+	— Collect documentation, finalize status reports, and
+	deliver final report and presentation at wrap-up
+	meeting
+	— Goal of wrap-up is to resolve any pending issues,
+	critique overall project effort, and draw conclusions
+	about how to improve process.
+Security Project Management
+Certifications
+• GIAC certified project manager
+	— Offered by SANS Institute; focuses on security
+	professionals/managers with project management
+	responsibilities
+• IT security project management
+	— Offered by EC Council as a milestone in its Certified
+	E-Business Professional program
+• Certified security project manager
+	— Security Industry Association focused on physical
+	security; also incorporates information security
+
+Technical Aspects of Implementation
+• Some aspects of implementation process are
+technical and deal with the application of
+technology.
+	— Others deal with human interface to technical
+	systems.
+
+Conversion Strategies
+• As components of new security system are
+planned, provisions must be made for changeover
+from the previous method of performing a task to
+the new method.
+• Four basic approaches:
+	— Direct changeover
+	— Phased implementation
+	— Pilot implementation
+	— Parallel operations
+
+The Bull's-Eye Model
+• Proven method for prioritizing program of complex
+change
+• Requires that issues be addressed from general to
+specific; focus is on systematic solutions and not
+on individual problems
+• Relies on the process of project plan evaluation in
+four layers:
+	— Policies
+	— Networks
+	— Systems
+	— Applications
+
+To Outsource or Not
+• Just as some organizations outsource IT
+operations, organizations can outsource part or all
+of their information security programs.
+• When an organization outsources most/all IT
+services, information security should be part of
+contract arrangement with the supplier.
+Organizations of all sizes frequently outsource
+network monitoring functions.
+
+Technology Governance and Change
+Control
+• Technology governance guides how frequently
+technical systems are updated and how updates
+are approved/funded.
+• By managing the process of change, the
+organization can:
+	— Improve communication, enhance coordination,
+	reduce unintended consequences, improve quality of
+	service, and ensure groups are complying with
+	policies
+
+Nontechnical Aspects of
+Implementation
+• Some aspects of implementation are not technical
+in nature, instead dealing with the human interface
+to technical systems.
+• Include creating a culture of change management
+and considerations for the organizations facing
+change.
+
+The Culture of Change Management
+• Prospect of change can cause employees to
+consciously or unconsciously resist the change.
+• The stress of change can increase the probability
+of mistakes or create vulnerabilities in systems.
+• Change management can lower resistance to
+change and build resilience.
+• Lewin change model:
+	— Unfreezing
+	— Moving
+	— Refreezing
+
+Considerations for Organizational
+Change
+• Steps can be taken to make employees more
+amenable to change:
+	— Reducing resistance to change from the start
+	— Developing a culture that supports change
+• Reducing resistance to change from the start
+	— The more ingrained the existing methods and
+	behaviors, the more difficult the change.
+	— Best to improve interaction between affected
+	members of organization and project planners in
+	early project phases
+	— Three-step process for project managers:
+	communicate, educate, and involve
+	— Joint application development
+• Developing a culture that supports change
+	— Ideal organization fosters resilience to change
+	— Resilience: An organization understands change is a
+	necessary part of the organizational culture, and
+	embracing change is more productive than fighting it.
+	— To develop such a culture, the organization must
+	successfully accomplish many projects that require
+	change.
+• It may seem that only systems handling secret
+government data require security certification and
+accreditation.
+• In order to comply with recent federal regulations
+protecting personal privacy, the organizations need
+to have formal mechanisms for verification and
+validation.
+
+Information Systems Security
+Certification and Accreditation
+• It may seem that only systems handling secret
+government data require security certification and
+accreditation.
+• In order to comply with recent federal regulations
+protecting personal privacy, the organizations need
+to have formal mechanisms for verification and
+validation.
+• Certification versus accreditation
+	— Accreditation: authorizes IT system to process,
+	store, or transmit information; assures systems of
+	adequate quality
+	— Certification: evaluation of technical and
+	nontechnical security controls of IT system
+	establishing extent to which design and
+	implementation meet security requirements
+
+The NIST Security Life cycle
+Approach
+• SP 800-37, Rev. 1: Guidelines for Applying the Risk
+Management Framework to Federa/ Information
+Systems, and CNSS Instruction-1000: National
+Information Assurance Certification and Accreditation
+Process (NIACAP)
+	— Provide guidance for the certification and accreditation of
+	federal information systems
+• Information processed by the federal government is
+grouped into one of three categories:
+	— National security information (NSI)
+	- Non-NSI
+	— Intelligence community (IC)
+
+• A new publication, NIST SP 800-39: Integrated
+Enterprise-Wide Risk Management: Organization,
+Mission, and Information Systems View builds on a
+three-tiered approach to risk management
+	— Tier I addresses risk from organizational
+	perspective
+	— Tier 2 addresses risk from mission/business process
+	perspective
+	— Tier 3 addresses risk from information system
+	perspective
+<placeholder for tiered management framework>
+<placeholder for Risk management framework>
+<placeholder for Security Control allocation>
+
+NSTISS Certification and Accreditation
+• National security interest systems have their own
+C&A standards
+• NSTISS Instruction 1000: National Information
+Assurance Certification and Accreditation Process
+(NIACAP)
+	— Establishes minimum national standards for
+	certifying/accrediting national security systems
+	— Designed to certify that IS meets documented
+	requirements
+	— Composed of four phases: definition, verification,
+	validation, and post accreditation
+
+<placeholder for NIACAP Process>
+<placeholder for NIACAP Phase 1>
+<placeholder for NIACAP Phase 2>
+<placeholder for NIACAP Phase 3>
+<placeholder for NIACAP Phase 4>
+
+
+ISO 27001/ 27002 Systems
+Certification and Accreditation
+• Organizations outside the United States apply
+these standards.
+• Standards were originally created to provide a
+foundation for British certification of information
+security management systems (ISMSs).
+Organizations wishing to demonstrate their
+systems have met this international standard must
+follow the certification process.
+<placeholder for ISMS Certification & Accredation>
+
+
+
+
 ---
 # Chapter 11: Security & Personnel
 ---
