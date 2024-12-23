@@ -1215,245 +1215,116 @@ Physical security encompasses the safeguarding of facilities, computing equipmen
 
 ---
 # Chapter 10: Implementing Information Security
-
-## SecSDLC Implementation Phase
-
-The SecSDLC implementation phase involves changing the configuration and operation of an organization's information systems. Implementation includes changes to:
-
-- **Procedures** (through policy)
+### SecSDLC Implementation Phase
+The **SecSDLC (Systems Development Life Cycle)** implementation phase involves modifying the configuration and operation of an organization's information systems. This includes changes to:
+- **Procedures** (via policies)
 - **People** (through training)
-- **Hardware** (through firewalls)
-- **Software** (through encryption)
+- **Hardware** (e.g., firewalls)
+- **Software** (e.g., encryption)
 - **Data** (through classification)
 
-The organization translates the blueprint for information security into a project plan.
-
-## Information Security Project Management
-
-### Key Components:
-
-- Project leadership
-- Managerial, technical, and budgetary considerations
-- Addressing organizational resistance to change
-
-
-### Steps in Executing a Project Plan:
-
-1. Planning the project
-2. Supervising tasks and action steps
-3. Wrapping up
-
-Each organization determines its own project management methodology for IT and information security projects.
-
-## Developing the Project Plan
-
-### Work Breakdown Structure (WBS):
-
-- **Tasks**: Work to be accomplished
-- **Assignees**: Responsible parties
-- **Timeline**: Start and end dates
-- **Effort**: Amount of effort required
-- **Expenses**: Capital and noncapital expenses
-- **Dependencies**: Relationships between tasks
-
-Each major WBS task is divided into smaller tasks or specific action steps.
-
-### Project Planning Considerations:
-
-1. **Financial**:
-
-	- Effort depends on available funds.
-	- Cost-benefit analysis should be reviewed.
-	- Benchmark expenses of similar organizations.
-
-2. **Priority**:
-
-	- Focus on implementing the most critical security controls first.
-	- Prioritize based on threats and asset value.
-
-3. **Time and Scheduling**:
-
-	- Account for:
-		- ROI realization time
-		- Training periods
-		- Procurement and setup times
-
-4. **Staffing**:
-
-	- Availability of qualified personnel
-	- Experienced staff for policy and technology implementation
-
-5. **Procurement**:
-
-	- Vendor and technology selection constraints
-
-6. **Organizational Feasibility**:
-
-	- Ensure changes are transparent unless procedural changes are intentional.
-
-7. **Training and Indoctrination**:
-
-	- Phased or pilot implementation for large organizations
-
-8. **Scope**:
-
-	- Define the project’s features, capabilities, and quality levels.
-	- Implement large projects in stages.
-
-
-## The Need for Project Management
-
-### Key Requirements:
-
-- Skills and understanding of specialized knowledge
-- Trained project manager (CISO or IT manager)
-
-
-### Supervised Implementation:
-
-- Options for leadership:
-	- Champion from general management
-	- Senior IT manager or CIO
-	- Best suited personnel from the information security team
-
-
-### Executing the Plan:
-
-- Use negative feedback loops to measure progress.
-- Adjust planning parameters (effort, schedule, quality) as needed.
-
-
-### Project Wrap-Up:
-
-- Assign to mid-level IT or security manager.
-- Tasks:
-	- Collect documentation
-	- Finalize reports
-	- Conduct wrap-up meeting
-
-
-## Security Project Management Certifications
-
-- **GIAC Certified Project Manager**: SANS Institute
-- **IT Security Project Management**: EC Council
-- **Certified Security Project Manager**: Security Industry Association
-
-
-## Technical Aspects of Implementation
-
-Focus on:
-
-- Application of technology
-- Human interaction with technical systems
-
-
-### Conversion Strategies:
-
-1. **Direct Changeover**
-2. **Phased Implementation**
-3. **Pilot Implementation**
-4. **Parallel Operations**
-
-
-## The Bull's-Eye Model
-
-A proven method for prioritizing complex change:
-
-- General to specific approach
-- Focus on systematic solutions
-
-
-### Four Layers:
-
-1. Policies
-2. Networks
-3. Systems
-4. Applications
-
-
-## To Outsource or Not
-
-### Key Points:
-
-- Information security can be included in IT outsourcing contracts.
-- Outsourcing options range from partial to full security program delegation.
-
-
-## Technology Governance and Change Control
-
-### Benefits:
-
-- Improved communication and coordination
-- Reduced unintended consequences
-- Improved quality of service
-- Policy compliance
-
-
-## Nontechnical Aspects of Implementation
-
-Focus on managing the human interface to technical systems:
-
-### Culture of Change Management:
-
-1. **Lewin Change Model**:
-
-	- Unfreezing
-	- Moving
-	- Refreezing
-
-2. **Reducing Resistance to Change**:
-
-	- Improve interaction between affected members and project planners early.
-	- Three-step process: Communicate, Educate, Involve
-
-3. **Developing a Culture of Change**:
-
-	- Foster resilience to change.
-	- Emphasize that embracing change is more productive than resisting it.
-
-
-## Information Systems Security Certification and Accreditation
-
-### Key Definitions:
-
-- **Accreditation**: Authorization for IT systems to process, store, or transmit information.
-- **Certification**: Evaluation of security controls to ensure design and implementation meet requirements.
-
-
-## The NIST Security Life Cycle Approach
-
-### Key Publications:
-
-- **SP 800-37, Rev. 1**: Guidelines for Risk Management Framework
-- **SP 800-39**: Integrated Enterprise-Wide Risk Management
-
-
-### Three-Tiered Risk Management Approach:
-
-1. **Tier 1**: Organizational perspective
-2. **Tier 2**: Mission/business process perspective
-3. **Tier 3**: Information system perspective
-
-
-## NSTISS Certification and Accreditation
-
-### Key Points:
-
-- **NIACAP**: National Information Assurance Certification and Accreditation Process
-	- Four Phases:
-
-		1. Definition
-		2. Verification
-		3. Validation
-		4. Post-accreditation
-
-
-## ISO 27001/27002 Systems Certification and Accreditation
-- ### Key Points:
-	- International standard for Information Security Management Systems (ISMS).
-	- Certification process ensures systems meet these standards.
+The organization translates its blueprint for information security into a practical project plan.
+
+- ### Information Security Project Management
+	- The project plan for implementing information security must address the following:
+		- **Leadership**: Clear project leadership and oversight
+		- **Managerial/technical/budgetary considerations**: Balancing project scope, resources, and time
+		- **Organizational resistance to change**: Addressing challenges in adopting new systems
+- ### Major Steps in Executing a Project Plan
+	- Each organization needs to determine its project management methodology based on its specific needs.
+		1. **Planning the Project**: Establishing goals and timelines.
+		2. **Supervising Tasks and Action Steps**: Managing progress and ensuring tasks are completed.
+		3. **Wrapping Up**: Finalizing the project and evaluating its success.
+- ### Developing the Project Plan
+	- A project plan is often created using a **Work Breakdown Structure (WBS)**, which identifies:
+		- **Major project tasks**
+		- **Task assignees**
+		- **Start and end dates**
+		- **Effort and resource requirements**
+		- **Capital and non-capital expenses**
+		- **Dependencies between tasks**
+	- Each WBS task can be broken down further into smaller tasks or action steps.
+- ### Project Planning Considerations
+	- Developing a detailed project plan requires attention to the following factors:
+		- **Financial considerations**: Budget constraints may limit efforts. A cost-benefit analysis is necessary to justify expenses.
+		- **Priority considerations**: The most critical security controls should be prioritized, based on the threats and value of the protected assets.
+		- **Time and scheduling considerations**: Managing time for training, installation, and configuration of security controls is crucial.
+		- **Staffing considerations**: Qualified personnel are essential for successful implementation. Staff training may be necessary.
+		- **Procurement considerations**: Vendor selection and technology availability can impact project success.
+		- **Organizational feasibility considerations**: New technologies should be transparent to users unless they change procedures.
+		- **Training and indoctrination considerations**: The size of the organization may dictate a phased or pilot training approach.
+		- **Scope considerations**: The project's scope must be clearly defined and may require phased implementation to address complex security needs.
+- ### The Need for Project Management
+	- Information security projects require specialized project management skills. Most projects will benefit from a **trained project manager**, typically a **CISO (Chief Information Security Officer)** or an IT manager skilled in project management techniques.
+	- **Supervised Implementation**: A champion (often from general management) or senior IT manager can oversee the implementation process.
+	- **Executing the Plan**: Project managers must measure progress periodically and adjust planning parameters, such as:
+	    - Effort and resources
+	    - Time and scheduling
+	    - Quality or quantity of deliverables
+	- **Project Wrap-Up**: Typically handled by a mid-level IT or security manager, this includes:
+	    - Collecting documentation
+	    - Finalizing status reports
+	    - Resolving issues and drawing conclusions for process improvement
+- ### Security Project Management Certifications
+	- Several certifications can help professionals manage security projects:
+	- **GIAC Certified Project Manager**: Offered by the SANS Institute for professionals with project management responsibilities in security.
+	- **IT Security Project Management**: Offered by EC-Council as part of its Certified E-Business Professional program.
+	- **Certified Security Project Manager**: Offered by the Security Industry Association, focusing on both physical and information security.
+- ### Technical Aspects of Implementation
+	- Implementation involves both technical aspects (e.g., technology application) and non-technical aspects (e.g., human interfaces with systems).
+- ### Conversion Strategies
+	- When transitioning to a new security system, it is essential to plan the changeover process. Four basic strategies include:
+		- **Direct Changeover**: A complete switch from the old system to the new system.
+		- **Phased Implementation**: Gradual introduction of the new system over time.
+		- **Pilot Implementation**: Testing the new system with a limited group before full deployment.
+		- **Parallel Operations**: Running both the old and new systems simultaneously until the new system is fully operational.
+- ### The Bull's-Eye Model
+	- A proven method for prioritizing complex change programs, the **Bull’s-Eye Model** involves addressing issues from general to specific, focusing on systematic solutions rather than individual problems. The model evaluates a project in four layers:
+		1. **Policies**
+		2. **Networks**
+		3. **Systems**
+		4. **Applications**
+- ### To Outsource or Not
+	- Organizations may choose to outsource part or all of their information security functions, just as they outsource IT operations. When outsourcing, it's critical to include information security in the contract arrangement with service providers. Many organizations, particularly smaller ones, often outsource network monitoring.
+- ### Technology Governance and Change Control
+	- Technology governance ensures systems are updated and changes are properly managed. By controlling the change process, organizations can:
+	- Improve communication and coordination
+	- Reduce unintended consequences
+	- Improve service quality and policy compliance
+- ### Nontechnical Aspects of Implementation
+	- Some implementation aspects are non-technical and focus on the human interface to technical systems. These include:
+	- Creating a culture of **change management**
+	- Addressing considerations for organizations undergoing change
+- ### The Culture of Change Management
+	- Employees may resist change, consciously or unconsciously, which can lead to mistakes or vulnerabilities. A strong change management process can reduce resistance and build resilience, improving organizational adaptability.
+		- **Lewin’s Change Model** involves three stages:
+		    - **Unfreezing**: Preparing for change
+		    - **Moving**: Implementing the change
+		    - **Refreezing**: Reinforcing the change
+- ### Considerations for Organizational Change
+To ease the transition and reduce resistance to change, consider the following:
+- **Reducing resistance early**: Engage affected individuals early in the project to improve communication and involvement.
+- **Developing a culture of change**: Encourage resilience to change within the organization by fostering a culture where change is viewed as necessary and productive.
+- ### Information Systems Security Certification and Accreditation
+- Organizations need formal mechanisms for verifying and validating their systems, especially in compliance with privacy regulations. **Certification** evaluates the security controls of a system, while **accreditation** authorizes the system to process, store, or transmit sensitive information.
+- ### NIST Security Lifecycle Approach
+- The **NIST SP 800-37** and **CNSS Instruction-1000** guidelines provide frameworks for certification and accreditation of federal information systems. The NIST risk management framework incorporates:
+	1. **Tier 1**: Organizational perspective
+	2. **Tier 2**: Mission/business process perspective
+	3. **Tier 3**: Information system perspective
+
+- ### NSTISS Certification and Accreditation
+	- National security systems follow specific standards for certification and accreditation, as outlined by the **NSTISS Instruction 1000**. This includes four phases:
+		1. **Definition**: Identifying system requirements
+		2. **Verification**: Testing the system's security controls
+		3. **Validation**: Ensuring the system meets security requirements
+		4. **Post-accreditation**: Continuous monitoring and compliance
+- ### ISO 27001/27002 Systems Certification
+	- International organizations may apply the **ISO 27001/27002** standards to demonstrate their information security management systems (ISMS) meet global security criteria. This certification process involves detailed steps for ensuring compliance.
 
 <placeholder for ISMS Certification & Accreditation>
+
+
 
 ---
 # Chapter 11: Security & Personnel
