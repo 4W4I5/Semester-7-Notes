@@ -1042,8 +1042,207 @@ Questions:
 # Chapter 9: Physical Security
 
 
+Physical security addresses design,
+implementation, and maintenance of
+countermeasures that protect physical resources of
+an organization
+• Most controls can be circumvented if an attacker
+gains physical access
+Physical security is as important as logical security
+• Seven major sources of physical loss:
+— Extreme temperature
+— Gases
+— Liquids
+— Living organisms
+— Projectiles
+— Movement
+— Energy anomalies
+• Community roles
+— General management: responsible for facility
+security
+— IT management and professionals: responsible for
+environmental and access security
+— Information security management and professionals:
+perform risk assessments and implementation
+reviews
 
+Physical Access Controls
+• Secure facility: physical location engineered with
+controls designed to minimize risk of attacks from
+physical threats
+• Secure facility can take advantage of natural
+terrain, traffic flow, and degree of urban
+development; can complement these with
+protection mechanisms (fences, gates, walls,
+guards, alarms)
+• Walls, fencing, and gates
+• Guards
+• Dogs
+• ID cards and badges
+	— Ties physical security with information access
+	control
+	• ID card is typically concealed
+	• Name badge is visible
+	— Serve as simple form of biometrics (facial
+	recognition)
+	— Should not be only means of control as cards can be
+	easily duplicated, stolen, and modified
+	— Tailgating occurs when unauthorized individual
+	follows authorized user through the control
+• Locks and keys
+	— Two types of locks: mechanical and
+	electromechanical
+	— Locks can also be divided into four categories:
+	manual, programmable, electronic, biometric
+	— Locks fail and alternative procedures for controlling
+	access must be put in place
+	— Locks fail in one of two ways:
+	• Fail-safe lock
+	• Fail-secure lock
+• Mantraps
+	— Small enclosure that has entry point and different
+	exit point
+	— Individual enters mantrap, requests access, and if
+	verified, is allowed to exit mantrap into facility
+	— Individual denied entry is not allowed to exit until
+	security official overrides automatic locks of the
+	enclosure
+• Electronic monitoring
+	— Records events where other types of physical
+	controls are impractical or incomplete
+	— May use cameras with video recorders; includes
+	closed-circuit television (CCT) systems
+	— Drawbacks
+	• Reactive; does not prevent access or prohibited
+	activity
+	• Recordings often are not monitored in real time; must
+	be reviewed to have any value
+• Alarms and alarm systems
+	— Alarm systems notify when an event occurs
+	— Detect fire, intrusion, environmental disturbance, or
+	an interruption in services
+	— Rely on sensors that detect event; e.g., motion
+	detectors, smoke detectors, thermal detectors, glass
+	breakage detectors, weight sensors, contact
+	sensors, vibration sensors
+• Computer rooms and wiring closets
+	— Require special attention to ensure confidentiality,
+	integrity, and availability of information
+	— Logical controls easily defeated if attacker gains
+	physical access to computing equipment
+	— Custodial staff often the least scrutinized persons
+	who have access to offices; are given greatest
+	degree of unsupervised access
+• Interior walls and doors
+	— Information asset security sometimes compromised
+	by construction of facility walls and doors
+	— Facility walls typically either standard interior or
+	firewall
+	— High-security areas must have firewall-grade walls to
+	provide physical security from potential intruders and
+	improve resistance to fires
+	— Doors allowing access to high security rooms should
+	be evaluated
+	— Recommended that push or crash bars be installed
+	on computer rooms and closets
 
+Fire Security and Safety
+• Most serious threat to safety of people who work in
+an organization is possibility of fire
+• Fires account for more property damage, personal
+injury, and death than any other threat
+• Imperative that physical security plans examine
+and implement strong measures to detect and
+respond to fires
+
+Fire Detection and Response
+• Fire suppression systems: devices installed and
+maintained to detect and respond to a fire
+• Flame point: temperature of ignition
+• Deny an environment of heat, fuel, or oxygen
+— Water and water mist systems
+— Carbon dioxide systems
+— Soda acid systems
+— Gas-based systems
+• Fire detection
+	— Fire detection systems fall into two general
+	categories: manual and automatic
+	— Part of a complete fire safety program includes
+	individuals that monitor chaos of fire evacuation to
+	prevent an attacker accessing offices
+	— There are three basic types of fire detection
+	systems: thermal detection, smoke detection, flame
+	detection
+• Fire suppression
+	— Systems consist of portable, manual, or automatic
+	apparatus
+	— Portable extinguishers are rated by the type of fire:
+	Class A, Class B, Class C, Class D
+	— Installed systems apply suppressive agents; usually
+	either sprinkler or gaseous systems
+• Gaseous emission systems
+	— Until recently, two types of systems: carbon dioxide
+	and Halon
+	— Carbon dioxide robs a fire of oxygen supply
+	— Halon is clean but has been classified as an ozone-
+	depleting substance; new installations are prohibited
+	— Alternative clean agents include FM-200, Inergen,
+	carbon dioxide, FE-13 (trifluromethane)
+
+Failure of Supporting Utilities and
+Structural Collapse
+• Supporting utilities (heating, ventilation, and air
+conditioning; power; water; and others) have
+significant impact on continued safe operation of a
+facility
+• Each utility must be properly managed to prevent
+potential damage to information and information
+systems
+
+Heating, Ventilation, and Air
+Conditioning
+• Areas within heating, ventilation, and air
+conditioning (HVAC) systems that can cause
+damage to information systems include:
+— Temperature
+— Filtration
+— Humidity
+— Static electricity
+• Ventilation shafts
+	— While ductwork is small in residential buildings, in
+	large commercial buildings it can be large enough
+	for an individual to climb though
+	— If vents are large, security can install wire mesh
+	grids at various points to compartmentalize the runs
+• Power management and conditioning
+	— Electrical quantity (voltage level, amperage rating)
+	and quality of power (cleanliness, proper installation)
+	are concerns
+	— Noise that interferes with the normal 60 Hertz cycle
+	can result in inaccurate time clocks or unreliable
+	internal clocks inside CPU
+• Grounding and amperage
+	— Grounding ensures that returning flow of current is
+	properly discharged to ground
+	— Overloading a circuit causes problems with circuit
+	tripping and can overload electrical cable, increasing
+	risk of fire
+	— GFCI: capable of quickly identifying and interrupting
+	a ground fault
+• Uninterruptible power supply (UPS)
+	— In case of power outage, UPS is backup power
+	source for major computer systems
+	— Four basic UPS configurations:
+		• Standby
+		• Ferroresonant standby
+		• Line-interactive
+		• True online (double conversion online)
+• Emergency shutoff
+	— Important aspect of power management is the need
+	to be able to stop power immediately should a
+	current represent a risk to human or machine safety
+	— Most computer rooms and wiring closets are
+	equipped with an emergency power shutoff
 
 ---
 # Chapter 10: Implementing Information Security
