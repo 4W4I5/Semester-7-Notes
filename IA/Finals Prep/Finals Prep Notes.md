@@ -1244,6 +1244,86 @@ damage to information systems include:
 	— Most computer rooms and wiring closets are
 	equipped with an emergency power shutoff
 
+Water Problems
+• Lack of water poses problem to systems, including
+functionality of fire suppression systems and ability
+of water chillers to provide air-conditioning
+• Surplus of water, or water pressure, poses a real
+threat (flooding, leaks)
+• Very important to integrate water detection systems
+into alarm systems that regulate overall facilities
+operations
+
+Structural Collapse
+• Unavoidable forces can cause failures of structures
+that house organization
+• Structures designed and constructed with specific
+load limits; overloading these limits results in
+structural failure and potential injury or loss of life
+• Periodic inspections by qualified civil engineers
+assist in identifying potentially dangerous structural
+conditions
+
+Maintenance of Facility Systems
+Physical security must be constantly documented,
+evaluated, and tested
+• Documentation of facility's configuration, operation,
+and function should be integrated into disaster
+recovery plans and operating procedures
+• Testing helps improve the facility's physical security
+and identify weak points
+
+Interception of Data
+• Three methods of data interception:
+	— Direct observation
+	— Interception of data transmission
+	— Electromagnetic interception
+• U.S. government developed TEMPEST program to
+reduce risk of electromagnetic radiation (EMR)
+monitoring
+
+Mobile and Portable Systems
+• With the increased threat to information security for
+laptops, handhelds, and PDAs, mobile computing
+requires more security than average in-house
+system
+• Many mobile computing systems
+	— Have corporate information stored within them
+	— Some are configured to facilitate user's access into
+	organization's secure computing facilities
+• Controls support security and retrieval of lost or
+stolen laptops
+	— CompuTrace software, stored on laptop; reports to a
+	central monitoring center
+	— Burglar alarms made up of a PC card that contains a
+	motion detector
+
+Remote Computing Security
+• Remote site computing: away from organizational
+facility
+• Telecommuting: computing using
+telecommunications including Internet, dial-up, or
+leased point-to-point links
+• Employees may need to access networks on
+business trips; telecommuters need access from
+home systems or satellite offices
+• To provide secure extension of organization's
+internal networks, all external connections and
+systems must be secured
+
+Special Considerations for Physical
+Security Threats
+• Develop physical security in-house or outsource?
+— Many qualified and professional agencies
+— Benefit of outsourcing includes gaining experience
+and knowledge of agencies
+— Downside includes high expense, loss of control
+over individual components, and level of trust that
+must be placed in another company
+• Social engineering: use of people skills to obtain
+information from employees that should not be
+released
+
 ---
 # Chapter 10: Implementing Information Security
 ---
