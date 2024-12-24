@@ -270,10 +270,18 @@
 		- Assess resource requirements.
 	- ### BIA Timeline
 		- **Key Components**
-			- **RPO** ->
-			- **RTO** ->
-			- **WRT** ->
+			- **RPO** -> Recovery Point Objective
+				- Point in time to recover state of system to
+			- **RTO** -> Recovery Time Objective
+				- Max acceptable time that a system can be down
+			- **WRT** -> Work Recovery Time
+				- Max tolerable time to verify systems are online and operational
 			- **MTD** ->
+				- Max duration before damage is inevitable due to inoperation
+		- **Timeline**
+			- A last backup of the system state is known as **RPO**
+			- After an incident the goal is to restore the RPO backup and validate all systems nominal before resumption of normal ops
+			- Half of MTD is reserved for both RTO and WRT
 - ### Incident Response Planning
 	- Focuses on identifying and responding to incidents affecting information assets.
 	- **Key Components of IR Policy**:
