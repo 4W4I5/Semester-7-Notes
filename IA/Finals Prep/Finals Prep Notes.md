@@ -249,8 +249,20 @@
 	5. Develop contingency plans.
 	6. Ensure Plan testing, training & exercises
 	7. Ensure Plan Maintenance
+	- #### Contingency Plan sections to contain
+		1. Introductory statement of philosophical perspective
+		2. Statement of scope/purpose
+		3. Call for periodic risk assessment/BIA
+		4. Specification of CP's major components
+		5. Call for/guidance in the selection of recovery options
+		6. Requirement to test the various plans regularly
+		7. Identification of key regulations and standards
+		8. Identification of key people responsible for CP operations
+		9. Challenge to the organization members for support
+		10. Administrative information
 - ### Business Impact Analysis (BIA)
 	- Evaluates potential adverse events on the organization.
+	- Assumes security controls have been bypasses
 	- Key Stages:
 		- Identify critical business processes.
 		- Set recovery priorities.
