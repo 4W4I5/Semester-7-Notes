@@ -310,13 +310,48 @@
 | **Damage Assessment**               | - Several sources of information on damage can be used, including: <br>- System logs <br>- Intrusion detection logs <br>- Configuration logs and documents <br>- Documentation from incident response <br>- Results of detailed assessments of systems and data storage <br>- Computer evidence must be carefully collected, documented, and maintained to be usable in formal or informal proceedings.<br>- Individuals who assess damage need special training. |
 | **Automated Response**              | - New systems can respond to incident threats autonomously.<br>- Downsides of current automated response systems may outweigh the benefits, including: <br>- Legal liabilities of a counterattack <br>- Ethical issues                                                                                                                                                                                                                                                    |
 
-- ## Disaster Recovery & Business Continuity Planning
-	- **Disaster Recovery Planning (DRP)**: Prepares for recovery after disasters.
-	- **Business Continuity Planning (BCP)**: Ensures continuation of critical operations during disruptions.
-		- Continuity strategies include hot, warm, and cold sites.
-- ## Crisis Management
-	- Actions to minimize harm during emergencies.
-	- Involves training and preparation for disaster response teams.
+
+## Disaster Recovery Planning (DRP) and Business Continuity Planning (BCP)
+
+- ### **Disaster Recovery Planning (DRP)**
+	- **Definition**: DRP involves preparing for and recovering from a disaster, ensuring business operations are restored at the primary site.
+	- **Disaster vs. Incident**: The contingency planning team distinguishes between disasters (which require a full recovery plan) and incidents (which are less severe).
+	- **Focus**: During a disaster, DRP shifts focus to securing critical assets, preserving long-term value, and reestablishing operations at the primary site.
+- ### **Business Continuity Planning (BCP)**
+	- **Definition**: BCP prepares the organization to maintain or relocate critical business operations during a disaster that affects the primary site.
+	- **Objective**: When the primary location is rendered unusable, a BCP ensures business continuity by relocating operations or allowing them to continue functioning elsewhere.
+	- **BCP vs. DRP**: Developing a BCP is generally simpler than an Incident Response Plan (IRP) or DRP. It mainly focuses on selecting a continuity strategy and integrating off-site data storage and recovery functions.
+	- #### **Key Elements of BCP**
+		1. **Continuity Strategies**:
+		    - The selection of a continuity strategy often depends on cost. The main options are:
+		        - **Hot Sites**: Fully equipped, ready-to-operate facilities for immediate use.
+		        - **Warm Sites**: Partially equipped facilities that require some setup before use.
+		        - **Cold Sites**: Facilities with basic infrastructure, requiring significant setup before they can be used.
+		    - Shared options:
+		        - **Time-share**: Sharing a site with another organization.
+		        - **Service Bureaus**: Outsourcing operations to a service provider.
+		        - **Mutual Agreements**: Agreements between organizations to share facilities during a disaster.
+		2. **Off-site Disaster Data Storage**:
+		    - To enable fast recovery, organizations must store data off-site for quick access. Recovery options include:
+		        - **Electronic Vaulting**: Transmitting and storing data at a remote location.
+		        - **Remote Journaling**: Continuous data replication to an off-site location.
+		        - **Database Shadowing**: Maintaining a real-time copy of databases at a remote site.
+
+## **Crisis Management**
+- **Definition**: Crisis management involves actions taken in response to emergencies to minimize harm, preserve the organization’s image, and complement DRP and BCP efforts.
+- **Role of Crisis Management**: The crisis management team oversees the response from an enterprise-wide perspective, ensuring the safety and well-being of personnel, preserving normal business operations, and managing communication during the crisis.
+	- ### **Crisis Management Responsibilities**
+		1. **Personnel and Family Support**: Ensuring the well-being of employees and their families during the crisis.
+		2. **Business Operations Impact**: Evaluating the impact of the crisis on regular business activities and making the decision to declare a disaster, if necessary.
+		3. **External Communication**: Keeping key stakeholders informed, including customers, suppliers, partners, regulators, the media, and others.
+		4. **Key Crisis Areas**:
+		    - Verifying personnel headcount and ensuring everyone's safety.
+		    - Maintaining an alert roster for communication during emergencies.
+		    - Ensuring access to emergency information cards.
+	- #### **Preparedness and Response**
+		- Crisis management teams must be well-prepared and trained, with rehearsals conducted to ensure they can respond without relying on supporting documentation.
+		- Preparedness includes developing plans for handling potential crises, coordinating with stakeholders, and rehearsing specific roles and procedures.
+
 - ## Consolidated Contingency Plan
 	- Combines all contingency policies into a single document for accessibility.
 - ## Law Enforcement Involvement
