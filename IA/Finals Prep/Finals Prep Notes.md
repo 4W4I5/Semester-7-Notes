@@ -610,18 +610,31 @@ Some IT security certification exams test a simple process for:
 			- Risk existence (If yes then allow risk)
 				- Is Attacker's Gain > Cost?
 				- Is expected loss > Acceptable level of loss?
-
-## Justifying Controls
-- Estimate the costs and benefits of a proposed control.
-- Compare the **Annualized Loss Expectancy (ALE)** before and after implementing the control.
-
-## **Cost-Benefit Analysis (CBA)**
-- **CBA = ALE(prior) - ALE(post) - ACS**
-	- **ALE(prior)**: Pre-implementation annualized loss expectancy.
-	- **ALE(post)**: Post-implementation annualized loss expectancy.
-	- **ACS**: Annualized cost of safeguard.
-	- ### **Cost-Benefit Analysis (CBA) Formula**:
-		- CBA=ALE(prior)−ALE(post)−Annualized Cost of Safeguard (ACS)\text{CBA} = \text{ALE(prior)} - \text{ALE(post)} - \text{Annualized Cost of Safeguard (ACS)}
+- ### Justifying Controls Selection
+	- Before implementing a control strategy for a specific vulnerability, the organization must explore **all consequences** of the vulnerability to the information asset.
+	- Several methods exist to determine the **advantages/disadvantages** of a specific control.
+	- **Factors affecting the cost** of a control or safeguard include:
+	    - Development or acquisition costs
+	    - Training fees
+	    - Implementation costs
+	    - Service costs
+	    - Maintenance costs
+	- **Asset valuation** involves estimating the real and perceived costs associated with:
+	    - Design, development, installation, maintenance
+	    - Protection and recovery
+	    - Defense against loss and litigation
+	- The process results in an estimate of **potential loss per risk**.
+	- **Expected loss per risk** is calculated using the formula:
+		- Annualized Loss Expectancy (ALE) = Single Loss Expectancy (SLE) × Annualized Rate of Occurrence (ARO)
+	- **Single Loss Expectancy (SLE):**
+		- SLE = Asset Value × Exposure Factor (EF)
+- #### The Cost-Benefit Analysis (CBA) Formula
+	- **CBA** determines whether the evaluated alternative is worth the cost incurred to control the vulnerability.
+	- The formula uses the ALE calculated earlier, prior to control implementation:
+		- CBA = ALE(prior) - ALE(post) - ACS
+	    - **ALE(prior):** The annualized loss expectancy of risk **before** control implementation.
+	    - **ALE(post):** The estimated ALE with the control in place for a defined period.
+	    - **ACS:** The annualized cost of the safeguard.
 
 ## Implementation, Monitoring, and Assessment of Risk Controls
 - **Implementation**: Put the control strategy into action.
