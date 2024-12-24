@@ -553,10 +553,33 @@ Some IT security certification exams test a simple process for:
 
 ## Risk Assessment
 1. **Plan & Organize the Process**
-2. **Determine Loss Frequency**: Likelihood of an attack occurring.
-3. **Evaluate Loss Magnitude**: How much of an asset can be lost.
-4. **Calculate Risk**: Risk = Loss Frequency x Loss Magnitude.
-5. **Assess Risk Acceptability**: Evaluate residual risk against the risk appetite.
+    - Define the scope, goals, and responsibilities for the risk assessment.
+    - Ensure participation of all relevant stakeholders.
+2. **Determine Loss Frequency**
+    - Assess the **likelihood** of an attack combined with the expected **probability of success**.
+    - Use external references for reviewed and adjusted values suitable for your circumstances.
+    - Assign a **numeric value** to likelihood, typically an annual value.
+        - Example: Targeted by hackers once every five years = **1/5 or 20%**.
+    - Estimate the likelihood of a successful attack by assigning a **quantitative value** (e.g., 10%).
+    - Account for **uncertainty** in these values.
+3. **Evaluate Loss Magnitude**
+    - Determine how much of an **information asset** could be lost in a successful attack.
+        - Also known as **loss magnitude** or **asset exposure**.
+    - Combine the **value of the information asset** with the **percentage of the asset lost** during a successful attack.
+    - Challenges include:
+        - **Valuating an information asset**.
+        - **Estimating the percentage** of asset loss under best-case, worst-case, and most likely scenarios.
+4. **Calculate Risk**
+    - For relative risk assessment, calculate risk as:
+        - **Loss frequency × Loss magnitude**
+        - **Minus** the percentage of risk mitigated by current controls.
+        - **Plus** an element of uncertainty.
+5. **Assess Risk Acceptability**
+    - For each threat and associated vulnerabilities, create a **ranking of relative risk levels**.
+    - **Residual risk**: The risk remaining after all feasible protective measures have been implemented.
+    - Compare the residual risk against the **risk appetite**:
+        - If **risk appetite < residual risk**, identify additional strategies to reduce risk further.
+        - If **risk appetite > residual risk**, proceed to the next stages of risk control.
 
 ## Risk Assessment Example:
 
