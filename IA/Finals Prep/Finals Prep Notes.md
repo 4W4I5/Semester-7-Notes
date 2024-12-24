@@ -1,7 +1,7 @@
 | Chapter<br>Number | Chapter<br>Name                       | Status             | Second Pass<br>Ignore this |
 | ----------------- | ------------------------------------- | ------------------ | -------------------------- |
 | 4                 | Planning for Security                 | :white_check_mark: | :white_check_mark:         |
-| 5                 | Risk Management                       | :white_check_mark: | :warning:                  |
+| 5                 | Risk Management                       | :white_check_mark: | :white_check_mark:         | 
 | 6                 | Security Technology: Firewalls & VPNs | :white_check_mark: | :warning:                  |
 | 7                 | Security Technology: IDPS             | :white_check_mark: | :warning:                  |
 | 8                 | Cryptography                          | :white_check_mark: | :warning:                  |
@@ -646,9 +646,30 @@ Some IT security certification exams test a simple process for:
 - **Qualitative**: Relies on non-numerical measures or scales for evaluation.
 
 ## Benchmarking and Best Practices
-- **Benchmarking**: Study practices from other organizations.
-- **Best Practices**: Apply superior methods for information protection.
-- **Challenges**: No two organizations are identical, and best practices evolve over time.
+- ### **Alternative Approach to Risk Management:**
+    - Benchmarking involves seeking out and studying practices in other organizations to replicate them in one's own.
+- ### **Types of Measures for Comparison:**
+    1. **Metrics-based Measures:** Based on numerical standards.
+    2. **Process-based Measures:** Strategic and less focused on numbers.
+- ### **Standard of Due Care:**
+    - Refers to adopting security measures that demonstrate the organization has acted as a prudent entity would in similar circumstances.
+    - Controls applied at or above prescribed levels, alongside maintaining due care, exhibit **due diligence**.
+    - Failure to meet these standards can result in **legal liability**.
+- ### **Best Business Practices:**
+    - Security efforts providing superior levels of information protection.
+    - Considerations for adoption:
+        - Does the organization resemble the target organization with the best practice?
+        - Are expendable resources similar?
+        - Is the organization in a similar threat environment?
+- ### **Challenges in Applying Benchmarking and Best Practices:**
+    - Organizations often do not share information.
+    - No two organizations are identical.
+    - Best practices continually evolve.
+    - Researching benchmarks may not provide actionable next steps.
+- ### **Baselining:**
+    - **Definition:** A performance value or metric used to compare changes in the object being measured.
+    - In information security, it compares **past activities and events** against future performance.
+    - A guide to the overall process is useful during baselining.
 
 ## Other Feasibility Studies
 1. **Organizational Feasibility**: Assesses the fit of IS alternatives with organizational goals.
