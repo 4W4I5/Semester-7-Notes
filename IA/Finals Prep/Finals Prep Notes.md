@@ -282,14 +282,63 @@
 			- A last backup of the system state is known as **RPO**
 			- After an incident the goal is to restore the RPO backup and validate all systems nominal before resumption of normal ops
 			- Half of MTD is reserved for both RTO and WRT
-- ### Incident Response Planning
-	- Focuses on identifying and responding to incidents affecting information assets.
-	- **Key Components of IR Policy**:
-		- Management commitment.
-		- Definition of incidents.
-		- Organizational structure and severity ratings.
-		- **Incident Management**:
-			- Detection, reaction, recovery, and assessment of incidents.
+## Incident Response Planning (IRP)
+- **Incident response planning** includes the identification, classification, and response to an incident.
+- Attacks are classified as incidents if they:
+    - Are directed against information assets
+    - Have a realistic chance of success
+    - Could threaten the confidentiality, integrity, or availability of information resources
+- Incident response (IR) is more reactive than proactive, with the exception of the planning that must occur to prepare IR teams to be ready to react to an incident.
+- **Incident response policy** identifies the following key components:
+    - Statement of management commitment
+    - Purpose/objectives of the policy
+    - Scope of the policy
+    - Definition of InfoSec incidents and related terms
+    - Organizational structure
+    - Prioritization or severity ratings of incidents
+    - Performance measures
+    - Reporting and contact forms
+- ### Incident Planning
+	- **Predefined responses** enable the organization to react quickly and effectively to the detected incident if:
+	    - The organization has an IR team
+	    - The organization can detect the incident
+	- The **IR team** consists of individuals needed to handle systems as the incident takes place.
+- ### Incident Response Plan
+	- **Format and content**
+	- **Storage**
+	- **Testing**
+- ### Incident Detection
+	- The most common occurrence is a complaint about technology support, often delivered to the help desk.
+	- Careful training is needed to quickly identify and classify an incident.
+	- Once the incident is properly identified, the organization can respond.
+	- Incident indicators vary.
+- ### Incident Reaction
+	- **Incident reaction** consists of actions that guide the organization to stop the incident, mitigate its impact, and provide information for recovery.
+	- **Actions that must occur quickly:**
+	    - Notification of key personnel
+	    - Documentation of the incident
+	- ### Incident Containment Strategies
+		- The containment of the incident's scope or impact is the first priority. The organization must then determine which information systems are affected.
+		- The organization can stop the incident and attempt to recover control through a number of strategies.
+- ### Incident Recovery
+	- Once the incident has been contained and control of systems regained, the next stage is recovery.
+	    - The first task is to identify human resources needed and launch them into action.
+	    - The full extent of the damage must be assessed.
+	    - The organization repairs vulnerabilities, addresses any shortcomings in safeguards, and restores data and services of the systems.
+- ### Damage Assessment
+	- Several sources of information on damage can be used, including:
+	    - System logs
+	    - Intrusion detection logs
+	    - Configuration logs and documents
+	    - Documentation from incident response
+	    - Results of detailed assessments of systems and data storage
+	- Computer evidence must be carefully collected, documented, and maintained to be usable in formal or informal proceedings.
+	- Individuals who assess damage need special training.
+- ### Automated Response
+	- New systems can respond to incident threats autonomously.
+	- Downsides of current automated response systems may outweigh the benefits, including:
+	    - Legal liabilities of a counterattack
+	    - Ethical issues
 - ### Disaster Recovery & Business Continuity Planning
 	- **Disaster Recovery Planning (DRP)**: Prepares for recovery after disasters.
 	- **Business Continuity Planning (BCP)**: Ensures continuation of critical operations during disruptions.
