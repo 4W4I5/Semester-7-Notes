@@ -446,10 +446,10 @@ Some IT security certification exams test a simple process for:
 - **Amount of asset value** protected by safeguards.
 
 ## Risk Identification Process
-1. **Plan & Organize the Process**:
+- ### 1. **Plan & Organize the Process**:
 	- Form a team from all affected groups.
 	- Set periodic deliverables, reviews, and presentations.
-2. **Identify, Inventory, and Categorize Assets**:
+- ### 2. **Identify, Inventory, and Categorize Assets**:
 	- Start with identifying assets, including people, procedures, data, software, hardware, and networking.
 	- Categorize assets based on their type.
 		- **People**: Employees and non-employees.
@@ -457,12 +457,53 @@ Some IT security certification exams test a simple process for:
 		- **Data**: Includes management and protection of information.
 		- **Software**: Applications, OS, and security components.
 		- **Hardware**: System devices, peripherals, and security controls.
-1. **Classify, Value, and Prioritize Information Assets**:
+	- #### People, Procedures, and Data Asset Identification
+		- **Human resources, documentation, and data information assets** are more difficult to identify.
+		- **Important asset attributes:**
+		    - **People:**
+		        - Position name/number/ID
+		        - Supervisor
+		        - Security clearance level
+		        - Special skills
+		    - **Procedures:**
+		        - Description
+		        - Intended purpose
+		        - Relation to software/hardware/networking elements
+		        - Storage location for reference
+		        - Storage location for updates
+		    - **Data:**
+		        - Classification
+		        - Owner/creator/manager
+		        - Data structure size
+		        - Data structure used
+		        - Online/offline status
+		        - Location
+		        - Backup procedures employed
+	- #### Hardware, Software, and Network Asset Identification
+		- What information attributes to track depends on:
+		    - Needs of the organization/risk management efforts
+		    - Preferences/needs of the security and information technology communities
+		- **Asset attributes to be considered:**
+		    - Name
+		    - IP address
+		    - MAC address
+		    - Element type
+		    - Serial number
+		    - Manufacturer name
+		    - Model/part number
+		    - Software version
+		    - Physical or logical location
+		    - Controlling entity
+	- #### Asset Inventory
+		- Unless information assets are identified and inventoried, they cannot be effectively protected.
+		- Inventory process involves formalizing the identification process in some form of organizational tool.
+		- Automated tools can sometimes identify the system elements that make up hardware, software, and network components.
+- ### 3. **Classify, Value, and Prioritize Information Assets**:
 	- Classification schemes may include confidential, internal, and public data.
 	- Prioritize assets based on criticality to business success, revenue, and potential damage if lost.
-2. **Identify & Prioritize Threats**:
+- ### 4. **Identify & Prioritize Threats**:
 	- Stuff
-3. **Specify Asset Vulnerabilities**:
+- ### 5. **Specify Asset Vulnerabilities**:
 	- Stuff
 
 
