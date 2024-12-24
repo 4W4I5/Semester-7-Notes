@@ -1383,5 +1383,8 @@ As the project plan is developed, adding detail is not always straightforward. S
 
 ---
 # Chapter 11: Security & Personnel
+
+
+
 ---
 # Chapter 12: Information Security Maintenance
