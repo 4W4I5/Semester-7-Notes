@@ -1,14 +1,14 @@
-| Chapter<br>Number | Chapter<br>Name                       | Status             |
-| ----------------- | ------------------------------------- | ------------------ |
-| 4                 | Planning for Security                 | :white_check_mark: |
-| 5                 | Risk Management                       | :white_check_mark: |
-| 6                 | Security Technology: Firewalls & VPNs | :white_check_mark: |
-| 7                 | Security Technology: IDPS             | :white_check_mark: |
-| 8                 | Cryptography                          | :white_check_mark: |
-| 9                 | Physical Security                     | :white_check_mark: |
-| 10                | Implementing Information Security     | :white_check_mark: |
-| 11                | Security & Personnel                  | :white_check_mark: |
-| 12                | Information Security Maintenance      | :white_check_mark: |
+| Chapter<br>Number | Chapter<br>Name                       | Status             | Second Pass<br>Ignore this |
+| ----------------- | ------------------------------------- | ------------------ | -------------------------- |
+| 4                 | Planning for Security                 | :white_check_mark: | :warning:                  |
+| 5                 | Risk Management                       | :white_check_mark: | :warning:                  |
+| 6                 | Security Technology: Firewalls & VPNs | :white_check_mark: | :warning:                  | 
+| 7                 | Security Technology: IDPS             | :white_check_mark: | :warning:                  |
+| 8                 | Cryptography                          | :white_check_mark: | :warning:                  |
+| 9                 | Physical Security                     | :white_check_mark: | :warning:                  |
+| 10                | Implementing Information Security     | :white_check_mark: | :warning:                  |
+| 11                | Security & Personnel                  | :white_check_mark: | :warning:                  |
+| 12                | Information Security Maintenance      | :white_check_mark: | :warning:                  |
 
 # Chapter 4: Planning for Security
 ## InfoSec Planning & Governance
@@ -163,8 +163,6 @@
 | 27015:2012                    | Information Security Management Guidelines for Financial Services                         | Guidance for financial services organizations                   |
 | 27019:2013                    | Information Security Management Guidelines for Process Control Systems in Energy Industry | Focused on helping energy organizations implement ISO standards |
 
-- ### ISO-27001
-
 ## NIST Security Models
 
 - **Key Publications:**
@@ -238,13 +236,14 @@
 		- **IRP**: Immediate response to incidents.
 		- **DRP**: Focus on restoring systems after disasters.
 		- **BCP**: Ensures ongoing operations during major disruptions.
-- ### Contingency Planning Process
+- ### Contingency Planning Process (Sessional 2 7-Marks)
 	1. Develop CP policy statement.
 	2. Conduct business impact analysis (BIA).
 	3. Identify preventive controls.
 	4. Create contingency strategies.
 	5. Develop contingency plans.
-	6. Ensure testing and maintenance.
+	6. Ensure Plan testing, training & exercises
+	7. Ensure Plan Maintenance
 - ### Business Impact Analysis (BIA)
 	- Evaluates potential adverse events on the organization.
 	- Key Stages:
@@ -257,12 +256,12 @@
 		- Management commitment.
 		- Definition of incidents.
 		- Organizational structure and severity ratings.
-	- **Incident Management**:
-		- Detection, reaction, recovery, and assessment of incidents.
+		- **Incident Management**:
+			- Detection, reaction, recovery, and assessment of incidents.
 - ### Disaster Recovery & Business Continuity Planning
 	- **Disaster Recovery Planning (DRP)**: Prepares for recovery after disasters.
 	- **Business Continuity Planning (BCP)**: Ensures continuation of critical operations during disruptions.
-	- Continuity strategies include hot, warm, and cold sites.
+		- Continuity strategies include hot, warm, and cold sites.
 - ### Crisis Management
 	- Actions to minimize harm during emergencies.
 	- Involves training and preparation for disaster response teams.
@@ -1571,7 +1570,6 @@ Information security should ensure that this data receives the same level of pro
 
 ## NIST SP 800-100 Information Security Handbook: A Guide for Managers
 
-
 | **Area**                                                   | **Description**                                                                                                                                                                                                                           |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **General Information**                                    | - Provides managerial guidance for establishing and implementing an information security program.                                                                                                                                         |
@@ -1664,6 +1662,7 @@ Information security should ensure that this data receives the same level of pro
 ## Vulnerability Assessment and Remediation
 
 **Primary goal**: Identification of specific, documented vulnerabilities and their timely remediation.
+
 - **Accomplished by**:
 	- Using vulnerability assessment procedures.
 	- Documenting background information and providing tested remediation procedures for vulnerabilities.
