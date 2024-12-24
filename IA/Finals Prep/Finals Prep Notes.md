@@ -452,24 +452,19 @@ Some IT security certification exams test a simple process for:
 2. **Identify, Inventory, and Categorize Assets**:
 	- Start with identifying assets, including people, procedures, data, software, hardware, and networking.
 	- Categorize assets based on their type.
-3. **Classify, Value, and Prioritize Information Assets**:
+		- **People**: Employees and non-employees.
+		- **Procedures**: Can either expose valuable knowledge or be sensitive.
+		- **Data**: Includes management and protection of information.
+		- **Software**: Applications, OS, and security components.
+		- **Hardware**: System devices, peripherals, and security controls.
+1. **Classify, Value, and Prioritize Information Assets**:
 	- Classification schemes may include confidential, internal, and public data.
 	- Prioritize assets based on criticality to business success, revenue, and potential damage if lost.
+2. **Identify & Prioritize Threats**:
+	- Stuff
+3. **Specify Asset Vulnerabilities**:
+	- Stuff
 
-## Asset Categorization
-- **People**: Employees and non-employees.
-- **Procedures**: Can either expose valuable knowledge or be sensitive.
-- **Data**: Includes management and protection of information.
-- **Software**: Applications, OS, and security components.
-- **Hardware**: System devices, peripherals, and security controls.
-
-## Identifying and Prioritizing Threats
-- Assess which threats pose the greatest danger to assets.
-- Consider the costs of recovery and prevention of attacks.
-
-## Specifying Asset Vulnerabilities
-- **Vulnerabilities**: Specific avenues threat agents can exploit.
-- Involve brainstorming sessions with diverse organizational backgrounds.
 
 ## Risk Assessment
 1. **Plan & Organize the Process**
