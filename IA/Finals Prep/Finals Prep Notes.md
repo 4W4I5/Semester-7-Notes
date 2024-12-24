@@ -581,10 +581,6 @@ Some IT security certification exams test a simple process for:
         - If **risk appetite < residual risk**, identify additional strategies to reduce risk further.
         - If **risk appetite > residual risk**, proceed to the next stages of risk control.
 
-## Risk Assessment Example:
-
-<Placeholder for Loss Frequency, Loss Magnitude, Risk Calculation>
-
 ## The FAIR Approach to Risk Assessment
 1. Identify scenario components.
 2. Evaluate loss event frequency.
