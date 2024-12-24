@@ -262,11 +262,18 @@
 		10. Administrative information
 - ### Business Impact Analysis (BIA)
 	- Evaluates potential adverse events on the organization.
-	- Assumes security controls have been bypasses
+	- Assumes security controls have been bypassed | failed | been proven ineffective | breached via an attack
+	- Have to consider scope, plan, balance, knowledge of objectives & follow ups
 	- Key Stages:
 		- Identify critical business processes.
 		- Set recovery priorities.
 		- Assess resource requirements.
+	- ### BIA Timeline
+		- **Key Components**
+			- **RPO** ->
+			- **RTO** ->
+			- **WRT** ->
+			- **MTD** ->
 - ### Incident Response Planning
 	- Focuses on identifying and responding to incidents affecting information assets.
 	- **Key Components of IR Policy**:
