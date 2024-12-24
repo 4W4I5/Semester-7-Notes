@@ -310,22 +310,22 @@
 | **Damage Assessment**               | - Several sources of information on damage can be used, including: <br>- System logs <br>- Intrusion detection logs <br>- Configuration logs and documents <br>- Documentation from incident response <br>- Results of detailed assessments of systems and data storage <br>- Computer evidence must be carefully collected, documented, and maintained to be usable in formal or informal proceedings.<br>- Individuals who assess damage need special training. |
 | **Automated Response**              | - New systems can respond to incident threats autonomously.<br>- Downsides of current automated response systems may outweigh the benefits, including: <br>- Legal liabilities of a counterattack <br>- Ethical issues                                                                                                                                                                                                                                                    |
 
-- ### Disaster Recovery & Business Continuity Planning
+- ## Disaster Recovery & Business Continuity Planning
 	- **Disaster Recovery Planning (DRP)**: Prepares for recovery after disasters.
 	- **Business Continuity Planning (BCP)**: Ensures continuation of critical operations during disruptions.
 		- Continuity strategies include hot, warm, and cold sites.
-- ### Crisis Management
+- ## Crisis Management
 	- Actions to minimize harm during emergencies.
 	- Involves training and preparation for disaster response teams.
-- ### Consolidated Contingency Plan
+- ## Consolidated Contingency Plan
 	- Combines all contingency policies into a single document for accessibility.
-- ### Law Enforcement Involvement
+- ## Law Enforcement Involvement
 	- Considerations for involving law enforcement in security incidents:
 		- Timing and level of agency involvement.
 		- Legal implications and evidence handling.
-- ### Benefits of Law Enforcement Involvement
-	- Enhanced evidence processing and legal support.
-	- Expertise in handling investigations and securing necessary legal documentation.
+	- ### Benefits of Law Enforcement Involvement
+		- Enhanced evidence processing and legal support.
+		- Expertise in handling investigations and securing necessary legal documentation.
 
 ---
 
