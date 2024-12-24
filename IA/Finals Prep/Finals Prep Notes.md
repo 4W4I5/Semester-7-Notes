@@ -1,6 +1,6 @@
 | Chapter<br>Number | Chapter<br>Name                       | Status             | Second Pass<br>Ignore this |
 | ----------------- | ------------------------------------- | ------------------ | -------------------------- |
-| 4                 | Planning for Security                 | :white_check_mark: | :white_check_mark:         | 
+| 4                 | Planning for Security                 | :white_check_mark: | :white_check_mark:         |
 | 5                 | Risk Management                       | :white_check_mark: | :warning:                  |
 | 6                 | Security Technology: Firewalls & VPNs | :white_check_mark: | :warning:                  |
 | 7                 | Security Technology: IDPS             | :white_check_mark: | :warning:                  |
@@ -388,6 +388,16 @@ Some IT security certification exams test a simple process for:
 			2. **Countermeasure B**: Reduces the occurrence to once in **4 years**, keeping the exposure rate the same. It will cost **$4,000** per year.
 		- **Question**: Which countermeasure is better, A or B?
 - ### Solution:
+	- Cost-Benefit Analysis table. That contains the following:
+		- **Asset Value (AV):** The monetary value of the asset being protected.
+		- **Exposure Factor (EF):** The percentage of asset value at risk in a single event.
+		- **Single Loss Expectancy (SLE):** The expected monetary loss per event, calculated as AV×EFAV \* EFAV×EF.
+		- **Annualized Rate of Occurrence (ARO):** The likelihood of the risk occurring annually.
+		- **Annualized Loss Expectancy (ALE):** The expected annual monetary loss, calculated as SLE×AROSLE \times AROSLE×ARO.
+		- **For the countermeasures:**
+			- **ALE Reduction for Countermeasure:** The savings in annualized losses due to implementing the countermeasure.
+			- **Annualized Countermeasure Cost:** The yearly cost of implementing the countermeasure.
+			- **Annualized Net Countermeasure Value:** The net benefit of the countermeasure, calculated as ALE Reduction−Countermeasure Cost
 ## Problems with Classic Risk Analysis
 1. **Uneven Multiyear Cash Flows**:
 	Issues arise with both attack and defense costs over multiple years, especially in terms of ROI (Return on Investment), NPV (Net Present Value), and IRR (Internal Rate of Return).
