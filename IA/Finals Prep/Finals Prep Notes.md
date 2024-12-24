@@ -8,7 +8,7 @@
 | 9                 | Physical Security                     | :white_check_mark: |
 | 10                | Implementing Information Security     | :white_check_mark: |
 | 11                | Security & Personnel                  | :white_check_mark: |
-| 12                | Information Security Maintenance      | :white_check_mark: | 
+| 12                | Information Security Maintenance      | :white_check_mark: |
 
 # Chapter 4: Planning for Security
 ## InfoSec Planning & Governance
@@ -23,11 +23,11 @@
 		- Verify/validate that risk management practices are appropriate and assets are used properly
 - ### Information Security Governance Outcomes
 	- **Five Goals:**
-	  - Strategic alignment
-	  - Risk management
-	  - Resource management
-	  - Performance measures
-	  - Value delivery
+		- Strategic alignment
+		- Risk management
+		- Resource management
+		- Performance measures
+		- Value delivery
 - ### Responsibilities
 	- Oversee overall corporate security posture (accountable to board) → **CEO**
 	- Brief board, customers, public → **CEO**
@@ -147,20 +147,20 @@
 - **Overview:** One of the most widely referenced security models, providing a standard framework for information security management.
 - **Purpose:** Offers recommendations for information security management and a starting point for developing organizational security.
 
-| **ISO 27000 Series Standard** | **Title or Topic** | **Comment** |
-| ----------------------------- | ----------------- | ----------- |
-| 27000:2014                    | Series Overview and Terminology | Defines terminology and vocabulary for the series |
-| 27001:2013                    | Information Security Management System Specification | Drawn from B57799:2 |
-| 27002:2013                    | Code of Practice for Information Security Management | Renamed from ISO/IEC 17799; drawn from B57799:1 |
-| 27003:2010                    | Information Security Management Systems Implementation Guidelines | Guidelines for project planning for implementing ISMS |
-| 27004:2009                    | Information Security Measurements and Metrics | Performance measures and metrics for management decisions |
-| 27005-2011                    | ISMS Risk Management | Supports 27001 without recommending a specific risk method |
-| 27006-2011                    | Requirements for Bodies Providing Audit and Certification of an ISMS | Supports accreditation of certification bodies |
-| 27007:2011                    | Guideline for ISMS Auditing | Focuses on management systems |
-| 27008:2011                    | Guideline for Information Security Auditing | Focuses on security controls |
-| 27013:2012                    | Guideline on the Integrated Implementation of ISO/IEC 20000-1 and ISO/IEC 27001 | Supports implementing an integrated dual management system |
-| 27014:2013                    | Information Security Governance Framework | Guidance on evaluating and monitoring information security |
-| 27015:2012                    | Information Security Management Guidelines for Financial Services | Guidance for financial services organizations |
+| **ISO 27000 Series Standard** | **Title or Topic**                                                                        | **Comment**                                                     |
+| ----------------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| 27000:2014                    | Series Overview and Terminology                                                           | Defines terminology and vocabulary for the series               |
+| 27001:2013                    | Information Security Management System Specification                                      | Drawn from B57799:2                                             |
+| 27002:2013                    | Code of Practice for Information Security Management                                      | Renamed from ISO/IEC 17799; drawn from B57799:1                 |
+| 27003:2010                    | Information Security Management Systems Implementation Guidelines                         | Guidelines for project planning for implementing ISMS           |
+| 27004:2009                    | Information Security Measurements and Metrics                                             | Performance measures and metrics for management decisions       |
+| 27005-2011                    | ISMS Risk Management                                                                      | Supports 27001 without recommending a specific risk method      |
+| 27006-2011                    | Requirements for Bodies Providing Audit and Certification of an ISMS                      | Supports accreditation of certification bodies                  |
+| 27007:2011                    | Guideline for ISMS Auditing                                                               | Focuses on management systems                                   |
+| 27008:2011                    | Guideline for Information Security Auditing                                               | Focuses on security controls                                    |
+| 27013:2012                    | Guideline on the Integrated Implementation of ISO/IEC 20000-1 and ISO/IEC 27001           | Supports implementing an integrated dual management system      |
+| 27014:2013                    | Information Security Governance Framework                                                 | Guidance on evaluating and monitoring information security      |
+| 27015:2012                    | Information Security Management Guidelines for Financial Services                         | Guidance for financial services organizations                   |
 | 27019:2013                    | Information Security Management Guidelines for Process Control Systems in Energy Industry | Focused on helping energy organizations implement ISO standards |
 
 ## NIST Security Models
