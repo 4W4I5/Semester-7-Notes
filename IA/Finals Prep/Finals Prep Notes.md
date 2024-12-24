@@ -6,8 +6,8 @@
 | 7                 | Security Technology: IDPS             | :white_check_mark: |
 | 8                 | Cryptography                          | :white_check_mark: |
 | 9                 | Physical Security                     | :white_check_mark: |
-| 10                | Implementing Information Security     | :warning:          |
-| 11                | Security & Personnel                  | :warning:          |
+| 10                | Implementing Information Security     | :white_check_mark: |
+| 11                | Security & Personnel                  | :white_check_mark: |
 | 12                | Information Security Maintenance      | :warning:          |
 
 # Chapter 4: Planning for Security
@@ -1384,399 +1384,171 @@ As the project plan is developed, adding detail is not always straightforward. S
 ---
 # Chapter 11: Security & Personnel
 
-• When implementing information security, there are
-many human resource issues that must be
-addressed.
-	— Positioning and naming
-	— Staffing
-	— Assessing impact of information security on every IT
-	function
-	— Integrating solid information security concepts into
-	personnel management practices
-• Employees often feel threatened when information
-security program is being created/enhanced.
+When implementing information security, there are many human resource issues that must be addressed:
+- **Positioning and naming**
+- **Staffing**
+- **Assessing the impact of information security on every IT function**
+- **Integrating solid information security concepts into personnel management practices**
+Employees often feel threatened when an information security program is being created or enhanced.
 
-Positioning and Staffing the Security
-Function
-• The security function can be placed within:
-	— IT function
-	— Physical security function
-	— Administrative services function
-	— Insurance and risk management function
-	— Legal department
-• IS should balance duty to monitor compliance with
-needs for education, training, awareness, and
-customer service.
+## Positioning the Information Security Function
+The security function can be placed within various departments:
+- IT function
+- Physical security function
+- Administrative services function
+- Insurance and risk management function
+- Legal department
 
-Staffing the Information Security
-Function
-• Selecting personnel is based on several criteria,
-including some not within the control of the
-organization (supply and demand).
-• Many professionals enter security market by
-gaining skills, experience, and credentials.
-At present, information security industry is in a
-period of high demand.
-• Qualifications and requirements
-	— Establishing better hiring practices requires the
-	following:
-		• General management should learn more about skills
-		and qualifications for positions.
-		• Upper management should learn about the budgetary
-		needs of information security function.
-		• IT and general management should grant appropriate
-		levels of influence and prestige to information security.
-	— Organizations typically look for technically qualified
-	information security generalist.
-	— Organizations look for candidates who understand:
-		• How an organization operates at all levels
-		• Information security is usually a management
-		problem, not a technical problem
-		• Importance of strong communications and writing
-		skills
-		• The role of policy in guiding security efforts
-		• Most mainstream IT technologies
-		• The terminology of IT and information security
-		• Threats facing an organization and how they can
-		become attacks
-		• How to protect an organization's assets from
-		information security attacks
-		• How business solutions can be applied to solve
-		specific information security problems
-• Entry into the information security profession
-	— Many information security professionals enter the
-	field through one of two career paths:
-		• Law enforcement and military
-		• Technical, working on security applications and
-		processes
-	— Today, students select and tailor degree programs to
-	prepare for work in information security.
-	— Organizations can foster greater professionalism by
-	matching qualified candidates to clearly defined
-	roles in information security.
-• Information security positions
-	— Use of standard job descriptions can increase the
-	degree of professionalism and improve the
-	consistency of roles and responsibilities between
-	organizations.
-	— Charles Cresson Wood's book Information Security
-	Roles and Responsibilities Made Easy offers a set of
-	model job descriptions.
+Information security should balance the duty to monitor compliance with the need for education, training, awareness, and customer service.
 
-Information Security Positions
-• Chief information security officer (CISO)
-	— Top information security officer; frequently reports to
-	chief information officer (CIO)
-	— Manages the overall information security program
-	— Drafts or approves information security policies
-	— Works with the CIO on strategic plans
-	— Develops information security budgets
-	— Sets priorities for purchase/implementation of
-	information security projects and technology
-	— Makes recruiting, hiring and firing decisions or
-	recommendations
-	— Acts as spokesperson for information security team
-	— Typical qualifications: accreditation, graduate
-	degree, experience
-• Chief security officer (CSO)
-	— CISO's position may be combined with physical
-	security responsibilities
-	— Knowledgeable in both IS requirements and "guards,
-	gates, and guns" approach to security
-• Security manager
-	— Accountable for day-to-day operation of information
-	security program
-	— Accomplishes objectives as identified by CISO,
-	resolves issues identified by technicians
-	— Typical qualifications: often have accreditation;
-	ability to draft middle- and lower-level policies,
-	standards, and guidelines; budgeting, project
-	management, and hiring and firing; ability to manage
-	technicians
-• Security technician
-	— Technically qualified employees tasked to configure
-	security hardware and software
-	— Tend to be specialized
-	— Typical qualifications:
-		• Varied; organizations prefer expert, certified, proficient
-		technician
-		• Some experience with a particular hardware and
-		software package
-		• Actual experience in using a technology usually
-		required
+## Staffing the Information Security Function
 
-Credentials for Information Security
-Professionals
-• Many organizations seek industry-recognized
-certifications.
-• Most existing certifications are relatively new and
-not fully understood by hiring organizations.
+Selecting personnel for information security roles is based on several criteria, including factors not always under the organization’s control (such as supply and demand). Many professionals enter the security field by gaining relevant skills, experience, and certifications. Currently, the information security industry is in a period of high demand.
+
+- ### Qualifications and Requirements:
+	- Establishing better hiring practices requires the following:
+		- **General management** should learn about the skills and qualifications for information security positions.
+		- **Upper management** should be aware of the budgetary needs of the information security function.
+		- **IT and general management** should grant appropriate levels of influence and prestige to information security.
+	- Organizations typically seek technically qualified information security generalists. The ideal candidates should understand:
+		- How an organization operates at all levels.
+		- Information security is usually a management problem, not a technical one.
+		- The importance of strong communication and writing skills.
+		- The role of policy in guiding security efforts.
+		- Most mainstream IT technologies and terminology in IT and information security.
+		- Threats facing the organization and how they can turn into attacks.
+		- How to protect organizational assets from information security attacks.
+		- How business solutions can be applied to solve specific information security problems.
+- ### Entry into the Information Security Profession:
+	- Many professionals enter the field through two main career paths:
+		- **Law enforcement and military**
+		- **Technical roles in security applications and processes**
+	- Today, students can select and tailor degree programs to prepare for work in information security. Organizations can foster greater professionalism by matching qualified candidates to clearly defined roles in the field.
+- ### Information Security Positions:
+	- Using standard job descriptions can increase professionalism and improve the consistency of roles and responsibilities across organizations. Charles Cresson Wood's book _Information Security Roles and Responsibilities Made Easy_ offers a set of model job descriptions.
 
 
-Certifications
-• (ISC)2 Certifications
-	— Certified Information Systems Security Professional (CISSP)
-	— Systems Security Certified Practitioner (SSCP)
-	— Certified Secure Software Lifecycle Professional (CSSLP)
-	— Associate of (ISC)2
-• ISACA Certifications
-	— Certified Information Systems Manager(ClSM)
-	— Certified Information Security Auditor (CISA)
-	— Certified in the Governance of Enterprise IT (CGEIT)
-	— Certified in Risk and Information Systems Control (CRISC)
-• SANS Global Information Assurance Certification
-(GIAC)
-• EC Council Certified CISO (CICISO)
-• CompTIA's Security+
-• Certified Computer Examiner (CCE)
+| **Position**                                  | **Description**                                                                              | **Responsibilities**                                                                                                                                                                                                                                                                                                                                                                                                                | **Typical Qualifications**                                                                 |
+| --------------------------------------------- | -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| **Chief Information Security Officer (CISO)** | Top information security officer; frequently reports to the Chief Information Officer (CIO). | - Manages the overall information security program.<br>- Drafts or approves information security policies.<br>- Works with the CIO on strategic plans.<br>- Develops information security budgets.<br>- Sets priorities for purchasing and implementing security projects and technology.<br>- Makes recruitment, hiring, and firing decisions or recommendations.<br>- Acts as the spokesperson for the information security team. | Accreditation, graduate degree, experience.                                                |
+| **Chief Security Officer (CSO)**              | The CISO's role may be combined with physical security responsibilities.                     | - Knowledgeable in both information security requirements and the "guards, gates, and guns" approach to security.                                                                                                                                                                                                                                                                                                                   | Knowledgeable in both IS and physical security.                                            |
+| **Security Manager**                          | Responsible for the day-to-day operation of the information security program.                | - Achieves objectives as identified by the CISO.<br>- Resolves issues identified by technicians.                                                                                                                                                                                                                                                                                                                                    | Accreditation, experience in drafting policies, budgeting, project management, and hiring. |
+| **Security Technician**                       | Technically qualified employees responsible for configuring security hardware and software.  | - Specialized in particular technologies and platforms.                                                                                                                                                                                                                                                                                                                                                                             | Certified, proficient, and experienced in specific hardware and software packages.         |
 
-Certification Costs
-• More preferred certifications can be expensive.
-• Even experienced professionals find exams difficult
-without some review.
-• Many candidates engage in individual or group
-study sessions and purchase exam review books.
-• Before attempting a certification exam, do all
-homework and review exam criteria, its purpose,
-and requirements to ensure that the time and
-energy spent pursuing certification are worthwhile.
 
-Advice for Information Security Professionals
-• Always remember: business before technology
-• Technology provides elegant solutions for some problems, but only exacerbates others.
-• Never lose sight of goal: protection.
-• Be heard and not seen.
-• Know more than you say; be more skillful than you let on.
-• Speak to users, not at them.
-• Your education is never complete.
+## Credentials for Information Security Professionals
 
-Employment Policies and Practices
-• An organization should make information security a
-documented part of every employee's job
-description.
-• Management community of interest should
-integrate solid concepts for information security into
-the organization's employment policies and
-practices.
-• From information security perspective, hiring of
-employees is a responsibility laden with potential
-security pitfalls.
-• CISO and information security manager should
-work with Human Resources department to
-incorporate information security into guidelines
-used for hiring all personnel.
+Many organizations seek industry-recognized certifications, although many of these certifications are relatively new and not fully understood by all hiring organizations.
 
-Job Descriptions
-• Integrating information security perspectives into
-hiring process begins with reviewing and updating
-all job descriptions.
-• An organization should avoid revealing access
-privileges to prospective employees When
-advertising open positions.
+- ### Certifications:
+	- **(ISC)² Certifications:**
+	    - Certified Information Systems Security Professional (CISSP)
+	    - Systems Security Certified Practitioner (SSCP)
+	    - Certified Secure Software Lifecycle Professional (CSSLP)
+	    - Associate of (ISC)²
+	- **ISACA Certifications:**
+	    - Certified Information Systems Manager (CISM)
+	    - Certified Information Security Auditor (CISA)
+	    - Certified in the Governance of Enterprise IT (CGEIT)
+	    - Certified in Risk and Information Systems Control (CRISC)
+	- **SANS Global Information Assurance Certification (GIAC)**
+	- **EC-Council Certified CISO (CICISO)**
+	- **CompTIA’s Security+**
+	- **Certified Computer Examiner (CCE)**
 
-Interviews
-• An opening within the information security
-department creates a unique opportunity for the
-security manager to educate HR on certifications,
-experience, and qualifications of a good candidate.
-• Information security should advise HR to limit
-information provided to the candidate on the
-responsibilities and access rights of the new hire.
-• For the organizations that include on-site visits as
-part of interviews, it's important to exercise caution
-when showing candidate around facility.
+## Certification Costs
 
-Background Checks
-• Should be conducted before organization extends
-offer to a candidate
-• Investigation into a candidate's past
-• Background checks differ in the level of detail and
-depth with which a candidate is examined.
-• May include identity check, education and
-credential check, previous employment verification,
-references check, worker's compensation history,
-motor vehicle records, drug history, credit history,
-and more
+- Preferred certifications can be expensive.
+- Even experienced professionals find the exams difficult without review.
+- Many candidates engage in individual or group study sessions and purchase exam review books.
+- Before attempting a certification exam, candidates should thoroughly review the exam criteria and ensure that the investment in time and effort is worthwhile.
 
-Employment Contracts
-• Once a candidate has accepted a job offer,
-employment contract becomes an important
-security instrument.
-• Many security policies require an employee to
-agree in writing to monitoring and nondisclosure
-agreements.
-• Policies governing employee behavior may be
-classified as "employment contingent upon
-agreement," whereby employee must agree to
-conform with the policies before being hired.
+## Advice for Information Security Professionals
 
-New Hire Orientation
-• New employees should receive extensive
-information security briefing on policies,
-procedures, and requirements for information
-security.
-• Levels of authorized access should be outlined;
-training is provided on secure use of information
-systems
-• By the time employees start, they should be
-thoroughly briefed on security components and
-their rights and responsibilities.
+- Always remember: **business before technology**.
+- Technology offers elegant solutions to some problems but can exacerbate others.
+- Never lose sight of the goal: **protection**.
+- Be **heard, not seen**.
+- Know more than you say; be more skillful than you let on.
+- **Speak to users**, not at them.
+- Your education is never complete.
 
-On-the-Job Security Training
-• An organization should integrate security
-awareness education into job orientation and
-security training.
-• Keeping security at the forefront of employees'
-minds helps minimize their mistakes and is an
-important part of information security awareness
-mission.
-• External and internal seminars should also be used
-to increase security awareness for all employees,
-particularly security employees.
+## Employment Policies and Practices (Hiring Guidelines)
 
-Evaluating Performance
-• Organizations should incorporate information
-security components into employee performance
-evaluations.
-• Employees pay close attention to job performance
-evaluations.
-	— Are more likely to take information security seriously
-	if violations are documented in them
+- Information security should be a documented part of every employee's job description.
+- The management community of interest should integrate solid information security concepts into the organization's employment policies and practices.
+- Hiring employees is a responsibility laden with potential security pitfalls. The **CISO** and **information security manager** should work with the **Human Resources** department to incorporate information security into hiring guidelines.
 
-Termination
-• When employee leaves organization, security-
-related issues arise.
-• Key issue is continuity of protection of all
-information to which employee had access.
-• After having delivered keys, keycards, and other
-business property, the former employee should be
-escorted from the premises.
-• Many organizations use an exit interview to remind
-former employee of contractual obligations and to
-obtain feedback.
-• Hostile departures include termination for cause,
-permanent downsizing, temporary layoffs, or some
-instances of quitting.
-	— Before the employee is aware, all logical and
-	keycard access is terminated.
-	— Employee collects all belongings and surrenders all
-	keys, keycards, and other company property.
-	— Employee is then escorted out of the building.
-• Friendly departures include resignation, retirement,
-promotion, or relocation.
-	— Employee may be notified well in advance of
-	departure date.
-	— More difficult for the security to maintain positive
-	control over the employee's access and information
-	usage.
-	— Employee accounts usually continue with new
-	expiration date.
-	— Employees come and go at will, collect their own
-	belongings, and leave on their own.
-• Offices and information used by the employee must
-be inventoried; files stored or destroyed; and property
-returned to organizational stores.
-• Possible that employees foresee departure well in
-advance and begin collecting organizational
-information for their future employment
-• Only by scrutinizing systems logs after the employee
-has departed can the organization determine if there
-has been a breach of policy or a loss of information.
-• If information has been illegally copied or stolen,
-report an incident and follow the appropriate policy.
+- ### Job Descriptions
+	- The integration of information security into the hiring process begins with reviewing and updating job descriptions.
+	- Avoid revealing access privileges when advertising open positions.
+- ### Interviews
+	- When an opening arises in the information security department, it is a unique opportunity for the security manager to educate HR about certifications, experience, and qualifications.
+	- HR should limit the information provided to candidates about their responsibilities and access rights.
+	- For organizations that include on-site visits as part of the interview, caution is required when showing candidates around the facility.
+- ### Background Checks
+	- Background checks should be conducted before extending an offer to a candidate.
+	- These checks investigate a candidate's past and may include identity checks, education verification, previous employment verification, references, drug history, credit history, and more.
+- ### Employment Contracts
+	- Once a candidate accepts a job offer, the employment contract becomes a key security instrument.
+	- Many security policies require employees to agree in writing to monitoring and nondisclosure agreements.
+	- Employees must agree to conform to policies as part of the employment contract.
+- ### New Hire Orientation
+	- New employees should receive an extensive information security briefing during orientation, covering policies, procedures, and security requirements.
+	- Authorized access levels should be outlined, and employees should be trained on the secure use of information systems.
+- ### On-the-Job Security Training
+	- Security awareness education should be integrated into job orientation and training.
+	- Keeping security at the forefront of employees' minds minimizes mistakes and is an essential part of information security awareness.
+	- Both internal and external seminars should be used to increase security awareness, particularly for security employees.
+- ### Evaluating Performance
+	- Information security should be incorporated into employee performance evaluations.
+	- Employees are more likely to take information security seriously if violations are documented in their evaluations.
+- ### Termination
+	- When an employee leaves the organization, security-related issues arise, particularly regarding access to information:
+	- **Key Issues:**
+	    - Continuity of protection for all information the employee had access to.
+	    - After returning keys, keycards, and other business property, the former employee should be escorted from the premises.
+	    - Exit interviews can remind the employee of contractual obligations and allow the organization to obtain feedback.
+	- **Hostile Departures:**
+	    - Include terminations for cause, permanent downsizing, temporary layoffs, or certain instances of quitting.
+	    - Access rights should be revoked before the employee is aware of their departure.
+	    - The employee should collect their belongings and surrender all company property, such as keys and keycards.
+	    - The employee is escorted from the building.
+	- **Friendly Departures:**
+	    - Include resignation, retirement, promotion, or relocation.
+	    - More difficult for security to maintain control over the employee's access.
+	    - Employee accounts are usually retained with new expiration dates.
+	    - Employees typically come and go at will and leave on their own.
 
-Security Considerations for Temporary
-Employees, Consultants, and Other
-Workers
-• Individuals not subject to screening, contractual
-obligations, and eventual secured termination often
-have access to sensitive organizational information.
-• Relationships with these individuals should be
-carefully managed to prevent possible information
-leak or theft.
+## Security Considerations for Temporary Employees, Consultants, and Other Workers
 
-Temporary Employees
-• Hired by the organization to serve in temporary
-position or to supplement existing workforce
-• Often not subject to contractual obligations or
-general policies; if temporary employees violate a
-policy or cause a problem, possible actions are
-limited
-• Access to information for temporary employees
-should be limited to that necessary to perform
-duties
-• Temporary employee's supervisor must restrict the
-information to which access is possible.
+- Individuals not subject to screening, contractual obligations, or secured termination often have access to sensitive organizational information.
+- Their relationships with the organization must be carefully managed to prevent potential information leaks or theft.
 
-Contract Employees
-• Typically hired to perform specific services for
-organization
-• Host company often makes contract with a parent
-organization rather than with an individual for a
-particular task.
-• In a secure facility, all contract employees are
-escorted from room to room, as well as into and out
-of facility.
-• There is need for restrictions or requirements to be
-negotiated into contract agreements when they are
-activated.
+| **Category**            | **Description**                                                                                                                                                                                                                                                                      |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Temporary Employees** | - Hired to fill short-term positions or supplement the workforce.<br>- Often not subject to contractual obligations or general policies.<br>- If they violate a policy, actions may be limited.<br>- Access should be restricted to only the information necessary for their duties. |
+| **Contract Employees**  | - Hired to perform specific tasks or services.<br>- Security protocols should ensure that contract employees are escorted and subjected to restrictions as necessary.                                                                                                                |
+| **Consultants**         | - Should have clearly defined contracts that specify requirements for information or facility access.<br>- Consultants should be prescreened, escorted, and subjected to nondisclosure agreements to ensure protection.                                                              |
+| **Business Partners**   | - Organizations forming strategic alliances with other businesses must carefully determine what information is exchanged and how it is handled.<br>- Nondisclosure agreements and security levels of systems must be reviewed before physical integration of systems.                |
 
-Consultants
-• Contracts for consultants should specify all
-requirements for information or facility access
-before being allowed into workplace.
-• Security and technology consultants must be
-prescreened, escorted, and subjected to
-nondisclosure agreements to protect the
-organization.
-• Just because the organization is paying an
-information security consultant, the protection of
-their information doesn't become the consultant's
-top priority.
+## Internal Control Strategies
 
-Business Partners
-• Businesses create strategic alliances with other
-organizations, desiring to exchange information,
-integrate systems, or discuss operations.
-• There must be meticulous, deliberate determination
-of what information is to be exchanged, in what
-format, and to whom.
-• Nondisclosure agreements and the security levels
-of both systems must be examined before any
-physical integration takes place.
+- **Separation of Duties:** Reduces the likelihood of security violations by ensuring that no single individual is responsible for completing significant tasks alone.
+- **Two-Man Control:** Two individuals review and approve each other’s work before it is considered complete.
+- **Job Rotation:** Ensures that no one employee performs actions that cannot be audited by another employee.
+- **Least Privilege:** Only employees with a legitimate business need should be allowed access to systems and information.
 
-Internal Control Strategies
-• Separation of duties is a cornerstone in the
-protection of information assets and the prevention
-of financial loss.
-	— Used to reduce chance that employee will violate
-	information security; stipulates that completion of
-	significant task requires at least two people
-• Two-man control: two individuals review and
-approve each other's work before the task is
-categorized as finished.
-• Job rotation: Employees know each others' job
-skills.
-	— Ensures no one employee performs actions that
-	cannot be physically audited by another employee
-• Garden leave used by some companies to restrict
-the flow of proprietary information when an
-employee leaves to join a competitor
-• Least privilege: Only employees with real business
-need to use systems information are allowed to do
-so.
+## Privacy and the Security of Personnel Data
 
-Privacy and the Security of Personnel
-Data
-Organizations required by law to protect sensitive
-or personal employee information
-• Includes employee addresses, phone numbers,
-Social Security numbers, medical conditions, and
-family names and addresses
-• Information security groups should ensure these
-data receive at least the same level of protection as
-other important organization data.
+Organizations are required by law to protect sensitive employee information, including:
+- Addresses
+- Phone numbers
+- Social Security numbers
+- Medical conditions
+- Family information
 
+Information security should ensure that this data receives the same level of protection as other critical organizational data.
 
 ---
 # Chapter 12: Information Security Maintenance
