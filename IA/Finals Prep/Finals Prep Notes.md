@@ -1,6 +1,6 @@
 | Chapter<br>Number | Chapter<br>Name                       | Status             | Second Pass<br>Ignore this |
 | ----------------- | ------------------------------------- | ------------------ | -------------------------- |
-| 4                 | Planning for Security                 | :white_check_mark: | :warning:                  |
+| 4                 | Planning for Security                 | :white_check_mark: | :white_check_mark:         | 
 | 5                 | Risk Management                       | :white_check_mark: | :warning:                  |
 | 6                 | Security Technology: Firewalls & VPNs | :white_check_mark: | :warning:                  |
 | 7                 | Security Technology: IDPS             | :white_check_mark: | :warning:                  |
@@ -285,19 +285,19 @@
 ## Incident Response Planning (IRP)
 - **Incident response planning** includes the identification, classification, and response to an incident.
 - Attacks are classified as incidents if they:
-    - Are directed against information assets
-    - Have a realistic chance of success
-    - Could threaten the confidentiality, integrity, or availability of information resources
+	- Are directed against information assets
+	- Have a realistic chance of success
+	- Could threaten the confidentiality, integrity, or availability of information resources
 - Incident response (IR) is more reactive than proactive, with the exception of the planning that must occur to prepare IR teams to be ready to react to an incident.
 - **Incident response policy** identifies the following key components:
-    - Statement of management commitment
-    - Purpose/objectives of the policy
-    - Scope of the policy
-    - Definition of InfoSec incidents and related terms
-    - Organizational structure
-    - Prioritization or severity ratings of incidents
-    - Performance measures
-    - Reporting and contact forms
+	- Statement of management commitment
+	- Purpose/objectives of the policy
+	- Scope of the policy
+	- Definition of InfoSec incidents and related terms
+	- Organizational structure
+	- Prioritization or severity ratings of incidents
+	- Performance measures
+	- Reporting and contact forms
 
 | **Section**                         | **Details**                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -309,7 +309,6 @@
 | **Incident Recovery**               | - Once the incident has been contained and control of systems regained, the next stage is recovery.<br>- The first task is to identify human resources needed and launch them into action.<br>- The full extent of the damage must be assessed.<br>- The organization repairs vulnerabilities, addresses any shortcomings in safeguards, and restores data and services of the systems.                                                                           |
 | **Damage Assessment**               | - Several sources of information on damage can be used, including: <br>- System logs <br>- Intrusion detection logs <br>- Configuration logs and documents <br>- Documentation from incident response <br>- Results of detailed assessments of systems and data storage <br>- Computer evidence must be carefully collected, documented, and maintained to be usable in formal or informal proceedings.<br>- Individuals who assess damage need special training. |
 | **Automated Response**              | - New systems can respond to incident threats autonomously.<br>- Downsides of current automated response systems may outweigh the benefits, including: <br>- Legal liabilities of a counterattack <br>- Ethical issues                                                                                                                                                                                                                                                    |
-
 
 ## Disaster Recovery Planning (DRP) and Business Continuity Planning (BCP)
 
@@ -323,19 +322,19 @@
 	- **BCP vs. DRP**: Developing a BCP is generally simpler than an Incident Response Plan (IRP) or DRP. It mainly focuses on selecting a continuity strategy and integrating off-site data storage and recovery functions.
 	- #### **Key Elements of BCP**
 		1. **Continuity Strategies**:
-		    - The selection of a continuity strategy often depends on cost. The main options are:
-		        - **Hot Sites**: Fully equipped, ready-to-operate facilities for immediate use.
-		        - **Warm Sites**: Partially equipped facilities that require some setup before use.
-		        - **Cold Sites**: Facilities with basic infrastructure, requiring significant setup before they can be used.
-		    - Shared options:
-		        - **Time-share**: Sharing a site with another organization.
-		        - **Service Bureaus**: Outsourcing operations to a service provider.
-		        - **Mutual Agreements**: Agreements between organizations to share facilities during a disaster.
+			- The selection of a continuity strategy often depends on cost. The main options are:
+				- **Hot Sites**: Fully equipped, ready-to-operate facilities for immediate use.
+				- **Warm Sites**: Partially equipped facilities that require some setup before use.
+				- **Cold Sites**: Facilities with basic infrastructure, requiring significant setup before they can be used.
+			- Shared options:
+				- **Time-share**: Sharing a site with another organization.
+				- **Service Bureaus**: Outsourcing operations to a service provider.
+				- **Mutual Agreements**: Agreements between organizations to share facilities during a disaster.
 		2. **Off-site Disaster Data Storage**:
-		    - To enable fast recovery, organizations must store data off-site for quick access. Recovery options include:
-		        - **Electronic Vaulting**: Transmitting and storing data at a remote location.
-		        - **Remote Journaling**: Continuous data replication to an off-site location.
-		        - **Database Shadowing**: Maintaining a real-time copy of databases at a remote site.
+			- To enable fast recovery, organizations must store data off-site for quick access. Recovery options include:
+				- **Electronic Vaulting**: Transmitting and storing data at a remote location.
+				- **Remote Journaling**: Continuous data replication to an off-site location.
+				- **Database Shadowing**: Maintaining a real-time copy of databases at a remote site.
 
 ## **Crisis Management**
 - **Definition**: Crisis management involves actions taken in response to emergencies to minimize harm, preserve the organization’s image, and complement DRP and BCP efforts.
@@ -345,13 +344,12 @@
 		2. **Business Operations Impact**: Evaluating the impact of the crisis on regular business activities and making the decision to declare a disaster, if necessary.
 		3. **External Communication**: Keeping key stakeholders informed, including customers, suppliers, partners, regulators, the media, and others.
 		4. **Key Crisis Areas**:
-		    - Verifying personnel headcount and ensuring everyone's safety.
-		    - Maintaining an alert roster for communication during emergencies.
-		    - Ensuring access to emergency information cards.
-	- #### **Preparedness and Response**
+			- Verifying personnel headcount and ensuring everyone's safety.
+			- Maintaining an alert roster for communication during emergencies.
+			- Ensuring access to emergency information cards.
+	- ### **Preparedness and Response**
 		- Crisis management teams must be well-prepared and trained, with rehearsals conducted to ensure they can respond without relying on supporting documentation.
 		- Preparedness includes developing plans for handling potential crises, coordinating with stakeholders, and rehearsing specific roles and procedures.
-
 - ## Consolidated Contingency Plan
 	- Combines all contingency policies into a single document for accessibility.
 - ## Law Enforcement Involvement
@@ -359,11 +357,12 @@
 		- Timing and level of agency involvement.
 		- Legal implications and evidence handling.
 	- ### Benefits of Law Enforcement Involvement
-		- Enhanced evidence processing and legal support.
-		- Expertise in handling investigations and securing necessary legal documentation.
+		- Once a law enforcement agency takes over the case, the organization cannot control the chain of events.
+		- The organization may not hear about the case for weeks or months.
+		- Equipment vital to the organization's business may be tagged as evidence.
+		- If the organization detects a criminal act, it is legally obligated to involve appropriate law enforcement officials.
 
 ---
-
 # Chapter 5: Risk Management
 ## Classic Risk Analysis Calculations
 
