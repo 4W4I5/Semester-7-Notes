@@ -499,12 +499,56 @@ Some IT security certification exams test a simple process for:
 		- Inventory process involves formalizing the identification process in some form of organizational tool.
 		- Automated tools can sometimes identify the system elements that make up hardware, software, and network components.
 - ### 3. **Classify, Value, and Prioritize Information Assets**:
-	- Classification schemes may include confidential, internal, and public data.
-	- Prioritize assets based on criticality to business success, revenue, and potential damage if lost.
+	- Many organizations use **data classification schemes** (e.g., **confidential, internal, public data**).
+	- Classification of components must be **specific enough** to enable determination of **priority levels**.
+	- Categories must be **comprehensive and mutually exclusive**.
+	- #### Data Classification and Management
+		- **Variety of classification schemes** are used by corporate and military organizations.
+		- **Information owners** are responsible for classifying their information assets.
+		- Information classifications must be **reviewed periodically**.
+		- Common classifications include:
+		    - Confidential
+		    - Internal
+		    - External
+		- **Security Clearances:**
+		    - Each data user must be assigned an **authorization level** indicating their classification level.
+		    - Before accessing a specific set of data, the employee must meet the **need-to-know requirement**.
+		- **Management of Classified Data Includes:**
+		    - Storage
+		    - Distribution
+		    - Transportation
+		    - Destruction
+		- **Additional Practices:**
+		    - **Clean desk policy**: Ensures sensitive information is not left unsecured.
+		    - Awareness of risks such as **dumpster diving**.
+	- #### Information Asset Valuation
+		- **Key Questions for Asset Valuation:**
+		    - Which information asset:
+		        - Is **most critical** to the organization's success?
+		        - Generates the most **revenue/profitability**?
+		        - Plays the biggest role in **generating revenue** or **delivering services**?
+		        - Would be the most **expensive to replace** or protect?
+		        - Would be the most **embarrassing** or cause the greatest **liability** if revealed?
+		- **Information Asset Prioritization:**
+		    - Create **weighting for each category** based on the answers to the questions.
+		    - Prioritize each asset using **weighted factor analysis**.
+		    - List assets in order of importance using a **weighted factor analysis worksheet**.
 - ### 4. **Identify & Prioritize Threats**:
-	- Stuff
+	- **Realistic threats** require investigation, while **unimportant threats** can be set aside.
+	- **Threat Assessment Questions:**
+	    - Which threats **present danger** to assets?
+	    - Which threats represent the **most danger** to information?
+	    - How much would it **cost to recover** from a successful attack?
+	    - Which threat requires the **greatest expenditure** to prevent?
 - ### 5. **Specify Asset Vulnerabilities**:
-	- Stuff
+	- **Vulnerabilities** are specific avenues that threat agents can exploit to attack an information asset.
+	- Steps to identify vulnerabilities:
+	    - Examine how each **threat could be perpetrated**.
+	    - List the organization's **assets and associated vulnerabilities**.
+	- The process is most effective when individuals with **diverse backgrounds** in the organization participate in **iterative brainstorming sessions**.
+	- Outcome of the process:
+	    - A **prioritized list** of assets and their vulnerabilities.
+	    - This list can be combined with a **weighted list of threats** to create a **Threats-Vulnerabilities-Assets (TVA) worksheet**.
 
 
 ## Risk Assessment
