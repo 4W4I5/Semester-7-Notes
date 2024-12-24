@@ -1,7 +1,7 @@
 | Chapter<br>Number | Chapter<br>Name                       | Status             | Second Pass<br>Ignore this |
 | ----------------- | ------------------------------------- | ------------------ | -------------------------- |
 | 4                 | Planning for Security                 | :white_check_mark: | :white_check_mark:         |
-| 5                 | Risk Management                       | :white_check_mark: | :white_check_mark:         | 
+| 5                 | Risk Management                       | :white_check_mark: | :white_check_mark:         |
 | 6                 | Security Technology: Firewalls & VPNs | :white_check_mark: | :warning:                  |
 | 7                 | Security Technology: IDPS             | :white_check_mark: | :warning:                  |
 | 8                 | Cryptography                          | :white_check_mark: | :warning:                  |
@@ -83,35 +83,16 @@
 	- Single comprehensive ISSP document
 	- Modular ISSP document
 - ### Components of the Policy:
-	- **Statement of Policy:**
-		- Scope and applicability
-		- Definition of technology addressed
-		- Responsibilities
-	- **Authorized Access and Usage of Equipment:**
-		- User access
-		- Fair and responsible use
-		- Protection of privacy
-	- **Prohibited Use of Equipment:**
-		- Disruptive use or misuse
-		- Criminal use
-		- Offensive or harassing materials
-		- Copyrighted or licensed materials
-		- Other restrictions
-	- **Systems Management:**
-		- Management of stored materials
-		- Employee monitoring
-		- Virus protection
-		- Physical security
-		- Encryption
-	- **Violations of Policy:**
-		- Procedures for reporting violations
-		- Penalties for violations
-	- **Policy Review and Modification:**
-		- Scheduled review of policy procedures for modification
-		- Legal disclaimers
-	- **Limitations of Liability:**
-		- Statements of liability
-		- Other disclaimers as needed
+
+| **Component**                                | **Details**                                                                                                                                   |
+| -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Statement of Policy**                      | - Scope and applicability- Definition of technology addressed<br>- Responsibilities                                                           |
+| **Authorized Access and Usage of Equipment** | - User access<br>- Fair and responsible use<br>- Protection of privacy                                                                        |
+| **Prohibited Use of Equipment**              | - Disruptive use or misuse- Criminal use<br>- Offensive or harassing materials<br>- Copyrighted or licensed materials<br>- Other restrictions |
+| **Systems Management**                       | - Management of stored materials<br>- Employee monitoring- Virus protection<br>- Physical security<br>- Encryption                            |
+| **Violations of Policy**                     | - Procedures for reporting violations<br>- Penalties for violations                                                                           |
+| **Policy Review and Modification**           | - Scheduled review of policy procedures for modification<br>- Legal disclaimers                                                               |
+| **Limitations of Liability**                 | - Statements of liability<br>- Other disclaimers as needed                                                                                    |
 
 ## Systems-Specific Policy (SysSP)
 
