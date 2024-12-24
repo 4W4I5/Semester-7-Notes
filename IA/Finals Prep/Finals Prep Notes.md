@@ -764,7 +764,7 @@ Questions:
 - Prevent specific types of information from moving between the outside world (untrusted network) and the inside world (trusted network)
 - May be separate computer system; a software service running on existing router or server; or a separate network containing supporting devices
 - ### Processing Modes of Firewalls
-	- Packet Filtering
+	- #### Packet Filtering
 		- Packet filtering firewalls examine header information of data packets
 		- Most often based on combination of:
 			- Internet Protocol (IP) source and destination address
@@ -775,19 +775,19 @@ Questions:
 			- Static filtering: requires that filtering rules governing how the firewall decides which packets are allowed and which are denied are developed and installed
 			- Dynamic filtering: allows firewall to react to emergent event and update or create rules to deal with event
 			- Stateful inspection: firewalls that keep track of each network connection between internal and external systems using a state table
-	- Application Gateways
+	- #### Application Gateways
 		- Frequently installed on a dedicated computer; also known as a proxy server.
 		- Since a proxy server is often placed in an unsecured area of the network (e.g., DMZ), it is exposed to higher levels of risk from less trusted networks.
 		- Additional filtering routers can be implemented behind the proxy server, further protecting internal systems.
-	- Circuit Gateways
+	- #### Circuit Gateways
 		- Circuit gateway firewalls operate at the transport layer.
 		- Similar to filtering firewalls, they do not usually look at data traffic flowing between two networks but prevent direct connections between one network and another.
 		- This is accomplished by creating tunnels connecting specific processes or systems on each side of the firewall and allowing only authorized traffic in the tunnels.
-	- MAC Layer Firewalls
+	- #### MAC Layer Firewalls
 		- Designed to operate at the media access control layer of the OSI network model.
 		- Able to consider the specific identity of a host computer in its filtering decisions.
 		- MAC addresses of specific host computers are linked to access control list (ACL) entries that identify specific types of packets that can be sent to each host; all other traffic is blocked.
-	- Hybrids
+	- #### Hybrids
 		- Combine elements of other types of firewalls, such as packet filtering and proxy services, or packet filtering and circuit gateways.
 		- Alternately, they may consist of two separate firewall devices, each a separate firewall system, but connected to work in tandem.
 - ### Categorization of Firewalls
