@@ -2,7 +2,7 @@
 | ----------------- | ------------------------------------- | ------------------ | -------------------------- |
 | 4                 | Planning for Security                 | :white_check_mark: | :warning:                  |
 | 5                 | Risk Management                       | :white_check_mark: | :warning:                  |
-| 6                 | Security Technology: Firewalls & VPNs | :white_check_mark: | :warning:                  | 
+| 6                 | Security Technology: Firewalls & VPNs | :white_check_mark: | :warning:                  |
 | 7                 | Security Technology: IDPS             | :white_check_mark: | :warning:                  |
 | 8                 | Cryptography                          | :white_check_mark: | :warning:                  |
 | 9                 | Physical Security                     | :white_check_mark: | :warning:                  |
@@ -195,12 +195,10 @@
 	- Create target profile
 	- Determine, analyze, prioritize gaps
 	- Implement action plan
-
-## Other Sources of Security Frameworks
-
-- Federal Agency Security Practices (FASP)
-- Computer Emergency Response Team Coordination Center (CERT/CC)
-- International Association of Professional Security Consultants
+	- ### Other Sources of Security Frameworks
+		- Federal Agency Security Practices (FASP)
+		- Computer Emergency Response Team Coordination Center (CERT/CC)
+		- International Association of Professional Security Consultants
 
 
 ## Design of Security Architecture
@@ -209,18 +207,25 @@
 - **Levels of Controls:**
 	- **Management Controls:** Set direction and scope, provide detailed instructions.
 	- **Operational Controls:** Address personnel and physical security, protect production inputs/outputs
-- ### Security Education, Training & Awareness Program (SETA)
-	- **Purpose**: SETA aims to minimize accidental security breaches through education, training, and awareness.
-	- #### Components:
-		1. **Security Education**:
-			- Everyone should be aware of information security principles; formal degrees are not necessary for all.
-			- Employees may pursue relevant courses in higher education.
-		2. **Security Training**:
-			- Provides detailed, hands-on instruction for secure job performance.
-			- Can be customized in-house or outsourced; alternatives include professional conferences.
-		3. **Awareness Program**:
-			- Essential for keeping security at the forefront of employees' minds.
-			- Should be simple and cost-effective; lack of implementation can increase security risks.
+	- **Technical Controls:** Tactical & Technical Implementations related to designing and integrating security in the org
+- **Defense in Depth:**
+	- Implementation of security in layers
+	- Requires that organization establish multiple layers of security controls & safeguards
+- **Security Perimeter:**
+	- Does not protect against internal attacks from employee threats or onsite physical threats
+
+## Security Education, Training & Awareness Program (SETA)
+- **Purpose**: SETA aims to minimize accidental security breaches through education, training, and awareness.
+- ### Components:
+	1. **Security Education**:
+		- Everyone should be aware of information security principles; formal degrees are not necessary for all.
+		- Employees may pursue relevant courses in higher education.
+	2. **Security Training**:
+		- Provides detailed, hands-on instruction for secure job performance.
+		- Can be customized in-house or outsourced; alternatives include professional conferences.
+	3. **Awareness Program**:
+		- Essential for keeping security at the forefront of employees' minds.
+		- Should be simple and cost-effective; lack of implementation can increase security risks.
 
 |                       | **Education**           | **Training**          | **Awareness**              |
 | --------------------- | ----------------------- | --------------------- | -------------------------- |
