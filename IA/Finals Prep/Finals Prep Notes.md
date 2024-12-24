@@ -8,7 +8,7 @@
 | 9                 | Physical Security                     | :white_check_mark: |
 | 10                | Implementing Information Security     | :white_check_mark: |
 | 11                | Security & Personnel                  | :white_check_mark: |
-| 12                | Information Security Maintenance      | :warning:          |
+| 12                | Information Security Maintenance      | :white_check_mark: | 
 
 # Chapter 4: Planning for Security
 ## InfoSec Planning & Governance
@@ -1217,33 +1217,35 @@ Physical security encompasses the safeguarding of facilities, computing equipmen
 # Chapter 10: Implementing Information Security
 - The **SecSDLC implementation phase** is accomplished by changing the configuration and operation of an organization's information systems.
 - **Implementation includes changes to**:
-    - **Procedures** (through policy)
-    - **People** (through training)
-    - **Hardware** (through firewalls)
-    - **Software** (through encryption)
-    - **Data** (through classification)
+	- **Procedures** (through policy)
+	- **People** (through training)
+	- **Hardware** (through firewalls)
+	- **Software** (through encryption)
+	- **Data** (through classification)
 The organization translates the blueprint for information security into a project plan.
 
 ## Information Security Project Management
 - The **project plan** must address project leadership, managerial/technical/budgetary considerations, and organizational resistance to change.
 - Major steps in executing a project plan are:
-    - **Planning the project**
-    - **Supervising tasks and action steps**
-    - **Wrapping up**
+	- **Planning the project**
+	- **Supervising tasks and action steps**
+	- **Wrapping up**
 - Each organization must determine its own project management methodology for IT and information security projects.
 ## Developing the Project Plan
 - The creation of a project plan can be done using **work breakdown structure (WBS)**.
 - Major project tasks in WBS are:
-    - Work to be accomplished
-    - Assignees
-    - Start and end dates
-    - Amount of effort required
-    - Estimated capital and noncapital expenses
-    - Identification of dependencies between/among tasks
+	- Work to be accomplished
+	- Assignees
+	- Start and end dates
+	- Amount of effort required
+	- Estimated capital and noncapital expenses
+	- Identification of dependencies between/among tasks
 - Ea+ch major WBS task is further divided into smaller tasks or specific action steps.
 
 ## Project Planning Considerations
+
 As the project plan is developed, adding detail is not always straightforward. Special considerations include financial, priority, time and schedule, staff, procurement, organizational feasibility, training and indoctrination, and scope.
+
 - ### Financial Considerations
 	- Regardless of existing information security needs, the amount of effort that can be expended depends on available funds.
 	- **Cost-benefit analysis** must be reviewed and verified prior to the development of a project plan.
@@ -1254,15 +1256,15 @@ As the project plan is developed, adding detail is not always straightforward. S
 	- Implementation of controls is guided by prioritization of threats and value of threatened information assets.
 - ### Time and Scheduling Considerations
 	- Time impacts project plans at dozens of points, including:
-	    - Time to realize control's return on investment
-	    - Time to train the users
-	    - Time to order, receive, install, and configure security control
+		- Time to realize control's return on investment
+		- Time to train the users
+		- Time to order, receive, install, and configure security control
 - ### Staffing Considerations
 	- Need for qualified, trained, and available personnel constrains project plan.
 	- Experienced staff is often needed to implement technologies and develop and implement policies and training programs.
 - ### Procurement Considerations
 	- Often constraints on the selection of equipment/services:
-	    - Some organizations require use of particular service vendors/manufacturers/suppliers.
+		- Some organizations require use of particular service vendors/manufacturers/suppliers.
 	- These constraints may limit which technologies can be acquired.
 - ### Organizational Feasibility Considerations
 	- Changes should be transparent to system users unless the new technology is intended to change procedures (e.g., requiring additional authentication or verification).
@@ -1284,22 +1286,22 @@ As the project plan is developed, adding detail is not always straightforward. S
 	- In the final analysis, each organization must find project leadership best suited to its specific needs.
 - ### Executing the Plan
 	- A negative feedback loop ensures that project progress is measured periodically.
-	    - When significant deviation occurs, corrective action is taken.
+		- When significant deviation occurs, corrective action is taken.
 	- Often, a project manager can adjust one of three planning parameters for the task being corrected:
-	    - Effort and money allocated
-	    - Elapsed time/scheduling impact
-	    - Quality or quantity of deliverable
+		- Effort and money allocated
+		- Elapsed time/scheduling impact
+		- Quality or quantity of deliverable
 - ### Project Wrap-Up
 	- Project wrap-up is usually handled as a procedural task and assigned to a mid-level IT or information security manager.
 	- The goal is to resolve any pending issues, critique overall project effort, and draw conclusions about how to improve the process.
 	- Activities include collecting documentation, finalizing status reports, and delivering a final report and presentation at the wrap-up meeting.
 ## Security Project Management Certifications
  - **GIAC Certified Project Manager**:
-    - Offered by SANS Institute; focuses on security professionals/managers with project management responsibilities.
+	- Offered by SANS Institute; focuses on security professionals/managers with project management responsibilities.
 - **IT Security Project Management**:
-    - Offered by EC Council as a milestone in its Certified E-Business Professional program.
+	- Offered by EC Council as a milestone in its Certified E-Business Professional program.
 - **Certified Security Project Manager**:
-    - Offered by the Security Industry Association, focused on physical security; also incorporates information security.
+	- Offered by the Security Industry Association, focused on physical security; also incorporates information security.
 
 ## Technical Aspects of Implementation
 - Some aspects of the implementation process are technical and deal with the application of technology.
@@ -1308,18 +1310,18 @@ As the project plan is developed, adding detail is not always straightforward. S
 ## Conversion Strategies
 - As components of the new security system are planned, provisions must be made for changeover from the previous method of performing a task to the new method.
 - **Four basic approaches**:
-    - Direct changeover
-    - Phased implementation
-    - Pilot implementation
-    - Parallel operations
+	- Direct changeover
+	- Phased implementation
+	- Pilot implementation
+	- Parallel operations
 - ### The Bull's-Eye Model
 	- A proven method for prioritizing a program of complex change.
 	- Requires that issues be addressed from general to specific; focus is on systematic solutions and not on individual problems.
 	- Relies on the process of project plan evaluation in four layers:
-	    - Policies
-	    - Networks
-	    - Systems
-	    - Applications
+		- Policies
+		- Networks
+		- Systems
+		- Applications
 ## To Outsource or Not
 - Just as some organizations outsource IT operations, organizations can outsource part or all of their information security programs.
 - When an organization outsources most/all IT services, information security should be part of the contract arrangement with the supplier.
@@ -1328,7 +1330,7 @@ As the project plan is developed, adding detail is not always straightforward. S
 ## Technology Governance and Change Control
 - **Technology governance** guides how frequently technical systems are updated and how updates are approved/funded.
 - By managing the process of change, the organization can:
-    - Improve communication, enhance coordination, reduce unintended consequences, improve quality of service, and ensure groups are complying with policies.
+	- Improve communication, enhance coordination, reduce unintended consequences, improve quality of service, and ensure groups are complying with policies.
 
 ## Nontechnical Aspects of Implementation
 - Some aspects of implementation are not technical in nature, instead dealing with the human interface to technical systems.
@@ -1339,13 +1341,13 @@ As the project plan is developed, adding detail is not always straightforward. S
 - The stress of change can increase the probability of mistakes or create vulnerabilities in systems.
 - Change management can lower resistance to change and build resilience.
 - **Lewin Change Model**:
-    - Unfreezing
-    - Moving
-    - Refreezing
+	- Unfreezing
+	- Moving
+	- Refreezing
 ## Considerations for Organizational Change
 - Steps can be taken to make employees more amenable to change:
-    - Reducing resistance to change from the start
-    - Developing a culture that supports change
+	- Reducing resistance to change from the start
+	- Developing a culture that supports change
 - ### Reducing Resistance to Change from the Start
 	- The more ingrained the existing methods and behaviors, the more difficult the change.
 	- Best to improve interaction between affected members of the organization and project planners in early project phases.
@@ -1363,28 +1365,29 @@ As the project plan is developed, adding detail is not always straightforward. S
 	- **Certification**: evaluation of technical and nontechnical security controls of IT systems establishing the extent to which design and implementation meet security requirements.
 ## The NIST Security Life Cycle Approach
 - **SP 800-37, Rev. 1**: Guidelines for Applying the Risk Management Framework to Federal Information Systems, and **CNSS Instruction-1000**: National Information Assurance Certification and Accreditation Process (NIACAP).
-    - Provide guidance for the certification and accreditation of federal information systems.
+	- Provide guidance for the certification and accreditation of federal information systems.
 - Information processed by the federal government is grouped into one of three categories:
-    - National security information (NSI)
-    - Non-NSI
-    - Intelligence community (IC)
+	- National security information (NSI)
+	- Non-NSI
+	- Intelligence community (IC)
 - A new publication, **NIST SP 800-39**: Integrated Enterprise-Wide Risk Management: Organization, Mission, and Information Systems View builds on a three-tiered approach to risk management:
-    - Tier I addresses risk from an organizational perspective.
-    - Tier II addresses risk from a mission/business process perspective.
-    - Tier III addresses risk from an information system perspective.
+	- Tier I addresses risk from an organizational perspective.
+	- Tier II addresses risk from a mission/business process perspective.
+	- Tier III addresses risk from an information system perspective.
 
 ## NSTISS Certification and Accreditation
 - **National security interest systems** have their own C&A standards.
 - **NSTISS Instruction 1000**: National Information Assurance Certification and Accreditation Process (NIACAP):
-    - Establishes minimum national standards for certifying/accrediting national security systems.
-    - Designed to certify that IS meets documented requirements.
-    - Composed of four phases: definition, verification, validation, and post accreditation.
+	- Establishes minimum national standards for certifying/accrediting national security systems.
+	- Designed to certify that IS meets documented requirements.
+	- Composed of four phases: definition, verification, validation, and post accreditation.
 
 
 ---
 # Chapter 11: Security & Personnel
 
 When implementing information security, there are many human resource issues that must be addressed:
+
 - **Positioning and naming**
 - **Staffing**
 - **Assessing the impact of information security on every IT function**
@@ -1392,7 +1395,9 @@ When implementing information security, there are many human resource issues tha
 Employees often feel threatened when an information security program is being created or enhanced.
 
 ## Positioning the Information Security Function
+
 The security function can be placed within various departments:
+
 - IT function
 - Physical security function
 - Administrative services function
@@ -1427,7 +1432,6 @@ Selecting personnel for information security roles is based on several criteria,
 - ### Information Security Positions:
 	- Using standard job descriptions can increase professionalism and improve the consistency of roles and responsibilities across organizations. Charles Cresson Wood's book _Information Security Roles and Responsibilities Made Easy_ offers a set of model job descriptions.
 
-
 | **Position**                                  | **Description**                                                                              | **Responsibilities**                                                                                                                                                                                                                                                                                                                                                                                                                | **Typical Qualifications**                                                                 |
 | --------------------------------------------- | -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
 | **Chief Information Security Officer (CISO)** | Top information security officer; frequently reports to the Chief Information Officer (CIO). | - Manages the overall information security program.<br>- Drafts or approves information security policies.<br>- Works with the CIO on strategic plans.<br>- Develops information security budgets.<br>- Sets priorities for purchasing and implementing security projects and technology.<br>- Makes recruitment, hiring, and firing decisions or recommendations.<br>- Acts as the spokesperson for the information security team. | Accreditation, graduate degree, experience.                                                |
@@ -1435,22 +1439,21 @@ Selecting personnel for information security roles is based on several criteria,
 | **Security Manager**                          | Responsible for the day-to-day operation of the information security program.                | - Achieves objectives as identified by the CISO.<br>- Resolves issues identified by technicians.                                                                                                                                                                                                                                                                                                                                    | Accreditation, experience in drafting policies, budgeting, project management, and hiring. |
 | **Security Technician**                       | Technically qualified employees responsible for configuring security hardware and software.  | - Specialized in particular technologies and platforms.                                                                                                                                                                                                                                                                                                                                                                             | Certified, proficient, and experienced in specific hardware and software packages.         |
 
-
 ## Credentials for Information Security Professionals
 
 Many organizations seek industry-recognized certifications, although many of these certifications are relatively new and not fully understood by all hiring organizations.
 
 - ### Certifications:
 	- **(ISC)² Certifications:**
-	    - Certified Information Systems Security Professional (CISSP)
-	    - Systems Security Certified Practitioner (SSCP)
-	    - Certified Secure Software Lifecycle Professional (CSSLP)
-	    - Associate of (ISC)²
+		- Certified Information Systems Security Professional (CISSP)
+		- Systems Security Certified Practitioner (SSCP)
+		- Certified Secure Software Lifecycle Professional (CSSLP)
+		- Associate of (ISC)²
 	- **ISACA Certifications:**
-	    - Certified Information Systems Manager (CISM)
-	    - Certified Information Security Auditor (CISA)
-	    - Certified in the Governance of Enterprise IT (CGEIT)
-	    - Certified in Risk and Information Systems Control (CRISC)
+		- Certified Information Systems Manager (CISM)
+		- Certified Information Security Auditor (CISA)
+		- Certified in the Governance of Enterprise IT (CGEIT)
+		- Certified in Risk and Information Systems Control (CRISC)
 	- **SANS Global Information Assurance Certification (GIAC)**
 	- **EC-Council Certified CISO (CICISO)**
 	- **CompTIA’s Security+**
@@ -1478,7 +1481,6 @@ Many organizations seek industry-recognized certifications, although many of the
 - Information security should be a documented part of every employee's job description.
 - The management community of interest should integrate solid information security concepts into the organization's employment policies and practices.
 - Hiring employees is a responsibility laden with potential security pitfalls. The **CISO** and **information security manager** should work with the **Human Resources** department to incorporate information security into hiring guidelines.
-
 - ### Job Descriptions
 	- The integration of information security into the hiring process begins with reviewing and updating job descriptions.
 	- Avoid revealing access privileges when advertising open positions.
@@ -1506,19 +1508,19 @@ Many organizations seek industry-recognized certifications, although many of the
 - ### Termination
 	- When an employee leaves the organization, security-related issues arise, particularly regarding access to information:
 	- **Key Issues:**
-	    - Continuity of protection for all information the employee had access to.
-	    - After returning keys, keycards, and other business property, the former employee should be escorted from the premises.
-	    - Exit interviews can remind the employee of contractual obligations and allow the organization to obtain feedback.
+		- Continuity of protection for all information the employee had access to.
+		- After returning keys, keycards, and other business property, the former employee should be escorted from the premises.
+		- Exit interviews can remind the employee of contractual obligations and allow the organization to obtain feedback.
 	- **Hostile Departures:**
-	    - Include terminations for cause, permanent downsizing, temporary layoffs, or certain instances of quitting.
-	    - Access rights should be revoked before the employee is aware of their departure.
-	    - The employee should collect their belongings and surrender all company property, such as keys and keycards.
-	    - The employee is escorted from the building.
+		- Include terminations for cause, permanent downsizing, temporary layoffs, or certain instances of quitting.
+		- Access rights should be revoked before the employee is aware of their departure.
+		- The employee should collect their belongings and surrender all company property, such as keys and keycards.
+		- The employee is escorted from the building.
 	- **Friendly Departures:**
-	    - Include resignation, retirement, promotion, or relocation.
-	    - More difficult for security to maintain control over the employee's access.
-	    - Employee accounts are usually retained with new expiration dates.
-	    - Employees typically come and go at will and leave on their own.
+		- Include resignation, retirement, promotion, or relocation.
+		- More difficult for security to maintain control over the employee's access.
+		- Employee accounts are usually retained with new expiration dates.
+		- Employees typically come and go at will and leave on their own.
 
 ## Security Considerations for Temporary Employees, Consultants, and Other Workers
 
@@ -1542,6 +1544,7 @@ Many organizations seek industry-recognized certifications, although many of the
 ## Privacy and the Security of Personnel Data
 
 Organizations are required by law to protect sensitive employee information, including:
+
 - Addresses
 - Phone numbers
 - Social Security numbers
@@ -1551,3 +1554,222 @@ Organizations are required by law to protect sensitive employee information, inc
 Information security should ensure that this data receives the same level of protection as other critical organizational data.
 
 ---
+
+# Chapter 12: Information Security Maintenance
+- **Organizations should avoid overconfidence** after improving their information security profile.
+- **Organizational changes** that may occur include:
+	- Acquisition of new assets; emergence of new vulnerabilities; business priorities shift; partnerships form or dissolve; organizational divestiture and acquisition; employee hire and turnover.
+- If the program does not adjust, it may be necessary to begin the cycle again.
+- It is more expensive to reengineer the information security profile repeatedly.
+
+## Security Management Maintenance Models
+
+- A management model must be adopted to **manage and operate the ongoing security program**.
+- Models are frameworks that structure tasks of managing a particular set of activities or business functions.
+
+## NIST SP 800-100 Information Security Handbook: A Guide for Managers
+
+
+| **Area**                                                   | **Description**                                                                                                                                                                                                                           |
+| ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **General Information**                                    | - Provides managerial guidance for establishing and implementing an information security program.                                                                                                                                         |
+| **Information Security Management Areas**                  | - Thirteen areas of information security management.<br>- Provide specific monitoring activities for each task.<br>- Tasks should be done on an ongoing basis.<br>- Not all issues are negative.                                          |
+| **Information Security Governance**                        | - Agencies should monitor the status of their programs to ensure that: <br>- Ongoing activities support the agency's mission.<br>- Policies and procedures are aligned with technology.<br>- Controls are accomplishing the intended purpose. |
+| **System Development Life Cycle**                          | - The process of developing, implementing, and retiring information systems through a multi-step process.                                                                                                                                 |
+| **Awareness and Training**                                 | - Tracking systems should capture key information on program activities.<br>- Compliance tracking involves assessing the program's status.<br>- The program must evolve continuously.                                                     |
+| **Capital Planning and Investment Control**                | - Facilitates and controls the expenditure of agency funds.<br>- Follows a Select-Control-Evaluate investment life cycle.                                                                                                                 |
+| **Interconnecting Systems**                                | - Direct connection of systems to share data and resources.<br>- Can introduce risks but also provides benefits like greater efficiency, centralized data access, and enhanced functionality.                                             |
+| **Performance Measures**                                   | - **Metrics**: Tools supporting decision-making.<br>- Involves a six-phase iterative process.                                                                                                                                             |
+| **Security Planning**                                      | - One of the most critical ongoing responsibilities in security management.                                                                                                                                                               |
+| **Information Technology Contingency Planning**            | - Involves recovery and documentation of procedures.                                                                                                                                                                                      |
+| **Risk Management**                                        | - An ongoing effort involving risk identification, analysis, and management.                                                                                                                                                              |
+| **Certification, Accreditation, and Security Assessments** | - Regular checks on the status of security controls.<br>- **Auditing**: Reviews the use of a system for misuse or malfeasance.                                                                                                            |
+| **Security Services and Products Acquisition**             | - Focuses on the procurement of security services and products.                                                                                                                                                                           |
+| **Incident Response**                                      | - Focuses on the life cycle of incident response management.                                                                                                                                                                              |
+| **Configuration (Change) Management**                      | - Manages the effects of changes in system configurations.                                                                                                                                                                                |
+
+---
+
+## The Security Maintenance Model
+- Designed to focus organizational effort on maintaining systems.
+- **Recommended maintenance model** based on five subject areas:
+	- External monitoring.
+	- Internal monitoring.
+	- Planning and risk assessment.
+	- Vulnerability assessment and remediation.
+	- Readiness and review.
+
+## Monitoring the External Environment
+
+- **Objective**: Provide early awareness of new threats, threat agents, vulnerabilities, and attacks that are needed to mount an effective defense.
+- **Entails**: Collecting intelligence from data sources and giving that intelligence context and meaning for use by organizational decision-makers.
+- **Data sources**:
+	- Acquiring threat and vulnerability data is not difficult; turning data into information decision-makers can use is the challenge.
+	- External intelligence comes from three classes of sources: vendors, computer emergency response teams (CERTs), and public network sources.
+	- Regardless of where or how external monitoring data is collected, it must be analyzed in the context of the organization’s security environment to be useful.
+- **Monitoring, escalation, and incident response**:
+	- The function of the external monitoring process is to monitor activity, report results, and escalate warnings.
+	- The monitoring process has three primary deliverables:
+		- Specific warning bulletins issued when developing threats and specific attacks pose measurable risk to the organization.
+		- Periodic summaries of external information.
+		- Detailed intelligence on the highest risk warnings.
+- **Data collection and management**:
+	- Over time, external monitoring processes should capture knowledge about the external environment in appropriate formats.
+	- External monitoring collects raw intelligence, filters for relevance, assigns a relative risk impact, and communicates it to decision-makers in time to make a difference.
+
+## Monitoring the Internal Environment
+- **Objective**: Maintain informed awareness of the state of the organization’s networks, systems, and security defenses.
+- **Internal monitoring** accomplished by:
+	- Doing an inventory of network devices and channels, IT infrastructure and applications, and information security infrastructure elements.
+	- Leading the IT governance process.
+	- Real-time monitoring of IT activity.
+	- Monitoring the internal state of the organization’s networks and systems.
+- **Network characterization and inventory**:
+	- Organizations should have a carefully planned and fully populated inventory for network devices, communication channels, and computing devices.
+	- Once characteristics are identified, they must be carefully organized and stored using a mechanism (manual or automated) that allows timely retrieval and rapid integration of disparate facts.
+- **Making intrusion detection and prevention systems work**:
+	- The most important value of raw intelligence provided by the IDS is to provide indicators of current or imminent vulnerabilities.
+	- Log files from IDS engines can be mined for information.
+	- Another IDS monitoring element is traffic analysis.
+	- Analyzing attack signatures for unsuccessful system attacks can identify weaknesses in various security efforts.
+- **Detecting differences**:
+	- **Difference analysis**: Procedure that compares the current state of a network segment against the known previous state of the same segment.
+	- Differences between the current state and the baseline state that are unexpected could be a sign of trouble and need investigation.
+
+## Planning and Risk Assessment
+
+- **Purpose**: Keep a lookout over the entire information security program.
+	- **Accomplished by**: Identifying and planning ongoing information security activities that further reduce risk.
+- **Primary objectives**:
+	- Establishing a formal information security program review.
+	- Instituting formal project identification, selection, planning, and management processes.
+	- Coordinating with IT project teams to introduce risk assessment and review for all IT projects.
+	- Integrating a mindset of risk assessment across the organization.
+- **Information security program planning and review**:
+	- Periodic review of the ongoing information security program, coupled with planning for enhancements and extensions, is recommended.
+	- Should examine IT needs of the future organization and the impact those needs have on information security.
+	- A recommended approach takes advantage of the fact that most organizations have annual capital budget planning cycles and manage security projects as part of that process.
+- **Large projects should be broken into smaller projects** for several reasons:
+	- Smaller projects tend to have more manageable impacts on networks and users.
+	- Larger projects tend to complicate the change control process in the implementation phase.
+	- Shorter planning, development, and implementation schedules reduce uncertainty.
+	- Most large projects can easily be broken down into smaller projects, providing more opportunities to change direction and gain flexibility.
+- **Security risk assessments**:
+	- A key component for driving security program change is the information security operational risk assessment (RA).
+	- RA identifies and documents the risk that a project, process, or action introduces to the organization and offers suggestions for controls.
+	- The information security group coordinates the preparation of many types of RA documents.
+
+## Vulnerability Assessment and Remediation
+
+**Primary goal**: Identification of specific, documented vulnerabilities and their timely remediation.
+- **Accomplished by**:
+	- Using vulnerability assessment procedures.
+	- Documenting background information and providing tested remediation procedures for vulnerabilities.
+	- Tracking vulnerabilities from when they are identified.
+	- Communicating vulnerability information to owners of vulnerable systems.
+	- Reporting on the status of vulnerabilities.
+	- Ensuring the proper level of management is involved.
+- **Vulnerability assessment processes** can serve many organizations as they attempt to balance the intrusiveness of vulnerability assessments with the need for a stable and productive production environment.
+- **Penetration testing**:
+	- A level beyond vulnerability testing.
+	- A set of security tests and evaluations that simulate attacks by a malicious external source (hacker).
+	- A **penetration test** (pen test) is usually performed periodically as part of a full security audit.
+	- Can be conducted one of two ways: black box or white box.
+- **Internet vulnerability assessment**:
+	- Designed to find and document vulnerabilities present in the organization’s public-facing network.
+	- Steps in the process include:
+		- Planning, scheduling, and notification.
+		- Target selection.
+		- Test selection.
+		- Scanning.
+		- Analysis.
+		- Record keeping.
+- **Intranet vulnerability assessment**:
+	- Designed to find and document selected vulnerabilities present on the internal network.
+	- Attackers are often internal members of the organization, affiliates of business partners, or automated attack vectors (such as viruses and worms).
+	- This assessment is usually performed against selected critical internal devices with known high value by using selective penetration testing.
+	- Steps in the process are almost identical to steps in Internet vulnerability assessment.
+- **Platform security validation**:
+	- Designed to find and document vulnerabilities that may be present because of misconfigured systems in use within the organization.
+	- These misconfigured systems fail to comply with company policy or standards.
+	- Fortunately, automated measurement systems are available to help with the intensive process of validating compliance of platform configuration with policy.
+- **Wireless vulnerability assessment**:
+	- Designed to find and document vulnerabilities that may be present in wireless local area networks of the organization.
+	- Since attackers from this direction are likely to exploit any loophole or flaw, assessment is usually performed against all publicly accessible areas using every possible wireless penetration testing approach.
+- **Modem vulnerability assessment**:
+	- Designed to find and document any vulnerability present on dial-up modems connected to the organization’s networks.
+	- Since attackers from this direction exploit any loophole or flaw, assessment is usually performed against all telephone numbers owned by the organization.
+	- One element of this process, often called war dialing, uses scripted dialing attacks against a pool of phone numbers.
+- **Documenting vulnerabilities**:
+	- A vulnerability tracking database should provide details as well as a link to the information assets.
+	- Low-cost and ease of use make relational databases a realistic choice.
+	- The vulnerability database is an essential part of effective remediation.
+- **Remediating vulnerabilities**:
+	- The objective is to repair the flaw causing a vulnerability instance or remove risk associated with the vulnerability.
+	- As a last resort, informed decision-makers with proper authority can accept the risk.
+	- Building relationships with those who control information assets is key to success.
+	- Success depends on the organization adopting a team approach to remediation, instead of a cross-organizational push and pull.
+- **Acceptance or transference of risk**:
+	- In some instances, risk must simply be acknowledged as part of the organization’s business process.
+	- Management must ensure that decisions to assume risk are made by properly informed decision-makers.
+	- Information security must ensure the right people make risk assumption decisions with complete knowledge of the impact of the decision.
+- **Threat removal**:
+	- In some cases, threats can be removed without repairing the vulnerability.
+	- The vulnerability can no longer be exploited, and the risk has been removed.
+	- Other vulnerabilities may be amenable to other controls that do not require an expensive repair and still remove risk from the situation.
+- **Vulnerability repair**:
+	- The optimum solution in most cases is to repair the vulnerability.
+	- Applying a software patch or implementing a workaround often accomplishes this.
+	- In some cases, simply disabling the service removes the vulnerability; in other cases, simple remedies are possible.
+	- The most common repair is the application of a software patch.
+
+
+## Readiness and Review
+
+**Primary goal**: Keep the information security program functioning as designed and continuously improving.
+
+- **Accomplished by**:
+	- Policy review.
+	- Program review.
+	- Rehearsals.
+## Digital Forensics
+
+- Used to investigate what happened during an attack on assets and how the attack occurred.
+- Based on the field of traditional forensics.
+- Involves **preservation, identification, extraction, documentation**, and **interpretation** of computer media for evidentiary and/or root cause analysis.
+- **Evidentiary material (EM)**: Any information that could potentially support the organization's legal or policy-based case against a suspect.
+- Used for two key purposes:
+	- To investigate allegations of digital malfeasance.
+	- To perform root cause analysis.
+- Organizations choose one of two approaches:
+	- **Protect and forget (patch and proceed)**: Defense of data and systems that house, use, and transmit it.
+	- **Apprehend and prosecute (pursue and prosecute)**: Identification and apprehension of responsible individuals, with additional attention on the collection and preservation of potential EM that might support administrative or criminal prosecution.
+- ### Digital Forensics Methodology
+	- All investigations follow the same basic methodology:
+		1. Identify relevant items of evidentiary value (EM).
+		2. Acquire (seize) the evidence without alteration or damage.
+		3. Take steps to assure that the evidence is verifiably authentic and unchanged from the time it was seized.
+		4. Analyze the data without risking modification or unauthorized access.
+		5. Report the findings to the proper authority.
+- ### The Digital Forensics Team
+	- **Most organizations**:
+		- Cannot sustain a permanent digital forensics team.
+		- Collect data and outsource analysis.
+	- Information security group personnel should be trained to understand and manage the forensics process to avoid contamination of potential EM.
+	- Expertise can be obtained through training.
+
+## Affidavits and Search Warrants
+- **Affidavit**:
+	- Sworn testimony that certain facts are in the possession of the investigating officer that they feel warrant the examination of specific items located at a specific place.
+	- The facts, items, and place must be specified.
+- When an approving authority signs the affidavit, it becomes a **search warrant**, giving permission to:
+	- Search the EM at the specified location.
+	- Seize items to return to the investigator for examination.
+
+## Evidentiary Procedures
+- Strong procedures for handling potential evidentiary material can minimize the probability of an organization losing a legal challenge.
+- Organizations should develop specific procedures with guidance, for example:
+	- Who may conduct an investigation and who is authorized.
+	- What affidavit- and search warrant-related issues are required.
+	- The methodology to be followed.
+	- The final report format.
