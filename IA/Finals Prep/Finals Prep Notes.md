@@ -588,17 +588,28 @@ Some IT security certification exams test a simple process for:
 4. Derive and articulate risk.
 
 ## Risk Control Strategies
-- **Defense**: Prevent exploitation of vulnerabilities.
-- **Transfer**: Shift the risk to other assets or organizations.
-- **Mitigate**: Reduce the impact of attacks.
-- **Acceptance**: Accept the risk if the cost of mitigation is too high.
-- **Termination**: Avoid business activities that introduce uncontrollable risks.
-
-## Selecting a Risk Control Strategy
-- Consider asset value, threat level, and potential loss.
-- Rules of thumb for selecting a strategy:
-	- When a vulnerability exists.
-	- When the cost of exploitation is less than the potential gain.
+| **Strategy**    | **Description**                                                                             | **Details**                                                                                                                                                                                                                                    |
+| --------------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Defense**     | Attempts to prevent exploitation of the vulnerability                                       | - Preferred approach<br>- Counter threats, remove vulnerabilities, limit access, add safeguards                                                                                                                                                |
+|                 |                                                                                             | **Methods:<br>**1. Application of policy<br>2. Education and training<br>3. Applying technology                                                                                                                                                |
+| **Transfer**    | Shifts risk to other assets, processes, or organizations                                    | - Hire security experts or firms<br>- Transfer risk management of complex systems to experts                                                                                                                                                   |
+| **Mitigate**    | Reduces the **impact** of an attack rather than the success of the attack                   | **Plans:**<br>1. **Incident Response (IR):** Actions during an incident<br>2. **Disaster Recovery (DR):** Preparations for recovery<br>3. **Business Continuity (BC):** Ensures continuation of business activities during catastrophic events |
+| **Acceptance**  | Chooses to do nothing to protect against a vulnerability and accepts the potential outcomes | - Valid only when the cost of protection exceeds the value of the function, service, or asset                                                                                                                                                  |
+| **Termination** | Directs the organization to avoid business activities introducing uncontrollable risks      | - May seek alternative mechanisms to meet customer needs                                                                                                                                                                                       |
+- ### Selecting a Risk Control Strategy
+	- Consider asset value, threat level, and potential loss.
+		- Rules of thumb for selecting a strategy:
+			- When a vulnerability exists
+			- When a vulnerability can be exploited
+			- When attacker's cost is less than the potential gain
+			- When potential loss is substantial
+		- Decision points (System Design -> Risk existence)
+			- System Design (If yes then Vuln exists)
+				- Is system vulnerable?
+				- Is system exploitable?
+			- Risk existence (If yes then allow risk)
+				- Is Attacker's Gain > Cost?
+				- Is expected loss > Acceptable level of loss?
 
 ## Justifying Controls
 - Estimate the costs and benefits of a proposed control.
