@@ -319,10 +319,10 @@
 				- **Remote Journaling**: Continuous data replication to an off-site location.
 				- **Database Shadowing**: Maintaining a real-time copy of databases at a remote site.
 
-## **Crisis Management**
+## Crisis Management
 - **Definition**: Crisis management involves actions taken in response to emergencies to minimize harm, preserve the organization’s image, and complement DRP and BCP efforts.
 - **Role of Crisis Management**: The crisis management team oversees the response from an enterprise-wide perspective, ensuring the safety and well-being of personnel, preserving normal business operations, and managing communication during the crisis.
-	- ### **Crisis Management Responsibilities**
+	- ### Crisis Management Responsibilities
 		1. **Personnel and Family Support**: Ensuring the well-being of employees and their families during the crisis.
 		2. **Business Operations Impact**: Evaluating the impact of the crisis on regular business activities and making the decision to declare a disaster, if necessary.
 		3. **External Communication**: Keeping key stakeholders informed, including customers, suppliers, partners, regulators, the media, and others.
@@ -330,11 +330,11 @@
 			- Verifying personnel headcount and ensuring everyone's safety.
 			- Maintaining an alert roster for communication during emergencies.
 			- Ensuring access to emergency information cards.
-	- ### **Preparedness and Response**
+	- ### Preparedness and Response
 		- Crisis management teams must be well-prepared and trained, with rehearsals conducted to ensure they can respond without relying on supporting documentation.
 		- Preparedness includes developing plans for handling potential crises, coordinating with stakeholders, and rehearsing specific roles and procedures.
 - ## Consolidated Contingency Plan
-	- Combines all contingency policies into a single document for accessibility.
+	- Combines all IR, DR & BC policies into a single document for accessibility.
 - ## Law Enforcement Involvement
 	- Considerations for involving law enforcement in security incidents:
 		- Timing and level of agency involvement.
