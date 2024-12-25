@@ -443,7 +443,13 @@ Some IT security certification exams test a simple process for:
 
 ## Risk Identification Process
 > [!NOTE]
-> Plan/Organize, CategorizeAssets, ClassifyAssets, Identify Threats, Specify Asset Vulns
+> PaO, IIaC, CVaP, IaPt, SAV
+> - Plan & Organize
+> - Identification, Inventory & Categorization of Assets
+> - Classification, Value & Prioritization of Assets
+> - Identify & Prioritize Threats
+> - Specify Asset Vulns
+
 
 - ### 1. **Plan & Organize the Process**:
 	- Form a team from all affected groups.
@@ -896,7 +902,7 @@ Questions:
 | **Protocol Type**        | UDP (User Datagram Protocol)                                                                            | TCP/SCTP (Stream Control Transmission Protocol)                                                      | TCP (Transmission Control Protocol)                                            | UDP + TCP / Symmetric Key Cryptography (with a trusted third party for tickets) |
 | **Encryption**           | Only passwords are encrypted                                                                            | Encrypts full packets                                                                                | Encrypts the entire payload                                                    | Uses cryptographic tickets and session keys for authentication                  |
 | **Authentication**       | Single-step authentication is often used for 802.1x, VPNs, and dial-up.                                 | Multi-step authentication offers better scalability and reliability than RADIUS.                     | Handles separate authentication, authorization, and accounting (AAA) services. | Ticket-based authentication with Single Sign-On (SSO) functionality             |
-| **Transport Protocol**   | UDP                                                                                                     | TCP/SCTP                                                                                             | TCP                                                                            | UDP, TCP Fallback                                                               | 
+| **Transport Protocol**   | UDP                                                                                                     | TCP/SCTP                                                                                             | TCP                                                                            | UDP, TCP Fallback                                                               |
 | **Vendor**               | Open, widely supported                                                                                  | Evolved from RADIUS, 3GPP standard                                                                   | Cisco proprietary                                                              | MIT-developed, often used in Microsoft Active Directory                         |
 | **Performance**          | Lightweight, lower reliability due to UDP.                                                              | More reliable and scalable than RADIUS.                                                              | High reliability due to the use of TCP.                                        | High security, built for strong, centralized environments                       |
 | **Compatibility**        | Compatible with a wide range of devices and services                                                    | It is mainly used in modern mobile and IP-based networks.                                            | Primarily used with Cisco devices.                                             | Common in Windows environments (integrated with AD)                             |
