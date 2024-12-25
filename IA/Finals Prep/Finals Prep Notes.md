@@ -983,7 +983,7 @@ Questions:
 	- Can help management with quality assurance and continuous improvement.
 
 > [!NOTE]
-> NIDPS, WBAS, HIDPS, SBD, ABD, SPA, LFM
+> H/NIDPS, WBAS, A/SBD, SPA, LFM
 - ### Types
 	- IDPSs operate as network-based or host-based systems.
 	- Network-based IDPS is focused on protecting network information assets.
