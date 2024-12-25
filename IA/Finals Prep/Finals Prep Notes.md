@@ -981,6 +981,9 @@ Questions:
 	- Data collection allows the organization to examine what happened after an intrusion and why.
 	- Serves as a deterrent by increasing the fear of detection.
 	- Can help management with quality assurance and continuous improvement.
+
+> [!NOTE]
+> NIDPS, WBAS, HIDPS, SBD, ABD, SPA, LFM
 - ### Types
 	- IDPSs operate as network-based or host-based systems.
 	- Network-based IDPS is focused on protecting network information assets.
