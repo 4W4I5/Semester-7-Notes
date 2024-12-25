@@ -983,7 +983,7 @@ Questions:
 	- Can help management with quality assurance and continuous improvement.
 
 > [!NOTE]
-> H/NIDPS, WBAS, A/SBD, SPA, LFM
+> H/NIDPS, NBAS, A/SBD, SPA, LFM
 - ### Types
 	- IDPSs operate as network-based or host-based systems.
 	- Network-based IDPS is focused on protecting network information assets.
@@ -1741,7 +1741,7 @@ Many organizations seek industry-recognized certifications, although many of the
 - Hiring employees is a responsibility laden with potential security pitfalls. The **CISO** and **information security manager** should work with the **Human Resources** department to incorporate information security into hiring guidelines.
 
 > [!NOTE]
-> JD, IV, BGNDCHK, EmpCnt, NHO, OTJ_ST, EP, Term
+> JD, IV, BG_CHK, EmpCntrt, NHO, OTJ_SecT, EvalP, Term
 
 - ### Job Descriptions
 	- The integration of information security into the hiring process begins with reviewing and updating job descriptions.
