@@ -282,6 +282,9 @@
 
 - ### Key Components of an incident response plan
 
+> [!NOTE]
+> Pn, 
+
 | **Section**                         | **Details**                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Incident Planning**               | - **Predefined responses** enable the organization to react quickly and effectively to the detected incident if:<br>- The organization has an IR team <br>- The organization can detect the incident <br>- **IR team** consists of individuals needed to handle systems as the incident takes place.                                                                                                                                                              |
