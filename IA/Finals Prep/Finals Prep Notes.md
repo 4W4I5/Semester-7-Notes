@@ -1894,28 +1894,21 @@ Information security should ensure that this data receives the same level of pro
 - **Vulnerability assessment processes** can serve many organizations as they attempt to balance the intrusiveness of vulnerability assessments with the need for a stable and productive production environment.
 
 
-| **Aspect**                             | **Details**                                                                                                                                                                                               |
-| -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Penetration Testing**                | - Security tests simulating attacks by a hacker.<br>- Part of periodic full security audits.<br>- Conducted as **black box** or **white box** testing.                                                            |
-| **Internet Vulnerability Assessment**  | - Identifies vulnerabilities in the organization’s public-facing network.<br>- Steps: Planning, Target Selection, Test Selection, Scanning, Analysis, Record Keeping.                                         |
+| **Aspect**                             | **Details**                                                                                                                                                                                                           |
+| -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Penetration Testing**                | - Security tests simulating attacks by a hacker.<br>- Part of periodic full security audits.<br>- Conducted as **black box** or **white box** testing.                                                                |
+| **Internet Vulnerability Assessment**  | - Identifies vulnerabilities in the organization’s public-facing network.<br>- Steps: Planning, Target Selection, Test Selection, Scanning, Analysis, Record Keeping.                                                 |
 | **Intranet Vulnerability Assessment**  | - Focuses on internal network vulnerabilities.<br>- Targets internal actors, partners, or automated attack vectors.<br>- Uses selective penetration testing.<br>- Steps similar to Internet Vulnerability Assessment. |
-| **Platform Security Validation**       | - Detects vulnerabilities from misconfigured systems.<br>- Ensures compliance with company policies.<br>- Automated tools assist in validation processes.                                                         |
-| **Wireless Vulnerability Assessment**  | - Detects vulnerabilities in WLANs.<br>- Assesses public areas with wireless penetration testing techniques.                                                                                                  |
-| **Modem Vulnerability Assessment**     | - Examines dial-up modems for vulnerabilities.<br>- Uses war dialing (scripted dialing attacks) against organizational phone numbers.                                                                         |
-| **Documenting Vulnerabilities**        | - Maintains a vulnerability tracking database.<br>- Uses relational databases for low-cost, effective management.<br>- Facilitates remediation.                                                                   |
-| **Remediating Vulnerabilities**        | - Repairs flaws or removes associated risks.<br>- Risks may be accepted if informed decision-makers authorize.<br>- Requires collaboration with asset controllers for effective remediation.                      |
-| **Acceptance or Transference of Risk** | - Sometimes risk must be acknowledged.<br>- Properly informed decision-makers must approve risk acceptance.<br>- Ensures decision-makers understand the impact fully.                                             |
-| **Threat Removal**                     | - Threats may be removed without fixing vulnerabilities.<br>- Alternate controls can eliminate risks without expensive repairs.                                                                               |
-| **Vulnerability Repair**               | - Repairs vulnerabilities optimally using patches, workarounds, or disabling services.<br>- Most common solution involves applying software patches.                                                          |
+| **Platform Security Validation**       | - Detects vulnerabilities from misconfigured systems.<br>- Ensures compliance with company policies.<br>- Automated tools assist in validation processes.                                                             |
+| **Wireless Vulnerability Assessment**  | - Detects vulnerabilities in WLANs.<br>- Assesses public areas with wireless penetration testing techniques.                                                                                                          |
+| **Modem Vulnerability Assessment**     | - Examines dial-up modems for vulnerabilities.<br>- Uses war dialing (scripted dialing attacks) against organizational phone numbers.                                                                                 |
+| **Documenting Vulnerabilities**        | - Maintains a vulnerability tracking database.<br>- Uses relational databases for low-cost, effective management.<br>- Facilitates remediation.                                                                       |
+| **Remediating Vulnerabilities**        | - Repairs flaws or removes associated risks.<br>- Risks may be accepted if informed decision-makers authorize.<br>- Requires collaboration with asset controllers for effective remediation.                          |
+| **Acceptance or Transference of Risk** | - Sometimes risk must be acknowledged.<br>- Properly informed decision-makers must approve risk acceptance.<br>- Ensures decision-makers understand the impact fully.                                                 |
+| **Threat Removal**                     | - Threats may be removed without fixing vulnerabilities.<br>- Alternate controls can eliminate risks without expensive repairs.                                                                                       |
+| **Vulnerability Repair**               | - Repairs vulnerabilities optimally using patches, workarounds, or disabling services.<br>- Most common solution involves applying software patches.                                                                  |
+| **Readiness & Review**                 | - Keep the information security program functioning as designed and continuously improving.<br>- Accomplished by:<br>- Policy Review<br>- Program Review<br>- Rehearsals                                              |
 
-## Readiness and Review
-
-**Primary goal**: Keep the information security program functioning as designed and continuously improving.
-
-- **Accomplished by**:
-	- Policy review.
-	- Program review.
-	- Rehearsals.
 ## Digital Forensics
 
 - Used to investigate what happened during an attack on assets and how the attack occurred.
