@@ -374,9 +374,9 @@ Some IT security certification exams test a simple process for:
 	- Cost-Benefit Analysis table. That contains the following:
 		- **Asset Value (AV):** The monetary value of the asset being protected.
 		- **Exposure Factor (EF):** The percentage of asset value at risk in a single event.
-		- **Single Loss Expectancy (SLE):** The expected monetary loss per event, calculated as AV×EFAV \* EFAV×EF.
+		- **Single Loss Expectancy (SLE=AV\*EF):** The expected monetary loss per event, calculated as AV×EF
 		- **Annualized Rate of Occurrence (ARO):** The likelihood of the risk occurring annually.
-		- **Annualized Loss Expectancy (ALE):** The expected annual monetary loss, calculated as SLE×AROSLE \times AROSLE×ARO.
+		- **Annualized Loss Expectancy (ALE=SLE\*ARO):** The expected annual monetary loss, calculated as SLE×ARO.
 		- **For the countermeasures:**
 			- **ALE Reduction for Countermeasure:** The savings in annualized losses due to implementing the countermeasure.
 			- **Annualized Countermeasure Cost:** The yearly cost of implementing the countermeasure.
