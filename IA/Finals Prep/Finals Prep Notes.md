@@ -1811,7 +1811,7 @@ Information security should ensure that this data receives the same level of pro
 ## NIST SP 800-100 Information Security Handbook: A Guide for Managers
 
 > [!NOTE]
-> GI, ISMA, ISG, SDLC, AaT, CPaIC, IcS, ITCP, RMgmt, CAaSA, SSaPA, IR, CMgmnt
+> GI, ISMA, ISG, SDLC, AaT, CPaIC, IcS, ITCP, RMgmt, CAaSA, SSaPA, IR, CMgmt
 
 | **Area**                                                   | **Description**                                                                                                                                                                                                                           |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
