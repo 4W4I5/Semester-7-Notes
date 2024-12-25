@@ -792,8 +792,10 @@ Questions:
 ## Firewalls
 - Prevent specific types of information from moving between the outside world (untrusted network) and the inside world (trusted network)
 - May be separate computer system; a software service running on existing router or server; or a separate network containing supporting devices
+
 > [!NOTE]
 > PF, AG, CG, MAC_F, Hybrid
+
 - ### Processing Modes of Firewalls
 	- #### Packet Filtering
 		- Packet filtering firewalls examine header information of data packets
