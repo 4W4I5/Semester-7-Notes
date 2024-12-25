@@ -30,15 +30,19 @@
 		- Value delivery
 - ### Responsibilities
 	- **CEO**
-		- Oversee overall corporate security posture (accountable to board), Brief board, customers, public
+		- Oversee overall corporate security posture (accountable to board)
+		- Brief board, customers, public
 	- **CSO, CIO, CRO + Department/Agency Head**
-		- Set security policy, procedures, program, training for company, Respond to security breaches (investigate, mitigate, litigate)
+		- Set security policy, procedures, program, training for company
+		- Respond to security breaches (investigate, mitigate, litigate)
 	- **Mid Level Manager + CSO, CIO, CRO + Department/Agency Head**
-		- Implement/audit/enforce/assess compliance + Responsible for independent annual audit coordination
+		- Implement/audit/enforce/assess compliance
+		- Responsible for independent annual audit coordination
 	- **Staff/Employees + Mid Level Manager**
 		- Communicate policies, program (training)
 	- **Staff/Employees**
-		- Implement policy; report security vulnerabilities and breaches 
+		- Implement policy
+		- Report security vulnerabilities and breaches
 
 ## InfoSec Policy, Standards & Practices
 
