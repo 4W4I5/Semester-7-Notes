@@ -66,13 +66,13 @@
 	- Unique responsibilities for security for each role
 	- **Statement of Purpose:**
 		- Answers the question "What is this policy for?" and provides a framework that helps the reader understand the intent of the document. It establishes overarching security policy and direction for the company.
-	**Information Security Elements:**
+	- **Information Security Elements:**
 		- Defines information security, for example: "Protecting the confidentiality, integrity, and availability of information through policy, education and training, and technology."
-	**Need for Information Security:**
+	- **Need for Information Security:**
 		- Outlines the importance of protecting critical information about customers, employees, and markets.
-	**Information Security Responsibilities and Roles:**
+	- **Information Security Responsibilities and Roles:**
 		- Defines the organizational structure for supporting information security within the organization.
-	**Reference to Other Information Standards and Guidelines:**
+	- **Reference to Other Information Standards and Guidelines:**
 		- Lists other standards that influence this policy document, including relevant federal and state laws.
 
 ## Issue-Specific Security Policy (ISSP)
@@ -86,7 +86,7 @@
 
 | **Component**                                | **Details**                                                                                                                                   |
 | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Statement of Policy**                      | - Scope and applicability- Definition of technology addressed<br>- Responsibilities                                                           |
+| **Statement of Policy**                      | - Scope and applicability<br>- Definition of technology addressed<br>- Responsibilities                                                           |
 | **Authorized Access and Usage of Equipment** | - User access<br>- Fair and responsible use<br>- Protection of privacy                                                                        |
 | **Prohibited Use of Equipment**              | - Disruptive use or misuse- Criminal use<br>- Offensive or harassing materials<br>- Copyrighted or licensed materials<br>- Other restrictions |
 | **Systems Management**                       | - Management of stored materials<br>- Employee monitoring- Virus protection<br>- Physical security<br>- Encryption                            |
