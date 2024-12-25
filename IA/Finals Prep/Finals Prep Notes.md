@@ -89,6 +89,8 @@
 	- Single comprehensive ISSP document
 	- Modular ISSP document
 - ### Components of the Policy:
+> [!NOTE]
+> SoP, AA/UoE, PUoE, SysMgmt, VoP, PRM, LoL
 
 | **Component**                                | **Details**                                                                                                                                   |
 | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
