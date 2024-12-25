@@ -222,6 +222,9 @@
 		- **IRP**: Immediate response to incidents.
 		- **DRP**: Focus on restoring systems after disasters.
 		- **BCP**: Ensures ongoing operations during major disruptions.
+
+> [!NOTE]
+> dev_CPStatement, conduct_BIA, identify_preventions, dev_ctStrat, crt_ctPlan, planTest, planMaintain
 - ### Contingency Planning Process (Sessional 2 7-Marks)
 	1. Develop CP policy statement.
 	2. Conduct business impact analysis (BIA).
