@@ -866,7 +866,7 @@ Questions:
 	- Attackers can use a device called a war dialer to locate connection points.
 	- A war dialer is an automatic phone-dialing program that dials every number in a configured range and records the number if a modem picks up.
 	- Some technologies (such as RADIUS, TACACS, and CHAP password systems) have improved the authentication process.
-- ### RADIUS, TACACS & Diameter
+- ### RADIUS, TACACS & Diameter (Sessional 2)
 
 | Feature                  | RADIUS                                                                                                  | Diameter                                                                                             | TACACS+                                                                        | Kerberos                                                                    |
 |:------------------------ |:------------------------------------------------------------------------------------------------------- |:---------------------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------ |:--------------------------------------------------------------------------- |
