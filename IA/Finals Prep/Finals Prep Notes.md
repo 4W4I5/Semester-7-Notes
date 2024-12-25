@@ -1937,7 +1937,7 @@ Information security should ensure that this data receives the same level of pro
 - **Vulnerability assessment processes** can serve many organizations as they attempt to balance the intrusiveness of vulnerability assessments with the need for a stable and productive production environment.
 
 > [!NOTE]
-> PT, IVA2, PSV, WVA, MVA, DVuln, RVuln, AoTR, Tr, VulnR, RR
+> PT, IVA2, PSV, W/MVA, D/RVuln, AoTR, Tr, VulnR, RR
 
 | **Aspect**                             | **Details**                                                                                                                                                                                                           |
 | -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
