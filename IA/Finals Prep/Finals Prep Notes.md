@@ -1,14 +1,14 @@
-| Chapter<br>Number | Chapter<br>Name                       | Status             | Second Pass<br>Ignore this |
-| ----------------- | ------------------------------------- | ------------------ | -------------------------- |
-| 4                 | Planning for Security                 | :white_check_mark: | :white_check_mark:         |
-| 5                 | Risk Management                       | :white_check_mark: | :white_check_mark:         |
-| 6                 | Security Technology: Firewalls & VPNs | :white_check_mark: | :warning:                  |
-| 7                 | Security Technology: IDPS             | :white_check_mark: | :warning:                  |
-| 8                 | Cryptography                          | :white_check_mark: | :warning:                  |
-| 9                 | Physical Security                     | :white_check_mark: | :warning:                  |
-| 10                | Implementing Information Security     | :white_check_mark: | :warning:                  |
-| 11                | Security & Personnel                  | :white_check_mark: | :warning:                  |
-| 12                | Information Security Maintenance      | :white_check_mark: | :warning:                  |
+| Chapter<br>Number | Chapter<br>Name                       | Status             |
+| ----------------- | ------------------------------------- | ------------------ |
+| 4                 | Planning for Security                 | :white_check_mark: |
+| 5                 | Risk Management                       | :white_check_mark: |
+| 6                 | Security Technology: Firewalls & VPNs | :white_check_mark: |
+| 7                 | Security Technology: IDPS             | :white_check_mark: |
+| 8                 | Cryptography                          | :white_check_mark: |
+| 9                 | Physical Security                     | :white_check_mark: |
+| 10                | Implementing Information Security     | :white_check_mark: |
+| 11                | Security & Personnel                  | :white_check_mark: |
+| 12                | Information Security Maintenance      | :white_check_mark: |
 
 # Chapter 4: Planning for Security
 ## InfoSec Planning & Governance
