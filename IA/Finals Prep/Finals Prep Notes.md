@@ -1722,6 +1722,10 @@ Many organizations seek industry-recognized certifications, although many of the
 - Information security should be a documented part of every employee's job description.
 - The management community of interest should integrate solid information security concepts into the organization's employment policies and practices.
 - Hiring employees is a responsibility laden with potential security pitfalls. The **CISO** and **information security manager** should work with the **Human Resources** department to incorporate information security into hiring guidelines.
+
+> [!NOTE]
+> JD, IV, BGNDCHK, EmpCnt, NHO, OTJ_ST, EP, Term
+
 - ### Job Descriptions
 	- The integration of information security into the hiring process begins with reviewing and updating job descriptions.
 	- Avoid revealing access privileges when advertising open positions.
