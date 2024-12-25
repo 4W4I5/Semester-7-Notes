@@ -443,6 +443,9 @@ Some IT security certification exams test a simple process for:
 - **Amount of asset value** protected by safeguards.
 
 ## Risk Identification Process
+> [!NOTE]
+> Plan/Organize, CategorizeAssets, ClassifyAssets, Identify Threats, Specify Asset Vulns
+
 - ### 1. **Plan & Organize the Process**:
 	- Form a team from all affected groups.
 	- Set periodic deliverables, reviews, and presentations.
