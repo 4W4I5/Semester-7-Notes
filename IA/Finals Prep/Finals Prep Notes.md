@@ -290,7 +290,6 @@
 	- Prioritization or severity ratings of incidents
 	- Performance measures
 	- Reporting and contact forms
-
 - ### Key Processes of an Incident response plan (Sessional 2)
 
 > [!NOTE]
@@ -460,40 +459,40 @@ Some IT security certification exams test a simple process for:
 	- #### People, Procedures, and Data Asset Identification
 		- **Human resources, documentation, and data information assets** are more difficult to identify.
 		- **Important asset attributes:**
-		    - **People:**
-		        - Position name/number/ID
-		        - Supervisor
-		        - Security clearance level
-		        - Special skills
-		    - **Procedures:**
-		        - Description
-		        - Intended purpose
-		        - Relation to software/hardware/networking elements
-		        - Storage location for reference
-		        - Storage location for updates
-		    - **Data:**
-		        - Classification
-		        - Owner/creator/manager
-		        - Data structure size
-		        - Data structure used
-		        - Online/offline status
-		        - Location
-		        - Backup procedures employed
+			- **People:**
+				- Position name/number/ID
+				- Supervisor
+				- Security clearance level
+				- Special skills
+			- **Procedures:**
+				- Description
+				- Intended purpose
+				- Relation to software/hardware/networking elements
+				- Storage location for reference
+				- Storage location for updates
+			- **Data:**
+				- Classification
+				- Owner/creator/manager
+				- Data structure size
+				- Data structure used
+				- Online/offline status
+				- Location
+				- Backup procedures employed
 	- #### Hardware, Software, and Network Asset Identification
 		- What information attributes to track depends on:
-		    - Needs of the organization/risk management efforts
-		    - Preferences/needs of the security and information technology communities
+			- Needs of the organization/risk management efforts
+			- Preferences/needs of the security and information technology communities
 		- **Asset attributes to be considered:**
-		    - Name
-		    - IP address
-		    - MAC address
-		    - Element type
-		    - Serial number
-		    - Manufacturer name
-		    - Model/part number
-		    - Software version
-		    - Physical or logical location
-		    - Controlling entity
+			- Name
+			- IP address
+			- MAC address
+			- Element type
+			- Serial number
+			- Manufacturer name
+			- Model/part number
+			- Software version
+			- Physical or logical location
+			- Controlling entity
 	- #### Asset Inventory
 		- Unless information assets are identified and inventoried, they cannot be effectively protected.
 		- Inventory process involves formalizing the identification process in some form of organizational tool.
@@ -507,79 +506,79 @@ Some IT security certification exams test a simple process for:
 		- **Information owners** are responsible for classifying their information assets.
 		- Information classifications must be **reviewed periodically**.
 		- Common classifications include:
-		    - Confidential
-		    - Internal
-		    - External
+			- Confidential
+			- Internal
+			- External
 		- **Security Clearances:**
-		    - Each data user must be assigned an **authorization level** indicating their classification level.
-		    - Before accessing a specific set of data, the employee must meet the **need-to-know requirement**.
+			- Each data user must be assigned an **authorization level** indicating their classification level.
+			- Before accessing a specific set of data, the employee must meet the **need-to-know requirement**.
 		- **Management of Classified Data Includes:**
-		    - Storage
-		    - Distribution
-		    - Transportation
-		    - Destruction
+			- Storage
+			- Distribution
+			- Transportation
+			- Destruction
 		- **Additional Practices:**
-		    - **Clean desk policy**: Ensures sensitive information is not left unsecured.
-		    - Awareness of risks such as **dumpster diving**.
+			- **Clean desk policy**: Ensures sensitive information is not left unsecured.
+			- Awareness of risks such as **dumpster diving**.
 	- #### Information Asset Valuation
 		- **Key Questions for Asset Valuation:**
-		    - Which information asset:
-		        - Is **most critical** to the organization's success?
-		        - Generates the most **revenue/profitability**?
-		        - Plays the biggest role in **generating revenue** or **delivering services**?
-		        - Would be the most **expensive to replace** or protect?
-		        - Would be the most **embarrassing** or cause the greatest **liability** if revealed?
+			- Which information asset:
+				- Is **most critical** to the organization's success?
+				- Generates the most **revenue/profitability**?
+				- Plays the biggest role in **generating revenue** or **delivering services**?
+				- Would be the most **expensive to replace** or protect?
+				- Would be the most **embarrassing** or cause the greatest **liability** if revealed?
 		- **Information Asset Prioritization:**
-		    - Create **weighting for each category** based on the answers to the questions.
-		    - Prioritize each asset using **weighted factor analysis**.
-		    - List assets in order of importance using a **weighted factor analysis worksheet**.
+			- Create **weighting for each category** based on the answers to the questions.
+			- Prioritize each asset using **weighted factor analysis**.
+			- List assets in order of importance using a **weighted factor analysis worksheet**.
 - ### 4. **Identify & Prioritize Threats**:
 	- **Realistic threats** require investigation, while **unimportant threats** can be set aside.
 	- **Threat Assessment Questions:**
-	    - Which threats **present danger** to assets?
-	    - Which threats represent the **most danger** to information?
-	    - How much would it **cost to recover** from a successful attack?
-	    - Which threat requires the **greatest expenditure** to prevent?
+		- Which threats **present danger** to assets?
+		- Which threats represent the **most danger** to information?
+		- How much would it **cost to recover** from a successful attack?
+		- Which threat requires the **greatest expenditure** to prevent?
 - ### 5. **Specify Asset Vulnerabilities**:
 	- **Vulnerabilities** are specific avenues that threat agents can exploit to attack an information asset.
 	- Steps to identify vulnerabilities:
-	    - Examine how each **threat could be perpetrated**.
-	    - List the organization's **assets and associated vulnerabilities**.
+		- Examine how each **threat could be perpetrated**.
+		- List the organization's **assets and associated vulnerabilities**.
 	- The process is most effective when individuals with **diverse backgrounds** in the organization participate in **iterative brainstorming sessions**.
 	- Outcome of the process:
-	    - A **prioritized list** of assets and their vulnerabilities.
-	    - This list can be combined with a **weighted list of threats** to create a **Threats-Vulnerabilities-Assets (TVA) worksheet**.
+		- A **prioritized list** of assets and their vulnerabilities.
+		- This list can be combined with a **weighted list of threats** to create a **Threats-Vulnerabilities-Assets (TVA) worksheet**.
 
 
 ## Risk Assessment
 1. **Plan & Organize the Process**
-    - Define the scope, goals, and responsibilities for the risk assessment.
-    - Ensure participation of all relevant stakeholders.
+	- Define the scope, goals, and responsibilities for the risk assessment.
+	- Ensure participation of all relevant stakeholders.
 2. **Determine Loss Frequency**
-    - Assess the **likelihood** of an attack combined with the expected **probability of success**.
-    - Use external references for reviewed and adjusted values suitable for your circumstances.
-    - Assign a **numeric value** to likelihood, typically an annual value.
-        - Example: Targeted by hackers once every five years = **1/5 or 20%**.
-    - Estimate the likelihood of a successful attack by assigning a **quantitative value** (e.g., 10%).
-    - Account for **uncertainty** in these values.
+	- Assess the **likelihood** of an attack combined with the expected **probability of success**.
+	- Use external references for reviewed and adjusted values suitable for your circumstances.
+	- Assign a **numeric value** to likelihood, typically an annual value.
+		- Example: Targeted by hackers once every five years = **1/5 or 20%**.
+	- Estimate the likelihood of a successful attack by assigning a **quantitative value** (e.g., 10%).
+	- Account for **uncertainty** in these values.
 3. **Evaluate Loss Magnitude**
-    - Determine how much of an **information asset** could be lost in a successful attack.
-        - Also known as **loss magnitude** or **asset exposure**.
-    - Combine the **value of the information asset** with the **percentage of the asset lost** during a successful attack.
-    - Challenges include:
-        - **Valuating an information asset**.
-        - **Estimating the percentage** of asset loss under best-case, worst-case, and most likely scenarios.
+	- Determine how much of an **information asset** could be lost in a successful attack.
+		- Also known as **loss magnitude** or **asset exposure**.
+	- Combine the **value of the information asset** with the **percentage of the asset lost** during a successful attack.
+	- Challenges include:
+		- **Valuating an information asset**.
+		- **Estimating the percentage** of asset loss under best-case, worst-case, and most likely scenarios.
 4. **Calculate Risk**
-    - For relative risk assessment, calculate risk as:
-        - **Loss frequency × Loss magnitude**
-        - **Minus** the percentage of risk mitigated by current controls.
-        - **Plus** an element of uncertainty.
+	- For relative risk assessment, calculate risk as:
+		- **Loss frequency × Loss magnitude**
+		- **Minus** the percentage of risk mitigated by current controls.
+		- **Plus** an element of uncertainty.
 5. **Assess Risk Acceptability**
-    - For each threat and associated vulnerabilities, create a **ranking of relative risk levels**.
-    - **Residual risk**: The risk remaining after all feasible protective measures have been implemented.
-    - Compare the residual risk against the **risk appetite**:
-        - If **risk appetite < residual risk**, identify additional strategies to reduce risk further.
-        - If **risk appetite > residual risk**, proceed to the next stages of risk control.
+	- For each threat and associated vulnerabilities, create a **ranking of relative risk levels**.
+	- **Residual risk**: The risk remaining after all feasible protective measures have been implemented.
+	- Compare the residual risk against the **risk appetite**:
+		- If **risk appetite < residual risk**, identify additional strategies to reduce risk further.
+		- If **risk appetite > residual risk**, proceed to the next stages of risk control.
 
 ## The FAIR Approach to Risk Assessment
 1. Identify scenario components.
@@ -588,6 +587,7 @@ Some IT security certification exams test a simple process for:
 4. Derive and articulate risk.
 
 ## Risk Control Strategies
+
 | **Strategy**    | **Description**                                                                             | **Details**                                                                                                                                                                                                                                    |
 | --------------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Defense**     | Attempts to prevent exploitation of the vulnerability                                       | - Preferred approach<br>- Counter threats, remove vulnerabilities, limit access, add safeguards                                                                                                                                                |
@@ -596,6 +596,7 @@ Some IT security certification exams test a simple process for:
 | **Mitigate**    | Reduces the **impact** of an attack rather than the success of the attack                   | **Plans:**<br>1. **Incident Response (IR):** Actions during an incident<br>2. **Disaster Recovery (DR):** Preparations for recovery<br>3. **Business Continuity (BC):** Ensures continuation of business activities during catastrophic events |
 | **Acceptance**  | Chooses to do nothing to protect against a vulnerability and accepts the potential outcomes | - Valid only when the cost of protection exceeds the value of the function, service, or asset                                                                                                                                                  |
 | **Termination** | Directs the organization to avoid business activities introducing uncontrollable risks      | - May seek alternative mechanisms to meet customer needs                                                                                                                                                                                       |
+
 - ### Selecting a Risk Control Strategy
 	- Consider asset value, threat level, and potential loss.
 		- Rules of thumb for selecting a strategy:
@@ -614,15 +615,15 @@ Some IT security certification exams test a simple process for:
 	- Before implementing a control strategy for a specific vulnerability, the organization must explore **all consequences** of the vulnerability to the information asset.
 	- Several methods exist to determine the **advantages/disadvantages** of a specific control.
 	- **Factors affecting the cost** of a control or safeguard include:
-	    - Development or acquisition costs
-	    - Training fees
-	    - Implementation costs
-	    - Service costs
-	    - Maintenance costs
+		- Development or acquisition costs
+		- Training fees
+		- Implementation costs
+		- Service costs
+		- Maintenance costs
 	- **Asset valuation** involves estimating the real and perceived costs associated with:
-	    - Design, development, installation, maintenance
-	    - Protection and recovery
-	    - Defense against loss and litigation
+		- Design, development, installation, maintenance
+		- Protection and recovery
+		- Defense against loss and litigation
 	- The process results in an estimate of **potential loss per risk**.
 	- **Expected loss per risk** is calculated using the formula:
 		- Annualized Loss Expectancy (ALE) = Single Loss Expectancy (SLE) × Annualized Rate of Occurrence (ARO)
@@ -632,9 +633,9 @@ Some IT security certification exams test a simple process for:
 	- **CBA** determines whether the evaluated alternative is worth the cost incurred to control the vulnerability.
 	- The formula uses the ALE calculated earlier, prior to control implementation:
 		- CBA = ALE(prior) - ALE(post) - ACS
-	    - **ALE(prior):** The annualized loss expectancy of risk **before** control implementation.
-	    - **ALE(post):** The estimated ALE with the control in place for a defined period.
-	    - **ACS:** The annualized cost of the safeguard.
+		- **ALE(prior):** The annualized loss expectancy of risk **before** control implementation.
+		- **ALE(post):** The estimated ALE with the control in place for a defined period.
+		- **ACS:** The annualized cost of the safeguard.
 
 ## Implementation, Monitoring, and Assessment of Risk Controls
 - **Implementation**: Put the control strategy into action.
@@ -647,29 +648,29 @@ Some IT security certification exams test a simple process for:
 
 ## Benchmarking and Best Practices
 - ### **Alternative Approach to Risk Management:**
-    - Benchmarking involves seeking out and studying practices in other organizations to replicate them in one's own.
+	- Benchmarking involves seeking out and studying practices in other organizations to replicate them in one's own.
 - ### **Types of Measures for Comparison:**
-    1. **Metrics-based Measures:** Based on numerical standards.
-    2. **Process-based Measures:** Strategic and less focused on numbers.
+	1. **Metrics-based Measures:** Based on numerical standards.
+	2. **Process-based Measures:** Strategic and less focused on numbers.
 - ### **Standard of Due Care:**
-    - Refers to adopting security measures that demonstrate the organization has acted as a prudent entity would in similar circumstances.
-    - Controls applied at or above prescribed levels, alongside maintaining due care, exhibit **due diligence**.
-    - Failure to meet these standards can result in **legal liability**.
+	- Refers to adopting security measures that demonstrate the organization has acted as a prudent entity would in similar circumstances.
+	- Controls applied at or above prescribed levels, alongside maintaining due care, exhibit **due diligence**.
+	- Failure to meet these standards can result in **legal liability**.
 - ### **Best Business Practices:**
-    - Security efforts providing superior levels of information protection.
-    - Considerations for adoption:
-        - Does the organization resemble the target organization with the best practice?
-        - Are expendable resources similar?
-        - Is the organization in a similar threat environment?
+	- Security efforts providing superior levels of information protection.
+	- Considerations for adoption:
+		- Does the organization resemble the target organization with the best practice?
+		- Are expendable resources similar?
+		- Is the organization in a similar threat environment?
 - ### **Challenges in Applying Benchmarking and Best Practices:**
-    - Organizations often do not share information.
-    - No two organizations are identical.
-    - Best practices continually evolve.
-    - Researching benchmarks may not provide actionable next steps.
+	- Organizations often do not share information.
+	- No two organizations are identical.
+	- Best practices continually evolve.
+	- Researching benchmarks may not provide actionable next steps.
 - ### **Baselining:**
-    - **Definition:** A performance value or metric used to compare changes in the object being measured.
-    - In information security, it compares **past activities and events** against future performance.
-    - A guide to the overall process is useful during baselining.
+	- **Definition:** A performance value or metric used to compare changes in the object being measured.
+	- In information security, it compares **past activities and events** against future performance.
+	- A guide to the overall process is useful during baselining.
 
 ## Other Feasibility Studies
 1. **Organizational Feasibility**: Assesses the fit of IS alternatives with organizational goals.
@@ -889,18 +890,18 @@ Questions:
 	- Some technologies (such as RADIUS, TACACS, and CHAP password systems) have improved the authentication process.
 - ### RADIUS, TACACS & Diameter (Sessional 2)
 
-| Feature                  | RADIUS                                                                                                  | Diameter                                                                                             | TACACS+                                                                        | Kerberos                                                                    |
-|:------------------------ |:------------------------------------------------------------------------------------------------------- |:---------------------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------ |:--------------------------------------------------------------------------- |
-| **Purpose**              | Centralized authentication and authorization for remote access, network devices, and wireless networks. | The advanced version of RADIUS is used for AAA in IP-based networks, especially 3G and LTE networks. | Centralized AAA, is typically used in network devices (Cisco).                 | Secure authentication for user sessions in a centralized environment (SSO). |
-| **Protocol Type**        | UDP (User Datagram Protocol)                                                                            | TCP/SCTP (Stream Control Transmission Protocol)                                                      | TCP (Transmission Control Protocol)                                            | Symmetric Key Cryptography (with a trusted third party for tickets)         |
-| **Encryption**           | Only passwords are encrypted                                                                            | Encrypts full packets                                                                                | Encrypts the entire payload                                                    | Uses cryptographic tickets and session keys for authentication              |
-| **Authentication**       | Single-step authentication is often used for 802.1x, VPNs, and dial-up.                                 | Multi-step authentication offers better scalability and reliability than RADIUS.                     | Handles separate authentication, authorization, and accounting (AAA) services. | Ticket-based authentication with Single Sign-On (SSO) functionality         |
-| **Transport Protocol**   | UDP                                                                                                     | TCP/SCTP                                                                                             | TCP                                                                            | None (uses tickets and secret keys)                                         |
-| **Vendor**               | Open, widely supported                                                                                  | Evolved from RADIUS, 3GPP standard                                                                   | Cisco proprietary                                                              | MIT-developed, often used in Microsoft Active Directory                     |
-| **Performance**          | Lightweight, lower reliability due to UDP.                                                              | More reliable and scalable than RADIUS.                                                              | High reliability due to the use of TCP.                                        | High security, built for strong, centralized environments                   |
-| **Compatibility**        | Compatible with a wide range of devices and services                                                    | It is mainly used in modern mobile and IP-based networks.                                            | Primarily used with Cisco devices.                                             | Common in Windows environments (integrated with AD)                         |
-| **Authentication Model** | Centralized (Username/Password)                                                                         | Centralized                                                                                          | Centralized (AAA)                                                              | Centralized using tickets (SSO model)                                       |
-| **Scalability**          | Moderate (due to UDP limitations)                                                                       | Highly scalable (designed for telecom and large networks).                                           | Moderate, typically for managing fewer devices.                                | High scalability, especially in AD environments                             |
+| Feature                  | RADIUS                                                                                                  | Diameter                                                                                             | TACACS+                                                                        | Kerberos                                                                        |
+|:------------------------ |:------------------------------------------------------------------------------------------------------- |:---------------------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------ |:------------------------------------------------------------------------------- |
+| **Purpose**              | Centralized authentication and authorization for remote access, network devices, and wireless networks. | The advanced version of RADIUS is used for AAA in IP-based networks, especially 3G and LTE networks. | Centralized AAA, is typically used in network devices (Cisco).                 | Secure authentication for user sessions in a centralized environment (SSO).     |
+| **Protocol Type**        | UDP (User Datagram Protocol)                                                                            | TCP/SCTP (Stream Control Transmission Protocol)                                                      | TCP (Transmission Control Protocol)                                            | UDP + TCP / Symmetric Key Cryptography (with a trusted third party for tickets) |
+| **Encryption**           | Only passwords are encrypted                                                                            | Encrypts full packets                                                                                | Encrypts the entire payload                                                    | Uses cryptographic tickets and session keys for authentication                  |
+| **Authentication**       | Single-step authentication is often used for 802.1x, VPNs, and dial-up.                                 | Multi-step authentication offers better scalability and reliability than RADIUS.                     | Handles separate authentication, authorization, and accounting (AAA) services. | Ticket-based authentication with Single Sign-On (SSO) functionality             |
+| **Transport Protocol**   | UDP                                                                                                     | TCP/SCTP                                                                                             | TCP                                                                            | UDP, TCP Fallback                                                               | 
+| **Vendor**               | Open, widely supported                                                                                  | Evolved from RADIUS, 3GPP standard                                                                   | Cisco proprietary                                                              | MIT-developed, often used in Microsoft Active Directory                         |
+| **Performance**          | Lightweight, lower reliability due to UDP.                                                              | More reliable and scalable than RADIUS.                                                              | High reliability due to the use of TCP.                                        | High security, built for strong, centralized environments                       |
+| **Compatibility**        | Compatible with a wide range of devices and services                                                    | It is mainly used in modern mobile and IP-based networks.                                            | Primarily used with Cisco devices.                                             | Common in Windows environments (integrated with AD)                             |
+| **Authentication Model** | Centralized (Username/Password)                                                                         | Centralized                                                                                          | Centralized (AAA)                                                              | Centralized using tickets (SSO model)                                           |
+| **Scalability**          | Moderate (due to UDP limitations)                                                                       | Highly scalable (designed for telecom and large networks).                                           | Moderate, typically for managing fewer devices.                                | High scalability, especially in AD environments                                 |
 
 - ### Securing Authn w/ Kerberos
 	- Kerberos provides secure third-party authentication using symmetric key encryption to validate individual users to various network resources.
