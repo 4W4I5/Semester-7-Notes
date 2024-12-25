@@ -1498,7 +1498,7 @@ The organization translates the blueprint for information security into a projec
 	- Amount of effort required
 	- Estimated capital and noncapital expenses
 	- Identification of dependencies between/among tasks
-- Ea+ch major WBS task is further divided into smaller tasks or specific action steps.
+- Each major WBS task is further divided into smaller tasks or specific action steps.
 
 ## Project Planning Considerations
 
