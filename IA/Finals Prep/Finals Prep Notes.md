@@ -29,14 +29,16 @@
 		- Performance measures
 		- Value delivery
 - ### Responsibilities
-	- Oversee overall corporate security posture (accountable to board) → **CEO**
-	- Brief board, customers, public → **CEO**
-	- Set security policy, procedures, program, training for company → **CSO, CIO, CRO + Department/Agency Head**
-	- Respond to security breaches (investigate, mitigate, litigate) → **CSO, CIO, CRO + Department/Agency Head**
-	- Responsible for independent annual audit coordination → **Mid Level Manager + CSO, CIO, CRO + Department/Agency Head**
-	- Implement/audit/enforce/assess compliance → **Mid Level Manager + CSO, CIO, CRO + Department/Agency Head**
-	- Communicate policies, program (training) → **Staff/Employees + Mid Level Manager**
-	- Implement policy; report security vulnerabilities and breaches → **Staff/Employees**
+	- **CEO**
+		- Oversee overall corporate security posture (accountable to board), Brief board, customers, public
+	- **CSO, CIO, CRO + Department/Agency Head**
+		- Set security policy, procedures, program, training for company, Respond to security breaches (investigate, mitigate, litigate)
+	- **Mid Level Manager + CSO, CIO, CRO + Department/Agency Head**
+		- Implement/audit/enforce/assess compliance + Responsible for independent annual audit coordination
+	- **Staff/Employees + Mid Level Manager**
+		- Communicate policies, program (training)
+	- **Staff/Employees**
+		- Implement policy; report security vulnerabilities and breaches 
 
 ## InfoSec Policy, Standards & Practices
 
