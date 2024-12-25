@@ -558,7 +558,7 @@ Some IT security certification exams test a simple process for:
 
 ## Risk Assessment
 > [!NOTE]
-> PaO, DLF, ELM, CR, ASA
+> PaO, DLF, ELM, CR, ARA
 
 - ### 1. **Plan & Organize the Process**
 	- Define the scope, goals, and responsibilities for the risk assessment.
