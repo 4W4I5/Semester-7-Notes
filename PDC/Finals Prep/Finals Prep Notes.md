@@ -62,6 +62,7 @@
 
 ## **Challenges in Single-Core Processors**
 - **Moore’s Law**: Moore's Law predicted that the number of transistors on a chip would double approximately every 18 months. However, physical limitations like heat dissipation and power consumption are slowing this down.
+	- 
 - **Power Consumption**: As clock speeds increase, power consumption grows exponentially, making it unsustainable.
 - **Heat Dissipation**: Higher clock speeds generate more heat, leading to challenges in cooling processors.
 - **Limits of Single-Core Processors**: Due to these limitations, single-core processors are unable to scale in performance as they once did, leading to the rise of multi-core processors.
