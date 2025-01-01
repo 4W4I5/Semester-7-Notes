@@ -82,6 +82,8 @@
 | **The New Moore's Law** | Performance scaling by adding cores rather than increasing clock speed.                                                        | Many-core processors follow a similar trend.                                                |
 
 ## **Parallelization Strategy**
+> [!NOTE]
+> Pu, PRTN/DECOMP, Asgnmt, orch, map
 - ### **1. Problem Understanding**
 	- The first step in developing a parallel application is to fully understand the problem you want to solve.
 		- **Starting with a Serial Program**: Analyze and understand the existing serial code to determine its structure and logic.
@@ -201,7 +203,6 @@
 # **3. Parallel Architectures**
 
 >[!NOTE]
-
 > Nothing special, copied content from slides and restructured them
 
 ## **Introduction to Parallel Architectures**
