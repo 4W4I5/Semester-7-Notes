@@ -85,15 +85,14 @@
 > [!NOTE]
 > Pu, PRTN/DECOMP, Asgnmt, orch, map
 - ### **1. Problem Understanding**
-	- The first step in developing a parallel application is to fully understand the problem you want to solve.
-		- **Starting with a Serial Program**: Analyze and understand the existing serial code to determine its structure and logic.
-		- **Suitability for Parallelization**: The key decision is whether the problem is suitable for parallelization. This requires analyzing:
-			- **Code Dependencies**: Identify areas where tasks depend on each other.
-			- **Communication Requirements**: Understand how tasks need to communicate.
-			- **Synchronization Needs**: Determine where synchronization is needed to ensure correct execution.
-		- **Identify Hotspots**: In most scientific and technical programs, the majority of the work happens in a few places. The focus should be on parallelizing these "hotspots" while ignoring less significant portions.
-			- **Profiling Tools**: Use profilers and performance analysis tools to identify hotspots and the sections of code that consume the most CPU time.
-			- **Solution for Bottlenecks**: If areas are found to be slow, such as I/O operations, consider restructuring the program, using a different algorithm, or overlapping communication with computation.
+	- **Analyze Serial Code**: Understand the structure and logic of the existing serial program.
+	- **Assess Parallelization Suitability**: Evaluate task dependencies, communication needs, and synchronization requirements.
+	    - **Code Dependencies**: Identify task dependencies.
+	    - **Communication Requirements**: Understand task communication needs.
+	    - **Synchronization Needs**: Determine where synchronization is required.
+	- **Identify Hotspots**: Focus on parallelizing performance-critical sections.
+	    - **Profiling Tools**: Use profiling tools to identify bottlenecks and high CPU usage areas.
+	    - **Solution for Bottlenecks**: Optimize slow sections, such as I/O, by restructuring or using alternative algorithms.
 - ### **2. Partitioning/Decomposition**
 	- Once the problem is well understood, the next step is to break it down into smaller tasks that can be executed simultaneously. This involves **partitioning** the data or the functionality.
 	- #### **2.1. Decomposition Types**
