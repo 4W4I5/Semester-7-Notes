@@ -304,7 +304,95 @@
 ---
 
 # 4. Beowulf Cluster
+## **Introduction**
+- **Beowulf Cluster**: A high-performance computing cluster.
+- **Virtual Machines (VMs)**: Can be used instead of physical machines; steps remain identical.
+- ### **Step 0: Setup**
+	1. **Install VirtualBox**: [Download link](https://www.virtualbox.org/wiki/Downloads).
+	2. **Download Ubuntu Desktop/Server**: Example: `ubuntu-14.04.4-desktop-amd64`.
+	3. **Create a Virtual Machine (VM)**:
+	    - OS: Linux (Ubuntu 64-bit).
+	    - Name: `master`.
+	    - Default settings.
+	4. **Install Ubuntu**:
+	    - Follow default options; set a memorable username/password.
+	5. **Enhancements**:
+	    - For screen scaling: Insert Guest Additions CD Image and install.
+	    - For shared folders: Add user to `vboxsf` group using:
+	        `sudo adduser <user-name> vboxsf`
+	6. **Networking Setup**:
+	    - Use **Bridged Adapter** in VirtualBox.
+	- ### **Networking Basics**
+		- **DHCP**: Dynamically assigns IP addresses; addresses can be reused.
+		- **NAT (Network Address Translation)**:
+		    - Allows multiple devices to use a single public IP.
+		    - Default mode for VirtualBox.
+		- **Bridged Networking**: Enables VMs to access the host's physical network.
+- ### **Step 1: Connectivity**
+	1. **Static IP Assignment**:
+	    - Use Network Settings for Ubuntu Desktop.
+	    - Ensures consistent IPs across reboots.
+	2. **Add a Slave Node**:
+	    - Clone the `master` VM (name it `slave1`).
+	    - Update its IP address.
+	    - Test connectivity using `ping`.
+	3. **Access by Name**:
+	    - Edit `/etc/hosts` file on both nodes:
 
+	        ```
+	        127.0.0.1 localhost
+	        192.168.8.109 master
+	        192.168.8.110 slave1
+	        ```
+
+	    - Test using `ping <node-name>`.
+- ### **Step 2: NFS (Network File System)**
+	1. **Purpose**: Share content (e.g., programs) across nodes.
+	2. **Setup on Master**:
+	    - Install NFS server: `sudo apt-get install nfs-server`.
+	    - Create a shared folder: `sudo mkdir /mirror`.
+	    - Edit `/etc/exports`:
+
+	        ```
+	        /mirror *(rw,sync)
+	        ```
+
+	    - Restart NFS: `sudo service nfs-kernel-server restart`.
+	3. **Setup on Slave**:
+	    - Install NFS client: `sudo apt-get install nfs-client`.
+	    - Mount shared folder:
+	        `sudo mount master:/mirror /mirror`.
+	    - Persist mount in `/etc/fstab`:
+	        `master:/mirror /mirror nfs`.
+- ### **Step 3: SSH Setup**
+	1. **Install OpenSSH**:
+	    - `sudo apt-get install openssh-server` on all nodes.
+	2. **User Setup**:
+	    - Create a user (`mpiuser`) with a shared home directory:
+
+	        ```
+	        sudo useradd -d /mirror mpiuser
+	        sudo passwd mpiuser
+	        sudo chown mpiuser /mirror
+	        ```
+
+	3. **SSH Key Generation**:
+	    - On `master` as `mpiuser`:
+	        `ssh-keygen -t rsa` (empty passphrase).
+	    - Add key to `authorized_keys`:
+
+	        ```
+	        cd .ssh
+	        cat id_rsa.pub >> authorized_keys
+	        ```
+
+	4. **Testing**:
+	    - SSH into `slave1` using `ssh <slave-name>`.
+- ### **Step 4: MPICH (Message Passing Interface)**
+	1. **Install Prerequisites**:
+	    - `sudo apt-get install build-essential`.
+	2. **Install MPICH**:
+	    - Install on all nodes.
 # **5. Basic MPI**
 - MPI is MIMD/SPMD type of parallelism
 
