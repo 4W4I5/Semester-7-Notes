@@ -27,6 +27,7 @@
 | [Sessional 1](PDC/Sessional%201%20Prep/Sessional%201%20Prep%20Notes.md) | :white_check_mark: |
 | [Sessional 2](PDC/Sessional%202%20Prep/Sessional%202%20Prep%20Notes.md) | :white_check_mark: |
 | [Finals](PDC/Finals%20Prep/Finals%20Prep%20Notes.md)                    | :warning:          |
+| [Code Examples](PDC/Finals%20Prep/Finals%20Code%20Examples.md)          | :warning:          |
 
 # Blockchain
 
@@ -43,4 +44,4 @@
 | ---------------------------------------------------------------------- | ------------------ |
 | [Sessional 1](IA/Sessional%201%20Prep/Sessional%201%20Prep%20Notes.md) | :warning:          |
 | [Sessional 2](IA/Sessional%202%20Prep/Sessional%202%20Prep%20Notes.md) | :white_check_mark: |
-| [Finals](IA/Finals%20Prep/Finals%20Prep%20Notes.md)                    | :white_check_mark: | 
+| [Finals](IA/Finals%20Prep/Finals%20Prep%20Notes.md)                    | :white_check_mark: |

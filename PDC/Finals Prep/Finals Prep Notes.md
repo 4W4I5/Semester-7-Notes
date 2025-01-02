@@ -481,7 +481,7 @@
 			- Elements of the arrays are combined in an element-wise fashion, returned result is an array
 	- ### AllReduce (MPI_Allreduce)
 		- Gather values from all procs and perform an operation in calling proc before sending to all procs
-# Lecture 7: OpenMP
+# Lecture 7.1: OpenMP
 - ## Introduction
 	- Directive set for C/C++ compiler, included as standard
 		- Requires `-fopenmp` switch during compilation and/or the `include <omp.h>` header include
@@ -556,7 +556,17 @@
 	- ### Reduction
 		- Similar to OpenMPI, operators are specified within clause. Operators are `max`, `min`, `+`, `-`, `*`, etcetc. Creates a private copy that is then shared
 			- `#pragma omp parallel reduction(max:someArrayOrVar)`
-
+# Lecture 7.2: OpenCL
+## OpenCL Architecture
+- Application Layer
+	- OpenCL Kernels
+- Framework
+	- OpenCL API
+	- OpenCL C Language
+- OpenCL runtime
+- Device Driver
+- Accelerator Hardware
+	- GPU, CPU, FPGA
 # Lecture 8: Performance Analysis
 > [!WARNING]
 > Only the formulae seem important enough to come in the sessional
