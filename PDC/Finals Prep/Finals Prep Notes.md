@@ -765,5 +765,12 @@
 
 ## Hadoop Setup/Installation
 ### Points To Note
-
+- Easy to setup, Only Java 8 can be used however
+- Can run in 3 modes
+	- Standalone
+		- Debug mode essentially
+	- Pseudo-Distributed
+		- Simulation of processes
+		- Each instance is its own java process
+	- Fully-Distributed
 # 12. Hadoop Map Reduce
