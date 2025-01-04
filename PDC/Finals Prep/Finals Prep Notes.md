@@ -10,7 +10,7 @@
 | 8                 | Performance Analysis   | :white_check_mark: |
 | 9                 | Dependency Analysis    | :warning:          |
 | 10                | Zettabytes of Data     | :warning:          |
-| 11                | Hadoop Intro           | :warning:          |
+| 11                | Hadoop Intro           | :white_check_mark: | 
 | 12                | Hadoop Map Reduce      | :warning:          |
 
 > [!WARNING]
@@ -777,5 +777,5 @@
 	- Used `com.sun.tools.javac` to compile the file
 	- Used `java cf wc.jar WordCount*.class` to convert the class to a jarfile
 - Can use `bin/hadoop fs -cat <filename>` to cat files just as i would normally
-- 
+- Its a simple wordcount example and it does so pretty quickly, nothing special to note besides the compile steps
 # 12. Hadoop Map Reduce
