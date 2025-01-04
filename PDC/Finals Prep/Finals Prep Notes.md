@@ -9,7 +9,7 @@
 | 7.2               | OpenCL                 | :warning:          |
 | 8                 | Performance Analysis   | :white_check_mark: |
 | 9                 | Dependency Analysis    | :warning:          |
-| 10                | Zettabytes of Data     | :white_check_mark: | 
+| 10                | Zettabytes of Data     | :white_check_mark: |
 | 11                | Hadoop Intro           | :white_check_mark: |
 | 12                | Hadoop Map Reduce      | :warning:          |
 
@@ -914,3 +914,9 @@ There are three types of Big Data:
 	- Can use `bin/hadoop fs -cat <filename>` to cat files just as i would normally
 	- Its a simple wordcount example and it does so pretty quickly, nothing special to note besides the compile steps
 # 12. Hadoop Map Reduce
+- A programming model for data processing
+- Breaks the processing into two phases
+	- **Map Phase**:
+	- **Reduce Phase**:
+- Each phase has key-value pairs as input & output
+	- Type is chosen by the programmer
