@@ -648,5 +648,122 @@
 
 # 9. Dependency Analysis
 # 10. Zettabytes of Data
-# 11. Hadoop Intro
+# 11. Hadoop Introduction
+### **Why Hadoop?**
+- **Need to process huge datasets** on large clusters of computers.
+- Building **reliability** into each application is **very expensive**.
+- **Node failures** are common in distributed systems.
+- A **common infrastructure** is needed:
+    - Efficient, reliable, and easy to use.
+    - Open Source.
+### **What is Hadoop?**
+- A **framework** for **distributed processing** of large datasets across clusters of computers using simple programming models.
+- **Scalable** from a single server to thousands of machines, each providing local computation and storage.
+- **Detects and handles failures** at the application layer, ensuring highly available services on clusters of computers.
+
+### **Who Uses Hadoop?**
+
+- Prominent users include **Amazon**, **Facebook**, **Google**, **Twitter**, **New York Times**, **Yahoo!**, and many more.
+
+### **Core Components of Hadoop**
+
+1. **Hadoop Common**:
+    - Utilities supporting other Hadoop modules.
+2. **HDFS (Hadoop Distributed File System)**:
+    - A distributed file system providing high-throughput access to application data.
+3. **Hadoop YARN**:
+    - A framework for job scheduling and cluster resource management.
+4. **Hadoop MapReduce**:
+    - A programming model for large-scale data processing.
+
+
+### **Hadoop Ecosystem**
+
+- Management & Monitoring.
+- Coordination among modules.
+- **Batch and Iterative Processing**.
+- NoSQL Databases.
+- Tools for:
+    - Data collection (e.g., **Sqoop**).
+    - Workflow scheduling.
+    - Data analysis and processing.
+    - Data warehousing.
+    - Query processing frameworks.
+    - Cluster and stream data management.
+    - Event processing.
+
+---
+
+## **HDFS (Hadoop Distributed File System)**
+- ### Goals of HDFS:
+	- A file system designed for:
+	    - **Storing very large files** (hundreds of MBs, GBs, or TBs).
+	    - **Streaming data access patterns** (write once, read-many).
+	- **Batch Processing** support with no need for synchronization.
+	- **Production scalability**:
+	    - Up to 200 PB of storage and clusters of 4500 servers.
+	    - A billion files and blocks.
+	- **Key Features**:
+	    - Scalable, fault-tolerant, and distributed storage system.
+- ### Data Distribution Example:
+	- **Large input data** is split across nodes:
+	    - Node 1: Slice of input.
+	    - Node 2: Slice of input.
+	    - Node 3: Slice of input.
+
+## **Hadoop MapReduce**
+- A **framework** for writing applications to process large data stored in HDFS.
+- **Two Phases**:
+    1. **Map Phase**:
+        - Processes input data into key-value pairs.
+    2. **Reduce Phase**:
+        - Aggregates and computes final results from key-value pairs.
+- **Developer Specifications**:
+    - Define the **map function** and **reduce function**.
+- **Benefits**:
+    - **Simplicity**: Supports Java, C++, Python, etc.
+    - **Scalability**: Processes petabytes of data in one cluster.
+    - **Speed**: Parallel processing shortens computation times.
+    - **Recovery**: Handles node failures with redundancy.
+    - **Minimal Data Motion**: Processes data locally, reducing network I/O.
+
+## **YARN (Yet Another Resource Negotiator)**
+
+- Primarily provides **resource management** for Hadoop clusters.
+- Enables **multiple data processing engines**:
+    - Interactive SQL.
+    - Real-time streaming.
+    - Batch processing.
+- **Framework**:
+    - YARN (Cluster Resource Management).
+    - HDFS (Redundant, reliable storage).
+    - Data Processing Engines (e.g., MapReduce, Spark).
+## **Five Pillars of Hadoop Ecosystem**
+
+| **Pillar**                             | **Component**        | **Description**                                                                        |
+| -------------------------------------- | -------------------- | -------------------------------------------------------------------------------------- |
+| **1. Data Management**                 | **HDFS**             | Scalable and reliable Java-based storage.                                              |
+|                                        | **YARN**             | Provides resource management and scheduling architecture.                              |
+| **2. Data Access**                     | **Apache Hive**      | Data warehousing with SQL-like queries for HDFS datasets.                              |
+|                                        | **Apache Pig**       | High-level scripting (Pig Latin) for data analysis.                                    |
+|                                        | **Apache Spark**     | In-memory data processing for iterative algorithms (e.g., clustering, classification). |
+|                                        | **Apache Storm**     | Real-time computation for fast data streams.                                           |
+|                                        | **Apache HBase**     | NoSQL column-oriented storage with real-time read/write access.                        |
+|                                        | **Apache Tez**       | Alternative to MapReduce for speeding up query processing.                             |
+|                                        | **Apache Kafka**     | Publish-subscribe messaging with fault tolerance.                                      |
+|                                        | **Apache Solr**      | Full-text search and real-time indexing.                                               |
+|                                        | **Apache Mahout**    | Scalable machine learning for clustering and classification.                           |
+|                                        | **Apache Accumulo**  | High-performance data storage and retrieval.                                           |
+| **3. Data Governance and Integration** | **Apache Falcon**    | Data lifecycle management.                                                             |
+|                                        | **Apache Flume**     | Log aggregation and movement.                                                          |
+|                                        | **Apache Sqoop**     | Efficient data transfer to/from Hadoop.                                                |
+| **4. Security**                        | **Apache Knox**      | Centralized authentication and access.                                                 |
+|                                        | **Apache Ranger**    | Security policy administration, authorization, and accounting.                         |
+| **5. Operations**                      | **Apache Ambari**    | Web-based cluster monitoring.                                                          |
+|                                        | **Apache Oozie**     | Workflow scheduling for Hadoop jobs.                                                   |
+|                                        | **Apache ZooKeeper** | Coordinates distributed processes and stores configuration updates.                    |
+
+## Hadoop Setup/Installation
+### Points To Note
+
 # 12. Hadoop Map Reduce
