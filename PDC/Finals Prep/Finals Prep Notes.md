@@ -773,6 +773,9 @@
 		- Simulation of processes
 		- Each instance is its own java process
 	- Fully-Distributed
-- Supposed to compile the jar ourselves, skipping this
+- Supposed to compile the jar ourselves
+	- Used `com.sun.tools.javac` to compile the file
+	- Used `java cf wc.jar WordCount*.class` to convert the class to a jarfile
+- Can use `bin/hadoop fs -cat <filename>` to cat files just as i would normally
 - 
 # 12. Hadoop Map Reduce
