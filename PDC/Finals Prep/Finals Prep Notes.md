@@ -920,3 +920,4 @@ There are three types of Big Data:
 	- **Reduce Phase**:
 - Each phase has key-value pairs as input & output
 	- Type is chosen by the programmer
+- Suitable data category: Large Semi-Structured data
