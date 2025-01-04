@@ -773,4 +773,6 @@
 		- Simulation of processes
 		- Each instance is its own java process
 	- Fully-Distributed
+- Supposed to compile the jar ourselves, skipping this
+- 
 # 12. Hadoop Map Reduce
