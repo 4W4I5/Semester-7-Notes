@@ -8,7 +8,7 @@
 | 7.1               | OpenMP                 | :white_check_mark: |
 | 7.2               | OpenCL                 | :warning:          |
 | 8                 | Performance Analysis   | :white_check_mark: |
-| 9                 | Dependency Analysis    | :warning:          |
+| 9                 | Dependency Analysis    | :white_check_mark: | 
 | 10                | Zettabytes of Data     | :white_check_mark: |
 | 11                | Hadoop Intro           | :white_check_mark: |
 | 12                | Hadoop Map Reduce      | :warning:          |
@@ -695,6 +695,11 @@ DirVec = (>, =, =)
 ```
 
 Loop dependency is based on direction vec, it will always be loop carried unless the above case is present
+
+```
+DirVec = (=, =, =)
+Loop-Dependency == 'Loop Independent'
+```
 
 
 ---
