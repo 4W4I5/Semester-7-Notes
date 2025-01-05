@@ -647,6 +647,57 @@
 ---
 
 # 9. Dependency Analysis
+Problem Shortcut:
+```
+ A[i-1][j+1][k-1] = A[i+1][j+1][k-1]
+```
+check if leftmost `[]` is negative i.e `'i-1'`
+- if so then dependency=`Anti`
+	- L.H.S is the sink with the R.H.S being the source
+- else dependency=`True`
+	- L.H.S is the source with the R.H.S being the sink
+```
+A[i-1][j+1][k-1] = A[i+1][j+1][k-1]
+       ^                   ^
+       |                   |
+      sink              source
+```
+Lets assume any value for N, 10 for example
+
+```
+N=10 ;This is the end result
+```
+sub N for all vars in LHS & RHS but ensure it gives the result as intended earlier where we need to inc/dec N to reach our target of 10
+
+```
+A[11-1][9+1][11-1] = A[9+1][9+1][11-1]
+```
+
+End result should be N in all iterations of A
+```
+A[10][10][10] = A[10][10][10]
+```
+
+Distance vector will be calculated Sink - Source (Use adjusted values of N)
+```
+> Sink: A[11][9][11]
+> Source: A[9][9][11]
+> DistVec: 2, 0, 0
+```
+
+Direction vector is based on negative sign
+> if distance is positive then "<"
+> if distance is negative then ">"
+> if distance is 0 for all vector elements then "=" and loop dependency will be set to 'loop independent'
+
+```
+DirVec = (>, =, =)
+```
+
+Loop dependency is based on direction vec, it will always be loop carried unless the above case is present
+
+
+---
 # 10. Zettabytes of Data
 ## Data Accumulation
 - Assume you have a piece of paper.
