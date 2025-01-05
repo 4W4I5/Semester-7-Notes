@@ -716,8 +716,10 @@ A[i][j-1][k+1] = A[i][j-1][k-1]
 Cases where the dependency is "inline" so to speak, are invalid
 - Input
 - Output
+	- Focus on the `i` part where both sides have the same value for `i`
 
 ---
+
 # 10. Zettabytes of Data
 ## Data Accumulation
 - Assume you have a piece of paper.
