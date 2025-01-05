@@ -702,6 +702,21 @@ Loop-Dependency == 'Loop Independent'
 ```
 
 
+## Invalid Cases
+### Case 1: No dependency
+```
+A[][][] = B[][][] / C[][][] + D[][][]
+```
+No known arrays are dependent on each other for their assignments
+
+### Case 2: Invalid dependency
+```
+A[i][j-1][k+1] = A[i][j-1][k-1]
+```
+Cases where the dependency is "inline" so to speak, are invalid
+- Input
+- Output
+
 ---
 # 10. Zettabytes of Data
 ## Data Accumulation
