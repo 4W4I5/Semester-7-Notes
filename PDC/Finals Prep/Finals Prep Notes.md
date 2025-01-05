@@ -88,12 +88,12 @@
 - ### **1. Problem Understanding**
 	- **Analyze Serial Code**: Understand the structure and logic of the existing serial program.
 	- **Assess Parallelization Suitability**: Evaluate task dependencies, communication needs, and synchronization requirements.
-	    - **Code Dependencies**: Identify task dependencies.
-	    - **Communication Requirements**: Understand task communication needs.
-	    - **Synchronization Needs**: Determine where synchronization is required.
+		- **Code Dependencies**: Identify task dependencies.
+		- **Communication Requirements**: Understand task communication needs.
+		- **Synchronization Needs**: Determine where synchronization is required.
 	- **Identify Hotspots**: Focus on parallelizing performance-critical sections.
-	    - **Profiling Tools**: Use profiling tools to identify bottlenecks and high CPU usage areas.
-	    - **Solution for Bottlenecks**: Optimize slow sections, such as I/O, by restructuring or using alternative algorithms.
+		- **Profiling Tools**: Use profiling tools to identify bottlenecks and high CPU usage areas.
+		- **Solution for Bottlenecks**: Optimize slow sections, such as I/O, by restructuring or using alternative algorithms.
 - ### **2. Partitioning/Decomposition**
 	- Once the problem is well understood, the next step is to break it down into smaller tasks that can be executed simultaneously. This involves **partitioning** the data or the functionality.
 	- #### **2.1. Decomposition Types**
@@ -101,11 +101,11 @@
 			- Refers to the size of the tasks created during decomposition.
 			- Two types of granularity:
 				- **Fine-Grained Tasks**:
-				    - Large number of small tasks.
-				    - Frequent communication between tasks.
-			    - **Coarse-Grained Tasks**:
-				      - Small number of large tasks.
-			      - Less frequent communication, leading to reduced overhead but requiring careful load balancing.
+					- Large number of small tasks.
+					- Frequent communication between tasks.
+				- **Coarse-Grained Tasks**:
+					  - Small number of large tasks.
+				  - Less frequent communication, leading to reduced overhead but requiring careful load balancing.
 		- **Decomposition Methods**:
 			- **Domain Decomposition**:
 				- Divides data across processors.
@@ -130,50 +130,50 @@
 				- **Advantages**:
 					- Lower communication overhead.
 				- **Disadvantages**:
-				    - Harder to efficiently balance the load across processors.
+					- Harder to efficiently balance the load across processors.
 		- **Choosing Granularity**:
 			- In most cases, **coarse-grained parallelism** is preferred because it reduces overhead from communication and synchronization.
 			- **Fine-grained parallelism** can help with load balancing but may result in high communication overhead, which could outweigh the computational benefits.
 - ### **3. Assignment**
-    - After partitioning the problem, the next step is to assign tasks to processors. Proper task assignment is crucial for achieving efficient parallel execution.
-    - #### **3.1. Task Assignment Approaches**
-	    - **Static Assignment**:
-	        - Tasks are assigned to processors at the beginning of execution and remain fixed throughout.
-	        - **Advantages**: Low scheduling overhead.
-	        - **Disadvantages**: Not flexible for dynamic workloads.
-	    - **Dynamic Assignment**:
-	        - Tasks are assigned dynamically as processors become available.
-	        - **Advantages**: Adaptable to changes in workload and processor availability.
-	        - **Disadvantages**: Higher scheduling overhead.
+	- After partitioning the problem, the next step is to assign tasks to processors. Proper task assignment is crucial for achieving efficient parallel execution.
+	- #### **3.1. Task Assignment Approaches**
+		- **Static Assignment**:
+			- Tasks are assigned to processors at the beginning of execution and remain fixed throughout.
+			- **Advantages**: Low scheduling overhead.
+			- **Disadvantages**: Not flexible for dynamic workloads.
+		- **Dynamic Assignment**:
+			- Tasks are assigned dynamically as processors become available.
+			- **Advantages**: Adaptable to changes in workload and processor availability.
+			- **Disadvantages**: Higher scheduling overhead.
 	- #### **3.2. Considerations for Assignment**
-	    - **Load Balancing**: Distribute the tasks so that all processors have roughly equal work to avoid idle processors.
-	    - **Uniform Communication**: Try to balance communication between tasks to avoid bottlenecks.
-	    - **Ease of Synchronization**: Minimize the need for complex synchronization to avoid delays.
+		- **Load Balancing**: Distribute the tasks so that all processors have roughly equal work to avoid idle processors.
+		- **Uniform Communication**: Try to balance communication between tasks to avoid bottlenecks.
+		- **Ease of Synchronization**: Minimize the need for complex synchronization to avoid delays.
 - ### **4. Orchestration**
-    - Orchestration involves managing how tasks communicate, synchronize, and execute in parallel.
+	- Orchestration involves managing how tasks communicate, synchronize, and execute in parallel.
 	- #### **4.1. Communication and Synchronization**
-	    - **Inter-task Communication**:
-	        - Tasks often need to share information.
-	        - Methods: Shared memory (in shared memory systems) or message passing (in distributed systems).
-	        - **Examples**: Message Passing Interface (MPI), shared memory models.
-	    - **Synchronization**:
-	        - Ensuring that tasks are properly coordinated so they work on the correct data at the right time.
-	        - **Examples**: Barriers, locks, semaphores.
-	    - **Barriers**: Force all tasks to reach a certain point before any can proceed, useful in phases of computation.
-	    - **Locks/Semaphores**: Control access to shared resources in parallel systems to prevent data races; excessive locking can create bottlenecks.
+		- **Inter-task Communication**:
+			- Tasks often need to share information.
+			- Methods: Shared memory (in shared memory systems) or message passing (in distributed systems).
+			- **Examples**: Message Passing Interface (MPI), shared memory models.
+		- **Synchronization**:
+			- Ensuring that tasks are properly coordinated so they work on the correct data at the right time.
+			- **Examples**: Barriers, locks, semaphores.
+		- **Barriers**: Force all tasks to reach a certain point before any can proceed, useful in phases of computation.
+		- **Locks/Semaphores**: Control access to shared resources in parallel systems to prevent data races; excessive locking can create bottlenecks.
 - ### **5. Mapping**
-    - Mapping refers to assigning tasks to the specific hardware resources they will run on, considering the architecture of the system.
+	- Mapping refers to assigning tasks to the specific hardware resources they will run on, considering the architecture of the system.
 	- #### **5.1. Task-to-Processor Mapping**
-	    - **Affinity-Based Mapping**:
-	        - Tasks are mapped to processors based on their data affinity, ensuring tasks are close to the data they need to access, reducing memory access times.
-	        - **Use Cases**: NUMA systems where data locality impacts performance.
-	    - **Task Clustering**:
-	        - Grouping tasks that frequently communicate together on the same processor or node to reduce communication overhead.
-	        - **Use Cases**: Systems with high inter-task communication.
+		- **Affinity-Based Mapping**:
+			- Tasks are mapped to processors based on their data affinity, ensuring tasks are close to the data they need to access, reducing memory access times.
+			- **Use Cases**: NUMA systems where data locality impacts performance.
+		- **Task Clustering**:
+			- Grouping tasks that frequently communicate together on the same processor or node to reduce communication overhead.
+			- **Use Cases**: Systems with high inter-task communication.
 	- #### **5.2. Factors in Mapping**
-	    - **Inter-task Communication**: Tasks that frequently communicate should be placed on the same processor or within the same node to minimize network delays.
-	    - **Data Locality**: In systems with NUMA, tasks should be mapped to processors close to the memory they will access to minimize access times.
-	    - **System-Specific Considerations**: Considerations like the underlying network topology, memory access models (e.g., NUMA), and hardware cache coherence should be factored into the mapping decision.
+		- **Inter-task Communication**: Tasks that frequently communicate should be placed on the same processor or within the same node to minimize network delays.
+		- **Data Locality**: In systems with NUMA, tasks should be mapped to processors close to the memory they will access to minimize access times.
+		- **System-Specific Considerations**: Considerations like the underlying network topology, memory access models (e.g., NUMA), and hardware cache coherence should be factored into the mapping decision.
 
 ## **Communication in Parallel and Distributed Systems**
 
@@ -203,6 +203,7 @@
 # **3. Parallel Architectures**
 
 >[!NOTE]
+
 > Nothing special, copied content from slides and restructured them
 
 ## **Introduction to Parallel Architectures**
@@ -312,88 +313,96 @@
 	1. **Install VirtualBox**: [Download link](https://www.virtualbox.org/wiki/Downloads).
 	2. **Download Ubuntu Desktop/Server**: Example: `ubuntu-14.04.4-desktop-amd64`.
 	3. **Create a Virtual Machine (VM)**:
-	    - OS: Linux (Ubuntu 64-bit).
-	    - Name: `master`.
-	    - Default settings.
+		- OS: Linux (Ubuntu 64-bit).
+		- Name: `master`.
+		- Default settings.
 	4. **Install Ubuntu**:
-	    - Follow default options; set a memorable username/password.
+		- Follow default options; set a memorable username/password.
 	5. **Enhancements**:
-	    - For screen scaling: Insert Guest Additions CD Image and install.
-	    - For shared folders: Add user to `vboxsf` group using:
-	        `sudo adduser <user-name> vboxsf`
+		- For screen scaling: Insert Guest Additions CD Image and install.
+		- For shared folders: Add user to `vboxsf` group using:
+			`sudo adduser <user-name> vboxsf`
 	6. **Networking Setup**:
-	    - Use **Bridged Adapter** in VirtualBox.
+		- Use **Bridged Adapter** in VirtualBox.
 	- ### **Networking Basics**
 		- **DHCP**: Dynamically assigns IP addresses; addresses can be reused.
 		- **NAT (Network Address Translation)**:
-		    - Allows multiple devices to use a single public IP.
-		    - Default mode for VirtualBox.
+			- Allows multiple devices to use a single public IP.
+			- Default mode for VirtualBox.
 		- **Bridged Networking**: Enables VMs to access the host's physical network.
 - ### **Step 1: Connectivity**
 	1. **Static IP Assignment**:
-	    - Use Network Settings for Ubuntu Desktop.
-	    - Ensures consistent IPs across reboots.
+		- Use Network Settings for Ubuntu Desktop.
+		- Ensures consistent IPs across reboots.
 	2. **Add a Slave Node**:
-	    - Clone the `master` VM (name it `slave1`).
-	    - Update its IP address.
-	    - Test connectivity using `ping`.
+		- Clone the `master` VM (name it `slave1`).
+		- Update its IP address.
+		- Test connectivity using `ping`.
 	3. **Access by Name**:
-	    - Edit `/etc/hosts` file on both nodes:
+		- Edit `/etc/hosts` file on both nodes:
 
-	        ```
+
+			```
 	        127.0.0.1 localhost
 	        192.168.8.109 master
 	        192.168.8.110 slave1
 	        ```
 
-	    - Test using `ping <node-name>`.
+
+		- Test using `ping <node-name>`.
 - ### **Step 2: NFS (Network File System)**
 	1. **Purpose**: Share content (e.g., programs) across nodes.
 	2. **Setup on Master**:
-	    - Install NFS server: `sudo apt-get install nfs-server`.
-	    - Create a shared folder: `sudo mkdir /mirror`.
-	    - Edit `/etc/exports`:
+		- Install NFS server: `sudo apt-get install nfs-server`.
+		- Create a shared folder: `sudo mkdir /mirror`.
+		- Edit `/etc/exports`:
 
-	        ```
+
+			```
 	        /mirror *(rw,sync)
 	        ```
 
-	    - Restart NFS: `sudo service nfs-kernel-server restart`.
+
+		- Restart NFS: `sudo service nfs-kernel-server restart`.
 	3. **Setup on Slave**:
-	    - Install NFS client: `sudo apt-get install nfs-client`.
-	    - Mount shared folder:
-	        `sudo mount master:/mirror /mirror`.
-	    - Persist mount in `/etc/fstab`:
-	        `master:/mirror /mirror nfs`.
+		- Install NFS client: `sudo apt-get install nfs-client`.
+		- Mount shared folder:
+			`sudo mount master:/mirror /mirror`.
+		- Persist mount in `/etc/fstab`:
+			`master:/mirror /mirror nfs`.
 - ### **Step 3: SSH Setup**
 	1. **Install OpenSSH**:
-	    - `sudo apt-get install openssh-server` on all nodes.
+		- `sudo apt-get install openssh-server` on all nodes.
 	2. **User Setup**:
-	    - Create a user (`mpiuser`) with a shared home directory:
+		- Create a user (`mpiuser`) with a shared home directory:
 
-	        ```
+
+			```
 	        sudo useradd -d /mirror mpiuser
 	        sudo passwd mpiuser
 	        sudo chown mpiuser /mirror
 	        ```
 
-	3. **SSH Key Generation**:
-	    - On `master` as `mpiuser`:
-	        `ssh-keygen -t rsa` (empty passphrase).
-	    - Add key to `authorized_keys`:
 
-	        ```
+	3. **SSH Key Generation**:
+		- On `master` as `mpiuser`:
+			`ssh-keygen -t rsa` (empty passphrase).
+		- Add key to `authorized_keys`:
+
+
+			```
 	        cd .ssh
 	        cat id_rsa.pub >> authorized_keys
 	        ```
 
+
 	4. **Testing**:
-	    - SSH into `slave1` using `ssh <slave-name>`.
+		- SSH into `slave1` using `ssh <slave-name>`.
 - ### **Step 4: MPICH (Message Passing Interface)**
 	1. **Install Prerequisites**:
-	    - `sudo apt-get install build-essential`.
+		- `sudo apt-get install build-essential`.
 	2. **Install MPICH**:
-	    - Install on all nodes.
+		- Install on all nodes.
 # **5. Basic MPI**
 - MPI is MIMD/SPMD type of parallelism
 
@@ -581,6 +590,7 @@ __kernel void vadd(
 	c[gid] = a[gid] + b[gid];
 }
 ```
+
 ## Steps to setup a basic host program
 - ### 1. Create Context & Queue
 	- NOTE:: Enable OpenCL API Exceptions + include key headers
@@ -633,6 +643,23 @@ __kernel void vadd(
 		- `queue.enqueueReadBuffer(bufC, CL_TRUE, 0, c.size()*sizeof(float), c.data());`
 
 ## Matrix Multiplication Kernel
+### Serial Code
+
+```c
+void mat_mul(int N, float* A, float* B, float* C){
+	int i, j, k;
+	for(int i = 0; i < N; i++){
+		for(int j = 0; j < N; i++){
+			C[i * N + j] = 0.0f;
+			for(int k = 0; k < N; i++){
+				C[i * N + j] += A[i * N + k] * B[k * N + j];
+			}
+		}
+	}
+}
+```
+
+### Kernel Code
 
 
 # Lecture 8: Performance Analysis
@@ -715,29 +742,37 @@ __kernel void vadd(
 ---
 
 # 9. Dependency Analysis
+
 Compilers determine dependencies based only on the direction vector
+
 Anti dependencies can be eliminated via renaming
 
 Problem Shortcut:
+
 ```
  A[i-1][j+1][k-1] = A[i+1][j+1][k-1]
 ```
+
 check if leftmost `[]` is negative i.e `'i-1'`
+
 - if so then dependency=`Anti`
 	- L.H.S is the sink with the R.H.S being the source
 - else dependency=`True`
 	- L.H.S is the source with the R.H.S being the sink
+
 ```
 A[i-1][j+1][k-1] = A[i+1][j+1][k-1]
        ^                   ^
        |                   |
       sink              source
 ```
+
 Lets assume any value for N, 10 for example
 
 ```
 N=10 ;This is the end result
 ```
+
 sub N for all vars in LHS & RHS but ensure it gives the result as intended earlier where we need to inc/dec N to reach our target of 10
 
 ```
@@ -745,11 +780,13 @@ A[11-1][9+1][11-1] = A[9+1][9+1][11-1]
 ```
 
 End result should be N in all iterations of A
+
 ```
 A[10][10][10] = A[10][10][10]
 ```
 
 Distance vector will be calculated Sink - Source (Use adjusted values of N)
+
 ```
 > Sink: A[11][9][11]
 > Source: A[9][9][11]
@@ -757,6 +794,7 @@ Distance vector will be calculated Sink - Source (Use adjusted values of N)
 ```
 
 Direction vector is based on negative sign
+
 > if distance is positive then "<"
 > if distance is negative then ">"
 > if distance is 0 for all vector elements then "=" and loop dependency will be set to 'loop independent'
@@ -772,22 +810,26 @@ DirVec = (=, =, =)
 Loop-Dependency == 'Loop Independent'
 ```
 
-
 ## Invalid Cases
 ### Case 1: No dependency
+
 ```
 A[][][] = B[][][] / C[][][] + D[][][]
 ```
+
 No known arrays are dependent on each other for their assignments
 
 ### Case 2: Invalid dependency
+
 ```
 B[i][j-1][k+1] = A[i][j-1][k-1]
 B[i][j-1][k+1] = A[i][j-1][k+1]
 
 or vice versa
 ```
+
 Cases where the dependency is "inline" so to speak, are invalid
+
 - Input
 - Output
 
@@ -857,8 +899,8 @@ Cases where the dependency is "inline" so to speak, are invalid
 | **42 ZB**     | All human speech ever spoken if digitized as 16 kHz, 16-bit audio                  |
 
 ## Google in 2010
-- **Eric Schmidt (CEO Google 2001–2011)**: *"Every 2 days, we create as much information as we did up to 2003."*
-- *"The real issue is user-generated content,"* he noted, adding that pictures, instant messages, and tweets all contribute to this explosion of data.
+- **Eric Schmidt (CEO Google 2001–2011)**: _"Every 2 days, we create as much information as we did up to 2003."_
+- _"The real issue is user-generated content,"_ he noted, adding that pictures, instant messages, and tweets all contribute to this explosion of data.
 
 ## Internet Traffic
 - **Internet Traffic** reached around **1.1 Zettabytes** in **2016**.
@@ -871,7 +913,6 @@ Cases where the dependency is "inline" so to speak, are invalid
 | 2007 | 2,000 GBps              |
 | 2015 | 20,235 GBps             |
 | 2020 | 61,386 GBps             |
-
 
 ## Data, Data, Data!!
 - Too much data is being produced (which should not be considered a problem).
@@ -887,7 +928,9 @@ Cases where the dependency is "inline" so to speak, are invalid
 - It’s not the amount of data that’s important. It’s what organizations do with the data that matters.
 
 ## The Big Data Explosion
+
 There are three types of Big Data:
+
 1. **Big Structured Data**
 2. **Big Semi-structured Data**
 3. **Big Unstructured Data**
@@ -928,11 +971,11 @@ There are three types of Big Data:
 		- But we can store **100 datasets**, each 1 terabyte, and provide **shared access** to them.
 	- #### Problems with Concurrent Access
 		1. **Hardware failure**: As soon as you start using many pieces of hardware, the chance of failure increases.
-		    - A common solution: **Replication**.
-		    - Replication means **redundant copies** of the data are kept so that in case of failure, there is another copy available.
+			- A common solution: **Replication**.
+			- Replication means **redundant copies** of the data are kept so that in case of failure, there is another copy available.
 		2. **Data integration**: Most analysis tasks require combining data from multiple sources.
-		    - Data read from one disk may need to be combined with data from another.
-		    - Various distributed systems allow data to be combined, but doing this correctly is notoriously challenging.
+			- Data read from one disk may need to be combined with data from another.
+			- Various distributed systems allow data to be combined, but doing this correctly is notoriously challenging.
 
 
 # 11. Hadoop Introduction
@@ -941,84 +984,81 @@ There are three types of Big Data:
 	- Building **reliability** into each application is **very expensive**.
 	- **Node failures** are common in distributed systems.
 	- A **common infrastructure** is needed:
-	    - Efficient, reliable, and easy to use.
-	    - Open Source.
+		- Efficient, reliable, and easy to use.
+		- Open Source.
 - ### **What is Hadoop?**
 	- A **framework** for **distributed processing** of large datasets across clusters of computers using simple programming models.
 	- **Scalable** from a single server to thousands of machines, each providing local computation and storage.
 	- **Detects and handles failures** at the application layer, ensuring highly available services on clusters of computers.
-
 - ### **Who Uses Hadoop?**
 	- Prominent users include **Amazon**, **Facebook**, **Google**, **Twitter**, **New York Times**, **Yahoo!**, and many more.
-
 - ### **Core Components of Hadoop**
 1. **Hadoop Common**:
-    - Utilities supporting other Hadoop modules.
+	- Utilities supporting other Hadoop modules.
 2. **HDFS (Hadoop Distributed File System)**:
-    - A distributed file system providing high-throughput access to application data.
+	- A distributed file system providing high-throughput access to application data.
 3. **Hadoop YARN**:
-    - A framework for job scheduling and cluster resource management.
+	- A framework for job scheduling and cluster resource management.
 4. **Hadoop MapReduce**:
-    - A programming model for large-scale data processing.
-
+	- A programming model for large-scale data processing.
 - ### **Hadoop Ecosystem**
 	- Management & Monitoring.
 	- Coordination among modules.
 	- **Batch and Iterative Processing**.
 	- NoSQL Databases.
 	- Tools for:
-	    - Data collection (e.g., **Sqoop**).
-	    - Workflow scheduling.
-	    - Data analysis and processing.
-	    - Data warehousing.
-	    - Query processing frameworks.
-	    - Cluster and stream data management.
-	    - Event processing.
+		- Data collection (e.g., **Sqoop**).
+		- Workflow scheduling.
+		- Data analysis and processing.
+		- Data warehousing.
+		- Query processing frameworks.
+		- Cluster and stream data management.
+		- Event processing.
 
 ## **HDFS (Hadoop Distributed File System)**
 - ### Goals of HDFS:
 	- A file system designed for:
-	    - **Storing very large files** (hundreds of MBs, GBs, or TBs).
-	    - **Streaming data access patterns** (write once, read-many).
+		- **Storing very large files** (hundreds of MBs, GBs, or TBs).
+		- **Streaming data access patterns** (write once, read-many).
 	- **Batch Processing** support with no need for synchronization.
 	- **Production scalability**:
-	    - Up to 200 PB of storage and clusters of 4500 servers.
-	    - A billion files and blocks.
+		- Up to 200 PB of storage and clusters of 4500 servers.
+		- A billion files and blocks.
 	- **Key Features**:
-	    - Scalable, fault-tolerant, and distributed storage system.
+		- Scalable, fault-tolerant, and distributed storage system.
 - ### Data Distribution Example:
 	- **Large input data** is split across nodes:
-	    - Node 1: Slice of input.
-	    - Node 2: Slice of input.
-	    - Node 3: Slice of input.
+		- Node 1: Slice of input.
+		- Node 2: Slice of input.
+		- Node 3: Slice of input.
 
 ## **Hadoop MapReduce**
 - A **framework** for writing applications to process large data stored in HDFS.
 - **Two Phases**:
-    1. **Map Phase**:
-        - Processes input data into key-value pairs.
-    2. **Reduce Phase**:
-        - Aggregates and computes final results from key-value pairs.
+	1. **Map Phase**:
+		- Processes input data into key-value pairs.
+	2. **Reduce Phase**:
+		- Aggregates and computes final results from key-value pairs.
 - **Developer Specifications**:
-    - Define the **map function** and **reduce function**.
+	- Define the **map function** and **reduce function**.
 - **Benefits**:
-    - **Simplicity**: Supports Java, C++, Python, etc.
-    - **Scalability**: Processes petabytes of data in one cluster.
-    - **Speed**: Parallel processing shortens computation times.
-    - **Recovery**: Handles node failures with redundancy.
-    - **Minimal Data Motion**: Processes data locally, reducing network I/O.
+	- **Simplicity**: Supports Java, C++, Python, etc.
+	- **Scalability**: Processes petabytes of data in one cluster.
+	- **Speed**: Parallel processing shortens computation times.
+	- **Recovery**: Handles node failures with redundancy.
+	- **Minimal Data Motion**: Processes data locally, reducing network I/O.
 
 ## **YARN (Yet Another Resource Negotiator)**
 
 - Primarily provides **resource management** for Hadoop clusters.
 - Enables **multiple data processing engines**:
-    - Interactive SQL.
-    - Real-time streaming.
-    - Batch processing.
+	- Interactive SQL.
+	- Real-time streaming.
+	- Batch processing.
 - **Framework**:
-    - YARN (Cluster Resource Management).
-    - HDFS (Redundant, reliable storage).
-    - Data Processing Engines (e.g., MapReduce, Spark).
+	- YARN (Cluster Resource Management).
+	- HDFS (Redundant, reliable storage).
+	- Data Processing Engines (e.g., MapReduce, Spark).
 ## **Five Pillars of Hadoop Ecosystem**
 
 | **Pillar**                             | **Component**        | **Description**                                                                        |
@@ -1096,7 +1136,6 @@ There are three types of Big Data:
 	- Shuffling: Nodes interact and shuffle/sort KV-Pairs until each have the same one
 	- Reducing: Similar KV-Pairs are added together
 	- Final Result: File with sum of each KV-Pair
-
 - ### Example: Log Analysis
 	- Mapper:
 		- Reads log entries
