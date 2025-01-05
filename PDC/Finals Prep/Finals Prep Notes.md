@@ -599,6 +599,10 @@ __kernel void vadd(
 		- KernelSource is the kernel loaded from file or a string literal
 		- `True` sets kernel compilation to true
 - ### 3. Setup memory
+	- Setup vars on host, pass pointers to kernel/copy buffers
+		- `cl:Buffer d_a(context, h_a.begin(), h_a.end(), true)` For initialized vectors
+		- `cl:Buffer d_c(context, CL_MEM_WRITE_ONLY, sizeof(float)*LENGTH)` For uninitialized vectors
+			- MEM_READ_ONLY or MEM_READ_WRITE can also be used
 - ### 4. Define Kernel
 - ### 5. Submit Commands
 
