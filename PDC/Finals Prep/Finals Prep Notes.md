@@ -2,13 +2,13 @@
 | ----------------- | ---------------------- | ------------------ |
 | 2                 | PDC Overview           | :white_check_mark: |
 | 3                 | Parallel Architectures | :white_check_mark: |
-| 4                 | Beouwulf Cluster       | :warning:          |
+| 4                 | Beowulf Cluster        | :warning:          |
 | 5                 | Basic MPI              | :white_check_mark: |
 | 6                 | Advanced MPI           | :white_check_mark: |
 | 7.1               | OpenMP                 | :white_check_mark: |
 | 7.2               | OpenCL                 | :warning:          |
 | 8                 | Performance Analysis   | :white_check_mark: |
-| 9                 | Dependency Analysis    | :white_check_mark: | 
+| 9                 | Dependency Analysis    | :white_check_mark: |
 | 10                | Zettabytes of Data     | :white_check_mark: |
 | 11                | Hadoop Intro           | :white_check_mark: |
 | 12                | Hadoop Map Reduce      | :warning:          |
