@@ -1080,4 +1080,15 @@ There are three types of Big Data:
 			- `CD -> (ABCE), (ABDE)`
 			- `CE -> (ABDE), (BCD)`
 			- `DE -> (ABCE), (BCD)`
-	- #### Reduce
+	- #### Reduce 
+		- Each line from the group is passed as an arg to the reducer
+		- Reducer will find the intersecting values in between the two VALUES for each KEY
+			- `AB : CD`
+			- `AC : BD`
+			- `AD : BC`
+			- `BC : ADE`
+			- `BD : ACE`
+			- `BE : CD`
+			- `CD : ABE`
+			- `CE : BD`
+			- `DE : BC`
