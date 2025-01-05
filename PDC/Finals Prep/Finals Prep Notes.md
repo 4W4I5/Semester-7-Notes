@@ -105,16 +105,16 @@
 					- Frequent communication between tasks.
 				- **Coarse-Grained Tasks**:
 					  - Small number of large tasks.
-				  - Less frequent communication, leading to reduced overhead but requiring careful load balancing.
+					  - Less frequent communication, leading to reduced overhead but requiring careful load balancing.
 		- **Decomposition Methods**:
 			- **Domain Decomposition**:
 				- Divides data across processors.
 				- Each processor works on its own subset of the data.
-			- **Use cases**: Simulations, matrix operations, etc.
-		- **Functional Decomposition**:
-			- Divides the problem based on different functions or stages of computation.
-			- Each processor handles a different task or stage.
-			- **Use cases**: Pipeline architectures, ecosystem modeling.
+					- **Use cases**: Simulations, matrix operations, etc.
+			- **Functional Decomposition**:
+				- Divides the problem based on different functions or stages of computation.
+				- Each processor handles a different task or stage.
+					- **Use cases**: Pipeline architectures, ecosystem modeling.
 	- #### **2.2. Granularity**
 		- **Granularity Types**:
 			- **Fine-Grained Parallelism**:
@@ -203,7 +203,6 @@
 # **3. Parallel Architectures**
 
 >[!NOTE]
-
 > Nothing special, copied content from slides and restructured them
 
 ## **Introduction to Parallel Architectures**
