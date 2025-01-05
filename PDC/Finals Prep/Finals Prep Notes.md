@@ -15,6 +15,7 @@
 
 > [!WARNING]
 > MATHJAX does not render on github mobile, view the notes for lecture 8 on the browser to see the formulae
+> Chapters 9, 12 are low-effort notes. Did not bother much with clear formatting
 
 ---
 
@@ -648,6 +649,7 @@
 
 # 9. Dependency Analysis
 Compilers determine dependencies based only on the direction vector
+Anti dependencies can be eliminated via renaming
 
 Problem Shortcut:
 ```
