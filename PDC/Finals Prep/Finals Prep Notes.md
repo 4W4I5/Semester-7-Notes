@@ -921,5 +921,14 @@ There are three types of Big Data:
 			- A **mapper** function is used to transform input data into Key-Value pairs
 				- The function can filter, parse and/or transform the data
 		- **Reduce Phase**:
-			- A **reducer** function 
+			- A **reducer** function groups and aggregates the key-value pairs
 - Suitable data category: Large Semi-Structured data i.e JSON, XML, logs
+- Example: Log Analysis 
+	- Mapper:
+		- Reads log entries
+		- Extract relevant data via string matching (IP addr, timestamps, etc etc)
+		- Emits key-value pairs of each occurance
+	- Reducer:
+		- Shuffle & Sort:
+			- All KV-pairs are shuffled and sorted by key
+		- Reducer then aggregates the KV-pairs
