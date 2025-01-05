@@ -660,7 +660,24 @@ void mat_mul(int N, float* A, float* B, float* C){
 ```
 
 ### Kernel Code
+```c
+__kernel void matrix_mul(const int N, 
+						 __global float *A, 
+						 __global float *B, 
+						 __global float *C
+){
+	int i = get_global_id(0);
+	int j = get_global_id(1);
+	int k;
+	float temp = 0.0f;
 
+	for(k = 0; k < N; k++){
+		temp += A[i * N + k] * B[k * N + j];
+	}
+
+	C[i * N + j] = temp;
+}
+```
 
 # Lecture 8: Performance Analysis
 > [!WARNING]
