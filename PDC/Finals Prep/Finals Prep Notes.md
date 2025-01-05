@@ -623,6 +623,7 @@ __kernel void vadd(
 			- CL_TRUE = Readonly
 - ### 4. Define Kernel
 	- `cl:make_kernel<cl::Buffer, cl::Buffer, cl::Buffer>`, match the kernel args
+- ### 5. Submit Commands
 	- `cl::Kernel kernel(program, "kernelName.cl");`
 		- Set args via `kernel.setArg(0, bufA);`
 	- Enqueue kernel for execution
@@ -630,8 +631,6 @@ __kernel void vadd(
 			- enqueueNDRangeKernel(kernel, globalOffset, globalNDRange, localNDRange);
 	- Enqueue data to be transferred back to the host
 		- `queue.enqueueReadBuffer(bufC, CL_TRUE, 0, c.size()*sizeof(float), c.data());`
-- ### 5. Submit Commands
-	-
 
 # Lecture 8: Performance Analysis
 > [!WARNING]
