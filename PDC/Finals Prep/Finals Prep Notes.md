@@ -923,7 +923,15 @@ There are three types of Big Data:
 		- **Reduce Phase**:
 			- A **reducer** function groups and aggregates the key-value pairs
 - Suitable data category: Large Semi-Structured data i.e JSON, XML, logs
-- Example: Log Analysis 
+- Process Overview
+	- Input: Large amount of words
+	- Splitting: Each node gets a section of the list
+	- Mapping: Each node creates KV-Pairs
+	- Shuffling: Nodes interact and shuffle/sort KV-Pairs until each have the same one
+	- Reducing: Similar KV-Pairs are added together
+	- Final Result: File with sum of each KV-Pair
+
+- Example: Log Analysis
 	- Mapper:
 		- Reads log entries
 		- Extract relevant data via string matching (IP addr, timestamps, etc etc)
