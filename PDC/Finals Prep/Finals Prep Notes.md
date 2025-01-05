@@ -915,9 +915,8 @@ There are three types of Big Data:
 	- Its a simple wordcount example and it does so pretty quickly, nothing special to note besides the compile steps
 # 12. Hadoop Map Reduce
 - A programming model for data processing
-- Breaks the processing into two phases
-	- **Map Phase**:
-	- **Reduce Phase**:
-- Each phase has key-value pairs as input & output
-	- Type is chosen by the programmer
-- Suitable data category: Large Semi-Structured data
+- Breaks the processing into two phases determined by the programmer
+	- Each phase has key-value pairs as input & output
+		- **Map Phase**:
+		- **Reduce Phase**:
+- Suitable data category: Large Semi-Structured data i.e JSON, XML, logs
