@@ -632,6 +632,9 @@ __kernel void vadd(
 	- Enqueue data to be transferred back to the host
 		- `queue.enqueueReadBuffer(bufC, CL_TRUE, 0, c.size()*sizeof(float), c.data());`
 
+## Matrix Multiplication Kernel
+
+
 # Lecture 8: Performance Analysis
 > [!WARNING]
 > Only the formulae seem important enough to come in the sessional
