@@ -3,7 +3,7 @@
 | 2                 | PDC Overview           | :white_check_mark: |
 | 3                 | Parallel Architectures | :white_check_mark: |
 | 4                 | Beowulf Cluster        | :white_check_mark: |
-| 5                 | Basic MPI              | :white_check_mark: | 
+| 5                 | Basic MPI              | :white_check_mark: |
 | 6                 | Advanced MPI           | :white_check_mark: |
 | 7.1               | OpenMP                 | :white_check_mark: |
 | 7.2               | OpenCL                 | :warning:          |
@@ -999,8 +999,24 @@ There are three types of Big Data:
 		- **Map Phase**:
 			- A **mapper** function is used to transform input data into Key-Value pairs
 				- The function can filter, parse and/or transform the data
+					- Partition
+					- Sort
+					- Split
+					- Copy
+			- Represented by the mapper class in java which defines a `map()` method
 		- **Reduce Phase**:
 			- A **reducer** function groups and aggregates the key-value pairs
+				- Sort
+				- Reduce
+			- Represented by the reducer class in java which defines a `reduce()` method
+			- Number of Reducer tasks is specified independently
+				- For multiple reducers,
+					- Mapper partitions their output
+					- One partition for each reduce task
+					- Records for any given key are all in a single partition
+	- A main code that calls both classes is then written to schedule and distribute the tasks
+		- Ideally it is best to minimize the amount of data transferred in between the two phases
+			- A combiner function can be specified to run on the Mapper's output and form a new consolidated input for the Reducer
 - Suitable data category: Large Semi-Structured data i.e JSON, XML, logs
 - Process Overview
 	- Input: Large amount of words
@@ -1014,8 +1030,54 @@ There are three types of Big Data:
 	- Mapper:
 		- Reads log entries
 		- Extract relevant data via string matching (IP addr, timestamps, etc etc)
-		- Emits key-value pairs of each occurance
+		- Emits key-value pairs of each occurrence
 	- Reducer:
 		- Shuffle & Sort:
 			- All KV-pairs are shuffled and sorted by key
 		- Reducer then aggregates the KV-pairs
+- Example: Facebook Friends (Find Everyone's common friends)
+	- Friends stored as `Person->[List of Friends]`
+		- `A-> BCD`
+		- `B -> ACDE`
+		- `C -> ABDE`
+		- `D -> ABCE`
+		- `E -> BCD`
+	- Mapper:
+		- Key: Friend of Person X
+		- Value: List of Friends
+			- For each Map, Keys are sorted in order
+			- `A -> BCD`
+				- `AB -> BCD`
+				- `AC -> BCD`
+				- `AD -> BCD`
+			- `B -> ACDE`
+				- `AB -> ACDE`
+				- `BC -> ACDE`
+				- `BD -> ACDE`
+				- `BE -> ACDE`
+			- `C -> ABDE`
+				- `AC -> ABDE`
+				- `BC -> ABDE`
+				- `CD -> ABDE`
+				- `CE -> ABDE`
+			- `D -> ABCE`
+				- `AD -> ABCE`
+				- `BD -> ABCE`
+				- `CD -> ABCE`
+				- `DE -> ABCE`
+			- `E -> BCD`
+				- `BE -> BCD`
+				- `CE -> BCD`
+				- `DE -> BCD`
+	- Shuffle/Sort (Group):
+		- Group all results by their keys
+			- `AB -> (ACDE), (BCD)`
+			- `AC -> (ABDE), (BCD)`
+			- `AD -> (ABCE), (BCD)`
+			- `BC -> (ABDE), (ACDE)`
+			- `BD -> (ABCE), (ACDE)`
+			- `BE -> (ACDE), (BCD)`
+			- `CD -> (ABCE), (ABDE)`
+			- `CE -> (ABDE), (BCD)`
+			- `DE -> (ABCE), (BCD)`
+	- Reduce
