@@ -586,7 +586,15 @@ __kernel void vadd(
 	- NOTE:: Enable OpenCL API Exceptions + include key headers
 		- `#define __CL_ENABLE_EXCEPTIONS`
 		- `include <CL/cl.hpp> <cstdio> <iostream> <vector>`
-	- Grab context via device type. `cl::Context context(CL_DEVICE_TYPE_DEFAULT);`
+	- Grab list of platforms
+		- `std::vector<cl::Platform> platforms;`. Returns a uninit list of available platforms
+		- `cl::Platform::get(&platforms)`. Populate the list
+		- `cl::Platform platform[0];`.
+	- Grab context via device type.
+		- `std::Vector<cl::Device> devices;`. Unit List of devices
+		- `platform.getDevices(CL_DEVICE_TYPE_ALL, &devices);` Populate list
+		- `cl:Device device = devices[0];`. Pick the first device, usually the CPU
+		- `cl::Context context(CL_DEVICE_TYPE_DEFAULT);`
 		- Can be CPU, GPU or ACCELERATOR
 	- Create a command queue. `cl::CommandQueue queue(context);`
 		- Each queue created points to a single device within the context
@@ -598,13 +606,32 @@ __kernel void vadd(
 	- `cl::Program program(context, KernelSource, true);`
 		- KernelSource is the kernel loaded from file or a string literal
 		- `True` sets kernel compilation to true
+	- `program.build({device})`
 - ### 3. Setup memory
+	- Memory object types
+		- Buffer, always linear
+		- Image, 2d or 3d region of memory
 	- Setup vars on host, pass pointers to kernel/copy buffers
-		- `cl:Buffer d_a(context, h_a.begin(), h_a.end(), true)` For initialized vectors
+		- `cl:Buffer d_a(context, h_a.begin(), h_a.end(), true)` For initialized vectors, `true` defines if it is read-only, `false` defines read/write for the buffer
 		- `cl:Buffer d_c(context, CL_MEM_WRITE_ONLY, sizeof(float)*LENGTH)` For uninitialized vectors
 			- MEM_READ_ONLY or MEM_READ_WRITE can also be used
+	- `clCreateBuffer(context, CL_MEM_READ_WRITE, size, NULL, &err)` to create a device-side buffer
+	- Create a command Queue
+		- `cl::CommandQueue queue(context, device);`
+	- Enqueue data to transfer
+		- `queue.enqueueWriteBuffer(h_a, CL_TRUE, 0, a.size()*sizeof(float), a.data())`
+			- CL_TRUE = Readonly
 - ### 4. Define Kernel
+	- `cl:make_kernel<cl::Buffer, cl::Buffer, cl::Buffer>`, match the kernel args
+	- `cl::Kernel kernel(program, "kernelName.cl");`
+		- Set args via `kernel.setArg(0, bufA);`
+	- Enqueue kernel for execution
+		- `queue.enqueueNDRangeKernel(kernel, cl::NullRange, cl::NDRange(a.size()), cl::NullRange);`
+			- enqueueNDRangeKernel(kernel, globalOffset, globalNDRange, localNDRange);
+	- Enqueue data to be transferred back to the host
+		- `queue.enqueueReadBuffer(bufC, CL_TRUE, 0, c.size()*sizeof(float), c.data());`
 - ### 5. Submit Commands
+	-
 
 # Lecture 8: Performance Analysis
 > [!WARNING]
