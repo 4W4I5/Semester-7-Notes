@@ -647,6 +647,8 @@
 ---
 
 # 9. Dependency Analysis
+Compilers determine dependencies based only on the direction vector
+
 Problem Shortcut:
 ```
  A[i-1][j+1][k-1] = A[i+1][j+1][k-1]
