@@ -1026,7 +1026,7 @@ There are three types of Big Data:
 	- Reducing: Similar KV-Pairs are added together
 	- Final Result: File with sum of each KV-Pair
 
-- Example: Log Analysis
+- ### Example: Log Analysis
 	- Mapper:
 		- Reads log entries
 		- Extract relevant data via string matching (IP addr, timestamps, etc etc)
@@ -1035,14 +1035,14 @@ There are three types of Big Data:
 		- Shuffle & Sort:
 			- All KV-pairs are shuffled and sorted by key
 		- Reducer then aggregates the KV-pairs
-- Example: Facebook Friends (Find Everyone's common friends)
+- ### Example: Facebook Friends (Find Everyone's common friends)
 	- Friends stored as `Person->[List of Friends]`
 		- `A-> BCD`
 		- `B -> ACDE`
 		- `C -> ABDE`
 		- `D -> ABCE`
 		- `E -> BCD`
-	- Mapper:
+	- #### Mapper:
 		- Key: Friend of Person X
 		- Value: List of Friends
 			- For each Map, Keys are sorted in order
@@ -1069,7 +1069,7 @@ There are three types of Big Data:
 				- `BE -> BCD`
 				- `CE -> BCD`
 				- `DE -> BCD`
-	- Shuffle/Sort (Group):
+	- #### Shuffle/Sort (Group):
 		- Group all results by their keys
 			- `AB -> (ACDE), (BCD)`
 			- `AC -> (ABDE), (BCD)`
@@ -1080,4 +1080,4 @@ There are three types of Big Data:
 			- `CD -> (ABCE), (ABDE)`
 			- `CE -> (ABDE), (BCD)`
 			- `DE -> (ABCE), (BCD)`
-	- Reduce
+	- #### Reduce
