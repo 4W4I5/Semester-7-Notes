@@ -594,7 +594,10 @@ __kernel void vadd(
 			- **In-Order**: Commands are enqueued and completed in order
 			- **Out-Of-Order**: Commands are enqueued in order but completed in any order
 - ### 2. Create & Build program
-	- Link the kernel source file or as a multi-line string literal with the ``
+	- Link the kernel source file or as a multi-line string literal with the prefix `R"""kernelString"""`
+	- `cl::Program program(context, KernelSource, true);`
+		- KernelSource is the kernel loaded from file or a string literal
+		- `True` sets kernel compilation to true
 - ### 3. Setup memory
 - ### 4. Define Kernel
 - ### 5. Submit Commands
