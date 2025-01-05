@@ -6,16 +6,16 @@
 | 5                 | Basic MPI              | :white_check_mark: |
 | 6                 | Advanced MPI           | :white_check_mark: |
 | 7.1               | OpenMP                 | :white_check_mark: |
-| 7.2               | OpenCL                 | :warning:          |
+| 7.2               | OpenCL                 | :white_check_mark: |
 | 8                 | Performance Analysis   | :white_check_mark: |
 | 9                 | Dependency Analysis    | :white_check_mark: |
 | 10                | Zettabytes of Data     | :white_check_mark: |
 | 11                | Hadoop Intro           | :white_check_mark: |
-| 12                | Hadoop Map Reduce      | :white_check_mark: | 
+| 12                | Hadoop Map Reduce      | :white_check_mark: |
 
 > [!WARNING]
 > MATHJAX does not render on github mobile, view the notes for lecture 8 on the browser to see the formulae
-> Chapters 9, 12 are low-effort notes. Did not bother much with clear formatting
+> Chapters 7.2, 9, 12 are low-effort notes. Did not bother much with clear formatting
 
 ---
 
@@ -568,6 +568,20 @@
 - Device Driver
 - Accelerator Hardware
 	- GPU, CPU, FPGA
+- Replace loops with accelerator(kernel) functions
+
+```cpp
+// Basic Kernel for vector addition
+__kernel void vadd(
+	__global const float *a,
+	__global const float *b,
+	__global float *c,
+){
+	int gid = get_global_id(0);
+	c[gid] = a[gid] + b[gid];
+}
+```
+
 # Lecture 8: Performance Analysis
 > [!WARNING]
 > Only the formulae seem important enough to come in the sessional

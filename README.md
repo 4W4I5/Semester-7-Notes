@@ -26,7 +26,7 @@
 | ----------------------------------------------------------------------- | ------------------ |
 | [Sessional 1](PDC/Sessional%201%20Prep/Sessional%201%20Prep%20Notes.md) | :white_check_mark: |
 | [Sessional 2](PDC/Sessional%202%20Prep/Sessional%202%20Prep%20Notes.md) | :white_check_mark: |
-| [Finals](PDC/Finals%20Prep/Finals%20Prep%20Notes.md)                    | :warning:          |
+| [Finals](PDC/Finals%20Prep/Finals%20Prep%20Notes.md)                    | :white_check_mark: | 
 | [Code Examples](PDC/Finals%20Prep/Finals%20Code%20Examples.md)          | :warning:          |
 
 # Blockchain
