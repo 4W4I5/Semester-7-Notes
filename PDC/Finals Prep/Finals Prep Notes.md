@@ -2,8 +2,8 @@
 | ----------------- | ---------------------- | ------------------ |
 | 2                 | PDC Overview           | :white_check_mark: |
 | 3                 | Parallel Architectures | :white_check_mark: |
-| 4                 | Beowulf Cluster        | :warning:          |
-| 5                 | Basic MPI              | :white_check_mark: |
+| 4                 | Beowulf Cluster        | :white_check_mark: |
+| 5                 | Basic MPI              | :white_check_mark: | 
 | 6                 | Advanced MPI           | :white_check_mark: |
 | 7.1               | OpenMP                 | :white_check_mark: |
 | 7.2               | OpenCL                 | :warning:          |
@@ -715,12 +715,14 @@ No known arrays are dependent on each other for their assignments
 
 ### Case 2: Invalid dependency
 ```
-A[i][j-1][k+1] = A[i][j-1][k-1]
+B[i][j-1][k+1] = A[i][j-1][k-1]
+B[i][j-1][k+1] = A[i][j-1][k+1]
+
+or vice versa
 ```
 Cases where the dependency is "inline" so to speak, are invalid
 - Input
 - Output
-	- Focus on the `i` part where both sides have the same value for `i`
 
 ---
 
