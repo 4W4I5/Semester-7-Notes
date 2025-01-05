@@ -11,7 +11,7 @@
 | 9                 | Dependency Analysis    | :white_check_mark: |
 | 10                | Zettabytes of Data     | :white_check_mark: |
 | 11                | Hadoop Intro           | :white_check_mark: |
-| 12                | Hadoop Map Reduce      | :warning:          |
+| 12                | Hadoop Map Reduce      | :white_check_mark: | 
 
 > [!WARNING]
 > MATHJAX does not render on github mobile, view the notes for lecture 8 on the browser to see the formulae
@@ -994,6 +994,10 @@ There are three types of Big Data:
 	- Its a simple wordcount example and it does so pretty quickly, nothing special to note besides the compile steps
 # 12. Hadoop Map Reduce
 - A programming model for data processing
+- Data Locality Optimization
+	- Attempt to run map task on nodes which hold the input data in HDFS
+	- Look for a free slot on a node in the same rack
+	- Use an inter-rack network transfer
 - Breaks the processing into two phases determined by the programmer
 	- Each phase has key-value pairs as input & output
 		- **Map Phase**:
@@ -1080,7 +1084,7 @@ There are three types of Big Data:
 			- `CD -> (ABCE), (ABDE)`
 			- `CE -> (ABDE), (BCD)`
 			- `DE -> (ABCE), (BCD)`
-	- #### Reduce 
+	- #### Reduce
 		- Each line from the group is passed as an arg to the reducer
 		- Reducer will find the intersecting values in between the two VALUES for each KEY
 			- `AB : CD`
