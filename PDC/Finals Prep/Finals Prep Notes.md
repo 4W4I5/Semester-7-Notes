@@ -581,6 +581,15 @@ __kernel void vadd(
 	c[gid] = a[gid] + b[gid];
 }
 ```
+- Steps to setup a basic host program
+	1. Create Context & Queue
+		- NOTE:: Enable OpenCL API Exceptions + include key headers
+			- `#define __CL_ENABLE_EXCEPTIONS`
+			- `include <CL/cl.hpp> <cstdio> <iostream> <vector>`
+	1. Create & Build program
+	2. Setup memory
+	3. Define Kernel
+	4. Submit Commands
 
 # Lecture 8: Performance Analysis
 > [!WARNING]
