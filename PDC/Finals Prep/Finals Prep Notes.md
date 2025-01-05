@@ -918,5 +918,8 @@ There are three types of Big Data:
 - Breaks the processing into two phases determined by the programmer
 	- Each phase has key-value pairs as input & output
 		- **Map Phase**:
+			- A **mapper** function is used to transform input data into Key-Value pairs
+				- The function can filter, parse and/or transform the data
 		- **Reduce Phase**:
+			- A **reducer** function 
 - Suitable data category: Large Semi-Structured data i.e JSON, XML, logs
