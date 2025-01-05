@@ -581,15 +581,23 @@ __kernel void vadd(
 	c[gid] = a[gid] + b[gid];
 }
 ```
-- Steps to setup a basic host program
-	1. Create Context & Queue
-		- NOTE:: Enable OpenCL API Exceptions + include key headers
-			- `#define __CL_ENABLE_EXCEPTIONS`
-			- `include <CL/cl.hpp> <cstdio> <iostream> <vector>`
-	1. Create & Build program
-	2. Setup memory
-	3. Define Kernel
-	4. Submit Commands
+## Steps to setup a basic host program
+- ### 1. Create Context & Queue
+	- NOTE:: Enable OpenCL API Exceptions + include key headers
+		- `#define __CL_ENABLE_EXCEPTIONS`
+		- `include <CL/cl.hpp> <cstdio> <iostream> <vector>`
+	- Grab context via device type. `cl::Context context(CL_DEVICE_TYPE_DEFAULT);`
+		- Can be CPU, GPU or ACCELERATOR
+	- Create a command queue. `cl::CommandQueue queue(context);`
+		- Each queue created points to a single device within the context
+		- Can be;
+			- **In-Order**: Commands are enqueued and completed in order
+			- **Out-Of-Order**: Commands are enqueued in order but completed in any order
+- ### 2. Create & Build program
+	- Link the kernel source file or as a multi-line string literal with the ``
+- ### 3. Setup memory
+- ### 4. Define Kernel
+- ### 5. Submit Commands
 
 # Lecture 8: Performance Analysis
 > [!WARNING]
